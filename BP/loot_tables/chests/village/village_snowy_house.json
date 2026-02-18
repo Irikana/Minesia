@@ -9,7 +9,7 @@
       "entries": [
         {
           "type": "item",
-          "name": "minesia_journey:wooden_coin",
+          "name": "minesia:wooden_coin",
           "weight": 20,
           "functions": [
             {

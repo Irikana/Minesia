@@ -2,7 +2,7 @@
 // ===============================
 // 创世等级事件系统
 // 处理玩家升级时或处于特定等级时的事件
-// 难度: 简单 (奖励增加约25%)
+// 难度: 简�?(奖励增加�?5%)
 // ===============================
 
 import { world, system } from "@minecraft/server";
@@ -10,8 +10,7 @@ import { MinesiaLevelSystem } from "./level_system.js";
 
 /**
  * 创世等级事件系统
- * 处理玩家升级时的奖励和特殊事件
- */
+ * 处理玩家升级时的奖励和特殊事�? */
 export class MinesiaLevelEventSystem {
     static rewardsObtainedObjectivePrefix = "minesia_reward_";
 
@@ -275,7 +274,7 @@ export class MinesiaLevelEventSystem {
         try {
             const scoreboard = world.scoreboard;
             if (!scoreboard) {
-                console.warn('[MinesiaEvent] 当前脚本 API 不支持 world.scoreboard，奖励追踪功能已禁用');
+                console.warn('[MinesiaEvent] 当前脚本 API 不支�?world.scoreboard，奖励追踪功能已禁用');
                 return false;
             }
 
@@ -313,7 +312,7 @@ export class MinesiaLevelEventSystem {
 
             return score === 1;
         } catch (error) {
-            console.warn('[MinesiaEvent] 检查奖励是否已获得时出错:', error?.message ?? error);
+            console.warn('[MinesiaEvent] 检查奖励是否已获得时出�?', error?.message ?? error);
             return false;
         }
     }
@@ -328,7 +327,7 @@ export class MinesiaLevelEventSystem {
             if (!rewardsObj) return;
 
             rewardsObj.setScore(player, 1);
-            console.log(`[MinesiaEvent] 标记玩家 ${player.name} 已获得 ${level} 级奖励`);
+            console.log(`[MinesiaEvent] 标记玩家 ${player.name} 已获�?${level} 级奖励`);
         } catch (error) {
             console.warn('[MinesiaEvent] 标记奖励已获得时出错:', error?.message ?? error);
         }
@@ -352,14 +351,14 @@ export class MinesiaLevelEventSystem {
         try {
             console.log('[Minesia] 尝试播放升级音效...');
             player.runCommand('playsound minesia.level_up @s');
-            console.log('[Minesia] 升级音效命令已发送');
+            console.log('[Minesia] 升级音效命令已发�?);
         } catch (error) {
-            console.warn('[Minesia] 播放升级音效时出错:', error?.message ?? error);
+            console.warn('[Minesia] 播放升级音效时出�?', error?.message ?? error);
             try {
                 player.runCommand('playsound random.anvil_use @s');
                 console.log('[Minesia] 使用备份铁砧音效');
             } catch (e2) {
-                console.warn('[Minesia] 备份音效也失败:', e2?.message ?? e2);
+                console.warn('[Minesia] 备份音效也失�?', e2?.message ?? e2);
             }
         }
     }
@@ -367,7 +366,7 @@ export class MinesiaLevelEventSystem {
     static handleLevelUp(player, oldLevel, newLevel) {
         if (newLevel <= oldLevel) return;
 
-        console.log(`[Minesia] 处理玩家 ${player.name} 从 ${oldLevel} 级升级到 ${newLevel} 级的事件`);
+        console.log(`[Minesia] 处理玩家 ${player.name} �?${oldLevel} 级升级到 ${newLevel} 级的事件`);
 
         try {
             this.playLevelUpSound(player);
@@ -382,7 +381,7 @@ export class MinesiaLevelEventSystem {
 
     static handleSpecificLevelReward(player, level) {
         if (this.hasObtainedReward(player, level)) {
-            console.log(`[Minesia] 玩家 ${player.name} 已获得 ${level} 级奖励，跳过`);
+            console.log(`[Minesia] 玩家 ${player.name} 已获�?${level} 级奖励，跳过`);
             return;
         }
 
@@ -393,25 +392,25 @@ export class MinesiaLevelEventSystem {
         }
 
         if (reward.woodCoin) {
-            this.giveItem(player, "minesia_journey:wooden_coin", reward.woodCoin);
+            this.giveItem(player, "minesia:wooden_coin", reward.woodCoin);
         }
         if (reward.stoneCoin) {
-            this.giveItem(player, "minesia_journey:stone_coin", reward.stoneCoin);
+            this.giveItem(player, "minesia:stone_coin", reward.stoneCoin);
         }
         if (reward.silverCoin) {
-            this.giveItem(player, "minesia_journey:silver_coin", reward.silverCoin);
+            this.giveItem(player, "minesia:silver_coin", reward.silverCoin);
         }
         if (reward.goldCoin) {
-            this.giveItem(player, "minesia_journey:gold_coin", reward.goldCoin);
+            this.giveItem(player, "minesia:gold_coin", reward.goldCoin);
         }
         if (reward.diamondCoin) {
-            this.giveItem(player, "minesia_journey:diamond_coin", reward.diamondCoin);
+            this.giveItem(player, "minesia:diamond_coin", reward.diamondCoin);
         }
         if (reward.emeraldCoin) {
-            this.giveItem(player, "minesia_journey:emerald_coin", reward.emeraldCoin);
+            this.giveItem(player, "minesia:emerald_coin", reward.emeraldCoin);
         }
         if (reward.toySword) {
-            this.giveItem(player, "minesia_journey:toy_sword", reward.toySword);
+            this.giveItem(player, "minesia:toy_sword", reward.toySword);
         }
 
         const hasHealthReward = this.LEVEL_HEALTH_REWARDS[level];
@@ -443,7 +442,7 @@ export class MinesiaLevelEventSystem {
         try {
             player.runCommand(`give @s ${itemId} ${count}`);
         } catch (error) {
-            console.warn('[Minesia] 给予物品时出错:', error?.message ?? error);
+            console.warn('[Minesia] 给予物品时出�?', error?.message ?? error);
         }
     }
 }

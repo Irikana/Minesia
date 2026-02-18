@@ -22,7 +22,7 @@
         {
           "wants": [
             {
-              "item": "minesia_journey:silver_coin",
+              "item": "minesia:silver_coin",
               "quantity": {
                 "min": 8,
                 "max": 15
@@ -72,7 +72,7 @@
         {
           "wants": [
             {
-              "item": "minesia_journey:silver_coin",
+              "item": "minesia:silver_coin",
               "quantity": {
                 "min": 12,
                 "max": 18
@@ -89,7 +89,7 @@
         {
           "wants": [
             {
-              "item": "minesia_journey:stone_coin",
+              "item": "minesia:stone_coin",
               "quantity": {
                 "min": 4,
                 "max": 6
@@ -110,7 +110,7 @@
         {
           "wants": [
             {
-              "item": "minesia_journey:silver_coin",
+              "item": "minesia:silver_coin",
               "quantity": {
                 "min": 12,
                 "max": 18
@@ -127,7 +127,7 @@
         {
           "wants": [
             {
-              "item": "minesia_journey:wooden_coin",
+              "item": "minesia:wooden_coin",
               "quantity": {
                 "min": 2,
                 "max": 4
@@ -151,7 +151,7 @@
         {
           "wants": [
             {
-              "item": "minesia_journey:silver_coin",
+              "item": "minesia:silver_coin",
               "quantity": {
                 "min": 8,
                 "max": 15
@@ -184,7 +184,7 @@
         {
           "wants": [
             {
-              "item": "minesia_journey:silver_coin",
+              "item": "minesia:silver_coin",
               "quantity": {
                 "min": 8,
                 "max": 15
@@ -217,7 +217,7 @@
         {
           "wants": [
             {
-              "item": "minesia_journey:gold_coin",
+              "item": "minesia:gold_coin",
               "quantity": {
                 "min": 20,
                 "max": 25

@@ -41,13 +41,13 @@ export const BONUS_DAMAGE_WEAPONS = [
         enabled: true
     },
     {
-        id: "minesia_journey:toy_sword",
+        id: "minesia:toy_sword",
         minDamage: 1,
         maxDamage: 3,
         enabled: true
     },
     {
-        id: "minesia_journey:steel_sword",
+        id: "minesia:steel_sword",
         minDamage: 0,
         maxDamage: 2,
         enabled: true

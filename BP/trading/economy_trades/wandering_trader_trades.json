@@ -103,7 +103,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -118,7 +118,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:stone_coin",
+                  "item": "minesia:stone_coin",
                   "quantity": 8
                 }
               ],
@@ -133,7 +133,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -148,7 +148,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:stone_coin",
+                  "item": "minesia:stone_coin",
                   "quantity": 4
                 }
               ],
@@ -163,7 +163,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -178,7 +178,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -193,7 +193,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -208,7 +208,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -223,7 +223,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -238,7 +238,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -253,7 +253,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -268,7 +268,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -283,7 +283,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -298,7 +298,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:stone_coin",
+                  "item": "minesia:stone_coin",
                   "quantity": 2,
                   "price_multiplier": 0.2
                 }
@@ -327,7 +327,7 @@
               "max_uses": 1,
               "wants": [
                 {
-                  "item": "minesia_journey:stone_coin",
+                  "item": "minesia:stone_coin",
                   "quantity": 6
                 }
               ],
@@ -346,7 +346,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:stone_coin",
+                  "item": "minesia:stone_coin",
                   "quantity": 4
                 }
               ],
@@ -361,7 +361,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:stone_coin",
+                  "item": "minesia:stone_coin",
                   "quantity": 4
                 }
               ],
@@ -376,7 +376,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 3
                 }
               ],
@@ -391,7 +391,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:stone_coin",
+                  "item": "minesia:stone_coin",
                   "quantity": 5
                 }
               ],
@@ -406,7 +406,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 3
                 }
               ],
@@ -421,7 +421,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:silver_coin",
+                  "item": "minesia:silver_coin",
                   "quantity": 6
                 }
               ],
@@ -436,7 +436,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -451,7 +451,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -466,7 +466,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -481,7 +481,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -496,7 +496,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 4
                 }
               ],
@@ -511,7 +511,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 4
                 }
               ],
@@ -526,7 +526,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -541,7 +541,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -556,7 +556,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -571,7 +571,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -586,7 +586,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -601,7 +601,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -616,7 +616,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -631,7 +631,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -646,7 +646,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -661,7 +661,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -676,7 +676,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -691,7 +691,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -706,7 +706,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 4
                 }
               ],
@@ -721,7 +721,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -736,7 +736,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -751,7 +751,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -766,7 +766,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -781,7 +781,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -796,7 +796,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -811,7 +811,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:stone_coin",
+                  "item": "minesia:stone_coin",
                   "quantity": 6
                 }
               ],
@@ -826,7 +826,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:stone_coin",
+                  "item": "minesia:stone_coin",
                   "quantity": 6
                 }
               ],
@@ -841,7 +841,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:stone_coin",
+                  "item": "minesia:stone_coin",
                   "quantity": 6
                 }
               ],
@@ -856,7 +856,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:stone_coin",
+                  "item": "minesia:stone_coin",
                   "quantity": 6
                 }
               ],
@@ -871,7 +871,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:stone_coin",
+                  "item": "minesia:stone_coin",
                   "quantity": 6
                 }
               ],
@@ -886,7 +886,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:stone_coin",
+                  "item": "minesia:stone_coin",
                   "quantity": 6
                 }
               ],
@@ -901,7 +901,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:stone_coin",
+                  "item": "minesia:stone_coin",
                   "quantity": 6
                 }
               ],
@@ -916,7 +916,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:stone_coin",
+                  "item": "minesia:stone_coin",
                   "quantity": 6
                 }
               ],
@@ -931,7 +931,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:stone_coin",
+                  "item": "minesia:stone_coin",
                   "quantity": 6
                 }
               ],
@@ -946,7 +946,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -961,7 +961,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -976,7 +976,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -991,7 +991,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -1006,7 +1006,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -1021,7 +1021,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -1036,7 +1036,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -1051,7 +1051,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -1066,7 +1066,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -1081,7 +1081,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -1096,7 +1096,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -1111,7 +1111,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -1126,7 +1126,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -1141,7 +1141,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -1156,7 +1156,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -1171,7 +1171,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -1186,7 +1186,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 4
                 }
               ],
@@ -1201,7 +1201,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 4
                 }
               ],
@@ -1216,7 +1216,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 4
                 }
               ],
@@ -1231,7 +1231,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 4
                 }
               ],
@@ -1246,7 +1246,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 4
                 }
               ],
@@ -1261,7 +1261,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -1276,7 +1276,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -1291,7 +1291,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -1306,7 +1306,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -1321,7 +1321,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -1336,7 +1336,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -1351,7 +1351,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -1366,7 +1366,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -1381,7 +1381,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -1396,7 +1396,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -1411,7 +1411,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],
@@ -1426,7 +1426,7 @@
             {
               "wants": [
                 {
-                  "item": "minesia_journey:wooden_coin",
+                  "item": "minesia:wooden_coin",
                   "quantity": 2
                 }
               ],

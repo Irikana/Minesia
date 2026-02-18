@@ -1,4 +1,4 @@
-// main.js - Minesia Journey 主入口文件
+// main.js - Minesia 主入口文件
 import { world, system } from "@minecraft/server";
 import * as setEffectMain from "./set_effect/setEffectMain.js";
 import * as minesiaLevelMain from "./minesia_level/minesiaLevelMain.js";

@@ -2,13 +2,13 @@
 	"format_version": "1.20.80",
 	"minecraft:item": {
 		"description": {
-			"identifier": "minesia_journey:fat_apple",
+			"identifier": "minesia:fat_apple",
 			"menu_category": {
 				"category": "nature"
 			}
 		},
 		"components": {
-			"minecraft:icon": "minesia_journey_fat_apple",
+			"minecraft:icon": "minesia_fat_apple",
 			"minecraft:use_modifiers": {
 				"use_duration": 1.6
 			},

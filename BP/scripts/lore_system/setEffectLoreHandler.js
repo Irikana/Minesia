@@ -1,77 +1,75 @@
 // setEffectLoreHandler.js
 // ===============================
-// 套装效果 Lore 处理器
-// 为套装物品显示套装效果信息
-// ===============================
+// 套装效果 Lore 处理�?// 为套装物品显示套装效果信�?// ===============================
 
 import { LoreRegistry } from "../lore_system/index.js";
 
 const SET_EQUIPMENT_CONFIG = {
     "minecraft:shield": {
         setName: { zh_CN: "盾牌套装", en_US: "Shield Set" },
-        condition: { zh_CN: "装备盾牌时:", en_US: "When equipped with shield:" },
+        condition: { zh_CN: "装备盾牌�?", en_US: "When equipped with shield:" },
         effects: [
-            { zh_CN: "+8 生命值", en_US: "+8 Health" }
+            { zh_CN: "+8 生命�?, en_US: "+8 Health" }
         ]
     },
     "minecraft:diamond_helmet": {
         setName: { zh_CN: "钻石套装", en_US: "Diamond Set" },
-        condition: { zh_CN: "装备全套时:", en_US: "When full set equipped:" },
+        condition: { zh_CN: "装备全套�?", en_US: "When full set equipped:" },
         effects: [
-            { zh_CN: "抗性提升 II", en_US: "Resistance II" },
-            { zh_CN: "+8 生命值", en_US: "+8 Health" }
+            { zh_CN: "抗性提�?II", en_US: "Resistance II" },
+            { zh_CN: "+8 生命�?, en_US: "+8 Health" }
         ]
     },
     "minecraft:diamond_chestplate": {
         setName: { zh_CN: "钻石套装", en_US: "Diamond Set" },
-        condition: { zh_CN: "装备全套时:", en_US: "When full set equipped:" },
+        condition: { zh_CN: "装备全套�?", en_US: "When full set equipped:" },
         effects: [
-            { zh_CN: "抗性提升 II", en_US: "Resistance II" },
-            { zh_CN: "+8 生命值", en_US: "+8 Health" }
+            { zh_CN: "抗性提�?II", en_US: "Resistance II" },
+            { zh_CN: "+8 生命�?, en_US: "+8 Health" }
         ]
     },
     "minecraft:diamond_leggings": {
         setName: { zh_CN: "钻石套装", en_US: "Diamond Set" },
-        condition: { zh_CN: "装备全套时:", en_US: "When full set equipped:" },
+        condition: { zh_CN: "装备全套�?", en_US: "When full set equipped:" },
         effects: [
-            { zh_CN: "抗性提升 II", en_US: "Resistance II" },
-            { zh_CN: "+8 生命值", en_US: "+8 Health" }
+            { zh_CN: "抗性提�?II", en_US: "Resistance II" },
+            { zh_CN: "+8 生命�?, en_US: "+8 Health" }
         ]
     },
     "minecraft:diamond_boots": {
         setName: { zh_CN: "钻石套装", en_US: "Diamond Set" },
-        condition: { zh_CN: "装备全套时:", en_US: "When full set equipped:" },
+        condition: { zh_CN: "装备全套�?", en_US: "When full set equipped:" },
         effects: [
-            { zh_CN: "抗性提升 II", en_US: "Resistance II" },
-            { zh_CN: "+8 生命值", en_US: "+8 Health" }
+            { zh_CN: "抗性提�?II", en_US: "Resistance II" },
+            { zh_CN: "+8 生命�?, en_US: "+8 Health" }
         ]
     },
-    "minesia_journey:steel_helmet": {
+    "minesia:steel_helmet": {
         setName: { zh_CN: "钢铁套装", en_US: "Steel Set" },
-        condition: { zh_CN: "装备全套时:", en_US: "When full set equipped:" },
+        condition: { zh_CN: "装备全套�?", en_US: "When full set equipped:" },
         effects: [
-            { zh_CN: "+4 生命值", en_US: "+4 Health" }
+            { zh_CN: "+4 生命�?, en_US: "+4 Health" }
         ]
     },
-    "minesia_journey:steel_chestplate": {
+    "minesia:steel_chestplate": {
         setName: { zh_CN: "钢铁套装", en_US: "Steel Set" },
-        condition: { zh_CN: "装备全套时:", en_US: "When full set equipped:" },
+        condition: { zh_CN: "装备全套�?", en_US: "When full set equipped:" },
         effects: [
-            { zh_CN: "+4 生命值", en_US: "+4 Health" }
+            { zh_CN: "+4 生命�?, en_US: "+4 Health" }
         ]
     },
-    "minesia_journey:steel_leggings": {
+    "minesia:steel_leggings": {
         setName: { zh_CN: "钢铁套装", en_US: "Steel Set" },
-        condition: { zh_CN: "装备全套时:", en_US: "When full set equipped:" },
+        condition: { zh_CN: "装备全套�?", en_US: "When full set equipped:" },
         effects: [
-            { zh_CN: "+4 生命值", en_US: "+4 Health" }
+            { zh_CN: "+4 生命�?, en_US: "+4 Health" }
         ]
     },
-    "minesia_journey:steel_boots": {
+    "minesia:steel_boots": {
         setName: { zh_CN: "钢铁套装", en_US: "Steel Set" },
-        condition: { zh_CN: "装备全套时:", en_US: "When full set equipped:" },
+        condition: { zh_CN: "装备全套�?", en_US: "When full set equipped:" },
         effects: [
-            { zh_CN: "+4 生命值", en_US: "+4 Health" }
+            { zh_CN: "+4 生命�?, en_US: "+4 Health" }
         ]
     }
 };
@@ -79,7 +77,7 @@ const SET_EQUIPMENT_CONFIG = {
 export function registerSetEffectLoreHandler() {
     LoreRegistry.register("set_effect_lore", {
         priority: 50,
-        description: "套装效果 Lore 处理器",
+        description: "套装效果 Lore 处理�?,
 
         canHandle(itemStack, context) {
             return SET_EQUIPMENT_CONFIG[itemStack.typeId] !== undefined;

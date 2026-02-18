@@ -93,7 +93,7 @@
         },
         {
           "type": "item",
-          "name": "minesia_journey:steel_ingot",
+          "name": "minesia:steel_ingot",
           "weight": 3,
           "functions": [
             {

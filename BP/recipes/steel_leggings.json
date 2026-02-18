@@ -2,7 +2,7 @@
 	"format_version": "1.20.80",
 	"minecraft:recipe_shaped": {
 		"description": {
-			"identifier": "minesia_journey:steel_leggings"
+			"identifier": "minesia:steel_leggings"
 		},
 		"tags": ["crafting_table"],
 		"pattern": [
@@ -12,15 +12,15 @@
 		],
 		"key": {
 			"#": {
-				"item": "minesia_journey:steel_ingot"
+				"item": "minesia:steel_ingot"
 			}
 		},
 		"result": {
-			"item": "minesia_journey:steel_leggings"
+			"item": "minesia:steel_leggings"
 		},
 		"unlock": [
 			{
-				"item": "minesia_journey:steel_ingot"
+				"item": "minesia:steel_ingot"
 			}
 		]
 	}

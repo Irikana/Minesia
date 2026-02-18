@@ -5,7 +5,7 @@
       "entries": [
         {
           "type": "item",
-          "name": "minesia_journey:wooden_coin",
+          "name": "minesia:wooden_coin",
           "weight": 30,
           "functions": [
             {
@@ -19,7 +19,7 @@
         },
         {
           "type": "item",
-          "name": "minesia_journey:stone_coin",
+          "name": "minesia:stone_coin",
           "weight": 15,
           "functions": [
             {
@@ -63,7 +63,7 @@
         },
         {
           "type": "item",
-          "name": "minesia_journey:steel_ingot",
+          "name": "minesia:steel_ingot",
           "weight": 8,
           "functions": [
             {

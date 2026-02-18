@@ -9,7 +9,7 @@
       "entries": [
         {
           "type": "item",
-          "name": "minesia_journey:diamond_coin",
+          "name": "minesia:diamond_coin",
           "weight": 5,
           "functions": [
             {
@@ -24,7 +24,7 @@
         },
         {
           "type": "item",
-          "name": "minesia_journey:gold_coin",
+          "name": "minesia:gold_coin",
           "weight": 15,
           "functions": [
             {
@@ -39,7 +39,7 @@
         },
         {
           "type": "item",
-          "name": "minesia_journey:emerald_coin",
+          "name": "minesia:emerald_coin",
           "weight": 3,
           "functions": [
             {
@@ -333,7 +333,7 @@
               "add": false
             }
           ],
-          "name": "minesia_journey:steel_ingot"
+          "name": "minesia:steel_ingot"
         },
         {
           "type": "item",

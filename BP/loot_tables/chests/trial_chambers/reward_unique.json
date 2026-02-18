@@ -5,7 +5,7 @@
       "entries": [
         {
           "type": "item",
-          "name": "minesia_journey:gold_coin",
+          "name": "minesia:gold_coin",
           "weight": 5,
           "functions": [
             {

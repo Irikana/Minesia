@@ -2,7 +2,7 @@
 	"format_version": "1.20.50",
 	"minecraft:item": {
 		"description": {
-			"identifier": "minesia_journey:wooden_coin",
+			"identifier": "minesia:wooden_coin",
 			"menu_category": {
 				"category": "items"
 			}

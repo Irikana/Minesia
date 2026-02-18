@@ -27,7 +27,7 @@
               {
                 "wants": [
                   {
-                    "item": "minesia_journey:stone_coin",
+                    "item": "minesia:stone_coin",
                     "quantity": 7,
                     "price_multiplier": 0.05
                   }
@@ -73,7 +73,7 @@
               {
                 "wants": [
                   {
-                    "item": "minesia_journey:silver_coin",
+                    "item": "minesia:silver_coin",
                     "quantity": 8,
                     "price_multiplier": 0.05
                   },
@@ -137,7 +137,7 @@
               {
                 "wants": [
                   {
-                    "item": "minesia_journey:silver_coin",
+                    "item": "minesia:silver_coin",
                     "quantity": 8,
                     "price_multiplier": 0.05
                   },
@@ -201,7 +201,7 @@
               {
                 "wants": [
                   {
-                    "item": "minesia_journey:silver_coin",
+                    "item": "minesia:silver_coin",
                     "quantity": 8,
                     "price_multiplier": 0.05
                   },
@@ -259,7 +259,7 @@
               {
                 "wants": [
                   {
-                    "item": "minesia_journey:silver_coin",
+                    "item": "minesia:silver_coin",
                     "quantity": 8,
                     "price_multiplier": 0.05
                   },
@@ -323,7 +323,7 @@
               {
                 "wants": [
                   {
-                    "item": "minesia_journey:silver_coin",
+                    "item": "minesia:silver_coin",
                     "quantity": 8,
                     "price_multiplier": 0.05
                   },
@@ -393,7 +393,7 @@
               {
                 "wants": [
                   {
-                    "item": "minesia_journey:silver_coin",
+                    "item": "minesia:silver_coin",
                     "quantity": 8,
                     "price_multiplier": 0.05
                   },
@@ -457,7 +457,7 @@
               {
                 "wants": [
                   {
-                    "item": "minesia_journey:silver_coin",
+                    "item": "minesia:silver_coin",
                     "quantity": 8,
                     "price_multiplier": 0.05
                   },
@@ -543,7 +543,7 @@
               {
                 "wants": [
                   {
-                    "item": "minesia_journey:gold_coin",
+                    "item": "minesia:gold_coin",
                     "quantity": 13,
                     "price_multiplier": 0.05
                   },
@@ -577,7 +577,7 @@
               {
                 "wants": [
                   {
-                    "item": "minesia_journey:gold_coin",
+                    "item": "minesia:gold_coin",
                     "quantity": 12,
                     "price_multiplier": 0.05
                   },
@@ -621,7 +621,7 @@
               {
                 "wants": [
                   {
-                    "item": "minesia_journey:silver_coin",
+                    "item": "minesia:silver_coin",
                     "quantity": 7,
                     "price_multiplier": 0.05
                   }
@@ -639,7 +639,7 @@
               {
                 "wants": [
                   {
-                    "item": "minesia_journey:stone_coin",
+                    "item": "minesia:stone_coin",
                     "quantity": 2,
                     "price_multiplier": 0.05
                   }
@@ -677,7 +677,7 @@
               {
                 "wants": [
                   {
-                    "item": "minesia_journey:stone_coin",
+                    "item": "minesia:stone_coin",
                     "quantity": 2,
                     "price_multiplier": 0.05
                   }
@@ -715,7 +715,7 @@
               {
                 "wants": [
                   {
-                    "item": "minesia_journey:stone_coin",
+                    "item": "minesia:stone_coin",
                     "quantity": 2,
                     "price_multiplier": 0.05
                   }
@@ -753,7 +753,7 @@
               {
                 "wants": [
                   {
-                    "item": "minesia_journey:stone_coin",
+                    "item": "minesia:stone_coin",
                     "quantity": 2,
                     "price_multiplier": 0.05
                   }
@@ -797,7 +797,7 @@
               {
                 "wants": [
                   {
-                    "item": "minesia_journey:stone_coin",
+                    "item": "minesia:stone_coin",
                     "quantity": 2,
                     "price_multiplier": 0.05
                   }
@@ -835,7 +835,7 @@
               {
                 "wants": [
                   {
-                    "item": "minesia_journey:stone_coin",
+                    "item": "minesia:stone_coin",
                     "quantity": 2,
                     "price_multiplier": 0.05
                   }
@@ -873,7 +873,7 @@
               {
                 "wants": [
                   {
-                    "item": "minesia_journey:stone_coin",
+                    "item": "minesia:stone_coin",
                     "quantity": 2,
                     "price_multiplier": 0.05
                   }
@@ -911,7 +911,7 @@
               {
                 "wants": [
                   {
-                    "item": "minesia_journey:stone_coin",
+                    "item": "minesia:stone_coin",
                     "quantity": 2,
                     "price_multiplier": 0.05
                   }
@@ -949,7 +949,7 @@
               {
                 "wants": [
                   {
-                    "item": "minesia_journey:stone_coin",
+                    "item": "minesia:stone_coin",
                     "quantity": 2,
                     "price_multiplier": 0.05
                   }
@@ -987,7 +987,7 @@
               {
                 "wants": [
                   {
-                    "item": "minesia_journey:stone_coin",
+                    "item": "minesia:stone_coin",
                     "quantity": 2,
                     "price_multiplier": 0.05
                   }
@@ -1025,7 +1025,7 @@
               {
                 "wants": [
                   {
-                    "item": "minesia_journey:stone_coin",
+                    "item": "minesia:stone_coin",
                     "quantity": 2,
                     "price_multiplier": 0.05
                   }
@@ -1053,7 +1053,7 @@
               {
                 "wants": [
                   {
-                    "item": "minesia_journey:stone_coin",
+                    "item": "minesia:stone_coin",
                     "quantity": 2,
                     "price_multiplier": 0.05
                   }
@@ -1091,7 +1091,7 @@
               {
                 "wants": [
                   {
-                    "item": "minesia_journey:stone_coin",
+                    "item": "minesia:stone_coin",
                     "quantity": 2,
                     "price_multiplier": 0.05
                   }
@@ -1129,7 +1129,7 @@
               {
                 "wants": [
                   {
-                    "item": "minesia_journey:stone_coin",
+                    "item": "minesia:stone_coin",
                     "quantity": 2,
                     "price_multiplier": 0.05
                   }
@@ -1157,7 +1157,7 @@
               {
                 "wants": [
                   {
-                    "item": "minesia_journey:stone_coin",
+                    "item": "minesia:stone_coin",
                     "quantity": 2,
                     "price_multiplier": 0.05
                   }
@@ -1195,7 +1195,7 @@
               {
                 "wants": [
                   {
-                    "item": "minesia_journey:gold_coin",
+                    "item": "minesia:gold_coin",
                     "quantity": 8,
                     "price_multiplier": 0.05
                   }
@@ -1213,7 +1213,7 @@
               {
                 "wants": [
                   {
-                    "item": "minesia_journey:diamond_coin",
+                    "item": "minesia:diamond_coin",
                     "quantity": 10,
                     "price_multiplier": 0.05
                   },

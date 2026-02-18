@@ -2,13 +2,13 @@
 	"format_version": "1.20.80",
 	"minecraft:item": {
 		"description": {
-			"identifier": "minesia_journey:silver_coin",
+			"identifier": "minesia:silver_coin",
 			"menu_category": {
 				"category": "nature"
 			}
 		},
 		"components": {
-			"minecraft:icon": "minesia_journey_silver_coin",
+			"minecraft:icon": "minesia_silver_coin",
 			"minecraft:max_stack_size": 50
 		}
 	}

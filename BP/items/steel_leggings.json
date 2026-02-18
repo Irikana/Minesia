@@ -2,14 +2,14 @@
 	"format_version": "1.20.80",
 	"minecraft:item": {
 		"description": {
-			"identifier": "minesia_journey:steel_leggings",
+			"identifier": "minesia:steel_leggings",
 			"menu_category": {
 				"category": "equipment",
 				"group": "itemGroup.name.leggings"
 			}
 		},
 		"components": {
-			"minecraft:icon": "minesia_journey_steel_leggings",
+			"minecraft:icon": "minesia_steel_leggings",
 			"minecraft:max_stack_size": 1,
 			"minecraft:wearable": {
 				"slot": "slot.armor.legs",
@@ -22,7 +22,7 @@
 				"repair_items": [
 					{
 						"items": [
-							"minesia_journey:steel_ingot"
+							"minesia:steel_ingot"
 						],
 						"repair_amount": 187
 					}
@@ -30,7 +30,7 @@
 			},
 			"minecraft:creative_group": "itemGroup.name.leggings",
 			"minecraft:display_name": {
-				"value": "item.minesia_journey:steel_leggings"
+				"value": "item.minesia:steel_leggings"
 			}
 		}
 	}

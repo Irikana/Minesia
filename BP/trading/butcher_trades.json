@@ -57,7 +57,7 @@
         {
           "wants": [
             {
-              "item": "minesia_journey:wooden_coin",
+              "item": "minesia:wooden_coin",
               "quantity": {
                 "min": 5,
                 "max": 8
@@ -77,7 +77,7 @@
         {
           "wants": [
             {
-              "item": "minesia_journey:wooden_coin",
+              "item": "minesia:wooden_coin",
               "quantity": {
                 "min": 6,
                 "max": 10

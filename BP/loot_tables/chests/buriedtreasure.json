@@ -17,7 +17,7 @@
       "entries": [
         {
           "type": "item",
-          "name": "minesia_journey:gold_coin",
+          "name": "minesia:gold_coin",
           "weight": 20,
           "functions": [
             {
@@ -31,7 +31,7 @@
         },
         {
           "type": "item",
-          "name": "minesia_journey:silver_coin",
+          "name": "minesia:silver_coin",
           "weight": 30,
           "functions": [
             {
@@ -109,7 +109,7 @@
         },
         {
           "type": "item",
-          "name": "minesia_journey:emerald_coin",
+          "name": "minesia:emerald_coin",
           "weight": 3,
           "functions": [
             {

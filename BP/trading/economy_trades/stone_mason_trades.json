@@ -24,7 +24,7 @@
         {
           "wants": [
             {
-              "item": "minesia_journey:wooden_coin",
+              "item": "minesia:wooden_coin",
               "quantity": 1,
               "price_multiplier": 0.05
             }
@@ -65,7 +65,7 @@
         {
           "wants": [
             {
-              "item": "minesia_journey:wooden_coin",
+              "item": "minesia:wooden_coin",
               "quantity": 1,
               "price_multiplier": 0.05
             }
@@ -120,7 +120,7 @@
         {
           "wants": [
             {
-              "item": "minesia_journey:wooden_coin",
+              "item": "minesia:wooden_coin",
               "quantity": 1,
               "price_multiplier": 0.05
             }
@@ -177,7 +177,7 @@
         {
           "wants": [
             {
-              "item": "minesia_journey:wooden_coin",
+              "item": "minesia:wooden_coin",
               "quantity": 1,
               "price_multiplier": 0.05
             }
@@ -296,7 +296,7 @@
         {
           "wants": [
             {
-              "item": "minesia_journey:wooden_coin",
+              "item": "minesia:wooden_coin",
               "quantity": 1,
               "price_multiplier": 0.05
             }

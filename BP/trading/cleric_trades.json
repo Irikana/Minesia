@@ -41,7 +41,7 @@
         {
           "wants": [
             {
-              "item": "minesia_journey:wooden_coin",
+              "item": "minesia:wooden_coin",
               "quantity": {
                 "min": 3,
                 "max": 6
@@ -61,7 +61,7 @@
         {
           "wants": [
             {
-              "item": "minesia_journey:wooden_coin",
+              "item": "minesia:wooden_coin",
               "quantity": {
                 "min": 3,
                 "max": 5
@@ -85,7 +85,7 @@
         {
           "wants": [
             {
-              "item": "minesia_journey:stone_coin",
+              "item": "minesia:stone_coin",
               "quantity": {
                 "min": 3,
                 "max": 5
@@ -105,7 +105,7 @@
         {
           "wants": [
             {
-              "item": "minesia_journey:gold_coin",
+              "item": "minesia:gold_coin",
               "quantity": {
                 "min": 5,
                 "max": 10
@@ -125,7 +125,7 @@
         {
           "wants": [
             {
-              "item": "minesia_journey:gold_coin",
+              "item": "minesia:gold_coin",
               "quantity": {
                 "min": 5,
                 "max": 15

@@ -1,7 +1,7 @@
 {
 	"type": "minecraftBedrock",
-	"name": "Minesia Journey",
-	"namespace": "minesia_journey",
+	"name": "Minesia",
+	"namespace": "minesia",
 	"authors": [
 		"Hua1286"
 	],
@@ -36,7 +36,7 @@
 			[
 				"simpleRewrite",
 				{
-					"packName": "Minesia Journey"
+					"packName": "Minesia"
 				}
 			]
 		]
