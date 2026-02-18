@@ -1,0 +1,85 @@
+{
+  "tiers": [
+    {
+      "trades": [
+        {
+          "wants": [
+            {
+              "item": "minecraft:string",
+              "quantity": {
+                "min": 15,
+                "max": 20
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:emerald"
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minesia_journey:wooden_coin",
+              "quantity": {
+                "min": 2,
+                "max": 4
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:arrow",
+              "quantity": {
+                "min": 8,
+                "max": 12
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trades": [
+        {
+          "wants": [
+            {
+              "item": "minecraft:gravel",
+              "quantity": 10
+            },
+            {
+              "item": "minecraft:emerald",
+              "quantity": 1
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:flint",
+              "quantity": {
+                  "min": 6,
+                  "max": 10
+                }
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minesia_journey:stone_coin",
+              "quantity": {
+                "min": 3,
+                "max": 5
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:bow"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

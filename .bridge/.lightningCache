@@ -1,0 +1,212 @@
+$formatVersion: 1
+#manifest
+projects/Minesia Journey/BP/manifest.json|1771394606121
+#unknown
+projects/Minesia Journey/BP/pack_icon.png|1771391401934
+projects/Minesia Journey/BP/config/level_config.json|1770971429423
+projects/Minesia Journey/BP/docs/level_system_optimization.md|1770971429433
+projects/Minesia Journey/BP/docs/damage_display_system.md|1771329094238
+projects/Minesia Journey/BP/docs/bonus_damage_system.md|1771328857333
+projects/Minesia Journey/BP/docs/minesia_level_system.md|1771328980811
+projects/Minesia Journey/BP/docs/lore_system.md|1771328079820
+projects/Minesia Journey/BP/docs/set_effect_system.md|1771336643339
+projects/Minesia Journey/BP/docs/set_effect_custom_integration_design.md|1771323090081
+projects/Minesia Journey/RP/pack_icon.png|1771391401934
+projects/Minesia Journey/RP/subpacks/Desktop Better/ui/hud_screen.json|1771321037345
+#functionTick
+projects/Minesia Journey/BP/functions/tick.json|1770965613566
+#gameTest
+projects/Minesia Journey/BP/scripts/main.js|1771335122387
+projects/Minesia Journey/BP/scripts/bonus_damage/bonusDamageMain.js|1771309969389
+projects/Minesia Journey/BP/scripts/bonus_damage/config.js|1771329674682
+projects/Minesia Journey/BP/scripts/bonus_damage/loreHandler.js|1771336942499
+projects/Minesia Journey/BP/scripts/damage_display/config.js|1771311756465
+projects/Minesia Journey/BP/scripts/damage_display/damageDisplayMain.js|1771314991845
+projects/Minesia Journey/BP/scripts/lore_system/customItemLoreHandler.js|1771335143158
+projects/Minesia Journey/BP/scripts/lore_system/index.js|1771327131055
+projects/Minesia Journey/BP/scripts/lore_system/loreManager.js|1771336504854
+projects/Minesia Journey/BP/scripts/lore_system/loreRegistry.js|1771327085095
+projects/Minesia Journey/BP/scripts/lore_system/setEffectLoreHandler.js|1771391112597
+projects/Minesia Journey/BP/scripts/minesia_level/level_system.js|1771182239042
+projects/Minesia Journey/BP/scripts/minesia_level/minesiaLevelEvent.js|1771393010587
+projects/Minesia Journey/BP/scripts/minesia_level/minesiaLevelMain.js|1771259790127
+projects/Minesia Journey/BP/scripts/set_effect/equipment.js|1770965633574
+projects/Minesia Journey/BP/scripts/set_effect/actions.js|1771330737556
+projects/Minesia Journey/BP/scripts/set_effect/rules.js|1771330722741
+projects/Minesia Journey/BP/scripts/set_effect/setEffectMain.js|1771299901425
+projects/Minesia Journey/BP/scripts/set_effect/set_effects.js|1770965633384
+#tradeTable
+projects/Minesia Journey/BP/trading/butcher_trades.json|1771385532782
+projects/Minesia Journey/BP/trading/armorer_trades.json|1771385481811
+projects/Minesia Journey/BP/trading/cartographer_trades.json|1771385646026
+projects/Minesia Journey/BP/trading/cleric_trades.json|1771385522679
+projects/Minesia Journey/BP/trading/farmer_trades.json|1771385419068
+projects/Minesia Journey/BP/trading/fisherman_trades.json|1771385567017
+projects/Minesia Journey/BP/trading/leather_worker_trades.json|1771385645867
+projects/Minesia Journey/BP/trading/fletcher_trades.json|1771385576684
+projects/Minesia Journey/BP/trading/librarian_trades.json|1771385505339
+projects/Minesia Journey/BP/trading/shepherd_trades.json|1771385603394
+projects/Minesia Journey/BP/trading/stone_mason_trades.json|1771385645936
+projects/Minesia Journey/BP/trading/weapon_smith_trades.json|1771385433038
+projects/Minesia Journey/BP/trading/tool_smith_trades.json|1771385445265
+projects/Minesia Journey/BP/trading/economy_trades/armorer_trades.json|1771389502854
+projects/Minesia Journey/BP/trading/economy_trades/butcher_trades.json|1771389502875
+projects/Minesia Journey/BP/trading/economy_trades/cartographer_trades.json|1771389502926
+projects/Minesia Journey/BP/trading/economy_trades/cleric_trades.json|1771389502955
+projects/Minesia Journey/BP/trading/economy_trades/farmer_trades.json|1771391701623
+projects/Minesia Journey/BP/trading/economy_trades/fisherman_trades.json|1771391701623
+projects/Minesia Journey/BP/trading/economy_trades/fletcher_trades.json|1771389503142
+projects/Minesia Journey/BP/trading/economy_trades/leather_worker_trades.json|1771391701623
+projects/Minesia Journey/BP/trading/economy_trades/librarian_trades.json|1771391701625
+projects/Minesia Journey/BP/trading/economy_trades/stone_mason_trades.json|1771391701617
+projects/Minesia Journey/BP/trading/economy_trades/shepherd_trades.json|1771391701617
+projects/Minesia Journey/BP/trading/economy_trades/tool_smith_trades.json|1771389503889
+projects/Minesia Journey/BP/trading/economy_trades/wandering_trader_trades.json|1771385824408
+projects/Minesia Journey/BP/trading/economy_trades/weapon_smith_trades.json|1771389506448
+#entity
+projects/Minesia Journey/BP/entities/player.json|1770965614909|{"identifier":["minecraft:player"],"event":["minecraft:gain_raid_omen","minecraft:clear_add_raid_omen","minecraft:trigger_raid","minecraft:remove_raid_trigger"],"eventReference":["minecraft:gain_raid_omen","minecraft:remove_raid_trigger","minecraft:clear_add_raid_omen"],"componentGroup":["minecraft:add_raid_omen","minecraft:clear_raid_omen_spell_effect","minecraft:raid_trigger"],"family":["player"],"lootTablePath":["projects/Minesia Journey/BP/loot_tables/empty.json"]}
+#item
+projects/Minesia Journey/BP/items/cooked_beef_super.json|1770965613349|{"identifier":["minesia_journey:cooked_beef_super"],"tag":["minecraft:is_meat","minecraft:is_cooked"]}
+projects/Minesia Journey/BP/items/steel_boots.json|1771337719206|{"identifier":["minesia_journey:steel_boots"],"tag":[]}
+projects/Minesia Journey/BP/items/steel_helmet.json|1771337692299|{"identifier":["minesia_journey:steel_helmet"],"tag":[]}
+projects/Minesia Journey/BP/items/fat_apple.json|1770965611460|{"identifier":["minesia_journey:fat_apple"],"tag":[]}
+projects/Minesia Journey/BP/items/steel_chestplate.json|1771337700740|{"identifier":["minesia_journey:steel_chestplate"],"tag":[]}
+projects/Minesia Journey/BP/items/steel_ingot.json|1771329634279|{"identifier":["minesia_journey:steel_ingot"],"tag":[]}
+projects/Minesia Journey/BP/items/steel_leggings.json|1771337707791|{"identifier":["minesia_journey:steel_leggings"],"tag":[]}
+projects/Minesia Journey/BP/items/steel_sword.json|1771335795132|{"identifier":["minesia_journey:steel_sword"],"tag":[]}
+projects/Minesia Journey/BP/items/toy_sword.json|1771335788381|{"identifier":["minesia_journey:toy_sword"],"tag":[]}
+projects/Minesia Journey/BP/items/currency/diamond_coin.item.json|1770965613134|{"identifier":["minesia_journey:diamond_coin"],"tag":[]}
+projects/Minesia Journey/BP/items/currency/emerald_coin.item.json|1770965612906|{"identifier":["minesia_journey:emerald_coin"],"tag":[]}
+projects/Minesia Journey/BP/items/currency/gold_coin.item.json|1770965612683|{"identifier":["minesia_journey:gold_coin"],"tag":[]}
+projects/Minesia Journey/BP/items/currency/ruby_coin.item.json|1770965612447|{"identifier":["minesia_journey:ruby_coin"],"tag":[]}
+projects/Minesia Journey/BP/items/currency/stone_coin.item.json|1770965611935|{"identifier":["minesia_journey:stone_coin"],"tag":[]}
+projects/Minesia Journey/BP/items/currency/silver_coin.item.json|1770965612190|{"identifier":["minesia_journey:silver_coin"],"tag":[]}
+projects/Minesia Journey/BP/items/currency/wooden_coin.item.json|1771342604145|{"identifier":["minesia_journey:wooden_coin"],"tag":[]}
+#lootTable
+projects/Minesia Journey/BP/loot_tables/basic_reward_table.json|1771043258231|{"lootTablePath":[]}
+projects/Minesia Journey/BP/loot_tables/empty.json|1770965611001
+projects/Minesia Journey/BP/loot_tables/chests/abandoned_mineshaft.json|1771349086947|{"lootTablePath":[]}
+projects/Minesia Journey/BP/loot_tables/chests/ancient_city.json|1771349213038|{"lootTablePath":[]}
+projects/Minesia Journey/BP/loot_tables/chests/ancient_city_ice_box.json|1771349182838|{"lootTablePath":[]}
+projects/Minesia Journey/BP/loot_tables/chests/buriedtreasure.json|1771349202827|{"lootTablePath":[]}
+projects/Minesia Journey/BP/loot_tables/chests/dispenser_trap.json|1770744781000|{"lootTablePath":[]}
+projects/Minesia Journey/BP/loot_tables/chests/desert_pyramid.json|1771349121594|{"lootTablePath":[]}
+projects/Minesia Journey/BP/loot_tables/chests/igloo_chest.json|1771349178806|{"lootTablePath":[]}
+projects/Minesia Journey/BP/loot_tables/chests/monster_room.json|1771349100587|{"lootTablePath":[]}
+projects/Minesia Journey/BP/loot_tables/chests/jungle_temple.json|1771349115159|{"lootTablePath":[]}
+projects/Minesia Journey/BP/loot_tables/chests/shipwreck.json|1771349166055|{"lootTablePath":[]}
+projects/Minesia Journey/BP/loot_tables/chests/pillager_outpost.json|1771349125967|{"lootTablePath":[]}
+projects/Minesia Journey/BP/loot_tables/chests/shipwrecktreasure.json|1771349155289|{"lootTablePath":[]}
+projects/Minesia Journey/BP/loot_tables/chests/shipwrecksupply.json|1771349037510|{"lootTablePath":[]}
+projects/Minesia Journey/BP/loot_tables/chests/spawn_bonus_chest.json|1771349073558|{"lootTablePath":[]}
+projects/Minesia Journey/BP/loot_tables/chests/simple_dungeon.json|1771349094819|{"lootTablePath":[]}
+projects/Minesia Journey/BP/loot_tables/chests/stronghold_corridor.json|1771349148970|{"lootTablePath":[]}
+projects/Minesia Journey/BP/loot_tables/chests/stronghold_crossing.json|1771349144528|{"lootTablePath":[]}
+projects/Minesia Journey/BP/loot_tables/chests/underwater_ruin_big.json|1771349174017|{"lootTablePath":[]}
+projects/Minesia Journey/BP/loot_tables/chests/stronghold_library.json|1771349141165|{"lootTablePath":[]}
+projects/Minesia Journey/BP/loot_tables/chests/underwater_ruin_small.json|1771349041069|{"lootTablePath":[]}
+projects/Minesia Journey/BP/loot_tables/chests/village_blacksmith.json|1771349278038|{"lootTablePath":[]}
+projects/Minesia Journey/BP/loot_tables/chests/village_two_room_house.json|1771349069298|{"lootTablePath":[]}
+projects/Minesia Journey/BP/loot_tables/chests/woodland_mansion.json|1771349224577|{"lootTablePath":[]}
+projects/Minesia Journey/BP/loot_tables/chests/trial_chambers/corridor.json|1771341569844|{"lootTablePath":[]}
+projects/Minesia Journey/BP/loot_tables/chests/trial_chambers/entrance.json|1770744781000|{"lootTablePath":[]}
+projects/Minesia Journey/BP/loot_tables/chests/trial_chambers/intersection.json|1771341569892|{"lootTablePath":[]}
+projects/Minesia Journey/BP/loot_tables/chests/trial_chambers/intersection_barrel.json|1771341569922|{"lootTablePath":[]}
+projects/Minesia Journey/BP/loot_tables/chests/trial_chambers/reward.json|1770744781000|{"lootTablePath":["projects/Minesia Journey/BP/loot_tables/chests/trial_chambers/reward_common.json","projects/Minesia Journey/BP/loot_tables/chests/trial_chambers/reward_rare.json","projects/Minesia Journey/BP/loot_tables/chests/trial_chambers/reward_unique.json"]}
+projects/Minesia Journey/BP/loot_tables/chests/trial_chambers/reward_ominous.json|1770744781000|{"lootTablePath":["projects/Minesia Journey/BP/loot_tables/chests/trial_chambers/reward_ominous_common.json","projects/Minesia Journey/BP/loot_tables/chests/trial_chambers/reward_ominous_rare.json","projects/Minesia Journey/BP/loot_tables/chests/trial_chambers/reward_ominous_unique.json"]}
+projects/Minesia Journey/BP/loot_tables/chests/trial_chambers/reward_common.json|1771341569970|{"lootTablePath":[]}
+projects/Minesia Journey/BP/loot_tables/chests/trial_chambers/reward_ominous_common.json|1770744781000|{"lootTablePath":[]}
+projects/Minesia Journey/BP/loot_tables/chests/trial_chambers/reward_ominous_unique.json|1770744781000|{"lootTablePath":[]}
+projects/Minesia Journey/BP/loot_tables/chests/trial_chambers/reward_rare.json|1771341570009|{"lootTablePath":[]}
+projects/Minesia Journey/BP/loot_tables/chests/trial_chambers/reward_ominous_rare.json|1770744781000|{"lootTablePath":[]}
+projects/Minesia Journey/BP/loot_tables/chests/trial_chambers/reward_unique.json|1771341570026|{"lootTablePath":[]}
+projects/Minesia Journey/BP/loot_tables/chests/trial_chambers/supply.json|1771341570094|{"lootTablePath":[]}
+projects/Minesia Journey/BP/loot_tables/chests/village/village_bundle.json|1770744781000|{"lootTablePath":[]}
+projects/Minesia Journey/BP/loot_tables/chests/village/village_armorer.json|1771346989848|{"lootTablePath":[]}
+projects/Minesia Journey/BP/loot_tables/chests/village/village_butcher.json|1771346928051|{"lootTablePath":[]}
+projects/Minesia Journey/BP/loot_tables/chests/village/village_cartographer.json|1771346914046|{"lootTablePath":["projects/Minesia Journey/BP/loot_tables/chests/village/village_bundle.json"]}
+projects/Minesia Journey/BP/loot_tables/chests/village/village_desert_house.json|1771347103739|{"lootTablePath":["projects/Minesia Journey/BP/loot_tables/chests/village/village_bundle.json"]}
+projects/Minesia Journey/BP/loot_tables/chests/village/village_fletcher.json|1771347029467|{"lootTablePath":[]}
+projects/Minesia Journey/BP/loot_tables/chests/village/village_plains_house.json|1771384875961|{"lootTablePath":["projects/Minesia Journey/BP/loot_tables/chests/village/village_bundle.json"]}
+projects/Minesia Journey/BP/loot_tables/chests/village/village_mason.json|1771347041347|{"lootTablePath":[]}
+projects/Minesia Journey/BP/loot_tables/chests/village/village_savanna_house.json|1771384871453|{"lootTablePath":["projects/Minesia Journey/BP/loot_tables/chests/village/village_bundle.json"]}
+projects/Minesia Journey/BP/loot_tables/chests/village/village_taiga_house.json|1771384861696|{"lootTablePath":["projects/Minesia Journey/BP/loot_tables/chests/village/village_bundle.json"]}
+projects/Minesia Journey/BP/loot_tables/chests/village/village_shepherd.json|1771347057806|{"lootTablePath":[]}
+projects/Minesia Journey/BP/loot_tables/chests/village/village_snowy_house.json|1771384866782|{"lootTablePath":["projects/Minesia Journey/BP/loot_tables/chests/village/village_bundle.json"]}
+projects/Minesia Journey/BP/loot_tables/chests/village/village_tannery.json|1771347071314|{"lootTablePath":["projects/Minesia Journey/BP/loot_tables/chests/village/village_bundle.json"]}
+projects/Minesia Journey/BP/loot_tables/chests/village/village_temple.json|1771347093408|{"lootTablePath":[]}
+projects/Minesia Journey/BP/loot_tables/chests/village/village_weaponsmith.json|1771346958722|{"lootTablePath":["projects/Minesia Journey/BP/loot_tables/chests/village/village_bundle.json"]}
+projects/Minesia Journey/BP/loot_tables/chests/village/village_toolsmith.json|1771346977621|{"lootTablePath":[]}
+#recipe
+projects/Minesia Journey/BP/recipes/steel_chestplate.json|1771335866769|{"identifier":["minesia_journey:steel_chestplate"],"recipeTag":["crafting_table"],"itemIdentifier":["minesia_journey:steel_chestplate","minesia_journey:steel_ingot"]}
+projects/Minesia Journey/BP/recipes/steel_boots.json|1771335878396|{"identifier":["minesia_journey:steel_boots"],"recipeTag":["crafting_table"],"itemIdentifier":["minesia_journey:steel_boots","minesia_journey:steel_ingot"]}
+projects/Minesia Journey/BP/recipes/steel_helmet.json|1771335862132|{"identifier":["minesia_journey:steel_helmet"],"recipeTag":["crafting_table"],"itemIdentifier":["minesia_journey:steel_helmet","minesia_journey:steel_ingot"]}
+projects/Minesia Journey/BP/recipes/steel_ingot.json|1771329827134|{"identifier":["minesia_journey:steel_ingot_from_iron"],"recipeTag":["blast_furnace"],"itemIdentifier":["minecraft:iron_ingot","minesia_journey:steel_ingot"]}
+projects/Minesia Journey/BP/recipes/steel_leggings.json|1771335872958|{"identifier":["minesia_journey:steel_leggings"],"recipeTag":["crafting_table"],"itemIdentifier":["minesia_journey:steel_leggings","minesia_journey:steel_ingot"]}
+projects/Minesia Journey/BP/recipes/steel_sword.json|1771335857691|{"identifier":["minesia_journey:steel_sword"],"recipeTag":["crafting_table"],"itemIdentifier":["minesia_journey:steel_sword","minesia_journey:steel_ingot","minecraft:stick"]}
+#generatorScript
+projects/Minesia Journey/BP/subpacks/Easy/scripts/minesia_level/level_system.js|1771392400963
+projects/Minesia Journey/BP/subpacks/Easy/scripts/minesia_level/minesiaLevelEvent.js|1771393228910
+projects/Minesia Journey/BP/subpacks/Very Easy/scripts/minesia_level/level_system.js|1771392177623
+projects/Minesia Journey/BP/subpacks/Very Easy/scripts/minesia_level/minesiaLevelEvent.js|1771394274997
+#function
+projects/Minesia Journey/BP/functions/loot/spawn_loot_12000.mcfunction|1770965614232|{"entityTag":[],"functionPath":[],"scoreboardObjective":[]}
+projects/Minesia Journey/BP/functions/loot/load.mcfunction|1771081851717|{"entityTag":[],"functionPath":[],"scoreboardObjective":["loot_timer"]}
+projects/Minesia Journey/BP/functions/loot/spawn_loot.mcfunction|1770965614462|{"entityTag":[],"functionPath":[],"scoreboardObjective":[]}
+projects/Minesia Journey/BP/functions/loot/spawn_loot_500.mcfunction|1770965614004|{"entityTag":[],"functionPath":[],"scoreboardObjective":[]}
+projects/Minesia Journey/BP/functions/loot/timer.mcfunction|1770965613791|{"entityTag":[],"functionPath":["projects/Minesia Journey/BP/functions/loot/spawn_loot.mcfunction"],"scoreboardObjective":[]}
+#splashes
+projects/Minesia Journey/RP/splashes.json|1770965607228
+#biomesClient
+projects/Minesia Journey/RP/biomes_client.json|1770965608974
+#clientBlock
+projects/Minesia Journey/RP/blocks.json|1770965608732|{"identifier":[]}
+#clientManifest
+projects/Minesia Journey/RP/manifest.json|1771395544341|{"uuid":["5ddb3965-4730-42d9-89ac-eb4062bb4f96"]}
+#clientSound
+projects/Minesia Journey/RP/sounds.json|1771224147379
+#langDef
+projects/Minesia Journey/RP/texts/languages.json|1770980840063
+#ui
+projects/Minesia Journey/RP/ui/hud_screen.json|1771395514858
+#sound
+projects/Minesia Journey/RP/sounds/minesia_level/level_up.ogg|1771210589599
+#texture
+projects/Minesia Journey/RP/textures/items/emerald_coin.png|1770965605487
+projects/Minesia Journey/RP/textures/items/cooked_beef_super.png|1770965605993
+projects/Minesia Journey/RP/textures/items/diamond_coin.png|1770965605737
+projects/Minesia Journey/RP/textures/items/fat_apple.png|1770965605235
+projects/Minesia Journey/RP/textures/items/ruby_coin.png|1770965604779
+projects/Minesia Journey/RP/textures/items/gold_coin.png|1770965604994
+projects/Minesia Journey/RP/textures/items/silver_coin.png|1770965604553
+projects/Minesia Journey/RP/textures/items/steel_axe.png|1771225043082
+projects/Minesia Journey/RP/textures/items/steel_hoe.png|1771225059804
+projects/Minesia Journey/RP/textures/items/steel_chestplate.png|1771390176376
+projects/Minesia Journey/RP/textures/items/steel_boots.png|1771390176375
+projects/Minesia Journey/RP/textures/items/steel_helmet.png|1771331527483
+projects/Minesia Journey/RP/textures/items/steel_ingot.png|1771225038562
+projects/Minesia Journey/RP/textures/items/steel_pickaxe.png|1771225056093
+projects/Minesia Journey/RP/textures/items/steel_leggings.png|1771331533482
+projects/Minesia Journey/RP/textures/items/steel_sword.png|1771390176375
+projects/Minesia Journey/RP/textures/items/stone_coin.png|1770965604344
+projects/Minesia Journey/RP/textures/items/toy_sword.png|1725198954000
+projects/Minesia Journey/RP/textures/items/wood_coin.png|1770965604121
+projects/Minesia Journey/RP/textures/entities/zombies/flesh_zombie.png|1771229556868
+projects/Minesia Journey/RP/textures/models/armor/steel_1.png|1771225674235
+projects/Minesia Journey/RP/textures/models/armor/steel_2.png|1771225657300
+#soundDefinition
+projects/Minesia Journey/RP/sounds/sound_definitions.json|1771210977230|{"identifier":["minesia.level_up"]}
+#clientLang
+projects/Minesia Journey/RP/texts/en_US.lang|1771330578635|{"actionText":[]}
+projects/Minesia Journey/RP/texts/zh_CN.lang|1771330551048|{"actionText":[]}
+#flipbookTexture
+projects/Minesia Journey/RP/textures/flipbook_textures.json|1770965606503
+#terrainTexture
+projects/Minesia Journey/RP/textures/terrain_texture.json|1770965603875|{"texture":[]}
+#itemTexture
+projects/Minesia Journey/RP/textures/item_texture.json|1771330639242|{"texture":["wood_coin","minesia_journey_stone_coin","minesia_journey_silver_coin","minesia_journey_gold_coin","minesia_journey_diamond_coin","minesia_journey_emerald_coin","minesia_journey_ruby_coin","minesia_journey_cooked_beef_super","minesia_journey_fat_apple","minesia_journey_toy_sword","minesia_journey_steel_ingot","minesia_journey_steel_sword","minesia_journey_steel_helmet","minesia_journey_steel_chestplate","minesia_journey_steel_leggings","minesia_journey_steel_boots"],"texturePath":["projects/Minesia Journey/RP/textures/items/wood_coin.png","projects/Minesia Journey/RP/textures/items/silver_coin.png","projects/Minesia Journey/RP/textures/items/stone_coin.png","projects/Minesia Journey/RP/textures/items/gold_coin.png","projects/Minesia Journey/RP/textures/items/diamond_coin.png","projects/Minesia Journey/RP/textures/items/ruby_coin.png","projects/Minesia Journey/RP/textures/items/emerald_coin.png","projects/Minesia Journey/RP/textures/items/fat_apple.png","projects/Minesia Journey/RP/textures/items/cooked_beef_super.png","projects/Minesia Journey/RP/textures/items/toy_sword.png","projects/Minesia Journey/RP/textures/items/steel_ingot.png","projects/Minesia Journey/RP/textures/items/steel_sword.png","projects/Minesia Journey/RP/textures/items/steel_leggings.png","projects/Minesia Journey/RP/textures/items/steel_chestplate.png","projects/Minesia Journey/RP/textures/items/steel_helmet.png","projects/Minesia Journey/RP/textures/items/steel_boots.png"]}
+#attachable
+projects/Minesia Journey/RP/attachables/steel_chestplate.json|1771337836031|{"identifier":["minesia_journey:steel_chestplate"],"textureReference":["default","enchanted"],"materialReference":["default","enchanted"],"geometryReference":["default"],"materialIdentifier":["armor","armor_enchanted"],"geometryIdentifier":["geometry.player.armor.chestplate"],"renderControllerIdentifier":["controller.render.armor"],"texturePath":["projects/Minesia Journey/RP/textures/models/armor/steel_1.png"]}
+projects/Minesia Journey/RP/attachables/steel_helmet.json|1771337829689|{"identifier":["minesia_journey:steel_helmet"],"textureReference":["default","enchanted"],"materialReference":["default","enchanted"],"geometryReference":["default"],"materialIdentifier":["armor","armor_enchanted"],"geometryIdentifier":["geometry.player.armor.helmet"],"renderControllerIdentifier":["controller.render.armor"],"texturePath":["projects/Minesia Journey/RP/textures/models/armor/steel_1.png"]}
+projects/Minesia Journey/RP/attachables/steel_boots.json|1771337847039|{"identifier":["minesia_journey:steel_boots"],"textureReference":["default","enchanted"],"materialReference":["default","enchanted"],"geometryReference":["default"],"materialIdentifier":["armor","armor_enchanted"],"geometryIdentifier":["geometry.player.armor.boots"],"renderControllerIdentifier":["controller.render.armor"],"texturePath":["projects/Minesia Journey/RP/textures/models/armor/steel_1.png"]}
+projects/Minesia Journey/RP/attachables/steel_leggings.json|1771337841994|{"identifier":["minesia_journey:steel_leggings"],"textureReference":["default","enchanted"],"materialReference":["default","enchanted"],"geometryReference":["default"],"materialIdentifier":["armor","armor_enchanted"],"geometryIdentifier":["geometry.player.armor.leggings"],"renderControllerIdentifier":["controller.render.armor"],"texturePath":["projects/Minesia Journey/RP/textures/models/armor/steel_2.png"]}

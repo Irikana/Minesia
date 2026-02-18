@@ -1,0 +1,15 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:item": {
+		"description": {
+			"identifier": "minesia_journey:gold_coin",
+			"menu_category": {
+				"category": "nature"
+			}
+		},
+		"components": {
+			"minecraft:icon": "minesia_journey_gold_coin",
+			"minecraft:max_stack_size": 50
+		}
+	}
+}

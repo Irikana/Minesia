@@ -1,0 +1,29 @@
+execute if score timer12000 loot_timer matches 11999 run replaceitem block ~ ~2 ~ slot.container 0 air
+execute if score timer12000 loot_timer matches 11999 run replaceitem block ~ ~2 ~ slot.container 1 air
+execute if score timer12000 loot_timer matches 11999 run replaceitem block ~ ~2 ~ slot.container 2 air
+execute if score timer12000 loot_timer matches 11999 run replaceitem block ~ ~2 ~ slot.container 3 air
+execute if score timer12000 loot_timer matches 11999 run replaceitem block ~ ~2 ~ slot.container 4 air
+execute if score timer12000 loot_timer matches 11999 run replaceitem block ~ ~2 ~ slot.container 5 air
+execute if score timer12000 loot_timer matches 11999 run replaceitem block ~ ~2 ~ slot.container 6 air
+execute if score timer12000 loot_timer matches 11999 run replaceitem block ~ ~2 ~ slot.container 7 air
+execute if score timer12000 loot_timer matches 11999 run replaceitem block ~ ~2 ~ slot.container 8 air
+execute if score timer12000 loot_timer matches 11999 run replaceitem block ~ ~2 ~ slot.container 9 air
+execute if score timer12000 loot_timer matches 11999 run replaceitem block ~ ~2 ~ slot.container 10 air
+execute if score timer12000 loot_timer matches 11999 run replaceitem block ~ ~2 ~ slot.container 11 air
+execute if score timer12000 loot_timer matches 11999 run replaceitem block ~ ~2 ~ slot.container 12 air
+execute if score timer12000 loot_timer matches 11999 run replaceitem block ~ ~2 ~ slot.container 13 air
+execute if score timer12000 loot_timer matches 11999 run replaceitem block ~ ~2 ~ slot.container 14 air
+execute if score timer12000 loot_timer matches 11999 run replaceitem block ~ ~2 ~ slot.container 15 air
+execute if score timer12000 loot_timer matches 11999 run replaceitem block ~ ~2 ~ slot.container 16 air
+execute if score timer12000 loot_timer matches 11999 run replaceitem block ~ ~2 ~ slot.container 17 air
+execute if score timer12000 loot_timer matches 11999 run replaceitem block ~ ~2 ~ slot.container 18 air
+execute if score timer12000 loot_timer matches 11999 run replaceitem block ~ ~2 ~ slot.container 19 air
+execute if score timer12000 loot_timer matches 11999 run replaceitem block ~ ~2 ~ slot.container 20 air
+execute if score timer12000 loot_timer matches 11999 run replaceitem block ~ ~2 ~ slot.container 21 air
+execute if score timer12000 loot_timer matches 11999 run replaceitem block ~ ~2 ~ slot.container 22 air
+execute if score timer12000 loot_timer matches 11999 run replaceitem block ~ ~2 ~ slot.container 23 air
+execute if score timer12000 loot_timer matches 11999 run replaceitem block ~ ~2 ~ slot.container 24 air
+execute if score timer12000 loot_timer matches 11999 run replaceitem block ~ ~2 ~ slot.container 25 air
+execute if score timer12000 loot_timer matches 11999 run replaceitem block ~ ~2 ~ slot.container 26 air
+
+execute if score timer12000 loot_timer matches 12000 run loot insert ~ ~2 ~ loot basic_reward_table

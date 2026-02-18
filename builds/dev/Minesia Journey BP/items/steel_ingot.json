@@ -1,0 +1,18 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:item": {
+		"description": {
+			"identifier": "minesia_journey:steel_ingot",
+			"menu_category": {
+				"category": "nature"
+			}
+		},
+		"components": {
+			"minecraft:icon": "minesia_journey_steel_ingot",
+			"minecraft:max_stack_size": 64,
+			"minecraft:display_name": {
+				"value": "item.minesia_journey:steel_ingot"
+			}
+		}
+	}
+}

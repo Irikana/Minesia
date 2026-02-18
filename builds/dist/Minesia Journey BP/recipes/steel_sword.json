@@ -1,0 +1,32 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "minesia_journey:steel_sword"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"#",
+			"#",
+			"X"
+		],
+		"key": {
+			"#": {
+				"item": "minesia_journey:steel_ingot"
+			},
+			"X": {
+				"item": "minecraft:stick"
+			}
+		},
+		"result": {
+			"item": "minesia_journey:steel_sword"
+		},
+		"unlock": [
+			{
+				"item": "minesia_journey:steel_ingot"
+			}
+		]
+	}
+}
