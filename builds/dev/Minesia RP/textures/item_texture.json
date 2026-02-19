@@ -1,0 +1,54 @@
+{
+	"texture_data": {
+		"wood_coin": {
+			"textures": "textures/items/wood_coin"
+		},
+		"minesia_stone_coin": {
+			"textures": "textures/items/stone_coin"
+		},
+		"minesia_silver_coin": {
+			"textures": "textures/items/silver_coin"
+		},
+		"minesia_gold_coin": {
+			"textures": "textures/items/gold_coin"
+		},
+		"minesia_diamond_coin": {
+			"textures": "textures/items/diamond_coin"
+		},
+		"minesia_emerald_coin": {
+			"textures": "textures/items/emerald_coin"
+		},
+		"minesia_ruby_coin": {
+			"textures": "textures/items/ruby_coin"
+		},
+		"minesia_cooked_beef_super": {
+			"textures": "textures/items/cooked_beef_super"
+		},
+		"minesia_fat_apple": {
+			"textures": "textures/items/fat_apple"
+		},
+		"minesia_toy_sword": {
+			"textures": "textures/items/toy_sword"
+		},
+		"minesia_steel_ingot": {
+			"textures": "textures/items/steel_ingot"
+		},
+		"minesia_steel_sword": {
+			"textures": "textures/items/steel_sword"
+		},
+		"minesia_steel_helmet": {
+			"textures": "textures/items/steel_helmet"
+		},
+		"minesia_steel_chestplate": {
+			"textures": "textures/items/steel_chestplate"
+		},
+		"minesia_steel_leggings": {
+			"textures": "textures/items/steel_leggings"
+		},
+		"minesia_steel_boots": {
+			"textures": "textures/items/steel_boots"
+		}
+	},
+	"resource_pack_name": "New Project",
+	"texture_name": "atlas.items"
+}

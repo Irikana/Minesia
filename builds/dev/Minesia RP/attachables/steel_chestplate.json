@@ -1,0 +1,23 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "minesia:steel_chestplate",
+			"materials": {
+				"default": "armor",
+				"enchanted": "armor_enchanted"
+			},
+			"textures": {
+				"default": "textures/models/armor/steel_1",
+				"enchanted": "textures/misc/enchanted_item_glint"
+			},
+			"geometry": {
+				"default": "geometry.player.armor.chestplate"
+			},
+			"scripts": {
+				"parent_setup": "variable.chestplate_layer_visible = 1.0;"
+			},
+			"render_controllers": ["controller.render.armor"]
+		}
+	}
+}

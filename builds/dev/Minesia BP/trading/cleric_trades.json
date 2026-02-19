@@ -1,0 +1,144 @@
+{
+  "tiers": [
+    {
+      "trades": [
+        {
+          "wants": [
+            {
+              "item": "minecraft:rotten_flesh",
+              "quantity": {
+                "min": 36,
+                "max": 40
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:emerald"
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:gold_ingot",
+              "quantity": {
+                "min": 8,
+                "max": 10
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:emerald"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trades": [
+        {
+          "wants": [
+            {
+              "item": "minesia:wooden_coin",
+              "quantity": {
+                "min": 3,
+                "max": 6
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:redstone",
+              "quantity": {
+                "min": 1,
+                "max": 4
+              }
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minesia:wooden_coin",
+              "quantity": {
+                "min": 3,
+                "max": 5
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:dye:4",
+              "quantity": {
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trades": [
+        {
+          "wants": [
+            {
+              "item": "minesia:stone_coin",
+              "quantity": {
+                "min": 3,
+                "max": 5
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:glowstone",
+              "quantity": {
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minesia:gold_coin",
+              "quantity": {
+                "min": 5,
+                "max": 10
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:ender_pearl"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trades": [
+        {
+          "wants": [
+            {
+              "item": "minesia:gold_coin",
+              "quantity": {
+                "min": 5,
+                "max": 15
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:experience_bottle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

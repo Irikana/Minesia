@@ -1,0 +1,29 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "minesia:steel_chestplate"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"# #",
+			"###",
+			"###"
+		],
+		"key": {
+			"#": {
+				"item": "minesia:steel_ingot"
+			}
+		},
+		"result": {
+			"item": "minesia:steel_chestplate"
+		},
+		"unlock": [
+			{
+				"item": "minesia:steel_ingot"
+			}
+		]
+	}
+}

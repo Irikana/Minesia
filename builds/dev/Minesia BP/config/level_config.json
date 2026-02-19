@@ -1,0 +1,26 @@
+{
+  "levelSystem": {
+    "enabled": true,
+    "updateInterval": 20,
+    "cleanupInterval": 1200,
+    "showLevelUpMessage": true,
+    "showProgressMessage": true,
+    "experienceTable": [
+      0, 100, 250, 450, 700, 1000, 1350, 1750, 2200, 2700,
+      3250, 3850, 4500, 5200, 5950, 6750, 7600, 8500, 9450, 10450,
+      11550, 12750, 14050, 15450, 16950, 18550, 20250, 22050, 23950, 25950,
+      28150, 30550, 33150, 35950, 38950, 42150, 45550, 49150, 52950, 56950,
+      61150, 65550, 70150, 74950, 79950, 85150, 90550, 96150, 101950, 108000
+    ]
+  },
+  "performance": {
+    "batchSize": 5,
+    "cacheCleanupProbability": 0.01,
+    "minimumUpdateTime": 1000
+  },
+  "messages": {
+    "levelUp": "§a[Minesia] 恭喜！你的等级已提升至 {level} 级！获得经验: {exp}",
+    "progressInfo": "§b[Minesia] 当前等级: {level} | 经验: {current}/{needed} | 进度: {progress}%",
+    "statsHeader": "§b=== Minesia统计数据 ==="
+  }
+}
