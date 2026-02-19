@@ -47,6 +47,27 @@
 		},
 		"minesia_steel_boots": {
 			"textures": "textures/items/steel_boots"
+		},
+		"minesia_wooden_dagger": {
+			"textures": "textures/items/wood_dagger"
+		},
+		"minesia_stone_dagger": {
+			"textures": "textures/items/stone_dagger"
+		},
+		"minesia_iron_dagger": {
+			"textures": "textures/items/iron_dagger"
+		},
+		"minesia_steel_dagger": {
+			"textures": "textures/items/steel_dagger"
+		},
+		"minesia_diamond_dagger": {
+			"textures": "textures/items/diamond_dagger"
+		},
+		"minesia_netherite_dagger": {
+			"textures": "textures/items/netherite_dagger"
+		},
+		"minesia_golden_phantom_membrane": {
+			"textures": "textures/items/gold_phantom_membrane"
 		}
 	},
 	"resource_pack_name": "New Project",

@@ -1,0 +1,31 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "minesia:stone_dagger"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"#",
+			"X"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:cobblestone"
+			},
+			"X": {
+				"item": "minecraft:stick"
+			}
+		},
+		"result": {
+			"item": "minesia:stone_dagger"
+		},
+		"unlock": [
+			{
+				"item": "minecraft:cobblestone"
+			}
+		]
+	}
+}

@@ -14,6 +14,13 @@ item.minesia:steel_helmet=Steel Helmet
 item.minesia:steel_chestplate=Steel Chestplate
 item.minesia:steel_leggings=Steel Leggings
 item.minesia:steel_boots=Steel Boots
+item.minesia:wooden_dagger=Wooden Dagger
+item.minesia:stone_dagger=Stone Dagger
+item.minesia:iron_dagger=Iron Dagger
+item.minesia:steel_dagger=Steel Dagger
+item.minesia:diamond_dagger=Diamond Dagger
+item.minesia:netherite_dagger=Netherite Dagger
+item.minesia:golden_phantom_membrane=Golden Phantom Membrane
 
 hudScreen.nextLevel=Next Level
 hudScreen.inventory=Inventory
@@ -87,3 +94,6 @@ minesia.damage_display.damage=Damage
 minesia.damage_display.base=Base
 minesia.damage_display.bonus=Bonus
 minesia.damage_display.total=Total
+
+minesia.stamina.stamina=Stamina
+minesia.stamina.exhausted=Exhausted

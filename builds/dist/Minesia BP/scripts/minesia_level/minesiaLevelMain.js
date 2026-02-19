@@ -78,7 +78,7 @@ function updatePlayerLevels(players) {
                     lastExp: currentExp,
                     minesiaTotalExp: currentExp,
                     currentLevel: 0,
-                    lastUpdateTime: Date.now()
+                    lastUpdateTime: 0
                 };
                 playerStates.set(player.id, playerState);
             }
@@ -105,7 +105,7 @@ function updatePlayerLevels(players) {
                 MinesiaLevelSystem.updatePlayerStats(player, expGained, newLevel);
             }
 
-            if (expGained > 0 || newLevel !== oldLevel || Date.now() - playerState.lastUpdateTime > 1000) {
+            if (expGained > 0 || newLevel !== oldLevel || Date.now() - playerState.lastUpdateTime > 50) {
                 MinesiaLevelSystem.updateLevelDisplay(player);
                 playerState.currentLevel = newLevel;
                 playerState.lastExp = currentExp;

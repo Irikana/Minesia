@@ -163,8 +163,8 @@ export class MinesiaLevelSystem {
         const progress = this.getLevelProgress(player);
         if (!progress) return;
 
-        const progressBar = "█".repeat(Math.floor(progress.progress * 20)) +
-            "░".repeat(20 - Math.floor(progress.progress * 20));
+        const progressBar = "█".repeat(Math.max(0, Math.min(20, Math.floor(progress.progress * 20)))) +
+            "░".repeat(Math.max(0, 20 - Math.floor(progress.progress * 20)));
 
         // 使用本地化文本
         const title = this.getLocalizedText(player, "minesia.level.title");
@@ -236,8 +236,8 @@ export class MinesiaLevelSystem {
 
             // Build progress bar (20 characters length)
             const barLength = 20;
-            const filled = Math.floor(progress.progress * barLength);
-            const empty = barLength - filled;
+            const filled = Math.max(0, Math.min(barLength, Math.floor(progress.progress * barLength)));
+            const empty = Math.max(0, barLength - filled);
             const bar = "█".repeat(filled) + "░".repeat(empty);
 
             // Only use English, remove language detection
@@ -269,8 +269,8 @@ export class MinesiaLevelSystem {
 
             // Build progress bar (20 characters length)
             const barLength = 20;
-            const filled = Math.floor(progress.progress * barLength);
-            const empty = barLength - filled;
+            const filled = Math.max(0, Math.min(barLength, Math.floor(progress.progress * barLength)));
+            const empty = Math.max(0, barLength - filled);
             const progressBar = "█".repeat(filled) + "░".repeat(empty);
 
             // Calculate required experience for next level
@@ -293,10 +293,9 @@ export class MinesiaLevelSystem {
             const progress = this.getLevelProgress(player);
             if (!progress) return;
 
-            // Build progress bar (20 characters length)
             const barLength = 20;
-            const filled = Math.floor(progress.progress * barLength);
-            const empty = barLength - filled;
+            const filled = Math.max(0, Math.min(barLength, Math.floor(progress.progress * barLength)));
+            const empty = Math.max(0, barLength - filled);
             const bar = "█".repeat(filled) + "░".repeat(empty);
 
             // Build title text: left level + middle progress bar
@@ -352,14 +351,11 @@ export class MinesiaLevelSystem {
                 // 最高级及以上，只显示等级和最高等级声明 - 使用titleraw命令支持本地化
                 player.runCommand(`titleraw @s actionbar {"rawtext":[{"text":"§b"},{"translate":"minesia.level.title"},{"text":" Lv.${progress.level} §6"},{"translate":"minesia.level.max_level"}]}`);
             } else {
-                // 未达到最高级，显示等级和进度条
-                // Build progress bar (20 characters length)
                 const barLength = 20;
-                const filled = Math.floor(progress.progress * barLength);
-                const empty = barLength - filled;
+                const filled = Math.max(0, Math.min(barLength, Math.floor(progress.progress * barLength)));
+                const empty = Math.max(0, barLength - filled);
                 const bar = "█".repeat(filled) + "░".repeat(empty);
 
-                // 使用titleraw命令支持本地化
                 player.runCommand(`titleraw @s actionbar {"rawtext":[{"text":"§b"},{"translate":"minesia.level.title"},{"text":" Lv.${progress.level} §f${bar}"}]}`);
             }
 

@@ -45,12 +45,14 @@
 		{
 			"folder_name": "Desktop Better",
 			"name": "Desktop Better",
-			"memory_tier": 0
+			"memory_tier": 0,
+			"description": "Only be recommended on desktop, as it will provide new features."
 		},
 		{
 			"folder_name": "Default",
 			"name": "Default",
-			"memory_tier": 1
+			"memory_tier": 1,
+			"description": "The default subpack, which is recommended for all players."
 		}
 	]
 }

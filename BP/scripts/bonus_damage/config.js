@@ -51,6 +51,42 @@ export const BONUS_DAMAGE_WEAPONS = [
         minDamage: 0,
         maxDamage: 2,
         enabled: true
+    },
+    {
+        id: "minesia:wooden_dagger",
+        minDamage: 0,
+        maxDamage: 2,
+        enabled: true
+    },
+    {
+        id: "minesia:stone_dagger",
+        minDamage: 0,
+        maxDamage: 2,
+        enabled: true
+    },
+    {
+        id: "minesia:iron_dagger",
+        minDamage: 0,
+        maxDamage: 2,
+        enabled: true
+    },
+    {
+        id: "minesia:steel_dagger",
+        minDamage: 0,
+        maxDamage: 3,
+        enabled: true
+    },
+    {
+        id: "minesia:diamond_dagger",
+        minDamage: 0,
+        maxDamage: 2,
+        enabled: true
+    },
+    {
+        id: "minesia:netherite_dagger",
+        minDamage: 0,
+        maxDamage: 2,
+        enabled: true
     }
 ];
 

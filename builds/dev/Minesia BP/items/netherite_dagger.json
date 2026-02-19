@@ -1,0 +1,35 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:item": {
+		"description": {
+			"identifier": "minesia:netherite_dagger",
+			"menu_category": {
+				"category": "equipment",
+				"group": "itemGroup.name.sword"
+			}
+		},
+		"components": {
+			"minecraft:icon": "minesia_netherite_dagger",
+			"minecraft:max_stack_size": 1,
+			"minecraft:hand_equipped": true,
+			"minecraft:durability": {
+				"max_durability": 1700
+			},
+			"minecraft:repairable": {
+				"repair_items": [
+					{
+						"items": [
+							"minecraft:netherite_ingot"
+						],
+						"repair_amount": 450
+					}
+				]
+			},
+			"minecraft:damage": 6,
+			"minecraft:creative_group": "itemGroup.name.sword",
+			"minecraft:display_name": {
+				"value": "item.minesia:netherite_dagger"
+			}
+		}
+	}
+}

@@ -26,6 +26,14 @@ export const ITEM_RULES = [
     ]
   },
 
+  {
+    id: "minesia:golden_phantom_membrane",
+    slots: ["offhand"],
+    actions: [
+      { kind: "state", key: "golden_phantom_membrane_active", value: true }
+    ]
+  },
+
 
 ];
 

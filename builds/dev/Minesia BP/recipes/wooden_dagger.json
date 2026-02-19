@@ -1,0 +1,31 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "minesia:wooden_dagger"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"#",
+			"X"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:planks"
+			},
+			"X": {
+				"item": "minecraft:stick"
+			}
+		},
+		"result": {
+			"item": "minesia:wooden_dagger"
+		},
+		"unlock": [
+			{
+				"item": "minecraft:planks"
+			}
+		]
+	}
+}

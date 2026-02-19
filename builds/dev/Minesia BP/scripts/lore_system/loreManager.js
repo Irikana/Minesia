@@ -16,11 +16,16 @@ const MINESIA_LORE_MARKERS = [
     "盾牌套装", "Shield Set",
     "钻石套装", "Diamond Set",
     "钢铁套装", "Steel Set",
+    "黄金幻翼膜", "Golden Phantom Membrane",
     "装备盾牌时:", "When equipped with shield:",
     "装备全套时:", "When full set equipped:",
+    "副手装备时:", "When equipped in offhand:",
     "+4 生命值", "+4 Health",
     "+8 生命值", "+8 Health",
-    "抗性提升 II", "Resistance II"
+    "抗性提升 II", "Resistance II",
+    "缓降 I", "Slow Falling I",
+    "+20 最大体力值", "+20 Max Stamina",
+    "每秒消耗1点耐久", "Consumes 1 durability per second"
 ];
 
 function getPlayerLocale(player) {

@@ -21,6 +21,7 @@ export const CONTROLLED_TAGS = [
   "diamond_set",
   "shield_set",
   "steel_set",
+  "golden_phantom_membrane_active",
 ];
 
 const playerEffects = new Map();
@@ -82,7 +83,6 @@ export function applyActions(player, actions) {
           break;
 
         case "command":
-          // 修复：使用正确的 runCommand 方法而不是 runCommandAsync
           try {
             player.runCommand(action.command);
           } catch (cmdError) {

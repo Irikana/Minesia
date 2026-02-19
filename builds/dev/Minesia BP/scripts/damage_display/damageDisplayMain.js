@@ -7,11 +7,13 @@
 import { world, system } from "@minecraft/server";
 import { DAMAGE_DISPLAY_CONFIG, getDisplayTexts } from "./config.js";
 import { recentBonusDamage } from "../bonus_damage/bonusDamageMain.js";
+import { MinesiaLevelSystem } from "../minesia_level/level_system.js";
 
 const playerComboState = new Map();
 const playerDisplayState = new Map();
 const LANGUAGE_OBJECTIVE = "minesia_language";
 const DEFAULT_LOCALE = "zh_CN";
+const levelDisplayPausedByDamage = new Map();
 
 function getPlayerLocale(player) {
     try {
@@ -111,6 +113,11 @@ function showDamageDisplay(player, baseDamage, bonusDamage, totalDamage, target)
         displayTick: currentTick
     });
 
+    if (!levelDisplayPausedByDamage.has(playerId)) {
+        levelDisplayPausedByDamage.set(playerId, true);
+        MinesiaLevelSystem.playerDisplayPaused.set(playerId, true);
+    }
+
     player.onScreenDisplay.setActionBar(displayText);
 
     system.runTimeout(() => {
@@ -159,6 +166,19 @@ function clearDamageDisplay(playerId) {
         const elapsed = system.currentTick - displayState.displayTick;
         if (elapsed >= DAMAGE_DISPLAY_CONFIG.displayDuration) {
             playerDisplayState.delete(playerId);
+
+            if (levelDisplayPausedByDamage.has(playerId)) {
+                levelDisplayPausedByDamage.delete(playerId);
+                MinesiaLevelSystem.playerDisplayPaused.delete(playerId);
+                
+                const players = world.getPlayers();
+                for (const player of players) {
+                    if (player.id === playerId) {
+                        MinesiaLevelSystem.updateLevelDisplay(player);
+                        break;
+                    }
+                }
+            }
         }
     }
 

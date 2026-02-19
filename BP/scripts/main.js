@@ -11,6 +11,9 @@ import { initializeLoreSystem } from "./lore_system/index.js";
 import { registerCustomItemLoreHandler } from "./lore_system/customItemLoreHandler.js";
 import { registerSetEffectLoreHandler } from "./lore_system/setEffectLoreHandler.js";
 import { initializeDamageDisplaySystem } from "./damage_display/damageDisplayMain.js";
+import { initializeStaminaSystem, updateStaminaSystem } from "./stamina/staminaMain.js";
+import { processStaminaSetEffects } from "./stamina/staminaSetEffectAdapter.js";
+import { processItemEffects } from "./custom_events/index.js";
 
 const LANGUAGE_OBJECTIVE = 'minesia_language';
 
@@ -78,6 +81,17 @@ function initializeWelcomeSystem() {
             }
         }, 40);
     });
+
+    if (world.afterEvents.scriptEventReceive) {
+        world.afterEvents.scriptEventReceive.subscribe((event) => {
+            const { id, sourceEntity } = event;
+            if (id === 'minesia:language' && sourceEntity && sourceEntity.typeId === 'minecraft:player') {
+                showLanguageSelectionForm(sourceEntity);
+            }
+        });
+    } else {
+        console.log('[Minesia] scriptEventReceive 不可用，语言选择指令功能已禁用');
+    }
 }
 
 console.log('[Minesia] 系统启动中...');
@@ -116,6 +130,9 @@ system.runTimeout(() => {
         initializeDamageDisplaySystem();
         console.log('[Minesia] ✓ 伤害显示系统就绪');
 
+        initializeStaminaSystem();
+        console.log('[Minesia] ✓ 体力值系统就绪');
+
         systemReady = true;
         console.log('[Minesia] 🎉 核心系统初始化完成!');
 
@@ -132,6 +149,14 @@ system.runInterval(() => {
         setEffectMain.handleAllPlayersSetEffects();
 
         minesiaLevelMain.updateMinesiaSystem();
+
+        updateStaminaSystem();
+
+        const players = world.getPlayers();
+        for (const player of players) {
+            processStaminaSetEffects(player);
+            processItemEffects(player);
+        }
 
     } catch (error) {
         errorCount++;

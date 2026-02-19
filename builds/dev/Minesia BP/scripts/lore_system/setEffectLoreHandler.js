@@ -73,6 +73,14 @@ const SET_EQUIPMENT_CONFIG = {
         effects: [
             { zh_CN: "+4 生命值", en_US: "+4 Health" }
         ]
+    },
+    "minesia:golden_phantom_membrane": {
+        condition: { zh_CN: "副手装备时:", en_US: "When equipped in offhand:" },
+        effects: [
+            { zh_CN: "缓降 I", en_US: "Slow Falling I" },
+            { zh_CN: "+20 最大体力值", en_US: "+20 Max Stamina" },
+            { zh_CN: "每秒消耗1点耐久", en_US: "Consumes 1 durability per second" }
+        ]
     }
 };
 
@@ -90,9 +98,18 @@ export function registerSetEffectLoreHandler() {
             if (!config) return false;
 
             const locale = context.locale || "zh_CN";
-            const setName = config.setName[locale] || config.setName.zh_CN;
 
-            return currentLore.some(line => line.includes(setName));
+            if (config.setName) {
+                const setName = config.setName[locale] || config.setName.zh_CN;
+                return currentLore.some(line => line.includes(setName));
+            }
+
+            if (config.condition) {
+                const condition = config.condition[locale] || config.condition.zh_CN;
+                return currentLore.some(line => line.includes(condition));
+            }
+
+            return false;
         },
 
         generateLore(itemStack, context) {
@@ -100,14 +117,15 @@ export function registerSetEffectLoreHandler() {
             if (!config) return null;
 
             const locale = context.locale || "zh_CN";
-            const setName = config.setName[locale] || config.setName.zh_CN;
-            const condition = config.condition ? (config.condition[locale] || config.condition.zh_CN) : null;
+            const loreLines = [];
 
-            const loreLines = [
-                `§r§9${setName}`
-            ];
+            if (config.setName) {
+                const setName = config.setName[locale] || config.setName.zh_CN;
+                loreLines.push(`§r§9${setName}`);
+            }
 
-            if (condition) {
+            if (config.condition) {
+                const condition = config.condition[locale] || config.condition.zh_CN;
                 loreLines.push(`§r§7${condition}`);
             }
 

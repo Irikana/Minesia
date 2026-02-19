@@ -23,8 +23,8 @@
             {
               "item": "minesia:wooden_coin",
               "quantity": {
-                "min": 2,
-                "max": 4
+                "min": 5,
+                "max": 7
               }
             }
           ],
@@ -62,9 +62,9 @@
         "wants": [
           {
             "item": "minesia:wooden_coin",
-            "quantity": {
-              "min": 2,
-              "max": 4
+          "quantity": {
+            "min": 5,
+            "max": 7
             }
           }
         ],
