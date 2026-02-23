@@ -4,7 +4,7 @@
 		"description": {
 			"identifier": "minesia:gold_coin",
 			"menu_category": {
-				"category": "nature"
+				"category": "items"
 			}
 		},
 		"components": {

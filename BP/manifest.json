@@ -6,7 +6,7 @@
 		]
 	},
 	"header": {
-		"name": "New Project",
+		"name": "Minesia",
 		"description": "A mod meant to create a new world.",
 		"min_engine_version": [
 			1,
@@ -43,6 +43,11 @@
 		}
 	],
 	"subpacks": [
+		{
+			"folder_name": "Minesia Journey",
+			"name": "Minesia Journey",
+			"memory_tier": 1
+		},
 		{
 			"folder_name": "Very Easy",
 			"name": "Very Easy",

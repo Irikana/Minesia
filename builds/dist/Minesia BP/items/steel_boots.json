@@ -28,7 +28,6 @@
 					}
 				]
 			},
-			"minecraft:creative_group": "itemGroup.name.boots",
 			"minecraft:display_name": {
 				"value": "item.minesia:steel_boots"
 			}

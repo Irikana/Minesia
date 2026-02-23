@@ -7,6 +7,12 @@
 import { world, system } from "@minecraft/server";
 import { MinesiaLevelSystem } from "./level_system.js";
 
+const levelUpDisplayActive = new Map();
+
+export function isLevelUpDisplayActive(playerId) {
+    return levelUpDisplayActive.has(playerId);
+}
+
 /**
  * 创世等级事件系统
  * 处理玩家升级时的奖励和特殊事件
@@ -262,6 +268,7 @@ export class MinesiaLevelEventSystem {
         },
         50: {
             emeraldCoin: 150,
+            tina: 1,
             message: "minesia.level.event.level50"
         }
     };
@@ -334,6 +341,8 @@ export class MinesiaLevelEventSystem {
     }
 
     static showLocalizedMessage(player, key, duration = 10000) {
+        const playerId = player.id;
+        levelUpDisplayActive.set(playerId, true);
         MinesiaLevelSystem.pauseLevelDisplay(player, duration);
 
         player.runCommand(`titleraw @s actionbar {"rawtext":[{"text":"§a[Minesia] "},{"translate":"${key}"}]}`);
@@ -345,6 +354,10 @@ export class MinesiaLevelEventSystem {
         system.runTimeout(() => {
             player.runCommand(`titleraw @s actionbar {"rawtext":[{"text":"§a[Minesia] "},{"translate":"${key}"}]}`);
         }, 40);
+
+        system.runTimeout(() => {
+            levelUpDisplayActive.delete(playerId);
+        }, Math.floor(duration / 50));
     }
 
     static playLevelUpSound(player) {
@@ -412,6 +425,9 @@ export class MinesiaLevelEventSystem {
         if (reward.toySword) {
             this.giveItem(player, "minesia:toy_sword", reward.toySword);
         }
+        if (reward.tina) {
+            this.giveItem(player, "minesia:tina", reward.tina);
+        }
 
         const hasHealthReward = this.LEVEL_HEALTH_REWARDS[level];
         if (hasHealthReward) {
@@ -425,6 +441,8 @@ export class MinesiaLevelEventSystem {
     }
 
     static showCombinedMessage(player, level, coinMessageKey, healthBonus) {
+        const playerId = player.id;
+        levelUpDisplayActive.set(playerId, true);
         MinesiaLevelSystem.pauseLevelDisplay(player, 10000);
 
         player.runCommand(`titleraw @s actionbar {"rawtext":[{"text":"§a[Minesia] "},{"translate":"${coinMessageKey}"},{"text":"\\n§a"},{"translate":"minesia.level.health_bonus"}]}`);
@@ -436,6 +454,10 @@ export class MinesiaLevelEventSystem {
         system.runTimeout(() => {
             player.runCommand(`titleraw @s actionbar {"rawtext":[{"text":"§a[Minesia] "},{"translate":"${coinMessageKey}"},{"text":"\\n§a"},{"translate":"minesia.level.health_bonus"}]}`);
         }, 40);
+
+        system.runTimeout(() => {
+            levelUpDisplayActive.delete(playerId);
+        }, 200);
     }
 
     static giveItem(player, itemId, count) {

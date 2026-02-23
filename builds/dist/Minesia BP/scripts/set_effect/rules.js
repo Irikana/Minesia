@@ -34,6 +34,22 @@ export const ITEM_RULES = [
     ]
   },
 
+  {
+    id: "minesia:desert_walker",
+    slots: ["mainhand"],
+    actions: [
+      { kind: "state", key: "desert_walker_active", value: true }
+    ]
+  },
+
+  {
+    id: "minesia:tina",
+    slots: ["mainhand"],
+    actions: [
+      { kind: "state", key: "tina_active", value: true }
+    ]
+  },
+
 
 ];
 

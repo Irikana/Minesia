@@ -18,9 +18,12 @@ item.minesia:wooden_dagger=Wooden Dagger
 item.minesia:stone_dagger=Stone Dagger
 item.minesia:iron_dagger=Iron Dagger
 item.minesia:steel_dagger=Steel Dagger
+item.minesia:golden_dagger=Golden Dagger
 item.minesia:diamond_dagger=Diamond Dagger
 item.minesia:netherite_dagger=Netherite Dagger
 item.minesia:golden_phantom_membrane=Golden Phantom Membrane
+item.minesia:desert_walker=Desert Walker
+item.minesia:tina=Tina
 
 hudScreen.nextLevel=Next Level
 hudScreen.inventory=Inventory
@@ -84,7 +87,7 @@ minesia.level.event.level46=Congratulations on reaching level 46! Received 80 Em
 minesia.level.event.level47=Congratulations on reaching level 47! Received 90 Emerald Coins!
 minesia.level.event.level48=Congratulations on reaching level 48! Received 100 Emerald Coins!
 minesia.level.event.level49=Congratulations on reaching level 49! Received 120 Emerald Coins!
-minesia.level.event.level50=Congratulations on reaching max level 50! Received 150 Emerald Coins!
+minesia.level.event.level50=Congratulations on reaching max level 50! Received 150 Emerald Coins and Tina!
 
 minesia.level.health_bonus=Gained 4 extra health points!
 

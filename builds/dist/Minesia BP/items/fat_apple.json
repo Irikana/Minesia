@@ -4,7 +4,8 @@
 		"description": {
 			"identifier": "minesia:fat_apple",
 			"menu_category": {
-				"category": "nature"
+				"category": "equipment",
+				"group": "itemGroup.name.miscFood"
 			}
 		},
 		"components": {

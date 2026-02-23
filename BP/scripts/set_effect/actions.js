@@ -22,6 +22,8 @@ export const CONTROLLED_TAGS = [
   "shield_set",
   "steel_set",
   "golden_phantom_membrane_active",
+  "desert_walker_active",
+  "tina_active",
 ];
 
 const playerEffects = new Map();

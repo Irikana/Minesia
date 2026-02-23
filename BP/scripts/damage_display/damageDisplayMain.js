@@ -6,8 +6,10 @@
 
 import { world, system } from "@minecraft/server";
 import { DAMAGE_DISPLAY_CONFIG, getDisplayTexts } from "./config.js";
-import { recentBonusDamage } from "../bonus_damage/bonusDamageMain.js";
+import { recentBonusDamage, isCurrentlyApplyingBonusDamage } from "../bonus_damage/bonusDamageMain.js";
 import { MinesiaLevelSystem } from "../minesia_level/level_system.js";
+import { getAoeDamageRecord, isAoeEntity } from "../custom_events/item_events/aoeDamageRegistry.js";
+import { isLevelUpDisplayActive } from "../minesia_level/minesiaLevelEvent.js";
 
 const playerComboState = new Map();
 const playerDisplayState = new Map();
@@ -45,6 +47,18 @@ function handleEntityHurt(event) {
 
         const attacker = damageSource.damagingEntity;
         if (!attacker || attacker.typeId !== "minecraft:player") {
+            return;
+        }
+
+        if (isLevelUpDisplayActive(attacker.id)) {
+            return;
+        }
+
+        if (isAoeEntity(hurtEntity.id)) {
+            return;
+        }
+
+        if (isCurrentlyApplyingBonusDamage()) {
             return;
         }
 
@@ -100,12 +114,30 @@ function showDamageDisplay(player, baseDamage, bonusDamage, totalDamage, target)
         });
     }
 
+    const aoeRecord = getAoeDamageRecord(playerId);
+    let aoeDamage = 0;
+    let aoeTargetCount = 0;
+    let aoeSourceName = "";
+    let aoeSourceNameEn = "";
+
+    if (aoeRecord) {
+        aoeDamage = aoeRecord.totalDamage;
+        aoeTargetCount = aoeRecord.targetCount;
+        aoeSourceName = aoeRecord.sourceName;
+        aoeSourceNameEn = aoeRecord.sourceNameEn;
+    }
+
     const displayText = buildDisplayText(
         baseDamage,
         bonusDamage,
         accumulatedDamage,
         texts,
-        hitCount
+        hitCount,
+        aoeDamage,
+        aoeTargetCount,
+        aoeSourceName,
+        aoeSourceNameEn,
+        locale
     );
 
     playerDisplayState.set(playerId, {
@@ -125,39 +157,56 @@ function showDamageDisplay(player, baseDamage, bonusDamage, totalDamage, target)
     }, DAMAGE_DISPLAY_CONFIG.displayDuration);
 }
 
-function buildDisplayText(baseDamage, bonusDamage, totalDamage, texts, hitCount = 1) {
+function buildDisplayText(baseDamage, bonusDamage, totalDamage, texts, hitCount = 1, aoeDamage = 0, aoeTargetCount = 0, aoeSourceName = "", aoeSourceNameEn = "", locale = "zh_CN") {
     const color = DAMAGE_DISPLAY_CONFIG.textColor;
 
     if (DAMAGE_DISPLAY_CONFIG.debugMode) {
-        return `${color}${texts.baseDamage}: ${baseDamage.toFixed(1)} | ${texts.bonusDamage}: ${bonusDamage.toFixed(1)} | ${texts.totalDamage}: ${totalDamage.toFixed(1)}`;
+        let debugText = `${color}${texts.baseDamage}: ${baseDamage.toFixed(1)} | ${texts.bonusDamage}: ${bonusDamage.toFixed(1)} | ${texts.totalDamage}: ${totalDamage.toFixed(1)}`;
+        if (aoeDamage > 0) {
+            debugText += `\n§dAOE: ${aoeDamage.toFixed(1)} (${aoeTargetCount} targets)`;
+        }
+        return debugText;
     }
+
+    let mainLine = "";
 
     if (DAMAGE_DISPLAY_CONFIG.showTotalDamage) {
         if (hitCount > 1) {
-            return `${color}${texts.damage}: ${totalDamage.toFixed(1)} (x${hitCount})`;
+            mainLine = `${color}${texts.damage}: ${totalDamage.toFixed(1)} (x${hitCount})`;
+        } else {
+            mainLine = `${color}${texts.damage}: ${totalDamage.toFixed(1)}`;
         }
-        return `${color}${texts.damage}: ${totalDamage.toFixed(1)}`;
+    } else {
+        let parts = [];
+
+        if (DAMAGE_DISPLAY_CONFIG.showBaseDamage) {
+            parts.push(`${texts.baseDamage}: ${baseDamage.toFixed(1)}`);
+        }
+
+        if (DAMAGE_DISPLAY_CONFIG.showBonusDamage && bonusDamage > 0) {
+            parts.push(`${texts.bonusDamage}: ${bonusDamage.toFixed(1)}`);
+        }
+
+        if (DAMAGE_DISPLAY_CONFIG.showTotalDamage) {
+            parts.push(`${texts.totalDamage}: ${totalDamage.toFixed(1)}`);
+        }
+
+        if (parts.length === 0) {
+            mainLine = `${color}${texts.damage}: ${totalDamage.toFixed(1)}`;
+        } else {
+            mainLine = `${color}${parts.join(' | ')}`;
+        }
     }
 
-    let parts = [];
-
-    if (DAMAGE_DISPLAY_CONFIG.showBaseDamage) {
-        parts.push(`${texts.baseDamage}: ${baseDamage.toFixed(1)}`);
+    if (aoeDamage > 0 && aoeTargetCount > 0) {
+        const sourceName = locale === "zh_CN" ? aoeSourceName : aoeSourceNameEn;
+        const aoeText = locale === "zh_CN"
+            ? `§dAOE: ${aoeDamage.toFixed(1)} (${aoeTargetCount}目标) - ${sourceName}`
+            : `§dAOE: ${aoeDamage.toFixed(1)} (${aoeTargetCount} targets) - ${sourceName}`;
+        return `${mainLine}\n${aoeText}`;
     }
 
-    if (DAMAGE_DISPLAY_CONFIG.showBonusDamage && bonusDamage > 0) {
-        parts.push(`${texts.bonusDamage}: ${bonusDamage.toFixed(1)}`);
-    }
-
-    if (DAMAGE_DISPLAY_CONFIG.showTotalDamage) {
-        parts.push(`${texts.totalDamage}: ${totalDamage.toFixed(1)}`);
-    }
-
-    if (parts.length === 0) {
-        return `${color}${texts.damage}: ${totalDamage.toFixed(1)}`;
-    }
-
-    return `${color}${parts.join(' | ')}`;
+    return mainLine;
 }
 
 function clearDamageDisplay(playerId) {
@@ -170,7 +219,7 @@ function clearDamageDisplay(playerId) {
             if (levelDisplayPausedByDamage.has(playerId)) {
                 levelDisplayPausedByDamage.delete(playerId);
                 MinesiaLevelSystem.playerDisplayPaused.delete(playerId);
-                
+
                 const players = world.getPlayers();
                 for (const player of players) {
                     if (player.id === playerId) {

@@ -4,7 +4,7 @@
 		"description": {
 			"identifier": "minesia:steel_ingot",
 			"menu_category": {
-				"category": "nature"
+				"category": "items"
 			}
 		},
 		"components": {

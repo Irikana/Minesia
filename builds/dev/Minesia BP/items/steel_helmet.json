@@ -28,7 +28,6 @@
 					}
 				]
 			},
-			"minecraft:creative_group": "itemGroup.name.helmet",
 			"minecraft:display_name": {
 				"value": "item.minesia:steel_helmet"
 			}

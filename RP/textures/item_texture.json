@@ -66,8 +66,38 @@
 		"minesia_netherite_dagger": {
 			"textures": "textures/items/netherite_dagger"
 		},
+		"minesia_golden_dagger": {
+			"textures": "textures/items/golden_dagger"
+		},
 		"minesia_golden_phantom_membrane": {
 			"textures": "textures/items/gold_phantom_membrane"
+		},
+		"minesia_desert_walker": {
+			"textures": "textures/items/desert_walker"
+		},
+		"minesia_tina": {
+			"textures": "textures/items/tina"
+		},
+		"minesia_wooden_scythe": {
+			"textures": "textures/items/wood_scythe"
+		},
+		"minesia_stone_scythe": {
+			"textures": "textures/items/stone_scythe"
+		},
+		"minesia_iron_scythe": {
+			"textures": "textures/items/iron_scythe"
+		},
+		"minesia_golden_scythe": {
+			"textures": "textures/items/gold_scythe"
+		},
+		"minesia_diamond_scythe": {
+			"textures": "textures/items/diamond_scythe"
+		},
+		"minesia_netherite_scythe": {
+			"textures": "textures/items/netherite_scythe"
+		},
+		"minesia_steel_scythe": {
+			"textures": "textures/items/steel_scythe"
 		}
 	},
 	"resource_pack_name": "New Project",

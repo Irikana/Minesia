@@ -28,7 +28,6 @@
 					}
 				]
 			},
-			"minecraft:creative_group": "itemGroup.name.leggings",
 			"minecraft:display_name": {
 				"value": "item.minesia:steel_leggings"
 			}

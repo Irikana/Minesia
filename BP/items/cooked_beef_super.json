@@ -4,7 +4,8 @@
 		"description": {
 			"identifier": "minesia:cooked_beef_super",
 			"menu_category": {
-				"category": "items"
+				"category": "equipment",
+				"group": "itemGroup.name.miscFood"
 			}
 		},
 		"components": {

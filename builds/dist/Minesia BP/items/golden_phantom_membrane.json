@@ -4,7 +4,7 @@
 		"description": {
 			"identifier": "minesia:golden_phantom_membrane",
 			"menu_category": {
-				"category": "equipment"
+				"category": "items"
 			}
 		},
 		"components": {

@@ -25,8 +25,7 @@
 					}
 				]
 			},
-			"minecraft:damage": 4,
-			"minecraft:creative_group": "itemGroup.name.sword",
+			"minecraft:damage": 3,
 			"minecraft:display_name": {
 				"value": "item.minesia:iron_dagger"
 			}

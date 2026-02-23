@@ -18,13 +18,14 @@
 			"minecraft:repairable": {
 				"repair_items": [
 					{
-						"items": ["minecraft:planks"],
+						"items": [
+							"minecraft:planks"
+						],
 						"repair_amount": 15
 					}
 				]
 			},
-			"minecraft:damage": 2,
-			"minecraft:creative_group": "itemGroup.name.sword",
+			"minecraft:damage": 1,
 			"minecraft:display_name": {
 				"value": "item.minesia:wooden_dagger"
 			}

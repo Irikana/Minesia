@@ -1,4 +1,4 @@
-import { world, system } from "@minecraft/server";
+import { world, system, GameMode } from "@minecraft/server";
 import { STAMINA_CONFIG, getStaminaTexts } from "./config.js";
 import { getDisplayState } from "../damage_display/damageDisplayMain.js";
 import { MinesiaLevelSystem } from "../minesia_level/level_system.js";
@@ -296,6 +296,8 @@ class StaminaSystem {
 function updatePlayerStamina(player) {
     if (!STAMINA_CONFIG.enabled) return;
 
+    if (player.getGameMode() === GameMode.Creative) return;
+
     const data = StaminaSystem.getPlayerData(player);
     const currentTick = system.currentTick;
     const currentPos = player.location;
@@ -377,11 +379,15 @@ function handlePlayerAttack(event) {
     const attacker = damageSource.damagingEntity;
     if (!attacker || attacker.typeId !== "minecraft:player") return;
 
+    if (attacker.getGameMode() === GameMode.Creative) return;
+
     StaminaSystem.consumeStamina(attacker, STAMINA_CONFIG.consumption.attack);
 }
 
 export function displayStaminaBar(player) {
     if (!STAMINA_CONFIG.enabled) return;
+
+    if (player.getGameMode() === GameMode.creative) return;
 
     const playerId = player.id;
 

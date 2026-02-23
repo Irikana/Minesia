@@ -55,19 +55,19 @@ export const BONUS_DAMAGE_WEAPONS = [
     {
         id: "minesia:wooden_dagger",
         minDamage: 0,
-        maxDamage: 2,
+        maxDamage: 3,
         enabled: true
     },
     {
         id: "minesia:stone_dagger",
         minDamage: 0,
-        maxDamage: 2,
+        maxDamage: 3,
         enabled: true
     },
     {
         id: "minesia:iron_dagger",
         minDamage: 0,
-        maxDamage: 2,
+        maxDamage: 3,
         enabled: true
     },
     {
@@ -77,15 +77,75 @@ export const BONUS_DAMAGE_WEAPONS = [
         enabled: true
     },
     {
+        id: "minesia:golden_dagger",
+        minDamage: 0,
+        maxDamage: 3,
+        enabled: true
+    },
+    {
         id: "minesia:diamond_dagger",
         minDamage: 0,
-        maxDamage: 2,
+        maxDamage: 3,
         enabled: true
     },
     {
         id: "minesia:netherite_dagger",
         minDamage: 0,
+        maxDamage: 3,
+        enabled: true
+    },
+    {
+        id: "minesia:desert_walker",
+        minDamage: 0,
+        maxDamage: 3,
+        enabled: true
+    },
+    {
+        id: "minesia:tina",
+        minDamage: 0,
+        maxDamage: 5,
+        enabled: true
+    },
+    {
+        id: "minesia:wooden_scythe",
+        minDamage: 0,
         maxDamage: 2,
+        enabled: true
+    },
+    {
+        id: "minesia:stone_scythe",
+        minDamage: 0,
+        maxDamage: 2.5,
+        enabled: true
+    },
+    {
+        id: "minesia:iron_scythe",
+        minDamage: 0,
+        maxDamage: 3,
+        enabled: true
+    },
+    {
+        id: "minesia:golden_scythe",
+        minDamage: 0,
+        maxDamage: 2,
+        enabled: true
+    },
+    {
+        id: "minesia:diamond_scythe",
+        minDamage: 0,
+        maxDamage: 3.5,
+        enabled: true
+    },
+    {
+        id: "minesia:netherite_scythe",
+        minDamage: 0,
+        maxDamage: 4,
+        enabled: true
+    },
+    {
+        id: "minesia:steel_scythe",
+        minDamage: 0,
+        maxDamage: 3.5,
         enabled: true
     }
 ];
@@ -97,8 +157,16 @@ export function getWeaponConfig(itemId) {
 export function calculateBonusDamage(minDamage, maxDamage) {
     const min = Math.min(minDamage, maxDamage);
     const max = Math.max(minDamage, maxDamage);
-    const randomValue = Math.random() * (max - min) + min;
-    return Math.round(randomValue * 10) / 10;
+
+    if (min === max) {
+        return min;
+    }
+
+    const steps = Math.round((max - min) * 10);
+    const randomStep = Math.floor(Math.random() * (steps + 1));
+    const damage = min + randomStep / 10;
+
+    return Math.round(damage * 10) / 10;
 }
 
 export function formatDamageRange(minDamage, maxDamage) {

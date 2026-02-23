@@ -18,9 +18,19 @@ item.minesia:wooden_dagger=木匕首
 item.minesia:stone_dagger=石匕首
 item.minesia:iron_dagger=铁匕首
 item.minesia:steel_dagger=钢匕首
+item.minesia:golden_dagger=金匕首
 item.minesia:diamond_dagger=钻石匕首
 item.minesia:netherite_dagger=下界合金匕首
 item.minesia:golden_phantom_membrane=黄金幻翼膜
+item.minesia:desert_walker=沙漠行者
+item.minesia:tina=缇娜
+item.minesia:wooden_scythe=木镰刀
+item.minesia:stone_scythe=石镰刀
+item.minesia:iron_scythe=铁镰刀
+item.minesia:golden_scythe=金镰刀
+item.minesia:diamond_scythe=钻石镰刀
+item.minesia:netherite_scythe=下界合金镰刀
+item.minesia:steel_scythe=钢镰刀
 
 hudScreen.nextLevel=下一级
 hudScreen.inventory=背包
@@ -84,7 +94,7 @@ minesia.level.event.level46=恭喜升级到46级！获得80个绿宝石币！
 minesia.level.event.level47=恭喜升级到47级！获得90个绿宝石币！
 minesia.level.event.level48=恭喜升级到48级！获得100个绿宝石币！
 minesia.level.event.level49=恭喜升级到49级！获得120个绿宝石币！
-minesia.level.event.level50=恭喜达到最高等级50级！获得150个绿宝石币！
+minesia.level.event.level50=恭喜达到最高等级50级！获得150个绿宝石币和缇娜！
 
 minesia.level.health_bonus=获得4点额外生命值！
 

@@ -119,6 +119,10 @@ export function registerSetEffectLoreHandler() {
             const locale = context.locale || "zh_CN";
             const loreLines = [];
 
+            if (!config.setName) {
+                loreLines.push("");
+            }
+
             if (config.setName) {
                 const setName = config.setName[locale] || config.setName.zh_CN;
                 loreLines.push(`§r§9${setName}`);

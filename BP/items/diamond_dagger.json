@@ -18,13 +18,14 @@
 			"minecraft:repairable": {
 				"repair_items": [
 					{
-						"items": ["minecraft:diamond"],
+						"items": [
+							"minecraft:diamond"
+						],
 						"repair_amount": 350
 					}
 				]
 			},
-			"minecraft:damage": 5,
-			"minecraft:creative_group": "itemGroup.name.sword",
+			"minecraft:damage": 4,
 			"minecraft:display_name": {
 				"value": "item.minesia:diamond_dagger"
 			}

@@ -13,6 +13,9 @@ const DEFAULT_LOCALE = "zh_CN";
 const MINESIA_LORE_MARKERS = [
     "附加伤害", "Bonus Damage",
     "它真的能用来战斗吗？", "Can it really be used for battle?",
+    "攻击目标时，有50%的概率使目标获得1秒的减速效果", "When attacking, 50% chance to apply Slowness I for 1 second",
+    "登峰造极", "Reaching the Peak",
+    "攻击时对周围5格内同类实体造成1~5点伤害", "Attacks deal 1~5 damage to same-type entities within 5 blocks",
     "盾牌套装", "Shield Set",
     "钻石套装", "Diamond Set",
     "钢铁套装", "Steel Set",

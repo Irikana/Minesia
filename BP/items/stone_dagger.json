@@ -23,8 +23,7 @@
 					}
 				]
 			},
-			"minecraft:damage": 3,
-			"minecraft:creative_group": "itemGroup.name.sword",
+			"minecraft:damage": 2,
 			"minecraft:display_name": {
 				"value": "item.minesia:stone_dagger"
 			}

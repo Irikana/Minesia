@@ -18,13 +18,14 @@
 			"minecraft:repairable": {
 				"repair_items": [
 					{
-						"items": ["minesia:steel_ingot"],
+						"items": [
+							"minesia:steel_ingot"
+						],
 						"repair_amount": 300
 					}
 				]
 			},
 			"minecraft:damage": 7,
-			"minecraft:creative_group": "itemGroup.name.sword",
 			"minecraft:display_name": {
 				"value": "item.minesia:steel_sword"
 			}

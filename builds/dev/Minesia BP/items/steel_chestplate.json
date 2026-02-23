@@ -28,7 +28,6 @@
 					}
 				]
 			},
-			"minecraft:creative_group": "itemGroup.name.chestplate",
 			"minecraft:display_name": {
 				"value": "item.minesia:steel_chestplate"
 			}
