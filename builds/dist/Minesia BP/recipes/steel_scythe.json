@@ -1,0 +1,32 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "minesia:steel_scythe"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			" XX",
+			"XI ",
+			" I"
+		],
+		"key": {
+			"X": {
+				"item": "minesia:steel_ingot"
+			},
+			"I": {
+				"item": "minecraft:stick"
+			}
+		},
+		"result": {
+			"item": "minesia:steel_scythe"
+		},
+		"unlock": [
+			{
+				"item": "minesia:steel_ingot"
+			}
+		]
+	}
+}

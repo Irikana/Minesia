@@ -1,0 +1,31 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:item": {
+		"description": {
+			"identifier": "minesia:cooked_beef_super",
+			"menu_category": {
+				"category": "equipment",
+				"group": "itemGroup.name.miscFood"
+			}
+		},
+		"components": {
+			"minecraft:icon": "minesia_cooked_beef_super",
+			"minecraft:max_stack_size": 5,
+			"minecraft:food": {
+				"nutrition": 10,
+				"saturation_modifier": 0.9
+			},
+			"minecraft:use_animation": "eat",
+			"minecraft:use_modifiers": {
+				"movement_modifier": 0.2,
+				"use_duration": 2
+			},
+			"minecraft:tags": {
+				"tags": [
+					"minecraft:is_meat",
+					"minecraft:is_cooked"
+				]
+			}
+		}
+	}
+}

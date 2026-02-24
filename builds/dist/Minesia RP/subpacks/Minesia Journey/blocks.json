@@ -1,0 +1,12 @@
+{
+    "format_version": [
+        1,
+        1,
+        0
+    ],
+    "minesia_journey:rotated_iron_door": {
+        "textures": "minesia_journey_rotated_iron_door",
+        "sound": "metal",
+        "brightness_gamma": 0.5
+    }
+}

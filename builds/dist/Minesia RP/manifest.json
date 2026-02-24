@@ -43,6 +43,12 @@
 	],
 	"subpacks": [
 		{
+			"folder_name": "Minesia Journey",
+			"name": "Minesia Journey",
+			"memory_tier": 1,
+			"description": "Open world adventure map content with custom blocks and items."
+		},
+		{
 			"folder_name": "Desktop Better",
 			"name": "Desktop Better",
 			"memory_tier": 0,

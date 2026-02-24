@@ -25,7 +25,6 @@
 					}
 				]
 			},
-			"minecraft:damage": 7,
 			"minecraft:display_name": {
 				"value": "item.minesia:steel_sword"
 			}

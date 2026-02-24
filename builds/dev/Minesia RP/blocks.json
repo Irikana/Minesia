@@ -3,5 +3,8 @@
 		1,
 		1,
 		0
-	]
+	],
+	"minesia:rotated_iron_door_bottom": {
+		"sound": "stone"
+	}
 }

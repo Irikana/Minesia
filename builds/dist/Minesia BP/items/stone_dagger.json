@@ -25,7 +25,6 @@
 					}
 				]
 			},
-			"minecraft:damage": 2,
 			"minecraft:display_name": {
 				"value": "item.minesia:stone_dagger"
 			}

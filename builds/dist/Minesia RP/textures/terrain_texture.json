@@ -3,5 +3,9 @@
 	"padding": 8,
 	"resource_pack_name": "New Project",
 	"texture_name": "atlas.terrain",
-	"texture_data": {}
+	"texture_data": {
+		"minesia_rotated_iron_door_bottom": {
+			"textures": "textures/blocks/rotated_iron_door_bottom"
+		}
+	}
 }

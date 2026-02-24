@@ -25,7 +25,6 @@
 					}
 				]
 			},
-			"minecraft:damage": 4,
 			"minecraft:display_name": {
 				"value": "item.minesia:desert_walker"
 			}

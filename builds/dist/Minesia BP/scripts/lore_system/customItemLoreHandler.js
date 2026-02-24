@@ -18,6 +18,27 @@ const CUSTOM_ITEM_LORE = {
             { zh_CN: "登峰造极", en_US: "Reaching the Peak" },
             { zh_CN: "攻击时对周围5格内同类实体造成1~5点伤害", en_US: "Attacks deal 1~5 damage to same-type entities within 5 blocks" }
         ]
+    },
+    "minesia:wooden_coin": {
+        lore: { zh_CN: "很寻常的普通货币", en_US: "A very common currency" }
+    },
+    "minesia:stone_coin": {
+        lore: { zh_CN: "很寻常的普通货币", en_US: "A very common currency" }
+    },
+    "minesia:silver_coin": {
+        lore: { zh_CN: "很寻常的普通货币", en_US: "A very common currency" }
+    },
+    "minesia:gold_coin": {
+        lore: { zh_CN: "比较少见的普通货币", en_US: "A somewhat uncommon currency" }
+    },
+    "minesia:diamond_coin": {
+        lore: { zh_CN: "较为珍贵的货币", en_US: "A fairly precious currency" }
+    },
+    "minesia:emerald_coin": {
+        lore: { zh_CN: "非常宝贵的珍贵货币", en_US: "A very precious currency" }
+    },
+    "minesia:ruby_coin": {
+        lore: { zh_CN: "非法货币", en_US: "Illegal currency" }
     }
 };
 

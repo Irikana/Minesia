@@ -1,7 +1,7 @@
 import { world, system, GameMode } from "@minecraft/server";
 import { STAMINA_CONFIG, getStaminaTexts } from "./config.js";
-import { getDisplayState } from "../damage_display/damageDisplayMain.js";
-import { MinesiaLevelSystem } from "../minesia_level/level_system.js";
+import { ActionBarManager, DISPLAY_PRIORITIES } from "../action_bar/index.js";
+import { getWeaponStaminaCost, isStaminaWeapon } from "./weaponStaminaConfig.js";
 
 const playerStaminaData = new Map();
 const playerDisplayState = new Map();
@@ -24,7 +24,6 @@ function getPlayerLocale(player) {
 class StaminaSystem {
     static playerStates = new Map();
     static displayPaused = new Map();
-    static levelDisplayPausedByStamina = new Map();
     static consumptionModifiers = new Map();
     static recoveryModifiers = new Map();
 
@@ -50,7 +49,8 @@ class StaminaSystem {
                 wasDisplaying: false,
                 consumptionMultiplier: 1,
                 recoveryMultiplier: 1,
-                maxStaminaBonus: 0
+                maxStaminaBonus: 0,
+                lastStamina: STAMINA_CONFIG.maxStamina
             };
             playerStaminaData.set(player.id, data);
         }
@@ -86,17 +86,18 @@ class StaminaSystem {
     static setStamina(player, value, triggerDisplay = false) {
         const data = this.getPlayerData(player);
         const maxStamina = this.getMaxStamina(player);
+        const oldValue = data.stamina;
         data.stamina = Math.max(0, Math.min(maxStamina, value));
+
+        if (data.stamina !== oldValue) {
+            this.triggerDisplay(player, data);
+        }
 
         if (data.stamina <= 0) {
             this.handleExhaustion(player, data);
         } else if (data.isExhausted && data.stamina > STAMINA_CONFIG.exhaustionThreshold) {
             data.isExhausted = false;
             this.clearExhaustionEffects(player);
-        }
-
-        if (triggerDisplay) {
-            this.triggerDisplay(player, data);
         }
 
         return data.stamina;
@@ -106,7 +107,6 @@ class StaminaSystem {
         const data = this.getPlayerData(player);
         const multiplier = ignoreMultiplier ? 1 : data.consumptionMultiplier;
         const finalAmount = amount * multiplier;
-        const oldStamina = data.stamina;
         const newStamina = this.setStamina(player, data.stamina - finalAmount);
         data.lastConsumptionTick = system.currentTick;
         data.isRecovering = false;
@@ -118,8 +118,6 @@ class StaminaSystem {
         const data = this.getPlayerData(player);
         const multiplier = ignoreMultiplier ? 1 : data.recoveryMultiplier;
         const finalAmount = amount * multiplier;
-        const maxStamina = this.getMaxStamina(player);
-        const oldStamina = data.stamina;
         const newStamina = this.setStamina(player, data.stamina + finalAmount, false);
 
         return newStamina;
@@ -254,6 +252,13 @@ class StaminaSystem {
     }
 
     static shouldDisplayStamina(playerId) {
+        const data = playerStaminaData.get(playerId);
+        if (!data) return false;
+
+        if (data.stamina !== data.lastStamina) {
+            return true;
+        }
+
         const state = playerDisplayState.get(playerId);
         if (!state) return false;
 
@@ -271,26 +276,6 @@ class StaminaSystem {
     static isDisplayPaused(playerId) {
         return this.displayPaused.has(playerId);
     }
-
-    static pauseLevelDisplayForStamina(player) {
-        const playerId = player.id;
-        if (!this.levelDisplayPausedByStamina.has(playerId)) {
-            this.levelDisplayPausedByStamina.set(playerId, true);
-            MinesiaLevelSystem.playerDisplayPaused.set(playerId, true);
-        }
-    }
-
-    static resumeLevelDisplayForStamina(player) {
-        const playerId = player.id;
-
-        if (!this.levelDisplayPausedByStamina.has(playerId)) {
-            return;
-        }
-
-        this.levelDisplayPausedByStamina.delete(playerId);
-        MinesiaLevelSystem.playerDisplayPaused.delete(playerId);
-        MinesiaLevelSystem.updateLevelDisplay(player);
-    }
 }
 
 function updatePlayerStamina(player) {
@@ -304,6 +289,8 @@ function updatePlayerStamina(player) {
     const isSprinting = player.isSprinting;
     const isSwimming = player.isSwimming;
     const isOnGround = player.isOnGround;
+
+    data.lastStamina = data.stamina;
 
     const dx = currentPos.x - data.lastPosition.x;
     const dy = currentPos.y - data.lastPosition.y;
@@ -340,7 +327,6 @@ function updatePlayerStamina(player) {
 
     if (staminaConsumed > 0) {
         StaminaSystem.consumeStamina(player, staminaConsumed);
-        StaminaSystem.triggerDisplay(player, data);
     }
 
     const ticksSinceLastConsumption = currentTick - data.lastConsumptionTick;
@@ -381,7 +367,16 @@ function handlePlayerAttack(event) {
 
     if (attacker.getGameMode() === GameMode.Creative) return;
 
-    StaminaSystem.consumeStamina(attacker, STAMINA_CONFIG.consumption.attack);
+    const equippable = attacker.getComponent('minecraft:equippable');
+    if (!equippable) return;
+
+    const mainhandItem = equippable.getEquipment('Mainhand');
+    if (!mainhandItem) return;
+
+    const staminaCost = getWeaponStaminaCost(mainhandItem.typeId);
+    if (staminaCost === null) return;
+
+    StaminaSystem.consumeStamina(attacker, staminaCost);
 }
 
 export function displayStaminaBar(player) {
@@ -393,26 +388,16 @@ export function displayStaminaBar(player) {
 
     if (StaminaSystem.isDisplayPaused(playerId)) return;
 
-    const damageDisplayState = getDisplayState(playerId);
-    if (damageDisplayState) return;
-
     const shouldDisplay = StaminaSystem.shouldDisplayStamina(playerId);
     const data = StaminaSystem.getPlayerData(player);
 
     if (!shouldDisplay) {
-        if (StaminaSystem.levelDisplayPausedByStamina.has(playerId)) {
-            StaminaSystem.levelDisplayPausedByStamina.delete(playerId);
-            MinesiaLevelSystem.playerDisplayPaused.delete(playerId);
-        }
-
+        ActionBarManager.removeLine(playerId, 'stamina');
         data.wasDisplaying = false;
         return;
     }
 
-    if (!data.wasDisplaying) {
-        StaminaSystem.pauseLevelDisplayForStamina(player);
-        data.wasDisplaying = true;
-    }
+    data.wasDisplaying = true;
 
     const locale = getPlayerLocale(player);
     const texts = getStaminaTexts(locale);
@@ -441,7 +426,8 @@ export function displayStaminaBar(player) {
         displayText = `§6${texts.stamina} §f${bar}`;
     }
 
-    player.onScreenDisplay.setActionBar(displayText);
+    ActionBarManager.setLine(playerId, 'stamina', displayText, DISPLAY_PRIORITIES.STAMINA);
+    ActionBarManager.updateDisplay(player);
 }
 
 export function initializeStaminaSystem() {

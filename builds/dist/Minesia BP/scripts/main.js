@@ -4,9 +4,10 @@ import { ActionFormData } from "@minecraft/server-ui";
 import * as setEffectMain from "./set_effect/setEffectMain.js";
 import * as minesiaLevelMain from "./minesia_level/minesiaLevelMain.js";
 import { MinesiaLevelEventSystem } from "./minesia_level/minesiaLevelEvent.js";
-import { initializeBonusDamageSystem } from "./bonus_damage/bonusDamageMain.js";
-import { initializeLoreHandler } from "./bonus_damage/loreHandler.js";
-import { registerBonusDamageLoreHandler } from "./bonus_damage/bonusDamageLoreHandler.js";
+import { initializeRandomDamageSystem } from "./random_damage/randomDamageMain.js";
+import { initializeLoreHandler } from "./random_damage/loreHandler.js";
+import { registerRandomDamageLoreHandler } from "./random_damage/randomDamageLoreHandler.js";
+import { registerVanillaWeaponLoreHandler } from "./random_damage/vanillaWeaponLoreHandler.js";
 import { initializeLoreSystem } from "./lore_system/index.js";
 import { registerCustomItemLoreHandler } from "./lore_system/customItemLoreHandler.js";
 import { registerSetEffectLoreHandler } from "./lore_system/setEffectLoreHandler.js";
@@ -109,14 +110,17 @@ system.runTimeout(() => {
         MinesiaLevelEventSystem.initializeRewardsScoreboard();
         console.log('[Minesia] ✓ 等级事件系统就绪');
 
-        initializeBonusDamageSystem();
-        console.log('[Minesia] ✓ 附加伤害系统就绪');
+        initializeRandomDamageSystem();
+        console.log('[Minesia] ✓ 随机伤害系统就绪');
 
         initializeLoreHandler();
-        console.log('[Minesia] ✓ 附加伤害Lore处理器就绪');
+        console.log('[Minesia] ✓ 随机伤害Lore处理器就绪');
 
-        registerBonusDamageLoreHandler();
-        console.log('[Minesia] ✓ 附加伤害Lore处理器已注册');
+        registerRandomDamageLoreHandler();
+        console.log('[Minesia] ✓ 随机伤害Lore处理器已注册');
+
+        registerVanillaWeaponLoreHandler();
+        console.log('[Minesia] ✓ 原版武器Lore处理器已注册');
 
         registerCustomItemLoreHandler();
         console.log('[Minesia] ✓ 自定义物品Lore处理器已注册');

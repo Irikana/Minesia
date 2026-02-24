@@ -8,8 +8,8 @@
 
 | 项目目录 | com.mojang 目录 |
 |---------|----------------|
-| `G:\PClite\mcbe_addons_p\bridge\projects\Minesia\BP` | `C:\Users\Administrator\AppData\Roaming\Minecraft Bedrock\Users\Shared\games\com.mojang\development_behavior_packs\BP` |
-| `G:\PClite\mcbe_addons_p\bridge\projects\Minesia\RP` | `C:\Users\Administrator\AppData\Roaming\Minecraft Bedrock\Users\Shared\games\com.mojang\development_resource_packs\RP` |
+| `G:\PClite\MCBE addonsP\bridge\projects\Minesia\BP` | `C:\Users\Administrator\AppData\Roaming\Minecraft Bedrock\Users\Shared\games\com.mojang\development_behavior_packs\BP` |
+| `G:\PClite\MCBE addonsP\bridge\projects\Minesia\RP` | `C:\Users\Administrator\AppData\Roaming\Minecraft Bedrock\Users\Shared\games\com.mojang\development_resource_packs\RP` |
 
 ## 工作流程
 

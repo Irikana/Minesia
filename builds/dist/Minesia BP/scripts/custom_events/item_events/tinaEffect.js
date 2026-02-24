@@ -100,8 +100,6 @@ function applyDamageWithEffect(entity, damage, attacker, sourceLocation) {
             );
         }
 
-        entity.dimension.playSound("mob.entity_hurt", entity.location);
-
     } catch (error) {
         console.error('[Tina] 应用伤害效果时出错:', error?.message ?? error);
     }

@@ -1,0 +1,23 @@
+{
+	"format_version": "1.21.11",
+	"credit": "Made with Blockbench",
+	"ambientocclusion": false,
+	"textures": {
+		"1": "rotated_iron_door_bottom"
+	},
+	"elements": [
+		{
+			"from": [16, 0, 12],
+			"to": [19, 16, 28],
+			"rotation": {"x": 89.99999, "y": -82.5, "z": -89.99999, "origin": [16, 16, 12]},
+			"faces": {
+				"north": {"uv": [3, 0, 0, 16], "texture": "#1", "cullface": "north"},
+				"east": {"uv": [0, 0, 16, 16], "texture": "#1"},
+				"south": {"uv": [0, 0, 3, 16], "texture": "#1", "cullface": "south"},
+				"west": {"uv": [16, 0, 0, 16], "texture": "#1", "cullface": "west"},
+				"up": {"uv": [0, 0, 0, 0], "texture": "#1"},
+				"down": {"uv": [0, 13, 16, 16], "rotation": 90, "texture": "#1", "cullface": "down"}
+			}
+		}
+	]
+}

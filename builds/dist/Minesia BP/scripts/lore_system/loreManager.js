@@ -11,7 +11,9 @@ const LANGUAGE_OBJECTIVE = "minesia_language";
 const DEFAULT_LOCALE = "zh_CN";
 
 const MINESIA_LORE_MARKERS = [
+    "攻击伤害", "Attack Damage",
     "附加伤害", "Bonus Damage",
+    "随机伤害", "Random Damage",
     "它真的能用来战斗吗？", "Can it really be used for battle?",
     "攻击目标时，有50%的概率使目标获得1秒的减速效果", "When attacking, 50% chance to apply Slowness I for 1 second",
     "登峰造极", "Reaching the Peak",
@@ -28,7 +30,13 @@ const MINESIA_LORE_MARKERS = [
     "抗性提升 II", "Resistance II",
     "缓降 I", "Slow Falling I",
     "+20 最大体力值", "+20 Max Stamina",
-    "每秒消耗1点耐久", "Consumes 1 durability per second"
+    "每秒消耗1点耐久", "Consumes 1 durability per second",
+    "很寻常的普通货币", "A very common currency",
+    "比较少见的普通货币", "A somewhat uncommon currency",
+    "较为珍贵的货币", "A fairly precious currency",
+    "非常宝贵的珍贵货币", "A very precious currency",
+    "非法货币", "Illegal currency",
+    "体力消耗", "Stamina Cost"
 ];
 
 function getPlayerLocale(player) {
@@ -45,6 +53,9 @@ function getPlayerLocale(player) {
 }
 
 function isMinesiaLore(line) {
+    if (line === "" || line === "§r" || line === "§r§9" || line === "§r§7") {
+        return true;
+    }
     for (const marker of MINESIA_LORE_MARKERS) {
         if (line.includes(marker)) {
             return true;

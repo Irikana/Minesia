@@ -1,0 +1,11 @@
+{
+    "num_mip_levels": 4,
+    "padding": 8,
+    "resource_pack_name": "Minesia Journey",
+    "texture_name": "atlas.terrain",
+    "texture_data": {
+        "minesia_journey_rotated_iron_door": {
+            "textures": "textures/blocks/iron_door_bottom"
+        }
+    }
+}

@@ -6,8 +6,8 @@
 
 import { world, system } from "@minecraft/server";
 import { DAMAGE_DISPLAY_CONFIG, getDisplayTexts } from "./config.js";
-import { recentBonusDamage } from "../bonus_damage/bonusDamageMain.js";
-import { MinesiaLevelSystem } from "../minesia_level/level_system.js";
+import { recentRandomDamage, isCurrentlyApplyingRandomDamage } from "../random_damage/randomDamageMain.js";
+import { ActionBarManager, DISPLAY_PRIORITIES } from "../action_bar/index.js";
 import { getAoeDamageRecord, isAoeEntity } from "../custom_events/item_events/aoeDamageRegistry.js";
 import { isLevelUpDisplayActive } from "../minesia_level/minesiaLevelEvent.js";
 
@@ -15,7 +15,7 @@ const playerComboState = new Map();
 const playerDisplayState = new Map();
 const LANGUAGE_OBJECTIVE = "minesia_language";
 const DEFAULT_LOCALE = "zh_CN";
-const levelDisplayPausedByDamage = new Map();
+const processedAttacks = new Map();
 
 function getPlayerLocale(player) {
     try {
@@ -58,23 +58,37 @@ function handleEntityHurt(event) {
             return;
         }
 
-        const bonusDamageRecord = recentBonusDamage.get(attacker.id);
-        let bonusDamage = 0;
-
-        if (bonusDamageRecord) {
-            bonusDamage = bonusDamageRecord.bonusDamage;
+        if (isCurrentlyApplyingRandomDamage()) {
+            return;
         }
 
-        const totalDamage = damage + bonusDamage;
+        const attackId = `${attacker.id}_${hurtEntity.id}_${system.currentTick}`;
+        if (processedAttacks.has(attackId)) {
+            return;
+        }
+        processedAttacks.set(attackId, true);
 
-        showDamageDisplay(attacker, damage, bonusDamage, totalDamage, hurtEntity);
+        system.runTimeout(() => {
+            processedAttacks.delete(attackId);
+        }, 5);
+
+        const randomDamageRecord = recentRandomDamage.get(attacker.id);
+        let randomDamage = 0;
+
+        if (randomDamageRecord) {
+            randomDamage = randomDamageRecord.randomDamage;
+        }
+
+        const totalDamage = randomDamage > 0 ? randomDamage : damage;
+
+        showDamageDisplay(attacker, totalDamage, hurtEntity);
 
     } catch (error) {
         console.error('[DamageDisplay] 处理伤害显示时出错:', error?.message ?? error);
     }
 }
 
-function showDamageDisplay(player, baseDamage, bonusDamage, totalDamage, target) {
+function showDamageDisplay(player, totalDamage, target) {
     const playerId = player.id;
     const targetId = target.id;
     const currentTick = system.currentTick;
@@ -124,8 +138,6 @@ function showDamageDisplay(player, baseDamage, bonusDamage, totalDamage, target)
     }
 
     const displayText = buildDisplayText(
-        baseDamage,
-        bonusDamage,
         accumulatedDamage,
         texts,
         hitCount,
@@ -141,57 +153,23 @@ function showDamageDisplay(player, baseDamage, bonusDamage, totalDamage, target)
         displayTick: currentTick
     });
 
-    if (!levelDisplayPausedByDamage.has(playerId)) {
-        levelDisplayPausedByDamage.set(playerId, true);
-        MinesiaLevelSystem.playerDisplayPaused.set(playerId, true);
-    }
-
-    player.onScreenDisplay.setActionBar(displayText);
+    ActionBarManager.setLine(playerId, 'damage', displayText, DISPLAY_PRIORITIES.DAMAGE);
+    ActionBarManager.updateDisplay(player);
 
     system.runTimeout(() => {
         clearDamageDisplay(playerId);
     }, DAMAGE_DISPLAY_CONFIG.displayDuration);
 }
 
-function buildDisplayText(baseDamage, bonusDamage, totalDamage, texts, hitCount = 1, aoeDamage = 0, aoeTargetCount = 0, aoeSourceName = "", aoeSourceNameEn = "", locale = "zh_CN") {
+function buildDisplayText(totalDamage, texts, hitCount = 1, aoeDamage = 0, aoeTargetCount = 0, aoeSourceName = "", aoeSourceNameEn = "", locale = "zh_CN") {
     const color = DAMAGE_DISPLAY_CONFIG.textColor;
-
-    if (DAMAGE_DISPLAY_CONFIG.debugMode) {
-        let debugText = `${color}${texts.baseDamage}: ${baseDamage.toFixed(1)} | ${texts.bonusDamage}: ${bonusDamage.toFixed(1)} | ${texts.totalDamage}: ${totalDamage.toFixed(1)}`;
-        if (aoeDamage > 0) {
-            debugText += `\n§dAOE: ${aoeDamage.toFixed(1)} (${aoeTargetCount} targets)`;
-        }
-        return debugText;
-    }
 
     let mainLine = "";
 
-    if (DAMAGE_DISPLAY_CONFIG.showTotalDamage) {
-        if (hitCount > 1) {
-            mainLine = `${color}${texts.damage}: ${totalDamage.toFixed(1)} (x${hitCount})`;
-        } else {
-            mainLine = `${color}${texts.damage}: ${totalDamage.toFixed(1)}`;
-        }
+    if (hitCount > 1) {
+        mainLine = `${color}${texts.damage}: ${totalDamage.toFixed(1)} (x${hitCount})`;
     } else {
-        let parts = [];
-
-        if (DAMAGE_DISPLAY_CONFIG.showBaseDamage) {
-            parts.push(`${texts.baseDamage}: ${baseDamage.toFixed(1)}`);
-        }
-
-        if (DAMAGE_DISPLAY_CONFIG.showBonusDamage && bonusDamage > 0) {
-            parts.push(`${texts.bonusDamage}: ${bonusDamage.toFixed(1)}`);
-        }
-
-        if (DAMAGE_DISPLAY_CONFIG.showTotalDamage) {
-            parts.push(`${texts.totalDamage}: ${totalDamage.toFixed(1)}`);
-        }
-
-        if (parts.length === 0) {
-            mainLine = `${color}${texts.damage}: ${totalDamage.toFixed(1)}`;
-        } else {
-            mainLine = `${color}${parts.join(' | ')}`;
-        }
+        mainLine = `${color}${texts.damage}: ${totalDamage.toFixed(1)}`;
     }
 
     if (aoeDamage > 0 && aoeTargetCount > 0) {
@@ -199,7 +177,8 @@ function buildDisplayText(baseDamage, bonusDamage, totalDamage, texts, hitCount 
         const aoeText = locale === "zh_CN"
             ? `§dAOE: ${aoeDamage.toFixed(1)} (${aoeTargetCount}目标) - ${sourceName}`
             : `§dAOE: ${aoeDamage.toFixed(1)} (${aoeTargetCount} targets) - ${sourceName}`;
-        return `${mainLine}\n${aoeText}`;
+        ActionBarManager.setLine('global', 'aoe', aoeText, DISPLAY_PRIORITIES.AOE);
+        return mainLine;
     }
 
     return mainLine;
@@ -211,19 +190,8 @@ function clearDamageDisplay(playerId) {
         const elapsed = system.currentTick - displayState.displayTick;
         if (elapsed >= DAMAGE_DISPLAY_CONFIG.displayDuration) {
             playerDisplayState.delete(playerId);
-
-            if (levelDisplayPausedByDamage.has(playerId)) {
-                levelDisplayPausedByDamage.delete(playerId);
-                MinesiaLevelSystem.playerDisplayPaused.delete(playerId);
-
-                const players = world.getPlayers();
-                for (const player of players) {
-                    if (player.id === playerId) {
-                        MinesiaLevelSystem.updateLevelDisplay(player);
-                        break;
-                    }
-                }
-            }
+            ActionBarManager.removeLine(playerId, 'damage');
+            ActionBarManager.removeLine(playerId, 'aoe');
         }
     }
 

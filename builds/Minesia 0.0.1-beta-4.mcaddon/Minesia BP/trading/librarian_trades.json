@@ -1,0 +1,237 @@
+{
+  "tiers": [
+    {
+      "trades": [
+        {
+          "wants": [
+            {
+              "item": "minecraft:paper",
+              "quantity": {
+                "min": 24,
+                "max": 36
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minesia:silver_coin",
+              "quantity": {
+                "min": 8,
+                "max": 15
+              }
+            },
+            {
+              "item": "minecraft:book",
+              "quantity": 1
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:enchanted_book",
+              "functions": [
+                {
+                  "function": "enchant_book_for_trading",
+                  "base_cost": 2,
+                  "base_random_cost": 5,
+                  "per_level_random_cost": 10,
+                  "per_level_cost": 3
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trades": [
+        {
+          "wants": [
+            {
+              "item": "minecraft:book",
+              "quantity": {
+                "min": 8,
+                "max": 10
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minesia:silver_coin",
+              "quantity": {
+                "min": 12,
+                "max": 18
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:compass",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minesia:stone_coin",
+              "quantity": {
+                "min": 4,
+                "max": 6
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:bookshelf",
+              "quantity": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trades": [
+        {
+          "wants": [
+            {
+              "item": "minesia:silver_coin",
+              "quantity": {
+                "min": 12,
+                "max": 18
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:clock",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minesia:wooden_coin",
+              "quantity": {
+                "min": 5,
+                "max": 7
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:glass",
+              "quantity": {
+                "min": 3,
+                "max": 5
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trades": [
+        {
+          "wants": [
+            {
+              "item": "minesia:silver_coin",
+              "quantity": {
+                "min": 8,
+                "max": 15
+              }
+            },
+            {
+              "item": "minecraft:book",
+              "quantity": 1
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:enchanted_book",
+              "functions": [
+                {
+                  "function": "enchant_book_for_trading",
+                  "base_cost": 2,
+                  "base_random_cost": 5,
+                  "per_level_random_cost": 10,
+                  "per_level_cost": 3
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trades": [
+        {
+          "wants": [
+            {
+              "item": "minesia:silver_coin",
+              "quantity": {
+                "min": 8,
+                "max": 15
+              }
+            },
+            {
+              "item": "minecraft:book",
+              "quantity": 1
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:enchanted_book",
+              "functions": [
+                {
+                  "function": "enchant_book_for_trading",
+                  "base_cost": 2,
+                  "base_random_cost": 5,
+                  "per_level_random_cost": 10,
+                  "per_level_cost": 3
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trades": [
+        {
+          "wants": [
+            {
+              "item": "minesia:gold_coin",
+              "quantity": {
+                "min": 20,
+                "max": 25
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:name_tag",
+              "quantity": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
