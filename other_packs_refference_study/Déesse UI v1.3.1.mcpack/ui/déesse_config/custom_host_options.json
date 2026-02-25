@@ -1,0 +1,118 @@
+{
+	"gamemode_sub@déesse_hostOptions.temp_stack": {
+		"controls": [
+			{
+				"1@déesse_hostOptions.command_button": {
+					"$command": "gamemode c",
+					"$button_text": "Creative"
+				}
+			},
+			{
+				"2@déesse_hostOptions.command_button": {
+					"$command": "gamemode s",
+					"$button_text": "Survival"
+				}
+			},
+			{
+				"3@déesse_hostOptions.command_button": {
+					"$command": "gamemode spectator",
+					"$button_text": "Spectator"
+				}
+			},
+			{
+				"4@déesse_hostOptions.command_button": {
+					"$command": "gamemode a",
+					"$button_text": "Adventure"
+				}
+			}
+		]
+	},
+	"give_sub@déesse_hostOptions.temp_stack": {
+		"controls": [
+			{
+				"1@déesse_hostOptions.command_button": {
+					"$command": "give @s command_block 64",
+					"$button_text": "Command Block"
+				}
+			},
+			{
+				"2@déesse_hostOptions.command_button": {
+					"$command": "give @s structure_block 64",
+					"$button_text": "Structure Block"
+				}
+			},
+			{
+				"3@déesse_hostOptions.command_button": {
+					"$command": "give @s jigsaw 64",
+					"$button_text": "Jigsaw"
+				}
+			},
+			{
+				"4@déesse_hostOptions.command_button": {
+					"$command": "give @s barrier 64",
+					"$button_text": "Barrier"
+				}
+			},
+			{
+				"5@déesse_hostOptions.command_button": {
+					"$command": "give @s structure_void 64",
+					"$button_text": "Structure Void"
+				}
+			},
+			{
+				"6@déesse_hostOptions.command_button": {
+					"$command": "give @s allow 64",
+					"$button_text": "Allow"
+				}
+			},
+			{
+				"7@déesse_hostOptions.command_button": {
+					"$command": "give @s deny 64",
+					"$button_text": "Deny"
+				}
+			},
+			{
+				"8@déesse_hostOptions.command_button": {
+					"$command": "give @s border_block 64",
+					"$button_text": "Border Block"
+				}
+			},
+			{
+				"9@déesse_hostOptions.command_button": {
+					"$command": "give @s light_block 64 15",
+					"$button_text": "Light Block (15)"
+				}
+			}
+		]
+	},
+	"common_sub@déesse_hostOptions.temp_stack": {
+		"controls": [
+			{
+				"1@déesse_hostOptions.command_button": {
+					"$command": "reload",
+					"$button_text": "Reload"
+				}
+			},
+			{
+				"2@déesse_hostOptions.command_button": {
+					"$command": "reload all",
+					"$button_text": "Reload All"
+				}
+			},
+			{
+				"3@déesse_hostOptions.command_button": {
+					"$command": "setblock ~~~ stone",
+					"$button_text": "Spawn Stone"
+				}
+			},
+			{
+				"4@déesse_hostOptions.command_button": {
+					"$command": "effect @s clear",
+					"$button_text": "Effect Clear"
+				}
+			}
+		]
+	},
+	"file_signature": "Itzriyo157",
+	"namespace": "déesse_hostOptions"
+}

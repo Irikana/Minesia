@@ -1,0 +1,20 @@
+{
+	"screen": {
+		"$screen_content": "pack_settings.new_main_content"
+	},
+	"new_main_content@déesse_dialog.global_dialog": {
+		"$content_controls": "pack_settings.pack_scroll_panel",
+		"$title_text": "#pack_settings_title",
+		"$title_text_binding_type": "global",
+		"$font_scale_factor": 1.0,
+		"size": [
+			"70%",
+			"80%"
+		],
+		"max_size": [
+			460,
+			400
+		],
+		"layer": 2
+	}
+}

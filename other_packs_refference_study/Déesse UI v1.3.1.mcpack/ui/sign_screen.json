@@ -1,0 +1,1 @@
+{"sign_screen":{"$screen_background_alpha":0.2,"$close_on_player_hurt":false,"force_render_below":true,"$screen_animations":["@common.screen_exit_animation_push_fade","@common.screen_exit_animation_pop_fade","@common.screen_entrance_animation_push_fade","@common.screen_entrance_animation_pop_fade"]}}

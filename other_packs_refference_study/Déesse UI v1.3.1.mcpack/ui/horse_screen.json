@@ -1,0 +1,19 @@
+{
+	"horse_panel/root_panel": {
+		"$is_chest_screen": true,
+		"modifications": [
+			{
+				"array_name": "controls",
+				"operation": "insert_front",
+				"value": [
+					{
+						"quick_container@déesse_qcMain.content_panel": {}
+					}
+				]
+			}
+		]
+	},
+	"horse_screen": {
+		"force_render_below": "$dé:force_render_below"
+	}
+}

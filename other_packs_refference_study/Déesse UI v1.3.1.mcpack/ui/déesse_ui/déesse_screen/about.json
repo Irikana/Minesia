@@ -1,0 +1,197 @@
+{
+	"file_signature": "Itzriyo157",
+	"namespace": "déesse_ui_about",
+	"scroll_content": {
+		"type": "stack_panel",
+		"size": [
+			"100%",
+			"100%c"
+		],
+		"controls": [
+			{
+				"déesse_ui@déesse_ui_common.content_bg_title": {
+					"$controls": [
+						{
+							"pack_icon_holder": {
+								"type": "image",
+								"texture": "textures/ui/Black",
+								"size": [
+									"100%",
+									68
+								],
+								"controls": [
+									{
+										"pack_icon_panel@dé.stack_hor": {
+											"size": [
+												"100% - 4px",
+												"100% - 4px"
+											],
+											"controls": [
+												{
+													"pack_icon": {
+														"type": "image",
+														"texture": "textures/déesse_ui/déesse_louve/déesse_louve_logo",
+														"size": [
+															64,
+															64
+														]
+													}
+												},
+												{
+													"pad@common.empty_panel": {
+														"size": [
+															4,
+															0
+														]
+													}
+												},
+												{
+													"text_panel": {
+														"type": "panel",
+														"size": [
+															"fill",
+															"100%"
+														],
+														"controls": [
+															{
+																"stacking@dé.stack_ver": {
+																	"size": [
+																		"100%",
+																		"100%c"
+																	],
+																	"anchor_from": "top_left",
+																	"anchor_to": "top_left",
+																	"offset": [
+																		1,
+																		1
+																	],
+																	"controls": [
+																		{
+																			"title": {
+																				"type": "label",
+																				"text": "Déesse UI Pack",
+																				"font_type": "MinecraftTen",
+																				"font_scale_factor": 1.6,
+																				"color": "$f_color_format",
+																				"size": [
+																					"default",
+																					"default"
+																				]
+																			}
+																		},
+																		{
+																			"pad@common.empty_panel": {
+																				"size": [
+																					0,
+																					3
+																				]
+																			}
+																		},
+																		{
+																			"version": {
+																				"type": "label",
+																				"text": "($déesse_ui_pack_version + ' | Release')",
+																				"color": "$f_color_format",
+																				"size": [
+																					"default",
+																					"default"
+																				]
+																			}
+																		}
+																	]
+																}
+															},
+															{
+																"version@déesse_ui_changelogs.min_version": {
+																	"$textt": "26.0",
+																	"anchor_from": "bottom_left",
+																	"anchor_to": "bottom_left",
+																	"offset": [
+																		1,
+																		-4
+																	]
+																}
+															}
+														]
+													}
+												}
+											]
+										}
+									}
+								]
+							}
+						},
+						{
+							"padding@dé.pad_ver_4px": {}
+						},
+						{
+							"pack_desc@déesse_ui_common.text_desc": {
+								"$text": " %deesse.pack.description"
+							}
+						},
+						{
+							"padding@dé.pad_ver_4px": {}
+						},
+						{
+							"pack_desc2@déesse_ui_common.text_desc": {
+								"$text": " %deesse.pack.description2"
+							}
+						}
+					]
+				}
+			},
+			{
+				"padding@dé.pad_ver_4px": {}
+			},
+			{
+				"creator_info@déesse_ui_common.content_bg_rest": {
+					"$controls": [
+						{
+							"creator_info@déesse_ui_common.header_text": {
+								"$text": "déesse.about.creator"
+							}
+						},
+						{
+							"youtube@déesse_ui_common.selected_text_w_label": {
+								"$title_text": "Youtube",
+								"$edit_box_text": "https://youtube.com/@Itzriyo157"
+							}
+						},
+						{
+							"tiktok@déesse_ui_common.selected_text_w_label": {
+								"$title_text": "Tiktok",
+								"$edit_box_text": "https://tiktok.com/@Itzriyo157"
+							}
+						},
+						{
+							"x@déesse_ui_common.selected_text_w_label": {
+								"$title_text": "X/Twitter",
+								"$edit_box_text": "https://x.com/Itzriyo157"
+							}
+						},
+						{
+							"padding@common.empty_panel": {
+								"size": [
+									0,
+									9
+								]
+							}
+						},
+						{
+							"discord@déesse_ui_common.selected_text_w_label": {
+								"$title_text": "Discord Server",
+								"$edit_box_text": "https://discord.gg/itzriyo157"
+							}
+						},
+						{
+							"discord2@déesse_ui_common.selected_text_w_label": {
+								"$title_text": "Link 2",
+								"$edit_box_text": "https://discord.gg/n35gR2PXMb"
+							}
+						}
+					]
+				}
+			}
+		]
+	}
+}

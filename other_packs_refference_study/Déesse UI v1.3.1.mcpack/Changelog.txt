@@ -1,0 +1,234 @@
+Changelogs (Déesse UI Pack v1.3.1 build 120)
+- Minecraft 26.0 Support.
+- Added Coords Saver to chat screen. now you can save your coords temporarily with just one click! useful when you find ex. structure and you don't bring book & quil to write the coords.
+- Added View Mode Button to inventory and chest screen (touch user only). Now you can see the hover text of an item by pressing it without selecting the item.
+- Added Exclude Slots feature to container and inventory screens. now you can exclude slots you don't want to touch to use the Bulk Items Button function. (Full Feature subpack)
+- Added Item Search Counter to chest screen. it shows the number of items along with their slots that are highlighted when searching.
+- Added another useless tool, Color Preview! Now you can experiment with coloring leather armors complete with hex, RGB and numeric colors.
+- Custom Host Panel is now hidden if Vanilla host panel is shown.
+- Ambient effects (from beacons, conduits etc.) now have a blue outline on effects screen.
+- Closed Captions (Subtitles) toggle is now always shown.
+- Changed Hud Subtitle to be like in Java edition.
+- Text input from search bar is now automatically cleared when exiting screen or hiding the search bar.
+- Fixed misplaced piano tiles in Piano Note Block tool.
+- Music player now uses the factory method for display it.
+- Removed feature pages in Temporary Notes.
+- Change background color of highlighted items to be more transparent (0.2)
+- Fix missing macro command text box in settings screen.
+- Fix errors and minor bugs from the latest Minecraft update.
+
+Changelogs (Déesse UI Pack v1.3.0 build 112)
+- Minimap Renderer Tool now supports custom positions! You can render the area around the player anywhere*.
+- Added new tool! Note Block. Now you can play note block piano without using in-game note block.
+- Added new tool! Chunk Map. This tool helps you find slime chunks in your world.
+- Added new tool! Easing Animation. This tool helps you view all easing animations.
+- Added Quick craft button to stonecutter screen with Selectable items!
+- Added Custom Host Panel to chat screen! You can instantly run commands without having to type them. You can customize the commands through the config file.
+- Added Custom Text Box to chat screen! When you type in this text box, your typing will not be lost when you exit the screen or send in. You must activate it first with "Switch Text Box" option.
+- Added Jump to Bottom button on chat screen, to instantly jump to the bottom of messages.
+- Added Multiple Craft button to player inventory.
+- Added an option to hide Minecraft beta debug screen to quick settings.
+- Added Dwell Time Before Dragging and Stack Splitting Time options to quick settings.
+- Added option to show background for skin viewer on start screen.
+- Added Item Move Column feature to player inventory.
+- Added player Xp number to enchanting screen.
+- Item Renderer tool can now render items from id -1300 to id 1300
+- Now you can exit the screen by simply double-pressing Instant Item button after you use it.
+- Player list for keyboard users now just need to press/hover Tab key to show it instead of toggling it.
+- Improved pack selector by adding search bar and changing the toggle to top tab button.
+- Improved trade screen code, this fixes crashes for some devices.
+- Added weakness potion to brewing guide.
+- Fixed brewing guide broken when using Transparent Ui Pack.
+- Moved touch tooltip bundle back to the default position (bottom middle)
+- Changed the size of Hud Menu button for touch control in Hud to be like the previous version.
+- Changed the "Show Background Chat" option to a toggle instead of a slider (kinda)
+- Fixed minor bugs and made minor changes.
+
+Changelogs (Déesse UI Pack v1.2.8.1 build 92)
+- Added Music Player to start screen.
+- Improved pack logo.
+- Fix 'Delay in Ticks' tool in command block screen not working.
+- Fix some Quick Container buttons not appearing on ender chest screen.
+- Fix Touch section in settings screen makes performance decrease.
+- Removed unused files.
+
+Changelogs (Déesse UI Pack v1.2.8 build 91)
+
+- Added Lodestone Compass Hud Panel to Hud screen! This renders lodestone compass in Hud without having to open inventory screen, the compass will only render if you have it in your inventory. (Full Features subpack only)
+- Added new buttons to crafter screen! Enable All Slots, Disable All Slots, and Flip All Slots, which will improve your experience.
+- Added Unequip Armor button to inventory screen.
+- Added lodestone compass index to container item.
+- Added Quick Items and Instant Items Button to horse screen.
+- Changed Inventory HUD toggle in Hud Menu Toggles to disabled by default.
+- Added variable to change Hud Menu Toggles Button on touch control to match the Top Button size in your Minecraft.
+- Added variable to disable Player List feature.
+- Added icons to Instant Items Button.
+- Improved Skin Viewer on start screen.
+- Improved Quick Container code, this makes opening container screen smoother.
+- Move bundle touch tooltip to top right (customizable)
+- Changed the color of bundle item count to yellow.
+- Changed 'release' button volume to 0.7
+- Changed progress screen to be like ore ui design.
+- Fixed message list not being able to scroll when using controller in chat screen.
+- Hotbar Switcher now supports two inputs.
+- Removed click sound when show/hide Player List with key button.
+- Removed cursor gamepad when using a controller in About Ui screen because why did I add it for no reason ;-;
+
+Changelogs (Déesse UI Pack v1.2.7 build 82)
+
+- ALL Songs available in Minecraft can now be played with Music Player! (Full Features subpack only)
+- Now you can spam click to CRAFT ITEMS! which you couldn't do before.
+- Added Multiple Craft Button to crafting screen! Now you can craft multiple items with just one click, useful for crafting specific quantities. You can customize the number of crafting times with a variable.
+- Added Bulk Disenchant Items Button to grindstone screen! Now you can disenchant multiple items with just one click, useful for disenchanting gold swords from gold farm to get extra xp instantly.
+- Added strength potion to Brewing Stand Guide.
+- Minimap Renderer position can now be customized with variables!
+- When in auto place mode, items that have been enchanted will immediately move to inventory from input slot on enchanting table screen.
+- Added vsync option to video section.
+- Updated Item Id which was messed up due to Minecraft update.
+- Removed bottom buttons when in full screen mode in structure screen.
+- Fix calculator on chat screen not working.
+- Fix xp point calculator not working.
+- Fix drop button not working in performance mode.
+- Changed sign screen animation.
+
+Changelogs (Déesse UI Pack v1.2.6 build 77)
+
+- Added Ward music disc to Music Disc Player.
+- Updated Item Id which was messed up due to Minecraft update. This fixes the clock, compass, banner, and armor trim turning into other items.
+- Changed quick craft button on crafting screen to one press to craft rather than twice.
+- Remove Spacings/gaps in video section on settings screen.
+- Fix duplicate book panels on book screen.
+- Fix nametag offset in skin viewer on pause screen.
+- Fix not being able to use Vibrant Visual even though the device supports it.
+- Remove text entity ID on horse screen.
+- Remove friends drawer button in player list on pause screen.
+
+Changelogs (Déesse UI Pack v1.2.5 build 72)
+
+- New Feature! Smithing Armor Viewer/Trim Armor Viewer. Now you can easily try out armor, trim, and dye combinations without having to go into creative mode. You can access it from smithing table or in About UI/Tools/Smithing Armor Preview.
+- New Feature! Banner Pattern Editor. Now you can try editing banner pattern as you like very easily without having to go into creative mode. You can access it from loom or in About UI/Tools/Banner Pattern Editor.
+- Added zoom & offset settings to Minimap Renderer.
+- Improve radio button on settings screen.
+- Improve skin viewer in hide screen mode on start screen.
+- Fix drop one mode not working on Quick Items.
+- Added hover text to view item id & item id aux on items in tools/item renderer.
+- Added friend drawer to pause screen.
+- New animation when open/close container screen.
+- Optimized quick items with factory method. This makes load container screen & inventory screen smoother & faster.
+- Added animation when open a tool from Tools section.
+- Removed flash when screenshot in-game.
+- Added scrollable command chat. Now you can scroll commands.
+- Added gathering button on start screen.
+
+Changelogs (Déesse UI Pack v1.2.15 build 64)
+
+- Added Performance Mode to subpacks. I hope this will fix slow load on low-end devices even though this UI pack is well optimized.
+- Added back Drag Mode in Quick Items feature but only on chest screen.
+- New display when hover button & slider.
+- Overhaul world management in game section and add world location to it.
+- Change the position of Hotbar Cycler 1 pixel up.
+- Moved Instant Items Button and Search Button more to the center.
+- Changed animation when opening/closing container screen back to vanilla.
+- Fix a bug in Search Option feature.
+- Fix command text layer issue on chat screen.
+- Fix form server size issue when installing addons that change form server size.
+- Fix the position of texts on the HUD screen in the latest Minecraft update (v1.21.111).
+- Fix an issue for Windows users where they couldn't open About UI screen but instead opened buy game screen.
+- Fix Outside Button Mode in Night Vision (Brightness Overlay) feature not disappearing when Hide HUD is enabled.
+
+Changelogs (Déesse UI Pack v1.2.1 build 61)
+
+- Added Tools section to About UI screen. This adds QR Code Generator, Minimap Renderer, Texture Renderer, and Item Renderer.
+- Added Item Tooltip Display back to Chest screen.
+- Added warning when global variables error.
+- Improved Ore UI style on Settings screen.
+- Fix force spectator option.
+- Fix stack button offset error on Start screen.
+- Fix coordinates text showing when disabled on Chat screen.
+- Fix other minor bugs.
+- Remove Drag Mode in Quick Items as it was pretty useless.
+
+Changelogs (Déesse UI Pack v1.2.0 build 57)
+
+- Redesigned Command Block screen with Ore UI style and also added some useful features.
+- Redesigned Structure Block screen with Ore UI style and added new features.
+- Redesigned Jigsaw Block screen with Ore UI style.
+- Added Item ID Offset Editor to fix broken renderer items on Clock Compass renderer and fuel info due to addons.
+- Redesign Pack Info screen with Ore UI style.
+- Some changes to Emote Wheel screen.
+- Some changes to How To Play screen.
+- Remove Player Direction feature and made it a separate pack to fix compatibility issues.
+- Remove Quit Confirmation for gamepad/controller users.
+- Rewrite all codes to be more efficient and improve performance.
+- Added text information in hide screen mode on Pause screen.
+- Added additional buttons on Start screen.
+- Added Hide Screen button to hide screen content to see panorama clearly, you can also put your player there.
+- Added pages to Temporary Notes.
+- Fix Xbox users not being able to type chats in Chat screen.
+- Redesign Chat screen with Ore UI style.
+- Added Clear Chat Mode to Chat Screen.
+- Overhauled Settings Screen, now more similar to Ore UI style.
+- Simplified Force Spectator toggle, now you just need to press the toggle to change to spectator mode instead of having to press the toggle and button.
+- Added a new Storage Management screen to Settings screen with useful features like search and auto-select all to better manage your storage.
+- Added the ability to add a new lines when naming an item on Anvil screen.
+- Added Move Selected Item for touch controls. Now you can move multiple items with just one click.
+- Fix Item Rarity Viewer appearing in Recipe Book even when it was not activated.
+- Quick Items button now works on Recipe Book.
+- Remove Item Tooltip Display due to a very strange bug.
+- Change effect timer in Effect screen from *m*:*s* (6:30) to *m*m, *s*s (6m, 30s)
+- Added text number of active effects in Effect screen.
+- Overhaul Déesse UI screen with Ore UI Style.
+- Added section 'Extension Packs' and 'Term of Use' to Déesse UI screen.
+- Remove 'Global Variables' Section in Déesse UI screen.
+- Remove text on Low Durability Warning and only leaves durability numbers to make it cleaner.
+- Added a new feature to the Hud Menu Toggles, Chunk Map. This feature adds the ability to view slime chunks in your world in full screen. You can also freely move around to view the slime chunks. but this feature is only available for touch control, and need to change subpacks to 'full features' to get this feature.
+- Improve Hud Menu Toggles for touch and desktop versions.
+- Remove Empty Inventory Slot Counter on touch control as it is already available on Debug Screen.
+- Added Center Item Counter to Hud Menu Toggles.
+- Added more information to Debug Screen.
+- Added Clock Compass to Hud Menu Toggles to show/hide Clock & Compass renderer on Hud screen.
+- Added Empty Inventory Slot Counter to Hud Menu Toggles Desktop Version.
+- Remove a text warning while activating the 'Hide Coordinates' feature in Hud screen.
+- Added Increase and Decrease buttons for Night Vision on Hud screen.
+
+---
+
+Changelogs (Déesse UI Pack v1.1.0 build 33)
+
+- Added notification when the slots in the inventory are full.
+- Redesigned settings screen with Ore UI theme.
+- Redesigned Modal Progress Screen to be better and cleaner.
+- Changed server form design to be like in Ore UI.
+- Changed Storage Management settings to be more compact and clean.
+- Redesigned Content Log Screen to be more compact and clean.
+- Added search settings to the settings screen for faster search options. You can also search more faster using Quick Search feature.
+- Some features have been moved to the "Full Features" pack due to performance issues. To learn more about the features that have been moved, you can see on About Déesse UI screen.
+- Added bulk move item button to redstone screen.
+- Added new music disc "Lava Chicken" to music player.
+- Added animation when using "Night Vision" feature.
+- Added brewing guide to brewing stand screen.
+- Added fuel info to all furnace screen.
+- Added search feature to Server Form screen.
+- Added information when hide hud on touch control.
+- Added Recovery Compass Button in Hud Menu to show recovery compass.
+- Added Hide Command Button to show chat when typing a command in Chat screen.
+- Added Show Coordinate Button to show coordinates on chat screen.
+- Added Seed World Copy and Content Log Button in Quick Settings.
+- Added compatibility with controllers. but some features are not available due to limitations.
+- Now HUD screen no longer renders when it is overlaid by another screen. But you can restore it on "_global_variables.json".
+- Changed the toast to be more compact and changed its animation.
+- Change animation when opening a screen.
+- Change the size of the quit confirmation dialog.
+- Move how to play section to the bottom at Settings Screen.
+- Fix Placeholder Text.
+- Fix some music discs not being able to be searched in the music player.
+- Fixed some issues with Hud Menu for non-touch users.
+- Now you can exit from Hud Menu using "ESC" key.
+- Changed some elements on bulk move feature.
+- Improved Bulk Move Item feature to be more stable.
+- Removed "Item Rarity Highlight" feature by default to fix a compatibility issue. However, you can still restore it by changing the value of '$déesse:show_rarity_highlight' to 'true' in the "_global_variables.json" file.
+- Fixed marketplace button on start screen.
+- Fixed elements on the Hud Screen being pressed while on another screen overlapping the Hud screen on touch controls.
+- Pause toggle option can now be seen in pregame.
+- Fix minor bugs and optimized codes.
+- Fixed missing close button in Chat Settings screen on controller.

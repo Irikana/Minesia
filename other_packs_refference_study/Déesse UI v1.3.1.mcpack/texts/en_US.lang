@@ -1,0 +1,628 @@
+map.position=Position: %s, %s, %s
+
+déesse.ui.about=Déesse UI
+
+déesse.uiLoaded=Déesse UI has been loaded!
+déesse.hide=hide
+deesse.searchAvailablePack=Search available packs... (Case Sensitive)
+deesse.searchSelectedPack=Search selected packs... (Case Sensitive)
+deesse.updateChat=Updating messages...
+deesse.showBg=Show Background
+déesse.all=all
+deesse.doublePress=Double press
+
+## Searched Items Container
+deesse.itemFound=Item(s) found
+deesse.slot=slots
+
+déesse.showSkin=Show Player
+déesse.enableCustomPos=Enable Custom Position
+déesse.settings=Settings
+déesse.viewstep=View Step
+déesse.editor=Editor
+déesse.banners=Banners
+déesse.colors=Colors
+déesse.patterns=Patterns
+déesse.screenshot=Screenshot is in progress...
+déesse.negativeidtoggle=Negative Item Id
+deesse.enableCustomMinimap=Enable Custom Position
+deesse.loadMinimap=Load Minimap
+deesse.load=Load
+deesse.reset=Reset
+deesse.deleteLatestNote=Delete latest note (double press)
+deesse.deleteAllNote=Delete all notes (double press)
+
+deesse.searchBar=Search Bar
+deesse.massCraftMode=Mass Craft Mode
+deesse.moveItemColumn=Move Items per Column/Row
+deesse.itemTooltipDisplay=Item Tooltip Display
+deesse.searchItems=Search... (Case Sensitive!)
+
+deesse.drop=§6Drop
+deesse.move=Move
+deesse.clearAll=Clear All
+deesse.dropall=Drop All
+deesse.moveall=Move All
+deesse.inputMode=Input Mode:
+deesse.containerItems=Container Items
+deesse.inventoryItems=Inventory Items
+deesse.hotbarItems=Hotbar Items
+
+deesse.clearAllInvItems=§cClear All§f Inventory Items
+deesse.dropAllInvItems=§6Drop All§f Inventory Items
+deesse.clearAllHotbarItems=§cClear All§f Hotbar Items
+deesse.dropAllHotbarItems=§6Drop All§f Hotbar Items
+deesse.moveAllHotbarItems=Move All Hotbar Items
+deesse.clearCraftGrid=Clear Crafting Grid
+deesse.hoverMode=Hover Mode
+
+deesse.doubleClickCraftItems=Double click to craft all item
+deesse.clickCraftItems=Click to craft all item
+deesse.doubleClickRun=§7double press to run it
+
+deesse.disableAllSlot=Disabled All Slot (Double Press)
+deesse.enableAllSlot=Enabled All Slot
+deesse.flipAllSlot=Flip All Slot
+deesse.unequipArmors=Unequip all armor
+deesse.excludeSlots=Exclude Slots
+
+deesse.bulkDisenchant.infoLine1=Only items in your §cinventory (not your hotbar)§f will
+deesse.bulkDisenchant.infoLine2=be disenchanted, so make sure you don't have any
+deesse.bulkDisenchant.infoLine3=your tools in your inventory when you disenchant.
+
+déesse.chat.calculator=Calculator
+déesse.chat.calculatorItemID=Calculator Item ID
+déesse.chat.coords=Coordinates
+déesse.chat.insertcoords=Insert your position:
+déesse.calcItemID.insertID=Insert your compass item id:
+déesse.calcItemID.resultID=Result: 
+
+déesse.chat.tempNotesTitle=Temporary Notes
+déesse.chat.tempNotes.placeHolder=Type a note here...
+déesse.chat.tempNotes.page1=Page 1
+déesse.chat.tempNotes.page2=Page 2
+déesse.chat.tempNotes.page3=Page 3
+déesse.chat.unavailable=§7§ounavailable
+
+déesse.musicPlayer.title=Music Player
+
+déesse.pack.contentLog.mssgcount=messages count:
+
+déesse.worldLocation=World Location:
+déesse.cachesStorageLocation=Caches & Storage Location
+déesse.selectAllInvert=Select All/Invert Selection
+déesse.showMoreInfo=Show More Information
+deesse.sizeTotal=Estimated total size:
+
+déesse.netherToOverworld=Nether to Overworld:
+déesse.overworldToNether=Overworld to Nether:
+
+déesse.BO.buttonOutside=Outside Button
+déesse.hud.openMenuTips.mouse=Press 'HUD' button on pause screen to open Hud Mod Menu.
+déesse.hud.openMenuTips.touch=Press 'Déesse' button to open hud mod menu.
+déesse.hud.inventoryFullNotification=§cYour inventory is full!
+déesse.hud.poshiddentext=§o[Coordinates is hidden]
+déesse.hud.hideHudTip=Tap Here To Show Hud Again!
+déesse.hud.dayAdvancement=§eAdvancement Made!
+déesse.hud.dayReach=Reach DAY
+déesse.hud.moonPhase_0=Full Moon §a[!]
+déesse.hud.moonPhase_1=Waning Gibbous
+déesse.hud.moonPhase_2=Third Quarter
+déesse.hud.moonPhase_3=Waning Crescent
+déesse.hud.moonPhase_4=New Moon
+déesse.hud.moonPhase_5=Waxing Crescent
+déesse.hud.moonPhase_6=First Quarter
+déesse.hud.moonPhase_7=Waxing Gibbous
+déesse.hud.xpLevel=Exp Level:
+déesse.hud.invStorage=Inventory Storage:
+déesse.hud.xpPoints=Exp Points:
+déesse.hud.worldName=World/List Name:
+déesse.hud.players=Players:
+déesse.hud.gamemode=Gamemode:
+déesse.hud.overworldToNether=Overworld -> Nether Pos:
+déesse.hud.netherToOverworld=Nether -> Overworld Pos:
+deesse.deathCoordsInfo.1=Death Coords will disappear if you gain xp or pick up any item
+deesse.deathCoordsInfo.2=So make sure you remember or note it down.
+## These have spaces at the end.
+déesse.hud.chunk=Chunk: 
+déesse.hud.moonPhaseText=Moon Phases: 
+
+déesse.hudMenu.title=HUD MENU TOGGLES
+déesse.hudMenu.debugScreen=Debug Screen
+déesse.hudMenu.debugScreen.desc=Show more information about player and world. (requires coordinate toggle enable to work properly)
+déesse.hudMenu.invHud=Inventory HUD
+déesse.hudMenu.invHud.desc=Show inventory to HUD Screen.
+déesse.hudMenu.nightVision=Night Vision §8(Brightness Overlay)§f
+déesse.hudMenu.nightVision.desc=Increase brightness in game. (Press ARROW UP to increase and press ARROW DOWN to decrease)
+déesse.hudMenu.recoveryCompass=Recovery Compass
+déesse.hudMenu.recoveryCompass.desc=Show recovery compass.
+déesse.hudMenu.emptySlotCounter=Empty Inventory Slot Counter
+déesse.hudMenu.emptySlotCounter.desc=Count the number of inventory slots that are still empty.
+déesse.hudMenu.clockCompass=Clock Compass
+déesse.hudMenu.clockCompass.desc=Display clock and compass item on HUD.
+déesse.hudMenu.hideChat=Hide Chat Panel
+déesse.hudMenu.hideChat.desc=Hide chat panel.
+déesse.hudMenu.hideScoreboard=Hide Scoreboard Sidebar
+déesse.hudMenu.hideScoreboard.desc=Hide scoreboard sidebar.
+déesse.hudMenu.hidePosition=Hide Position
+déesse.hudMenu.hidePosition.desc=Hide coordinates.
+déesse.hudMenu.hotbarSwitcher=Hotbar Switcher
+déesse.hudMenu.playerList=Player List
+déesse.hudMenu.hideHud=Hide HUD
+déesse.hudMenu.chunkMap=Chunk Map
+déesse.hudMenu.paperdoll=Paper Doll
+déesse.hudMenu.showTooltip=Show Tooltip
+déesse.hudMenu.centerItemStack=Center Item Stack
+déesse.hudMenu.centerItemStack.desc=Show stack items you are holding in the center.
+déesse.hudMenu.itemIdEdit=Item Id Offset Edit
+déesse.hudMenu.itemIdEdit.desc=Show Item ID Editor to change the id of the hud renderer item.
+
+déesse.map.chunkGrid=Chunk Grid
+déesse.map.viewAround=View Around
+déesse.map.background=Background
+
+déesse.chunkViewer.none=None
+déesse.chunkViewer.chunkMiddle=Chunk Middle
+déesse.chunkViewer.chunkEdge=Chunk Edge
+déesse.chunkViewer.chunkCorner=Chunk Corner
+
+deesse.settings.showMoreSetting=Show More Options
+déesse.settings.betaDebug=Show Minecraft Beta Debug Text
+déesse.settings.forceSpectator=Force Spectator
+déesse.storage.openScreen=Open Storage Management Screen
+
+déesse.progress.tips=§l§eTIPS:
+
+déesse.effect.activeEffects=Active Effects:
+
+déesse.achievmentWarning=You can't earn achievements.
+
+déesse.about.sorry=§o§7Sorry if there is any wrong grammar. I use Translate to translate it to English.
+deesse.pack.description=Déesse UI Pack is a UI resource pack that adds new features, tweaks and UI designs to make your Minecraft gameplay better.
+deesse.pack.description2=Also i made this UI Pack based on my experience playing survival. so i know which features are useful and useless. useless features i didn't include to make the ui cleaner.
+déesse.pack.description03=Some of the features of this pack are a combination of other packs that I have made as follows:
+déesse.pack.description04=that means, this UI Pack is not compatible with the packs I mentioned above because those packs are already in this UI Pack.
+déesse.pack.description05=The following are packs that are compatible with this UI pack:
+
+déesse.pack.subpacksDesc01=§7§oYou can change subpacks in Pack Settings in Settings/Global Resources screen.
+déesse.pack.subpacksDefault=Default subpack.
+déesse.pack.subpacksFullFeatures=Adds "Quick Search" and "Move items per row" features to Chest Screen, add "Highlight Inventory Slot" feature to Inventory HUD feature, add All Music List to Music Player and add "Chunk Map" feature to Hud Menu Toggle (for touch control only), Exclude Slots feature in container and inventory screens.
+déesse.pack.subpacksPerformace=The following are the features that were removed:
+
+## It has a space at the end
+déesse.subpacks.currentUse=§o§7Currently using: 
+
+déesse.about.creator=§lCreator Info:
+
+déesse.credits.thank=Special Thanks to:
+
+déesse.screen.about=About Déesse UI
+déesse.screen.selector.about=About
+déesse.screen.selector.features=Features
+déesse.screen.selector.subpacks=Subpacks
+déesse.screen.selector.features=Features
+déesse.screen.selector.compability=Compability
+déesse.screen.selector.changelogs=Changelogs
+déesse.screen.selector.extensionPacks=Extension Packs
+déesse.screen.selector.termsOfUse=Terms Of Use
+déesse.screen.selector.credits=Credits
+déesse.screen.selector.globalVariables=Global Variables
+déesse.screen.selector.tools=Tools
+déesse.screen.selector.myBeloved=Nazuna Hiwatashi
+
+déesse.features.credits=§lCredits
+déesse.features.header=§lFeatures
+déesse.features.changelog=§lChangelog
+déesse.features.compability=§lCompability
+déesse.features.subpacks=§lSubpacks Features
+déesse.features.globalvariable=§lGlobal Variables Boolean
+
+déesse.changelog.title.effect=Effects Screen
+déesse.changelog.title.generals=Generals
+déesse.changelog.title.start=Start Screen
+déesse.changelog.title.settings=Settings Screen
+déesse.changelog.title.progress=Progress Screen
+déesse.changelog.title.hud=Hud Screen
+déesse.changelog.title.pause=Pause Screen
+déesse.changelog.title.chat=Chat Screen
+déesse.changelog.title.container=Container Screen (Inventory, Chest)
+déesse.changelog.title.tools=Tools
+
+déesse.extPacks.title=§lExtention Packs
+déesse.extPacks.installedPacks=Installed Packs:
+déesse.extPacks.emptyPackInstalled=§7§ono extension pack installed.
+déesse.extPacks.promotion=If you want to download extension packs, you can visit my Curseforge profile.
+
+déesse.compability.packs=§lPacks
+déesse.compability.devices=§lDevices
+déesse.compability.touch=- Touch 
+déesse.compability.touch.desc=This pack works well for touch control. Because the creator of the UI Pack only uses a phone to create this UI Pack, there are no main features deleted.
+déesse.compability.mouse=- Keyboard & Mouse
+déesse.compability.mouse.desc=This pack also works well with keyboard & mouse controls, as I was able to test it using a keyboard & mouse connected to my phone. The features removed are Hotbar Switcher and Chunk Map.
+déesse.compability.gamepad=- Gamepad
+déesse.compability.gamepad.desc_1=This pack also works well with gamepads/controllers, but some features have been removed due to limitations with these controls. These features are as follows:
+déesse.compability.gamepad.desc_2= §7- The ability to open Hud Menu Toggles. But you can still have the features except Night Vision and Item ID Offset Editor, you can enable/disable a feature via '_global_variables.json' file.
+déesse.compability.gamepad.desc_3= §7- Night Vision.
+déesse.compability.gamepad.desc_4= §7- Hotbar Switcher.
+déesse.compability.gamepad.desc_5= §7- Item ID Offset on Hud Screen.
+déesse.compability.gamepad.desc_6= §7- Chunk Map.
+déesse.compability.gamepad.desc_7= §7- Quit Confirmation.
+
+déesse.changelog.releaseDate=Release Date:
+déesse.changelog.minimumVersion=Minimum Minecraft version:
+
+déesse.termsOfUse.header=§lTerms Of Use
+déesse.termsOfUse.canhead=§lYou Are §aALLOWED§f To:
+déesse.termsOfUse.can01=- Modify this pack only for personal uses.
+déesse.termsOfUse.can02=- Make a review about this pack, as long as you put original download link in description (Curseforge or Mcpedl).
+déesse.termsOfUse.can03=- Customize and share your _global_variables.json configurations.
+déesse.termsOfUse.canthead=§lYou Are §cNOT ALLOWED§f To:
+déesse.termsOfUse.cant01=- Use or claim my codes from this pack without my permission.
+déesse.termsOfUse.cant02=- Distribute the modified pack to public.
+déesse.termsOfUse.cant03=- Redistribute this pack to other sites (9minecraft, modbay and etc.)
+déesse.termsOfUse.cant04=- Share links that are not from original sources (Curseforge or Mcpedl).
+
+déesse.features.information=Some features may not be written because I forgot '-')
+
+deesse.features.general.1=- Clicking sound on button now sound like in Ore-UI Button.
+deesse.features.general.2=- New animation when opening a screen.
+deesse.features.general.3=- Added subpacks for users to be able to choose ui modes more easily.
+deesse.features.general.4=- Changed the toast to be more compact and changed its animation.
+deesse.features.general.5=- Redesigned Command Block screen with Ore UI style and also added some useful features.
+deesse.features.general.6=- Redesigned Structure Block screen with Ore UI style and added new features.
+deesse.features.general.7=- Redesigned Jigsaw Block screen with Ore UI style.
+deesse.features.general.8=- Added Item ID Offset Editor to fix broken renderer items on Clock Compass renderer and fuel info due to addons.
+deesse.features.general.9=- Redesign Pack Info screen with Ore UI style.
+deesse.features.general.10=- Some changes to Emote Wheel screen.
+deesse.features.general.11=- Some changes to How To Play screen.
+deesse.features.general.12=- Redesigned Content Log Screen to be more compact and clean.
+deesse.features.general.13=- Changed server form design to be like in Ore UI.
+deesse.features.general.14=- Added search feature to Server Form screen.
+deesse.features.general.15=- Added warning when global variables error.
+deesse.features.general.16=- Added Performance Mode to subpacks. I hope this will fix slow load on low-end devices even though this UI pack is well optimized.
+
+deesse.features.hud.1=- Added a button on the Hud Screen (for touch control only) to access to the Hud Button Menu which is to activate/deactivate a feature. For the control mouse & keyboard, you need to go to the pause screen and press "hud" button which is below the left and press twice to access to the hud button menu.
+deesse.features.hud.2=- Added Debug Screen (toggleable). This adds some features such as Chunk Position, Moon Phases, Calculation of Position from Overworld to Nether and vice versa, and Minimap to see Chunk, Slime Chunk, Direction and Player Height Position in Chunk.
+deesse.features.hud.3=- Added Inventory Hud to display items in Inventory to Hud Screen (Toggleable). And this also highlights the same item as the item we hold.
+deesse.features.hud.4=- Added Hotbar Cycler Button to move the hotbar slot quickly to touch control (toggleable), this is useful for players who use large screens.
+deesse.features.hud.5=- Added Player List to see the player and Scoreboard List quickly (toggleable). For the control mouse & keyboard, you need to press "TAB" button on your keyboard to display the Player List.
+deesse.features.hud.6=- Added Night Vision (aka Brightness Overlay) to see in dark area (toggleable).
+deesse.features.hud.7=- Added F1 Button at Hud Button Menu on Touch Control to hide Hud Screen.
+deesse.features.hud.8=- Added Hide Chat button to Hud Button Menu to hide chat panel.
+deesse.features.hud.9=- Added Hide Scoreboard button on Hud Button Menu to hide scoreboard.
+deesse.features.hud.10=- Added Hide Position button to the Hud Button Menu to hide your coordinate.
+deesse.features.hud.11=- Added clock, compass and recovery compass to Hud to see information about it quickly.
+deesse.features.hud.12=- Added Items Durability Viewer. This feature shows the durability item in the form of a number on the tools that you hold.
+deesse.features.hud.13=- Added Inventory Slots Counter. This feature displays the number of slots that have been filled in in inventory player.
+deesse.features.hud.14=- Added decimal numbers to xp number to see more xp progress bar.
+deesse.features.hud.15=- Remove item description and change animationa on Item Name Text to make screen cleaner. (Java Parity)
+deesse.features.hud.16=- Showing stack count on hotbar slot while in gamemode creative. (Java Parity)
+deesse.features.hud.17=- Added Low Durability Warning when your durability tools are below 16.
+deesse.features.hud.18=- Added Advancement Popup when the day on your World have reached special days (100 day, 200 days, 300 day etc.)
+deesse.features.hud.19=- Change auto save notification to be like chat popup.
+deesse.features.hud.20=- Remove vignette renderer to make compatible with Night Vision feature.
+deesse.features.hud.21=- Added percent to boss bar.
+deesse.features.hud.22=- Added notification when the slots in the inventory are full.
+deesse.features.hud.23=- Background on Chat, Durability Viewer, Item Name, Scoreboard etc. can now be changed in-game in Settings Screen/Accessibility.
+deesse.features.hud.24=- Added Recovery Compass Button in Hud Menu to show recovery compass.
+deesse.features.hud.25=- Added a new feature to the Hud Menu Toggles, Chunk Map. This feature adds the ability to view slime chunks in your world in full screen. You can also freely move around to view the slime chunks. but this feature is only available for touch control, and need to change subpacks to 'full features' to get this feature.
+deesse.features.hud.26=- Added Center Item Counter to Hud Menu Toggles.
+deesse.features.hud.27=- Added Clock Compass to Hud Menu Toggles to show/hide Clock & Compass renderer on Hud screen.
+deesse.features.hud.28=- Added Empty Inventory Slot Counter to Hud Menu Toggles Desktop Version.
+deesse.features.hud.29=- Added Lodestone Compass Hud Panel to Hud screen! This renders lodestone compass in Hud without having to open inventory screen, the compass will only render if you have it in your inventory.
+deesse.features.hud.30=- Closed Captions (Subtitles) toggle is now always shown.
+deesse.features.hud.31=- Changed Hud Subtitle to be like in Java edition.
+
+deesse.features.pause.1=- New Pause Screen With Java & Ore-UI Design.
+deesse.features.pause.2=- Added Music Disc Player.
+deesse.features.pause.3=- Added a button to hide the whole screen to see around when the game is paused.
+deesse.features.pause.4=- Added text information in hide screen mode on Pause screen.
+
+deesse.features.chat.1=- Redesign Chat screen with Ore UI style.
+deesse.features.chat.2=- Added a calculator to calculate something quickly.
+deesse.features.chat.3=- Added Notes Screen to write something like a structure coords or material list. §okeep in mind this is only temporary, the notes will automatically disappear if you quit from world/server.
+deesse.features.chat.4=- Added Hide Chat button to chat screen to hide chat quickly rather than having to enter Chat Settings Screen then press the button.
+deesse.features.chat.5=- Added Auto Complete button to quickly complete commands.
+deesse.features.chat.6=- Added Hide Command Button to show chat when typing a command in Chat screen.
+deesse.features.chat.7=- Added Clear Chat Mode to Chat Screen.
+deesse.features.chat.8=- Added scrollable command chat. Now you can scroll commands.
+deesse.features.chat.9=- Added Custom Host Panel to chat screen! You can instantly run commands without having to type them. You can customize the commands through the config file.
+deesse.features.chat.10=- Added Custom Text Box to chat screen! When you type in this text box, your typing will not be lost when you exit the screen or send in. You must activate it first with "Switch Text Box" option.
+deesse.features.chat.11=- Added Jump to Bottom button on chat screen, to instantly jump to the bottom of messages.
+
+deesse.features.container.1=- Added Quick Items Button to almost all screen containers. This feature makes interacting with items such as moving or dropping items easier with just one click.
+deesse.features.container.2=- Added Bulk Move Item Button to Chest, Redstone and Inventory screen. This feature is to move or drop all items from chest, redstone or inventory screen with just one click.
+deesse.features.container.3=- Added Search Bar on chest screen to search for items you need. I also added Quick Search button to search for items quickly without having to type the item name.
+deesse.features.container.4=- Added Move per Row/Column button on chest screen to move items from chest or player inventory per row/column with just one click.
+deesse.features.container.5=- Added Mass Craft to inventory screen to craft items in large quantities quickly and efficiently. This feature must be enabled first in '_global_variables.json' file, it's intentionally disabled by default because only a small number of people know how to use it. (I haven't made a video tutorial about it yet)
+deesse.features.container.6=- Added Clear Crafting Recipe in crafting grid to move items from crafting grid to player inventory.
+deesse.features.container.7=- Added the ability to move the same items simultaneously on the chest screen. To use this feature, for keyboard & mouse control, you need to right click on the item you want to move, when the item is in flying mode, press one of Quick Move Button according to your needs, if the item you want to move for example is in chest, Press Quick Move button "C", and likewise for other Quick Move buttons. But for touch control, before pressing items you want to move, you need to press Drag Mode button on Quick Items button, this is so that the items you press are in flying mode.
+deesse.features.container.8=- Added Quick Craft button to stonecutter and crafting screen and added quick trade button to trade screen.
+deesse.features.container.9=- Changed trade screen to be more compact and added Instant Trade button, Search Bar and Filter Enchanted Item Trade button.
+deesse.features.container.10=- Added ability to calculate the exact amount of fuel items needed for ingredient items in furnace screen.
+deesse.features.container.11=- Added ability to calculate remaining fuel on brewing stand screen.
+deesse.features.container.12=- Added Smithing Preview Button to see armor preview and can be rotated on smithing table screen.
+deesse.features.container.13=- Fix automatically hovering over armor helmet slot when opening inventory screen.
+deesse.features.container.14=- Added highlights to items that have rarity. Each rarity has its own color depending on the rarity of the item.
+deesse.features.container.15=- Change item storage view from bundle item to number instead of bar.
+deesse.features.container.16=- Added armor & offhand slot to recipe book.
+deesse.features.container.17=- Added fuel info to all furnace screen.
+deesse.features.container.18=- Added the ability to add a new lines when naming an item on Anvil screen.
+deesse.features.container.19=- Added Move Selected Item for touch controls. Now you can move multiple items with just one click.
+deesse.features.container.20=- Now you can spam click to CRAFT ITEMS! which you couldn't do before.
+deesse.features.container.21=- Added Multiple Craft Button to crafting screen! Now you can craft multiple items with just one click, useful for crafting specific quantities. You can customize the number of crafting times with a variable.
+deesse.features.container.22=- Added Bulk Disenchant Items Button to grindstone screen! Now you can disenchant multiple items with just one click, useful for disenchanting gold swords from gold farm to get extra xp instantly.
+deesse.features.container.23=- Added new buttons to crafter screen! Enable All Slots, Disable All Slots, and Flip All Slots, which will improve your experience.
+deesse.features.container.24=- Added Unequip Armor button to inventory screen.
+deesse.features.container.25=- Added lodestone compass index to container item.
+deesse.features.container.26=- Bundle touch tooltip now moved to top right (customizable)
+deesse.features.container.27=- Added Quick craft button to stonecutter screen with Selectable items!
+deesse.features.container.28=- Added Item Move Column feature to player inventory.
+deesse.features.container.29=- Added player Xp number to enchanting screen.
+deesse.features.container.30=- Added Item Move Column feature to player inventory.
+deesse.features.container.31=- Now you can exit the screen by simply double-pressing Instant Item button after you use it.
+deesse.features.container.32=- Added Coords Saver to chat screen. now you can save your coords temporarily with just one click! useful when you find ex. structure and you don't bring book & quil to write the coords.
+deesse.features.container.33=- Added View Mode Button to inventory and chest screen (touch user only). Now you can see the hover text of an item by pressing it without selecting the item.
+deesse.features.container.34=- Added Exclude Slots feature to container and inventory screens. now you can exclude slots you don't want to touch to use the Bulk Items Button function. (Full Feature subpack)
+deesse.features.container.35=- Added Item Search Counter to chest screen. it shows the number of items along with their slots that are highlighted when searching.
+
+deesse.features.effect.1=- Mob effect screen is now changed to Dialog with Ore-UI style.
+deesse.features.effect.2=- Change effect timer in Effect screen from *m*:*s* (6:30) to *m*m, *s*s (6m, 30s)
+deesse.features.effect.3=- Added text number of active effects in Effect screen.
+deesse.features.effect.4=- Ambient effects (from beacons, conduits etc.) now have a blue outline on effects screen.
+
+deesse.features.start.1=- Change the main buttons to be like in Java Edition but with Ore-Ui Button Design.
+deesse.features.start.2=- Added additional buttons on Start screen.
+deesse.features.start.3=- Added Hide Screen button to hide screen content to see panorama clearly, you can also put your player there.
+deesse.features.start.4=- Added option to show background for skin viewer on start screen.
+
+deesse.features.settings.1=- Redesigned settings screen with Ore UI theme.
+deesse.features.settings.2=- Added a new Storage Management screen to Settings screen with useful features like search and auto-select all to better manage your storage.
+deesse.features.settings.3=- Added search settings to the settings screen for faster search options. You can also search faster using the Quick Search feature.
+deesse.features.settings.4=- Added Quick Settings Section to speed up access to several settings such as Camera Perspective, FOV, Game Mode, and Graphics Mode.
+deesse.features.settings.5=- Added Force Spectator button to World Section.
+deesse.features.settings.6=- Added Language Section while in game for faster access.
+deesse.features.settings.7=- Added Seed World Copy and Content Log Button in Quick Settings.
+deesse.features.settings.8=- Added an option to hide Minecraft beta debug screen to quick settings.
+deesse.features.settings.9=- Added Dwell Time Before Dragging and Stack Splitting Time options to quick settings.
+deesse.features.settings.10=- Improved pack selector by adding search bar and changing the toggle to top tab button.
+
+deesse.features.progress.1=- Changing the screen to be cleaner by removing the panel dialog and changing the size of the "Minecraft" logo to be smaller.
+deesse.features.progress.2=- Changing progress bar to square and add percent progress similar to Java Edition.
+deesse.features.progress.3=- Delete screen background while entering a dimension (Overworld, Nether and the End) to see around while waiting to load terrain.
+deesse.features.progress.4=- Redesigned Modal Progress Screen to be cleaner.
+
+deesse.features.tools.1=- QR Code Generator. now you can generate QR Codes via Minecraft! (it's kind of pointless but it's cool xd)
+deesse.features.tools.2=- Texture Renderer. Now you can display a texture by typing its path in game! This may be useful for users who want to debug textures.
+deesse.features.tools.3=- Item Renderer. Now you can see all items in the game along with item id & aux item id! This is useful for users who want to see items with their id easily.
+deesse.features.tools.4=- Minimap Renderer. Now you can see minimap in your world or server!
+deesse.features.tools.5=- Smihting Armor Preview. Now you can easily try out armor, trim, and dye combinations without having to go into creative mode. You can also access it from smithing table.
+deesse.features.tools.6=- Banner Pattern Editor. Now you can try editing banner pattern as you like very easily without having to go into creative mode. You can also access it from loom.
+deesse.features.tools.7=- Chunk Map. This tool helps you find slime chunks in your world.
+deesse.features.tools.8=- Easing Animation. This tool helps you view all easing animations.
+deesse.features.tools.9=- Note Block. Now you can play note block piano without using in-game note block.
+deesse.features.tools.10=- Color Preview. Now you can experiment with coloring leather armors complete with hex, RGB and numeric colors.
+
+deesse.changelog.v100.1=- §oInitial release
+
+deesse.changelog.v110.36=- Added notification when the slots in the inventory are full.
+deesse.changelog.v110.1=- Redesigned settings screen with Ore UI theme.
+deesse.changelog.v110.2=- Redesigned Modal Progress Screen to be better and cleaner.
+deesse.changelog.v110.3=- Changed server form design to be like in Ore UI.
+deesse.changelog.v110.4=- Changed Storage Management settings to be more compact and clean.
+deesse.changelog.v110.5=- Redesigned Content Log Screen to be more compact and clean.
+deesse.changelog.v110.6=- Added search settings to the settings screen for faster search options. You can also search more faster using Quick Search feature.
+deesse.changelog.v110.7=- Some features have been moved to the "Full Features" subpack due to performance issues. To learn more about the features that have been moved, you can see on About Déesse UI screen.
+deesse.changelog.v110.8=- Added bulk move item button to redstone screen.
+deesse.changelog.v110.9=- Added new music disc "Lava Chicken" to music player.
+deesse.changelog.v110.10=- Added animation when using "Night Vision" feature.
+deesse.changelog.v110.11=- Added brewing guide to brewing stand screen.
+deesse.changelog.v110.12=- Added fuel info to all furnace screen.
+deesse.changelog.v110.13=- Added search feature to Server Form screen.
+deesse.changelog.v110.14=- Added information when hide hud on touch control.
+deesse.changelog.v110.15=- Added Recovery Compass Button in Hud Menu to show recovery compass.
+deesse.changelog.v110.16=- Added Hide Command Button to show chat when typing a command in Chat screen.
+deesse.changelog.v110.17=- Added Show Coordinate Button to show coordinates on chat screen.
+deesse.changelog.v110.18=- Added Seed World Copy and Content Log Button in Quick Settings.
+deesse.changelog.v110.19=- Added compatibility with controllers. but some features are not available due to limitations.
+deesse.changelog.v110.20=- Now HUD screen no longer renders when it is overlaid by another screen. But you can restore it on "_global_variables.json".
+deesse.changelog.v110.21=- Changed the toast to be more compact and changed its animation.
+deesse.changelog.v110.22=- Change animation when opening a screen.
+deesse.changelog.v110.23=- Change the size of the quit confirmation dialog.
+deesse.changelog.v110.24=- Move how to play section to the bottom at Settings Screen.
+deesse.changelog.v110.25=- Fix Placeholder Text.
+deesse.changelog.v110.26=- Fix some music discs not being able to be searched in the music player.
+deesse.changelog.v110.27=- Fixed some issues with Hud Menu for non-touch users.
+deesse.changelog.v110.28=- Now you can exit from Hud Menu using "ESC" key.
+deesse.changelog.v110.29=- Changed some elements on bulk move feature.
+deesse.changelog.v110.30=- Improved Bulk Move Item feature to be more stable.
+deesse.changelog.v110.31=- Removed "Item Rarity Highlight" feature by default to fix a compatibility issue. However, you can still restore it by changing the value of '$deesse:show_rarity_highlight' to 'true' in the "_global_variables.json" file.
+deesse.changelog.v110.32=- Fixed marketplace button on start screen.
+deesse.changelog.v110.33=- Fixed elements on the Hud Screen being pressed while on another screen overlapping the Hud screen on touch controls.
+deesse.changelog.v110.34=- Pause toggle option can now be seen in pregame.
+deesse.changelog.v110.35=- Fix minor bugs and optimized codes.
+
+deesse.changelog.v111.1=- Fix text not appearing on Server Form screen.
+deesse.changelog.v111.2=- Remove weird black background on the right of the screen on Hud screen.
+deesse.changelog.v111.3=- Fix realms button offset on Pause screen.
+deesse.changelog.v111.4=- Temporarily removed Hide Command Button on Chat screen. I hope this fixes not being able to type chat on xbox.
+deesse.changelog.v111.5=- Added a warning to Hud Menu button for touch control on Pause screen.
+
+deesse.changelog.v1115.1=- Change minimum Minecraft version to 1.21.100
+deesse.changelog.v1115.2=- Fix some content log errors.
+deesse.changelog.v1115.3=- Remove paddings/gaps on selector settings screen.
+deesse.changelog.v1115.4=- Change the design of the realms progress screen to be like the others.
+deesse.changelog.v1115.5=- Optimized some code in hud screen.
+
+deesse.changelog.v120.1=- Redesigned Command Block screen with Ore UI style and also added some useful features.
+deesse.changelog.v120.2=- Redesigned Structure Block screen with Ore UI style and added new features.
+deesse.changelog.v120.3=- Redesigned Jigsaw Block screen with Ore UI style.
+deesse.changelog.v120.4=- Added Item ID Offset Editor to fix broken renderer items on Clock Compass renderer and fuel info due to addons.
+deesse.changelog.v120.5=- Redesign Pack Info screen with Ore UI style.
+deesse.changelog.v120.6=- Some changes to Emote Wheel screen.
+deesse.changelog.v120.7=- Some changes to How To Play screen.
+deesse.changelog.v120.8=- Remove Player Direction feature and made it a separate pack to fix compatibility issues.
+deesse.changelog.v120.9=- Remove Quit Confirmation for gamepad/controller users.
+deesse.changelog.v120.10=- Rewrite all codes to be more efficient and improve performance.
+deesse.changelog.v120.11=- Added text information in hide screen mode on Pause screen.
+deesse.changelog.v120.12=- Added additional buttons on Start screen.
+deesse.changelog.v120.13=- Added Hide Screen button to hide screen content to see panorama clearly, you can also put your player there.
+deesse.changelog.v120.14=- Added pages to Temporary Notes.
+deesse.changelog.v120.15=- Fix Xbox users not being able to type chats in Chat screen.
+deesse.changelog.v120.16=- Redesign Chat screen with Ore UI style.
+deesse.changelog.v120.17=- Added Clear Chat Mode to Chat Screen.
+deesse.changelog.v120.18=- Overhauled Settings Screen, now more similar to Ore UI style.
+deesse.changelog.v120.19=- Simplified Force Spectator toggle, now you just need to press the toggle to change to spectator mode instead of having to press the toggle and button.
+deesse.changelog.v120.20=- Added a new Storage Management screen to Settings screen with useful features like search and auto-select all to better manage your storage.
+deesse.changelog.v120.21=- Added the ability to add a new lines when naming an item on Anvil screen.
+deesse.changelog.v120.22=- Added Move Selected Item for touch controls. Now you can move multiple items with just one click.
+deesse.changelog.v120.23=- Fix Item Rarity Viewer appearing in Recipe Book even when it was not activated.
+deesse.changelog.v120.24=- Quick Items button now works on Recipe Book.
+deesse.changelog.v120.25=- Remove Item Tooltip Display due to a very strange bug.
+deesse.changelog.v120.26=- Change effect timer in Effect screen from *m*:*s* (6:30) to *m*m, *s*s (6m, 30s)
+deesse.changelog.v120.27=- Added text number of active effects in Effect screen.
+deesse.changelog.v120.28=- Overhaul Déesse UI screen with Ore UI Style.
+deesse.changelog.v120.29=- Added section 'Extension Packs' and 'Term of Use' to Déesse UI screen.
+deesse.changelog.v120.30=- Remove 'Global Variables' Section in Déesse UI screen.
+deesse.changelog.v120.31=- Remove text on Low Durability Warning and only leaves durability numbers to make it cleaner.
+deesse.changelog.v120.32=- Added a new feature to the Hud Menu Toggles, Chunk Map. This feature adds the ability to view slime chunks in your world in full screen. You can also freely move around to view the slime chunks. but this feature is only available for touch control, and need to change subpacks to 'full features' to get this feature.
+deesse.changelog.v120.33=- Improve Hud Menu Toggles for touch and desktop versions.
+deesse.changelog.v120.34=- Remove Empty Inventory Slot Counter on touch control as it is already available on Debug Screen.
+deesse.changelog.v120.35=- Added Center Item Counter to Hud Menu Toggles.
+deesse.changelog.v120.36=- Added more information to Debug Screen.
+deesse.changelog.v120.37=- Added Clock Compass to Hud Menu Toggles to show/hide Clock & Compass renderer on Hud screen.
+deesse.changelog.v120.38=- Added Empty Inventory Slot Counter to Hud Menu Toggles Desktop Version.
+deesse.changelog.v120.39=- Remove a text warning while activating the 'Hide Coordinates' feature in Hud screen.
+deesse.changelog.v120.40=- Added Increase and Decrease buttons for Night Vision on Hud screen.
+
+deesse.changelog.v121.1=- Added Tools section to About UI screen. This adds QR Code Generator, Minimap Renderer, Texture Renderer, and Item Renderer.
+deesse.changelog.v121.2=- Added Item Tooltip Display back to Chest screen.
+deesse.changelog.v121.3=- Improved Ore UI style on Settings screen.
+deesse.changelog.v121.4=- Fix force spectator option.
+deesse.changelog.v121.5=- Fix stack button offset error on Start screen.
+deesse.changelog.v121.6=- Fix coordinates text showing when disabled on Chat screen.
+deesse.changelog.v121.7=- Fix other minor bugs.
+deesse.changelog.v121.8=- Remove Drag Mode in Quick Items as it was pretty useless.
+deesse.changelog.v121.9=- Added warning when global variables error.
+
+deesse.changelog.v1215.1=- Added Performance Mode to subpacks. I hope this will fix slow load on low-end devices even though this UI pack is well optimized.
+deesse.changelog.v1215.2=- Added back Drag Mode in Quick Items feature but only on chest screen.
+deesse.changelog.v1215.3=- New display when hover button & slider.
+deesse.changelog.v1215.4=- Overhaul world management in game section and add world location to it.
+deesse.changelog.v1215.5=- Change the position of Hotbar Cycler 1 pixel up.
+deesse.changelog.v1215.6=- Moved Instant Items Button and Search Button more to the center.
+deesse.changelog.v1215.7=- Changed animation when opening/closing container screen back to vanilla.
+deesse.changelog.v1215.8=- Fix a bug in Search Option feature.
+deesse.changelog.v1215.9=- Fix command text layer issue on chat screen.
+deesse.changelog.v1215.10=- Fix form server size issue when installing addons that change form server size.
+deesse.changelog.v1215.11=- Fix the position of texts on the HUD screen in the latest Minecraft update (v1.21.111).
+deesse.changelog.v1215.12=- Fix an issue for Windows users where they couldn't open About UI screen but instead opened buy game screen.
+deesse.changelog.v1215.13=- Fix Outside Button Mode in Night Vision (Brightness Overlay) feature not disappearing when Hide HUD is enabled.
+
+deesse.changelog.v125.1=- New Feature! Smithing Armor Viewer/Trim Armor Viewer. Now you can easily try out armor, trim, and dye combinations without having to go into creative mode. You can access it from smithing table or in About UI/Tools/Smithing Armor Preview.
+deesse.changelog.v125.2=- New Feature! Banner Pattern Editor. Now you can try editing banner pattern as you like very easily without having to go into creative mode. You can access it from loom or in About UI/Tools/Banner Pattern Editor.
+deesse.changelog.v125.3=- Optimized quick items with factory method. This makes load container screen & inventory screen smoother & faster.
+deesse.changelog.v125.4=- Added zoom & offset settings to Minimap Renderer.
+deesse.changelog.v125.5=- Added hover text to view item id & item id aux on items in tools/item renderer.
+deesse.changelog.v125.6=- Added animation when open a tool from Tools section.
+deesse.changelog.v125.7=- Added friend drawer to pause screen.
+deesse.changelog.v125.8=- Added scrollable command chat. Now you can scroll commands.
+deesse.changelog.v125.9=- Added gathering button on start screen.
+deesse.changelog.v125.10=- Improve radio button on settings screen.
+deesse.changelog.v125.11=- Improve skin viewer in hide screen mode on start screen.
+deesse.changelog.v125.12=- Fix drop one mode not working on Quick Items.
+deesse.changelog.v125.13=- New animation when open/close container screen.
+deesse.changelog.v125.14=- Removed flash when screenshot in-game.
+
+deesse.changelog.v126.1=- Added Ward music disc to Music Disc Player.
+deesse.changelog.v126.2=- Updated Item Id which was messed up due to Minecraft update. This fixes the clock, compass, banner, and armor trim turning into other items.
+deesse.changelog.v126.3=- Changed quick craft button on crafting screen to one press to craft rather than twice.
+deesse.changelog.v126.4=- Remove Spacings/gaps in video section on settings screen.
+deesse.changelog.v126.5=- Fix duplicate book panels on book screen.
+deesse.changelog.v126.6=- Fix nametag offset in skin viewer on pause screen.
+deesse.changelog.v126.7=- Fix not being able to use Vibrant Visual even though the device supports it.
+deesse.changelog.v126.8=- Remove text entity ID on horse screen.
+deesse.changelog.v126.9=- Remove friends drawer button in player list on pause screen.
+
+deesse.changelog.v127.1=- ALL Songs available in Minecraft can now be played with Music Player! (Full Features subpack only)
+deesse.changelog.v127.2=- Now you can spam click to CRAFT ITEMS! which you couldn't do before.
+deesse.changelog.v127.3=- Added Multiple Craft Button to crafting screen! Now you can craft multiple items with just one click, useful for crafting specific quantities. You can customize the number of crafting times with a variable.
+deesse.changelog.v127.4=- Added Bulk Disenchant Items Button to grindstone screen! Now you can disenchant multiple items with just one click, useful for disenchanting gold swords from gold farm to get extra xp instantly.
+deesse.changelog.v127.5=- Added strength potion to Brewing Stand Guide.
+deesse.changelog.v127.6=- Minimap Renderer position can now be customized with variables!
+deesse.changelog.v127.7=- When in auto place mode, items that have been enchanted will immediately move to inventory from input slot on enchanting table screen.
+deesse.changelog.v127.8=- Added vsync option to video section.
+deesse.changelog.v127.9=- Updated Item Id which was messed up due to Minecraft update.
+deesse.changelog.v127.10=- Removed bottom buttons when in full screen mode in structure screen.
+deesse.changelog.v127.11=- Fix calculator on chat screen not working.
+deesse.changelog.v127.12=- Fix xp point calculator not working.
+deesse.changelog.v127.13=- Fix drop button not working in performance mode.
+deesse.changelog.v127.14=- Changed sign screen animation.
+
+deesse.changelog.v128.1=- Added Lodestone Compass Hud Panel to Hud screen! This renders lodestone compass in Hud without having to open inventory screen, the compass will only render if you have it in your inventory. (Full Features subpack only)
+deesse.changelog.v128.2=- Added new buttons to crafter screen! Enable All Slots, Disable All Slots, and Flip All Slots, which will improve your experience.
+deesse.changelog.v128.3=- Added Unequip Armor button to inventory screen.
+deesse.changelog.v128.4=- Added lodestone compass index to container item.
+deesse.changelog.v128.5=- Added Quick Items and Instant Items Button to horse screen.
+deesse.changelog.v128.6=- Changed Inventory HUD toggle in Hud Menu Toggles to disabled by default.
+deesse.changelog.v128.7=- Added variable to change Hud Menu Toggles Button on touch control to match the Top Button size in your Minecraft.
+deesse.changelog.v128.8=- Added variable to disable Player List feature.
+deesse.changelog.v128.9=- Added icons to Instant Items Button.
+deesse.changelog.v128.10=- Improved Skin Viewer on start screen.
+deesse.changelog.v128.11=- Improved Quick Container code, this makes opening container screen smoother.
+deesse.changelog.v128.12=- Move bundle touch tooltip to top right (customizable)
+deesse.changelog.v128.13=- Changed the color of bundle item count to yellow.
+deesse.changelog.v128.14=- Changed 'release' button volume to 0.7
+deesse.changelog.v128.15=- Fixed message list not being able to scroll when using controller in chat screen.
+deesse.changelog.v128.16=- Hotbar Switcher now supports two inputs.
+deesse.changelog.v128.17=- Removed click sound when show/hide Player List with key button.
+deesse.changelog.v128.18=- Removed cursor gamepad when using a controller in About Ui screen because why did I add it for no reason ;-;
+deesse.changelog.v128.19=- Changed progress screen to be like ore ui design.
+
+deesse.changelog.v130.1=- Minimap Renderer Tool now supports custom positions! You can render the area around the player anywhere*.
+deesse.changelog.v130.2=- Added new tool! Note Block. Now you can play note block piano without using in-game note block.
+deesse.changelog.v130.3=- Added new tool! Chunk Map. This tool helps you find slime chunks in your world.
+deesse.changelog.v130.4=- Added new tool! Easing Animation. This tool helps you view all easing animations.
+deesse.changelog.v130.5=- Added Quick craft button to stonecutter screen with Selectable items!
+deesse.changelog.v130.6=- Added Custom Host Panel to chat screen! You can instantly run commands without having to type them. You can customize the commands through the config file.
+deesse.changelog.v130.7=- Added Custom Text Box to chat screen! When you type in this text box, your typing will not be lost when you exit the screen or send in. You must activate it first with "Switch Text Box" option.
+deesse.changelog.v130.8=- Added Jump to Bottom button on chat screen, to instantly jump to the bottom of messages.
+deesse.changelog.v130.9=- Added Multiple Craft button to player inventory.
+deesse.changelog.v130.10=- Added an option to hide Minecraft beta debug screen to quick settings.
+deesse.changelog.v130.11=- Added Dwell Time Before Dragging and Stack Splitting Time options to quick settings.
+deesse.changelog.v130.12=- Added option to show background for skin viewer on start screen.
+deesse.changelog.v130.13=- Added Item Move Column feature to player inventory.
+deesse.changelog.v130.14=- Added player Xp number to enchanting screen.
+deesse.changelog.v130.15=- Item Renderer tool can now render items from id -1300 to id 1300
+deesse.changelog.v130.16=- Now you can exit the screen by simply double-pressing Instant Item button after you use it.
+deesse.changelog.v130.17=- Player list for keyboard users now just need to press/hover Tab key to show it instead of toggling it.
+deesse.changelog.v130.18=- Improved pack selector by adding search bar and changing the toggle to top tab button.
+deesse.changelog.v130.19=- Improved trade screen code, this fixes crashes for some devices.
+deesse.changelog.v130.20=- Added weakness potion to brewing guide.
+deesse.changelog.v130.21=- Fixed brewing guide broken when using Transparent Ui Pack.
+deesse.changelog.v130.22=- Moved touch tooltip bundle back to the default position (bottom middle)
+deesse.changelog.v130.23=- Changed the size of Hud Menu button for touch control in Hud to be like the previous version.
+deesse.changelog.v130.24=- Changed the "Show Background Chat" option to a toggle instead of a slider (kinda)
+deesse.changelog.v130.25=- Fixed minor bugs and made minor changes.
+
+deesse.changelog.v131.1=- Minecraft 26.0 Support.
+deesse.changelog.v131.2=- Added Coords Saver to chat screen. now you can save your coords temporarily with just one click! useful when you find ex. structure and you don't bring book & quil to write the coords.
+deesse.changelog.v131.3=- Added View Mode Button to inventory and chest screen (touch user only). Now you can see the hover text of an item by pressing it without selecting the item.
+deesse.changelog.v131.4=- Added Exclude Slots feature to container and inventory screens. now you can exclude slots you don't want to touch to use the Bulk Items Button function. (Full Feature subpack)
+deesse.changelog.v131.5=- Added Item Search Counter to chest screen. it shows the number of items along with their slots that are highlighted when searching.
+deesse.changelog.v131.6=- Added another useless tool, Color Preview! Now you can experiment with coloring leather armors complete with hex, RGB and numeric colors.
+deesse.changelog.v131.7=- Custom Host Panel is now hidden if Vanilla host panel is shown.
+deesse.changelog.v131.8=- Ambient effects (from beacons, conduits etc.) now have a blue outline on effects screen.
+deesse.changelog.v131.9=- Closed Captions (Subtitles) toggle is now always shown.
+deesse.changelog.v131.10=- Changed Hud Subtitle to be like in Java edition.
+deesse.changelog.v131.11=- Text input from search bar is now automatically cleared when exiting screen or hiding the search bar.
+deesse.changelog.v131.12=- Fixed misplaced piano tiles in Piano Note Block tool.
+deesse.changelog.v131.13=- Music player now uses the factory method for display it.
+deesse.changelog.v131.14=- Removed feature pages in Temporary Notes.
+deesse.changelog.v131.15=- Change background color of highlighted items to be more transparent (0.2)
+deesse.changelog.v131.16=- Fix missing macro command text box in settings screen.
+deesse.changelog.v131.17=- Fix errors and minor bugs from the latest Minecraft update.
+
+déesse.globalvariable.warning=Due to limitations of JSON UI, you cannot edit variables in-game. You can only edit them in the '_global_variables.json'.
+
+déesse.nazunaInformation=   §lNazuna Hiwatashi§r§f is the tritagonist in the §oBNA: Brand New Animal§r series. She was formerly a high school student and is the best friend of Michiru Kagemori. As the former second Ginrou, she was once the guru §lDéesse Louve§r of the §lSilver Wolf Order§r.

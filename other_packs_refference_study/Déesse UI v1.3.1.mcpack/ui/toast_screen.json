@@ -1,0 +1,57 @@
+{
+	"popup_anim": {
+		"easing": "out_quart"
+	},
+	"key_art_image": {
+		"size": [
+			32,
+			18
+		],
+		"$icon_size": [
+			32,
+			18
+		]
+	},
+	"toast_image": {
+		"size": [
+			18,
+			18
+		]
+	},
+	"persona_icon": {
+		"size": [
+			32,
+			18
+		]
+	},
+	"resource_pack_icon": {
+		"size": [
+			18,
+			18
+		],
+		"$icon_size": [
+			"100%",
+			"100%"
+		]
+	},
+	"toast_screen_content": {
+		"clips_children": false
+	},
+	"popup/background": {
+		"size": [
+			"100%sm + 16px",
+			"100%sm + 16px"
+		]
+	},
+	"popup": {
+		"modifications": [
+			{
+				"control_name": "popup_content",
+				"operation": "replace",
+				"value": {
+					"popup_content@déesse_popup.popup_content": {}
+				}
+			}
+		]
+	}
+}

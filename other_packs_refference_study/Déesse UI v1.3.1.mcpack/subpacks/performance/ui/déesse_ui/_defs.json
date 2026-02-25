@@ -1,0 +1,9 @@
+{
+	"file_signature": "Itzriyo157",
+	"namespace": "déesse_defs",
+	"variables": {
+		"$subpack_mode": 3,
+		"$is_full_feature_mode": false,
+		"$is_performance_mode": true
+	}
+}

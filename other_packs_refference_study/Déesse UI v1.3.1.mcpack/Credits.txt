@@ -1,0 +1,12 @@
+Special Thanks to:
+
+@tlgm2308 (https://x.com/tlgm2308):
+  Some inspirations content and smithing armor preview idea.
+@Dimzcraft (https://www.curseforge.com/members/dimz404):
+  Chunk viewer and durability item text code.
+@T1M0THY (https://youtube.com/@t1m0thyyt):
+  Toggle Night Vision (https://www.curseforge.com/minecraft-bedrock/texture-packs/toggle-night-vision)
+The Andromedarius (https://mcpedl.com/user/the-andromedarius/):
+  Dynamic Day Counter Idea.
+drav0011 (https://bedrocktweaks.net/):
+  Auto Complete Chat Buttons.

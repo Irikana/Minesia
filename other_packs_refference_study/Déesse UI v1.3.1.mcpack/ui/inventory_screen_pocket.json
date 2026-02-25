@@ -1,0 +1,47 @@
+{
+	"hotbar_panel": {
+		"modifications": [
+			{
+				"array_name": "controls",
+				"operation": "insert_front",
+				"value": [
+					{
+						"quick_items_hotbar_panel@déesse_QCPocket.quick_items_hotbar_panel": {}
+					},
+					{
+						"quick_bulk_items_panel@déesse_QCPocket.quick_bulk_items_inv_hotbar_panel": {}
+					}
+				]
+			}
+		]
+	},
+	"survival_panel_crafting_pocket": {
+		"modifications": [
+			{
+				"array_name": "controls",
+				"operation": "insert_front",
+				"value": {
+					"inventory_stacked_button_panel@déesse_QCPocket.inventory_stacked_button_panel": {}
+				}
+			}
+		]
+	},
+	"survival_panel_pocket": {
+		"$is_crafting_grid_2x2": true,
+		"modifications": [
+			{
+				"array_name": "controls",
+				"operation": "insert_front",
+				"value": {
+					"inventory_stacked_button_panel@déesse_QCPocket.inventory_stacked_button_panel": {}
+				}
+			}
+		]
+	},
+	"crafting_screen_pocket": {
+		"$is_inventory_screen": true
+	},
+	"inventory_screen_pocket": {
+		"$is_inventory_screen": true
+	}
+}

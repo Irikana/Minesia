@@ -1,0 +1,27 @@
+{
+	"list": {
+	  //- Quick Search
+    // These are the display name for Quick Search Item buttons.
+    "$name_display_01": "Log",
+    "$name_display_02": "Planks",
+    "$name_display_03": "Diamond",
+    "$name_display_04": "Potion",
+    "$name_display_05": "Book",
+    "$name_display_06": "Shulker",
+    "$name_display_07": "Ingot",
+    "$name_display_08": "Totem",
+    // These are where you can put item/block name for Quick Search Item you want to be selected.
+    // Use language according to the language in your Minecraft!
+    // Example: the language in my Minecraft is Indonesian, so "$text_box_input_name_01": "Beliung Berlian"
+    "$text_box_input_name_01": "Log",
+    "$text_box_input_name_02": "Plank",
+    "$text_box_input_name_03": "Diamond",
+    "$text_box_input_name_04": "Potion",
+    "$text_box_input_name_05": "Enchanted Book",
+    "$text_box_input_name_06": "Shulker Box",
+    "$text_box_input_name_07": "Ingot",
+    "$text_box_input_name_08": "Totem"
+	},
+	"file_signature": "Itzriyo157",
+	"namespace": "déesse_musicPlayerList"
+}
