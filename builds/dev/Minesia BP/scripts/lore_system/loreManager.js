@@ -32,6 +32,7 @@ const MINESIA_LORE_MARKERS = [
     "比较少见的普通货币", "A somewhat uncommon currency",
     "较为珍贵的货币", "A fairly precious currency",
     "非常宝贵的珍贵货币", "A very precious currency",
+    "极其稀有的顶级货币", "An extremely rare top-tier currency",
     "非法货币", "Illegal currency",
     "体力消耗", "Stamina Cost",
     "攻击时使目标着火", "Sets target on fire",

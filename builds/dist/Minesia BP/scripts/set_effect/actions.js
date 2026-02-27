@@ -5,10 +5,10 @@
 // ===============================
 
 import { system } from "@minecraft/server";
+import { updateHealthBoost } from "./healthBoostManager.js";
 
 export const CONTROLLED_EFFECTS = [
   "strength",
-  "health_boost",
   "resistance",
   "speed",
   "jump_boost",
@@ -32,8 +32,6 @@ export const CONTROLLED_TAGS = [
 const playerEffects = new Map();
 
 export const playerAttributes = new Map();
-
-const BASE_PLAYER_HEALTH = 20;
 
 export function applyLevelHealthBonus(player, healthBonus) {
   const playerId = player.id;
@@ -179,21 +177,7 @@ function updatePlayerAttributes(player, currentAttributes) {
     const levelHealth = currentAttributes.get("level_health") || 0;
     const healthPercent = currentAttributes.get("health_percent") || 0;
 
-    const baseHealth = BASE_PLAYER_HEALTH;
-
-    const percentBonus = Math.floor(baseHealth * (healthPercent / 100));
-
-    const totalHealthBonus = equipmentHealth + levelHealth + percentBonus;
-
-    const healthBoostLevel = Math.max(0, Math.floor(totalHealthBonus / 4));
-
-    if (healthBoostLevel > 0) {
-      const amplifier = healthBoostLevel - 1;
-      player.addEffect("minecraft:health_boost", 10, {
-        amplifier: amplifier,
-        showParticles: false
-      });
-    }
+    updateHealthBoost(player, equipmentHealth, levelHealth, healthPercent);
   } catch (error) {
     console.error("更新玩家属性时出错:", error);
   }

@@ -33,7 +33,12 @@ export function registerExtraLoreHandler() {
             const locale = context.locale || "zh_CN";
             const extraText = config.extraLore[locale] || config.extraLore.zh_CN;
 
-            return [`§r§7${extraText}`];
+            const currentLore = context.currentLore || [];
+            if (currentLore.some(line => line.includes(extraText))) {
+                return null;
+            }
+
+            return ["", `§r§7${extraText}`];
         }
     });
 

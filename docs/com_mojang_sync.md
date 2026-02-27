@@ -8,8 +8,10 @@
 
 | 项目目录 | com.mojang 目录 |
 |---------|----------------|
-| `G:\PClite\MCBE addonsP\bridge\projects\Minesia\BP` | `C:\Users\Administrator\AppData\Roaming\Minecraft Bedrock\Users\Shared\games\com.mojang\development_behavior_packs\BP` |
-| `G:\PClite\MCBE addonsP\bridge\projects\Minesia\RP` | `C:\Users\Administrator\AppData\Roaming\Minecraft Bedrock\Users\Shared\games\com.mojang\development_resource_packs\RP` |
+| `G:\PClite\mcbe_addons_p\bridge\projects\Minesia\BP` | `C:\Users\Administrator\AppData\Roaming\Minecraft Bedrock\Users\Shared\games\com.mojang\development_behavior_packs\BP` |
+| `G:\PClite\mcbe_addons_p\bridge\projects\Minesia\RP` | `C:\Users\Administrator\AppData\Roaming\Minecraft Bedrock\Users\Shared\games\com.mojang\development_resource_packs\RP` |
+| `G:\PClite\mcbe_addons_p\bridge\projects\Minesia\BP` | `G:\PClite\LeviMC\versions\1.26.2.01\Minecraft Bedrock\Users\Shared\games\com.mojang\development_behavior_packs\BP` |
+| `G:\PClite\mcbe_addons_p\bridge\projects\Minesia\RP` | `G:\PClite\LeviMC\versions\1.26.2.01\Minecraft Bedrock\Users\Shared\games\com.mojang\development_resource_packs\RP` |
 
 ## 工作流程
 
@@ -47,6 +49,8 @@
 # 删除符号链接（不会删除源文件）
 Remove-Item "C:\Users\Administrator\AppData\Roaming\Minecraft Bedrock\Users\Shared\games\com.mojang\development_behavior_packs\BP"
 Remove-Item "C:\Users\Administrator\AppData\Roaming\Minecraft Bedrock\Users\Shared\games\com.mojang\development_resource_packs\RP"
+Remove-Item "G:\PClite\LeviMC\versions\1.26.2.01\Minecraft Bedrock\Users\Shared\games\com.mojang\development_behavior_packs\BP"
+Remove-Item "G:\PClite\LeviMC\versions\1.26.2.01\Minecraft Bedrock\Users\Shared\games\com.mojang\development_resource_packs\RP"
 ```
 
 **注意：**

@@ -24,7 +24,7 @@ export const EXTRA_LORE_CONFIG = {
         extraLore: { zh_CN: "非法货币。", en_US: "An illegal currency." }
     },
     "minesia:diamond_coin": {
-        extraLore: { zh_CN: "非法货币。", en_US: "An illegal currency." }
+        extraLore: { zh_CN: "极其稀有的顶级货币。", en_US: "An extremely rare top-tier currency." }
     },
     "minesia:toy_sword": {
         extraLore: { zh_CN: "这把剑看起来像是个玩具。", en_US: "This sword looks like a toy." }

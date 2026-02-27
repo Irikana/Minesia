@@ -32,12 +32,18 @@ export function registerCustomEventLoreHandler() {
             if (!config) return null;
 
             const locale = context.locale || "zh_CN";
+            const currentLore = context.currentLore || [];
+
             const loreLines = [""];
 
             for (const effect of config.effects) {
                 const effectText = effect[locale] || effect.zh_CN;
-                loreLines.push(`§r§9${effectText}`);
+                if (!currentLore.some(line => line.includes(effectText))) {
+                    loreLines.push(`§r§9${effectText}`);
+                }
             }
+
+            if (loreLines.length === 1) return null;
 
             return loreLines;
         }

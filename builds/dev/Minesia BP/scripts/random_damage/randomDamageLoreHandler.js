@@ -47,11 +47,22 @@ export function registerRandomDamageLoreHandler() {
             const damageRange = formatDamageRange(config.minDamage, config.maxDamage);
             const staminaCost = getWeaponStaminaCost(itemStack.typeId);
 
-            return [
-                "",
-                `${LORE_COLOR}+${damageRange} ${loreText.attackDamage}`,
-                `${STAMINA_COLOR}+${staminaCost} ${staminaLoreText.staminaCost}`
-            ];
+            const currentLore = context.currentLore || [];
+            const loreLines = [""];
+
+            const damageLore = `${LORE_COLOR}+${damageRange} ${loreText.attackDamage}`;
+            const staminaLore = `${STAMINA_COLOR}+${staminaCost} ${staminaLoreText.staminaCost}`;
+
+            if (!currentLore.some(line => line === damageLore)) {
+                loreLines.push(damageLore);
+            }
+            if (!currentLore.some(line => line === staminaLore)) {
+                loreLines.push(staminaLore);
+            }
+
+            if (loreLines.length === 1) return null;
+
+            return loreLines;
         }
     });
 

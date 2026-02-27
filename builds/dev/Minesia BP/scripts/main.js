@@ -16,6 +16,7 @@ import { initializeDamageDisplaySystem } from "./damage_display/damageDisplayMai
 import { initializeStaminaSystem, updateStaminaSystem } from "./stamina/staminaMain.js";
 import { processStaminaSetEffects } from "./stamina/staminaSetEffectAdapter.js";
 import { processItemEffects } from "./custom_events/index.js";
+import { initHealthBoostManager } from "./set_effect/healthBoostManager.js";
 
 const LANGUAGE_OBJECTIVE = 'minesia_language';
 
@@ -140,6 +141,9 @@ system.runTimeout(() => {
 
         initializeStaminaSystem();
         console.log('[Minesia] ✓ 体力值系统就绪');
+
+        initHealthBoostManager();
+        console.log('[Minesia] ✓ 生命提升管理器就绪');
 
         systemReady = true;
         console.log('[Minesia] 🎉 核心系统初始化完成!');

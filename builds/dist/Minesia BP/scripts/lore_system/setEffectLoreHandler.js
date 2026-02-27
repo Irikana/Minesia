@@ -40,22 +40,31 @@ export function registerSetEffectLoreHandler() {
             if (!config) return null;
 
             const locale = context.locale || "zh_CN";
+            const currentLore = context.currentLore || [];
             const loreLines = [""];
 
             if (config.setName) {
                 const setName = config.setName[locale] || config.setName.zh_CN;
-                loreLines.push(`§r§7${setName}`);
+                if (!currentLore.some(line => line.includes(setName))) {
+                    loreLines.push(`§r§7${setName}`);
+                }
             }
 
             if (config.condition) {
                 const condition = config.condition[locale] || config.condition.zh_CN;
-                loreLines.push(`§r§7${condition}`);
+                if (!currentLore.some(line => line.includes(condition))) {
+                    loreLines.push(`§r§7${condition}`);
+                }
             }
 
             for (const effect of config.effects) {
                 const effectText = effect[locale] || effect.zh_CN;
-                loreLines.push(`§r§9${effectText}`);
+                if (!currentLore.some(line => line.includes(effectText))) {
+                    loreLines.push(`§r§9${effectText}`);
+                }
             }
+
+            if (loreLines.length === 1) return null;
 
             return loreLines;
         }

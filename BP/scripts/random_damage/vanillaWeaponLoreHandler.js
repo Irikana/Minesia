@@ -37,7 +37,14 @@ export function registerVanillaWeaponLoreHandler() {
             const locale = context.locale || LOCALE_SETTINGS.defaultLocale;
             const loreText = LOCALE_SETTINGS.loreTexts[locale] || LOCALE_SETTINGS.loreTexts[LOCALE_SETTINGS.defaultLocale];
 
-            return ["", `${STAMINA_COLOR}+${staminaCost} ${loreText.staminaCost}`];
+            const currentLore = context.currentLore || [];
+            const staminaLore = `${STAMINA_COLOR}+${staminaCost} ${loreText.staminaCost}`;
+
+            if (currentLore.some(line => line === staminaLore)) {
+                return null;
+            }
+
+            return ["", staminaLore];
         }
     });
 
