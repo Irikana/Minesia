@@ -85,7 +85,7 @@
       ]
     },
     {
-      "total_exp_required": 10,
+      "total_exp_required": 0,
       "groups": [
         {
           "num_to_select": 1,
@@ -136,7 +136,7 @@
       ]
     },
     {
-      "total_exp_required": 70,
+      "total_exp_required": 0,
       "groups": [
         {
           "num_to_select": 1,
@@ -163,9 +163,8 @@
         }
       ]
     },
-
     {
-      "total_exp_required": 150,
+      "total_exp_required": 0,
       "groups": [
         {
           "num_to_select": 1,
@@ -226,7 +225,7 @@
       ]
     },
     {
-      "total_exp_required": 250,
+      "total_exp_required": 0,
       "groups": [
         {
           "num_to_select": 1,
@@ -257,6 +256,226 @@
               ],
               "trader_exp": 30,
               "max_uses": 3,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minesia:gold_coin",
+                  "quantity": 35
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minesia:flamie",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 30,
+              "max_uses": 4,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minesia:diamond_coin",
+                  "quantity": 10
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minesia:life_stone",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 30,
+              "max_uses": 4,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minesia:gold_coin",
+                  "quantity": 40
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minesia:ender_pearl_sword",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 30,
+              "max_uses": 4,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minesia:gold_coin",
+                  "quantity": 38
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minesia:the_forest",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 30,
+              "max_uses": 4,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minesia:gold_coin",
+                  "quantity": 30
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minesia:duty_ice",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 30,
+              "max_uses": 4,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minesia:gold_coin",
+                  "quantity": 30
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minesia:pioneer",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 30,
+              "max_uses": 4,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minesia:gold_coin",
+                  "quantity": 25
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minesia:selfish",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 30,
+              "max_uses": 4,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minesia:gold_coin",
+                  "quantity": 25
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minesia:statue_totem",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 30,
+              "max_uses": 4,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minesia:stone_coin",
+                  "quantity": 25
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minesia:black_dagger",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 30,
+              "max_uses": 4,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minesia:stone_coin",
+                  "quantity": 35
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minesia:white_golden_sword",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 30,
+              "max_uses": 4,
               "reward_exp": true
             }
           ]

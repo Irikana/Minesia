@@ -78,6 +78,9 @@
 		"minesia_desert_walker": {
 			"textures": "textures/items/desert_walker"
 		},
+		"minesia_desert_scythe": {
+			"textures": "textures/items/desert_scythe"
+		},
 		"minesia_tina": {
 			"textures": "textures/items/tina"
 		},
@@ -101,6 +104,39 @@
 		},
 		"minesia_steel_scythe": {
 			"textures": "textures/items/steel_scythe"
+		},
+		"minesia_flamie": {
+			"textures": "textures/items/flamie"
+		},
+		"minesia_the_forest": {
+			"textures": "textures/items/the_forest"
+		},
+		"minesia_life_stone": {
+			"textures": "textures/items/life_stone"
+		},
+		"minesia_spider_leg": {
+			"textures": "textures/items/spider_leg"
+		},
+		"minesia_ender_pearl_sword": {
+			"textures": "textures/items/ender_pearl_sword"
+		},
+		"minesia_duty_ice": {
+			"textures": "textures/items/duty_ice"
+		},
+		"minesia_pioneer": {
+			"textures": "textures/items/pioneer"
+		},
+		"minesia_selfish": {
+			"textures": "textures/items/selfish"
+		},
+		"minesia_statue_totem": {
+			"textures": "textures/items/statue_totem"
+		},
+		"minesia_black_dagger": {
+			"textures": "textures/items/black_dagger"
+		},
+		"minesia_white_golden_sword": {
+			"textures": "textures/items/white_golden_sword"
 		}
 	},
 	"resource_pack_name": "New Project",

@@ -33,11 +33,7 @@
               "item": "minecraft:iron_axe"
             }
           ]
-        }
-      ]
-    },
-    {
-      "trades": [
+        },
         {
           "wants": [
             {
@@ -80,11 +76,7 @@
               ]
             }
           ]
-        }
-      ]
-    },
-    {
-      "trades": [
+        },
         {
           "wants": [
             {
@@ -152,6 +144,21 @@
               ]
             }
           ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minesia:gold_coin",
+              "quantity": 25
+            }
+          ],
+          "gives": [
+            {
+              "item": "minesia:desert_scythe",
+              "quantity": 1
+            }
+          ],
+          "max_uses": 4
         }
       ]
     }

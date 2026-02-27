@@ -84,7 +84,7 @@
       ]
     },
     {
-      "total_exp_required": 10,
+      "total_exp_required": 0,
       "groups": [
         {
           "num_to_select": 1,
@@ -166,7 +166,7 @@
       ]
     },
     {
-      "total_exp_required": 70,
+      "total_exp_required": 0,
       "groups": [
         {
           "num_to_select": 1,
@@ -247,9 +247,8 @@
         }
       ]
     },
-
     {
-      "total_exp_required": 150,
+      "total_exp_required": 0,
       "groups": [
         {
           "num_to_select": 1,
@@ -354,7 +353,7 @@
       ]
     },
     {
-      "total_exp_required": 250,
+      "total_exp_required": 0,
       "groups": [
         {
           "num_to_select": 1,
@@ -375,6 +374,72 @@
               ],
               "trader_exp": 30,
               "max_uses": 12,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minesia:wooden_coin",
+                  "quantity": 20
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minesia:stone_coin",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 30,
+              "max_uses": 16,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minesia:stone_coin",
+                  "quantity": 15
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minesia:silver_coin",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 30,
+              "max_uses": 16,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minesia:silver_coin",
+                  "quantity": 15
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minesia:gold_coin",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 30,
+              "max_uses": 16,
               "reward_exp": true
             }
           ]

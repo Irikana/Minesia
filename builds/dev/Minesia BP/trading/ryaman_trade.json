@@ -1,0 +1,162 @@
+{
+    "tiers": [
+        {
+            "trades": [
+                {
+                    "wants": [
+                        {
+                            "item": "minesia:wooden_coin",
+                            "quantity": 14
+                        }
+                    ],
+                    "gives": [
+                        {
+                            "item": "minesia:stone_coin",
+                            "quantity": 1
+                        }
+                    ]
+                },
+                {
+                    "wants": [
+                        {
+                            "item": "minesia:stone_coin",
+                            "quantity": 11
+                        }
+                    ],
+                    "gives": [
+                        {
+                            "item": "minesia:silver_coin",
+                            "quantity": 1
+                        }
+                    ]
+                },
+                {
+                    "wants": [
+                        {
+                            "item": "minesia:silver_coin",
+                            "quantity": 10
+                        }
+                    ],
+                    "gives": [
+                        {
+                            "item": "minesia:gold_coin",
+                            "quantity": 1
+                        }
+                    ]
+                },
+                {
+                    "wants": [
+                        {
+                            "item": "minesia:gold_coin",
+                            "quantity": 9
+                        }
+                    ],
+                    "gives": [
+                        {
+                            "item": "minesia:diamond_coin",
+                            "quantity": 1
+                        }
+                    ]
+                },
+                {
+                    "wants": [
+                        {
+                            "item": "minesia:diamond_coin",
+                            "quantity": 8
+                        }
+                    ],
+                    "gives": [
+                        {
+                            "item": "minesia:emerald_coin",
+                            "quantity": 1
+                        }
+                    ]
+                },
+                {
+                    "wants": [
+                        {
+                            "item": "minesia:emerald_coin",
+                            "quantity": 1
+                        }
+                    ],
+                    "gives": [
+                        {
+                            "item": "minesia:diamond_coin",
+                            "quantity": 6
+                        }
+                    ]
+                },
+                {
+                    "wants": [
+                        {
+                            "item": "minesia:diamond_coin",
+                            "quantity": 1
+                        }
+                    ],
+                    "gives": [
+                        {
+                            "item": "minesia:gold_coin",
+                            "quantity": 7
+                        }
+                    ]
+                },
+                {
+                    "wants": [
+                        {
+                            "item": "minesia:gold_coin",
+                            "quantity": 1
+                        }
+                    ],
+                    "gives": [
+                        {
+                            "item": "minesia:silver_coin",
+                            "quantity": 8
+                        }
+                    ]
+                },
+                {
+                    "wants": [
+                        {
+                            "item": "minesia:silver_coin",
+                            "quantity": 1
+                        }
+                    ],
+                    "gives": [
+                        {
+                            "item": "minesia:stone_coin",
+                            "quantity": 10
+                        }
+                    ]
+                },
+                {
+                    "wants": [
+                        {
+                            "item": "minesia:stone_coin",
+                            "quantity": 1
+                        }
+                    ],
+                    "gives": [
+                        {
+                            "item": "minesia:wooden_coin",
+                            "quantity": 12
+                        }
+                    ]
+                },
+                {
+                    "wants": [
+                        {
+                            "item": "minesia:spider_leg",
+                            "quantity": 1
+                        }
+                    ],
+                    "gives": [
+                        {
+                            "item": "minesia:wooden_coin",
+                            "quantity": 2
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

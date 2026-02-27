@@ -145,7 +145,8 @@ function showDamageDisplay(player, totalDamage, target) {
         aoeTargetCount,
         aoeSourceName,
         aoeSourceNameEn,
-        locale
+        locale,
+        playerId
     );
 
     playerDisplayState.set(playerId, {
@@ -161,23 +162,32 @@ function showDamageDisplay(player, totalDamage, target) {
     }, DAMAGE_DISPLAY_CONFIG.displayDuration);
 }
 
-function buildDisplayText(totalDamage, texts, hitCount = 1, aoeDamage = 0, aoeTargetCount = 0, aoeSourceName = "", aoeSourceNameEn = "", locale = "zh_CN") {
-    const color = DAMAGE_DISPLAY_CONFIG.textColor;
-
-    let mainLine = "";
-
-    if (hitCount > 1) {
-        mainLine = `${color}${texts.damage}: ${totalDamage.toFixed(1)} (x${hitCount})`;
+function buildDisplayText(totalDamage, texts, hitCount = 1, aoeDamage = 0, aoeTargetCount = 0, aoeSourceName = "", aoeSourceNameEn = "", locale = "zh_CN", playerId = null) {
+    let damageColor;
+    if (totalDamage >= 50) {
+        damageColor = "§c§l";
+    } else if (totalDamage >= 20) {
+        damageColor = "§e";
+    } else if (totalDamage >= 10) {
+        damageColor = "§6";
     } else {
-        mainLine = `${color}${texts.damage}: ${totalDamage.toFixed(1)}`;
+        damageColor = "§f";
     }
 
-    if (aoeDamage > 0 && aoeTargetCount > 0) {
+    let mainLine;
+    if (hitCount > 1) {
+        const comboText = locale === "zh_CN" ? "连击" : "Combo";
+        mainLine = `§c${texts.damage}: ${damageColor}${totalDamage.toFixed(1)}§r §7(x${hitCount} ${comboText})`;
+    } else {
+        mainLine = `§c${texts.damage}: ${damageColor}${totalDamage.toFixed(1)}`;
+    }
+
+    if (aoeDamage > 0 && aoeTargetCount > 0 && playerId) {
         const sourceName = locale === "zh_CN" ? aoeSourceName : aoeSourceNameEn;
         const aoeText = locale === "zh_CN"
-            ? `§dAOE: ${aoeDamage.toFixed(1)} (${aoeTargetCount}目标) - ${sourceName}`
-            : `§dAOE: ${aoeDamage.toFixed(1)} (${aoeTargetCount} targets) - ${sourceName}`;
-        ActionBarManager.setLine('global', 'aoe', aoeText, DISPLAY_PRIORITIES.AOE);
+            ? `§dAOE: §l${aoeDamage.toFixed(1)}§r §7(${aoeTargetCount}目标) §8- ${sourceName}`
+            : `§dAOE: §l${aoeDamage.toFixed(1)}§r §7(${aoeTargetCount} targets) §8- ${sourceName}`;
+        ActionBarManager.setLine(playerId, 'aoe', aoeText, DISPLAY_PRIORITIES.AOE);
         return mainLine;
     }
 

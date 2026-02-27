@@ -8,6 +8,15 @@ import { world, system, EquipmentSlot } from "@minecraft/server";
 import { getWeaponConfig, calculateRandomDamage } from "./config.js";
 import { applyTinaEffect } from "../custom_events/item_events/tinaEffect.js";
 import { applyScytheEffect, isScytheItem } from "../custom_events/item_events/scytheEffect.js";
+import { applyFlamieEffect, isFlamieItem, hasFlamieEquipped } from "../custom_events/item_events/flamieEffect.js";
+import { applyTheForestEffect, isTheForestItem } from "../custom_events/item_events/theForestEffect.js";
+import { applyEnderPearlSwordEffect, isEnderPearlSwordItem, hasEnderPearlSwordEquipped } from "../custom_events/item_events/enderPearlSwordEffect.js";
+import { applyDutyIceEffect, isDutyIceItem } from "../custom_events/item_events/dutyIceEffect.js";
+import { applyPioneerEffect, isPioneerItem } from "../custom_events/item_events/pioneerEffect.js";
+import { applySelfishEffect, isSelfishItem } from "../custom_events/item_events/selfishEffect.js";
+import { applyBlackDaggerEffect, isBlackDaggerItem } from "../custom_events/item_events/blackDaggerEffect.js";
+import { applyWhiteGoldenSwordEffect, isWhiteGoldenSwordItem } from "../custom_events/item_events/whiteGoldenSwordEffect.js";
+import { StaminaSystem } from "../stamina/staminaMain.js";
 
 const recentAttacks = new Map();
 
@@ -74,6 +83,10 @@ function handleEntityHurt(event) {
             applyDesertWalkerEffect(hurtEntity, attacker);
         }
 
+        if (isDesertScytheItem(mainhandItem.typeId)) {
+            applyDesertScytheEffect(hurtEntity, attacker);
+        }
+
         if (attacker.hasTag("tina_active")) {
             applyTinaEffect(hurtEntity, attacker);
         }
@@ -81,6 +94,42 @@ function handleEntityHurt(event) {
         if (isScytheItem(mainhandItem.typeId)) {
             const totalDamage = damage + randomDamage;
             applyScytheEffect(hurtEntity, attacker, totalDamage);
+        }
+
+        if (isFlamieItem(mainhandItem.typeId)) {
+            applyFlamieEffect(hurtEntity, attacker, false);
+        } else if (attacker.hasTag("flamie_offhand_active")) {
+            applyFlamieEffect(hurtEntity, attacker, true);
+        }
+
+        if (isTheForestItem(mainhandItem.typeId)) {
+            applyTheForestEffect(hurtEntity, attacker, StaminaSystem);
+        }
+
+        if (isEnderPearlSwordItem(mainhandItem.typeId)) {
+            applyEnderPearlSwordEffect(hurtEntity, attacker, false);
+        } else if (attacker.hasTag("ender_pearl_sword_offhand_active")) {
+            applyEnderPearlSwordEffect(hurtEntity, attacker, true);
+        }
+
+        if (isDutyIceItem(mainhandItem.typeId)) {
+            applyDutyIceEffect(hurtEntity, attacker);
+        }
+
+        if (isPioneerItem(mainhandItem.typeId)) {
+            applyPioneerEffect(hurtEntity, attacker, StaminaSystem);
+        }
+
+        if (isSelfishItem(mainhandItem.typeId)) {
+            applySelfishEffect(hurtEntity, attacker);
+        }
+
+        if (isBlackDaggerItem(mainhandItem.typeId)) {
+            applyBlackDaggerEffect(hurtEntity, attacker);
+        }
+
+        if (isWhiteGoldenSwordItem(mainhandItem.typeId)) {
+            applyWhiteGoldenSwordEffect(attacker, mainhandItem);
         }
 
     } catch (error) {
@@ -99,6 +148,24 @@ function applyDesertWalkerEffect(target, attacker) {
         }
     } catch (error) {
         console.error('[DesertWalker] 应用减速效果时出错:', error?.message ?? error);
+    }
+}
+
+function isDesertScytheItem(itemId) {
+    return itemId === "minesia:desert_scythe";
+}
+
+function applyDesertScytheEffect(target, attacker) {
+    try {
+        if (Math.random() < 0.25) {
+            target.addEffect("minecraft:slowness", 100, {
+                amplifier: 0,
+                showParticles: true
+            });
+            console.log(`[DesertScythe] ${attacker.name} 的沙漠镰刀触发了减速效果`);
+        }
+    } catch (error) {
+        console.error('[DesertScythe] 应用减速效果时出错:', error?.message ?? error);
     }
 }
 

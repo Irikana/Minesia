@@ -2,6 +2,33 @@
 import { world, system } from "@minecraft/server";
 import { ActionBarManager, DISPLAY_PRIORITIES } from "../action_bar/index.js";
 
+const LEVEL_DISPLAY_TEXTS = {
+    zh_CN: {
+        level: "创世等级",
+        max: "满级"
+    },
+    en_US: {
+        level: "Minesia Level",
+        max: "MAX"
+    }
+};
+
+function getPlayerLocale(player) {
+    try {
+        const scoreboard = world.scoreboard;
+        const langObj = scoreboard?.getObjective("minesia_language");
+        if (langObj) {
+            const score = langObj.getScore(player);
+            if (score === 0) return "en_US";
+        }
+    } catch (_e) { }
+    return "zh_CN";
+}
+
+function getLevelDisplayTexts(locale = "zh_CN") {
+    return LEVEL_DISPLAY_TEXTS[locale] || LEVEL_DISPLAY_TEXTS.zh_CN;
+}
+
 export class MinesiaLevelSystem {
     static playerStats = new Map();
     static displayPaused = new Map();
@@ -193,17 +220,21 @@ export class MinesiaLevelSystem {
             return;
         }
 
+        const locale = getPlayerLocale(player);
+        const texts = getLevelDisplayTexts(locale);
         const maxLevel = this.LEVEL_EXP.length - 1;
 
         let displayText;
         if (progress.level >= maxLevel) {
-            displayText = `§bMinesia Lv.${progress.level} §6MAX`;
+            displayText = `§b${texts.level} Lv.${progress.level} §6§l${texts.max}§r`;
         } else {
-            const barLength = 20;
+            const barLength = 12;
             const filled = Math.max(0, Math.min(barLength, Math.floor(progress.progress * barLength)));
             const empty = Math.max(0, barLength - filled);
-            const bar = "█".repeat(filled) + "░".repeat(empty);
-            displayText = `§bMinesia Lv.${progress.level} §f${bar}`;
+            const bar = "§a" + "■".repeat(filled) + "§8" + "■".repeat(empty);
+            const expText = `${progress.expInCurrentLevel}/${progress.expNeeded}`;
+            const percentText = Math.floor(progress.progress * 100).toString().padStart(3, " ");
+            displayText = `§b${texts.level} Lv.${progress.level} ${bar} §7${expText} §f${percentText}%`;
         }
 
         ActionBarManager.setLine(playerId, 'level', displayText, DISPLAY_PRIORITIES.LEVEL);

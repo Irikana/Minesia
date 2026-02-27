@@ -132,15 +132,13 @@ export const STAMINA_CONFIG = {
 // ==========================================
 
 export const STAMINA_TEXTS = {
-    // 中文文本
     zh_CN: {
         stamina: "体力",
-        exhausted: "体力耗尽"
+        exhausted: "§l§c体力耗尽"
     },
-    // 英文文本
     en_US: {
         stamina: "Stamina",
-        exhausted: "Exhausted"
+        exhausted: "§l§cExhausted"
     }
 };
 

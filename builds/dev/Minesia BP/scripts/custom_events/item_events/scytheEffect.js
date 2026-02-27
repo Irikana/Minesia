@@ -8,7 +8,8 @@ const SCYTHE_ITEMS = [
     "minesia:golden_scythe",
     "minesia:diamond_scythe",
     "minesia:netherite_scythe",
-    "minesia:steel_scythe"
+    "minesia:steel_scythe",
+    "minesia:desert_scythe"
 ];
 
 const SCYTHE_EFFECT = {

@@ -89,6 +89,13 @@ export const RANDOM_DAMAGE_WEAPONS = [
         enabled: true
     },
     {
+        id: "minesia:desert_scythe",
+        minDamage: 7,
+        maxDamage: 10,
+        isScythe: true,
+        enabled: true
+    },
+    {
         id: "minesia:tina",
         minDamage: 8,
         maxDamage: 13,
@@ -141,6 +148,54 @@ export const RANDOM_DAMAGE_WEAPONS = [
         minDamage: 8,
         maxDamage: 11.5,
         isScythe: true,
+        enabled: true
+    },
+    {
+        id: "minesia:flamie",
+        minDamage: 4,
+        maxDamage: 7,
+        enabled: true
+    },
+    {
+        id: "minesia:the_forest",
+        minDamage: 5,
+        maxDamage: 7,
+        enabled: true
+    },
+    {
+        id: "minesia:ender_pearl_sword",
+        minDamage: 5,
+        maxDamage: 7,
+        enabled: true
+    },
+    {
+        id: "minesia:duty_ice",
+        minDamage: 5,
+        maxDamage: 8,
+        enabled: true
+    },
+    {
+        id: "minesia:pioneer",
+        minDamage: 10,
+        maxDamage: 15,
+        enabled: true
+    },
+    {
+        id: "minesia:selfish",
+        minDamage: 5,
+        maxDamage: 10,
+        enabled: true
+    },
+    {
+        id: "minesia:black_dagger",
+        minDamage: 2,
+        maxDamage: 7,
+        enabled: true
+    },
+    {
+        id: "minesia:white_golden_sword",
+        minDamage: 7,
+        maxDamage: 9,
         enabled: true
     }
 ];

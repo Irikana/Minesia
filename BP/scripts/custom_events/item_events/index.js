@@ -3,3 +3,14 @@ export { processItemEffects, registerItemEffect, unregisterItemEffect, getActive
 export { applyTinaEffect, TINA_EFFECT } from "./tinaEffect.js";
 export { registerAoeDamage, getAoeDamageRecord, hasAoeDamageRecord, clearAoeDamageRecord, beginAoeEntity, endAoeEntity, isAoeEntity } from "./aoeDamageRegistry.js";
 export { applyScytheEffect, isScytheItem, SCYTHE_ITEMS, SCYTHE_EFFECT } from "./scytheEffect.js";
+export { applyFlamieEffect, isFlamieItem, hasFlamieEquipped, FLAMIE_EFFECT } from "./flamieEffect.js";
+export { applyTheForestEffect, isTheForestItem, THE_FOREST_EFFECT } from "./theForestEffect.js";
+export { isLifeStoneItem, hasLifeStoneEquipped, LIFE_STONE_EFFECT } from "./lifeStoneEffect.js";
+export { isSpiderLegItem, hasSpiderLegEquipped, SPIDER_LEG_EFFECT } from "./spiderLegEffect.js";
+export { applyEnderPearlSwordEffect, isEnderPearlSwordItem, hasEnderPearlSwordEquipped, ENDER_PEARL_SWORD_EFFECT } from "./enderPearlSwordEffect.js";
+export { applyDutyIceEffect, isDutyIceItem, DUTY_ICE_EFFECT } from "./dutyIceEffect.js";
+export { applyPioneerEffect, isPioneerItem, PIONEER_EFFECT } from "./pioneerEffect.js";
+export { applySelfishEffect, isSelfishItem, SELFISH_EFFECT } from "./selfishEffect.js";
+export { isStatueTotemItem, hasStatueTotemEquipped, STATUE_TOTEM_EFFECT } from "./statueTotemEffect.js";
+export { applyBlackDaggerEffect, isBlackDaggerItem, BLACK_DAGGER_EFFECT } from "./blackDaggerEffect.js";
+export { applyWhiteGoldenSwordEffect, isWhiteGoldenSwordItem, WHITE_GOLDEN_SWORD_EFFECT } from "./whiteGoldenSwordEffect.js";

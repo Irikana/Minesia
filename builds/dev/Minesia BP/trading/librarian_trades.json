@@ -47,11 +47,7 @@
               ]
             }
           ]
-        }
-      ]
-    },
-    {
-      "trades": [
+        },
         {
           "wants": [
             {
@@ -102,11 +98,7 @@
               "quantity": 1
             }
           ]
-        }
-      ]
-    },
-    {
-      "trades": [
+        },
         {
           "wants": [
             {
@@ -143,77 +135,7 @@
               }
             }
           ]
-        }
-      ]
-    },
-    {
-      "trades": [
-        {
-          "wants": [
-            {
-              "item": "minesia:silver_coin",
-              "quantity": {
-                "min": 8,
-                "max": 15
-              }
-            },
-            {
-              "item": "minecraft:book",
-              "quantity": 1
-            }
-          ],
-          "gives": [
-            {
-              "item": "minecraft:enchanted_book",
-              "functions": [
-                {
-                  "function": "enchant_book_for_trading",
-                  "base_cost": 2,
-                  "base_random_cost": 5,
-                  "per_level_random_cost": 10,
-                  "per_level_cost": 3
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "trades": [
-        {
-          "wants": [
-            {
-              "item": "minesia:silver_coin",
-              "quantity": {
-                "min": 8,
-                "max": 15
-              }
-            },
-            {
-              "item": "minecraft:book",
-              "quantity": 1
-            }
-          ],
-          "gives": [
-            {
-              "item": "minecraft:enchanted_book",
-              "functions": [
-                {
-                  "function": "enchant_book_for_trading",
-                  "base_cost": 2,
-                  "base_random_cost": 5,
-                  "per_level_random_cost": 10,
-                  "per_level_cost": 3
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "trades": [
+        },
         {
           "wants": [
             {

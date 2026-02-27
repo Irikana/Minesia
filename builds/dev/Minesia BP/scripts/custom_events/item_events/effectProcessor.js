@@ -21,6 +21,7 @@ export function processItemEffects(player) {
     for (const tag of currentEffects) {
         if (!previousEffects.has(tag)) {
             try {
+                console.log(`[ItemEffect] 激活效果: ${tag} for ${player.name}`);
                 ITEM_EFFECTS[tag].onActivate?.(player, StaminaSystem);
             } catch (error) {
                 console.error(`[ItemEffect] 激活效果 ${tag} 失败:`, error?.message ?? error);
@@ -48,6 +49,7 @@ export function processItemEffects(player) {
     for (const tag of previousEffects) {
         if (!currentEffects.has(tag)) {
             try {
+                console.log(`[ItemEffect] 停用效果: ${tag} for ${player.name}`);
                 ITEM_EFFECTS[tag].onDeactivate?.(player, StaminaSystem);
             } catch (error) {
                 console.error(`[ItemEffect] 停用效果 ${tag} 失败:`, error?.message ?? error);

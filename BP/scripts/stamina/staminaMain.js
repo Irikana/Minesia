@@ -406,28 +406,45 @@ export function displayStaminaBar(player) {
     const maxStamina = StaminaSystem.getMaxStamina(player);
     const percentage = Math.max(0, Math.min(1, stamina / maxStamina));
 
-    const barLength = STAMINA_CONFIG.display.barLength;
+    const bar = buildEnhancedStaminaBar(percentage, Math.floor(stamina), maxStamina, data.isExhausted, texts);
+
+    ActionBarManager.setLine(playerId, 'stamina', bar, DISPLAY_PRIORITIES.STAMINA);
+    ActionBarManager.updateDisplay(player);
+}
+
+function buildEnhancedStaminaBar(percentage, currentStamina, maxStamina, isExhausted, texts) {
+    const barLength = 12;
     const filled = Math.max(0, Math.min(barLength, Math.floor(percentage * barLength)));
     const empty = Math.max(0, barLength - filled);
 
-    let barColor = "§a";
-    if (percentage <= 0.25) {
-        barColor = "§c";
-    } else if (percentage <= 0.5) {
-        barColor = "§e";
-    }
+    const filledChar = "■";
 
-    const bar = barColor + "█".repeat(filled) + "§7" + "░".repeat(empty);
-
-    let displayText;
-    if (data.isExhausted) {
-        displayText = `§c${texts.exhausted} §f${bar}`;
+    let fillColor, emptyColor, pulse;
+    if (percentage > 0.6) {
+        fillColor = "§a";
+        emptyColor = "§8";
+        pulse = "";
+    } else if (percentage > 0.3) {
+        fillColor = "§e";
+        emptyColor = "§8";
+        pulse = "";
     } else {
-        displayText = `§6${texts.stamina} §f${bar}`;
+        fillColor = "§c";
+        emptyColor = "§8";
+        pulse = "§l";
     }
 
-    ActionBarManager.setLine(playerId, 'stamina', displayText, DISPLAY_PRIORITIES.STAMINA);
-    ActionBarManager.updateDisplay(player);
+    const bar = pulse + fillColor + filledChar.repeat(filled) + emptyColor + filledChar.repeat(empty);
+
+    const staminaText = Math.floor(currentStamina).toString().padStart(3, " ");
+    const maxText = maxStamina.toString();
+    const percentText = Math.floor(percentage * 100).toString().padStart(3, " ");
+
+    if (isExhausted) {
+        return `§c${texts.exhausted} ${bar} §7${staminaText}/${maxText} §f${percentText}%`;
+    }
+
+    return `§6${texts.stamina} ${bar} §7${staminaText}/${maxText} §f${percentText}%`;
 }
 
 export function initializeStaminaSystem() {

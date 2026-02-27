@@ -1,7 +1,37 @@
 {
-  "minesia.level_up": {
-    "sounds": [
-      "sounds/minesia_level/level_up"
-    ]
-  }
+	"entity_sounds": {
+		"entities": {
+			"minesia:ryaman": {
+				"events": {
+					"ambient": "mob.wanderingtrader.idle",
+					"death": "mob.wanderingtrader.death",
+					"disappeared": "mob.wanderingtrader.disappeared",
+					"drink": "mob.wanderingtrader.drink_potion",
+					"haggle": "mob.wanderingtrader.haggle",
+					"haggle.no": "mob.wanderingtrader.no",
+					"haggle.yes": "mob.wanderingtrader.yes",
+					"hurt": "mob.wanderingtrader.hurt",
+					"reappeared": "mob.wanderingtrader.reappeared"
+				},
+				"pitch": [0.8, 1.2],
+				"volume": 1
+			},
+			"minesia_journey:victor": {
+				"events": {
+					"ambient": "mob.villager.idle",
+					"death": "mob.villager.death",
+					"death.to.zombie": "mob.villager.death",
+					"haggle": "mob.villager.haggle",
+					"haggle.no": "mob.villager.no",
+					"haggle.yes": "mob.villager.yes",
+					"hurt": "mob.villager.hit"
+				},
+				"pitch": [0.8, 1.2],
+				"volume": 1
+			}
+		}
+	},
+	"minesia.level_up": {
+		"sounds": ["sounds/minesia_level/level_up"]
+	}
 }

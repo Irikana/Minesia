@@ -30,6 +30,7 @@ export const WEAPON_STAMINA_COST = {
     "minesia:diamond_dagger": 1,
     "minesia:netherite_dagger": 1,
     "minesia:desert_walker": 2,
+    "minesia:desert_scythe": 4,
     "minesia:tina": 3,
     "minesia:wooden_scythe": 4,
     "minesia:stone_scythe": 4,
@@ -37,7 +38,15 @@ export const WEAPON_STAMINA_COST = {
     "minesia:golden_scythe": 4,
     "minesia:diamond_scythe": 4,
     "minesia:netherite_scythe": 4,
-    "minesia:steel_scythe": 4
+    "minesia:steel_scythe": 4,
+    "minesia:flamie": 4,
+    "minesia:the_forest": 1,
+    "minesia:ender_pearl_sword": 4,
+    "minesia:duty_ice": 3,
+    "minesia:pioneer": 5,
+    "minesia:selfish": 3,
+    "minesia:black_dagger": 2,
+    "minesia:white_golden_sword": 2
 };
 
 export function getWeaponStaminaCost(itemId) {

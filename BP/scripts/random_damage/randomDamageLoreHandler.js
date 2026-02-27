@@ -9,7 +9,7 @@ import { getWeaponConfig, formatDamageRange, LOCALE_SETTINGS } from "./config.js
 import { getWeaponStaminaCost, LOCALE_SETTINGS as STAMINA_LOCALE } from "../stamina/weaponStaminaConfig.js";
 
 const LORE_COLOR = "§r§9";
-const STAMINA_COLOR = "§c";
+const STAMINA_COLOR = "§r§c";
 
 export function registerRandomDamageLoreHandler() {
     LoreRegistry.register("random_damage_lore", {

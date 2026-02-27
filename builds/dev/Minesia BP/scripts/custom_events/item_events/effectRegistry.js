@@ -44,6 +44,80 @@ export const ITEM_EFFECTS = {
             player.removeEffect("minecraft:slow_falling");
             StaminaSystem.setMaxStaminaBonus(player, 0);
         }
+    },
+    life_stone_active: {
+        name: "生命之石",
+        description: "副手装备时，最大生命值增加50%",
+        itemId: "minesia:life_stone",
+        interval: 200,
+        onActivate: (player, StaminaSystem) => {
+        },
+        onTick: (player, StaminaSystem) => {
+        },
+        onDeactivate: (player, StaminaSystem) => {
+        }
+    },
+    spider_leg_active: {
+        name: "蜘蛛腿",
+        description: "副手装备时，每5刻恢复1点体力值",
+        itemId: "minesia:spider_leg",
+        interval: 5,
+        onActivate: (player, StaminaSystem) => {
+        },
+        onTick: (player, StaminaSystem) => {
+            if (StaminaSystem) {
+                StaminaSystem.recoverStamina(player, 1);
+            }
+        },
+        onDeactivate: (player, StaminaSystem) => {
+        }
+    },
+    statue_totem_active: {
+        name: "雕像图腾",
+        description: "副手装备时增加25%最大生命值和80%体力值，每半秒恢复1点体力值",
+        itemId: "minesia:statue_totem",
+        interval: 10,
+        onActivate: (player, StaminaSystem) => {
+            if (StaminaSystem) {
+                StaminaSystem.setMaxStaminaBonus(player, 80);
+            }
+        },
+        onTick: (player, StaminaSystem) => {
+            if (StaminaSystem) {
+                StaminaSystem.recoverStamina(player, 1);
+            }
+
+            const health = player.getComponent("minecraft:health");
+            if (health && health.currentValue <= 4) {
+                const equippable = player.getComponent("minecraft:equippable");
+                if (!equippable) return;
+
+                const offhandItem = equippable.getEquipment(EquipmentSlot.Offhand);
+                if (!offhandItem || offhandItem.typeId !== "minesia:statue_totem") return;
+
+                equippable.setEquipment(EquipmentSlot.Offhand, undefined);
+
+                player.addEffect("minecraft:resistance", 1200, { amplifier: 0, showParticles: true });
+                player.addEffect("minecraft:fire_resistance", 1200, { amplifier: 0, showParticles: true });
+                player.addEffect("minecraft:regeneration", 1200, { amplifier: 0, showParticles: true });
+
+                player.playSound("random.totem");
+
+                const loc = player.location;
+                for (let i = 0; i < 20; i++) {
+                    player.dimension.spawnParticle("minecraft:totem_particle", {
+                        x: loc.x + (Math.random() - 0.5) * 2,
+                        y: loc.y + Math.random() * 2,
+                        z: loc.z + (Math.random() - 0.5) * 2
+                    });
+                }
+            }
+        },
+        onDeactivate: (player, StaminaSystem) => {
+            if (StaminaSystem) {
+                StaminaSystem.setMaxStaminaBonus(player, 0);
+            }
+        }
     }
 };
 

@@ -6,27 +6,6 @@
 
 export const ITEM_RULES = [
   {
-    id: "minecraft:amethyst_shard",
-
-    slots: ["mainhand"],
-
-    actions: [
-      { kind: "effect", type: "strength", amplifier: 0 },
-      { kind: "attribute", type: "health", value: 8 },
-      { kind: "state", key: "amethyst_active", value: true }
-    ]
-  },
-
-  {
-    id: "minecraft:totem_of_undying",
-    slots: ["mainhand", "offhand"],
-
-    actions: [
-      { kind: "effect", type: "resistance", amplifier: 0 }
-    ]
-  },
-
-  {
     id: "minesia:golden_phantom_membrane",
     slots: ["offhand"],
     actions: [
@@ -50,37 +29,50 @@ export const ITEM_RULES = [
     ]
   },
 
+  {
+    id: "minesia:life_stone",
+    slots: ["offhand"],
+    actions: [
+      { kind: "state", key: "life_stone_active", value: true },
+      { kind: "attribute_percent", type: "health", percent: 50 }
+    ]
+  },
 
+  {
+    id: "minesia:spider_leg",
+    slots: ["offhand"],
+    actions: [
+      { kind: "state", key: "spider_leg_active", value: true }
+    ]
+  },
+
+  {
+    id: "minesia:statue_totem",
+    slots: ["offhand"],
+    actions: [
+      { kind: "state", key: "statue_totem_active", value: true },
+      { kind: "attribute_percent", type: "health", percent: 25 }
+    ]
+  },
+
+  {
+    id: "minesia:flamie",
+    slots: ["offhand"],
+    actions: [
+      { kind: "state", key: "flamie_offhand_active", value: true }
+    ]
+  },
+
+  {
+    id: "minesia:ender_pearl_sword",
+    slots: ["offhand"],
+    actions: [
+      { kind: "state", key: "ender_pearl_sword_offhand_active", value: true }
+    ]
+  }
 ];
 
 export const SET_RULES = [
-  {
-    name: "shield_set",
-
-    required: {
-      offhand: "minecraft:shield",
-    },
-    actions: [
-      { kind: "attribute", type: "health", value: 8 },
-      { kind: "state", key: "shield_set", value: true }
-    ]
-  },
-  {
-    name: "diamond_full_set",
-
-    required: {
-      head: "minecraft:diamond_helmet",
-      chest: "minecraft:diamond_chestplate",
-      legs: "minecraft:diamond_leggings",
-      feet: "minecraft:diamond_boots"
-    },
-
-    actions: [
-      { kind: "effect", type: "resistance", amplifier: 1 },
-      { kind: "attribute", type: "health", value: 8 },
-      { kind: "state", key: "diamond_set", value: true }
-    ]
-  },
   {
     name: "steel_full_set",
 
@@ -97,24 +89,3 @@ export const SET_RULES = [
     ]
   },
 ];
-
-// 示例规则：展示如何使用新的属性系统
-// 可以根据需要取消注释使用
-/*
-export const EXAMPLE_RULES = [
-  {
-    id: "minecraft:golden_apple",
-    slots: ["mainhand"],
-    actions: [
-      { kind: "attribute_percent", type: "health", percent: 30 }
-    ]
-  },
-  {
-    id: "minecraft:nether_star",
-    slots: ["offhand"],
-    actions: [
-      { kind: "attribute", type: "health", value: 10 }
-    ]
-  }
-];
-*/

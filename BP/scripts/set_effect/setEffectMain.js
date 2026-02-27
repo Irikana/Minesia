@@ -1,4 +1,4 @@
-// setEffectMain.js - 套装效果主逻辑（稳定版）
+// setEffectMain.js - 套装效果主逻辑（稳定版)
 // 解决装备检测不稳定和状态同步问题
 
 import { world, system } from "@minecraft/server";
@@ -8,6 +8,8 @@ import * as actionsModule from "./actions.js";
 import * as setEffectsModule from "./set_effects.js";
 import { MinesiaLevelSystem } from "../minesia_level/level_system.js";
 import { MinesiaLevelEventSystem } from "../minesia_level/minesiaLevelEvent.js";
+
+import { processItemEffects } from "../custom_events/index.js";
 
 const lastPlayerEquipment = new Map();
 const playerProcessingCooldown = new Map();
@@ -37,7 +39,6 @@ export function handleAllPlayersSetEffects() {
                 console.log(`[SetEffectMain] ${player.name}: 装备状态变化`);
                 console.log(`[SetEffectMain] 旧状态: ${lastEquipmentState || 'none'}`);
                 console.log(`[SetEffectMain] 新状态: ${currentEquipmentState}`);
-
                 lastPlayerEquipment.set(playerId, currentEquipmentState);
             }
 
@@ -51,24 +52,18 @@ export function handleAllPlayersSetEffects() {
             }
 
             processItemRules(player, equippable);
-
             setEffectsModule.handleSetEffects(player);
-
             actionsModule.updatePlayerHealthEffect(player);
-
             playerProcessingCooldown.set(playerId, currentTime);
         }
-
     } catch (error) {
         console.error('[SetEffectMain] 主循环错误:', error);
     }
 }
 
-// 获取装备状态字符串（用于比较）
 function getEquipmentState(equippable) {
     try {
         const equipmentItems = [];
-
         for (const slotName in equipmentModule.SLOT_MAP) {
             const slot = equipmentModule.SLOT_MAP[slotName];
             if (slot) {
@@ -77,7 +72,6 @@ function getEquipmentState(equippable) {
                 equipmentItems.push(`${slotName}:${itemId}`);
             }
         }
-
         return equipmentItems.sort().join('|');
     } catch (error) {
         console.warn('[SetEffectMain] 获取装备状态失败:', error.message);
@@ -85,7 +79,6 @@ function getEquipmentState(equippable) {
     }
 }
 
-// 处理单物品规则
 function processItemRules(player, equippable) {
     for (const rule of rulesModule.ITEM_RULES) {
         for (const slotName of rule.slots) {
@@ -94,7 +87,7 @@ function processItemRules(player, equippable) {
 
             const item = equippable.getEquipment(slot);
             if (item && item.typeId === rule.id) {
-                console.log(`[SetEffectMain] ${player.name}: 应用物品规则 ${rule.id}`);
+                console.log(`[SetEffectMain] ${player.name}: 检测到物品 ${rule.id} 在槽位 ${slotName}`);
                 actionsModule.applyActions(player, rule.actions);
             }
         }

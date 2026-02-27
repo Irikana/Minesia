@@ -18,17 +18,22 @@ export const CONTROLLED_EFFECTS = [
 ];
 
 export const CONTROLLED_TAGS = [
-  "diamond_set",
-  "shield_set",
   "steel_set",
   "golden_phantom_membrane_active",
   "desert_walker_active",
   "tina_active",
+  "life_stone_active",
+  "spider_leg_active",
+  "statue_totem_active",
+  "flamie_offhand_active",
+  "ender_pearl_sword_offhand_active"
 ];
 
 const playerEffects = new Map();
 
 export const playerAttributes = new Map();
+
+const BASE_PLAYER_HEALTH = 20;
 
 export function applyLevelHealthBonus(player, healthBonus) {
   const playerId = player.id;
@@ -39,10 +44,8 @@ export function applyLevelHealthBonus(player, healthBonus) {
   currentAttributes.set("level_health", healthBonus);
 }
 
-// 清理所有"系统控制"的状态
 export function clearStates(player) {
   try {
-    // 清理状态标签
     const tags = player.getTags();
     for (const tag of tags) {
       if (CONTROLLED_TAGS.includes(tag) || tag.startsWith("irikana:")) {
@@ -50,7 +53,6 @@ export function clearStates(player) {
       }
     }
 
-    // 重置玩家属性，防止累积
     const playerId = player.id;
     if (playerAttributes.has(playerId)) {
       playerAttributes.set(playerId, new Map());
@@ -60,17 +62,14 @@ export function clearStates(player) {
   }
 }
 
-// 执行动作列表
 export function applyActions(player, actions) {
   try {
     const playerId = player.id;
 
-    // 初始化玩家效果记录
     if (!playerEffects.has(playerId)) {
       playerEffects.set(playerId, new Map());
     }
 
-    // 初始化玩家属性记录
     if (!playerAttributes.has(playerId)) {
       playerAttributes.set(playerId, new Map());
     }
@@ -106,19 +105,12 @@ export function applyActions(player, actions) {
       }
     }
 
-    // 每次都更新属性，确保所有加成都被应用
     updatePlayerAttributes(player, currentAttributes);
   } catch (error) {
     console.error("应用动作时出错:", error);
   }
 }
 
-/**
- * 应用药水效果
- * @param {Player} player 
- * @param {Object} action 
- * @param {Map} currentEffects 
- */
 function applyEffect(player, action, currentEffects) {
   try {
     const duration = action.duration || 10;
@@ -140,17 +132,12 @@ function applyEffect(player, action, currentEffects) {
   }
 }
 
-/**
- * 应用状态标签
- * @param {Player} player 
- * @param {Object} action 
- */
 function applyState(player, action) {
   try {
     if (action.value) {
-      // 确保标签不会重复添加
       if (!player.hasTag(action.key)) {
         player.addTag(action.key);
+        console.log(`[Actions] 添加标签: ${action.key} 给 ${player.name}`);
       }
     } else {
       player.removeTag(action.key);
@@ -160,19 +147,12 @@ function applyState(player, action) {
   }
 }
 
-/**
- * 应用属性加成
- * @param {Player} player 
- * @param {Object} action 
- * @param {Map} currentAttributes 
- */
 function applyAttribute(player, action, currentAttributes) {
   try {
     const attributeType = action.type;
     const value = action.value || 0;
     const attributeKey = attributeType;
 
-    // 累积属性加成
     const currentValue = currentAttributes.get(attributeKey) || 0;
     currentAttributes.set(attributeKey, currentValue + value);
   } catch (error) {
@@ -180,19 +160,12 @@ function applyAttribute(player, action, currentAttributes) {
   }
 }
 
-/**
- * 应用属性百分比修改
- * @param {Player} player 
- * @param {Object} action 
- * @param {Map} currentAttributes 
- */
 function applyAttributePercent(player, action, currentAttributes) {
   try {
     const attributeType = action.type;
     const percent = action.percent || 0;
     const attributeKey = `${attributeType}_percent`;
 
-    // 累积属性百分比加成
     const currentPercent = currentAttributes.get(attributeKey) || 0;
     currentAttributes.set(attributeKey, currentPercent + percent);
   } catch (error) {
@@ -206,13 +179,17 @@ function updatePlayerAttributes(player, currentAttributes) {
     const levelHealth = currentAttributes.get("level_health") || 0;
     const healthPercent = currentAttributes.get("health_percent") || 0;
 
-    const totalHealthBonus = equipmentHealth + levelHealth;
+    const baseHealth = BASE_PLAYER_HEALTH;
+
+    const percentBonus = Math.floor(baseHealth * (healthPercent / 100));
+
+    const totalHealthBonus = equipmentHealth + levelHealth + percentBonus;
 
     const healthBoostLevel = Math.max(0, Math.floor(totalHealthBonus / 4));
 
     if (healthBoostLevel > 0) {
       const amplifier = healthBoostLevel - 1;
-      player.addEffect("health_boost", 10, {
+      player.addEffect("minecraft:health_boost", 10, {
         amplifier: amplifier,
         showParticles: false
       });
@@ -230,6 +207,3 @@ export function updatePlayerHealthEffect(player) {
   const currentAttributes = playerAttributes.get(playerId);
   updatePlayerAttributes(player, currentAttributes);
 }
-
-
-

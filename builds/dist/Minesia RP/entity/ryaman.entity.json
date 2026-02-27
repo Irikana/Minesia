@@ -1,0 +1,44 @@
+{
+	"format_version": "1.8.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "minesia:ryaman",
+			"materials": {
+				"default": "wandering_trader"
+			},
+			"textures": {
+				"default": "textures/entity/ryaman"
+			},
+			"geometry": {
+				"default": "geometry.ryaman"
+			},
+			"scripts": {
+				"scale": "0.9375"
+			},
+			"animations": {
+				"general": "animation.ryaman.general",
+				"look_at_target": "animation.common.look_at_target",
+				"raise_arms": "animation.ryaman.raise_arms",
+				"move": "animation.ryaman.move"
+			},
+			"animation_controllers": [
+				{
+					"general": "controller.animation.villager.general"
+				},
+				{
+					"raise_arms": "controller.animation.villager_v2.raise_arms"
+				},
+				{
+					"move": "controller.animation.villager.move"
+				}
+			],
+			"render_controllers": [
+				"controller.render.default"
+			],
+			"spawn_egg": {
+				"base_color": "#1e7997",
+				"overlay_color": "#e4db15"
+			}
+		}
+	}
+}

@@ -1,0 +1,173 @@
+{
+    "tiers": [
+        {
+            "trades": [
+                {
+                    "wants": [
+                        {
+                            "item": "minesia:gold_coin",
+                            "quantity": 20
+                        }
+                    ],
+                    "gives": [
+                        {
+                            "item": "minesia:flamie",
+                            "quantity": 1
+                        }
+                    ],
+                    "max_uses": 4
+                },
+                {
+                    "wants": [
+                        {
+                            "item": "minesia:diamond_coin",
+                            "quantity": 5
+                        }
+                    ],
+                    "gives": [
+                        {
+                            "item": "minesia:life_stone",
+                            "quantity": 1
+                        }
+                    ],
+                    "max_uses": 4
+                },
+                {
+                    "wants": [
+                        {
+                            "item": "minesia:gold_coin",
+                            "quantity": 25
+                        }
+                    ],
+                    "gives": [
+                        {
+                            "item": "minesia:ender_pearl_sword",
+                            "quantity": 1
+                        }
+                    ],
+                    "max_uses": 4
+                },
+                {
+                    "wants": [
+                        {
+                            "item": "minesia:gold_coin",
+                            "quantity": 20
+                        }
+                    ],
+                    "gives": [
+                        {
+                            "item": "minesia:the_forest",
+                            "quantity": 1
+                        }
+                    ],
+                    "max_uses": 4
+                },
+                {
+                    "wants": [
+                        {
+                            "item": "minesia:gold_coin",
+                            "quantity": 10
+                        }
+                    ],
+                    "gives": [
+                        {
+                            "item": "minesia:duty_ice",
+                            "quantity": 1
+                        }
+                    ],
+                    "max_uses": 4
+                },
+                {
+                    "wants": [
+                        {
+                            "item": "minesia:gold_coin",
+                            "quantity": 10
+                        }
+                    ],
+                    "gives": [
+                        {
+                            "item": "minesia:pioneer",
+                            "quantity": 1
+                        }
+                    ],
+                    "max_uses": 4
+                },
+                {
+                    "wants": [
+                        {
+                            "item": "minesia:gold_coin",
+                            "quantity": 10
+                        }
+                    ],
+                    "gives": [
+                        {
+                            "item": "minesia:selfish",
+                            "quantity": 1
+                        }
+                    ],
+                    "max_uses": 4
+                },
+                {
+                    "wants": [
+                        {
+                            "item": "minesia:gold_coin",
+                            "quantity": 15
+                        }
+                    ],
+                    "gives": [
+                        {
+                            "item": "minesia:statue_totem",
+                            "quantity": 1
+                        }
+                    ],
+                    "max_uses": 4
+                },
+                {
+                    "wants": [
+                        {
+                            "item": "minesia:stone_coin",
+                            "quantity": 15
+                        }
+                    ],
+                    "gives": [
+                        {
+                            "item": "minesia:black_dagger",
+                            "quantity": 1
+                        }
+                    ],
+                    "max_uses": 4
+                },
+                {
+                    "wants": [
+                        {
+                            "item": "minesia:stone_coin",
+                            "quantity": 25
+                        }
+                    ],
+                    "gives": [
+                        {
+                            "item": "minesia:white_golden_sword",
+                            "quantity": 1
+                        }
+                    ],
+                    "max_uses": 4
+                },
+                {
+                    "wants": [
+                        {
+                            "item": "minesia:gold_coin",
+                            "quantity": 10
+                        }
+                    ],
+                    "gives": [
+                        {
+                            "item": "minesia:desert_scythe",
+                            "quantity": 1
+                        }
+                    ],
+                    "max_uses": 4
+                }
+            ]
+        }
+    ]
+}

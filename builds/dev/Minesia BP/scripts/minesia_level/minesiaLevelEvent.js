@@ -4,9 +4,10 @@
 // 处理玩家升级时或处于特定等级时的事件
 // ===============================
 
-import { world, system } from "@minecraft/server";
+import { world, system, ItemStack } from "@minecraft/server";
 import { MinesiaLevelSystem } from "./level_system.js";
 import { ActionBarManager, DISPLAY_PRIORITIES } from "../action_bar/index.js";
+import { LoreManager } from "../lore_system/loreManager.js";
 
 const levelUpDisplayActive = new Map();
 const LANGUAGE_OBJECTIVE = "minesia_language";
@@ -335,7 +336,27 @@ export class MinesiaLevelEventSystem {
 
     static giveItem(player, itemId, count) {
         try {
-            player.runCommand(`give @s ${itemId} ${count}`);
-        } catch (e) { }
+            const itemStack = new ItemStack(itemId, count);
+            const processedItem = LoreManager.processItem(itemStack, { player });
+            
+            const inventory = player.getComponent('minecraft:inventory');
+            if (!inventory) {
+                player.runCommand(`give @s ${itemId} ${count}`);
+                return;
+            }
+            
+            const container = inventory.container;
+            if (!container) {
+                player.runCommand(`give @s ${itemId} ${count}`);
+                return;
+            }
+            
+            container.addItem(processedItem);
+        } catch (e) {
+            console.error('[MinesiaLevelEvent] giveItem失败:', e?.message ?? e);
+            try {
+                player.runCommand(`give @s ${itemId} ${count}`);
+            } catch (e2) { }
+        }
     }
 }

@@ -9,8 +9,9 @@ import { initializeLoreHandler } from "./random_damage/loreHandler.js";
 import { registerRandomDamageLoreHandler } from "./random_damage/randomDamageLoreHandler.js";
 import { registerVanillaWeaponLoreHandler } from "./random_damage/vanillaWeaponLoreHandler.js";
 import { initializeLoreSystem } from "./lore_system/index.js";
-import { registerCustomItemLoreHandler } from "./lore_system/customItemLoreHandler.js";
 import { registerSetEffectLoreHandler } from "./lore_system/setEffectLoreHandler.js";
+import { registerCustomEventLoreHandler } from "./lore_system/customEventLoreHandler.js";
+import { registerExtraLoreHandler } from "./lore_system/extraLoreHandler.js";
 import { initializeDamageDisplaySystem } from "./damage_display/damageDisplayMain.js";
 import { initializeStaminaSystem, updateStaminaSystem } from "./stamina/staminaMain.js";
 import { processStaminaSetEffects } from "./stamina/staminaSetEffectAdapter.js";
@@ -122,11 +123,14 @@ system.runTimeout(() => {
         registerVanillaWeaponLoreHandler();
         console.log('[Minesia] ✓ 原版武器Lore处理器已注册');
 
-        registerCustomItemLoreHandler();
-        console.log('[Minesia] ✓ 自定义物品Lore处理器已注册');
-
         registerSetEffectLoreHandler();
         console.log('[Minesia] ✓ 套装效果Lore处理器已注册');
+
+        registerCustomEventLoreHandler();
+        console.log('[Minesia] ✓ 自定义事件Lore处理器已注册');
+
+        registerExtraLoreHandler();
+        console.log('[Minesia] ✓ 趣味性Lore处理器已注册');
 
         initializeLoreSystem({ checkInterval: 100 });
         console.log('[Minesia] ✓ 通用Lore系统就绪');
