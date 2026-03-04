@@ -1,6 +1,7 @@
 // main.js - Minesia 主入口文件
 import { world, system } from "@minecraft/server";
 import { ActionFormData } from "@minecraft/server-ui";
+import { initializeDebugSystem } from "./debug/debugManager.js";
 import * as setEffectMain from "./set_effect/setEffectMain.js";
 import * as minesiaLevelMain from "./minesia_level/minesiaLevelMain.js";
 import { MinesiaLevelEventSystem } from "./minesia_level/minesiaLevelEvent.js";
@@ -105,6 +106,9 @@ let errorCount = 0;
 system.runTimeout(() => {
     try {
         console.log('[Minesia] 初始化核心系统...');
+
+        initializeDebugSystem();
+        console.log('[Minesia] ✓ 调试系统就绪');
 
         initializeWelcomeSystem();
         console.log('[Minesia] ✓ 欢迎消息系统就绪');

@@ -334,12 +334,14 @@ function updatePlayerStamina(player) {
         const horizontalMovement = Math.sqrt(dx * dx + dz * dz);
         const isIdle = horizontalMovement < 0.01 && Math.abs(verticalSpeed) < 0.1;
 
-        if (isIdle || data.isExhausted) {
-            const recoveryRate = data.isExhausted
-                ? STAMINA_CONFIG.exhaustionRecoveryRate
-                : STAMINA_CONFIG.recoveryRate;
-
-            StaminaSystem.recoverStamina(player, recoveryRate);
+        if (data.isExhausted) {
+            StaminaSystem.recoverStamina(player, STAMINA_CONFIG.exhaustionRecoveryRate);
+            data.isRecovering = true;
+        } else if (isIdle) {
+            StaminaSystem.recoverStamina(player, STAMINA_CONFIG.recoveryRate);
+            data.isRecovering = true;
+        } else if (horizontalMovement > 0.01 && !isSprinting) {
+            StaminaSystem.recoverStamina(player, STAMINA_CONFIG.walkingRecoveryRate);
             data.isRecovering = true;
         } else {
             data.isRecovering = false;
@@ -450,12 +452,95 @@ function buildEnhancedStaminaBar(percentage, currentStamina, maxStamina, isExhau
 export function initializeStaminaSystem() {
     StaminaSystem.initialize();
     world.afterEvents.entityHurt.subscribe(handlePlayerAttack);
+    world.afterEvents.playerSpawn.subscribe(handlePlayerSpawn);
+    world.afterEvents.playerInventoryItemChange.subscribe(handleInventoryChange);
+    system.runInterval(checkPlayerSleep, 20);
 
     if (world.afterEvents.scriptEventReceive) {
         world.afterEvents.scriptEventReceive.subscribe(handleScriptEvent);
     }
 
     console.log('[Stamina] 体力值系统初始化完成');
+}
+
+const playerSleepState = new Map();
+const playerSleepTime = new Map();
+
+function checkPlayerSleep() {
+    const players = world.getPlayers();
+    for (const player of players) {
+        const playerId = player.id;
+        const wasSleeping = playerSleepState.get(playerId) || false;
+        const isSleeping = player.isSleeping;
+
+        if (isSleeping && !wasSleeping) {
+            playerSleepTime.set(playerId, world.getTimeOfDay());
+        }
+
+        if (wasSleeping && !isSleeping) {
+            const sleepStartTime = playerSleepTime.get(playerId);
+            const currentTime = world.getTimeOfDay();
+            const timeSlept = currentTime < sleepStartTime
+                ? (24000 - sleepStartTime) + currentTime
+                : currentTime - sleepStartTime;
+
+            if (timeSlept > 100 || (sleepStartTime > 12542 && currentTime < 12542)) {
+                StaminaSystem.fullRestore(player);
+            }
+        }
+
+        playerSleepState.set(playerId, isSleeping);
+    }
+}
+
+function handlePlayerSpawn(event) {
+    const { player, initialSpawn } = event;
+    if (!player) return;
+
+    StaminaSystem.fullRestore(player);
+
+    if (!initialSpawn) {
+        system.runTimeout(() => {
+            try {
+                const healthComponent = player.getComponent('minecraft:health');
+                if (healthComponent) {
+                    const maxHealth = healthComponent.effectiveMax ?? 10;
+                    healthComponent.setCurrentValue(maxHealth);
+                }
+            } catch (e) {
+                console.error('[Stamina] 恢复生命值失败:', e?.message ?? e);
+            }
+        }, 5);
+    }
+}
+
+function handleInventoryChange(event) {
+    if (!STAMINA_CONFIG.enabled) return;
+
+    const { player, beforeItemStack, itemStack } = event;
+    if (!player) return;
+
+    if (!beforeItemStack) return;
+
+    const beforeCount = beforeItemStack.amount;
+    const afterCount = itemStack?.amount ?? 0;
+
+    if (beforeCount <= afterCount) return;
+
+    const itemId = beforeItemStack.typeId;
+    let nutrition = STAMINA_CONFIG.vanillaFoodNutrition?.[itemId] ?? 0;
+
+    if (nutrition === 0) {
+        const foodComponent = beforeItemStack.getComponent('minecraft:food');
+        if (foodComponent) {
+            nutrition = foodComponent.nutrition;
+        }
+    }
+
+    if (nutrition > 0) {
+        const staminaRecovery = nutrition * STAMINA_CONFIG.foodRecoveryRatio;
+        StaminaSystem.recoverStamina(player, staminaRecovery);
+    }
 }
 
 function handleScriptEvent(event) {

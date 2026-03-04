@@ -10,6 +10,7 @@ import { recentRandomDamage, isCurrentlyApplyingRandomDamage } from "../random_d
 import { ActionBarManager, DISPLAY_PRIORITIES } from "../action_bar/index.js";
 import { getAoeDamageRecord, isAoeEntity } from "../custom_events/item_events/aoeDamageRegistry.js";
 import { isLevelUpDisplayActive } from "../minesia_level/minesiaLevelEvent.js";
+import { debug } from "../debug/debugManager.js";
 
 const playerComboState = new Map();
 const playerDisplayState = new Map();
@@ -32,7 +33,7 @@ function getPlayerLocale(player) {
 
 export function initializeDamageDisplaySystem() {
     world.afterEvents.entityHurt.subscribe(handleEntityHurt);
-    console.log('[DamageDisplay] 系统初始化完成');
+    debug.logWithTag("DamageDisplay", "系统初始化完成");
 }
 
 function handleEntityHurt(event) {
@@ -84,7 +85,7 @@ function handleEntityHurt(event) {
         showDamageDisplay(attacker, totalDamage, hurtEntity);
 
     } catch (error) {
-        console.error('[DamageDisplay] 处理伤害显示时出错:', error?.message ?? error);
+        debug.logError("DamageDisplay", `处理伤害显示时出错: ${error?.message ?? error}`);
     }
 }
 

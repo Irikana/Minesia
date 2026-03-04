@@ -6,6 +6,7 @@
 
 export const CUSTOM_EVENT_CONFIG = {
     "minesia:toy_sword": {
+        color: "7",
         effects: [
             { zh_CN: "它真的能用来战斗吗？", en_US: "Can it really be used for battle?" }
         ]

@@ -33,13 +33,14 @@ export function registerCustomEventLoreHandler() {
 
             const locale = context.locale || "zh_CN";
             const currentLore = context.currentLore || [];
+            const colorCode = config.color || "9";
 
             const loreLines = [""];
 
             for (const effect of config.effects) {
                 const effectText = effect[locale] || effect.zh_CN;
                 if (!currentLore.some(line => line.includes(effectText))) {
-                    loreLines.push(`§r§9${effectText}`);
+                    loreLines.push(`§r§${colorCode}${effectText}`);
                 }
             }
 

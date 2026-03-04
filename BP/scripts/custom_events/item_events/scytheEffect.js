@@ -1,5 +1,6 @@
 import { system } from "@minecraft/server";
 import { registerAoeDamage, beginAoeEntity, endAoeEntity } from "./aoeDamageRegistry.js";
+import { debug } from "../../debug/debugManager.js";
 
 const SCYTHE_ITEMS = [
     "minesia:wooden_scythe",
@@ -90,7 +91,7 @@ export function applyScytheEffect(target, attacker, baseDamage) {
 
         return { damagedEntities, totalAoeDamage };
     } catch (error) {
-        console.error('[Scythe] 应用镰刀效果时出错:', error?.message ?? error);
+        debug.logError("Scythe", `应用镰刀效果时出错: ${error?.message ?? error}`);
         return { damagedEntities: [], totalAoeDamage: 0 };
     }
 }
@@ -126,7 +127,7 @@ function applyDamageWithEffect(entity, damage, attacker, sourceLocation) {
         }
 
     } catch (error) {
-        console.error('[Scythe] 应用伤害效果时出错:', error?.message ?? error);
+        debug.logError("Scythe", `应用伤害效果时出错: ${error?.message ?? error}`);
     }
 
     system.runTimeout(() => {

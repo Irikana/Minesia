@@ -1,4 +1,5 @@
 import { EquipmentSlot, system, Vector3, world } from "@minecraft/server";
+import { debug } from "../../debug/debugManager.js";
 
 export const ENDER_PEARL_SWORD_EFFECT = {
     name: "Ender Pearl Sword",
@@ -43,9 +44,9 @@ export function applyEnderPearlSwordEffect(target, attacker, isOffhandEquipped) 
 
         attacker.runCommand("playsound mob.endermen.portal @s");
 
-        console.log(`[EnderPearlSword] ${attacker.name} 传送目标`);
+        debug.logWithTag("EnderPearlSword", `${attacker.name} 传送目标`);
     } catch (error) {
-        console.error("[EnderPearlSword] 应用传送效果时出错:", error?.message ?? error);
+        debug.logError("EnderPearlSword", `应用传送效果时出错: ${error?.message ?? error}`);
     }
 }
 

@@ -1,5 +1,6 @@
 import { system } from "@minecraft/server";
 import { registerAoeDamage, beginAoeEntity, endAoeEntity } from "./aoeDamageRegistry.js";
+import { debug } from "../../debug/debugManager.js";
 
 export const TINA_EFFECT = {
     name: "缇娜",
@@ -65,11 +66,11 @@ export function applyTinaEffect(target, attacker) {
             });
         }
 
-        console.log(`[Tina] ${attacker.name} 的缇娜触发了落叶效果，对 ${damagedEntities.length} 个同类实体造成伤害`);
+        debug.logWithTag("Tina", `${attacker.name} 的缇娜触发了落叶效果，对 ${damagedEntities.length} 个同类实体造成伤害`);
 
         return { damagedEntities, totalAoeDamage };
     } catch (error) {
-        console.error('[Tina] 应用缇娜效果时出错:', error?.message ?? error);
+        debug.logError("Tina", `应用缇娜效果时出错: ${error?.message ?? error}`);
         return { damagedEntities: [], totalAoeDamage: 0 };
     }
 }
@@ -101,7 +102,7 @@ function applyDamageWithEffect(entity, damage, attacker, sourceLocation) {
         }
 
     } catch (error) {
-        console.error('[Tina] 应用伤害效果时出错:', error?.message ?? error);
+        debug.logError("Tina", `应用伤害效果时出错: ${error?.message ?? error}`);
     }
     system.runTimeout(() => {
         endAoeEntity(entityId);

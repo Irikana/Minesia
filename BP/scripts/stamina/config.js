@@ -45,6 +45,61 @@ export const STAMINA_CONFIG = {
     // 玩家静止不动时的恢复速度
     recoveryRate: 0.5,
 
+    // 走动恢复速率（每tick恢复量）
+    // 玩家走动时的恢复速度（5每秒 = 5/20每tick = 0.25每tick）
+    walkingRecoveryRate: 0.25,
+
+    // 食物恢复倍率
+    // 每恢复1点饥饿值对应的体力值恢复量
+    foodRecoveryRatio: 10,
+
+    // ------------------------------------------
+    // 原版食物营养值映射
+    // ------------------------------------------
+    // Script API 的 minecraft:food 组件只适用于自定义食物
+    // 原版食物需要通过 ID 映射获取营养值
+    vanillaFoodNutrition: {
+        "minecraft:apple": 4,
+        "minecraft:baked_potato": 5,
+        "minecraft:beef": 3,
+        "minecraft:beetroot": 1,
+        "minecraft:bread": 5,
+        "minecraft:cake": 14,
+        "minecraft:carrot": 3,
+        "minecraft:chicken": 2,
+        "minecraft:chorus_fruit": 4,
+        "minecraft:cod": 2,
+        "minecraft:cooked_beef": 8,
+        "minecraft:cooked_chicken": 6,
+        "minecraft:cooked_cod": 5,
+        "minecraft:cooked_mutton": 6,
+        "minecraft:cooked_porkchop": 8,
+        "minecraft:cooked_rabbit": 5,
+        "minecraft:cooked_salmon": 6,
+        "minecraft:cookie": 2,
+        "minecraft:dried_kelp": 1,
+        "minecraft:enchanted_golden_apple": 4,
+        "minecraft:golden_apple": 4,
+        "minecraft:golden_carrot": 6,
+        "minecraft:honey_bottle": 6,
+        "minecraft:melon_slice": 2,
+        "minecraft:mushroom_stew": 6,
+        "minecraft:mutton": 2,
+        "minecraft:porkchop": 3,
+        "minecraft:potato": 1,
+        "minecraft:pufferfish": 1,
+        "minecraft:pumpkin_pie": 8,
+        "minecraft:rabbit": 3,
+        "minecraft:rabbit_stew": 10,
+        "minecraft:beetroot_soup": 6,
+        "minecraft:salmon": 2,
+        "minecraft:spider_eye": 2,
+        "minecraft:sweet_berries": 2,
+        "minecraft:tropical_fish": 1,
+        "minecraft:glow_berries": 2,
+        "minecraft:suspicious_stew": 6
+    },
+
     // ------------------------------------------
     // 疲劳设置
     // ------------------------------------------
