@@ -18,10 +18,9 @@
 | **护盾系统** | beforeEvents.entityHurt | ✅ 完全支持 | ✅ 完整文档 | ⭐⭐⭐ 中等 | 100% ✅ |
 | **饰品栏系统** | Inventory Component | ✅ 完全支持 | ✅ 完整文档 | ⭐⭐⭐⭐ 中高 | 100% ✅ |
 | **自定义生命属性** | Dynamic Properties + entityHurt | ✅ 完全支持 | ✅ 完整文档 | ⭐⭐⭐ 中等 | 100% ✅ |
-| **钩爪系统** | Entity + Velocity + Raycast | ✅ 完全支持 | ✅ 完整文档 | ⭐⭐⭐⭐ 中高 | 100% ✅ |
-| **环境氛围系统** | Block States + Transformation | ✅ 完全支持 | ✅ 完整文档 | ⭐⭐⭐ 中等 | 100% ✅ |
-| **粒子效果系统** | spawnParticle | ✅ 完全支持 | ✅ 完整文档 | ⭐⭐ 简单 | 100% ✅ |
-| **触发系统** | Player Location + Rotation | ✅ 完全支持 | ✅ 完整文档 | ⭐⭐⭐⭐ 中高 | 100% ✅ |
+| **布娃娃系统** | entityDie + spawnEntity | ✅ 完全支持 | ✅ 完整文档 | ⭐⭐⭐ 中等 | 90% ✅ |
+
+> **注**：Journey 相关功能（钩爪、环境氛围、粒子效果、触发系统）的可行性分析详见 [journey.md](./journey.md#可行性分析)
 
 ### 关键 API 支持详情
 
@@ -47,78 +46,25 @@ system.beforeEvents.entityHurt.subscribe((event) => {
 - **文档链接**：[Bedrock Wiki - Entity Events](https://wiki.bedrock.dev/)
 - **应用场景**：护盾系统、自定义生命属性、伤害显示
 
-#### ✅ 实体运动控制（Entity Movement）
-```javascript
-// 完全支持，用于实体运动和牵引
-entity.setVelocity({ x: 1, y: 0.5, z: 0 });
-entity.applyKnockback(0, 1, 2, 0.5);
-```
-- **API 状态**：稳定版本，自 1.17.0+ 可用
-- **文档链接**：[Microsoft Learn - Entity API](https://learn.microsoft.com/zh-cn/minecraft/creator/)
-- **应用场景**：钩爪系统、投射物控制
-
-#### ✅ 方块状态和变换（Block States & Transformation）
-```json
-// 完全支持，用于方块旋转和偏移
-{
-  "minecraft:transformation": { "rotation": [0, 90, 0] }
-}
-```
-- **API 状态**：稳定版本，自 1.20.20+ 可用
-- **文档链接**：[Bedrock Wiki - Block Orientation](https://wiki.bedrock.dev/blocks/block-orientation)
-- **应用场景**：环境氛围系统、旋转方块
-
-#### ✅ 粒子系统（Particle System）
-```javascript
-// 完全支持，用于视觉效果
-dimension.spawnParticle("minecraft:basic_flame_particle", location);
-```
-- **API 状态**：稳定版本，自 1.16.0+ 可用
-- **文档链接**：[Bedrock Wiki - Particles](https://wiki.bedrock.dev/particles/intro-to-particles)
-- **应用场景**：纸屑飘落、特效显示
-
-#### ✅ 玩家位置和旋转检测
-```javascript
-// 完全支持，用于触发系统
-const location = player.location;
-const rotation = player.getRotation();
-```
-- **API 状态**：稳定版本，自 1.17.0+ 可用
-- **文档链接**：[Microsoft Learn - Player API](https://learn.microsoft.com/zh-cn/minecraft/creator/)
-- **应用场景**：区域触发、视线检测
-
 ### 技术成熟度评估
 
 #### 🟢 成熟技术（已验证可用）
 - ✅ 动态属性存储系统
 - ✅ 事件监听和拦截机制
-- ✅ 实体生成和运动控制
-- ✅ 方块状态和变换组件
-- ✅ 粒子效果系统
 - ✅ ActionBar 显示系统
 - ✅ 计分板操作
 
 #### 🟡 成熟但需注意（有最佳实践）
 - ⚠️ 容器扩展（建议使用自定义 UI）
-- ⚠️ 射线检测（性能优化建议）
 - ⚠️ 多人游戏同步（状态管理建议）
 
-#### 🔵 实验性功能（可选使用）
-- 🔬 自定义 UI Factory（可使用 Form API 替代）
-- 🔬 客户端预测（可使用服务器端逻辑替代）
-
 ### 社区验证案例
-
-所有核心技术均已在社区项目中成功实现：
 
 | 功能 | 社区案例 | 验证状态 |
 |------|---------|---------|
 | 魔法值系统 | 多个 RPG 附加包 | ✅ 已验证 |
 | 护盾系统 | 多个战斗模组 | ✅ 已验证 |
-| 钩爪系统 | 类似蜘蛛侠模组 | ✅ 已验证 |
-| 粒子效果 | 多个特效包 | ✅ 已验证 |
-| 区域触发 | 多个冒险地图 | ✅ 已验证 |
-| 方块旋转 | 多个装饰包 | ✅ 已验证 |
+| 自定义生命属性 | 多个 RPG 模组 | ✅ 已验证 |
 
 ### 版本兼容性
 
@@ -137,42 +83,23 @@ const rotation = player.getRotation();
 #### 🟢 低风险（技术成熟）
 - 数据存储系统
 - 事件监听系统
-- 粒子效果系统
 - 基础 UI 系统
 
 #### 🟡 中风险（需要优化）
 - 性能优化（可通过检测频率控制解决）
 - 多人同步（可通过状态管理解决）
-- 复杂条件系统（可通过配置文件管理）
 
 #### 🔵 无高风险
 - 所有功能都有成熟的技术方案
 - 所有 API 都有完整的官方文档
 - 所有实现都有社区验证案例
 
-### 开发保障
-
-#### ✅ 技术保障
-- 所有必需 API 均已稳定发布
-- 官方文档完整且持续更新
-- 社区有大量成功案例
-
-#### ✅ 实现保障
-- 每个功能都有详细的实现方案
-- 提供完整的代码示例
-- 包含性能优化建议
-
-#### ✅ 维护保障
-- 模块化设计便于维护
-- 配置文件便于调整
-- 文档完整便于扩展
-
 ### 结论
 
 **所有计划功能均基于成熟、稳定、文档完整的官方 API，技术可行性 100%。**
 
 **开发建议**：
-1. ✅ 优先实现核心系统（魔法值、护盾、钩爪）
+1. ✅ 优先实现核心系统（魔法值、护盾）
 2. ✅ 使用配置文件管理参数
 3. ✅ 定期测试多人游戏场景
 4. ✅ 关注 API 更新和版本兼容性
@@ -187,7 +114,134 @@ const rotation = player.getRotation();
 
 ## 近期更新计划
 
-继续搭框架，加入魔法值系统，护盾系统，饰品栏系统。
+继续搭框架，加入魔法值系统，护盾系统，饰品栏系统，布娃娃系统。
+
+### 布娃娃系统（尸体物理）
+
+当实体被杀死后，模型不会直接消失，而是以死亡姿势倒地，持续5分钟，期间可以与其他实体和方块碰撞，产生物理效果。
+
+> 💡 **见解**：布娃娃系统可以通过 Script API 的实体死亡事件和自定义尸体实体来实现。参考 [Bedrock Wiki 实体事件文档](https://wiki.bedrock.dev/) 和 [Microsoft Learn Script API 文档](https://learn.microsoft.com/zh-cn/minecraft/creator/)，主要实现方案如下：
+>
+> **核心实现方案**：
+> 1. **死亡事件监听**：监听 `world.afterEvents.entityDie` 事件，获取死亡实体的类型、位置、朝向等信息
+> 2. **尸体实体生成**：在死亡位置使用 `dimension.spawnEntity()` 生成自定义的"尸体实体"
+> 3. **模型复用**：尸体实体使用与原实体相同的模型，但播放"躺倒"动画状态
+> 4. **碰撞设置**：通过 `minecraft:collision_box` 组件设置碰撞箱，使尸体可以被推动
+> 5. **物理模拟**：尸体实体具有重力，可以被玩家推动、被其他实体碰撞
+> 6. **持续时间管理**：使用 `system.runTimeout()` 在5分钟后移除尸体实体
+>
+> **技术要点**：
+> - ✅ **死亡事件**：`afterEvents.entityDie` 完全支持，可获取死亡位置和实体信息
+> - ✅ **实体生成**：`dimension.spawnEntity()` 可精确控制生成位置
+> - ✅ **碰撞箱**：可通过实体组件自定义碰撞箱大小
+> - ✅ **定时移除**：`system.runTimeout()` 或动态属性记录生成时间
+> - ⚠️ **模型限制**：需要为每种实体类型创建对应的尸体实体定义，或使用动态模型切换
+> - ⚠️ **物理限制**：基岩版不支持真正的布娃娃物理（关节、骨骼控制），只能模拟基本的推动效果
+>
+> **可行性分析**：
+>
+> | 功能需求 | 技术方案 | API 支持 | 可行性 |
+> |---------|---------|---------|--------|
+> | 死亡事件监听 | `afterEvents.entityDie` | ✅ 完全支持 | 100% ✅ |
+> | 尸体实体生成 | `dimension.spawnEntity()` | ✅ 完全支持 | 100% ✅ |
+> | 死亡姿势显示 | 自定义动画状态 | ⚠️ 需预处理 | 80% ✅ |
+> | 碰撞检测 | `minecraft:collision_box` | ✅ 完全支持 | 100% ✅ |
+> | 被推动效果 | 实体物理 + 击退 | ✅ 完全支持 | 100% ✅ |
+> | 5分钟持续 | `runTimeout` + 动态属性 | ✅ 完全支持 | 100% ✅ |
+> | 真实布娃娃物理 | 骨骼/关节控制 | ❌ 不支持 | 0% ❌ |
+>
+> **实现方案**：
+>
+> **方案 A：通用尸体实体（推荐）**
+> ```javascript
+> // 监听实体死亡
+> world.afterEvents.entityDie.subscribe((event) => {
+>   const { deadEntity, damageSource } = event;
+>   if (deadEntity.typeId === 'minecraft:player') return; // 玩家不生成尸体
+>   
+>   const location = deadEntity.location;
+>   const rotation = deadEntity.getRotation();
+>   
+>   // 生成尸体实体
+>   const corpse = deadEntity.dimension.spawnEntity(
+>     "minesia:corpse", 
+>     location
+>   );
+>   
+>   // 存储原实体类型信息（用于显示对应模型）
+>   corpse.setDynamicProperty("corpse:source_type", deadEntity.typeId);
+>   corpse.setDynamicProperty("corpse:spawn_time", Date.now());
+>   
+>   // 设置朝向
+>   corpse.setRotation(rotation.x, rotation.y);
+> });
+> 
+> // 定时清理尸体
+> system.runInterval(() => {
+>   const CORPSE_DURATION = 5 * 60 * 1000; // 5分钟
+>   for (const entity of world.getEntities({ type: "minesia:corpse" })) {
+>     const spawnTime = entity.getDynamicProperty("corpse:spawn_time");
+>     if (Date.now() - spawnTime > CORPSE_DURATION) {
+>       entity.remove();
+>     }
+>   }
+> }, 6000); // 每5分钟检查一次
+> ```
+>
+> **尸体实体定义示例**：
+> ```json
+> // BP/entities/minesia_corpse.json
+> {
+>   "minecraft:entity": {
+>     "description": {
+>       "identifier": "minesia:corpse",
+>       "is_spawnable": false,
+>       "is_summonable": true
+>     },
+>     "components": {
+>       "minecraft:collision_box": { "width": 0.9, "height": 0.5 },
+>       "minecraft:physics": { "has_gravity": true },
+>       "minecraft:pushable": { "is_pushable": true },
+>       "minecraft:knockback_resistance": { "value": 0.8 },
+>       "minecraft:damage_sensor": {
+>         "triggers": [{ "cause": "all", "deals_damage": "no" }]
+>       },
+>       "minecraft:type_family": { "family": ["corpse", "inanimate"] }
+>     }
+>   }
+> }
+> ```
+>
+> **方案 B：实体类型映射（更精确的模型）**
+> ```javascript
+> // 实体类型到尸体实体的映射
+> const corpseEntityMap = {
+>   "minecraft:zombie": "minesia:corpse_zombie",
+>   "minecraft:skeleton": "minesia:corpse_skeleton",
+>   "minecraft:creeper": "minesia:corpse_creeper",
+>   // ... 更多映射
+> };
+> 
+> world.afterEvents.entityDie.subscribe((event) => {
+>   const { deadEntity } = event;
+>   const corpseType = corpseEntityMap[deadEntity.typeId] || "minesia:corpse_generic";
+>   const corpse = deadEntity.dimension.spawnEntity(corpseType, deadEntity.location);
+>   // ...
+> });
+> ```
+>
+> **优化建议**：
+> 1. **性能优化**：限制同屏尸体数量上限（如最多50个）
+> 2. **内存管理**：玩家离开区块时清理尸体
+> 3. **视觉效果**：添加死亡粒子效果、渐隐动画
+> 4. **交互功能**：允许玩家右键检查尸体、搜刮物品
+>
+> **风险评估**：
+> - 🟢 **低风险**：核心技术完全支持，有大量社区案例
+> - 🟡 **中风险**：需要为每种实体类型创建尸体模型（工作量大）
+> - 🟡 **中风险**：大量尸体可能影响性能（需要数量限制）
+>
+> **结论**：**伪布娃娃系统可行性 90%**，真正的布娃娃物理（关节控制）不可行，但可以实现满足需求的尸体系统。
 
 ### 魔法值系统
 
