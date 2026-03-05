@@ -4,8 +4,10 @@
 // 清理旧的/重复的 Lore
 // ===============================
 
+import { debug } from "../debug/debugManager.js";
+
 export function initializeLoreHandler() {
-    console.log('[RandomDamage] Lore处理器初始化完成');
+    debug.logWithTag("RandomDamage", "Lore处理器初始化完成");
 }
 
 export function checkPlayerInventory(player) {

@@ -60,8 +60,8 @@ export const debug = {
 };
 
 export function initializeDebugSystem() {
-    if (world.afterEvents.scriptEventReceive) {
-        world.afterEvents.scriptEventReceive.subscribe((event) => {
+    if (system.afterEvents.scriptEventReceive) {
+        system.afterEvents.scriptEventReceive.subscribe((event) => {
             const { id, sourceEntity } = event;
 
             switch (id) {

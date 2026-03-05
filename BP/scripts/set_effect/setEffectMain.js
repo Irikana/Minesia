@@ -8,6 +8,7 @@ import * as actionsModule from "./actions.js";
 import * as setEffectsModule from "./set_effects.js";
 import { MinesiaLevelSystem } from "../minesia_level/level_system.js";
 import { MinesiaLevelEventSystem } from "../minesia_level/minesiaLevelEvent.js";
+import { debug } from "../debug/debugManager.js";
 
 import { processItemEffects } from "../custom_events/index.js";
 
@@ -36,9 +37,9 @@ export function handleAllPlayersSetEffects() {
             const shouldProcess = currentEquipmentState !== lastEquipmentState;
 
             if (shouldProcess) {
-                console.log(`[SetEffectMain] ${player.name}: 装备状态变化`);
-                console.log(`[SetEffectMain] 旧状态: ${lastEquipmentState || 'none'}`);
-                console.log(`[SetEffectMain] 新状态: ${currentEquipmentState}`);
+                debug.logWithTag("SetEffectMain", `${player.name}: 装备状态变化`);
+                debug.logWithTag("SetEffectMain", `旧状态: ${lastEquipmentState || 'none'}`);
+                debug.logWithTag("SetEffectMain", `新状态: ${currentEquipmentState}`);
                 lastPlayerEquipment.set(playerId, currentEquipmentState);
             }
 
@@ -57,7 +58,7 @@ export function handleAllPlayersSetEffects() {
             playerProcessingCooldown.set(playerId, currentTime);
         }
     } catch (error) {
-        console.error('[SetEffectMain] 主循环错误:', error);
+        debug.logError("SetEffectMain", `主循环错误: ${error}`);
     }
 }
 
@@ -74,7 +75,7 @@ function getEquipmentState(equippable) {
         }
         return equipmentItems.sort().join('|');
     } catch (error) {
-        console.warn('[SetEffectMain] 获取装备状态失败:', error.message);
+        debug.logWarning("SetEffectMain", `获取装备状态失败: ${error.message}`);
         return 'error_state';
     }
 }
@@ -87,7 +88,7 @@ function processItemRules(player, equippable) {
 
             const item = equippable.getEquipment(slot);
             if (item && item.typeId === rule.id) {
-                console.log(`[SetEffectMain] ${player.name}: 检测到物品 ${rule.id} 在槽位 ${slotName}`);
+                debug.logWithTag("SetEffectMain", `${player.name}: 检测到物品 ${rule.id} 在槽位 ${slotName}`);
                 actionsModule.applyActions(player, rule.actions);
             }
         }

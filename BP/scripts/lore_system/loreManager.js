@@ -6,6 +6,7 @@
 
 import { world, system } from "@minecraft/server";
 import { LoreRegistry } from "./loreRegistry.js";
+import { debug } from "../debug/debugManager.js";
 
 const LANGUAGE_OBJECTIVE = "minesia_language";
 const DEFAULT_LOCALE = "zh_CN";
@@ -106,7 +107,7 @@ function setItemLore(itemStack, lore) {
         newItem.setLore(lore);
         return newItem;
     } catch (error) {
-        console.error('[LoreManager] 设置Lore失败:', error?.message ?? error);
+        debug.logError("LoreManager", `设置Lore失败: ${error?.message ?? error}`);
         return null;
     }
 }
@@ -139,7 +140,7 @@ export const LoreManager = {
                     modified = true;
                 }
             } catch (error) {
-                console.error(`[LoreManager] 处理器 ${handler.id} 生成Lore出错:`, error?.message ?? error);
+                debug.logError("LoreManager", `处理器 ${handler.id} 生成Lore出错: ${error?.message ?? error}`);
             }
         }
 
@@ -177,7 +178,7 @@ export const LoreManager = {
             const locale = getPlayerLocale(player);
             this.processContainer(container, { player, locale });
         } catch (error) {
-            console.error('[LoreManager] 处理玩家背包出错:', error?.message ?? error);
+            debug.logError("LoreManager", `处理玩家背包出错: ${error?.message ?? error}`);
         }
     },
 
@@ -199,7 +200,7 @@ export const LoreManager = {
                 return processedItem;
             }
         } catch (error) {
-            console.error('[LoreManager] 处理掉落物出错:', error?.message ?? error);
+            debug.logError("LoreManager", `处理掉落物出错: ${error?.message ?? error}`);
         }
         return null;
     },
@@ -232,11 +233,11 @@ export function initializeLoreSystem(options = {}) {
                 LoreManager.processPlayerInventory(player);
             }
         } catch (error) {
-            console.error('[LoreSystem] 定期检查出错:', error?.message ?? error);
+            debug.logError("LoreSystem", `定期检查出错: ${error?.message ?? error}`);
         }
     }, checkInterval);
 
-    console.log('[LoreSystem] Lore系统初始化完成');
+    debug.logWithTag("LoreSystem", "Lore系统初始化完成");
 }
 
 export { LoreRegistry };

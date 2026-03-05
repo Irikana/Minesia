@@ -8,6 +8,7 @@ import { world, system, ItemStack } from "@minecraft/server";
 import { MinesiaLevelSystem } from "./level_system.js";
 import { ActionBarManager, DISPLAY_PRIORITIES } from "../action_bar/index.js";
 import { LoreManager } from "../lore_system/loreManager.js";
+import { debug } from "../debug/debugManager.js";
 
 const levelUpDisplayActive = new Map();
 const LANGUAGE_OBJECTIVE = "minesia_language";
@@ -235,7 +236,7 @@ export class MinesiaLevelEventSystem {
             }
             return true;
         } catch (e) {
-            console.error('[MinesiaEvent] 初始化计分板失败:', e?.message);
+            debug.logError("MinesiaEvent", `初始化计分板失败: ${e?.message}`);
             return false;
         }
     }
@@ -353,7 +354,7 @@ export class MinesiaLevelEventSystem {
             
             container.addItem(processedItem);
         } catch (e) {
-            console.error('[MinesiaLevelEvent] giveItem失败:', e?.message ?? e);
+            debug.logError("MinesiaLevelEvent", `giveItem失败: ${e?.message ?? e}`);
             try {
                 player.runCommand(`give @s ${itemId} ${count}`);
             } catch (e2) { }

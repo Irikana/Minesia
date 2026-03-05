@@ -7,6 +7,7 @@
 import { LoreRegistry } from "../lore_system/index.js";
 import { getWeaponConfig, formatDamageRange, LOCALE_SETTINGS } from "./config.js";
 import { getWeaponStaminaCost, LOCALE_SETTINGS as STAMINA_LOCALE } from "../stamina/weaponStaminaConfig.js";
+import { debug } from "../debug/debugManager.js";
 
 const LORE_COLOR = "§r§9";
 const STAMINA_COLOR = "§r§c";
@@ -66,5 +67,5 @@ export function registerRandomDamageLoreHandler() {
         }
     });
 
-    console.log('[RandomDamageLore] 随机伤害 Lore 处理器已注册');
+    debug.logWithTag("RandomDamageLore", "随机伤害 Lore 处理器已注册");
 }

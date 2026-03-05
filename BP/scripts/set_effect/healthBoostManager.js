@@ -5,6 +5,7 @@
 // ===============================
 
 import { world, system } from "@minecraft/server";
+import { debug } from "../debug/debugManager.js";
 
 const BASE_PLAYER_HEALTH = 10;
 const EFFECT_DURATION = 25;
@@ -55,7 +56,7 @@ export function updateHealthBoost(player, equipmentHealth, levelHealth, healthPe
     }
 
     const oldLevel = state.currentLevel;
-    console.log(`[HealthBoostManager] ${player.name}: 生命提升等级变化 ${oldLevel} -> ${newLevel}`);
+    debug.logWithTag("HealthBoostManager", `${player.name}: 生命提升等级变化 ${oldLevel} -> ${newLevel}`);
 
     const currentHealth = player.getComponent("minecraft:health");
     const currentHealthValue = currentHealth ? currentHealth.currentValue : BASE_PLAYER_HEALTH;
@@ -64,7 +65,7 @@ export function updateHealthBoost(player, equipmentHealth, levelHealth, healthPe
       try {
         player.removeEffect("minecraft:health_boost");
       } catch (e) {
-        console.warn(`[HealthBoostManager] 移除效果失败: ${e}`);
+        debug.logWarning("HealthBoostManager", `移除效果失败: ${e}`);
       }
     }
 
@@ -93,10 +94,10 @@ export function updateHealthBoost(player, equipmentHealth, levelHealth, healthPe
     state.levelHealth = newLevelHealth;
     state.healthPercent = newHealthPercent;
 
-    console.log(`[HealthBoostManager] ${player.name}: 血量恢复 ${currentHealthValue} -> ${restoredHealth}, 新最大生命: ${newMaxHealth}`);
+    debug.logWithTag("HealthBoostManager", `${player.name}: 血量恢复 ${currentHealthValue} -> ${restoredHealth}, 新最大生命: ${newMaxHealth}`);
 
   } catch (error) {
-    console.error(`[HealthBoostManager] 更新生命提升时出错: ${error}`);
+    debug.logError("HealthBoostManager", `更新生命提升时出错: ${error}`);
   }
 }
 
@@ -122,7 +123,7 @@ export function initHealthBoostManager() {
     const state = playerHealthBoostState.get(playerId);
     if (state && state.currentLevel > 0) {
       refreshHealthBoostEffect(player, state.currentLevel);
-      console.log(`[HealthBoostManager] ${player.name} 重生后恢复生命提升等级 ${state.currentLevel}`);
+      debug.logWithTag("HealthBoostManager", `${player.name} 重生后恢复生命提升等级 ${state.currentLevel}`);
     }
   });
 
@@ -136,5 +137,5 @@ export function initHealthBoostManager() {
     }
   }, REFRESH_INTERVAL);
 
-  console.log("[HealthBoostManager] 生命提升管理器已初始化");
+  debug.logWithTag("HealthBoostManager", "生命提升管理器已初始化");
 }

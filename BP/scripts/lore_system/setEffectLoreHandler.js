@@ -6,6 +6,7 @@
 
 import { LoreRegistry } from "./index.js";
 import { SET_EFFECT_CONFIG } from "./setEffectLoreConfig.js";
+import { debug } from "../debug/debugManager.js";
 
 export function registerSetEffectLoreHandler() {
     LoreRegistry.register("set_effect_lore", {
@@ -70,5 +71,5 @@ export function registerSetEffectLoreHandler() {
         }
     });
 
-    console.log('[SetEffectLore] 套装效果 Lore 处理器已注册');
+    debug.logWithTag("SetEffectLore", "套装效果 Lore 处理器已注册");
 }

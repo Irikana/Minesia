@@ -17,6 +17,7 @@ import { applySelfishEffect, isSelfishItem } from "../custom_events/item_events/
 import { applyBlackDaggerEffect, isBlackDaggerItem } from "../custom_events/item_events/blackDaggerEffect.js";
 import { applyWhiteGoldenSwordEffect, isWhiteGoldenSwordItem } from "../custom_events/item_events/whiteGoldenSwordEffect.js";
 import { StaminaSystem } from "../stamina/staminaMain.js";
+import { debug } from "../debug/debugManager.js";
 
 const recentAttacks = new Map();
 
@@ -30,7 +31,7 @@ export function isCurrentlyApplyingRandomDamage() {
 
 export function initializeRandomDamageSystem() {
     world.afterEvents.entityHurt.subscribe(handleEntityHurt);
-    console.log('[RandomDamage] 系统初始化完成');
+    debug.logWithTag("RandomDamage", "系统初始化完成");
 }
 
 function handleEntityHurt(event) {
@@ -76,7 +77,7 @@ function handleEntityHurt(event) {
 
             recordRandomDamage(attacker, hurtEntity, damage, randomDamage);
 
-            console.log(`[RandomDamage] ${attacker.name} 使用 ${mainhandItem.typeId} 造成 ${randomDamage} 点随机伤害`);
+            debug.logWithTag("RandomDamage", `${attacker.name} 使用 ${mainhandItem.typeId} 造成 ${randomDamage} 点随机伤害`);
         }
 
         if (attacker.hasTag("desert_walker_active")) {
@@ -133,7 +134,7 @@ function handleEntityHurt(event) {
         }
 
     } catch (error) {
-        console.error('[RandomDamage] 处理伤害事件时出错:', error?.message ?? error);
+        debug.logError("RandomDamage", `处理伤害事件时出错: ${error?.message ?? error}`);
     }
 }
 
@@ -144,10 +145,10 @@ function applyDesertWalkerEffect(target, attacker) {
                 amplifier: 0,
                 showParticles: true
             });
-            console.log(`[DesertWalker] ${attacker.name} 的沙漠行者触发了减速效果`);
+            debug.logWithTag("DesertWalker", `${attacker.name} 的沙漠行者触发了减速效果`);
         }
     } catch (error) {
-        console.error('[DesertWalker] 应用减速效果时出错:', error?.message ?? error);
+        debug.logError("DesertWalker", `应用减速效果时出错: ${error?.message ?? error}`);
     }
 }
 
@@ -162,10 +163,10 @@ function applyDesertScytheEffect(target, attacker) {
                 amplifier: 0,
                 showParticles: true
             });
-            console.log(`[DesertScythe] ${attacker.name} 的沙漠镰刀触发了减速效果`);
+            debug.logWithTag("DesertScythe", `${attacker.name} 的沙漠镰刀触发了减速效果`);
         }
     } catch (error) {
-        console.error('[DesertScythe] 应用减速效果时出错:', error?.message ?? error);
+        debug.logError("DesertScythe", `应用减速效果时出错: ${error?.message ?? error}`);
     }
 }
 
@@ -179,7 +180,7 @@ function applyRandomDamage(target, damage, attacker) {
         });
 
     } catch (error) {
-        console.error('[RandomDamage] 应用随机伤害时出错:', error?.message ?? error);
+        debug.logError("RandomDamage", `应用随机伤害时出错: ${error?.message ?? error}`);
     } finally {
         isApplyingRandomDamage = false;
     }

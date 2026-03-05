@@ -6,6 +6,7 @@
 
 import { LoreRegistry } from "../lore_system/index.js";
 import { WEAPON_STAMINA_COST, LOCALE_SETTINGS } from "../stamina/weaponStaminaConfig.js";
+import { debug } from "../debug/debugManager.js";
 
 const STAMINA_COLOR = "§c";
 
@@ -48,5 +49,5 @@ export function registerVanillaWeaponLoreHandler() {
         }
     });
 
-    console.log('[VanillaWeaponLore] 原版武器 Lore 处理器已注册');
+    debug.logWithTag("VanillaWeaponLore", "原版武器 Lore 处理器已注册");
 }

@@ -1,7 +1,7 @@
 // main.js - Minesia 主入口文件
 import { world, system } from "@minecraft/server";
 import { ActionFormData } from "@minecraft/server-ui";
-import { initializeDebugSystem } from "./debug/debugManager.js";
+import { initializeDebugSystem, debug } from "./debug/debugManager.js";
 import * as setEffectMain from "./set_effect/setEffectMain.js";
 import * as minesiaLevelMain from "./minesia_level/minesiaLevelMain.js";
 import { MinesiaLevelEventSystem } from "./minesia_level/minesiaLevelEvent.js";
@@ -94,67 +94,65 @@ function initializeWelcomeSystem() {
             }
         });
     } else {
-        console.log('[Minesia] scriptEventReceive 不可用，语言选择指令功能已禁用');
+        debug.logWarning("Minesia", "scriptEventReceive 不可用，语言选择指令功能已禁用");
     }
 }
-
-console.log('[Minesia] 系统启动中...');
 
 let systemReady = false;
 let errorCount = 0;
 
 system.runTimeout(() => {
     try {
-        console.log('[Minesia] 初始化核心系统...');
-
         initializeDebugSystem();
-        console.log('[Minesia] ✓ 调试系统就绪');
+        debug.logWithTag("Minesia", "系统启动中...");
+        debug.logWithTag("Minesia", "初始化核心系统...");
+        debug.logWithTag("Minesia", "✓ 调试系统就绪");
 
         initializeWelcomeSystem();
-        console.log('[Minesia] ✓ 欢迎消息系统就绪');
+        debug.logWithTag("Minesia", "✓ 欢迎消息系统就绪");
 
         MinesiaLevelEventSystem.initializeRewardsScoreboard();
-        console.log('[Minesia] ✓ 等级事件系统就绪');
+        debug.logWithTag("Minesia", "✓ 等级事件系统就绪");
 
         initializeRandomDamageSystem();
-        console.log('[Minesia] ✓ 随机伤害系统就绪');
+        debug.logWithTag("Minesia", "✓ 随机伤害系统就绪");
 
         initializeLoreHandler();
-        console.log('[Minesia] ✓ 随机伤害Lore处理器就绪');
+        debug.logWithTag("Minesia", "✓ 随机伤害Lore处理器就绪");
 
         registerRandomDamageLoreHandler();
-        console.log('[Minesia] ✓ 随机伤害Lore处理器已注册');
+        debug.logWithTag("Minesia", "✓ 随机伤害Lore处理器已注册");
 
         registerVanillaWeaponLoreHandler();
-        console.log('[Minesia] ✓ 原版武器Lore处理器已注册');
+        debug.logWithTag("Minesia", "✓ 原版武器Lore处理器已注册");
 
         registerSetEffectLoreHandler();
-        console.log('[Minesia] ✓ 套装效果Lore处理器已注册');
+        debug.logWithTag("Minesia", "✓ 套装效果Lore处理器已注册");
 
         registerCustomEventLoreHandler();
-        console.log('[Minesia] ✓ 自定义事件Lore处理器已注册');
+        debug.logWithTag("Minesia", "✓ 自定义事件Lore处理器已注册");
 
         registerExtraLoreHandler();
-        console.log('[Minesia] ✓ 趣味性Lore处理器已注册');
+        debug.logWithTag("Minesia", "✓ 趣味性Lore处理器已注册");
 
         initializeLoreSystem({ checkInterval: 100 });
-        console.log('[Minesia] ✓ 通用Lore系统就绪');
+        debug.logWithTag("Minesia", "✓ 通用Lore系统就绪");
 
         initializeDamageDisplaySystem();
-        console.log('[Minesia] ✓ 伤害显示系统就绪');
+        debug.logWithTag("Minesia", "✓ 伤害显示系统就绪");
 
         initializeStaminaSystem();
-        console.log('[Minesia] ✓ 体力值系统就绪');
+        debug.logWithTag("Minesia", "✓ 体力值系统就绪");
 
         initHealthBoostManager();
-        console.log('[Minesia] ✓ 生命提升管理器就绪');
+        debug.logWithTag("Minesia", "✓ 生命提升管理器就绪");
 
         systemReady = true;
-        console.log('[Minesia] 🎉 核心系统初始化完成!');
+        debug.logWithTag("Minesia", "🎉 核心系统初始化完成!");
 
     } catch (error) {
         errorCount++;
-        console.error('[Minesia] 初始化失败:', error.message);
+        debug.logError("Minesia", `初始化失败: ${error.message}`);
     }
 }, 20);
 
@@ -176,17 +174,15 @@ system.runInterval(() => {
 
     } catch (error) {
         errorCount++;
-        console.error('[Minesia] 运行时错误:', error.message);
+        debug.logError("Minesia", `运行时错误: ${error.message}`);
     }
 }, 1);
 
 system.runTimeout(() => {
     try {
         minesiaLevelMain.initializeScoreboard();
-        console.log('[Minesia] ✓ 计分板系统就绪');
+        debug.logWithTag("Minesia", "✓ 计分板系统就绪");
     } catch (error) {
-        console.error('[Minesia] 计分板初始化失败:', error.message);
+        debug.logError("Minesia", `计分板初始化失败: ${error.message}`);
     }
 }, 30);
-
-console.log('[Minesia] 主系统已启动');

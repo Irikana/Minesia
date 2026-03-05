@@ -6,6 +6,7 @@
 
 import { LoreRegistry } from "./index.js";
 import { EXTRA_LORE_CONFIG } from "./extraLoreConfig.js";
+import { debug } from "../debug/debugManager.js";
 
 export function registerExtraLoreHandler() {
     LoreRegistry.register("extra_lore", {
@@ -42,5 +43,5 @@ export function registerExtraLoreHandler() {
         }
     });
 
-    console.log('[ExtraLore] 趣味性 Lore 处理器已注册');
+    debug.logWithTag("ExtraLore", "趣味性 Lore 处理器已注册");
 }

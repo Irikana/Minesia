@@ -1,5 +1,6 @@
 // equipment.js
 import { EquipmentSlot } from "@minecraft/server";
+import { debug } from "../debug/debugManager.js";
 
 // 统一的槽位映射
 export const SLOT_MAP = {
@@ -16,7 +17,7 @@ export function collectEquipment(player) {
   try {
     const equippable = player.getComponent("minecraft:equippable");
     if (!equippable) {
-      console.warn(`玩家 ${player.name} 缺少 equippable 组件`);
+      debug.logWarning("Equipment", `玩家 ${player.name} 缺少 equippable 组件`);
       return {};
     }
 
@@ -29,13 +30,13 @@ export function collectEquipment(player) {
           result[key] = item.typeId;
         }
       } catch (slotError) {
-        console.warn(`获取槽位 ${key} 装备时出错:`, slotError);
+        debug.logWarning("Equipment", `获取槽位 ${key} 装备时出错: ${slotError}`);
       }
     }
 
     return result;
   } catch (error) {
-    console.error("收集装备信息时出错:", error);
+    debug.logError("Equipment", `收集装备信息时出错: ${error}`);
     return {};
   }
 }
@@ -45,7 +46,7 @@ export function getEquipmentInSlot(player, slotName) {
   try {
     const slot = SLOT_MAP[slotName];
     if (!slot) {
-      console.warn(`无效的槽位名称: ${slotName}`);
+      debug.logWarning("Equipment", `无效的槽位名称: ${slotName}`);
       return null;
     }
     
@@ -54,7 +55,7 @@ export function getEquipmentInSlot(player, slotName) {
     
     return equippable.getEquipment(slot);
   } catch (error) {
-    console.error(`获取槽位 ${slotName} 装备时出错:`, error);
+    debug.logError("Equipment", `获取槽位 ${slotName} 装备时出错: ${error}`);
     return null;
   }
 }
@@ -82,7 +83,7 @@ export function hasEquippedItem(player, itemId, slotNames = null) {
     
     return false;
   } catch (error) {
-    console.error("检查装备物品时出错:", error);
+    debug.logError("Equipment", `检查装备物品时出错: ${error}`);
     return false;
   }
 }

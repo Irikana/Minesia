@@ -6,6 +6,7 @@
 
 import { LoreRegistry } from "./index.js";
 import { CUSTOM_EVENT_CONFIG } from "./customEventLoreConfig.js";
+import { debug } from "../debug/debugManager.js";
 
 export function registerCustomEventLoreHandler() {
     LoreRegistry.register("custom_event_lore", {
@@ -50,5 +51,5 @@ export function registerCustomEventLoreHandler() {
         }
     });
 
-    console.log('[CustomEventLore] 自定义事件 Lore 处理器已注册');
+    debug.logWithTag("CustomEventLore", "自定义事件 Lore 处理器已注册");
 }

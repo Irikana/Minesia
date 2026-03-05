@@ -2,6 +2,7 @@ import { world, system, GameMode } from "@minecraft/server";
 import { STAMINA_CONFIG, getStaminaTexts } from "./config.js";
 import { ActionBarManager, DISPLAY_PRIORITIES } from "../action_bar/index.js";
 import { getWeaponStaminaCost, isStaminaWeapon } from "./weaponStaminaConfig.js";
+import { debug } from "../debug/debugManager.js";
 
 const playerStaminaData = new Map();
 const playerDisplayState = new Map();
@@ -28,7 +29,7 @@ class StaminaSystem {
     static recoveryModifiers = new Map();
 
     static initialize() {
-        console.log('[Stamina] 体力值系统初始化完成');
+        debug.logWithTag("Stamina", "体力值系统初始化完成");
     }
 
     static getPlayerData(player) {
@@ -230,7 +231,7 @@ class StaminaSystem {
                 showParticles: false
             });
         } catch (error) {
-            console.error('[Stamina] 应用疲劳效果失败:', error?.message ?? error);
+            debug.logError("Stamina", `应用疲劳效果失败: ${error?.message ?? error}`);
         }
     }
 
@@ -239,7 +240,7 @@ class StaminaSystem {
             player.removeEffect("minecraft:slowness");
             player.removeEffect("minecraft:mining_fatigue");
         } catch (error) {
-            console.error('[Stamina] 清除疲劳效果失败:', error?.message ?? error);
+            debug.logError("Stamina", `清除疲劳效果失败: ${error?.message ?? error}`);
         }
     }
 
@@ -334,14 +335,31 @@ function updatePlayerStamina(player) {
         const horizontalMovement = Math.sqrt(dx * dx + dz * dz);
         const isIdle = horizontalMovement < 0.01 && Math.abs(verticalSpeed) < 0.1;
 
-        if (data.isExhausted) {
-            StaminaSystem.recoverStamina(player, STAMINA_CONFIG.exhaustionRecoveryRate);
+        let hungerComponent = null;
+        let currentHunger = 20;
+        let maxHunger = 20;
+        try {
+            hungerComponent = player.getComponent('minecraft:player.hunger');
+            if (hungerComponent) {
+                currentHunger = hungerComponent.currentValue ?? 20;
+                maxHunger = hungerComponent.effectiveMax ?? 20;
+            }
+        } catch (e) { }
+
+        const isHungerEmpty = currentHunger <= 0;
+        const isHungerFull = currentHunger >= maxHunger;
+        const hungerRecoveryMultiplier = isHungerFull ? 2 : 1;
+
+        if (isHungerEmpty) {
+            data.isRecovering = false;
+        } else if (data.isExhausted) {
+            StaminaSystem.recoverStamina(player, STAMINA_CONFIG.exhaustionRecoveryRate * hungerRecoveryMultiplier);
             data.isRecovering = true;
         } else if (isIdle) {
-            StaminaSystem.recoverStamina(player, STAMINA_CONFIG.recoveryRate);
+            StaminaSystem.recoverStamina(player, STAMINA_CONFIG.recoveryRate * hungerRecoveryMultiplier);
             data.isRecovering = true;
         } else if (horizontalMovement > 0.01 && !isSprinting) {
-            StaminaSystem.recoverStamina(player, STAMINA_CONFIG.walkingRecoveryRate);
+            StaminaSystem.recoverStamina(player, STAMINA_CONFIG.walkingRecoveryRate * hungerRecoveryMultiplier);
             data.isRecovering = true;
         } else {
             data.isRecovering = false;
@@ -454,13 +472,14 @@ export function initializeStaminaSystem() {
     world.afterEvents.entityHurt.subscribe(handlePlayerAttack);
     world.afterEvents.playerSpawn.subscribe(handlePlayerSpawn);
     world.afterEvents.playerInventoryItemChange.subscribe(handleInventoryChange);
+    world.beforeEvents.playerLeave.subscribe(handlePlayerLeave);
     system.runInterval(checkPlayerSleep, 20);
 
     if (world.afterEvents.scriptEventReceive) {
         world.afterEvents.scriptEventReceive.subscribe(handleScriptEvent);
     }
 
-    console.log('[Stamina] 体力值系统初始化完成');
+    debug.logWithTag("Stamina", "体力值系统初始化完成");
 }
 
 const playerSleepState = new Map();
@@ -493,11 +512,23 @@ function checkPlayerSleep() {
     }
 }
 
+const STAMINA_PROPERTY_ID = "minesia:stamina";
+
 function handlePlayerSpawn(event) {
     const { player, initialSpawn } = event;
     if (!player) return;
 
-    StaminaSystem.fullRestore(player);
+    const savedStamina = player.getDynamicProperty(STAMINA_PROPERTY_ID);
+    const data = StaminaSystem.getPlayerData(player);
+
+    if (savedStamina !== undefined && savedStamina !== null) {
+        data.stamina = savedStamina;
+        if (data.stamina <= 0) {
+            data.isExhausted = true;
+        }
+    } else {
+        StaminaSystem.fullRestore(player);
+    }
 
     if (!initialSpawn) {
         system.runTimeout(() => {
@@ -508,10 +539,18 @@ function handlePlayerSpawn(event) {
                     healthComponent.setCurrentValue(maxHealth);
                 }
             } catch (e) {
-                console.error('[Stamina] 恢复生命值失败:', e?.message ?? e);
+                debug.logError("Stamina", `恢复生命值失败: ${e?.message ?? e}`);
             }
         }, 5);
     }
+}
+
+function handlePlayerLeave(event) {
+    const { player } = event;
+    if (!player) return;
+
+    const data = StaminaSystem.getPlayerData(player);
+    player.setDynamicProperty(STAMINA_PROPERTY_ID, data.stamina);
 }
 
 function handleInventoryChange(event) {
