@@ -16,9 +16,11 @@
 |---------|---------|-----------|-----------|---------|--------|
 | **魔法值系统** | Dynamic Properties | ✅ 完全支持 | ✅ 完整文档 | ⭐⭐ 简单 | 100% ✅ |
 | **护盾系统** | beforeEvents.entityHurt | ✅ 完全支持 | ✅ 完整文档 | ⭐⭐⭐ 中等 | 100% ✅ |
-| **饰品栏系统** | Inventory Component | ✅ 完全支持 | ✅ 完整文档 | ⭐⭐⭐⭐ 中高 | 100% ✅ |
+| **饰品栏系统** | Dynamic Properties + Form API | ✅ 完全支持 | ✅ 完整文档 | ⭐⭐⭐ 中等 | 100% ✅ (虚拟槽位) |
 | **自定义生命属性** | Dynamic Properties + entityHurt | ✅ 完全支持 | ✅ 完整文档 | ⭐⭐⭐ 中等 | 100% ✅ |
 | **布娃娃系统** | entityDie + spawnEntity | ✅ 完全支持 | ✅ 完整文档 | ⭐⭐⭐ 中等 | 90% ✅ |
+
+> ⚠️ **饰品栏系统说明**：原计划"扩展玩家容器"方案不可行，已调整为"虚拟饰品栏"方案（使用动态属性存储 + Form API 管理），详见下文饰品栏系统章节。
 
 > **注**：Journey 相关功能（钩爪、环境氛围、粒子效果、触发系统）的可行性分析详见 [journey.md](./journey.md#可行性分析)
 
@@ -270,7 +272,83 @@ system.beforeEvents.entityHurt.subscribe((event) => {
 
 在库存界面或新建 UI 界面放置 8 个槽位，玩家可以用物品栏中的物品与之交互。新建饰品脚本系统可以检测饰品栏槽位并由此触发自定义事件。
 
-> 💡 **见解**：饰品栏系统可以通过自定义 UI 容器或扩展玩家容器来实现。参考 [Bedrock Wiki UI 文档](https://wiki.bedrock.dev/) 和 [Microsoft Learn 容器组件文档](https://learn.microsoft.com/zh-cn/minecraft/creator/)，可以使用 `minecraft:inventory` 组件自定义玩家容器，添加额外的饰品槽位。另一种方案是使用自定义 UI 界面，通过 Form API 或 UI Factory 创建饰品栏界面。饰品槽位的物品变化可以通过 `system.runInterval` 定时检测，或使用物品栏事件监听器来触发相应的自定义事件。
+> ⚠️ **重要技术限制**：原计划中"扩展玩家容器添加额外槽位"的方案在基岩版中**无法实现**。
+>
+> **技术限制说明**：
+> - ❌ **玩家容器不可扩展**：基岩版不支持通过 `minecraft:inventory` 组件为玩家添加额外的物品栏槽位，该组件只能用于自定义实体
+> - ❌ **JSON UI 无法绑定脚本数据**：JSON UI 的 `bindings` 系统只能访问游戏内置变量，无法读取 Script API 的动态属性或计分板数据
+> - ❌ **装备槽位固定**：`EquipmentSlot` 枚举只有 6 个固定值，无法扩展
+
+> 💡 **可行替代方案**：
+>
+> **方案 A：虚拟饰品栏（推荐）⭐⭐⭐⭐**
+>
+> 使用动态属性存储饰品数据，通过 Form API 管理饰品：
+> ```javascript
+> // 饰品数据存储
+> player.setDynamicProperty("minesia:accessories", JSON.stringify({
+>   slot_0: "minesia:ring_of_power",
+>   slot_1: "minesia:amulet_of_health",
+>   // ... 共 8 个槽位
+> }));
+> 
+> // 饰品效果检测（复用现有的 runInterval 主循环）
+> system.runInterval(() => {
+>   for (const player of world.getAllPlayers()) {
+>     const accessories = JSON.parse(player.getDynamicProperty("minesia:accessories") || "{}");
+>     for (const [slot, itemId] of Object.entries(accessories)) {
+>       triggerAccessoryEffect(player, itemId);
+>     }
+>   }
+> }, 20);
+> ```
+>
+> **优点**：
+> - ✅ 完全基于 Script API，技术成熟
+> - ✅ 可复用现有的 `custom_events` 系统
+> - ✅ 数据持久化（动态属性自动保存）
+> - ✅ 多人游戏兼容
+>
+> **缺点**：
+> - ⚠️ 不是真正的物品槽位，无法直接拖拽物品
+> - ⚠️ 需要通过命令或 UI 界面管理饰品
+> - ⚠️ 饰品物品需要单独存放在玩家物品栏中
+>
+> ---
+>
+> **方案 B：副手槽位复用 ⭐⭐⭐**
+>
+> 将副手槽位作为"饰品槽位"，复用现有的装备检测系统：
+> ```javascript
+> // 复用现有的 equipment.js
+> import { getEquipmentInSlot } from "./set_effect/equipment.js";
+> 
+> // 检测副手饰品
+> const offhandItem = getEquipmentInSlot(player, "offhand");
+> if (offhandItem?.typeId === "minesia:ring_of_power") {
+>   // 触发饰品效果
+> }
+> ```
+>
+> **优点**：
+> - ✅ 完全复用现有代码
+> - ✅ 真正的物品槽位，支持拖拽
+> - ✅ 实现简单
+>
+> **缺点**：
+> - ⚠️ 只能有一个"饰品"（副手槽位）
+> - ⚠️ 与盾牌/箭矢等副手物品冲突
+>
+> ---
+>
+> **方案对比**：
+>
+> | 方案 | 可行性 | 实现难度 | 用户体验 | 多人兼容 | 推荐度 |
+> |------|--------|---------|---------|---------|--------|
+> | A: 虚拟饰品栏 | ✅ 100% | ⭐⭐⭐ 中等 | ⭐⭐⭐ 一般 | ✅ 良好 | ⭐⭐⭐⭐ 推荐 |
+> | B: 副手槽位复用 | ✅ 100% | ⭐ 简单 | ⭐⭐⭐⭐ 良好 | ✅ 良好 | ⭐⭐⭐ 可选 |
+>
+> **推荐方案**：采用方案 A（虚拟饰品栏），结合项目现有的架构（`custom_events`、`set_effect` 系统），预计开发时间 3-5 天。
 
 ### 自定义生命属性系统
 

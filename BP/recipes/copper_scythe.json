@@ -2,7 +2,7 @@
 	"format_version": "1.20.80",
 	"minecraft:recipe_shaped": {
 		"description": {
-			"identifier": "minesia:wooden_scythe"
+			"identifier": "minesia:copper_scythe"
 		},
 		"tags": [
 			"crafting_table"
@@ -14,18 +14,18 @@
 		],
 		"key": {
 			"X": {
-				"item": "minecraft:planks"
+				"item": "minecraft:copper_ingot"
 			},
 			"I": {
 				"item": "minecraft:stick"
 			}
 		},
 		"result": {
-			"item": "minesia:wooden_scythe"
+			"item": "minesia:copper_scythe"
 		},
 		"unlock": [
 			{
-				"item": "minecraft:planks"
+				"item": "minecraft:copper_ingot"
 			}
 		]
 	}

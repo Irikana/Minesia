@@ -8,14 +8,15 @@ import { world, system, ItemStack } from "@minecraft/server";
 import { MinesiaLevelSystem } from "./level_system.js";
 import { ActionBarManager, DISPLAY_PRIORITIES } from "../action_bar/index.js";
 import { LoreManager } from "../lore_system/loreManager.js";
+import { StaminaSystem } from "../stamina/staminaMain.js";
 import { debug } from "../debug/debugManager.js";
 
 const levelUpDisplayActive = new Map();
 const LANGUAGE_OBJECTIVE = "minesia_language";
-
 const LEVEL_TEXTS = {
     zh_CN: {
         healthBonus: "生命值",
+        staminaBonus: "体力值上限",
         levels: {
             1: "恭喜升级到1级！获得50个木币！",
             2: "恭喜升级到2级！获得60个木币！",
@@ -71,6 +72,7 @@ const LEVEL_TEXTS = {
     },
     en_US: {
         healthBonus: "Health",
+        staminaBonus: "Stamina Cap",
         levels: {
             1: "Level up to 1! Got 50 Wooden Coins!",
             2: "Level up to 2! Got 60 Wooden Coins!",
@@ -125,7 +127,6 @@ const LEVEL_TEXTS = {
         }
     }
 };
-
 function getPlayerLocale(player) {
     try {
         const scoreboard = world.scoreboard;
@@ -137,25 +138,24 @@ function getPlayerLocale(player) {
     } catch (e) { }
     return "zh_CN";
 }
-
 function getLevelMessage(player, level) {
     const locale = getPlayerLocale(player);
     const texts = LEVEL_TEXTS[locale] || LEVEL_TEXTS.zh_CN;
     return texts.levels[level] || `Level ${level}`;
 }
-
 export function isLevelUpDisplayActive(playerId) {
     return levelUpDisplayActive.has(playerId);
 }
-
 export class MinesiaLevelEventSystem {
     static rewardsObtainedObjectivePrefix = "minesia_reward_";
-
     static LEVEL_HEALTH_REWARDS = {
         1: 4, 5: 4, 10: 4, 15: 4, 20: 4,
         25: 4, 30: 4, 35: 4, 40: 4, 45: 4
     };
-
+    static LEVEL_STAMINA_REWARDS = {
+        5: 20, 10: 20, 15: 20, 20: 20,
+        25: 20, 30: 20, 35: 20, 40: 20, 45: 20, 50: 20
+    };
     static calculateLevelHealthBonus(level) {
         let totalBonus = 0;
         for (const [rewardLevel, bonus] of Object.entries(this.LEVEL_HEALTH_REWARDS)) {
@@ -165,7 +165,15 @@ export class MinesiaLevelEventSystem {
         }
         return totalBonus;
     }
-
+    static calculateLevelStaminaBonus(level) {
+        let totalBonus = 0;
+        for (const [rewardLevel, bonus] of Object.entries(this.LEVEL_STAMINA_REWARDS)) {
+            if (level >= parseInt(rewardLevel)) {
+                totalBonus += bonus;
+            }
+        }
+        return totalBonus;
+    }
     static LEVEL_REWARDS = {
         1: { woodCoin: 50 },
         2: { woodCoin: 60 },
@@ -218,16 +226,13 @@ export class MinesiaLevelEventSystem {
         49: { emeraldCoin: 120 },
         50: { emeraldCoin: 150, tina: 1 }
     };
-
     static getRewardObjectiveName(level) {
         return `${this.rewardsObtainedObjectivePrefix}${level}`;
     }
-
     static initializeRewardsScoreboard() {
         try {
             const scoreboard = world.scoreboard;
             if (!scoreboard) return false;
-
             for (let level = 1; level <= 50; level++) {
                 const objectiveName = this.getRewardObjectiveName(level);
                 if (!scoreboard.getObjective(objectiveName)) {
@@ -240,7 +245,6 @@ export class MinesiaLevelEventSystem {
             return false;
         }
     }
-
     static hasObtainedReward(player, level) {
         try {
             const objectiveName = this.getRewardObjectiveName(level);
@@ -250,7 +254,6 @@ export class MinesiaLevelEventSystem {
             return false;
         }
     }
-
     static markRewardObtained(player, level) {
         try {
             const objectiveName = this.getRewardObjectiveName(level);
@@ -258,23 +261,18 @@ export class MinesiaLevelEventSystem {
             rewardsObj?.setScore(player, 1);
         } catch (e) { }
     }
-
     static showLocalizedMessage(player, level, duration = 10000) {
         const playerId = player.id;
         const message = getLevelMessage(player, level);
-
         levelUpDisplayActive.set(playerId, true);
         MinesiaLevelSystem.pauseLevelDisplay(player, duration);
-
         ActionBarManager.setLine(playerId, 'levelup', `§a${message}`, DISPLAY_PRIORITIES.LEVEL);
         ActionBarManager.updateDisplay(player);
-
         system.runTimeout(() => {
             levelUpDisplayActive.delete(playerId);
             ActionBarManager.removeLine(playerId, 'levelup');
         }, Math.floor(duration / 50));
     }
-
     static playLevelUpSound(player) {
         try {
             player.runCommand('playsound minesia.level_up @s');
@@ -282,7 +280,6 @@ export class MinesiaLevelEventSystem {
             try { player.runCommand('playsound random.anvil_use @s'); } catch (e2) { }
         }
     }
-
     static handleLevelUp(player, oldLevel, newLevel) {
         if (newLevel <= oldLevel) return;
         this.playLevelUpSound(player);
@@ -290,13 +287,10 @@ export class MinesiaLevelEventSystem {
             this.handleSpecificLevelReward(player, level);
         }
     }
-
     static handleSpecificLevelReward(player, level) {
         if (this.hasObtainedReward(player, level)) return;
-
         const reward = this.LEVEL_REWARDS[level];
         if (!reward) return;
-
         if (reward.woodCoin) this.giveItem(player, "minesia:wooden_coin", reward.woodCoin);
         if (reward.stoneCoin) this.giveItem(player, "minesia:stone_coin", reward.stoneCoin);
         if (reward.silverCoin) this.giveItem(player, "minesia:silver_coin", reward.silverCoin);
@@ -305,53 +299,51 @@ export class MinesiaLevelEventSystem {
         if (reward.emeraldCoin) this.giveItem(player, "minesia:emerald_coin", reward.emeraldCoin);
         if (reward.toySword) this.giveItem(player, "minesia:toy_sword", reward.toySword);
         if (reward.tina) this.giveItem(player, "minesia:tina", reward.tina);
-
         const hasHealthReward = this.LEVEL_HEALTH_REWARDS[level];
-        if (hasHealthReward) {
-            this.showCombinedMessage(player, level, hasHealthReward);
+        const hasStaminaReward = this.LEVEL_STAMINA_REWARDS[level];
+        if (hasHealthReward || hasStaminaReward) {
+            this.showCombinedMessage(player, level, hasHealthReward || 0, hasStaminaReward || 0);
         } else {
             this.showLocalizedMessage(player, level, 10000);
         }
-
         this.markRewardObtained(player, level);
     }
-
-    static showCombinedMessage(player, level, healthBonus) {
+    static showCombinedMessage(player, level, healthBonus, staminaBonus) {
         const playerId = player.id;
         const message = getLevelMessage(player, level);
         const locale = getPlayerLocale(player);
         const texts = LEVEL_TEXTS[locale] || LEVEL_TEXTS.zh_CN;
-
         levelUpDisplayActive.set(playerId, true);
         MinesiaLevelSystem.pauseLevelDisplay(player, 10000);
-
-        const displayText = `§a${message}\n§a+${healthBonus} ${texts.healthBonus}`;
+        let displayText = `§a${message}`;
+        if (healthBonus > 0) {
+            displayText += `\n§a+${healthBonus} ${texts.healthBonus}`;
+        }
+        if (staminaBonus > 0) {
+            displayText += `\n§a+${staminaBonus} ${texts.staminaBonus}`;
+            StaminaSystem.setMaxStaminaBonus(player, this.calculateLevelStaminaBonus(level));
+        }
         ActionBarManager.setLine(playerId, 'levelup', displayText, DISPLAY_PRIORITIES.LEVEL);
         ActionBarManager.updateDisplay(player);
-
         system.runTimeout(() => {
             levelUpDisplayActive.delete(playerId);
             ActionBarManager.removeLine(playerId, 'levelup');
         }, 200);
     }
-
     static giveItem(player, itemId, count) {
         try {
             const itemStack = new ItemStack(itemId, count);
             const processedItem = LoreManager.processItem(itemStack, { player });
-            
             const inventory = player.getComponent('minecraft:inventory');
             if (!inventory) {
                 player.runCommand(`give @s ${itemId} ${count}`);
                 return;
             }
-            
             const container = inventory.container;
             if (!container) {
                 player.runCommand(`give @s ${itemId} ${count}`);
                 return;
             }
-            
             container.addItem(processedItem);
         } catch (e) {
             debug.logError("MinesiaLevelEvent", `giveItem失败: ${e?.message ?? e}`);

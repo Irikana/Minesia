@@ -70,14 +70,22 @@ function handleEntityHurt(event) {
             recentAttacks.delete(attackId);
         }, 5);
 
-        const randomDamage = calculateRandomDamage(weaponConfig.minDamage, weaponConfig.maxDamage);
+        let randomDamage = calculateRandomDamage(weaponConfig.minDamage, weaponConfig.maxDamage);
+        
+        const currentStamina = StaminaSystem.getStamina(attacker);
+        const isExhausted = currentStamina <= 0;
+        
+        if (isExhausted) {
+            randomDamage = Math.round(randomDamage * 0.5 * 10) / 10;
+            StaminaSystem.setExhaustedDamageWarning(attacker.id, true);
+        }
 
         if (randomDamage > 0) {
             applyRandomDamage(hurtEntity, randomDamage, attacker);
 
-            recordRandomDamage(attacker, hurtEntity, damage, randomDamage);
+            recordRandomDamage(attacker, hurtEntity, damage, randomDamage, isExhausted);
 
-            debug.logWithTag("RandomDamage", `${attacker.name} 使用 ${mainhandItem.typeId} 造成 ${randomDamage} 点随机伤害`);
+            debug.logWithTag("RandomDamage", `${attacker.name} 使用 ${mainhandItem.typeId} 造成 ${randomDamage} 点随机伤害${isExhausted ? ' (体力耗尽，伤害减半)' : ''}`);
         }
 
         if (attacker.hasTag("desert_walker_active")) {
@@ -186,7 +194,7 @@ function applyRandomDamage(target, damage, attacker) {
     }
 }
 
-function recordRandomDamage(attacker, target, baseDamage, randomDamage) {
+function recordRandomDamage(attacker, target, baseDamage, randomDamage, isExhausted = false) {
     const playerId = attacker.id;
     const tick = system.currentTick;
 
@@ -197,7 +205,8 @@ function recordRandomDamage(attacker, target, baseDamage, randomDamage) {
         randomDamage: randomDamage,
         totalDamage: baseDamage + randomDamage,
         tick: tick,
-        timestamp: Date.now()
+        timestamp: Date.now(),
+        isExhausted: isExhausted
     });
 
     system.runTimeout(() => {

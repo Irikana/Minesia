@@ -76,7 +76,9 @@ function handleEntityHurt(event) {
         const randomDamageRecord = recentRandomDamage.get(attacker.id);
         let randomDamage = 0;
 
-        if (randomDamageRecord) {
+        if (randomDamageRecord && 
+            randomDamageRecord.targetId === hurtEntity.id && 
+            randomDamageRecord.tick === system.currentTick) {
             randomDamage = randomDamageRecord.randomDamage;
         }
 

@@ -27,9 +27,26 @@ class StaminaSystem {
     static displayPaused = new Map();
     static consumptionModifiers = new Map();
     static recoveryModifiers = new Map();
+    static exhaustedDamageWarnings = new Map();
 
     static initialize() {
         debug.logWithTag("Stamina", "体力值系统初始化完成");
+    }
+
+    static setExhaustedDamageWarning(playerId, value) {
+        if (value) {
+            this.exhaustedDamageWarnings.set(playerId, true);
+        } else {
+            this.exhaustedDamageWarnings.delete(playerId);
+        }
+    }
+
+    static hasExhaustedDamageWarning(playerId) {
+        return this.exhaustedDamageWarnings.has(playerId);
+    }
+
+    static clearExhaustedDamageWarning(playerId) {
+        this.exhaustedDamageWarnings.delete(playerId);
     }
 
     static getPlayerData(player) {
@@ -410,8 +427,9 @@ export function displayStaminaBar(player) {
 
     const shouldDisplay = StaminaSystem.shouldDisplayStamina(playerId);
     const data = StaminaSystem.getPlayerData(player);
+    const hasExhaustedWarning = StaminaSystem.hasExhaustedDamageWarning(playerId);
 
-    if (!shouldDisplay) {
+    if (!shouldDisplay && !hasExhaustedWarning) {
         ActionBarManager.removeLine(playerId, 'stamina');
         data.wasDisplaying = false;
         return;
@@ -426,13 +444,19 @@ export function displayStaminaBar(player) {
     const maxStamina = StaminaSystem.getMaxStamina(player);
     const percentage = Math.max(0, Math.min(1, stamina / maxStamina));
 
-    const bar = buildEnhancedStaminaBar(percentage, Math.floor(stamina), maxStamina, data.isExhausted, texts);
+    const bar = buildEnhancedStaminaBar(percentage, Math.floor(stamina), maxStamina, data.isExhausted, texts, locale, hasExhaustedWarning);
 
     ActionBarManager.setLine(playerId, 'stamina', bar, DISPLAY_PRIORITIES.STAMINA);
     ActionBarManager.updateDisplay(player);
+
+    if (hasExhaustedWarning) {
+        system.runTimeout(() => {
+            StaminaSystem.clearExhaustedDamageWarning(playerId);
+        }, 40);
+    }
 }
 
-function buildEnhancedStaminaBar(percentage, currentStamina, maxStamina, isExhausted, texts) {
+function buildEnhancedStaminaBar(percentage, currentStamina, maxStamina, isExhausted, texts, locale = "zh_CN", hasExhaustedWarning = false) {
     const barLength = 12;
     const filled = Math.max(0, Math.min(barLength, Math.floor(percentage * barLength)));
     const empty = Math.max(0, barLength - filled);
@@ -459,6 +483,11 @@ function buildEnhancedStaminaBar(percentage, currentStamina, maxStamina, isExhau
     const staminaText = Math.floor(currentStamina).toString().padStart(3, " ");
     const maxText = maxStamina.toString();
     const percentText = Math.floor(percentage * 100).toString().padStart(3, " ");
+
+    if (hasExhaustedWarning) {
+        const warningText = locale === "zh_CN" ? "§c§l体力耗尽，伤害减半！" : "§c§lExhausted! Damage Halved!";
+        return warningText + "\n" + `§6${texts.stamina} ${bar} §7${staminaText}/${maxText} §f${percentText}%`;
+    }
 
     if (isExhausted) {
         return `§c${texts.exhausted} ${bar} §7${staminaText}/${maxText} §f${percentText}%`;

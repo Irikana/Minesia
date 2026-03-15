@@ -4,6 +4,7 @@ import { debug } from "../../debug/debugManager.js";
 
 const SCYTHE_ITEMS = [
     "minesia:wooden_scythe",
+    "minesia:copper_scythe",
     "minesia:stone_scythe",
     "minesia:iron_scythe",
     "minesia:golden_scythe",

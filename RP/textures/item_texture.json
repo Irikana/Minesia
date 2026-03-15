@@ -87,6 +87,9 @@
 		"minesia_wooden_scythe": {
 			"textures": "textures/items/wood_scythe"
 		},
+		"minesia_copper_scythe": {
+			"textures": "textures/items/copper_scythe"
+		},
 		"minesia_stone_scythe": {
 			"textures": "textures/items/stone_scythe"
 		},
