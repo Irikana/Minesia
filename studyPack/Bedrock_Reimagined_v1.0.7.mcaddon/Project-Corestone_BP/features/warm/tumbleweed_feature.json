@@ -1,0 +1,23 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:single_block_feature": {
+		"description": {
+			"identifier": "5fs_br:warm/tumbleweed_feature"
+		},
+		"places_block": "5fs_br:tumbleweed",
+		"enforce_survivability_rules": false,
+		"enforce_placement_rules": false,
+		"may_attach_to": {
+			"auto_rotate": true,
+			"bottom": [
+				"minecraft:sand",
+				"minecraft:red_sand",
+            	"minecraft:coarse_dirt",
+				"minecraft:hardened_clay"
+			]
+		},
+		"may_replace": [
+			"minecraft:air"
+		]
+	}
+}

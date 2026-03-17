@@ -1,0 +1,15 @@
+{
+    "format_version": "1.21.80",
+    "minecraft:scatter_feature": {
+        "description": {
+            "identifier": "5fs_br:overworld/scatter_nether_portal_feature"
+        },
+        "places_feature": "5fs_br:overworld/weighted_nether_portal_feature",
+        "distribution": {
+            "iterations": 1,
+            "x": -7,
+            "y": 0,
+            "z": -7
+        }
+    }
+}

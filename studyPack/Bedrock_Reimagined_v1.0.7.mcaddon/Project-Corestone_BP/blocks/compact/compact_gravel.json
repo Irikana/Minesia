@@ -1,0 +1,27 @@
+{
+  "format_version": "1.26.0",
+	"minecraft:block": {
+    "description": {
+      "identifier": "5fs_br:compact_gravel",
+      "menu_category": {
+        "category": "Construction"
+      }
+    },
+    "components": {
+      "minecraft:geometry": "minecraft:geometry.full_block",
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "compact_gravel"
+        }
+      },
+      "minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 0.6
+			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 0.6
+			},
+			"minecraft:map_color": "#707070",
+			"tag:minecraft:is_shovel_item_destructible": {}
+    }
+  }
+}

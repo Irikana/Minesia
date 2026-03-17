@@ -1,0 +1,145 @@
+{
+	"format_version": "1.26.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "5fs_br:palm_slab",
+			"traits": {
+				"minecraft:placement_position": {
+					"enabled_states": [
+						"minecraft:vertical_half"
+					]
+				}
+			},
+			"states": {
+				"5fs_br:double": [
+					false,
+					true
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "q.block_state('minecraft:vertical_half') == 'bottom' && !q.block_state('5fs_br:double')",
+				"components": {
+					"minecraft:collision_box": {
+						"origin": [
+							-8,
+							0,
+							-8
+						],
+						"size": [
+							16,
+							8,
+							16
+						]
+					},
+					"minecraft:selection_box": {
+						"origin": [
+							-8,
+							0,
+							-8
+						],
+						"size": [
+							16,
+							8,
+							16
+						]
+					},
+					"minecraft:liquid_detection": {
+						"detection_rules": [
+							{
+								"can_contain_liquid": true,
+								"liquid_type": "water",
+								"on_liquid_touches": "blocking"
+							}
+						]
+					},
+					"minecraft:connection_rule": {
+						"accepts_connections_from": "none"
+					},
+					"5fs_br:slab": {
+						"sound": "use.wood"
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:vertical_half') == 'top' && !q.block_state('5fs_br:double')",
+				"components": {
+					"minecraft:collision_box": {
+						"origin": [
+							-8,
+							8,
+							-8
+						],
+						"size": [
+							16,
+							8,
+							16
+						]
+					},
+					"minecraft:selection_box": {
+						"origin": [
+							-8,
+							8,
+							-8
+						],
+						"size": [
+							16,
+							8,
+							16
+						]
+					},
+					"minecraft:liquid_detection": {
+						"detection_rules": [
+							{
+								"can_contain_liquid": true,
+								"liquid_type": "water",
+								"on_liquid_touches": "blocking"
+							}
+						]
+					},
+					"minecraft:connection_rule": {
+						"accepts_connections_from": "none"
+					},
+					"5fs_br:slab": {
+						"sound": "use.wood"
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('5fs_br:double')",
+				"components": {
+					"minecraft:geometry": "minecraft:geometry.full_block",
+					"minecraft:loot": "loot_tables/blocks/slabs/wood/palm_slab.json",
+					"5fs_br:double_slab": {}
+				}
+			}
+		],
+		"components": {
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 2
+			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 2
+			},
+			"minecraft:geometry": {
+				"identifier": "geometry.slab",
+				"bone_visibility": {
+					"bottom_slab": "query.block_state('minecraft:vertical_half') == 'bottom' && !query.block_state('5fs_br:double')",
+					"top_slab": "query.block_state('minecraft:vertical_half') == 'top' && !query.block_state('5fs_br:double')"
+				}
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "palm_planks"
+				}
+			},
+            "minecraft:flammable": true,
+			"minecraft:map_color": "#E2F990",
+			"minecraft:precipitation_interactions": {
+				"precipitation_behavior": "obstruct_rain"
+			},
+			"tag:minecraft:is_axe_item_destructible": {}
+		}
+	}
+}

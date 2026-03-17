@@ -1,0 +1,123 @@
+{
+  "format_version": "1.26.0",
+	"minecraft:block": {
+    "description": {
+      "identifier": "5fs_br:tree_flag",
+      "menu_category": {
+        "category": "items"
+      },
+      "traits": {
+        "minecraft:placement_direction": {
+          "enabled_states": [
+            "minecraft:cardinal_direction"
+          ]
+        }
+      }
+    },
+    "permutations": [
+      {
+        "condition": "q.block_state('minecraft:cardinal_direction') == 'north'",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [
+              0,
+              180,
+              0
+            ]
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:cardinal_direction') == 'south'",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:cardinal_direction') == 'east'",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [
+              0,
+              90,
+              0
+            ]
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:cardinal_direction') == 'west'",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [
+              0,
+              270,
+              0
+            ]
+          }
+        }
+      }
+    ],
+    "components": {
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 0
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 0
+      },
+      "minecraft:destruction_particles": {
+        "texture": "destroy_green_bed_tree"
+      },
+      "minecraft:collision_box": {
+        "origin": [
+          -1.5,
+          0,
+          -8
+        ],
+        "size": [
+          3,
+          16,
+          16
+        ]
+      },
+      "minecraft:selection_box": {
+        "origin": [-1.5, 0, -8],
+        "size": [3, 16, 16]
+      },
+      "minecraft:flammable": true,
+      "minecraft:light_dampening": 0,
+      "minecraft:liquid_detection": {
+        "detection_rules": [
+          {
+            "can_contain_liquid": true,
+            "liquid_type": "water",
+            "on_liquid_touches": "no_reaction"
+          }
+        ]
+      },
+      "minecraft:movable": {
+        "movement_type": "popped"
+      },
+			"minecraft:connection_rule": {
+				"accepts_connections_from": "none"
+			},
+      "5fs_br:flags": {},
+            "minecraft:precipitation_interactions": {
+                "precipitation_behavior": "obstruct_rain"
+            },
+      "minecraft:geometry": "geometry.flag",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "green_flag_tree",
+                    "render_method": "alpha_test"
+                }
+            }
+    }
+  }
+}

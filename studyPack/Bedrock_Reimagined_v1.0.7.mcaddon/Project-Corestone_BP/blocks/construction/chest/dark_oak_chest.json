@@ -1,0 +1,84 @@
+{
+  "format_version": "1.26.0",
+	"minecraft:block": {
+    "description": {
+      "identifier": "5fs_br:dark_oak_chest",
+      "traits": {
+        "minecraft:placement_direction": {
+          "enabled_states": ["minecraft:cardinal_direction"]
+        }
+      }
+    },
+    "components": {
+      "minecraft:geometry": "geometry.chest",
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "empty_texture",
+          "render_method": "alpha_test"
+        }
+      },
+      "minecraft:item_visual": {
+        "geometry": "geometry.chest",
+        "material_instances": {
+          "*": {
+            "texture": "dark_oak_chest"
+          }
+        }
+      },
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 2
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 2
+      },
+      "minecraft:collision_box": {
+        "origin": [
+          -7.5,
+           0,
+          -7.5
+        ],
+        "size": [
+          15,
+          15,
+          15
+        ]
+      },
+      "minecraft:selection_box": {
+        "origin": [
+          -7.5,
+           0,
+          -7.5
+        ],
+        "size": [
+          15,
+          15,
+          15
+        ]
+      },
+      "minecraft:destruction_particles": {
+        "texture": "dark_oak_chest_bottom"
+      },
+      "minecraft:light_dampening": 0,
+      "minecraft:movable": {
+        "movement_type": "immovable"
+      },
+      "minecraft:liquid_detection": {
+        "detection_rules": [
+          {
+            "can_contain_liquid": true,
+            "liquid_type": "water"
+          }
+        ]
+      },
+      "minecraft:map_color": "#3B2A1A",
+			"minecraft:precipitation_interactions": {
+				"precipitation_behavior": "obstruct_rain"
+			},
+      "minecraft:connection_rule": {
+        "accepts_connections_from": "none"
+      },
+      "5fs_br:chest": {},
+      "tag:minecraft:is_axe_item_destructible": {}
+    }
+  }
+}

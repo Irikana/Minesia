@@ -1,0 +1,13 @@
+{
+    "format_version": "1.21.60",
+    "minecraft:aggregate_feature": {
+        "description": {
+            "identifier": "5fs_br:forest/pond_0_aggregate_feature"
+        },
+        "features": [
+            "5fs_br:forest/forest_pond_0_feature",
+            "5fs_br:forest/scatter_rose_bush_feature"
+        ],
+        "early_out": "first_failure"
+    }
+}

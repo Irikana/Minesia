@@ -1,0 +1,20 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "5fs_br:deadly_sea/weighted_large_kelp_feature"
+    },
+    "features": [
+      ["5fs_br:deadly_sea/large_kelp_1_feature", 2],
+      ["5fs_br:deadly_sea/large_kelp_2_feature", 2],
+      ["5fs_br:deadly_sea/large_kelp_3_feature", 2],
+      ["5fs_br:deadly_sea/large_kelp_4_feature", 2],
+      ["5fs_br:deadly_sea/large_kelp_5_feature", 2],
+      ["5fs_br:deadly_sea/large_kelp_6_feature", 2],
+      ["5fs_br:deadly_sea/large_kelp_7_feature", 2],
+      ["5fs_br:deadly_sea/large_kelp_8_feature", 2],
+      ["5fs_br:deadly_sea/large_kelp_9_feature", 2],
+      ["5fs_br:deadly_sea/large_kelp_10_feature", 2]
+    ]
+  }
+}

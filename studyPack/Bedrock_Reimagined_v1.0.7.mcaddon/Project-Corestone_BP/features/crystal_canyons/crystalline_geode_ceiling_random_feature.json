@@ -1,0 +1,16 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "5fs_br:crystal_canyons/crystalline_geode_ceiling_random_feature"
+    },
+    "features": [
+      [ "5fs_br:crystal_canyons/large_crystalline_geode_1_snap_to_ceiling_feature", 1 ],
+      [ "5fs_br:crystal_canyons/small_crystalline_geode_1_snap_to_ceiling_feature", 1 ],
+      [ "5fs_br:crystal_canyons/medium_crystalline_geode_1_snap_to_ceiling_feature", 1 ],
+      [ "5fs_br:crystal_canyons/large_crystalline_geode_2_snap_to_ceiling_feature", 1 ],
+      [ "5fs_br:crystal_canyons/small_crystalline_geode_2_snap_to_ceiling_feature", 1 ],
+      [ "5fs_br:crystal_canyons/medium_crystalline_geode_2_snap_to_ceiling_feature", 1 ]
+    ]
+  }
+}

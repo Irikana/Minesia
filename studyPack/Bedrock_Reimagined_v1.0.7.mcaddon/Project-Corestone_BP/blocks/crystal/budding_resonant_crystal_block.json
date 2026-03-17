@@ -1,0 +1,39 @@
+{
+    "format_version": "1.26.0",
+	"minecraft:block": {
+        "description": {
+            "identifier": "5fs_br:budding_resonant_crystal_block",               
+            "menu_category": {
+                "category": "Nature"
+            }
+        },
+        "components": {
+            "minecraft:loot": "loot_tables/empty.json",
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 1.5
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 1.5
+            },
+            "minecraft:map_color": "#6F82C4",
+            "minecraft:movable": {
+                "movement_type": "popped"
+            },
+            "5fs_br:budding_crystal": [
+                {
+                    "from_to_air": "5fs_br:small_resonant_bud"
+                },
+                {
+                    "from": "5fs_br:small_resonant_bud",
+                    "into": "5fs_br:medium_resonant_bud"
+                },
+                {
+                    "from": "5fs_br:medium_resonant_bud",
+                    "into": "5fs_br:resonant_cluster"
+                }
+            ],
+            "5fs_br:no_loot_on_silk_touch": {},
+            "tag:minecraft:is_pickaxe_item_destructible": {}
+        }
+    }
+}

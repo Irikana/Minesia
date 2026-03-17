@@ -1,0 +1,168 @@
+{
+	"format_version": "1.26.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "5fs_br:weathered_copper_blast_furnace",
+            "menu_category": {
+                "category": "items"
+            },
+			"traits": {
+				"minecraft:placement_direction": {
+					"enabled_states": [
+						"minecraft:cardinal_direction"
+					],
+					"y_rotation_offset": 180
+				}
+			},
+			"states": {
+				"5fs_br:lit": [
+					false,
+					true
+				]
+			}
+		},
+		"components": {
+			"minecraft:map_color": "#568F7A",
+			"minecraft:tick": {
+				"looping": true,
+				"interval_range": [
+					1,
+					1
+				]
+			},
+			"minecraft:material_instances": {
+				"up": {
+					"texture": "weathered_copper_blast_furnace_bottom"
+				},
+				"down": {
+					"texture": "weathered_copper_blast_furnace_bottom"
+				},
+				"north": {
+					"texture": "weathered_copper_blast_furnace_front_off"
+				},
+				"*": {
+					"texture": "weathered_copper_blast_furnace_side"
+				}
+			},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 10,
+				"item_specific_speeds": [
+					{
+						"item": {
+							"tags": "query.all_tags('minecraft:is_pickaxe') && !query.all_tags('minecraft:wooden_tier')"
+						},
+						"destroy_speed": 3
+					}
+				]
+			},
+    
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 6
+			},
+			"minecraft:geometry": "minecraft:geometry.full_block",
+			"5fs_br:copper_oxidization": {
+                "oxidize_into": "5fs_br:oxidized_copper_blast_furnace"
+			},
+            "5fs_br:copper_interaction": {
+                "wax_into": "5fs_br:waxed_weathered_copper_blast_furnace",
+				"axe_interaction": {
+					"scrap_into": "5fs_br:exposed_copper_blast_furnace",
+					"scrap_sound": "scrape",
+					"scrap_particle": "5fs_br:oxidization_off"
+				}
+            },
+			"5fs_br:furnace": {
+				"entity_type": "5fs_br:blast_furnace_entity",
+				"refuel_factor": 0.8,
+				"speed": 0.825,
+				"ui": "5fs_br_weathered_copper_blast_furnace_ui"
+			},
+            "tag:5fs_br:blast_furnace": {},
+			"tag:5fs_br:stone_tier_destructible": {},
+			"tag:minecraft:is_pickaxe_item_destructible": {}
+		},
+		"permutations": [
+			{
+				"condition": "q.block_state('minecraft:cardinal_direction') == 'north'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:cardinal_direction') == 'west'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							90,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:cardinal_direction') == 'east'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							-90,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:cardinal_direction') == 'south'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							180,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('5fs_br:lit') == true",
+				"components": {
+					"minecraft:material_instances": {
+						"up": {
+							"render_method": "opaque",
+							"texture": "weathered_copper_blast_furnace_bottom",
+							"ambient_occlusion": false,
+							"face_dimming": false
+						},
+						"down": {
+							"render_method": "opaque",
+							"texture": "weathered_copper_blast_furnace_bottom",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"north": {
+							"render_method": "opaque",
+							"texture": "weathered_copper_blast_furnace_front_on",
+							"ambient_occlusion": false,
+							"face_dimming": false
+						},
+						"*": {
+							"render_method": "opaque",
+							"texture": "weathered_copper_blast_furnace_side",
+							"ambient_occlusion": false,
+							"face_dimming": false
+						}
+					},
+					"minecraft:light_emission": 15,
+					"tag:5fs_br:lit": {}
+				}
+			}
+		]
+	}
+}

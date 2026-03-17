@@ -1,0 +1,32 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "5fs_br:arcane_rift"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " G ",
+      "GZG",
+      " G "
+    ],
+    "key": {
+      "Z": {
+        "item": "5fs_br:glimmering_pearl"
+      },
+      "G": {
+        "item": "5fs_br:mana_bottle"
+      }
+    },
+    "result": {
+      "item": "5fs_br:arcane_rift"
+    },
+    "unlock": [
+      {
+        "item": "5fs_br:glimmering_pearl"
+      }
+    ]
+  }
+}

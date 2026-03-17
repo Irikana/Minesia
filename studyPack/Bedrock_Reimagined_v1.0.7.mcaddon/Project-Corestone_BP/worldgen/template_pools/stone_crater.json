@@ -1,0 +1,18 @@
+{
+    "format_version": "1.21.20",
+    "minecraft:template_pool": {
+        "description": {
+            "identifier": "5fs_br:stone_crater"
+        },
+        "elements": [
+            {
+                "element": {
+                    "element_type": "minecraft:single_pool_element",
+                    "location": "5fs_br/stoneCrater",
+                    "processors": "5fs_br:iron_ore_replacement"
+                },
+                "weight": 1
+            }
+        ]
+    }
+}

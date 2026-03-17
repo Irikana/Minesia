@@ -1,0 +1,43 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "5fs_br:macaroni_penguin",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/mobs/penguins/macaroni_penguin"
+      },
+      "geometry": {
+        "default": "geometry.macaroni_penguin"
+      },
+      "animations": {
+        "idle": "animation.macaroni_penguin.idle",
+        "walking": "animation.macaroni_penguin.walking",
+        "swimming": "animation.macaroni_penguin.swimming",
+        "slide": "animation.macaroni_penguin.slide",
+        "fall": "animation.macaroni_penguin.fall",
+        "dance": "animation.macaroni_penguin.dance",
+        "death": "animation.macaroni_penguin.death"
+      },
+      "animation_controllers": [
+        { "move": "controller.animation.macaroni_penguin" }
+      ],
+      "enable_attachables": true,
+      "render_controllers": [
+        "controller.render.default"
+      ],
+      "sound_effects": {
+        "idle": "mob.penguin.idle",
+        "swimming": "mob.penguin.swim",
+        "slide": "mob.penguin.slide",
+        "fall": "mob.penguin.fall",
+        "dance": "mob.penguin.dance"
+      },
+      "spawn_egg": {
+        "texture": "5fs_br:macaroni_penguin"
+      }
+    }
+  }
+}

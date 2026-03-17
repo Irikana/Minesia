@@ -1,0 +1,23 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:scatter_feature": {
+    "description": {
+      "identifier": "5fs_br:warm/desert/scatter_desert_pillars_feature"
+    },
+    "iterations": 75,
+    "x": {
+      "distribution": "gaussian",
+      "extent": [ -64, 64 ]
+    },
+    "y": {
+      "distribution": "gaussian",
+      "extent": [ -12, 12 ]
+    },
+    "z": {
+      "distribution": "gaussian",
+      "extent": [ -64, 64 ]
+    },
+    "coordinate_eval_order": "zxy",
+    "places_feature": "5fs_br:warm/desert/desert_pillar_snap_to_surface"
+  }
+}

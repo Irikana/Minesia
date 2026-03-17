@@ -1,0 +1,76 @@
+{
+    "format_version": "1.21.60",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "5fs_br:sea_witch_projectile",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false,
+            "runtime_identifier": "minecraft:snowball"
+        },
+        "components": {
+            "minecraft:collision_box": {
+                "width": 0.25,
+                "height": 0.25
+            },
+            "minecraft:physics": {},
+            "minecraft:pushable": {
+                "is_pushable": true,
+                "is_pushable_by_piston": true
+            },
+            "minecraft:projectile": {
+                "on_hit": {
+                    "impact_damage": {
+                        "damage": [
+                            2,
+                            3
+                        ],
+                        "knockback": false,
+                        "semi_random_diff_damage": false,
+                        "destroy_on_hit": true
+                    }
+                },
+                "shoot_sound": "throw",
+                "power": 1,
+                "gravity": 0.05,
+                "uncertainty_base": 0.5,
+                "uncertainty_multiplier": 1,
+                "stop_on_hurt": true,
+                "anchor": 1,
+                "offset": [
+                    0,
+                    0.5,
+                    0
+                ]
+            },
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "cause": "all",
+                    "deals_damage": "no"
+                }
+            },
+            "minecraft:type_family": {
+                "family": [
+                    "inanimate"
+                ]
+            },
+            "minecraft:timer": {
+                "time": 0.005,
+                "looping": true,
+                "time_down_event": {
+                    "event": "5fs_br:particles",
+                    "target": "self"
+                }
+            }
+        },
+        "events": {
+            "5fs_br:particles": {
+                "queue_command": {
+                    "command": [
+                        "particle 5fs_br:sea_witch_projectile ~ ~ ~"
+                    ]
+                }
+            }
+        }
+    }
+}

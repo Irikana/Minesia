@@ -1,0 +1,18 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "5fs_br:sulfur_ore"
+    },
+    "unlock": [
+      {
+        "item": "5fs_br:raw_sulfur"
+      }
+    ],
+    "tags": [
+      "furnace"
+    ],
+    "input": "5fs_br:raw_sulfur",
+    "output": "5fs_br:sulfur_ingot"
+  }
+}

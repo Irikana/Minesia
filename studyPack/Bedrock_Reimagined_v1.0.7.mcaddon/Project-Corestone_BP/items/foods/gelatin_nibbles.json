@@ -1,0 +1,31 @@
+{
+    "format_version": "1.26.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "5fs_br:gelatin_nibbles",
+            "menu_category": {
+                "category": "equipment"
+            }
+        },
+        "components": {
+            "minecraft:food": {
+                "can_always_eat": true,
+                "nutrition": 2,
+                "saturation_modifier": 0.2
+            },
+            "minecraft:use_animation": {
+                "value": "eat"
+            },
+            "minecraft:icon": {
+                "textures": {
+                    "default": "5fs_br:gelatin_nibbles"
+                }
+            },
+            "minecraft:use_modifiers": {
+                "movement_modifier": 0.35,
+                "use_duration": 1.6
+            },
+            "5fs_br:gelatin_nibbles": {}
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+  "format_version": "1.21.20",
+  "minecraft:template_pool": {
+    "description": {
+      "identifier": "5fs_br:jungle_temple"
+    },
+    "elements": [
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "jungle/jungleTemple0",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 1
+      }
+    ]
+  }
+}

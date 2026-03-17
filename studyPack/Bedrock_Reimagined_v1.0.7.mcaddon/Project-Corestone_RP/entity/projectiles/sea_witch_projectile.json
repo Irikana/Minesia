@@ -1,0 +1,20 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "5fs_br:sea_witch_projectile",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/empty"
+			},
+			"geometry": {
+				"default": "geometry.sea_witch_projectile"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			]
+		}
+	}
+}

@@ -1,0 +1,347 @@
+{
+  "format_version": "1.21.120",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "5fs_br:goblin",
+      "spawn_category": "monster",
+      "is_spawnable": true,
+      "is_summonable": true
+    },
+    "component_groups": {
+      "5fs_br:redwood_variant": {
+        "minecraft:scale": {
+          "value": 2
+        },
+        "minecraft:health": {
+          "value": 40,
+          "max": 40
+        },
+        "minecraft:movement": {
+          "value": 0.33
+        }
+      },
+      "5fs_br:redwood_baby_variant": {
+        "minecraft:is_baby": {},
+        "minecraft:health": {
+          "value": 40,
+          "max": 40
+        },
+        "minecraft:movement": {
+          "value": 0.4
+        }
+      },
+      "5fs_br:goblin_adult": {
+        "minecraft:movement": {
+          "value": 0.23
+        },
+        "minecraft:loot": {
+          "table": "loot_tables/entities/goblin.json"
+        }
+      },
+      "5fs_br:goblin_baby": {
+        "minecraft:movement": {
+          "value": 0.3
+        },
+        "minecraft:is_baby": {},
+        "minecraft:scale": {
+          "value": 0.5
+        }
+      },
+      "5fs_br:shrinkify": {
+        "minecraft:movement": {
+          "value": 0.6
+        },
+        "minecraft:health": {
+          "max": 10
+        },
+        "minecraft:scale": {
+          "value": 0.25
+        }
+      },
+      "5fs_br:gigantify": {
+        "minecraft:movement": {
+          "value": 0.24
+        },
+        "minecraft:health": {
+          "max": 40
+        },
+        "minecraft:scale": {
+          "value": 2
+        }
+      },
+      "5fs_br:normal_scale": {
+        "minecraft:movement": {
+          "value": 0.3
+        },
+        "minecraft:health": {
+          "max": 20
+        },
+        "minecraft:scale": {
+          "value": 1
+        }
+      },
+      "5fs_br:no_fall_damage_jelly": {
+        "minecraft:damage_sensor": {
+          "triggers": {
+            "cause": "fall",
+            "deals_damage": "no"
+          }
+        }
+      }
+    },
+    "components": {
+      "minecraft:experience_reward": {
+        "on_death": "query.last_hit_by_player ? Math.random(5, 8) : 0"
+      },
+      "minecraft:type_family": {
+        "family": [
+          "mob",
+          "goblin",
+          "monster"
+        ]
+      },
+      "minecraft:collision_box": {
+        "height": 1.5,
+        "width": 0.6
+      },
+      "minecraft:health": {
+        "value": 20
+      },
+      "minecraft:annotation.break_door": {
+        "break_time": 12,
+        "min_difficulty": "hard"
+      },
+      "minecraft:navigation.generic": {
+        "avoid_water": true,
+        "can_pass_doors": true,
+        "can_break_doors": true
+      },
+      "minecraft:movement": {
+        "value": 0.3
+      },
+      "minecraft:movement.basic": {},
+      "minecraft:jump.static": {},
+      "minecraft:can_climb": {},
+      "minecraft:behavior.random_stroll": {
+        "priority": 9,
+        "interval": 80,
+        "xz_dist": 10,
+        "y_dist": 7,
+        "speed_multiplier": 1
+      },
+      "minecraft:physics": {},
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:behavior.float": {
+        "priority": 8
+      },
+      "minecraft:behavior.look_at_player": {
+        "priority": 7,
+        "look_distance": 6,
+        "probability": 0.02
+      },
+      "minecraft:behavior.random_look_around": {
+        "priority": 5
+      },
+      "minecraft:attack": {
+        "damage": [
+          4,
+          6
+        ]
+      },
+      "minecraft:behavior.delayed_attack": {
+        "priority": 0,
+        "attack_duration": 1,
+        "hit_delay_pct": 0.37,
+        "speed_multiplier": 1.2,
+        "reach_multiplier": 1,
+        "track_target": true,
+        "require_complete_path": true
+      },
+      "minecraft:behavior.nearest_attackable_target": {
+        "priority": 2,
+        "within_radius": 16,
+        "reselect_targets": true,
+        "entity_types": {
+          "filters": {
+            "any_of": [
+              {
+                "test": "is_family",
+                "subject": "other",
+                "value": "player"
+              },
+              {
+                "test": "is_family",
+                "subject": "other",
+                "value": "villager"
+              },
+              {
+                "test": "is_family",
+                "subject": "other",
+                "value": "iron_golem"
+              }
+            ]
+          }
+        }
+      },
+      "minecraft:behavior.hurt_by_target": {
+        "priority": 1,
+        "entity_types": [
+          {
+            "filters": {
+              "test": "is_family",
+              "subject": "other",
+              "operator": "!=",
+              "value": "breeze"
+            }
+          }
+        ]
+      },
+      "minecraft:shareables": {
+        "singular_pickup": true,
+        "items": [
+          {
+            "item": "minecraft:emerald"
+          }
+        ]
+      },
+      "minecraft:inventory": {
+        "can_be_siphoned_from": false,
+        "container_type": "inventory",
+        "inventory_size": 27,
+        "private": false,
+        "restrict_to_owner": true
+      },
+      "minecraft:behavior.pickup_items": {
+        "can_pickup_any_item": true,
+        "priority": 1,
+        "max_dist": 16,
+        "goal_radius": 1,
+        "speed_multiplier": 1,
+        "can_pickup_to_hand_or_equipment": false
+      },
+      "minecraft:follow_range": {
+        "value": 32,
+        "max": 32
+      },
+      "minecraft:conditional_bandwidth_optimization": {},
+      "minecraft:despawn": {
+        "despawn_from_chance": true
+      }
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "sequence": [
+          {
+            "filters": {
+              "test": "has_biome_tag",
+              "value": "redwood_forest"
+            },
+            "randomize": [
+              {
+                "trigger": "5fs_br:remove_goblin",
+                "add": {
+                  "component_groups": [
+                    "5fs_br:redwood_variant"
+                  ]
+                },
+                "weight": 95
+              },
+              {
+                "trigger": "5fs_br:remove_goblin",
+                "add": {
+                  "component_groups": [
+                    "5fs_br:redwood_baby_variant"
+                  ]
+                },
+                "weight": 5
+              }
+            ]
+          },
+          {
+            "filters": {
+              "test": "has_biome_tag",
+              "operator": "!=",
+              "value": "redwood_forest"
+            },
+            "randomize": [
+              {
+                "trigger": "5fs_br:remove_goblin",
+                "add": {
+                  "component_groups": [
+                    "5fs_br:goblin_adult"
+                  ]
+                },
+                "weight": 95
+              },
+              {
+                "trigger": "5fs_br:remove_goblin",
+                "add": {
+                  "component_groups": [
+                    "5fs_br:goblin_baby"
+                  ]
+                },
+                "weight": 5
+              }
+            ]
+          }
+        ]
+      },
+      "5fs_br:normal_scale": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:shrinkify",
+            "5fs_br:gigantify"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:normal_scale"
+          ]
+        }
+      },
+      "5fs_br:gigantify": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:shrinkify",
+            "5fs_br:normal_scale"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:gigantify"
+          ]
+        }
+      },
+      "5fs_br:shrinkify": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:gigantify",
+            "5fs_br:normal_scale"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:shrinkify"
+          ]
+        }
+      },
+      "5fs_br:no_fall_damage_jelly": {
+        "add": {
+          "component_groups": [
+            "5fs_br:no_fall_damage_jelly"
+          ]
+        }
+      },
+      "5fs_br:fall_damage_jelly": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:no_fall_damage_jelly"
+          ]
+        }
+      }
+    }
+  }
+}

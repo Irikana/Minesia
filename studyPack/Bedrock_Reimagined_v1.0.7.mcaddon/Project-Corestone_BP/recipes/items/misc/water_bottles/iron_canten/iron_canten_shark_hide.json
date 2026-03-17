@@ -1,0 +1,33 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "5fs_br:iron_canteen_from_shark_hide"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"S": {
+				"item": "minecraft:iron_ingot"
+			},
+			"D": {
+				"item": "5fs_br:shark_hide"
+			}
+		},
+		"pattern": [
+			"DDD",
+			"S S",
+			" S "
+		],
+		"result": {
+			"item": "5fs_br:iron_canteen_empty",
+			"count": 1
+		},
+		"unlock": [
+			{
+				"item": "minecraft:iron_ingot"
+			}
+		]
+	}
+}

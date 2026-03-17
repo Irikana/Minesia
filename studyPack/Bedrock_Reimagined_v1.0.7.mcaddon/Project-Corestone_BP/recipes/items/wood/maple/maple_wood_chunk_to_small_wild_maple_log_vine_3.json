@@ -1,0 +1,33 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "5fs_br:maple_wood_chunk_to_small_maple_wild_log_vine_3"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "   ",
+      " P ",
+      "XP "
+    ],
+    "key": {
+      "P": {
+        "item": "5fs_br:maple_wood_chunk"
+      },
+      "X": {
+        "item": "minecraft:vine"
+      }
+    },
+    "result": {
+      "item": "5fs_br:wild_small_maple_log",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "5fs_br:maple_wood_chunk"
+      }
+    ]
+  }
+}

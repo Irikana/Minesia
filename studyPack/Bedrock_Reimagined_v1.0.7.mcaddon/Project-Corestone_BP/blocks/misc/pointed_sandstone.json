@@ -1,0 +1,257 @@
+{
+    "format_version": "1.26.0",
+	"minecraft:block": {
+        "description": {
+            "identifier": "5fs_br:pointed_sandstone",
+            "menu_category": {
+                "category": "nature"
+            },
+            "states": {
+                "5fs_br:thickness": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "traits": {
+                "minecraft:placement_position": {
+                    "enabled_states": [
+                        "minecraft:vertical_half"
+                    ]
+                }
+            }
+        },
+        "components": {
+            "minecraft:geometry": {
+                "identifier": "minecraft:geometry.cross"
+            },
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "pointed_sandstone_tip",
+                    "render_method": "alpha_test_single_sided",
+                    "face_dimming": false
+                }
+            },
+            "minecraft:collision_box": false,
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0.3
+            },
+            "minecraft:placement_filter": {
+                "conditions": [
+                    {
+                        "allowed_faces": [
+                            "down",
+                            "up"
+                        ]
+                    }
+                ]
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 3
+            },
+            "minecraft:connection_rule": {
+                "accepts_connections_from": "none"
+            },
+            "5fs_br:pointed_crystal_drip": {},
+            "5fs_br:pointed_crystal_grow": {},
+            "5fs_br:pointed_crystal_place": {},
+            "minecraft:map_color": "#d9c27f",
+            "minecraft:precipitation_interactions": {
+                "precipitation_behavior": "obstruct_rain"
+            }
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('minecraft:vertical_half') == 'top'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            180,
+                            0,
+                            0
+                        ]
+                    },
+                    "tag:5fs_br:pointed_sandstone_top": {},
+                    "tag:5fs_br:down": {}
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:vertical_half') == 'bottom'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            0,
+                            0
+                        ]
+                    },
+                    "tag:5fs_br:pointed_sandstone_bottom": {},
+                    "tag:5fs_br:up": {}
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:thickness') == 0",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "pointed_sandstone_tip",
+                            "render_method": "alpha_test_single_sided",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        }
+                    },
+                    "minecraft:collision_box": {
+                        "origin": [
+                            -3.5,
+                            0,
+                            -3.5
+                        ],
+                        "size": [
+                            7,
+                            8,
+                            7
+                        ]
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -3.5,
+                            0,
+                            -3.5
+                        ],
+                        "size": [
+                            7,
+                            8,
+                            7
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:thickness') == 1",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "pointed_sandstone_frustum",
+                            "render_method": "alpha_test_single_sided",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        }
+                    },
+                    "minecraft:collision_box": {
+                        "origin": [
+                            -4,
+                            0,
+                            -4
+                        ],
+                        "size": [
+                            8,
+                            16,
+                            8
+                        ]
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -4,
+                            0,
+                            -4
+                        ],
+                        "size": [
+                            8,
+                            16,
+                            8
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:thickness') == 2",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "pointed_sandstone_middle",
+                            "render_method": "alpha_test_single_sided",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        }
+                    },
+                    "minecraft:collision_box": {
+                        "origin": [
+                            -4,
+                            0,
+                            -4
+                        ],
+                        "size": [
+                            8,
+                            16,
+                            8
+                        ]
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -4,
+                            0,
+                            -4
+                        ],
+                        "size": [
+                            8,
+                            16,
+                            8
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:thickness') == 3",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "pointed_sandstone_base",
+                            "render_method": "alpha_test_single_sided",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        }
+                    },
+                    "minecraft:collision_box": {
+                        "origin": [
+                            -5,
+                            0,
+                            -5
+                        ],
+                        "size": [
+                            10,
+                            16,
+                            10
+                        ]
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -5,
+                            0,
+                            -5
+                        ],
+                        "size": [
+                            10,
+                            16,
+                            10
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:thickness') == 4",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "pointed_sandstone_merge",
+                            "render_method": "alpha_test_single_sided",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        }
+                    }
+                }
+            }
+        ]
+    }
+}

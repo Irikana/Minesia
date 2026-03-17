@@ -1,0 +1,22 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "5fs_br:ocean/weighted_ocean_ruins_feature"
+    },
+    "features": [
+      ["5fs_br:ocean/ocean_ruin_0", 1],
+      ["5fs_br:ocean/ocean_ruin_1", 1],
+      ["5fs_br:ocean/ocean_ruin_2", 1],
+      ["5fs_br:ocean/ocean_ruin_3", 1],
+      ["5fs_br:ocean/ocean_ruin_4", 1],
+      ["5fs_br:ocean/ocean_ruin_5", 1],
+      ["5fs_br:ocean/ocean_ruin_6", 1],
+      ["5fs_br:ocean/ocean_ruin_7", 1],
+      ["5fs_br:ocean/ocean_ruin_8", 1],
+      ["5fs_br:ocean/ocean_big_ruin_0", 1],
+      ["5fs_br:ocean/ocean_big_ruin_1", 1],
+      ["5fs_br:ocean/ocean_big_ruin_2", 1]
+    ]
+  }
+}

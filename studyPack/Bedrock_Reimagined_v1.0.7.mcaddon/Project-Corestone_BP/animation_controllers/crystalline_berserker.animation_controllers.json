@@ -1,0 +1,16 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.crystalline_berserker.ranged_attack": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "animations": [
+                        "crystal_throw",
+                        "fist_shoot"
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+	"format_version": "1.26.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "5fs_br:mossy_glow_lichen_block",
+			"menu_category": {
+				"category": "nature"
+			}
+		},
+		"components": {
+			"minecraft:block_placer": {
+				"block": "5fs_br:mossy_glow_lichen_block",
+				"replace_block_item": true
+			},
+			"minecraft:compostable": {
+				"composting_chance": 65
+			},
+			"minecraft:display_name": {
+				"value": "tile.5fs_br:mossy_glow_lichen_block.name"
+			}
+		}
+	}
+}

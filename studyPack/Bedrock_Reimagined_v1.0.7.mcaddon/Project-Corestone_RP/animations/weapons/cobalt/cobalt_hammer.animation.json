@@ -1,0 +1,23 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.cobalt_hammer.1fp": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": [98.23838, 66.55151, -57.04902],
+					"position": [0, 9, 5]
+				}
+			}
+		},
+		"animation.cobalt_hammer.3pp": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": [90, 0, 0],
+					"position": [0, 16, -4]
+				}
+			}
+		}
+	}
+}

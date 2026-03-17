@@ -1,0 +1,49 @@
+{
+    "format_version": "1.21.80",
+    "minecraft:feature_rules": {
+        "description": {
+            "identifier": "5fs_br:limestone_feature",
+            "places_feature": "5fs_br:warm/limestone_feature"
+        },
+        "conditions": {
+            "placement_pass": "underground_pass",
+            "minecraft:biome_filter": {
+                "any_of": [
+                    {
+                        "test": "has_biome_tag",
+                        "value": "desert"
+                    },
+                    {
+                        "test": "has_biome_tag",
+                        "value": "mesa"
+                    }
+                ]
+            }
+        },
+        "distribution": {
+			"iterations": 30,
+			"coordinate_eval_order": "zyx",
+			"x": {
+				"distribution": "uniform",
+				"extent": [
+					0,
+					16
+				]
+			},
+			"y": {
+				"distribution": "uniform",
+				"extent": [
+					0,
+					256
+				]
+			},
+			"z": {
+				"distribution": "uniform",
+				"extent": [
+					0,
+					16
+				]
+			}
+		}
+    }
+}

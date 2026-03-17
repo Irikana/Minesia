@@ -1,0 +1,27 @@
+{
+    "format_version": "1.26.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "5fs_br:lucky_acorn",
+            "menu_category": {
+                "category": "nature"
+            }
+        },
+        "components": {
+            "minecraft:food": {
+                "can_always_eat": true,
+                "nutrition": 8,
+                "saturation_modifier": 1
+            },
+            "minecraft:use_animation": {
+                "value": "eat"
+            },
+            "minecraft:use_modifiers": {
+                "movement_modifier": 0.35,
+                "use_duration": 1.6
+            },
+            "minecraft:icon": "5fs_br:lucky_acorn",
+            "5fs_br:mapleEvent": {}
+        }
+    }
+}

@@ -1,0 +1,44 @@
+{
+  "format_version": "1.21.20",
+  "minecraft:jigsaw": {
+    "description": {
+      "identifier": "5fs_br:copper_dungeon"
+    },
+    "biome_filters": [
+      {
+        "all_of": [
+          {
+            "any_of": [
+              {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "plains"
+              }
+            ]
+          },
+          {
+            "test": "has_biome_tag",
+            "operator": "!=",
+            "value": "river"
+          },
+          {
+            "test": "has_biome_tag",
+            "operator": "!=",
+            "value": "ocean"
+          }
+        ]
+      }
+    ],
+    "step": "surface_structures",
+    "terrain_adaptation": "none",
+    "start_pool": "5fs_br:copper_dungeon",
+    "max_depth": 2,
+    "start_height": {
+      "type": "constant",
+      "value": {
+        "absolute": -46
+      }
+    },
+    "heightmap_projection": "world_surface"
+  }
+}

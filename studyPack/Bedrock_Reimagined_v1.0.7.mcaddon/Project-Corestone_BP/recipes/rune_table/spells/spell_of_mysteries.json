@@ -1,0 +1,39 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "5fs_br:spell_of_mysteries"
+		},
+		"tags": [
+			"runetable"
+		],
+		"key": {
+            "A": {
+				"item": "5fs_br:rune_of_light"
+			},
+			"B": {
+				"item": "5fs_br:mythic_scroll"
+			},
+			"C": {
+				"item": "5fs_br:rune_of_knowledge"
+			},
+			"D": {
+				"item": "5fs_br:rune_of_void"
+			},
+			"E": {
+				"item": "5fs_br:rune_of_shadows"
+			}
+		},
+		"pattern": [
+			" D ",
+			"ABC",
+			" E "
+		],
+		"result": {
+			"item": "5fs_br:spell_of_mysteries"
+		},
+		"unlock": {
+			"context": "AlwaysUnlocked"
+		}
+	}
+}

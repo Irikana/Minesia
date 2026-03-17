@@ -1,0 +1,25 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "5fs_br:compact_raw_iron_to_raw_iron"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "5fs_br:compact_raw_iron"
+      }
+    ],
+    "result": {
+      "item": "minecraft:raw_iron",
+      "count": 4
+    },
+    "unlock": [
+      {
+        "item": "minecraft:raw_iron"
+      }
+    ]
+  }
+}

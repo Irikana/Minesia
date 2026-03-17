@@ -1,0 +1,25 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "5fs_br:compact_lapis_to_lapis"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "5fs_br:compact_lapis"
+      }
+    ],
+    "result": {
+      "item": "minecraft:lapis_lazuli",
+      "count": 4
+    },
+    "unlock": [
+      {
+        "item": "minecraft:lapis_lazuli"
+      }
+    ]
+  }
+}

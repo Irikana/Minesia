@@ -1,0 +1,35 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:feature_rules": {
+        "description": {
+            "identifier": "5fs_br:jungle_trees_feature",
+            "places_feature": "5fs_br:jungle/jungle_aggregate_feature"
+        },
+        "conditions": {
+            "placement_pass": "surface_pass",
+            "minecraft:biome_filter": {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "jungle"
+            }
+        },
+        "distribution": {
+            "iterations": 12,
+            "x": {
+                "distribution": "uniform",
+                "extent": [
+                    1,
+                    15
+                ]
+            },
+            "y": "q.heightmap(v.worldx, v.worldz)",
+            "z": {
+                "distribution": "uniform",
+                "extent": [
+                    1,
+                    15
+                ]
+            }
+        }
+    }
+}

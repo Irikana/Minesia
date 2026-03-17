@@ -1,0 +1,18 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "5fs_br:raw_venison"
+    },
+    "unlock": [
+      {
+        "item": "5fs_br:raw_venison"
+      }
+    ],
+    "tags": [
+      "furnace"
+    ],
+    "input": "5fs_br:raw_venison",
+    "output": "5fs_br:cooked_venison"
+  }
+}

@@ -1,0 +1,35 @@
+{
+    "format_version": "1.26.0",
+	"minecraft:block": {
+        "description": {
+            "identifier": "5fs_br:cactus_placer",
+            "menu_category": {
+                "category": "none",
+                "is_hidden_in_commands": false
+            }
+        },
+        "components": {
+            "minecraft:geometry": "minecraft:geometry.full_block",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "empty_texture",
+                    "render_method": "alpha_test"
+                }
+            },
+            "minecraft:tick": {
+                "looping": true,
+                "interval_range": [
+                    0,
+                    0
+                ]
+            },
+            "minecraft:precipitation_interactions": {
+                "precipitation_behavior": "none"
+            },
+            "minecraft:connection_rule": {
+                "accepts_connections_from": "none"
+            },
+            "5fs_br:cactus_placer": {}
+        }
+    }
+}

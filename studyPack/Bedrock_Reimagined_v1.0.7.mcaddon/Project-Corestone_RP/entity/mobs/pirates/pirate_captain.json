@@ -1,0 +1,52 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "5fs_br:pirate_captain",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/mobs/pirates/pirate_captain"
+            },
+            "geometry": {
+                "default": "geometry.pirate_captain"
+            },
+            "animations": {
+                "look_at_target": "animation.common.look_at_target",
+                "idle": "animation.pirate_captain.idle",
+                "cast": "animation.pirate_captain.cast",
+                "walk": "animation.pirate_captain.walk",
+                "death": "animation.pirate_captain.death",
+                "emerging": "animation.pirate_captain.emerging",
+                "general_controller": "controller.animation.pirate_captain.general",
+                "cast_controller": "controller.animation.pirate_captain.cast",
+                "root_controller": "controller.animation.pirate_captain.root"
+            },
+            "scripts": {
+                "animate": [
+                    {
+                        "emerging": "q.is_emerging"
+                    },
+                    {
+                        "root_controller": "!q.is_emerging"
+                    }
+                ]
+            },
+            "render_controllers": [
+                "controller.render.default"
+            ],
+            "particle_effects": {
+                "pirate_captain_spell": "5fs_br:pirate_captain_spell"
+            },
+            "sound_effects": {
+                "idle": "mob.pirate.captain.idle",
+                "attack": "mob.pirate.captain.attack",
+                "emerging": "mob.pirate.captain.emerging"
+            },
+            "spawn_egg": {
+                "texture": "5fs_br:pirate_captain"
+            }
+        }
+    }
+}

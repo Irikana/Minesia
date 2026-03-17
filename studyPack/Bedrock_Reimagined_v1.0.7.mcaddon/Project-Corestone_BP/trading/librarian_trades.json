@@ -1,0 +1,336 @@
+{
+  "tiers": [
+    {
+      "trades": [
+        {
+          "wants": [
+            {
+              "item": "minecraft:paper",
+              "quantity": {
+                "min": 24,
+                "max": 36
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": {
+                "min": 5,
+                "max": 64
+              }
+            },
+            {
+              "item": "minecraft:book",
+              "quantity": 1
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:enchanted_book",
+              "functions": [
+                {
+                  "function": "enchant_book_for_trading",
+                  "base_cost": 2,
+                  "base_random_cost": 5,
+                  "per_level_random_cost": 10,
+                  "per_level_cost": 3
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trades": [
+        {
+          "wants": [
+            {
+              "item": "minecraft:book",
+              "quantity": {
+                "min": 8,
+                "max": 10
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": {
+                "min": 10,
+                "max": 12
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:compass",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 8
+            }
+          ],
+          "gives": [
+            {
+              "choice": [
+                { "item": "minecraft:bookshelf" },
+                { "item": "5fs_br:acacia_bookshelf" },
+                { "item": "5fs_br:bamboo_bookshelf" },
+                { "item": "5fs_br:birch_bookshelf" },
+                { "item": "5fs_br:cherry_bookshelf" },
+                { "item": "5fs_br:crimson_bookshelf" },
+                { "item": "5fs_br:dark_oak_bookshelf" },
+                { "item": "5fs_br:jungle_bookshelf" },
+                { "item": "5fs_br:mangrove_bookshelf" },
+                { "item": "5fs_br:maple_bookshelf" },
+                { "item": "5fs_br:pale_oak_bookshelf" },
+                { "item": "5fs_br:petrified_bookshelf" },
+                { "item": "5fs_br:redwood_bookshelf" },
+                { "item": "5fs_br:spruce_bookshelf" },
+                { "item": "5fs_br:warped_bookshelf" }
+              ]
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 2
+            }
+          ],
+          "gives": [
+            {
+              "item": "5fs_br:basic_scroll",
+              "quantity": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trades": [
+        //{
+        //  "wants": [
+        //    {
+        //      "item": "minecraft:book", // written book
+        //      "quantity": 2
+        //    }
+        //  ],
+        //  "gives": [
+        //    {
+        //      "item": "minecraft:emerald",
+        //      "quantity": 1
+        //    }
+        //  ]
+        //},
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": {
+                "min": 10,
+                "max": 12
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:clock",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 1
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:glass",
+              "quantity": {
+                "min": 3,
+                "max": 5
+              }
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 2
+            }
+          ],
+          "gives": [
+            {
+              "item": "5fs_br:obsidian_glass",
+              "quantity": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trades": [
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": {
+                "min": 5,
+                "max": 64
+              }
+            },
+            {
+              "item": "minecraft:book",
+              "quantity": 1
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:enchanted_book",
+              "functions": [
+                {
+                  "function": "enchant_book_for_trading",
+                  "base_cost": 2,
+                  "base_random_cost": 5,
+                  "per_level_random_cost": 10,
+                  "per_level_cost": 3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 8
+            }
+          ],
+          "gives": [
+            {
+              "choice": [
+                { "item": "5fs_br:rune_of_beasts" },
+                { "item": "5fs_br:rune_of_blades" },
+                { "item": "5fs_br:rune_of_decay" },
+                { "item": "5fs_br:rune_of_earth" },
+                { "item": "5fs_br:rune_of_eternity" },
+                { "item": "5fs_br:rune_of_flame" },
+                { "item": "5fs_br:rune_of_frost" },
+                { "item": "5fs_br:rune_of_growth" },
+                { "item": "5fs_br:rune_of_knowledge" },
+                { "item": "5fs_br:rune_of_light" },
+                { "item": "5fs_br:rune_of_shadows" },
+                { "item": "5fs_br:rune_of_shields" },
+                { "item": "5fs_br:rune_of_souls" },
+                { "item": "5fs_br:rune_of_storms" },
+                { "item": "5fs_br:rune_of_tides" },
+                { "item": "5fs_br:rune_of_venom" },
+                { "item": "5fs_br:rune_of_void" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trades": [
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": {
+                "min": 5,
+                "max": 64
+              }
+            },
+            {
+              "item": "minecraft:book",
+              "quantity": 1
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:enchanted_book",
+              "functions": [
+                {
+                  "function": "enchant_book_for_trading",
+                  "base_cost": 2,
+                  "base_random_cost": 5,
+                  "per_level_random_cost": 10,
+                  "per_level_cost": 3
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trades": [
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": {
+                "min": 20,
+                "max": 22
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:name_tag",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": {
+                "min": 6,
+                "max": 10
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "5fs_br:enchanted_scroll",
+              "quantity": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

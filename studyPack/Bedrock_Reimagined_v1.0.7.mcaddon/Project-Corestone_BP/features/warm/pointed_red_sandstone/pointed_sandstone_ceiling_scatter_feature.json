@@ -1,0 +1,22 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:scatter_feature": {
+    "description": {
+      "identifier": "5fs_br:warm/pointed_red_sandstone/pointed_sandstone_ceiling_scatter_feature"
+    },
+    "places_feature": "5fs_br:warm/pointed_red_sandstone/pointed_sandstone_snap_to_ceiling_feature",
+    "iterations": "Math.Random(15, 30)",
+    "x": {
+      "distribution": "gaussian",
+      "extent": [ -12, 12 ]
+    },
+    "y": {
+      "distribution": "gaussian",
+      "extent": [ -2, 2 ]
+    },
+    "z": {
+      "distribution": "gaussian",
+      "extent": [ -12, 12 ]
+    }
+  }
+}

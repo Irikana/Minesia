@@ -1,0 +1,91 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "5fs_br:meteorite_scrap",
+          "conditions": [
+            {
+              "condition": "match_tool",
+              "enchantments": [
+                {
+                  "enchantment": "fortune",
+                  "levels": { "min": 3, "max": 3 }
+                }
+              ]
+            }
+          ],
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 4
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "5fs_br:meteorite_scrap",
+          "conditions": [
+            {
+              "condition": "match_tool",
+              "enchantments": [
+                {
+                  "enchantment": "fortune",
+                  "levels": { "min": 2, "max": 2 }
+                }
+              ]
+            }
+          ],
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "5fs_br:meteorite_scrap",
+          "conditions": [
+            {
+              "condition": "match_tool",
+              "enchantments": [
+                {
+                  "enchantment": "fortune",
+                  "levels": { "min": 1, "max": 1 }
+                }
+              ]
+            }
+          ],
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "5fs_br:meteorite_scrap",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

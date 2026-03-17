@@ -1,0 +1,26 @@
+{
+    "format_version": "1.26.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "5fs_br:miners_hat",
+            "menu_category": {
+                "category": "equipment"
+            }
+        },
+        "components": {
+            "minecraft:icon": "5fs_br:miners_hat",
+            "minecraft:wearable": {
+                "protection": 3,
+                "slot": "slot.armor.head"
+            },
+            "minecraft:enchantable": {
+                "value": 10,
+                "slot": "armor_head"
+            },
+            "minecraft:durability": {
+                "max_durability": 385
+            },
+            "minecraft:max_stack_size": 1
+        }
+    }
+}

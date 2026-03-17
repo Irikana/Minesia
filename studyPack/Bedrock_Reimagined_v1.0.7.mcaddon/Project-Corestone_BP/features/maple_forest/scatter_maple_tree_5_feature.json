@@ -1,0 +1,13 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:scatter_feature": {
+        "description": {
+            "identifier": "5fs_br:maple_forest/scatter_maple_tree_5_feature"
+        },
+        "places_feature": "5fs_br:maple_forest/maple_tree_5_feature",
+        "iterations": 1,
+        "x": -5,
+        "y": 0,
+        "z": -4
+    }
+}

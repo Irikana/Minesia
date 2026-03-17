@@ -1,0 +1,153 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:nautilus_shell",
+                    "weight": 5
+                },
+                {
+                    "type": "item",
+                    "name": "minecraft:name_tag",
+                    "weight": 5
+                },
+                {
+                    "type": "item",
+                    "name": "minecraft:saddle",
+                    "weight": 5
+                },
+                {
+                    "type": "item",
+                    "name": "minecraft:bow",
+                    "weight": 5,
+                    "functions": [
+                        {
+                            "function": "set_damage",
+                            "damage": {
+                                "min": 0,
+                                "max": 0.25
+                            }
+                        },
+                        {
+                            "function": "enchant_with_levels",
+                            "levels": 30,
+                            "treasure": true
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "minecraft:fishing_rod",
+                    "weight": 5,
+                    "functions": [
+                        {
+                            "function": "set_damage",
+                            "damage": {
+                                "min": 0,
+                                "max": 0.25
+                            }
+                        },
+                        {
+                            "function": "enchant_with_levels",
+                            "levels": 30,
+                            "treasure": true
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "minecraft:book",
+                    "weight": 6,
+                    "functions": [
+                        {
+                            "function": "enchant_with_levels",
+                            "levels": 30,
+                            "treasure": true
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "5fs_br:rune_of_tide",
+                    "weight": 4
+                },
+                {
+                    "type": "item",
+                    "name": "minecraft:sponge",
+                    "weight": 4
+                },
+                {
+                    "type": "item",
+                    "name": "5fs_br:iron_canteen_empty",
+                    "weight": 4
+                },
+                {
+                    "type": "item",
+                    "name": "minecraft:tide_armor_trim_smithing_template",
+                    "weight": 3
+                },
+                {
+                    "type": "item",
+                    "name": "minecraft:sniffer_egg",
+                    "weight": 3
+                },
+                {
+                    "type": "item",
+                    "name": "minecraft:skeleton_skull",
+                    "weight": 2
+                },
+                {
+                    "type": "item",
+                    "name": "5fs_br:tropical_fish_head",
+                    "weight": 1
+                },
+                {
+                    "type": "item",
+                    "name": "5fs_br:cod_head",
+                    "weight": 1
+                },
+                {
+                    "type": "item",
+                    "name": "5fs_br:pufferfish_head",
+                    "weight": 1
+                },
+                {
+                    "type": "item",
+                    "name": "5fs_br:dolphin_head",
+                    "weight": 1
+                },
+                {
+                    "type": "item",
+                    "name": "5fs_br:salmon_head",
+                    "weight": 1
+                },
+                {
+                    "type": "item",
+                    "name": "5fs_br:skeleton_horse_head",
+                    "weight": 1
+                },
+                {
+                    "type": "item",
+                    "name": "5fs_br:cape_of_ocean_waves",
+                    "weight": 1
+                },
+                {
+                    "type": "item",
+                    "name": "5fs_br:sea_witch_wand",
+                    "weight": 1,
+                    "functions": [
+                        {
+                            "function": "set_damage",
+                            "damage": {
+                                "min": 0.5,
+                                "max": 0.9
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

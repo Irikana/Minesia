@@ -1,0 +1,46 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:structure_template_feature": {
+    "description": {
+      "identifier": "5fs_br:trees/jungle/jungle_tree_5_feature"
+    },
+    "structure_name": "trees:jungleTree5",
+    "adjustment_radius": 0,
+    "facing_direction": "south",
+    "constraints": {
+      "grounded": {},
+      "block_intersection": {
+        "block_allowlist": [
+          "minecraft:air",
+          "minecraft:bush",
+          "minecraft:jungle_leaves",
+          "minecraft:jungle_log",
+          "minecraft:grass",
+          "minecraft:tall_grass",
+          "minecraft:short_grass",
+          "minecraft:fern",
+          "minecraft:large_fern",
+          "minecraft:dandelion",
+          "minecraft:poppy",
+          "minecraft:blue_orchid",
+          "minecraft:allium",
+          "minecraft:azure_bluet",
+          "minecraft:red_tulip",
+          "minecraft:orange_tulip",
+          "minecraft:white_tulip",
+          "minecraft:pink_tulip",
+          "minecraft:oxeye_daisy",
+          "minecraft:cornflower",
+          "minecraft:lily_of_the_valley",
+          "minecraft:sunflower",
+          "minecraft:rose_bush",
+          "minecraft:peony",
+          "minecraft:lilac",
+          "minecraft:oak_leaves",
+          "5fs_br:small_rocks",
+          "5fs_br:buttercup"
+        ]
+      }
+    }
+  }
+}

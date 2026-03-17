@@ -1,0 +1,38 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "5fs_br:brown_bear",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/mobs/bears/brown_bear"
+      },
+      "geometry": {
+        "default": "geometry.brown_bear"
+      },
+      "animations": {
+        "idle": "animation.brown_bear.idle",
+        "death": "animation.brown_bear.death",
+        "swimming": "animation.brown_bear.swimming",
+        "walk": "animation.brown_bear.walking",
+        "stand_on_legs": "animation.brown_bear.stand_on_legs",
+        "bite": "animation.brown_bear.bite",
+        "attacking": "animation.brown_bear.attacking",
+        "sleep": "animation.brown_bear.sleep",
+        "roar": "animation.brown_bear.roar",
+        "sit": "animation.brown_bear.sit",
+        "eat": "animation.brown_bear.eat"
+      },
+      "enable_attachables": true,
+      "animation_controllers": [
+        { "move": "controller.animation.bear" }
+      ],
+      "render_controllers": [ "controller.render.default" ],
+      "spawn_egg": {
+        "texture": "5fs_br:brown_bear"
+      }
+    }
+  }
+}

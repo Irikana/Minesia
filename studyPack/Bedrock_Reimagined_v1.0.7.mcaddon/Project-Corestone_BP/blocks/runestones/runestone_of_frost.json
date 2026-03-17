@@ -1,0 +1,36 @@
+{
+  "format_version": "1.26.0",
+	"minecraft:block": {
+    "description": {
+      "identifier": "5fs_br:runestone_of_frost",
+      "menu_category": {
+        "category": "Construction"
+      }
+    },
+    "components": {
+      "minecraft:geometry": "minecraft:geometry.full_block",
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "runestone_of_frost"
+        }
+      },
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 5,
+        "item_specific_speeds": [
+          {
+            "item": {
+              "tags": "query.all_tags('minecraft:is_pickaxe')"
+            },
+            "destroy_speed": 1.5
+          }
+        ]
+      },
+      "minecraft:loot": "loot_tables/blocks/runestones/runestone_of_frost.json",
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 1.5
+      },
+      "minecraft:map_color": "#A89BA9",
+      "tag:minecraft:is_pickaxe_item_destructible": {}
+    }
+  }
+}

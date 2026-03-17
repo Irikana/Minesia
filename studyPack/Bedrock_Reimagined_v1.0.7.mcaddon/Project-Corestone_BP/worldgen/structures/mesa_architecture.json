@@ -1,0 +1,32 @@
+{
+    "format_version": "1.21.20",
+    "minecraft:jigsaw": {
+        "description": {
+            "identifier": "5fs_br:mesa_architecture"
+        },
+        "biome_filters": {
+            "all_of": [
+                {
+                    "test": "has_biome_tag",
+                    "value": "mesa"
+                },
+                {
+                    "test": "has_biome_tag",
+                    "operator": "!=",
+                    "value": "mutated"
+                }
+            ]
+        },
+        "step": "surface_structures",
+        "terrain_adaptation": "beard_box",
+        "start_pool": "5fs_br:mesa_architecture",
+        "max_depth": 1,
+        "start_height": {
+            "type": "constant",
+            "value": {
+                "absolute": 1
+            }
+        },
+        "heightmap_projection": "world_surface"
+    }
+}

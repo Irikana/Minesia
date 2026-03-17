@@ -1,0 +1,21 @@
+{
+  "format_version": "1.21.20",
+  "minecraft:structure_set": {
+    "description": {
+      "identifier": "5fs_br:desert_mineshaft"
+    },
+    "placement": {
+      "type": "minecraft:random_spread",
+      "salt": 39281139,
+      "separation": 22,
+      "spacing": 55,
+      "spread_type": "linear"
+    },
+    "structures": [
+      {
+        "structure": "5fs_br:desert_mineshaft",
+        "weight": 1
+      }
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:attachable": {
+        "description": {
+            "identifier": "5fs_br:camel_head",
+            "materials": {
+                "default": "armor"
+            },
+            "textures": {
+                "default": "textures/entity/camel/camel"
+            },
+            "geometry": {
+                "default": "geometry.camel_head_attachable"
+            },
+            "scripts": {
+                "parent_setup": "variable.head_layer_visible = 0.0;"
+            },
+            "render_controllers": [
+                "controller.render.default"
+            ]
+        }
+    }
+}

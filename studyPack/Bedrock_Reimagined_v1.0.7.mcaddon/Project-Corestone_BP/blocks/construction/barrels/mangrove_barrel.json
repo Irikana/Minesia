@@ -1,0 +1,155 @@
+{
+    "format_version": "1.26.0",
+	"minecraft:block": {
+        "description": {
+            "identifier": "5fs_br:mangrove_barrel",
+            "traits": {
+                "minecraft:placement_direction": {
+                    "enabled_states": [
+                        "minecraft:facing_direction"
+                    ]
+                }
+            },
+            "states": {
+                "5fs_br:open_bit": [
+                    false,
+                    true
+                ]
+            }
+        },
+        "permutations": [
+           {
+                "condition": "q.block_state('minecraft:facing_direction') == 'up'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            180,
+                            0,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:facing_direction') == 'down'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            0,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:facing_direction') == 'north'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            90,
+                            0,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:facing_direction') == 'west'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            0,
+                            -90
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:facing_direction') == 'south'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            -90,
+                            0,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:facing_direction') == 'east'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            0,
+                            90
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:open_bit') == true",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "mangrove_barrel_side"
+                        },
+                        "up": {
+                            "texture": "mangrove_barrel_top_open"
+                        },
+                        "down": {
+                            "texture": "mangrove_barrel_top"
+                        }
+                    }
+                }
+            }
+        ],
+        "components": {
+            "minecraft:geometry": "minecraft:geometry.full_block",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "mangrove_barrel_side"
+                },
+                "up": {
+                    "texture": "mangrove_barrel_top"
+                },
+                "down": {
+                    "texture": "mangrove_barrel_top"
+                }
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 2
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 2
+            },
+            "minecraft:map_color": "#A33C2E",
+            "minecraft:movable": {
+                "movement_type": "immovable"
+            },
+            "minecraft:flammable": {
+                "catch_chance_modifier": 5,
+                "destroy_chance_modifier": 0
+            },
+            "minecraft:item_visual": {
+                "geometry": "geometry.barrel_inventory",
+                "material_instances": {
+                    "*": {
+                        "texture": "mangrove_barrel_side"
+                    },
+                    "up": {
+                        "texture": "mangrove_barrel_top"
+                    },
+                    "down": {
+                        "texture": "mangrove_barrel_top"
+                    }
+                }
+            },
+            "5fs_br:barrel": {},
+            "tag:minecraft:is_axe_item_destructible": {}
+        }
+    }
+}

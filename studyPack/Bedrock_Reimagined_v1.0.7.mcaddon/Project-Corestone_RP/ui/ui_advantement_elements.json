@@ -1,0 +1,3392 @@
+{
+    "namespace": "elements_advantcements_5fs",
+    "advantement_panel": {
+        "type": "panel",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        // "orientation": "vertical",
+        "layer": 1,
+        "anchor_from": "top_left",
+        "anchor_to": "top_left",
+        "controls": [
+            {
+                "long_form_dynamic_buttons_scrolling@common.scrolling_panel": {
+                    "anchor_to": "top_left",
+                    "anchor_from": "top_left",
+                    "$show_background": true,
+                    "$scroll_size": [
+                        5,
+                        "100% - 4px"
+                    ],
+                    "$scrolling_pane_size": [
+                        "100% - 4px",
+                        "100% - 2px"
+                    ],
+                    "$scrolling_pane_offset": [
+                        2,
+                        0
+                    ],
+                    "$scroll_bar_right_padding_size": [
+                        0,
+                        0
+                    ],
+                    "size": [
+                        "100%",
+                        "100%"
+                    ],
+                    "$scrolling_content": "elements_advantcements_5fs.root_panel"
+                    // "$use_background": false
+                }
+            }
+        ]
+    },
+    "panel@common_dialogs.main_panel_no_title_no_buttons": {
+        "size": [
+            400,
+            200
+        ],
+        "$child_control": "elements_advantcements_5fs.advantement_panel"
+    },
+    "root_root_panel": {
+        "type": "panel",
+        "controls": [
+            {
+                "panel@panel": {}
+            },
+            {
+                "stack_panel": {
+                    "type": "stack_panel",
+                    "orientation": "horizontal",
+                    "offset": [
+                        0,
+                        -18
+                    ],
+                    "controls": [
+                        {
+                            "adventure_tab@templace_advancements_5fs.toggle_template": {
+                                "$toggle_group_forced_index": 0,
+                                "$toggle_view_binding_name": "adventure_toggle"
+                            }
+                        },
+                        {
+                            "minecraft_tab@templace_advancements_5fs.toggle_template": {
+                                "$toggle_group_forced_index": 1,
+                                "$toggle_view_binding_name": "minecraft_toggle"
+                            }
+                        },
+                        {
+                            "nether_tab@templace_advancements_5fs.toggle_template": {
+                                "$toggle_group_forced_index": 2,
+                                "$toggle_view_binding_name": "nether_toggle"
+                            }
+                        },
+                        {
+                            "nether_tab@templace_advancements_5fs.toggle_template": {
+                                "$toggle_group_forced_index": 3,
+                                "$toggle_view_binding_name": "cultivation_toggle"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "dinamyc_items_factory_icon": {
+        "type": "stack_panel",
+        "size": [
+            "100%c",
+            "32px"
+        ],
+        "orientation": "vertical",
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "factory": {
+            "name": "buttons",
+            "control_name": "templace_advancements_5fs.form_button_item"
+        },
+        "collection_name": "form_buttons",
+        "bindings": [
+            {
+                "binding_name": "#form_button_length",
+                "binding_name_override": "#collection_length"
+            }
+        ]
+    },
+    "background@common.scroll_indent_image": {
+        "anchor_from": "top_middle",
+        "anchor_to": "top_middle",
+        "size": [
+            400,
+            200
+        ],
+        "controls": [
+            {
+                "panel@elements_advantcements_5fs.dinamyc_items_factory_icon": {
+                    "anchor_to": "top_middle",
+                    "anchor_from": "top_middle"
+                }
+            }
+        ]
+    },
+    "root_panel": {
+        "type": "panel",
+        "anchor_from": "top_right",
+        "anchor_to": "top_right",
+        "size": [
+            400,
+            400
+        ],
+        "controls": [
+            {
+                "panel_achiviment_adventure@panel_achiviment_adventure": {}
+            },
+            {
+                "panel_achiviment_minecraft@panel_achiviment_minecraft": {}
+            },
+            {
+                "panel_achiviment_nether@panel_achiviment_nether": {}
+            },
+            {
+                "panel_achiviment_cultivation@panel_achiviment_cultivation": {}
+            }
+        ]
+    },
+    "panel_achiviment_adventure": {
+        "type": "panel",
+        "anchor_from": "top_right",
+        "anchor_to": "top_right",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "controls": [
+            //top
+            //button TOP
+            {
+                "but_1@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        "50% - 31px",
+                        -7
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 0,
+                    "$focus_id": "achiviment_1",
+                    "$focus_down": "",
+                    "$focus_up": "",
+                    "$focus_left": "",
+                    "$focus_right": "achiviment_2",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": 61997056
+                    }
+                }
+            },
+            //////////////// 
+            // PRIMER FILA 5 botones
+            {
+                "but_2@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        1,
+                        25
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 1,
+                    "$focus_id": "achiviment_2",
+                    "$focus_down": "achiviment_3",
+                    "$focus_up": "achiviment_1",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": -667680768
+                    }
+                }
+            },
+            {
+                "but_3@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        1,
+                        56
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 2,
+                    "$focus_id": "achiviment_3",
+                    "$focus_down": "achiviment_4",
+                    "$focus_up": "achiviment_2",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": 54132736
+                    }
+                }
+            },
+            {
+                "but_4@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        1,
+                        89
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 3,
+                    "$focus_id": "achiviment_4",
+                    "$focus_down": "achiviment_5",
+                    "$focus_up": "achiviment_3",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": 54067200
+                    } // ominous key
+                }
+            },
+            {
+                "but_5@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        1,
+                        121
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 4,
+                    "$focus_id": "achiviment_5",
+                    "$focus_down": "achiviment_6",
+                    "$focus_up": "achiviment_4",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": -673513472
+                    }
+                }
+            },
+            {
+                "but_6@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        1,
+                        153
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 5,
+                    "$focus_id": "achiviment_6",
+                    "$focus_down": "",
+                    "$focus_up": "achiviment_5",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": 72384512
+                    }
+                }
+            },
+            //////////////////
+            // Segunda fila 3 botones
+            {
+                "but_7@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        33,
+                        25
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 6,
+                    "$focus_id": "achiviment_7",
+                    "$focus_down": "achiviment_8",
+                    "$focus_up": "achiviment_1",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": 80871424
+                    }
+                }
+            },
+            {
+                "but_8@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        33,
+                        56
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 7,
+                    "$focus_id": "achiviment_8",
+                    "$focus_down": "achiviment_9",
+                    "$focus_up": "achiviment_7",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": 72384512
+                    }
+                }
+            },
+            {
+                "but_9@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        33,
+                        89
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 8,
+                    "$focus_id": "achiviment_9",
+                    "$focus_down": "",
+                    "$focus_up": "achiviment_8",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": 80150528
+                    }
+                }
+            },
+            ////////////
+            // Tercer fila 3 botones
+            {
+                "but_10@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        65,
+                        25
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 9,
+                    "$focus_id": "achiviment_10",
+                    "$focus_down": "achiviment_11",
+                    "$focus_up": "achiviment_1",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_11@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        65,
+                        56
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 10,
+                    "$focus_id": "achiviment_11",
+                    "$focus_down": "achiviment_12",
+                    "$focus_up": "achiviment_10",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": -673185792
+                    }
+                }
+            },
+            {
+                "but_12@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        65,
+                        89
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 11,
+                    "$focus_id": "achiviment_12",
+                    "$focus_down": "",
+                    "$focus_up": "achiviment_11",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": -673120256
+                    }
+                }
+            },
+            /////////
+            //Cuarta fila 5 botones + 1 especial (no crees el especial, me encargo yo)
+            {
+                "but_13@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        97,
+                        25
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 12,
+                    "$focus_id": "achiviment_13",
+                    "$focus_down": "achiviment_14",
+                    "$focus_up": "achiviment_1",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": -672071680
+                    }
+                }
+            },
+            {
+                "but_14@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        97,
+                        56
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 13,
+                    "$focus_id": "achiviment_14",
+                    "$focus_down": "achiviment_15",
+                    "$focus_up": "achiviment_13",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": -673054720
+                    }
+                }
+            },
+            {
+                "but_15@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        97,
+                        89
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 14,
+                    "$focus_id": "achiviment_15",
+                    "$focus_down": "achiviment_16",
+                    "$focus_up": "achiviment_14",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": -665780224
+                    }
+                }
+            },
+            {
+                "but_16@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        97,
+                        121
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 15,
+                    "$focus_id": "achiviment_16",
+                    "$focus_down": "achiviment_18",
+                    "$focus_up": "achiviment_15",
+                    "$focus_left": "",
+                    "$focus_right": "achiviment_17",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": -672006144
+                    }
+                }
+            },
+            {
+                "but_17@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        72,
+                        121
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 16,
+                    "$focus_id": "achiviment_17",
+                    "$focus_down": "",
+                    "$focus_up": "",
+                    "$focus_left": "achiviment_16",
+                    "$focus_right": "",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": -639238144
+                    }
+                }
+            },
+            {
+                "but_18@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        97,
+                        145
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 17,
+                    "$focus_id": "achiviment_18",
+                    "$focus_down": "",
+                    "$focus_up": "achiviment_16",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": 61997056
+                    }
+                }
+            },
+            ///////////
+            // Quinta fila 2 botones
+            {
+                "but_19": {
+                    "type": "panel"
+                    // "offset": [129,25],
+                    // "anchor_to": "center",
+                    // "anchor_from": "center",
+                    // "$collection_index":18,
+                    // "$focus_id": "achiviment_19",
+                    // "$focus_down": "achiviment_20",
+                    // "$focus_up": "achiviment_1",
+                    // "$focus_left": "",
+                    // "$focus_right": "",
+                    // "$type":1,
+                    // "$bag_data": {"#item_id_aux": 61997056}
+                }
+            },
+            {
+                "but_20@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        129,
+                        56
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 19,
+                    "$focus_id": "achiviment_20",
+                    "$focus_down": "achiviment_21",
+                    "$focus_up": "",
+                    "$focus_left": "achiviment_19",
+                    "$focus_right": "",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": -671088640
+                    }
+                }
+            },
+            {
+                "but_21@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        161,
+                        56
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 20,
+                    "$focus_id": "achiviment_21",
+                    "$focus_down": "achiviment_22",
+                    "$focus_up": "",
+                    "$focus_left": "",
+                    "$focus_right": "achiviment_20",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": 82968576
+                    }
+                }
+            },
+            {
+                "but_22@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        161,
+                        76
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 21,
+                    "$focus_id": "achiviment_22",
+                    "$focus_down": "achiviment_23",
+                    "$focus_up": "achiviment_21",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": 38273024
+                    }
+                }
+            },
+            {
+                "but_23@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        161,
+                        96
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 22,
+                    "$focus_id": "achiviment_23",
+                    "$focus_down": "achiviment_25",
+                    "$focus_up": "achiviment_22",
+                    "$focus_left": "achiviment_24",
+                    "$focus_right": "",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": 83296256
+                    }
+                }
+            },
+            {
+                "but_24@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        185,
+                        96
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 23,
+                    "$focus_id": "achiviment_24",
+                    "$focus_down": "achiviment_26",
+                    "$focus_up": "",
+                    "$focus_left": "",
+                    "$focus_right": "achiviment_23",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": -643497984
+                    }
+                }
+            },
+            {
+                "but_25@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        161,
+                        116
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 24,
+                    "$focus_id": "achiviment_25",
+                    "$focus_down": "achiviment_27",
+                    "$focus_up": "achiviment_23",
+                    "$focus_left": "achiviment_26",
+                    "$focus_right": "",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": 83165184
+                    }
+                }
+            },
+            {
+                "but_26@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        185,
+                        116
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 25,
+                    "$focus_id": "achiviment_26",
+                    "$focus_down": "",
+                    "$focus_up": "achiviment_24",
+                    "$focus_left": "",
+                    "$focus_right": "achiviment_25",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": -643956736
+                    }
+                }
+            },
+            {
+                "but_27@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        161,
+                        136
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 26,
+                    "$focus_id": "achiviment_27",
+                    "$focus_down": "achiviment_29",
+                    "$focus_up": "achiviment_25",
+                    "$focus_left": "",
+                    "$focus_right": "achiviment_28",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": -66977792
+                    }
+                }
+            },
+            {
+                "but_28@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        129,
+                        136
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 27,
+                    "$focus_id": "achiviment_28",
+                    "$focus_down": "achiviment_29",
+                    "$focus_up": "",
+                    "$focus_left": "achiviment_27",
+                    "$focus_right": "",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": 27656192
+                    }
+                }
+            },
+            {
+                "but_29@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        145,
+                        162
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 28,
+                    "$focus_id": "achiviment_29",
+                    "$focus_down": "achiviment_30",
+                    "$focus_up": "achiviment_28",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": 31588352
+                    }
+                }
+            },
+            {
+                "but_30@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        145,
+                        185
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 29,
+                    "$focus_id": "achiviment_30",
+                    "$focus_down": "",
+                    "$focus_up": "achiviment_29",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": 31326208
+                    }
+                }
+            },
+            ////////
+            //Sexta fila 7 botones
+            {
+                "but_31@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        209,
+                        25
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 30,
+                    "$focus_id": "achiviment_31",
+                    "$focus_down": "achiviment_32",
+                    "$focus_up": "achiviment_1",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": -672989184
+                    }
+                }
+            },
+            {
+                "but_32@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        209,
+                        56
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 31,
+                    "$focus_id": "achiviment_32",
+                    "$focus_down": "achiviment_33",
+                    "$focus_up": "achiviment_31",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": -673775616
+                    }
+                }
+            },
+            {
+                "but_33@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        209,
+                        89
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 32,
+                    "$focus_id": "achiviment_33",
+                    "$focus_down": "achiviment_34",
+                    "$focus_up": "achiviment_32",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": -657522688
+                    }
+                }
+            },
+            {
+                "but_34@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        209,
+                        121
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 33,
+                    "$focus_id": "achiviment_34",
+                    "$focus_down": "achiviment_35",
+                    "$focus_up": "achiviment_33",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": 65404928
+                    }
+                }
+            },
+            {
+                "but_35@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        209,
+                        153
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 34,
+                    "$focus_id": "achiviment_35",
+                    "$focus_down": "achiviment_36",
+                    "$focus_up": "achiviment_34",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": -655294464
+                    }
+                }
+            },
+            {
+                "but_36@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        209,
+                        185
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 35,
+                    "$focus_id": "achiviment_36",
+                    "$focus_down": "achiviment_37",
+                    "$focus_up": "achiviment_35",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": 43319296
+                    }
+                }
+            },
+            {
+                "but_37@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        209,
+                        217
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 36,
+                    "$focus_id": "achiviment_37",
+                    "$focus_down": "",
+                    "$focus_up": "achiviment_36",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": 54460416
+                    }
+                }
+            },
+            /////////
+            // septima fila 3 botones
+            // {
+            // "but_38@templace_advancements_5fs.button_template":{
+            //     "offset": [241,25],
+            //     "anchor_to": "center",
+            //     "anchor_from": "center",
+            //     "$collection_index":37,
+            //     "$focus_id": "achiviment_38",
+            //     "$focus_down": "achiviment_39",
+            //     "$focus_up": "achiviment_1",
+            //     "$focus_left": "",
+            //     "$focus_right": "",
+            //     "$type":1,
+            //     "$bag_data": {"#item_id_aux": 61997056}
+            // }
+            // },
+            {
+                "but_39@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        241,
+                        56
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 38,
+                    "$focus_id": "achiviment_39",
+                    "$focus_down": "achiviment_40",
+                    "$focus_up": "achiviment_38",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": 72384512
+                    }
+                }
+            },
+            {
+                "but_40@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        241,
+                        89
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 39,
+                    "$focus_id": "achiviment_40",
+                    "$focus_down": "achiviment_41",
+                    "$focus_up": "achiviment_39",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": 79560704
+                    }
+                }
+            },
+            {
+                "but_41@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        262,
+                        121
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 40,
+                    "$focus_id": "achiviment_41",
+                    "$focus_down": "achiviment_42",
+                    "$focus_up": "achiviment_40",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": 25296896
+                    },
+                    "$change_place": true
+                }
+            },
+            // {
+            //     "but_42@templace_advancements_5fs.button_template":{
+            //         "offset": [262,153],
+            //         "anchor_to": "center",
+            //         "anchor_from": "center",
+            //         "$collection_index":41,
+            //         "$focus_id": "achiviment_42",
+            //         "$focus_down": "achiviment_43",
+            //         "$focus_up": "achiviment_41",
+            //         "$focus_left": "",
+            //         "$focus_right": "",
+            //         "$type":1,
+            //         "$bag_data": {"#item_id_aux": 61997056},
+            //         "$change_place":true
+            //     }
+            // },
+            {
+                "but_43@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        262,
+                        153
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 42,
+                    "$focus_id": "achiviment_43",
+                    "$focus_down": "achiviment_44",
+                    "$focus_up": "achiviment_42",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": 89456640
+                    },
+                    "$change_place": true
+                }
+            },
+            {
+                "but_44@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        262,
+                        185
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 43,
+                    "$focus_id": "achiviment_44",
+                    "$focus_down": "",
+                    "$focus_up": "achiviment_43",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": 65077248
+                    },
+                    "$change_place": true
+                }
+            },
+            //////
+            // Octava fila 2 botones
+            {
+                "but_45@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        273,
+                        25
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 44,
+                    "$focus_id": "achiviment_45",
+                    "$focus_down": "achiviment_46",
+                    "$focus_up": "achiviment_1",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": 27918336
+                    },
+                    "$change_place": true
+                }
+            },
+            {
+                "but_46@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        273,
+                        56
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 45,
+                    "$focus_id": "achiviment_46",
+                    "$focus_down": "achiviment_55",
+                    "$focus_up": "achiviment_45",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": -647495680
+                    },
+                    "$change_place": true
+                }
+            },
+            ///////////
+            // novena fila 1 boton
+            {
+                "but_47@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        305,
+                        25
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 46,
+                    "$focus_id": "achiviment_47",
+                    "$focus_down": "achiviment_49",
+                    "$focus_up": "achiviment_1",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": -674955264
+                    },
+                    "$change_place": true
+                }
+            },
+            /////
+            // decima fila 1 boton
+            {
+                "but_48@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        337,
+                        25
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 47,
+                    "$focus_id": "achiviment_48",
+                    "$focus_down": "achiviment_49",
+                    "$focus_up": "achiviment_1",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": 46202880
+                    },
+                    "$change_place": true
+                }
+            },
+            {
+                "but_49@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        337,
+                        56
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 48,
+                    "$focus_id": "achiviment_49",
+                    "$focus_down": "",
+                    "$focus_up": "achiviment_1",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": 28442624
+                    },
+                    "$change_place": true
+                }
+            },
+            {
+                "but_49_e@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        303,
+                        53
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 49,
+                    "$focus_id": "achiviment_49",
+                    "$focus_down": "achiviment_50",
+                    "$focus_up": "achiviment_46",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": 6504384
+                    },
+                    "$change_place": true
+                }
+            },
+            ////
+            // boton a 10 pixeles mas abajo
+            {
+                "but_50@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        303,
+                        73
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 50,
+                    "$focus_id": "achiviment_50",
+                    "$focus_down": "achiviment_51",
+                    "$focus_up": "achiviment_49",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": 65732622
+                    },
+                    "$change_place": true
+                }
+            },
+            //
+            /// boton a 20 pixeles mas abajo
+            {
+                "but_51@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        303,
+                        93
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 51,
+                    "$focus_id": "achiviment_51",
+                    "$focus_down": "achiviment_52",
+                    "$focus_up": "achiviment_50",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": 22544384
+                    },
+                    "$change_place": true
+                }
+            },
+            //
+            /// 3 botones 33 pixeles mas abajo cada uno
+            {
+                "but_52@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        303,
+                        125
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 52,
+                    "$focus_id": "achiviment_52",
+                    "$focus_down": "achiviment_53",
+                    "$focus_up": "achiviment_51",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": 8716288
+                    },
+                    "$change_place": true
+                }
+            },
+            {
+                "but_53@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        303,
+                        157
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 53,
+                    "$focus_id": "achiviment_53",
+                    "$focus_down": "achiviment_54",
+                    "$focus_up": "achiviment_52",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": -646381568
+                    },
+                    "$change_place": true
+                }
+            },
+            // {
+            //     "but_54@templace_advancements_5fs.button_template":{
+            //         "offset": [303,189],
+            //         "anchor_to": "center",
+            //         "anchor_from": "center",
+            //         "$collection_index":54,
+            //         "$focus_id": "achiviment_54",
+            //         "$focus_down": "",
+            //         "$focus_up": "achiviment_53",
+            //         "$focus_left": "",
+            //         "$focus_right": "",
+            //         "$type":1,
+            //         "$bag_data": {"#item_id_aux": 61997056},
+            //         "$change_place":true
+            //     }
+            // },
+            //
+            //// boton a 40 pixeles mas abajo del but46
+            {
+                "but_55@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        281,
+                        89
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 55,
+                    "$focus_id": "achiviment_55",
+                    "$focus_down": "",
+                    "$focus_up": "achiviment_46",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 1,
+                    "$bag_data": {
+                        "#item_id_aux": 48627712
+                    },
+                    "$change_place": true
+                }
+            },
+            ///////////
+            // BackConcept
+            {
+                "back_concept_one": {
+                    "type": "image",
+                    "layer": 8,
+                    "offset": [
+                        -15,
+                        -30
+                    ],
+                    "size": [
+                        400,
+                        300
+                    ],
+                    "texture": "textures/gui/advantcements/map_concept_one",
+                    "anchor_to": "top_right",
+                    "anchor_from": "top_right"
+                }
+            }
+        ],
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "adventure_toggle",
+                "source_property_name": "#toggle_state",
+                "target_property_name": "#visible"
+            }
+        ]
+    },
+    "panel_achiviment_minecraft": {
+        "type": "panel",
+        "anchor_from": "top_right",
+        "anchor_to": "top_right",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "controls": [
+            {
+                "but_0@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        "50% - 60px",
+                        -7
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 56,
+                    "$focus_id": "achiviment_0",
+                    "$focus_up": "",
+                    "$focus_down": "achiviment_1",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 0,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_1@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        172,
+                        8
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 57,
+                    "$focus_id": "achiviment_1",
+                    "$focus_up": "achiviment_0",
+                    "$focus_down": "achiviment_3",
+                    "$focus_left": "",
+                    "$focus_right": "achiviment_2",
+                    "$type": 0,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_2@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        204,
+                        8
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 58,
+                    "$focus_id": "achiviment_2",
+                    "$focus_up": "",
+                    "$focus_down": "achiviment_12",
+                    "$focus_left": "achiviment_1",
+                    "$focus_right": "",
+                    "$type": 0,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_3@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        140,
+                        40
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 59,
+                    "$focus_id": "achiviment_3",
+                    "$focus_up": "achiviment_1",
+                    "$focus_down": "achiviment_4",
+                    "$focus_left": "achiviment_10",
+                    "$focus_right": "achiviment_12",
+                    "$type": 0,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_4@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        140,
+                        72
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 60,
+                    "$focus_id": "achiviment_4",
+                    "$focus_up": "achiviment_3",
+                    "$focus_down": "achiviment_5",
+                    "$focus_left": "achiviment_9",
+                    "$focus_right": "achiviment_12",
+                    "$type": 0,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_5@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        140,
+                        105
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 61,
+                    "$focus_id": "achiviment_5",
+                    "$focus_up": "achiviment_4",
+                    "$focus_down": "achiviment_13",
+                    "$focus_left": "achiviment_9",
+                    "$focus_right": "achiviment_11",
+                    "$type": 0,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_6@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        44,
+                        121
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 62,
+                    "$focus_id": "achiviment_6",
+                    "$focus_up": "achiviment_9",
+                    "$focus_down": "achiviment_7",
+                    "$focus_left": "",
+                    "$focus_right": "achiviment_5",
+                    "$type": 0,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_7@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        44,
+                        153
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 63,
+                    "$focus_id": "achiviment_7",
+                    "$focus_up": "achiviment_6",
+                    "$focus_down": "achiviment_8",
+                    "$focus_left": "",
+                    "$focus_right": "achiviment_13",
+                    "$type": 0,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_8@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        44,
+                        185
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 64,
+                    "$focus_id": "achiviment_8",
+                    "$focus_up": "achiviment_7",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "achiviment_14",
+                    "$type": 0,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_9@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        92,
+                        89
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 65,
+                    "$focus_id": "achiviment_9",
+                    "$focus_up": "achiviment_10",
+                    "$focus_down": "achiviment_5",
+                    "$focus_left": "",
+                    "$focus_right": "achiviment_4",
+                    "$type": 0,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_10@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        92,
+                        57
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 66,
+                    "$focus_id": "achiviment_10",
+                    "$focus_up": "",
+                    "$focus_down": "achiviment_9",
+                    "$focus_left": "",
+                    "$focus_right": "achiviment_3",
+                    "$type": 0,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_11@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        188,
+                        89
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 67,
+                    "$focus_id": "achiviment_11",
+                    "$focus_up": "achiviment_12",
+                    "$focus_down": "achiviment_5",
+                    "$focus_left": "achiviment_5",
+                    "$focus_right": "",
+                    "$type": 0,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_12@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        188,
+                        57
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 68,
+                    "$focus_id": "achiviment_12",
+                    "$focus_up": "achiviment_2",
+                    "$focus_down": "achiviment_11",
+                    "$focus_left": "achiviment_3",
+                    "$focus_right": "",
+                    "$type": 0,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_13@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        140,
+                        137
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 69,
+                    "$focus_id": "achiviment_13",
+                    "$focus_up": "achiviment_5",
+                    "$focus_down": "achiviment_14",
+                    "$focus_left": "achiviment_15",
+                    "$focus_right": "achiviment_16",
+                    "$type": 0,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_14@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        140,
+                        170
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 70,
+                    "$focus_id": "achiviment_14",
+                    "$focus_up": "achiviment_13",
+                    "$focus_down": "achiviment_17",
+                    "$focus_left": "achiviment_15",
+                    "$focus_right": "achiviment_16",
+                    "$type": 0,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_15@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        108,
+                        169
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 71,
+                    "$focus_id": "achiviment_15",
+                    "$focus_up": "achiviment_13",
+                    "$focus_down": "achiviment_21",
+                    "$focus_left": "achiviment_22",
+                    "$focus_right": "achiviment_14",
+                    "$type": 0,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_16@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        172,
+                        169
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 72,
+                    "$focus_id": "achiviment_16",
+                    "$focus_up": "achiviment_13",
+                    "$focus_down": "achiviment_23",
+                    "$focus_left": "achiviment_14",
+                    "$focus_right": "",
+                    "$type": 0,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_17@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        140,
+                        202
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 73,
+                    "$focus_id": "achiviment_17",
+                    "$focus_up": "achiviment_14",
+                    "$focus_down": "achiviment_18",
+                    "$focus_left": "achiviment_21",
+                    "$focus_right": "achiviment_23",
+                    "$type": 0,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_18@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        140,
+                        232
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 74,
+                    "$focus_id": "achiviment_18",
+                    "$focus_up": "achiviment_17",
+                    "$focus_down": "achiviment_19",
+                    "$focus_left": "achiviment_19",
+                    "$focus_right": "achiviment_24",
+                    "$type": 0,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_19@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        108,
+                        233
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 75,
+                    "$focus_id": "achiviment_19",
+                    "$focus_up": "achiviment_21",
+                    "$focus_down": "achiviment_20",
+                    "$focus_left": "",
+                    "$focus_right": "achiviment_18",
+                    "$type": 0,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_20@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        108,
+                        266
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 76,
+                    "$focus_id": "achiviment_20",
+                    "$focus_up": "achiviment_19",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "achiviment_25",
+                    "$type": 0,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_21@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        108,
+                        201
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 77,
+                    "$focus_id": "achiviment_21",
+                    "$focus_up": "achiviment_15",
+                    "$focus_down": "achiviment_19",
+                    "$focus_left": "achiviment_22",
+                    "$focus_right": "achiviment_17",
+                    "$type": 0,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_22@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        76,
+                        201
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 78,
+                    "$focus_id": "achiviment_22",
+                    "$focus_up": "achiviment_8",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "achiviment_21",
+                    "$type": 0,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_23@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        172,
+                        201
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 79,
+                    "$focus_id": "achiviment_23",
+                    "$focus_up": "achiviment_16",
+                    "$focus_down": "achiviment_24",
+                    "$focus_left": "achiviment_17",
+                    "$focus_right": "",
+                    "$type": 0,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_24@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        172,
+                        232
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 80,
+                    "$focus_id": "achiviment_24",
+                    "$focus_up": "achiviment_23",
+                    "$focus_down": "achiviment_26",
+                    "$focus_left": "achiviment_18",
+                    "$focus_right": "",
+                    "$type": 0,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_25@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        156,
+                        266
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 81,
+                    "$focus_id": "achiviment_25",
+                    "$focus_up": "achiviment_18",
+                    "$focus_down": "",
+                    "$focus_left": "achiviment_20",
+                    "$focus_right": "achiviment_26",
+                    "$type": 0,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_26@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        188,
+                        266
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 82,
+                    "$focus_id": "achiviment_26",
+                    "$focus_up": "achiviment_24",
+                    "$focus_down": "",
+                    "$focus_left": "achiviment_25",
+                    "$focus_right": "",
+                    "$type": 0,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_27@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        220,
+                        105
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 83,
+                    "$focus_id": "achiviment_27",
+                    "$focus_up": "achiviment_11",
+                    "$focus_down": "achiviment_31",
+                    "$focus_left": "achiviment_5",
+                    "$focus_right": "achiviment_28",
+                    "$type": 0,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_28@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        252,
+                        105
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 84,
+                    "$focus_id": "achiviment_28",
+                    "$focus_up": "",
+                    "$focus_down": "achiviment_32",
+                    "$focus_left": "achiviment_27",
+                    "$focus_right": "achiviment_29",
+                    "$type": 0,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    },
+                    "$change_place": true
+                }
+            },
+            {
+                "but_29@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        284,
+                        105
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 85,
+                    "$focus_id": "achiviment_29",
+                    "$focus_up": "",
+                    "$focus_down": "achiviment_33",
+                    "$focus_left": "achiviment_28",
+                    "$focus_right": "achiviment_30",
+                    "$type": 0,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    },
+                    "$change_place": true
+                }
+            },
+            {
+                "but_30@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        316,
+                        105
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 86,
+                    "$focus_id": "achiviment_30",
+                    "$focus_up": "",
+                    "$focus_down": "achiviment_34",
+                    "$focus_left": "achiviment_29",
+                    "$focus_right": "",
+                    "$type": 0,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    },
+                    "$change_place": true
+                }
+            },
+            {
+                "but_31@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        220,
+                        137
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 87,
+                    "$focus_id": "achiviment_31",
+                    "$focus_up": "achiviment_27",
+                    "$focus_down": "achiviment_37",
+                    "$focus_left": "achiviment_13",
+                    "$focus_right": "achiviment_32",
+                    "$type": 0,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    },
+                    "$change_place": true
+                }
+            },
+            {
+                "but_32@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        253,
+                        137
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 88,
+                    "$focus_id": "achiviment_32",
+                    "$focus_up": "achiviment_28",
+                    "$focus_down": "achiviment_38",
+                    "$focus_left": "achiviment_31",
+                    "$focus_right": "achiviment_33",
+                    "$type": 0,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    },
+                    "$change_place": true
+                }
+            },
+            {
+                "but_33@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        284,
+                        137
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 89,
+                    "$focus_id": "achiviment_33",
+                    "$focus_up": "achiviment_29",
+                    "$focus_down": "achiviment_39",
+                    "$focus_left": "achiviment_32",
+                    "$focus_right": "achiviment_34",
+                    "$type": 0,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    },
+                    "$change_place": true
+                }
+            },
+            {
+                "but_34@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        316,
+                        137
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 90,
+                    "$focus_id": "achiviment_34",
+                    "$focus_up": "achiviment_30",
+                    "$focus_down": "achiviment_35",
+                    "$focus_left": "achiviment_33",
+                    "$focus_right": "",
+                    "$type": 0,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    },
+                    "$change_place": true
+                }
+            },
+            {
+                "but_35@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        316,
+                        169
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 91,
+                    "$focus_id": "achiviment_35",
+                    "$focus_up": "achiviment_34",
+                    "$focus_down": "achiviment_36",
+                    "$focus_left": "achiviment_39",
+                    "$focus_right": "",
+                    "$type": 0,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    },
+                    "$change_place": true
+                }
+            },
+            {
+                "but_36@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        316,
+                        201
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 92,
+                    "$focus_id": "achiviment_36",
+                    "$focus_up": "achiviment_35",
+                    "$focus_down": "",
+                    "$focus_left": "achiviment_40",
+                    "$focus_right": "",
+                    "$type": 0,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    },
+                    "$change_place": true
+                }
+            },
+            {
+                "but_37@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        220,
+                        169
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 93,
+                    "$focus_id": "achiviment_37",
+                    "$focus_up": "achiviment_31",
+                    "$focus_down": "achiviment_41",
+                    "$focus_left": "achiviment_16",
+                    "$focus_right": "achiviment_38",
+                    "$type": 0,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    },
+                    "$change_place": true
+                }
+            },
+            {
+                "but_38@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        252,
+                        169
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 94,
+                    "$focus_id": "achiviment_38",
+                    "$focus_up": "achiviment_32",
+                    "$focus_down": "achiviment_40",
+                    "$focus_left": "achiviment_37",
+                    "$focus_right": "achiviment_39",
+                    "$type": 0,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    },
+                    "$change_place": true
+                }
+            },
+            {
+                "but_39@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        284,
+                        169
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 95,
+                    "$focus_id": "achiviment_39",
+                    "$focus_up": "achiviment_33",
+                    "$focus_down": "achiviment_40",
+                    "$focus_left": "achiviment_38",
+                    "$focus_right": "achiviment_35",
+                    "$type": 0,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    },
+                    "$change_place": true
+                }
+            },
+            {
+                "but_40@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        284,
+                        201
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 96,
+                    "$focus_id": "achiviment_40",
+                    "$focus_up": "achiviment_39",
+                    "$focus_down": "",
+                    "$focus_left": "achiviment_41",
+                    "$focus_right": "achiviment_36",
+                    "$type": 0,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    },
+                    "$change_place": true
+                }
+            },
+            {
+                "but_41@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        220,
+                        201
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 97,
+                    "$focus_id": "achiviment_41",
+                    "$focus_up": "achiviment_37",
+                    "$focus_down": "achiviment_42",
+                    "$focus_left": "achiviment_23",
+                    "$focus_right": "achiviment_40",
+                    "$type": 0,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    },
+                    "$change_place": true
+                }
+            },
+            {
+                "but_42@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        220,
+                        234
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 98,
+                    "$focus_id": "achiviment_42",
+                    "$focus_up": "achiviment_41",
+                    "$focus_down": "achiviment_43",
+                    "$focus_left": "achiviment_24",
+                    "$focus_right": "",
+                    "$type": 0,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    },
+                    "$change_place": true
+                }
+            },
+            {
+                "but_43@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        220,
+                        265
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 99,
+                    "$focus_id": "achiviment_43",
+                    "$focus_up": "achiviment_42",
+                    "$focus_down": "achiviment_44",
+                    "$focus_left": "achiviment_26",
+                    "$focus_right": "",
+                    "$type": 0,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    },
+                    "$change_place": true
+                }
+            },
+            {
+                "but_44@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        220,
+                        297
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 100,
+                    "$focus_id": "achiviment_44",
+                    "$focus_up": "achiviment_43",
+                    "$focus_down": "",
+                    "$focus_left": "achiviment_26",
+                    "$focus_right": "",
+                    "$type": 0,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    },
+                    "$change_place": true
+                }
+            },
+            {
+                "back_concept_two": {
+                    "type": "image",
+                    "layer": 8,
+                    "offset": [
+                        -44,
+                        -30
+                    ],
+                    "size": [
+                        400,
+                        400
+                    ],
+                    "texture": "textures/gui/advantcements/map_concept_two",
+                    "anchor_to": "top_right",
+                    "anchor_from": "top_right"
+                }
+            }
+        ],
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "minecraft_toggle",
+                "source_property_name": "#toggle_state",
+                "target_property_name": "#visible"
+            }
+        ]
+    },
+    "panel_achiviment_nether": {
+        "type": "panel",
+        "anchor_from": "top_right",
+        "anchor_to": "top_right",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "controls": [
+            {
+                "but_1@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        149,
+                        -7
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 101,
+                    "$focus_id": "",
+                    "$focus_up": "",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 2,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_2@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        21,
+                        40
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 102,
+                    "$focus_id": "",
+                    "$focus_up": "",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 2,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_3@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        53,
+                        40
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 103,
+                    "$focus_id": "",
+                    "$focus_up": "",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 2,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_4@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        85,
+                        40
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 104,
+                    "$focus_id": "",
+                    "$focus_up": "",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 2,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_5@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        85,
+                        73
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 105,
+                    "$focus_id": "",
+                    "$focus_up": "",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 2,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_6@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        117,
+                        41
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 106,
+                    "$focus_id": "",
+                    "$focus_up": "",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 2,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_7@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        117,
+                        73
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 107,
+                    "$focus_id": "",
+                    "$focus_up": "",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 2,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_8@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        149,
+                        57
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 108,
+                    "$focus_id": "",
+                    "$focus_up": "",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 2,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_9@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        181,
+                        41
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 109,
+                    "$focus_id": "",
+                    "$focus_up": "",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 2,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_10@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        181,
+                        73
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 110,
+                    "$focus_id": "",
+                    "$focus_up": "",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 2,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_11@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        213,
+                        40
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 111,
+                    "$focus_id": "",
+                    "$focus_up": "",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 2,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_12@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        213,
+                        73
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 112,
+                    "$focus_id": "",
+                    "$focus_up": "",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 2,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_13@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        213,
+                        105
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 113,
+                    "$focus_id": "",
+                    "$focus_up": "",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 2,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_14@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        181,
+                        105
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 114,
+                    "$focus_id": "",
+                    "$focus_up": "",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 2,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_15@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        229,
+                        137
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 115,
+                    "$focus_id": "",
+                    "$focus_up": "",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 2,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_16@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        245,
+                        41
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 116,
+                    "$focus_id": "",
+                    "$focus_up": "",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 2,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_17@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        245,
+                        73
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 117,
+                    "$focus_id": "",
+                    "$focus_up": "",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 2,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_18@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        261,
+                        105
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 118,
+                    "$focus_id": "",
+                    "$focus_up": "",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 2,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    },
+                    "$change_place": true
+                }
+            },
+            {
+                "but_19@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        277,
+                        40
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 119,
+                    "$focus_id": "",
+                    "$focus_up": "",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 2,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    },
+                    "$change_place": true
+                }
+            },
+            {
+                "but_20@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        309,
+                        41
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 120,
+                    "$focus_id": "",
+                    "$focus_up": "",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 2,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    },
+                    "$change_place": true
+                }
+            },
+            {
+                "but_21@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        309,
+                        73
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 121,
+                    "$focus_id": "",
+                    "$focus_up": "",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 2,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    },
+                    "$change_place": true
+                }
+            },
+            {
+                "but_22@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        309,
+                        105
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 122,
+                    "$focus_id": "",
+                    "$focus_up": "",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 2,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    },
+                    "$change_place": true
+                }
+            },
+            {
+                "but_23@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        309,
+                        137
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 123,
+                    "$focus_id": "",
+                    "$focus_up": "",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 2,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    },
+                    "$change_place": true
+                }
+            },
+            {
+                "back_concept_three": {
+                    "type": "image",
+                    "layer": 8,
+                    "offset": [
+                        -35,
+                        -30
+                    ],
+                    "size": [
+                        400,
+                        200
+                    ],
+                    "texture": "textures/gui/advantcements/map_concept_three",
+                    "anchor_to": "top_right",
+                    "anchor_from": "top_right"
+                }
+            }
+        ],
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "nether_toggle",
+                "source_property_name": "#toggle_state",
+                "target_property_name": "#visible"
+            }
+        ]
+    },
+    "panel_achiviment_cultivation": {
+        "type": "panel",
+        "anchor_from": "top_right",
+        "anchor_to": "top_right",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "controls": [
+            {
+                "but_1@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        169,
+                        -7
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 124,
+                    "$focus_id": "",
+                    "$focus_up": "",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 3,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_2@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        41,
+                        41
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 125,
+                    "$focus_id": "",
+                    "$focus_up": "",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 3,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_3@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        25,
+                        73
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 126,
+                    "$focus_id": "",
+                    "$focus_up": "",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 3,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_4@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        25,
+                        105
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 127,
+                    "$focus_id": "",
+                    "$focus_up": "",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 3,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_5@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        41,
+                        137
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 128,
+                    "$focus_id": "",
+                    "$focus_up": "",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 3,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_6@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        41,
+                        169
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 129,
+                    "$focus_id": "",
+                    "$focus_up": "",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 3,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_7@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        73,
+                        41
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 130,
+                    "$focus_id": "",
+                    "$focus_up": "",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 3,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_8@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        57,
+                        73
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 131,
+                    "$focus_id": "",
+                    "$focus_up": "",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 3,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_9@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        57,
+                        105
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 132,
+                    "$focus_id": "",
+                    "$focus_up": "",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 3,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_10@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        73,
+                        137
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 133,
+                    "$focus_id": "",
+                    "$focus_up": "",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 3,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_11@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        89,
+                        73
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 134,
+                    "$focus_id": "",
+                    "$focus_up": "",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 3,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_12@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        90,
+                        105
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 135,
+                    "$focus_id": "",
+                    "$focus_up": "",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 3,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_13@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        105,
+                        40
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 136,
+                    "$focus_id": "",
+                    "$focus_up": "",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 3,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_14@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        137,
+                        73
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 137,
+                    "$focus_id": "",
+                    "$focus_up": "",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 3,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_15@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        121,
+                        105
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 138,
+                    "$focus_id": "",
+                    "$focus_up": "",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 3,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_16@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        137,
+                        41
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 139,
+                    "$focus_id": "",
+                    "$focus_up": "",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 3,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_17@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        169,
+                        41
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 140,
+                    "$focus_id": "",
+                    "$focus_up": "",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 3,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_18@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        201,
+                        41
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 141,
+                    "$focus_id": "",
+                    "$focus_up": "",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 3,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_19@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        201,
+                        73
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 142,
+                    "$focus_id": "",
+                    "$focus_up": "",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 3,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_20@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        233,
+                        41
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 143,
+                    "$focus_id": "",
+                    "$focus_up": "",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 3,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_21@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        233,
+                        73
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 144,
+                    "$focus_id": "",
+                    "$focus_up": "",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 3,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_22@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        217,
+                        105
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 145,
+                    "$focus_id": "",
+                    "$focus_up": "",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 3,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_23@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        233,
+                        137
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 146,
+                    "$focus_id": "",
+                    "$focus_up": "",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 3,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_24@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        265,
+                        41
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 147,
+                    "$focus_id": "",
+                    "$focus_up": "",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 3,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_25@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        265,
+                        73
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 148,
+                    "$focus_id": "",
+                    "$focus_up": "",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 3,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_26@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        297,
+                        41
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 149,
+                    "$focus_id": "",
+                    "$focus_up": "",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 3,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_27@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        297,
+                        73
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 150,
+                    "$focus_id": "",
+                    "$focus_up": "",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 3,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "but_28@templace_advancements_5fs.button_template": {
+                    "offset": [
+                        297,
+                        105
+                    ],
+                    "anchor_to": "center",
+                    "anchor_from": "center",
+                    "$collection_index": 151,
+                    "$focus_id": "",
+                    "$focus_up": "",
+                    "$focus_down": "",
+                    "$focus_left": "",
+                    "$focus_right": "",
+                    "$type": 3,
+                    "$bag_data": {
+                        "#item_id_aux": 71565312
+                    }
+                }
+            },
+            {
+                "back_concept_four": {
+                    "type": "image",
+                    "layer": 8,
+                    "offset": [
+                        -15,
+                        -30
+                    ],
+                    "size": [
+                        400,
+                        300
+                    ],
+                    "texture": "textures/gui/advantcements/map_concept_four",
+                    "anchor_to": "top_right",
+                    "anchor_from": "top_right"
+                }
+            }
+        ],
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "cultivation_toggle",
+                "source_property_name": "#toggle_state",
+                "target_property_name": "#visible"
+            }
+        ]
+    }
+}

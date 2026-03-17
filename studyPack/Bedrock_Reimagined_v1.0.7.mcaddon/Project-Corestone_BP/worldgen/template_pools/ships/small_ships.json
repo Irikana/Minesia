@@ -1,0 +1,66 @@
+{
+    "format_version": "1.21.20",
+    "minecraft:template_pool": {
+        "description": {
+            "identifier": "5fs_br:ships/small_ships"
+        },
+        "elements": [
+            {
+                "element": {
+                    "element_type": "minecraft:single_pool_element",
+                    "location": "5fs_br/ships/ship1Creeper",
+                    "processors": "5fs_br:empty_processor"
+                },
+                "weight": 1
+            },
+            {
+                "element": {
+                    "element_type": "minecraft:single_pool_element",
+                    "location": "5fs_br/ships/ship1Gray",
+                    "processors": "5fs_br:empty_processor"
+                },
+                "weight": 1
+            },
+            {
+                "element": {
+                    "element_type": "minecraft:single_pool_element",
+                    "location": "5fs_br/ships/ship1Green",
+                    "processors": "5fs_br:empty_processor"
+                },
+                "weight": 1
+            },
+            {
+                "element": {
+                    "element_type": "minecraft:single_pool_element",
+                    "location": "5fs_br/ships/ship1Guardian",
+                    "processors": "5fs_br:empty_processor"
+                },
+                "weight": 1
+            },
+            {
+                "element": {
+                    "element_type": "minecraft:single_pool_element",
+                    "location": "5fs_br/ships/ship1Pirate",
+                    "processors": "5fs_br:empty_processor"
+                },
+                "weight": 1
+            },
+            {
+                "element": {
+                    "element_type": "minecraft:single_pool_element",
+                    "location": "5fs_br/ships/ship1Sky",
+                    "processors": "5fs_br:empty_processor"
+                },
+                "weight": 1
+            },
+            {
+                "element": {
+                    "element_type": "minecraft:single_pool_element",
+                    "location": "5fs_br/ships/ship1Yellow",
+                    "processors": "5fs_br:empty_processor"
+                },
+                "weight": 1
+            }
+        ]
+    }
+}

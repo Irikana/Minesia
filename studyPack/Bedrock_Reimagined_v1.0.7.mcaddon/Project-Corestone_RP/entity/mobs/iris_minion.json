@@ -1,0 +1,52 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "5fs_br:iris_minion",
+            "materials": {
+                "default": "iris_base",
+                "outline": "iris",
+				"bioluminescent_layer": "warden_bioluminescent_layer"
+            },
+            "textures": {
+                "default": "textures/entity/mobs/iris/iris_minion",
+                "outline": "textures/entity/mobs/iris/iris_outline",
+                "bioluminescent_layer": "textures/entity/mobs/iris/iris_minion_eye"
+            },
+            "geometry": {
+                "default": "geometry.iris_minion",
+                "outline": "geometry.iris_minion_outline"
+            },
+            "animations": {
+                "idle": "animation.iris_minion.idle",
+                "shoot": "animation.iris_minion.shoot",
+                "attack": "animation.iris_minion.attack",
+                "particles": "animation.iris_minion.particles",
+                "death": "animation.iris_minion.death",
+                "root_controller": "controller.animation.iris_minion.root",
+                "general_controller": "controller.animation.iris_minion.general"
+            },
+            "scripts": {
+                "animate": [
+                    "root_controller"
+                ]
+            },
+            "render_controllers": [
+                "controller.render.default",
+                "controller.render.iris",
+                "controller.render.bioluminescent"
+            ],
+            "particle_effects": {
+                "iris": "5fs_br:iris",
+                "iris_minion_death": "5fs_br:iris_minion_death"
+            },
+            "sound_effects": {
+                "idle": "mob.iris_minion.idle",
+                "shoot": "mob.iris_minion.shoot"
+            },
+            "spawn_egg": {
+                "texture": "5fs_br:iris_minion_spawn_egg"
+            }
+        }
+    }
+}

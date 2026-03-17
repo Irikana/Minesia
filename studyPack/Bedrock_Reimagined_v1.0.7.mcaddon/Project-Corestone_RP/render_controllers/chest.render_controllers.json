@@ -1,0 +1,50 @@
+{
+    "format_version": "1.8.0",
+    "render_controllers": {
+        "controller.render.chest": {
+            "arrays": {
+                "textures": {
+                    "Array.skins": [
+                        "Texture.default",
+                        "Texture.spruce",
+                        "Texture.birch",
+                        "Texture.jungle",
+                        "Texture.acacia",
+                        "Texture.dark_oak",
+                        "Texture.mangrove",
+                        "Texture.cherry",
+                        "Texture.pale_oak",
+                        "Texture.bamboo",
+                        "Texture.crimson",
+                        "Texture.warped",
+                        "Texture.maple",
+                        "Texture.petrified",
+                        "Texture.redwood",
+                        "Texture.palm"
+                    ]
+                }
+            },
+            "materials": [
+                {
+                    "*": "material.default"
+                }
+            ],
+            "geometry": "geometry.default",
+            "textures": [
+                "Array.skins[v.index]"
+            ],
+            "is_hurt_color": {
+                "a": 0,
+                "b": 0,
+                "g": 0,
+                "r": 0
+            },
+            "on_fire_color": {
+                "a": 0,
+                "b": 0,
+                "g": 0,
+                "r": 0
+            }
+        }
+    }
+}

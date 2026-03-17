@@ -1,0 +1,1683 @@
+{
+    "format_version": "1.26.0",
+	"minecraft:block": {
+        "description": {
+            "identifier": "5fs_br:weathered_copper_pillar",
+            "menu_category": {
+                "category": "Construction"
+            },
+            "states": {
+                "5fs_br:connect_north": [
+                    false,
+                    true
+                ],
+                "5fs_br:connect_south": [
+                    false,
+                    true
+                ],
+                "5fs_br:connect_east": [
+                    false,
+                    true
+                ],
+                "5fs_br:connect_west": [
+                    false,
+                    true
+                ],
+                "5fs_br:connect_up": [
+                    false,
+                    true
+                ],
+                "5fs_br:connect_down": [
+                    false,
+                    true
+                ]
+            }
+        },
+        "permutations": [
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_none"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_none"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_down_up"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_down_up"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_down_up"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_down_up"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_down_up"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_down_up"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_left_right"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_left_right"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_left_right"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_middle"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_middle"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_bottom_right_corner"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_bottom_left_corner"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_bottom_left_corner"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_bottom_right_corner"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_top_right_corner"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_top_left_corner"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_top_left_corner"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_top_right_corner"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_top_middle_down"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_top_middle_down"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_down_middle_top"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_down_middle_top"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_left_middle"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_right_middle"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_right_middle"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_left_middle"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "north": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "south": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "west": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "east": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_none"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_none"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "north": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "south": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "west": {
+                            "texture": "weathered_copper_bottom_right_corner"
+                        },
+                        "east": {
+                            "texture": "weathered_copper_bottom_left_corner"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_down_up"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_down_up"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "north": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "south": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "west": {
+                            "texture": "weathered_copper_bottom_left_corner"
+                        },
+                        "east": {
+                            "texture": "weathered_copper_bottom_right_corner"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_down_up"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_down_up"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "north": {
+                            "texture": "weathered_copper_bottom_left_corner"
+                        },
+                        "south": {
+                            "texture": "weathered_copper_bottom_right_corner"
+                        },
+                        "west": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "east": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_left_right"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "north": {
+                            "texture": "weathered_copper_bottom_right_corner"
+                        },
+                        "south": {
+                            "texture": "weathered_copper_bottom_left_corner"
+                        },
+                        "west": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "east": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_left_right"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "north": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "south": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "west": {
+                            "texture": "weathered_copper_down_middle_top"
+                        },
+                        "east": {
+                            "texture": "weathered_copper_down_middle_top"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_down_up"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_down_up"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "north": {
+                            "texture": "weathered_copper_down_middle_top"
+                        },
+                        "south": {
+                            "texture": "weathered_copper_down_middle_top"
+                        },
+                        "west": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "east": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_left_right"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "north": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "south": {
+                            "texture": "weathered_copper_bottom_right_corner"
+                        },
+                        "west": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "east": {
+                            "texture": "weathered_copper_bottom_left_corner"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_bottom_right_corner"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_bottom_left_corner"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "north": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "south": {
+                            "texture": "weathered_copper_bottom_left_corner"
+                        },
+                        "west": {
+                            "texture": "weathered_copper_bottom_right_corner"
+                        },
+                        "east": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_bottom_left_corner"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_bottom_right_corner"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "north": {
+                            "texture": "weathered_copper_bottom_left_corner"
+                        },
+                        "south": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "west": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "east": {
+                            "texture": "weathered_copper_bottom_right_corner"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_top_right_corner"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_top_left_corner"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "north": {
+                            "texture": "weathered_copper_bottom_right_corner"
+                        },
+                        "south": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "west": {
+                            "texture": "weathered_copper_bottom_left_corner"
+                        },
+                        "east": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_top_left_corner"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_top_right_corner"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "north": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "south": {
+                            "texture": "weathered_copper_down_middle_top"
+                        },
+                        "west": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "east": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_down_middle_top"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_down_middle_top"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "north": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "south": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "west": {
+                            "texture": "weathered_copper_down_middle_top"
+                        },
+                        "east": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_left_middle"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_right_middle"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "north": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "south": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "west": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "east": {
+                            "texture": "weathered_copper_down_middle_top"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_right_middle"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_left_middle"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "north": {
+                            "texture": "weathered_copper_down_middle_top"
+                        },
+                        "south": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "west": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "east": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_top_middle_down"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_top_middle_down"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "north": {
+                            "texture": "weathered_copper_down_middle_top"
+                        },
+                        "south": {
+                            "texture": "weathered_copper_down_middle_top"
+                        },
+                        "west": {
+                            "texture": "weathered_copper_down_middle_top"
+                        },
+                        "east": {
+                            "texture": "weathered_copper_down_middle_top"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_middle"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_middle"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "north": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "south": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "west": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "east": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_none"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_none"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "north": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "south": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "west": {
+                            "texture": "weathered_copper_top_right_corner"
+                        },
+                        "east": {
+                            "texture": "weathered_copper_top_left_corner"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_down_up"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_down_up"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "north": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "south": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "west": {
+                            "texture": "weathered_copper_top_left_corner"
+                        },
+                        "east": {
+                            "texture": "weathered_copper_top_right_corner"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_down_up"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_down_up"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "north": {
+                            "texture": "weathered_copper_top_left_corner"
+                        },
+                        "south": {
+                            "texture": "weathered_copper_top_right_corner"
+                        },
+                        "west": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "east": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_left_right"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "north": {
+                            "texture": "weathered_copper_top_right_corner"
+                        },
+                        "south": {
+                            "texture": "weathered_copper_top_left_corner"
+                        },
+                        "west": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "east": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_left_right"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "north": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "south": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "west": {
+                            "texture": "weathered_copper_top_middle_down"
+                        },
+                        "east": {
+                            "texture": "weathered_copper_top_middle_down"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_down_up"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_down_up"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "north": {
+                            "texture": "weathered_copper_top_middle_down"
+                        },
+                        "south": {
+                            "texture": "weathered_copper_top_middle_down"
+                        },
+                        "west": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "east": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_left_right"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "north": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "south": {
+                            "texture": "weathered_copper_top_right_corner"
+                        },
+                        "west": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "east": {
+                            "texture": "weathered_copper_top_left_corner"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_bottom_right_corner"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_bottom_left_corner"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "north": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "south": {
+                            "texture": "weathered_copper_top_left_corner"
+                        },
+                        "west": {
+                            "texture": "weathered_copper_top_right_corner"
+                        },
+                        "east": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_bottom_left_corner"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_bottom_right_corner"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "north": {
+                            "texture": "weathered_copper_top_left_corner"
+                        },
+                        "south": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "west": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "east": {
+                            "texture": "weathered_copper_top_right_corner"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_top_right_corner"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_top_left_corner"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "north": {
+                            "texture": "weathered_copper_top_right_corner"
+                        },
+                        "south": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "west": {
+                            "texture": "weathered_copper_top_left_corner"
+                        },
+                        "east": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_top_left_corner"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_top_right_corner"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "north": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "south": {
+                            "texture": "weathered_copper_top_middle_down"
+                        },
+                        "west": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "east": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_down_middle_top"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_down_middle_top"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "north": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "south": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "west": {
+                            "texture": "weathered_copper_top_middle_down"
+                        },
+                        "east": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_left_middle"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_right_middle"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "north": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "south": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "west": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "east": {
+                            "texture": "weathered_copper_top_middle_down"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_right_middle"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_left_middle"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "north": {
+                            "texture": "weathered_copper_top_middle_down"
+                        },
+                        "south": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "west": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "east": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_top_middle_down"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_top_middle_down"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "north": {
+                            "texture": "weathered_copper_top_middle_down"
+                        },
+                        "south": {
+                            "texture": "weathered_copper_top_middle_down"
+                        },
+                        "west": {
+                            "texture": "weathered_copper_top_middle_down"
+                        },
+                        "east": {
+                            "texture": "weathered_copper_top_middle_down"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_middle"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_middle"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "north": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "south": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "west": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "east": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_none"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_none"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "north": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "south": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "west": {
+                            "texture": "weathered_copper_right_middle"
+                        },
+                        "east": {
+                            "texture": "weathered_copper_left_middle"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_down_up"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_down_up"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "north": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "south": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "west": {
+                            "texture": "weathered_copper_left_middle"
+                        },
+                        "east": {
+                            "texture": "weathered_copper_right_middle"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_down_up"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_down_up"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "north": {
+                            "texture": "weathered_copper_left_middle"
+                        },
+                        "south": {
+                            "texture": "weathered_copper_right_middle"
+                        },
+                        "west": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "east": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_left_right"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "north": {
+                            "texture": "weathered_copper_right_middle"
+                        },
+                        "south": {
+                            "texture": "weathered_copper_left_middle"
+                        },
+                        "west": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "east": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_left_right"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "north": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "south": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "west": {
+                            "texture": "weathered_copper_middle"
+                        },
+                        "east": {
+                            "texture": "weathered_copper_middle"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_down_up"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_down_up"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "north": {
+                            "texture": "weathered_copper_middle"
+                        },
+                        "south": {
+                            "texture": "weathered_copper_middle"
+                        },
+                        "west": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "east": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_left_right"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "north": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "south": {
+                            "texture": "weathered_copper_right_middle"
+                        },
+                        "west": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "east": {
+                            "texture": "weathered_copper_left_middle"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_bottom_right_corner"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_bottom_left_corner"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "north": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "south": {
+                            "texture": "weathered_copper_left_middle"
+                        },
+                        "west": {
+                            "texture": "weathered_copper_right_middle"
+                        },
+                        "east": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_bottom_left_corner"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_bottom_right_corner"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "north": {
+                            "texture": "weathered_copper_left_middle"
+                        },
+                        "south": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "west": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "east": {
+                            "texture": "weathered_copper_right_middle"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_top_right_corner"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_top_left_corner"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "north": {
+                            "texture": "weathered_copper_right_middle"
+                        },
+                        "south": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "west": {
+                            "texture": "weathered_copper_left_middle"
+                        },
+                        "east": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_top_left_corner"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_top_right_corner"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "north": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "south": {
+                            "texture": "weathered_copper_middle"
+                        },
+                        "west": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "east": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_down_middle_top"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_down_middle_top"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "north": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "south": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "west": {
+                            "texture": "weathered_copper_middle"
+                        },
+                        "east": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_left_middle"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_right_middle"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "north": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "south": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "west": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "east": {
+                            "texture": "weathered_copper_middle"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_right_middle"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_left_middle"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "north": {
+                            "texture": "weathered_copper_middle"
+                        },
+                        "south": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "west": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "east": {
+                            "texture": "weathered_copper_side"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_top_middle_down"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_top_middle_down"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "weathered_copper_left_right"
+                        },
+                        "north": {
+                            "texture": "weathered_copper_middle"
+                        },
+                        "south": {
+                            "texture": "weathered_copper_middle"
+                        },
+                        "west": {
+                            "texture": "weathered_copper_middle"
+                        },
+                        "east": {
+                            "texture": "weathered_copper_middle"
+                        },
+                        "up": {
+                            "texture": "weathered_copper_middle"
+                        },
+                        "down": {
+                            "texture": "weathered_copper_middle"
+                        }
+                    }
+                }
+            }
+        ],
+        "components": {
+            "minecraft:geometry": "minecraft:geometry.full_block",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "weathered_copper_left_right"
+                },
+                "up": {
+                    "texture": "weathered_copper_none"
+                },
+                "down": {
+                    "texture": "weathered_copper_none"
+                }
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 10,
+                "item_specific_speeds": [
+                    {
+                        "item": {
+                            "tags": "query.all_tags('minecraft:is_pickaxe') && !query.all_tags('minecraft:wooden_tier')"
+                        },
+                        "destroy_speed": 3
+                    }
+                ]
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 6
+            },
+            "minecraft:map_color": "#6A8A67",
+            "minecraft:destruction_particles": {
+                "texture": "weathered_copper_none"
+            },
+            "5fs_br:copper_oxidization": {
+                "oxidize_into": "5fs_br:oxidized_copper_pillar"
+            },
+            "5fs_br:copper_interaction": {
+                "wax_into": "5fs_br:waxed_weathered_copper_pillar",
+                "axe_interaction": {
+                    "scrap_into": "5fs_br:exposed_copper_pillar",
+                    "scrap_sound": "scrape",
+                    "scrap_particle": "5fs_br:oxidization_off"
+                }
+            },
+            "tag:minecraft:is_pickaxe_item_destructible": {}
+        }
+    }
+}

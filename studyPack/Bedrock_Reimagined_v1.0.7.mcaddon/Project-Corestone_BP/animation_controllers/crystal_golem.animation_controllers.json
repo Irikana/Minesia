@@ -1,0 +1,30 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.crystal_golem.general": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "attack": "q.is_delayed_attacking"
+                        }
+                    ]
+                },
+                "attack": {
+                    "animations": [
+                        "swing_attack"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!q.is_delayed_attacking"
+                        }
+                    ],
+                    "on_exit": [
+                        "/event entity @s 5fs_br:attacked"
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "5fs_br:compact_raw_copper_block_to_raw_copper_block"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "5fs_br:compact_raw_copper_block"
+      }
+    ],
+    "result": {
+      "item": "minecraft:raw_copper_block",
+      "count": 4
+    },
+    "unlock": [
+      {
+        "item": "5fs_br:compact_raw_copper_block"
+      }
+    ]
+  }
+}

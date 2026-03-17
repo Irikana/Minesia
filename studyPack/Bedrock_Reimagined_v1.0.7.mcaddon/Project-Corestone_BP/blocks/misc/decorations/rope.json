@@ -1,0 +1,77 @@
+{
+  "format_version": "1.26.0",
+	"minecraft:block": {
+    "description": {
+      "identifier": "5fs_br:rope",
+      "menu_category": {
+        "category": "Construction"
+     },
+      "states": {
+        "5fs_br:knot": [true, false]
+      }
+    },
+    "components": {
+      "minecraft:loot": "loot_tables/empty.json",
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 0.2
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 1.5
+      },
+      "minecraft:geometry": {
+        "identifier": "geometry.rope"
+      },
+      "minecraft:collision_box": {
+        "origin": [-1, 0, -1],
+        "size": [2, 16, 2]
+      },
+      "minecraft:selection_box": {
+        "origin": [-1, 0, -1],
+        "size": [2, 16, 2]
+      },
+      "5fs_br:rope": {},
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "rope",
+          "render_method": "alpha_test"
+        }
+      },
+			"minecraft:precipitation_interactions": {
+				"precipitation_behavior": "obstruct_rain"
+			},
+			"minecraft:connection_rule": {
+				"accepts_connections_from": "none"
+      }
+    },
+    "permutations": [
+      {
+        "condition": "!q.block_state('5fs_br:knot')",
+        "components": {
+          "minecraft:geometry": {
+            "identifier": "geometry.rope"
+          },
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "rope",
+              "render_method": "alpha_test"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('5fs_br:knot')",
+        "components": {
+          "minecraft:geometry": {
+            "identifier": "geometry.rope_knot"
+          },
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "rope_knot",
+              "render_method": "alpha_test"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

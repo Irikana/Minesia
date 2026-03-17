@@ -1,0 +1,24 @@
+{
+    "format_version": "1.20.80",
+    "minecraft:recipe_shapeless": {
+        "description": {
+            "identifier": "5fs_br:orange_dye_from_maple_flower"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "ingredients": [
+            {
+                "item": "5fs_br:maple_flower"
+            }
+        ],
+        "result": {
+            "item": "minecraft:orange_dye"
+        },
+        "unlock": [
+            {
+                "item": "5fs_br:maple_flower"
+            }
+        ]
+    }
+}

@@ -1,0 +1,66 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "5fs_br:crystalline_tnt",
+      "runtime_identifier": "minecraft:tnt",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "from_explosion": {
+        "minecraft:explode": {
+          "fuse_length": 1.5,
+          "fuse_lit": true,
+          "power": 7,
+          "damage_scaling": 1,
+          "causes_fire": false,
+          "destroy_affected_by_griefing": true
+        }
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": [
+          "tnt",
+          "inanimate",
+          "nolife"
+        ]
+      },
+      "minecraft:collision_box": {
+        "width": 0.98,
+        "height": 0.98
+      },
+      "minecraft:explode": {
+        "fuse_length": 1.5,
+        "fuse_lit": true,
+        "damage_scaling": 1,
+        "power": 7,
+        "causes_fire": false,
+        "destroy_affected_by_griefing": true
+      },
+      "minecraft:physics": {},
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": true
+      }
+    },
+    "events": {
+      "from_explosion": {
+        "add": {
+          "component_groups": [
+            "from_explosion"
+          ]
+        },
+        "queue_command": {
+          "command": [
+            "particle 5fs_br:tnt_wave1 ~~~",
+            "particle 5fs_br:tnt_wave2 ~~~",
+            "particle 5fs_br:tnt_wave3 ~~~"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:ore_feature": {
+    "description": {
+      "identifier": "5fs_br:nether/magma_to_gold_feature"
+    },
+    "count": 24,
+    "replace_rules": [
+      {
+        "places_block": "5fs_br:magma_brimstone",
+        "may_replace": [
+          "minecraft:magma"
+        ]
+      }
+    ]
+  }
+}

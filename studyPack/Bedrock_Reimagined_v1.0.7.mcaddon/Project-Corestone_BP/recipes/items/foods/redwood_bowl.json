@@ -1,0 +1,31 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "5fs_br:giant_redwood_bowl"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "P P",
+      "SPS"
+    ],
+    "key": {
+      "P": {
+        "item": "5fs_br:redwood_planks"
+      },
+      "S": {
+        "item": "5fs_br:redwood_stick"
+      }
+    },
+    "result": {
+      "item": "5fs_br:giant_redwood_bowl"
+    },
+    "unlock": [
+      {
+        "item": "5fs_br:redwood_planks"
+      }
+    ]
+  }
+}

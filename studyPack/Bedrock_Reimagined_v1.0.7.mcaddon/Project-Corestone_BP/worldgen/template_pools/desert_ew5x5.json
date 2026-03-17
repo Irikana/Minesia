@@ -1,0 +1,258 @@
+{
+  "format_version": "1.21.20",
+  "minecraft:template_pool": {
+    "description": {
+      "identifier": "5fs:desert_ew5x5"
+    },
+    "elements": [
+      //   {
+      //     "element": {
+      //       "element_type": "minecraft:single_pool_element",
+      //       "location": "desert/ewHal10_D",
+      //       "processors": "mike:stone_brick_replacement"
+      //     },
+      //     "weight": 6
+      //   },
+      // {
+      //     "element": {
+      //       "element_type": "minecraft:single_pool_element",
+      //       "location": "desert/ewHal10_1_D",
+      //       "processors": "mike:stone_brick_replacement"
+      //     },
+      //     "weight": 6
+      //   },
+      // {
+      //     "element": {
+      //       "element_type": "minecraft:single_pool_element",
+      //       "location": "desert/ewHal10_2_D",
+      //       "processors": "mike:stone_brick_replacement"
+      //     },
+      //     "weight": 6
+      //   },
+      // {
+      //     "element": {
+      //       "element_type": "minecraft:single_pool_element",
+      //       "location": "desert/ewHal11_D",
+      //       "processors": "mike:stone_brick_replacement"
+      //     },
+      //     "weight": 6
+      //   },
+      // {
+      //     "element": {
+      //       "element_type": "minecraft:single_pool_element",
+      //       "location": "desert/ewHal11_1_D",
+      //       "processors": "mike:stone_brick_replacement"
+      //     },
+      //     "weight": 6
+      //   },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "desert/ewnsHall0_D",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 2
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "desert/ewnsHall0_1_D",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 1
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "desert/ewnsHall0_2_D",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 1
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "desert/ewnsHall0_3_D",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 1
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "desert/ewnsHall1_D",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 6
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "desert/ewUp0_D",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 3
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "desert/ewUp0_1_D",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 3
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "desert/middleHall0_D",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 2
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "desert/middleHall0_1_D",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 2
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "desert/middleHall0_2_D",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 2
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "desert/upHall0_D",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 1
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "desert/upHall0_1_D",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 1
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "desert/upHall0_2_D",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 1
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "desert/room0_D",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 1
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "desert/room0_1_D",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 1
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "desert/room0_2_D",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 1
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "desert/room2_D",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 2
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "desert/room2_1_D",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 2
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "desert/room2_2_D",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 2
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "desert/room3_D",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 1
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "desert/nsHallBoss2_D",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 15
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "desert/nsHallBoss2_1_D",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 15
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "desert/nsHallBoss2_2_D",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 15
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "desert/room3_1_D",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 1
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "desert/room3_2_D",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 1
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "desert/bossRoom2_D",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 150
+      }
+    ]
+  }
+}

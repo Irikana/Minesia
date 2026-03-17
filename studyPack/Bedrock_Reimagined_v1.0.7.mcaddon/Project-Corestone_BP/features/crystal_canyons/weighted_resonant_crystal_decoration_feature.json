@@ -1,0 +1,13 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "5fs_br:crystal_canyons/weighted_resonant_crystal_decoration_feature"
+    },
+    "features": [
+      [ "5fs_br:crystal_canyons/resonant_crystal_decoration_1_feature", 1 ],
+      [ "5fs_br:crystal_canyons/resonant_crystal_decoration_2_feature", 1 ],
+      [ "5fs_br:crystal_canyons/resonant_crystal_decoration_3_feature", 1 ]
+    ]
+  }
+}

@@ -1,0 +1,275 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.crystalline_berserker.root": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"general_controller", "attack_controller", "look_at_target"
+					],
+					"transitions": [
+						{
+							"death": "q.is_sheared"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"death": {
+					"animations": [
+						"death",
+						{
+                            "death_rotation": "q.is_stackable"
+                        }
+					]
+				}
+			}
+		},
+		"controller.animation.crystalline_berserker.general": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"idle_0"
+					],
+					"transitions": [
+						{
+							"idle_0": "!q.is_moving"
+						},
+						{
+							"walk": "q.is_moving && !q.is_in_water"
+						},
+                        {
+                            "swim": "q.is_moving && q.is_in_water"
+                        },
+						{
+							"crystal_throw": "q.is_stunned"
+						},
+						{
+							"fist_shoot": "q.is_tamed"
+						},
+						{
+							"roll": "q.is_powered"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"idle_0": {
+					"on_entry": [
+						"v.r_idle = math.random_integer(0,3);"
+					],
+					"animations": [
+						{
+							"idle_0": "v.r_idle < 3"
+						},
+						{
+							"idle_1": "v.r_idle == 3"
+						}
+					],
+					"transitions": [
+						{
+							"idle_1": "q.any_animation_finished && !q.is_moving"
+						},
+						{
+							"walk": "q.is_moving && !q.is_in_water"
+						},
+                        {
+                            "swim": "q.is_moving && q.is_in_water"
+                        },
+						{
+							"crystal_throw": "q.is_stunned"
+						},
+						{
+							"fist_shoot": "q.is_tamed"
+						},
+						{
+							"roll": "q.is_powered"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"idle_1": {
+					"on_entry": [
+						"v.r_idle = math.random_integer(0,3);"
+					],
+					"animations": [
+						{
+							"idle_0": "v.r_idle < 3"
+						},
+						{
+							"idle_1": "v.r_idle == 3"
+						}
+					],
+					"transitions": [
+						{
+							"idle_0": "q.any_animation_finished && !q.is_moving"
+						},
+						{
+							"walk": "q.is_moving && !q.is_in_water"
+						},
+                        {
+                            "swim": "q.is_moving && q.is_in_water"
+                        },
+						{
+							"crystal_throw": "q.is_stunned"
+						},
+						{
+							"fist_shoot": "q.is_tamed"
+						},
+						{
+							"roll": "q.is_powered"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"walk": {
+					"animations": [
+						"walk"
+					],
+					"transitions": [
+						{
+							"idle_0": "!q.is_moving"
+						},
+						{
+							"crystal_throw": "q.is_stunned"
+						},
+                        {
+                            "swim": "q.is_moving && q.is_in_water"
+                        },
+						{
+							"fist_shoot": "q.is_tamed"
+						},
+						{
+							"roll": "q.is_powered"
+						}
+					],
+					"blend_transition": 0.2
+				},
+                "swim": {
+                    "animations": [
+                        "swim"
+                    ],
+                    "transitions": [
+						{
+							"idle_0": "!q.is_moving"
+						},
+						{
+							"walk": "q.is_moving && !q.is_in_water"
+						},
+						{
+							"crystal_throw": "q.is_stunned"
+						},
+						{
+							"fist_shoot": "q.is_tamed"
+						},
+						{
+							"roll": "q.is_powered"
+						}
+                    ],
+                    "blend_transition": 0.2
+                },
+				"crystal_throw": {
+					"animations": [
+						"crystal_throw"
+					],
+					"transitions": [
+						{
+							"default": "!q.is_moving && !q.is_stunned"
+						},
+						{
+							"walk": "q.is_moving && !q.is_in_water && !q.is_stunned"
+						},
+                        {
+                            "swim": "q.is_moving && q.is_in_water && !q.is_stunned"
+                        },
+						{
+							"roll": "q.is_powered"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"fist_shoot": {
+					"animations": [
+						"fist_shoot"
+					],
+					"transitions": [
+						{
+							"default": "!q.is_moving && !q.is_tamed"
+						},
+						{
+							"walk": "q.is_moving && !q.is_in_water && !q.is_tamed"
+						},
+                        {
+                            "swim": "q.is_moving && q.is_in_water && !q.is_tamed"
+                        },
+						{
+							"roll": "q.is_powered"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"roll": {
+					"animations": [
+						"roll"
+					],
+					"transitions": [
+						{
+							"default": "!q.is_moving && q.all_animations_finished"
+						},
+						{
+							"walk": "q.is_moving && !q.is_in_water && q.all_animations_finished"
+						},
+                        {
+                            "swim": "q.is_moving && q.is_in_water && q.all_animations_finished"
+                        },
+						{
+							"crystal_throw": "q.is_stunned && q.all_animations_finished"
+						},
+						{
+							"fist_shoot": "q.is_tamed && q.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		},
+		"controller.animation.crystalline_berserker.attack": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"punch_attack": "q.is_delayed_attacking && q.is_saddled"
+						},
+						{
+							"slam_attack": "q.is_roaring"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"punch_attack": {
+					"animations": [
+						"punch_attack"
+					],
+					"transitions": [
+						{
+							"default": "q.any_animation_finished"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"slam_attack": {
+					"animations": [
+						"slam_attack"
+					],
+					"transitions": [
+						{
+							"default": "!q.is_roaring"
+						}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		}
+	}
+}

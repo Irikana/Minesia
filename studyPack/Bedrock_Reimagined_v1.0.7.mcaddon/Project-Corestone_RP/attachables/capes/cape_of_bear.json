@@ -1,0 +1,63 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "5fs_br:cape_of_bear",
+      "materials": {
+        "default": "armor",
+        "enchanted": "armor_enchanted"
+      },
+      "textures": {
+        "bear0":  "textures/entity/gears/capes/bear/bear0",
+        "bear1":  "textures/entity/gears/capes/bear/bear1",
+        "bear2":  "textures/entity/gears/capes/bear/bear2",
+        "bear3":  "textures/entity/gears/capes/bear/bear3",
+        "bear4":  "textures/entity/gears/capes/bear/bear4",
+        "bear5":  "textures/entity/gears/capes/bear/bear5",
+        "bear6":  "textures/entity/gears/capes/bear/bear6",
+        "bear7":  "textures/entity/gears/capes/bear/bear7",
+        "bear8":  "textures/entity/gears/capes/bear/bear8",
+        "bear9":  "textures/entity/gears/capes/bear/bear9",
+        "bear10": "textures/entity/gears/capes/bear/bear10",
+        "bear11": "textures/entity/gears/capes/bear/bear11",
+        "bear12": "textures/entity/gears/capes/bear/bear12",
+        "bear13": "textures/entity/gears/capes/bear/bear13",
+        "bear14": "textures/entity/gears/capes/bear/bear14",
+        "bear15": "textures/entity/gears/capes/bear/bear15",
+        "bear16": "textures/entity/gears/capes/bear/bear16",
+        "bear17": "textures/entity/gears/capes/bear/bear17",
+        "bear18": "textures/entity/gears/capes/bear/bear18",
+        "bear19": "textures/entity/gears/capes/bear/bear19",
+        "bear20": "textures/entity/gears/capes/bear/bear20",
+        "bear21": "textures/entity/gears/capes/bear/bear21",
+        "bear22": "textures/entity/gears/capes/bear/bear22",
+        "bear23": "textures/entity/gears/capes/bear/bear23",
+        "bear24": "textures/entity/gears/capes/bear/bear24",
+        "bear25": "textures/entity/gears/capes/bear/bear25",
+        "bear26": "textures/entity/gears/capes/bear/bear26",
+        "bear27": "textures/entity/gears/capes/bear/bear27",
+        "bear28": "textures/entity/gears/capes/bear/bear28",
+        "bear29": "textures/entity/gears/capes/bear/bear29",
+        "bear30": "textures/entity/gears/capes/bear/bear30",
+        "bear31": "textures/entity/gears/capes/bear/bear31",
+        "bear32": "textures/entity/gears/capes/bear/bear32",
+        "enchanted": "textures/misc/enchanted_actor_glint"
+      },
+      "geometry": {
+        "default": "geometry.custom_cape"
+      },
+      "animations": {
+        "cape": "animation.custom_cape"
+      },
+      "scripts": {
+        "parent_setup": "variable.chest_layer_visible = 0.0;",
+        "animate": [
+          "cape"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.cape_of_bear"
+      ]
+    }
+  }
+}

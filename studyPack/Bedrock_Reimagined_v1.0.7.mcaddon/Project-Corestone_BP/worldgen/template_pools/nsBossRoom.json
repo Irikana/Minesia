@@ -1,0 +1,18 @@
+{
+    "format_version": "1.21.60",
+    "minecraft:template_pool": {
+        "description": {
+            "identifier": "mike:nsBossRoom"
+        },
+        "elements": [
+            {
+                "element": {
+                    "element_type": "minecraft:single_pool_element",
+                    "location": "5fs_br/crystal_mineshaft/nsBossRoom_CC",
+                    "processors": "5fs_br:empty_processor"
+                },
+                "weight": 10
+            }
+        ]
+    }
+}

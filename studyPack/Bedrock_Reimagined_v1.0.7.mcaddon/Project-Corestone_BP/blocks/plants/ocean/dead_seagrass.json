@@ -1,0 +1,150 @@
+{
+    "format_version": "1.26.0",
+	"minecraft:block": {
+        "description": {
+            "identifier": "5fs_br:dead_seagrass",
+            "states": {
+                "5fs_br:sea_grass_type": [
+                    "default",
+                    "double_bot",
+                    "double_top"
+                ]
+            }
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('5fs_br:sea_grass_type') == 'default'",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "dead_seagrass",
+                            "render_method": "alpha_test",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:sea_grass_type') == 'double_bottom'",
+                "components": {
+                    "minecraft:geometry": "geometry.custom_crop",
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "dead_seagrass_bottom",
+                            "render_method": "alpha_test",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:sea_grass_type') == 'double_top'",
+                "components": {
+                    "minecraft:geometry": "geometry.custom_crop",
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "dead_seagrass_top",
+                            "render_method": "alpha_test",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        }
+                    },
+                    "minecraft:placement_filter": {
+                        "conditions": [
+                            {
+                                "allowed_faces": [
+                                    "up"
+                                ],
+                                "block_filter": [
+                                    {
+                                        "name": "5fs_br:dead_seagrass",
+                                        "states": {
+                                            "5fs_br:sea_grass_type": "double_bot"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            }
+        ],
+        "components": {
+            "minecraft:geometry": "geometry.custom_crop",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "dead_seagrass_bottom",
+                    "render_method": "alpha_test",
+                    "ambient_occlusion": false,
+                    "face_dimming": false
+                }
+            },
+            "minecraft:liquid_detection": {
+                "detection_rules": [
+                    {
+                        "can_contain_liquid": true,
+                        "liquid_type": "water",
+                        "on_liquid_touches": "no_reaction"
+                    }
+                ]
+            },
+            "5fs_br:crystallineShears": {},
+            "minecraft:loot": "loot_tables/empty.json",
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 0
+            },
+            "minecraft:collision_box": false,
+            "minecraft:selection_box": {
+                "origin": [
+                    -6.375,
+                    0,
+                    -6.375
+                ],
+                "size": [
+                    12.75,
+                    13.75,
+                    12.75
+                ]
+            },
+            "minecraft:placement_filter": {
+                "conditions": [
+                    {
+                        "block_filter": [
+                            {
+                                "tags": "query.any_tag('dirt', 'sand')"
+                            },
+                            "minecraft:grass_block",
+                            "minecraft:dirt",
+                            "minecraft:gravel",
+                            "minecraft:moss_block",
+                            "minecraft:pale_moss_block",
+                            "minecraft:mycelium",
+                            "minecraft:coarse_dirt",
+                            "minecraft:dirt_with_roots",
+                            "minecraft:muddy_mangrove_roots",
+                            "minecraft:farmland"
+                        ],
+                        "allowed_faces": [
+                            "up"
+                        ]
+                    }
+                ]
+            },
+            "minecraft:connection_rule": {
+                "accepts_connections_from": "none"
+            },
+            "minecraft:movable": {
+                "movement_type": "popped"
+            },
+            "minecraft:precipitation_interactions": {
+                "precipitation_behavior": "none"
+            },
+            "5fs_br:sea_grass": {}
+        }
+    }
+}

@@ -1,0 +1,658 @@
+{
+	"format_version": "1.26.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "5fs_br:palm_door",
+			"traits": {
+				"minecraft:placement_direction": {
+					"enabled_states": [
+						"minecraft:cardinal_direction"
+					]
+				}
+			},
+			"states": {
+				"5fs_br:open_bit": [
+					false,
+					true
+				],
+				"5fs_br:upper_block_bit": [
+					false,
+					true
+				],
+				"5fs_br:door_hinge_bit": [
+					false,
+					true
+				],
+				"5fs_br:was_powered": [
+					false,
+					true
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "q.block_state('5fs_br:open_bit') && !q.block_state('5fs_br:door_hinge_bit') && !q.block_state('5fs_br:upper_block_bit')",
+				"components": {
+					"minecraft:collision_box": {
+						"origin": [
+							5,
+							0,
+							-8
+						],
+						"size": [
+							3,
+							16,
+							16
+						]
+					},
+					"minecraft:selection_box": {
+						"origin": [
+							5,
+							0,
+							-8
+						],
+						"size": [
+							3,
+							16,
+							16
+						]
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('5fs_br:open_bit') && q.block_state('5fs_br:door_hinge_bit') && !q.block_state('5fs_br:upper_block_bit')",
+				"components": {
+					"minecraft:collision_box": {
+						"origin": [
+							-8,
+							0,
+							-8
+						],
+						"size": [
+							3,
+							16,
+							16
+						]
+					},
+					"minecraft:selection_box": {
+						"origin": [
+							-8,
+							0,
+							-8
+						],
+						"size": [
+							3,
+							16,
+							16
+						]
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('5fs_br:open_bit') && !q.block_state('5fs_br:door_hinge_bit') && q.block_state('5fs_br:upper_block_bit')",
+				"components": {
+					"minecraft:collision_box": {
+						"origin": [
+							-8,
+							0,
+							-8
+						],
+						"size": [
+							3,
+							16,
+							16
+						]
+					},
+					"minecraft:selection_box": {
+						"origin": [
+							-8,
+							0,
+							-8
+						],
+						"size": [
+							3,
+							16,
+							16
+						]
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('5fs_br:open_bit') && q.block_state('5fs_br:door_hinge_bit') && q.block_state('5fs_br:upper_block_bit')",
+				"components": {
+					"minecraft:collision_box": {
+						"origin": [
+							5,
+							0,
+							-8
+						],
+						"size": [
+							3,
+							16,
+							16
+						]
+					},
+					"minecraft:selection_box": {
+						"origin": [
+							5,
+							0,
+							-8
+						],
+						"size": [
+							3,
+							16,
+							16
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('minecraft:cardinal_direction') == 'north' && !q.block_state('5fs_br:upper_block_bit')",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							0,
+							0
+						],
+						"scale": [
+							1,
+							2,
+							1
+						],
+						"translation": [
+							0,
+							0.5,
+							0
+						]
+					},
+					"5fs_br:door": {
+						"open_sound": "open.wooden_door",
+						"close_sound": "close.wooden_door"
+					},
+					"5fs_br:no_loot_on_silk_touch": {},
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "palm_door_bottom",
+							"render_method": "alpha_test_single_sided"
+						}
+					},
+					"minecraft:geometry": {
+						"identifier": "geometry.door",
+						"bone_visibility": {
+							"door_open": "q.block_state('5fs_br:open_bit') && !q.block_state('5fs_br:door_hinge_bit')",
+							"door_closed": "!q.block_state('5fs_br:open_bit') && !q.block_state('5fs_br:door_hinge_bit')",
+							"door_open_flipped": "q.block_state('5fs_br:open_bit') && q.block_state('5fs_br:door_hinge_bit')",
+							"door_closed_flipped": "!q.block_state('5fs_br:open_bit') && q.block_state('5fs_br:door_hinge_bit')"
+						}
+					},
+					"minecraft:loot": "loot_tables/empty.json",
+					"tag:5fs_br:up": {}
+				}
+			},
+			{
+				"condition": "query.block_state('minecraft:cardinal_direction') == 'south' && !q.block_state('5fs_br:upper_block_bit')",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							180,
+							0
+						],
+						"scale": [
+							1,
+							2,
+							1
+						],
+						"translation": [
+							0,
+							0.5,
+							0
+						]
+					},
+					"5fs_br:door": {
+						"open_sound": "open.wooden_door",
+						"close_sound": "close.wooden_door"
+					},
+					"5fs_br:no_loot_on_silk_touch": {},
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "palm_door_bottom",
+							"render_method": "alpha_test_single_sided"
+						}
+					},
+					"minecraft:geometry": {
+						"identifier": "geometry.door",
+						"bone_visibility": {
+							"door_open": "q.block_state('5fs_br:open_bit') && !q.block_state('5fs_br:door_hinge_bit')",
+							"door_closed": "!q.block_state('5fs_br:open_bit') && !q.block_state('5fs_br:door_hinge_bit')",
+							"door_open_flipped": "q.block_state('5fs_br:open_bit') && q.block_state('5fs_br:door_hinge_bit')",
+							"door_closed_flipped": "!q.block_state('5fs_br:open_bit') && q.block_state('5fs_br:door_hinge_bit')"
+						}
+					},
+					"minecraft:loot": "loot_tables/empty.json",
+					"tag:5fs_br:up": {}
+				}
+			},
+			{
+				"condition": "query.block_state('minecraft:cardinal_direction') == 'east' && !q.block_state('5fs_br:upper_block_bit')",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							270,
+							0
+						],
+						"scale": [
+							1,
+							2,
+							1
+						],
+						"translation": [
+							0,
+							0.5,
+							0
+						]
+					},
+					"5fs_br:door": {
+						"open_sound": "open.wooden_door",
+						"close_sound": "close.wooden_door"
+					},
+					"5fs_br:no_loot_on_silk_touch": {},
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "palm_door_bottom",
+							"render_method": "alpha_test_single_sided"
+						}
+					},
+					"minecraft:geometry": {
+						"identifier": "geometry.door",
+						"bone_visibility": {
+							"door_open": "q.block_state('5fs_br:open_bit') && !q.block_state('5fs_br:door_hinge_bit')",
+							"door_closed": "!q.block_state('5fs_br:open_bit') && !q.block_state('5fs_br:door_hinge_bit')",
+							"door_open_flipped": "q.block_state('5fs_br:open_bit') && q.block_state('5fs_br:door_hinge_bit')",
+							"door_closed_flipped": "!q.block_state('5fs_br:open_bit') && q.block_state('5fs_br:door_hinge_bit')"
+						}
+					},
+					"minecraft:loot": "loot_tables/empty.json",
+					"tag:5fs_br:up": {}
+				}
+			},
+			{
+				"condition": "query.block_state('minecraft:cardinal_direction') == 'west' && !q.block_state('5fs_br:upper_block_bit')",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							90,
+							0
+						],
+						"scale": [
+							1,
+							2,
+							1
+						],
+						"translation": [
+							0,
+							0.5,
+							0
+						]
+					},
+					"5fs_br:door": {
+						"open_sound": "open.wooden_door",
+						"close_sound": "close.wooden_door"
+					},
+					"5fs_br:no_loot_on_silk_touch": {},
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "palm_door_bottom",
+							"render_method": "alpha_test_single_sided"
+						}
+					},
+					"minecraft:geometry": {
+						"identifier": "geometry.door",
+						"bone_visibility": {
+							"door_open": "q.block_state('5fs_br:open_bit') && !q.block_state('5fs_br:door_hinge_bit')",
+							"door_closed": "!q.block_state('5fs_br:open_bit') && !q.block_state('5fs_br:door_hinge_bit')",
+							"door_open_flipped": "q.block_state('5fs_br:open_bit') && q.block_state('5fs_br:door_hinge_bit')",
+							"door_closed_flipped": "!q.block_state('5fs_br:open_bit') && q.block_state('5fs_br:door_hinge_bit')"
+						}
+					},
+					"minecraft:loot": "loot_tables/empty.json",
+					"tag:5fs_br:up": {}
+				}
+			},
+			{
+				"condition": "query.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('5fs_br:upper_block_bit')",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							0,
+							180
+						],
+						"scale": [
+							1,
+							2,
+							1
+						],
+						
+						"translation": [
+							0,
+							-0.5,
+							0
+						]
+					},
+					"5fs_br:door": {
+						"open_sound": "open.wooden_door",
+						"close_sound": "close.wooden_door"
+					},
+					"5fs_br:break_block_below": {
+						"name": "5fs_br:palm_door",
+						"state": "5fs_br:upper_block_bit",
+						"values": [
+							false,
+							true
+						]
+					},
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "palm_door_top",
+							"render_method": "alpha_test_single_sided"
+						}
+					},
+					"minecraft:geometry": {
+						"identifier": "geometry.door_top",
+						"bone_visibility": {
+							"door_open": "q.block_state('5fs_br:open_bit') && !q.block_state('5fs_br:door_hinge_bit')",
+							"door_closed": "!q.block_state('5fs_br:open_bit') && !q.block_state('5fs_br:door_hinge_bit')",
+							"door_open_flipped": "q.block_state('5fs_br:open_bit') && q.block_state('5fs_br:door_hinge_bit')",
+							"door_closed_flipped": "!q.block_state('5fs_br:open_bit') && q.block_state('5fs_br:door_hinge_bit')"
+						}
+					},
+					"minecraft:placement_filter": {
+						"conditions": [
+							{
+								"block_filter": [
+									{
+										"name": "5fs_br:palm_door",
+										"states": {
+											"5fs_br:upper_block_bit": false
+										}
+									}
+								],
+								"allowed_faces": [
+									"up"
+								]
+							}
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('5fs_br:upper_block_bit')",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							180,
+							180
+						],
+						"scale": [
+							1,
+							2,
+							1
+						],
+						
+						"translation": [
+							0,
+							-0.5,
+							0
+						]
+					},
+					"5fs_br:door": {
+						"open_sound": "open.wooden_door",
+						"close_sound": "close.wooden_door"
+					},
+					"5fs_br:break_block_below": {
+						"name": "5fs_br:palm_door",
+						"state": "5fs_br:upper_block_bit",
+						"values": [
+							false,
+							true
+						]
+					},
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "palm_door_top",
+							"render_method": "alpha_test_single_sided"
+						}
+					},
+					"minecraft:geometry": {
+						"identifier": "geometry.door_top",
+						"bone_visibility": {
+							"door_open": "q.block_state('5fs_br:open_bit') && !q.block_state('5fs_br:door_hinge_bit')",
+							"door_closed": "!q.block_state('5fs_br:open_bit') && !q.block_state('5fs_br:door_hinge_bit')",
+							"door_open_flipped": "q.block_state('5fs_br:open_bit') && q.block_state('5fs_br:door_hinge_bit')",
+							"door_closed_flipped": "!q.block_state('5fs_br:open_bit') && q.block_state('5fs_br:door_hinge_bit')"
+						}
+					},
+					"minecraft:placement_filter": {
+						"conditions": [
+							{
+								"block_filter": [
+									{
+										"name": "5fs_br:palm_door",
+										"states": {
+											"5fs_br:upper_block_bit": false
+										}
+									}
+								],
+								"allowed_faces": [
+									"up"
+								]
+							}
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('5fs_br:upper_block_bit')",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							90,
+							180
+						],
+						"scale": [
+							1,
+							2,
+							1
+						],
+						"translation": [
+							0,
+							-0.5,
+							0
+						]
+					},
+					"5fs_br:door": {
+						"open_sound": "open.wooden_door",
+						"close_sound": "close.wooden_door"
+					},
+					"5fs_br:break_block_below": {
+						"name": "5fs_br:palm_door",
+						"state": "5fs_br:upper_block_bit",
+						"values": [
+							false,
+							true
+						]
+					},
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "palm_door_top",
+							"render_method": "alpha_test_single_sided"
+						}
+					},
+					"minecraft:geometry": {
+						"identifier": "geometry.door_top",
+						"bone_visibility": {
+							"door_open": "q.block_state('5fs_br:open_bit') && !q.block_state('5fs_br:door_hinge_bit')",
+							"door_closed": "!q.block_state('5fs_br:open_bit') && !q.block_state('5fs_br:door_hinge_bit')",
+							"door_open_flipped": "q.block_state('5fs_br:open_bit') && q.block_state('5fs_br:door_hinge_bit')",
+							"door_closed_flipped": "!q.block_state('5fs_br:open_bit') && q.block_state('5fs_br:door_hinge_bit')"
+						}
+					},
+					"minecraft:placement_filter": {
+						"conditions": [
+							{
+								"block_filter": [
+									{
+										"name": "5fs_br:palm_door",
+										"states": {
+											"5fs_br:upper_block_bit": false
+										}
+									}
+								],
+								"allowed_faces": [
+									"up"
+								]
+							}
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('5fs_br:upper_block_bit')",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							270,
+							180
+						],
+						"scale": [
+							1,
+							2,
+							1
+						],
+						
+						"translation": [
+							0,
+							-0.5,
+							0
+						]
+					},
+					"5fs_br:door": {
+						"open_sound": "open.wooden_door",
+						"close_sound": "close.wooden_door"
+					},
+					"5fs_br:break_block_below": {
+						"name": "5fs_br:palm_door",
+						"state": "5fs_br:upper_block_bit",
+						"values": [
+							false,
+							true
+						]
+					},
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "palm_door_top",
+							"render_method": "alpha_test_single_sided"
+						}
+					},
+					"minecraft:geometry": {
+						"identifier": "geometry.door_top",
+						"bone_visibility": {
+							"door_open": "q.block_state('5fs_br:open_bit') && !q.block_state('5fs_br:door_hinge_bit')",
+							"door_closed": "!q.block_state('5fs_br:open_bit') && !q.block_state('5fs_br:door_hinge_bit')",
+							"door_open_flipped": "q.block_state('5fs_br:open_bit') && q.block_state('5fs_br:door_hinge_bit')",
+							"door_closed_flipped": "!q.block_state('5fs_br:open_bit') && q.block_state('5fs_br:door_hinge_bit')"
+						}
+					},
+					"minecraft:placement_filter": {
+						"conditions": [
+							{
+								"block_filter": [
+									{
+										"name": "5fs_br:palm_door",
+										"states": {
+											"5fs_br:upper_block_bit": false
+										}
+									}
+								],
+								"allowed_faces": [
+									"up"
+								]
+							}
+						]
+					}
+				}
+			}
+		],
+		"components": {
+			"minecraft:collision_box": {
+				"origin": [
+					-8,
+					0,
+					5
+				],
+				"size": [
+					16,
+					16,
+					3
+				]
+			},
+			"minecraft:selection_box": {
+				"origin": [
+					-8,
+					0,
+					5
+				],
+				"size": [
+					16,
+					16,
+					3
+				]
+			},
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 2
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 2
+            },
+            "minecraft:map_color": "#E2F990",
+			"minecraft:liquid_detection": {
+				"detection_rules": [
+					{
+						"can_contain_liquid": true,
+						"liquid_type": "water",
+						"on_liquid_touches": "blocking"
+					}
+				]
+			},
+			"minecraft:flammable": true,
+			"minecraft:geometry": "geometry.door",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "palm_door_bottom"
+				}
+			},
+			"minecraft:precipitation_interactions": {
+				"precipitation_behavior": "obstruct_rain"
+			},
+			"minecraft:connection_rule": {
+				"accepts_connections_from": "none"
+			},
+			"minecraft:redstone_consumer": {
+				"min_power": 0
+			},
+			"5fs_br:door": {
+						"open_sound": "open.wooden_door",
+						"close_sound": "close.wooden_door"
+					},
+			"tag:minecraft:is_axe_item_destructible": {},
+			"tag:one_way_collidable": {}
+		}
+	}
+}

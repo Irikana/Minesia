@@ -1,0 +1,19 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:single_block_feature": {
+		"description": {
+			"identifier": "5fs_br:warm/desert/coconut_feature"
+		},
+		"places_block": "5fs_br:coconut",
+		"enforce_survivability_rules": false,
+		"enforce_placement_rules": false,
+		"may_attach_to": {
+			"top": [
+				"5fs_br:palm_leaves"
+			]
+		},
+		"may_replace": [
+			"minecraft:air"
+		]
+	}
+}

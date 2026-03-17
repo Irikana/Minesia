@@ -1,0 +1,32 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.dragonite_trident.1fp": {
+			"loop": true,
+			"bones": {
+				"trident": {
+					"rotation": [41.63546, 51.75504, 228.43721],
+					"position": [7, 33, 13]
+				}
+			}
+		},
+		"animation.dragonite_trident.3pp": {
+			"loop": true,
+			"bones": {
+				"trident": {
+					"rotation": [90, 0, 0],
+					"position": [0, 23, 13]
+				}
+			}
+		},
+		"animation.dragonite_trident.shoot": {
+			"loop": true,
+			"bones": {
+				"trident": {
+					"rotation": [89.93878, 0.69977, 95.0487],
+					"position": [0, 7, 16]
+				}
+			}
+		}
+	}
+}

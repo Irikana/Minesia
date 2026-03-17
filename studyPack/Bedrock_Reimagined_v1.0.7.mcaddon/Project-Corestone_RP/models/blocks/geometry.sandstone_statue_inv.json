@@ -1,0 +1,80 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.sandstone_statue_inv",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "player",
+					"pivot": [0, 0, 0],
+					"rotation": [0, 180, 0]
+				},
+				{
+					"name": "Head",
+					"parent": "player",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{"origin": [-4, 22, -4], "size": [8, 8, 8], "uv": [0, 19]}
+					]
+				},
+				{
+					"name": "Body",
+					"parent": "player",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{"origin": [-4, 10, -2], "size": [8, 12, 4], "uv": [33, 19]}
+					]
+				},
+				{
+					"name": "LeftArm",
+					"parent": "player",
+					"pivot": [5, 22, 0],
+					"rotation": [-45, 0, 0],
+					"cubes": [
+						{"origin": [4, 10, 0], "size": [4, 12, 4], "uv": [0, 35]}
+					]
+				},
+				{
+					"name": "Right_Arm",
+					"parent": "player",
+					"pivot": [-5, 22, 0],
+					"rotation": [-45, 0, 0],
+					"cubes": [
+						{"origin": [-8, 10, 0], "size": [4, 12, 4], "uv": [0, 36], "mirror": true}
+					]
+				},
+				{
+					"name": "LeftLeg",
+					"parent": "player",
+					"pivot": [1.9, 12, 0],
+					"cubes": [
+						{"origin": [-0.1, 0, -2], "size": [4, 10, 4], "uv": [38, 19]}
+					]
+				},
+				{
+					"name": "Right_Leg",
+					"parent": "player",
+					"pivot": [-1.9, 12, 0],
+					"cubes": [
+						{"origin": [-3.9, 0, -2], "size": [4, 10, 4], "uv": [34, 20], "mirror": true}
+					]
+				},
+				{
+					"name": "bb_main",
+					"parent": "player",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-8, 0, -8], "size": [16, 2, 16], "uv": [0, 0]}
+					]
+				}
+			]
+		}
+	]
+}

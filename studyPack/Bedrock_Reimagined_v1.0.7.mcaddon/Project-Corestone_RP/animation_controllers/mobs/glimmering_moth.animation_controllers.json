@@ -1,0 +1,48 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.glimmering_moth": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "animations": [
+            "static_flying"
+          ],
+          "transitions": [
+            { "flying": "query.modified_move_speed > 0.05 && query.is_alive && !query.is_on_ground" },
+            { "on_ground": "query.is_on_ground && query.is_alive" },
+            { "death": "!query.is_alive" }
+          ],
+          "blend_transition": 0.2
+        },
+        "flying": {
+          "animations": [
+            "flying"
+          ],
+          "transitions": [
+            { "default": "query.modified_move_speed <= 0.05 && query.is_alive && !query.is_on_ground" },
+            { "on_ground": "query.is_on_ground && query.is_alive" },
+            { "death": "!query.is_alive" }
+          ],
+          "blend_transition": 0.2
+        },
+        "on_ground": {
+          "animations": [
+            "on_ground"
+          ],
+          "transitions": [
+            { "default": "!query.is_on_ground && query.is_alive" },
+            { "flying": "query.modified_move_speed > 0.05 && query.is_alive && !query.is_on_ground" },
+            { "death": "!query.is_alive" }
+          ],
+          "blend_transition": 0.2
+        },
+        "death": {
+          "animations": [
+            "death"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "format_version": "1.21.20",
+  "minecraft:structure_set": {
+    "description": {
+      "identifier": "5fs_br:snow_castle"
+    },
+    "placement": {
+      "type": "minecraft:random_spread",
+      "salt": 24264509,
+      "separation": 14,
+      "spacing": 37,
+      "spread_type": "linear"
+    },
+    "structures": [
+      {
+        "structure": "5fs_br:snow_castle",
+        "weight": 1
+      }
+    ]
+  }
+}

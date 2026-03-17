@@ -1,0 +1,21 @@
+{
+  "format_version": "1.21.20",
+  "minecraft:structure_set": {
+    "description": {
+      "identifier": "5fs_br:solo_tent"
+    },
+    "placement": {
+      "type": "minecraft:random_spread",
+      "salt": 83484667,
+      "separation": 24,
+      "spacing": 68,
+      "spread_type": "linear"
+    },
+    "structures": [
+      {
+        "structure": "5fs_br:solo_tent",
+        "weight": 1
+      }
+    ]
+  }
+}

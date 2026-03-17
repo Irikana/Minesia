@@ -1,0 +1,76 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.macaroni_penguin": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "animations": [ "idle" ],
+          "transitions": [
+            { "walk": "q.modified_move_speed > 0.05 && q.property('5fs_br:slip_anim') == 'none' && !q.is_in_water" },
+            { "swimming": "q.is_in_water && q.modified_move_speed > 0.05" },
+            { "fall": "q.property('5fs_br:slip_anim') == 'fall'" },
+            { "slide": "q.property('5fs_br:slip_anim') == 'slide'" },
+            { "dance": "q.property('5fs_br:slip_anim') == 'dance'" },
+            { "death": "!q.is_alive" }
+          ],
+          "blend_transition": 0.2
+        },
+
+        "walk": {
+          "animations": [ "walking" ],
+          "transitions": [
+            { "fall": "q.property('5fs_br:slip_anim') == 'fall'" },
+            { "slide": "q.property('5fs_br:slip_anim') == 'slide'" },
+            { "dance": "q.property('5fs_br:slip_anim') == 'dance'" },
+            { "swimming": "q.is_in_water && q.modified_move_speed > 0.05" },
+            { "death": "!q.is_alive" },
+            { "default": "q.modified_move_speed <= 0.05 && q.property('5fs_br:slip_anim') == 'none'" }
+          ],
+          "blend_transition": 0.2
+        },
+
+        "fall": {
+          "animations": [ "fall" ],
+          "transitions": [
+            { "death": "!q.is_alive" },
+            { "walk": "q.all_animations_finished && q.modified_move_speed > 0.05 && q.property('5fs_br:slip_anim') == 'none' && !q.is_in_water" },
+            { "default": "q.all_animations_finished" }
+          ],
+          "blend_transition": 0.2
+        },
+
+        "slide": {
+          "animations": [ "slide" ],
+          "transitions": [
+            { "death": "!q.is_alive" },
+            { "default": "q.all_animations_finished || q.property('5fs_br:slip_anim') == 'none'" }
+          ],
+          "blend_transition": 0.2
+        },
+
+        "dance": {
+          "animations": [ "dance" ],
+          "transitions": [
+            { "death": "!q.is_alive" },
+            { "default": "q.all_animations_finished || q.property('5fs_br:slip_anim') == 'none'" }
+          ],
+          "blend_transition": 0.2
+        },
+
+        "swimming": {
+          "animations": [ "swimming" ],
+          "transitions": [
+            { "death": "!q.is_alive" },
+            { "default": "!q.is_in_water || q.modified_move_speed <= 0.05" }
+          ],
+          "blend_transition": 0.2
+        },
+
+        "death": {
+          "animations": [ "death" ]
+        }
+      }
+    }
+  }
+}

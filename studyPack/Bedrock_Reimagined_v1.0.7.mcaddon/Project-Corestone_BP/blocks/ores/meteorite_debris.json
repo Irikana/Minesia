@@ -1,0 +1,46 @@
+{
+  "format_version": "1.26.0",
+	"minecraft:block": {
+    "description": {
+      "identifier": "5fs_br:meteorite_debris",       
+      "menu_category": {
+        "category": "Nature"
+      }
+    },
+    "components": {
+      "minecraft:geometry": "minecraft:geometry.full_block",
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "meteorite_debris"
+        }
+      },
+      "minecraft:loot": "loot_tables/blocks/ores/meteorite_debris.json",
+      "minecraft:collision_box": true,
+      "minecraft:light_dampening": 15,
+      "minecraft:redstone_conductivity": {
+        "redstone_conductor": true
+      },
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 5,
+        "item_specific_speeds": [
+          {
+            "item": {
+              "tags": "query.all_tags('minecraft:is_pickaxe')"
+            },
+            "destroy_speed": 3
+          }
+        ]
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 1200
+      },
+      "minecraft:map_color": "#4B2E2E",
+      "minecraft:flammable": {
+        "flame_odds": 0,
+        "burn_odds": 0
+      },
+      "tag:stone": {},
+      "tag:minecraft:is_pickaxe_item_destructible": {}
+    }
+  }
+}

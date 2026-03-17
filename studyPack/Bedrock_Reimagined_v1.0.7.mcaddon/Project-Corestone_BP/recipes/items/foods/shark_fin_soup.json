@@ -1,0 +1,37 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "5fs_br:shark_fin_soup"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "#GX",
+      " Z "
+    ],
+    "key": {
+      "#": {
+        "item": "5fs_br:cooked_shark_fin"
+      },
+      "Z": {
+        "item": "minecraft:bowl"
+      },
+      "G": {
+        "item": "minecraft:cooked_cod"
+      },
+      "X": {
+        "item": "minecraft:cooked_salmon"
+      }
+    },
+    "result": {
+      "item": "5fs_br:shark_fin_soup"
+    },
+    "unlock": [
+      {
+        "item": "5fs_br:shark_fin_soup"
+      }
+    ]
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "pools": [
+    {
+      "rolls": { "min": 2, "max": 4 },
+      "entries": [
+        { "type": "item", "name": "minecraft:bread", "weight": 4, "functions": [ { "function": "set_count", "count": { "min": 1, "max": 3 } } ] },
+        { "type": "item", "name": "minecraft:rotten_flesh", "weight": 5, "functions": [ { "function": "set_count", "count": { "min": 2, "max": 6 } } ] },
+        { "type": "item", "name": "minecraft:bone", "weight": 5, "functions": [ { "function": "set_count", "count": { "min": 3, "max": 8 } } ] },
+        { "type": "item", "name": "minecraft:arrow", "weight": 4, "functions": [ { "function": "set_count", "count": { "min": 5, "max": 12 } } ] },
+        { "type": "item", "name": "minecraft:torch", "weight": 4, "functions": [ { "function": "set_count", "count": { "min": 4, "max": 10 } } ] },
+        { "type": "item", "name": "minecraft:coal", "weight": 3, "functions": [ { "function": "set_count", "count": { "min": 3, "max": 8 } } ] },
+        { "type": "item", "name": "5fs_br:mummified_bones", "weight": 3, "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ] }
+      ]
+    },
+    {
+      "rolls": { "min": 1, "max": 2 },
+      "entries": [
+        { "type": "item", "name": "minecraft:string", "weight": 4, "functions": [ { "function": "set_count", "count": { "min": 3, "max": 7 } } ] },
+        { "type": "item", "name": "minecraft:leather", "weight": 2, "functions": [ { "function": "set_count", "count": { "min": 1, "max": 3 } } ] },
+        { "type": "item", "name": "minecraft:sand", "weight": 3, "functions": [ { "function": "set_count", "count": { "min": 4, "max": 12 } } ] },
+        { "type": "item", "name": "minecraft:sandstone", "weight": 2, "functions": [ { "function": "set_count", "count": { "min": 2, "max": 6 } } ] },
+        { "type": "item", "name": "5fs_br:infused_bonemeal", "weight": 2, "functions": [ { "function": "set_count", "count": { "min": 1, "max": 3 } } ] }
+      ]
+    },
+    {
+      "rolls": { "min": 0, "max": 1 },
+      "entries": [
+        { "type": "item", "name": "minecraft:bow", "weight": 2, "functions": [ { "function": "set_damage", "damage": { "min": 0.20, "max": 0.70 } }, { "function": "enchant_with_levels", "levels": { "min": 5, "max": 15 }, "treasure": false } ] },
+        { "type": "item", "name": "minecraft:stone_sword", "weight": 2, "functions": [ { "function": "set_damage", "damage": { "min": 0.15, "max": 0.65 } } ] },
+        { "type": "item", "name": "minecraft:iron_sword", "weight": 1, "functions": [ { "function": "set_damage", "damage": { "min": 0.20, "max": 0.70 } } ] }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "empty", "weight": 60 },
+        { "type": "item", "name": "5fs_br:stone_wand", "weight": 10, "functions": [ { "function": "set_damage", "damage": { "min": 0.20, "max": 0.70 } } ] },
+        { "type": "item", "name": "5fs_br:copper_wand", "weight": 7, "functions": [ { "function": "set_damage", "damage": { "min": 0.20, "max": 0.70 } } ] },
+        { "type": "item", "name": "5fs_br:iron_wand", "weight": 5, "functions": [ { "function": "set_damage", "damage": { "min": 0.20, "max": 0.70 } } ] },
+        { "type": "item", "name": "5fs_br:golden_wand", "weight": 3, "functions": [ { "function": "set_damage", "damage": { "min": 0.20, "max": 0.70 } } ] },
+        { "type": "item", "name": "5fs_br:torch_wand", "weight": 2, "functions": [ { "function": "set_damage", "damage": { "min": 0.20, "max": 0.70 } } ] },
+        { "type": "item", "name": "5fs_br:basic_scroll", "weight": 8 },
+        { "type": "item", "name": "5fs_br:enchanted_scroll", "weight": 5 }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "empty", "weight": 85 },
+        { "type": "item", "name": "5fs_br:rune_of_decay", "weight": 3 },
+        { "type": "item", "name": "5fs_br:rune_of_shadows", "weight": 2 },
+        { "type": "item", "name": "5fs_br:rune_of_souls", "weight": 2 },
+        { "type": "item", "name": "5fs_br:rune_of_blades", "weight": 1 },
+        { "type": "item", "name": "5fs_br:rune_of_beasts", "weight": 1 },
+        { "type": "item", "name": "5fs_br:rune_of_earth", "weight": 1 },
+        { "type": "item", "name": "5fs_br:rune_of_flame", "weight": 1 },
+        { "type": "item", "name": "5fs_br:rune_of_frost", "weight": 1 },
+        { "type": "item", "name": "5fs_br:rune_of_eternity", "weight": 1 },
+        { "type": "item", "name": "5fs_br:rune_of_light", "weight": 1 }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "item", "name": "5fs_br:ring_band", "weight": 4 },
+        { "type": "item", "name": "5fs_br:jeweling_station", "weight": 4 },
+        { "type": "item", "name": "5fs_br:rune_table", "weight": 2 },
+        { "type": "empty", "weight": 90 }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "item", "name": "5fs_br:sky_star_fragment", "weight": 4 },
+        { "type": "item", "name": "5fs_br:mana_bottle", "weight": 6, "functions": [ { "function": "set_count", "count": { "min": 1, "max": 3 } } ] },
+        { "type": "empty", "weight": 90 }
+      ]
+    }
+  ]
+}

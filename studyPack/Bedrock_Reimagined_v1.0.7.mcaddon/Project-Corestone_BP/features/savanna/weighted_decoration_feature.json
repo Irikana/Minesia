@@ -1,0 +1,14 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "5fs_br:savanna/weighted_decoration_feature"
+    },
+    "features": [
+      ["5fs_br:savanna/small_fallen_acacia_tree_2_feature", 1],
+      ["5fs_br:savanna/small_fallen_acacia_tree_1_feature", 1],
+      ["5fs_br:savanna/acacia_hollow_log_2_feature", 2],
+      ["5fs_br:savanna/acacia_hollow_log_1_feature", 2]
+    ]
+  }
+}

@@ -1,0 +1,473 @@
+{
+  "format_version": "1.21.70",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "5fs_br:skeleton_dolphin",
+      "spawn_category": "water_ambient",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false,
+      "runtime_identifier": "minecraft:dolphin"
+    },
+    "component_groups": {
+      "dolphin_adult": {
+        "minecraft:experience_reward": {
+          "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
+        },
+        "minecraft:leashable_to": {},
+        "minecraft:bribeable": {
+          "bribe_items": [
+            "fish",
+            "salmon"
+          ]
+        },
+        "minecraft:behavior.melee_box_attack": {
+          "priority": 2,
+          "track_target": true
+        }
+      },
+      "dolphin_baby": {
+        "minecraft:is_baby": {},
+        "minecraft:scale": {
+          "value": 0.65
+        },
+        "minecraft:ageable": {
+          "duration": 1200,
+          "feed_items": [
+            "fish",
+            "salmon"
+          ],
+          "grow_up": {
+            "event": "ageable_grow_up",
+            "target": "self"
+          }
+        },
+        "minecraft:behavior.follow_parent": {
+          "priority": 4,
+          "speed_multiplier": 1.1
+        },
+        "minecraft:behavior.panic": {
+          "priority": 1,
+          "speed_multiplier": 1.25
+        }
+      },
+      "dolphin_angry": {
+        "minecraft:angry": {
+          "duration": 25,
+          "broadcast_anger": true,
+          "broadcast_range": 16,
+          "calm_event": {
+            "event": "on_calm",
+            "target": "self"
+          }
+        },
+        "minecraft:on_target_acquired": {}
+      },
+      "dolphin_dried": {
+        "minecraft:damage_over_time": {
+          "damage_per_hurt": 1,
+          "time_between_hurt": 0
+        }
+      },
+      "5fs_br:shrinkify": {
+        "minecraft:movement": {
+          "value": 0.2
+        },
+        "minecraft:health": {
+          "max": 6.5
+        },
+        "minecraft:scale": {
+          "value": 0.25
+        }
+      },
+      "5fs_br:gigantify": {
+        "minecraft:movement": {
+          "value": 0.08
+        },
+        "minecraft:health": {
+          "max": 26
+        },
+        "minecraft:scale": {
+          "value": 2
+        }
+      },
+      "5fs_br:normal_scale": {
+        "minecraft:movement": {
+          "value": 0.1
+        },
+        "minecraft:health": {
+          "max": 13
+        },
+        "minecraft:scale": {
+          "value": 1
+        }
+      },
+      "5fs_br:no_fall_damage_jelly": {
+        "minecraft:damage_sensor": {
+          "triggers": {
+            "cause": "fall",
+            "deals_damage": "no"
+          }
+        }
+      }
+    },
+    "components": {
+      "minecraft:is_hidden_when_invisible": {},
+      "minecraft:experience_reward": {
+        "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
+      },
+      "minecraft:type_family": {
+        "family": [
+          "aquatic",
+          "cod",
+          "fish"
+        ]
+      },
+      "minecraft:collision_box": {
+        "width": 0.9,
+        "height": 0.6
+      },
+      "minecraft:health": {
+        "value": 13,
+        "max": 13
+      },
+      "minecraft:behavior.swim_up_for_breath": {
+        "priority": 1
+      },
+      "minecraft:behavior.swim_with_entity": {
+        "priority": 4,
+        "success_rate": 0.1,
+        "chance_to_stop": 0.0333,
+        "state_check_interval": 0.5,
+        "catch_up_threshold": 12,
+        "match_direction_threshold": 2,
+        "catch_up_multiplier": 2.5,
+        "speed_multiplier": 1.5,
+        "search_range": 20,
+        "stop_distance": 5,
+        "entity_types": [
+          {
+            "filters": {
+              "test": "is_family",
+              "subject": "other",
+              "value": "player"
+            }
+          }
+        ]
+      },
+      "minecraft:flocking": {
+        "in_water": false,
+        "match_variants": false,
+        "use_center_of_mass": false,
+        "low_flock_limit": 4,
+        "high_flock_limit": 8,
+        "goal_weight": 2,
+        "loner_chance": 0.1,
+        "influence_radius": 6,
+        "breach_influence": 0,
+        "separation_weight": 1.75,
+        "separation_threshold": 3,
+        "cohesion_weight": 1.85,
+        "cohesion_threshold": 6.5,
+        "innner_cohesion_threshold": 3.5,
+        "min_height": 4,
+        "max_height": 4,
+        "block_distance": 1,
+        "block_weight": 0
+      },
+      "minecraft:on_target_acquired": {
+        "event": "become_angry",
+        "target": "self"
+      },
+      "minecraft:on_target_escape": {
+        "target": "self"
+      },
+      "minecraft:leashable": {},
+      "minecraft:balloonable": {
+        "mass": 0.4
+      },
+      "minecraft:behavior.random_breach": {
+        "priority": 6,
+        "interval": 50,
+        "xz_dist": 6,
+        "cooldown_time": 2
+      },
+      "minecraft:hurt_on_condition": {
+        "damage_conditions": [
+          {
+            "filters": {
+              "test": "in_lava",
+              "subject": "self",
+              "operator": "==",
+              "value": true
+            },
+            "cause": "lava",
+            "damage_per_tick": 4
+          }
+        ]
+      },
+      "minecraft:loot": {
+        "table": "loot_tables/entities/skeleton_fish.json"
+      },
+      "minecraft:scale": {
+        "value": 1
+      },
+      "minecraft:breathable": {
+        "total_supply": 15,
+        "suffocate_time": 0,
+        "breathes_air": false,
+        "breathes_water": true
+      },
+      "minecraft:movement": {
+        "value": 0.1
+      },
+      "minecraft:underwater_movement": {
+        "value": 0.1
+      },
+      "minecraft:navigation.generic": {
+        "is_amphibious": false,
+        "can_path_over_water": false,
+        "can_swim": true,
+        "can_walk": false,
+        "can_breach": false,
+        "can_sink": false
+      },
+      "minecraft:physics": {
+        "has_gravity": false
+      },
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:despawn": {
+        "despawn_from_distance": {
+          "min_distance": 32,
+          "max_distance": 40
+        }
+      },
+      "minecraft:behavior.swim_idle": {
+        "priority": 5,
+        "idle_time": 5,
+        "success_rate": 0.1
+      },
+      "minecraft:behavior.random_swim": {
+        "priority": 3,
+        "speed_multiplier": 1,
+        "xz_dist": 16,
+        "y_dist": 4,
+        "interval": 0
+      },
+      "minecraft:behavior.swim_wander": {
+        "priority": 4,
+        "interval": 0.1,
+        "look_ahead": 2,
+        "speed_multiplier": 1,
+        "wander_time": 5
+      },
+      "minecraft:behavior.avoid_mob_type": {
+        "priority": 1,
+        "entity_types": [
+          {
+            "filters": {
+              "any_of": [
+                {
+                  "test": "is_family",
+                  "subject": "other",
+                  "value": "player"
+                },
+                {
+                  "test": "is_family",
+                  "subject": "other",
+                  "value": "axolotl"
+                },
+                {
+                  "test": "is_family",
+                  "subject": "other",
+                  "value": "5fs_br:shark"
+                },
+                {
+                  "test": "is_family",
+                  "subject": "other",
+                  "value": "ocean_mine"
+                }
+              ]
+            },
+            "max_dist": 6,
+            "walk_speed_multiplier": 1.5,
+            "sprint_speed_multiplier": 2
+          }
+        ]
+      },
+      "minecraft:nameable": {},
+      "minecraft:conditional_bandwidth_optimization": {}
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "randomize": [
+          {
+            "weight": 90,
+            "add": {
+              "component_groups": [
+                "dolphin_adult",
+                "dolphin_swimming_navigation"
+              ]
+            }
+          },
+          {
+            "weight": 10,
+            "add": {
+              "component_groups": [
+                "dolphin_baby",
+                "dolphin_swimming_navigation"
+              ]
+            }
+          }
+        ]
+      },
+      "ageable_grow_up": {
+        "remove": {
+          "component_groups": [
+            "dolphin_baby"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "dolphin_adult"
+          ]
+        }
+      },
+      "become_angry": {
+        "add": {
+          "component_groups": [
+            "dolphin_angry"
+          ]
+        }
+      },
+      "on_calm": {
+        "remove": {
+          "component_groups": [
+            "dolphin_angry"
+          ]
+        }
+      },
+      "stop_dryingout": {
+        "remove": {
+          "component_groups": [
+            "dolphin_on_land",
+            "dolphin_dried"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "dolphin_on_land_in_rain"
+          ]
+        }
+      },
+      "start_dryingout": {
+        "remove": {
+          "component_groups": [
+            "dolphin_on_land_in_rain"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "dolphin_on_land"
+          ]
+        }
+      },
+      "dried_out": {
+        "add": {
+          "component_groups": [
+            "dolphin_dried"
+          ]
+        }
+      },
+      "recover_after_dried_out": {
+        "remove": {
+          "component_groups": [
+            "dolphin_dried"
+          ]
+        }
+      },
+      "navigation_on_land": {
+        "add": {
+          "component_groups": [
+            "dolphin_on_land"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "dolphin_swimming_navigation"
+          ]
+        }
+      },
+      "navigation_off_land": {
+        "add": {
+          "component_groups": [
+            "dolphin_swimming_navigation"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "dolphin_on_land_in_rain",
+            "dolphin_on_land",
+            "dolphin_dried"
+          ]
+        }
+      },
+      "5fs_br:normal_scale": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:shrinkify",
+            "5fs_br:gigantify"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:normal_scale"
+          ]
+        }
+      },
+      "5fs_br:gigantify": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:shrinkify",
+            "5fs_br:normal_scale"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:gigantify"
+          ]
+        }
+      },
+      "5fs_br:shrinkify": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:gigantify",
+            "5fs_br:normal_scale"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:shrinkify"
+          ]
+        }
+      },
+      "5fs_br:no_fall_damage_jelly": {
+        "add": {
+          "component_groups": [
+            "5fs_br:no_fall_damage_jelly"
+          ]
+        }
+      },
+      "5fs_br:fall_damage_jelly": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:no_fall_damage_jelly"
+          ]
+        }
+      }
+    }
+  }
+}

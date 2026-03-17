@@ -1,0 +1,14 @@
+{
+    "format_version": "1.21.60",
+    "minecraft:aggregate_feature": {
+        "description": {
+            "identifier": "5fs_br:jungle/jungle_aggregate_feature"
+        },
+        "features": [
+            "5fs_br:trees/jungle/jungle_trees_snap_to_surface_feature",
+            "5fs_br:jungle/scatter_liana_feature",
+            "5fs_br:jungle/scatter_cocoa_feature"
+        ],
+        "early_out": "none"
+    }
+}

@@ -1,0 +1,49 @@
+{
+    "format_version": "1.12.0",
+    "minecraft:spawn_rules": {
+        "description": {
+            "identifier": "5fs_br:duck",
+            "population_control": "animal"
+        },
+        "conditions": [
+            {
+                "minecraft:biome_filter": {
+                    "any_of": [
+                        {
+                            "test": "has_biome_tag",
+                            "operator": "==",
+                            "value": "river"
+                        },
+                        {
+                            "test": "has_biome_tag",
+                            "operator": "==",
+                            "value": "swamp"
+                        },
+                        {
+                            "test": "has_biome_tag",
+                            "operator": "==",
+                            "value": "mangrove_swamp"
+                        }
+                    ]
+                },
+                "minecraft:herd": {
+                    "min_size": 2,
+                    "max_size": 4
+                },
+                "minecraft:difficulty_filter": {
+                    "min": "peaceful",
+                    "max": "hard"
+                },
+                "minecraft:spawns_on_surface": {},
+                "minecraft:weight": {
+                    "default": 10
+                },
+                "minecraft:brightness_filter": {
+                    "min": 7,
+                    "max": 15,
+                    "adjust_for_weather": true
+                }
+            }
+        ]
+    }
+}

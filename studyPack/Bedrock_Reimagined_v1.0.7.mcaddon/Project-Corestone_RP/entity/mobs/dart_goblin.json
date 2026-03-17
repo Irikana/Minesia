@@ -1,0 +1,46 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "5fs_br:dart_goblin",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/mobs/goblin/dart_goblin"
+            },
+            "geometry": {
+                "default": "geometry.dart_goblin"
+            },
+            "animations": {
+                "look_at_target": "animation.common.look_at_target",
+                "idle_0": "animation.dart_goblin.idle_0",
+                "idle_1": "animation.dart_goblin.idle_1",
+                "idle_2": "animation.dart_goblin.idle_2",
+                "walk": "animation.dart_goblin.walk",
+                "attack": "animation.dart_goblin.attack",
+                "death": "animation.dart_goblin.death",
+                "general_controller": "controller.animation.dart_goblin.general",
+                "attack_controller": "controller.animation.dart_goblin.attack",
+                "root_controller": "controller.animation.dart_goblin.root"
+            },
+            "scripts": {
+                "animate": [
+                    "root_controller"
+                ]
+            },
+            "render_controllers": [
+                "controller.render.default"
+            ],
+            "sound_effects": {
+                "idle": "mob.dart_goblin.idle",
+                "itching_head": "mob.dart_goblin.itching_head",
+                "spin_blowdart": "mob.dart_goblin.spin_blowdart",
+                "death": "mob.dart_goblin.death"
+            },
+            "spawn_egg": {
+                "texture": "5fs_br:dart_goblin_spawn_egg"
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:single_block_feature": {
+    "description": {
+      "identifier": "5fs_br:crystal_canyons/cracked_petrified_log_feature"
+    },
+    "places_block": {
+      "name": "5fs_br:cracked_petrified_log"
+    },
+    "enforce_survivability_rules": false,
+    "enforce_placement_rules": false,
+    "may_replace": [
+      "5fs_br:petrified_log"
+    ]
+  }
+}

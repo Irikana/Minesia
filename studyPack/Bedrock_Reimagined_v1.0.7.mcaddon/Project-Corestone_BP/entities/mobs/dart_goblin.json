@@ -1,0 +1,261 @@
+{
+  "format_version": "1.21.120",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "5fs_br:dart_goblin",
+      "spawn_category": "monster",
+      "is_spawnable": true,
+      "is_summonable": true
+    },
+    "component_groups": {
+      "5fs_br:redwood_variant": {
+        "minecraft:scale": {
+          "value": 2
+        },
+        "minecraft:health": {
+          "value": 30,
+          "max": 30
+        },
+        "minecraft:movement": {
+          "value": 0.28
+        }
+      },
+      "5fs_br:shrinkify": {
+        "minecraft:movement": {
+          "value": 0.36
+        },
+        "minecraft:health": {
+          "max": 15
+        },
+        "minecraft:scale": {
+          "value": 0.5
+        }
+      },
+      "5fs_br:gigantify": {
+        "minecraft:movement": {
+          "value": 0.14
+        },
+        "minecraft:health": {
+          "max": 60
+        },
+        "minecraft:scale": {
+          "value": 4
+        }
+      },
+      "5fs_br:normal_scale": {
+        "minecraft:movement": {
+          "value": 0.18
+        },
+        "minecraft:health": {
+          "max": 30
+        },
+        "minecraft:scale": {
+          "value": 2
+        }
+      },
+      "5fs_br:no_fall_damage_jelly": {
+        "minecraft:damage_sensor": {
+          "triggers": {
+            "cause": "fall",
+            "deals_damage": "no"
+          }
+        }
+      }
+    },
+    "components": {
+      "minecraft:experience_reward": {
+        "on_death": "query.last_hit_by_player ? 5 : 0"
+      },
+      "minecraft:type_family": {
+        "family": [
+          "mob",
+          "dart_goblin",
+          "goblin",
+          "monster"
+        ]
+      },
+      "minecraft:movement": {
+        "value": 0.18
+      },
+      "minecraft:loot": {
+        "table": "loot_tables/entities/dart_goblin.json"
+      },
+      "minecraft:collision_box": {
+        "height": 1.5,
+        "width": 0.6
+      },
+      "minecraft:health": {
+        "value": 15
+      },
+      "minecraft:navigation.generic": {
+        "avoid_water": true
+      },
+      "minecraft:movement.basic": {},
+      "minecraft:jump.static": {},
+      "minecraft:can_climb": {},
+      "minecraft:behavior.random_stroll": {
+        "priority": 9,
+        "interval": 80,
+        "xz_dist": 10,
+        "y_dist": 7,
+        "speed_multiplier": 1
+      },
+      "minecraft:physics": {},
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:behavior.float": {
+        "priority": 8
+      },
+      "minecraft:behavior.look_at_player": {
+        "priority": 7,
+        "look_distance": 6,
+        "probability": 0.02
+      },
+      "minecraft:behavior.random_look_around": {
+        "priority": 5
+      },
+      "minecraft:behavior.nearest_attackable_target": {
+        "priority": 1,
+        "within_radius": 18,
+        "reselect_targets": true,
+        "entity_types": {
+          "filters": {
+            "any_of": [
+              {
+                "test": "is_family",
+                "subject": "other",
+                "value": "player"
+              },
+              {
+                "test": "is_family",
+                "subject": "other",
+                "value": "villager"
+              },
+              {
+                "test": "is_family",
+                "subject": "other",
+                "value": "iron_golem"
+              }
+            ]
+          }
+        }
+      },
+      "minecraft:behavior.hurt_by_target": {
+        "priority": 1,
+        "entity_types": [
+          {
+            "filters": {
+              "test": "is_family",
+              "subject": "other",
+              "operator": "!=",
+              "value": "breeze"
+            }
+          }
+        ]
+      },
+      "minecraft:behavior.avoid_mob_type": {
+        "priority": 2,
+        "max_dist": 8,
+        "max_flee": 8,
+        "walk_speed_multiplier": 2.5,
+        "sprint_speed_multiplier": 2.5,
+        "remove_target": false,
+        "entity_types": {
+          "filters": {
+            "test": "is_target",
+            "subject": "other",
+            "value": true
+          }
+        }
+      },
+      "minecraft:behavior.ranged_attack": {
+        "priority": 0,
+        "charge_shoot_trigger": 1,
+        "charge_charged_trigger": 0.5,
+        "attack_radius": 15,
+        "attack_radius_min": 8,
+        "speed_multiplier": 1.5
+      },
+      "minecraft:shooter": {
+        "def": "5fs_br:dart_projectile",
+        "sound": "bow"
+      },
+      "minecraft:follow_range": {
+        "value": 18,
+        "max": 18
+      },
+      "minecraft:conditional_bandwidth_optimization": {},
+      "minecraft:despawn": {
+        "despawn_from_chance": true
+      }
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "filters": {
+          "test": "has_biome_tag",
+          "value": "redwood_forest"
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:redwood_variant"
+          ]
+        }
+      },
+      "5fs_br:normal_scale": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:shrinkify",
+            "5fs_br:gigantify"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:normal_scale"
+          ]
+        }
+      },
+      "5fs_br:gigantify": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:shrinkify",
+            "5fs_br:normal_scale"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:gigantify"
+          ]
+        }
+      },
+      "5fs_br:shrinkify": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:gigantify",
+            "5fs_br:normal_scale"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:shrinkify"
+          ]
+        }
+      },
+      "5fs_br:no_fall_damage_jelly": {
+        "add": {
+          "component_groups": [
+            "5fs_br:no_fall_damage_jelly"
+          ]
+        }
+      },
+      "5fs_br:fall_damage_jelly": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:no_fall_damage_jelly"
+          ]
+        }
+      }
+    }
+  }
+}

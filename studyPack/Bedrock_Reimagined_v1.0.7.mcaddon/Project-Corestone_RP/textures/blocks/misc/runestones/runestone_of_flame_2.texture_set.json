@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "runestone_of_flame_2",
+		"metalness_emissive_roughness": "runestone_of_flame_2_mer"
+	}
+}

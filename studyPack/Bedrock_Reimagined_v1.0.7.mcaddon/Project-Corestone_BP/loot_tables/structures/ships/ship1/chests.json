@@ -1,0 +1,172 @@
+{
+  "pools": [
+    {
+      "rolls": { "min": 3, "max": 5 },
+      "entries": [
+        { "type": "item", "name": "minecraft:gold_ingot", "weight": 8, "functions": [ { "function": "set_count", "count": { "min": 2, "max": 6 } } ] },
+        { "type": "item", "name": "minecraft:gold_nugget", "weight": 10, "functions": [ { "function": "set_count", "count": { "min": 9, "max": 18 } } ] },
+        { "type": "item", "name": "minecraft:iron_ingot", "weight": 5, "functions": [ { "function": "set_count", "count": { "min": 2, "max": 6 } } ] },
+        { "type": "item", "name": "minecraft:emerald", "weight": 5, "functions": [ { "function": "set_count", "count": { "min": 2, "max": 10 } } ] },
+        { "type": "item", "name": "minecraft:paper", "weight": 4, "functions": [ { "function": "set_count", "count": { "min": 3, "max": 9 } } ] },
+        { "type": "item", "name": "minecraft:map", "weight": 1 },
+        { "type": "item", "name": "minecraft:compass", "weight": 1 },
+        { "type": "item", "name": "minecraft:lapis_lazuli", "weight": 3, "functions": [ { "function": "set_count", "count": { "min": 4, "max": 12 } } ] },
+        { "type": "item", "name": "minecraft:coal", "weight": 3, "functions": [ { "function": "set_count", "count": { "min": 6, "max": 16 } } ] },
+        { "type": "item", "name": "minecraft:crossbow", "weight": 1, "functions": [ { "function": "set_damage", "damage": { "min": 0.25, "max": 0.70 } } ] }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "empty", "weight": 85 },
+        { "type": "item", "name": "minecraft:diamond", "weight": 15, "functions": [ { "function": "set_count", "count": 1 } ] }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "empty", "weight": 75 },
+        { "type": "item", "name": "5fs_br:steel_ingot", "weight": 25, "functions": [ { "function": "set_count", "count": 1 } ] }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "empty", "weight": 75 },
+        { "type": "item", "name": "5fs_br:ring_band", "weight": 10, "functions": [ { "function": "set_count", "count": 1 } ] },
+        { "type": "item", "name": "5fs_br:jeweling_station", "weight": 10 },
+        { "type": "item", "name": "5fs_br:rune_table", "weight": 5 }
+      ]
+    },
+    {
+      "rolls": 1,
+      "conditions": [ { "condition": "random_chance", "chance": 0.15 } ],
+      "entries": [
+        { "type": "item", "name": "5fs_br:charm_of_guardian", "weight": 1 },
+        { "type": "item", "name": "5fs_br:charm_of_drowned", "weight": 1 },
+        { "type": "item", "name": "5fs_br:charm_of_squid", "weight": 1 },
+        { "type": "item", "name": "5fs_br:charm_of_axolotl", "weight": 1 }
+      ]
+    },
+    {
+      "rolls": 1,
+      "conditions": [ { "condition": "random_chance", "chance": 0.05 } ],
+      "entries": [
+        { "type": "item", "name": "5fs_br:sky_star_fragment", "weight": 1, "functions": [ { "function": "set_count", "count": 1 } ] }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "empty", "weight": 60 },
+        {
+          "type": "item",
+          "name": "5fs_br:stone_hammer",
+          "weight": 15,
+          "functions": [ { "function": "set_damage", "damage": { "min": 0.50, "max": 0.90 } } ]
+        },
+        {
+          "type": "item",
+          "name": "5fs_br:copper_hammer",
+          "weight": 10,
+          "functions": [ { "function": "set_damage", "damage": { "min": 0.40, "max": 0.90 } } ]
+        },
+        {
+          "type": "item",
+          "name": "5fs_br:golden_hammer",
+          "weight": 8,
+          "functions": [ { "function": "set_damage", "damage": { "min": 0.60, "max": 0.90 } } ]
+        },
+        {
+          "type": "item",
+          "name": "5fs_br:iron_hammer",
+          "weight": 7,
+          "functions": [ { "function": "set_damage", "damage": { "min": 0.20, "max": 0.80 } } ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:iron_pickaxe",
+          "weight": 4,
+          "functions": [ { "function": "set_damage", "damage": { "min": 0.20, "max": 0.80 } } ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:iron_axe",
+          "weight": 4,
+          "functions": [ { "function": "set_damage", "damage": { "min": 0.20, "max": 0.80 } } ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:iron_shovel",
+          "weight": 4,
+          "functions": [ { "function": "set_damage", "damage": { "min": 0.20, "max": 0.80 } } ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "conditions": [ { "condition": "random_chance", "chance": 0.005 } ],
+      "entries": [
+        { "type": "item", "name": "5fs_br:cape_of_deep_ocean", "weight": 1 },
+        { "type": "item", "name": "5fs_br:cape_of_beach", "weight": 1 },
+        { "type": "item", "name": "5fs_br:cape_of_coral_cove", "weight": 1 },
+        { "type": "item", "name": "5fs_br:cape_of_ocean_waves", "weight": 1 }
+      ]
+    },
+    {
+      "rolls": 1,
+      "conditions": [ { "condition": "random_chance", "chance": 0.005 } ],
+      "entries": [
+        { "type": "item", "name": "5fs_br:deep_ocean_flag", "weight": 1 },
+        { "type": "item", "name": "5fs_br:beach_flag", "weight": 1 },
+        { "type": "item", "name": "5fs_br:coral_cove_flag", "weight": 1 },
+        { "type": "item", "name": "5fs_br:ocean_waves_flag", "weight": 1 }
+      ]
+    },
+    {
+      "rolls": 1,
+      "conditions": [ { "condition": "random_chance", "chance": 0.005 } ],
+      "entries": [
+        { "type": "item", "name": "5fs_br:deep_ocean_hanging_banner", "weight": 1 },
+        { "type": "item", "name": "5fs_br:beach_hanging_banner", "weight": 1 },
+        { "type": "item", "name": "5fs_br:coral_cove_hanging_banner", "weight": 1 }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "empty", "weight": 40 },
+        { "type": "item", "name": "5fs_br:diamond_wand", "weight": 4, "functions": [ { "function": "set_damage", "damage": { "min": 0.10, "max": 0.40 } } ] },
+        { "type": "item", "name": "5fs_br:torch_wand", "weight": 1, "functions": [ { "function": "set_damage", "damage": { "min": 0.20, "max": 0.70 } } ] },
+        { "type": "item", "name": "5fs_br:enchanted_scroll", "weight": 13 }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "empty", "weight": 60 },
+        { "type": "item", "name": "5fs_br:rune_of_blades", "weight": 3 },
+        { "type": "item", "name": "5fs_br:rune_of_beasts", "weight": 3 },
+        { "type": "item", "name": "5fs_br:rune_of_decay", "weight": 4 },
+        { "type": "item", "name": "5fs_br:rune_of_earth", "weight": 3 },
+        { "type": "item", "name": "5fs_br:rune_of_eternity", "weight": 4 },
+        { "type": "item", "name": "5fs_br:rune_of_flame", "weight": 3 },
+        { "type": "item", "name": "5fs_br:rune_of_frost", "weight": 3 },
+        { "type": "item", "name": "5fs_br:rune_of_growth", "weight": 4 },
+        { "type": "item", "name": "5fs_br:rune_of_knowledge", "weight": 4 },
+        { "type": "item", "name": "5fs_br:rune_of_light", "weight": 3 },
+        { "type": "item", "name": "5fs_br:rune_of_shadows", "weight": 4 },
+        { "type": "item", "name": "5fs_br:rune_of_shields", "weight": 3 },
+        { "type": "item", "name": "5fs_br:rune_of_storms", "weight": 3 }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "item", "name": "5fs_br:sky_star_fragment", "weight": 4 },
+        { "type": "item", "name": "5fs_br:mana_bottle", "weight": 6, "functions": [ { "function": "set_count", "count": { "min": 1, "max": 3 } } ] },
+        { "type": "empty", "weight": 90 }
+      ]
+    }
+  ]
+}

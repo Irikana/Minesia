@@ -1,0 +1,43 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.chest": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"open": "v.is_opened"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"close": {
+					"animations": [
+						"close"
+					],
+					"transitions": [
+						{
+							"open": "v.is_opened || (v.is_opened && !query.timer_flag_1)"
+						},
+						{
+							"default": "!v.is_opened && v.timer < q.life_time"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"open": {
+					"animations": [
+						"open"
+					],
+					"transitions": [
+						{
+							"close": "query.timer_flag_1"
+						}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		}
+	}
+}

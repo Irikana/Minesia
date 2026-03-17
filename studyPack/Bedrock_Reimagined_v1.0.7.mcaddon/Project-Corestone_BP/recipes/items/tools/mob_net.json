@@ -1,0 +1,32 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "5fs_br:mob_net"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "  R",
+      " RG",
+      "RGG"
+    ],
+    "key": {
+      "R": {
+        "item": "5fs_br:redwood_stick"
+      },
+      "G": {
+        "item": "minecraft:string"
+      }
+    },
+    "result": {
+      "item": "5fs_br:mob_net"
+    },
+    "unlock": [
+      {
+        "item": "minecraft:string"
+      }
+    ]
+  }
+}

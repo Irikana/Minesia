@@ -1,0 +1,38 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "5fs_br:redwood_chest_boat",
+			"materials": {
+				"default": "entity_alphatest",
+				"water": "entity_alphablend"
+			},
+			"textures": {
+				"default": "textures/entity/misc/redwood_giant_chest_boat"
+			},
+			"geometry": {
+				"default": "geometry.redwood_chest_boat"
+			},
+			"render_controllers": [
+				"controller.render.boat"
+			],
+			"animations": {
+				"move": "animation.boat_geometry.move",
+				"in_bubble_column": "animation.boat_geometry.in_bubble_column",
+				"death": "animation.boat_geometry.death",
+				"in_bubble_column_controller": "controller.animation.boat_geometry.in_bubble_column"
+			},
+			"scripts": {
+				"animate": [
+					"in_bubble_column_controller",
+					{
+						"move": "query.is_moving && query.has_rider"
+					},
+					{
+						"death": "!query.is_alive"
+					}
+				]
+			}
+		}
+	}
+}

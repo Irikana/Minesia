@@ -1,0 +1,41 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:growing_plant_feature": {
+        "description": {
+            "identifier": "5fs_br:flowers/rose_bush"
+        },
+        "height_distribution": [
+            [
+                {
+                    "range_min": 2,
+                    "range_max": 2
+                },
+                100
+            ]
+        ],
+        "growth_direction": "UP",
+        "body_blocks": [
+            [
+                {
+                    "name": "minecraft:rose_bush",
+                    "states": {
+                        "upper_block_bit": false
+                    }
+                },
+                1
+            ]
+        ],
+        "head_blocks": [
+            [
+                {
+                    "name": "minecraft:rose_bush",
+                    "states": {
+                        "upper_block_bit": true
+                    }
+                },
+                1
+            ]
+        ],
+        "allow_water": false
+    }
+}

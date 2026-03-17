@@ -1,0 +1,151 @@
+{
+	"format_version": "1.26.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "5fs_br:water_moss_algae",
+			"states": {
+				"5fs_br:state": [
+					0,
+					1,
+					2
+				]
+			},
+			"traits": {
+				"minecraft:placement_direction": {
+					"enabled_states": [
+						"minecraft:cardinal_direction"
+					]
+				}
+			}
+		},
+		"permutations": [
+			{
+				"condition": "q.block_state('5fs_br:state') == 0",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "water_moss_algae_0",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('5fs_br:state') == 1",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "water_moss_algae_1",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('5fs_br:state') == 2",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "water_moss_algae_2",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('minecraft:cardinal_direction') == 'south'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							180,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('minecraft:cardinal_direction') == 'east'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							-90,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('minecraft:cardinal_direction') == 'west'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							90,
+							0
+						]
+					}
+				}
+			}
+		],
+		"components": {
+			"minecraft:geometry": "geometry.maple_leaf_litter",
+			"minecraft:flammable": false,
+			"minecraft:light_dampening": 0,
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"block_filter": [
+							"minecraft:water"
+						],
+						"allowed_faces": [
+							"up"
+						]
+					}
+				]
+			},
+			"minecraft:selection_box": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					1.5,
+					16
+				]
+			},
+			"minecraft:collision_box": false,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "water_moss_algae_2",
+					"render_method": "alpha_test_to_opaque",
+					"ambient_occlusion": false,
+					"face_dimming": false
+				}
+			},
+			"minecraft:loot": "loot_tables/empty.json",
+			"5fs_br:crystallineShears": {},
+			"minecraft:liquid_detection": {
+				"detection_rules": [
+					{
+						"on_liquid_touches": "popped"
+					}
+				]
+			},
+			"minecraft:movable": {
+				"movement_type": "popped",
+				"sticky": "none"
+			},
+            "minecraft:precipitation_interactions": {
+                "precipitation_behavior": "none"
+            },
+            "minecraft:connection_rule": {
+                "accepts_connections_from": "none"
+            },
+			"tag:plant": {}
+		}
+	}
+}

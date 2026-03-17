@@ -1,0 +1,33 @@
+﻿{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "5fs_br:cape_of_panda_to_banner"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "ZGS"
+    ],
+    "key": {
+      "Z": {
+        "item": "5fs_br:shark_hide"
+      },
+      "G": {
+        "item": "5fs_br:cape_of_panda"
+      },
+      "S": {
+        "item": "5fs_br:redwood_stick"
+      }
+    },
+    "result": {
+      "item": "5fs_br:panda_banner"
+    },
+    "unlock": [
+      {
+        "item": "5fs_br:shark_hide"
+      }
+    ]
+  }
+}

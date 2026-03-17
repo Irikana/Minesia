@@ -1,0 +1,39 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.copper_wand.3pp": {
+			"loop": true,
+			"bones": {
+				"bone10": {
+					"rotation": [87.5, 0, 0],
+					"position": [0, 16, 0]
+				},
+				"iron_wand": {
+					"rotation": [90, 0, 0],
+					"position": [0, 15, 0]
+				},
+				"bone16": {
+					"rotation": [90, 0, 0],
+					"position": [0, 16, -4]
+				}
+			}
+		},
+		"animation.copper_wand.1fp": {
+			"loop": true,
+			"bones": {
+				"bone10": {
+					"rotation": [101.55952, 58.34689, -39.43142],
+					"position": [0, 10, 7]
+				},
+				"iron_wand": {
+					"rotation": [78.12705, 55.54732, -62.93269],
+					"position": [0, 16, 4]
+				},
+				"bone16": {
+					"rotation": [123.71418, -49.27219, 91.61751],
+					"position": [0, 9, 3]
+				}
+			}
+		}
+	}
+}

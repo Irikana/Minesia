@@ -1,0 +1,29 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.boat_geometry.in_bubble_column": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"in_bubble_column": "query.is_saddled"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"in_bubble_column": {
+					"animations": [
+						"in_bubble_column"
+					],
+					"transitions": [
+						{
+							"default": "!query.is_saddled"
+						}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,19 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "5fs_br:compact_raw_copper"
+    },
+    "unlock": [
+      {
+        "item": "minecraft:raw_copper"
+      }
+    ],
+    "tags": [
+      "furnace",
+      "blast_furnace"
+    ],
+    "input": "5fs_br:compact_raw_copper",
+    "output": "5fs_br:compact_copper_ingot"
+  }
+}

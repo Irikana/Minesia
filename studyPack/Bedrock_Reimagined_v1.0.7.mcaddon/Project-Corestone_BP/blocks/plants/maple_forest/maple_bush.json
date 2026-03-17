@@ -1,0 +1,106 @@
+{
+    "format_version": "1.26.0",
+	"minecraft:block": {
+        "description": {
+            "identifier": "5fs_br:maple_bush"
+        },
+        "components": {
+            "minecraft:geometry": {
+                "identifier": "geometry.maple_bush",
+                "culling": "5fs_br:culling.maple_bush"
+            },
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "maple_bush",
+                    "render_method": "alpha_test"
+                },
+                "leaves": {
+                    "texture": "maple_bush_leaves",
+                    "render_method": "alpha_test"
+                }
+            },
+            "minecraft:map_color": "#872D30",
+            "minecraft:collision_box": false,
+            "minecraft:selection_box": {
+                "origin": [
+                    -6,
+                    0,
+                    -6
+                ],
+                "size": [
+                    12,
+                    12,
+                    12
+                ]
+            },
+            "minecraft:placement_filter": {
+                "conditions": [
+                    {
+                        "allowed_faces": [
+                            "up"
+                        ],
+                        "block_filter": [
+                            {
+                                "tags": "query.any_tag('dirt')"
+                            },
+                            "minecraft:grass_block",
+                            "minecraft:dirt",
+                            "minecraft:moss_block",
+                            "minecraft:pale_moss_block",
+                            "minecraft:mycelium",
+                            "minecraft:coarse_dirt",
+                            "minecraft:dirt_with_roots",
+                            "minecraft:muddy_mangrove_roots",
+                            "minecraft:farmland"
+                        ]
+                    }
+                ]
+            },
+			"minecraft:random_offset": {
+                "x": {
+                    "range": {
+                        "min": -2,
+                        "max": 2
+                    },
+                    "steps": 16
+                },
+                "z": {
+                    "range": {
+                        "min": -2,
+                        "max": 2
+                    },
+                    "steps": 16
+                }
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 0
+            },
+            "minecraft:light_dampening": 0,
+            "minecraft:flammable": true,
+            "minecraft:liquid_detection": {
+                "detection_rules": [
+                    {
+                        "can_contain_liquid": true,
+                        "liquid_type": "water",
+                        "on_liquid_touches": "no_reaction"
+                    }
+                ]
+            },
+            "minecraft:movable": {
+                "movement_type": "popped"
+            },
+            "minecraft:precipitation_interactions": {
+                "precipitation_behavior": "none"
+            },
+            "minecraft:connection_rule": {
+                "accepts_connections_from": "none"
+            },
+            "5fs_br:crystallineShears": {},
+            "minecraft:loot": "loot_tables/empty.json",
+            "5fs_br:bush": {}
+        }
+    }
+}

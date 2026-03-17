@@ -1,0 +1,21 @@
+{
+  "format_version": "1.21.20",
+  "minecraft:structure_set": {
+    "description": {
+      "identifier": "5fs_br:copper_house"
+    },
+    "placement": {
+      "type": "minecraft:random_spread",
+      "salt": 21469867,
+      "separation": 30,
+      "spacing": 70,
+      "spread_type": "linear"
+    },
+    "structures": [
+      {
+        "structure": "5fs_br:copper_house",
+        "weight": 1
+      }
+    ]
+  }
+}

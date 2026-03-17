@@ -1,0 +1,15 @@
+{
+    "format_version": "1.26.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "5fs_br:chipped_ring_of_greed",
+            "menu_category": {
+                "category": "equipment"
+            }
+        },
+        "components": {
+            "minecraft:icon": "5fs_br:chipped_ring_of_greed",
+            "minecraft:max_stack_size": 1
+        }
+    }
+}

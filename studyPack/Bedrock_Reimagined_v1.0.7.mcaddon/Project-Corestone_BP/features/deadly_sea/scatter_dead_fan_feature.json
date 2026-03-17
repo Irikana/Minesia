@@ -1,0 +1,23 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:scatter_feature": {
+    "description": {
+      "identifier": "5fs_br:deadly_sea/scatter_dead_fan_feature"
+    },
+    "iterations": 25,
+    "x": {
+      "distribution": "gaussian",
+      "extent": [ -5, 5 ]
+    },
+    "y": {
+      "distribution": "gaussian",
+      "extent": [ -1, 1 ]
+    },
+    "z": {
+      "distribution": "gaussian",
+      "extent": [ -5, 5 ]
+    },
+    "coordinate_eval_order": "zxy",
+    "places_feature": "5fs_br:deadly_sea/dead_fan_feature"
+  }
+}

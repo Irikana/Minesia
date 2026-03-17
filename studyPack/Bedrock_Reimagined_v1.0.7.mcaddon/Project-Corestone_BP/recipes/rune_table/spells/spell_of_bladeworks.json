@@ -1,0 +1,33 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "5fs_br:spell_of_bladeworks"
+		},
+		"tags": [
+			"runetable"
+		],
+		"key": {
+            "A": {
+				"item": "5fs_br:rune_of_blades"
+			},
+			"B": {
+				"item": "5fs_br:basic_scroll"
+			},
+			"C": {
+				"item": "5fs_br:rune_of_growth"
+			}
+		},
+		"pattern": [
+			"   ",
+			"ABC",
+			"   "
+		],
+		"result": {
+			"item": "5fs_br:spell_of_bladeworks"
+		},
+		"unlock": {
+			"context": "AlwaysUnlocked"
+		}
+	}
+}

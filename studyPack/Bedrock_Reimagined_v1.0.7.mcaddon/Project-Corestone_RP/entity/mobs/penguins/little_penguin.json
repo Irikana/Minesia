@@ -1,0 +1,43 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "5fs_br:little_penguin",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/mobs/penguins/little_penguin"
+      },
+      "geometry": {
+        "default": "geometry.little_penguin"
+      },
+      "animations": {
+        "idle": "animation.little_penguin.idle",
+        "walking": "animation.little_penguin.walking",
+        "swimming": "animation.little_penguin.swimming",
+        "slide": "animation.little_penguin.slide",
+        "fall": "animation.little_penguin.fall",
+        "dance": "animation.little_penguin.dance",
+        "death": "animation.little_penguin.death"
+      },
+      "animation_controllers": [
+        { "move": "controller.animation.little_penguin" }
+      ],
+      "enable_attachables": true,
+      "render_controllers": [
+        "controller.render.default"
+      ],
+      "sound_effects": {
+        "idle": "mob.penguin.idle",
+        "swimming": "mob.penguin.swim",
+        "slide": "mob.penguin.slide",
+        "fall": "mob.penguin.fall",
+        "dance": "mob.penguin.dance"
+      },
+      "spawn_egg": {
+        "texture": "5fs_br:little_penguin"
+      }
+    }
+  }
+}

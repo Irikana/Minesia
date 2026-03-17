@@ -1,0 +1,30 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "5fs_br:crafting_table_from_crimson_planks"
+    },
+    "group": "workbenches",
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "##",
+      "##"
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:crimson_planks"
+      }
+    },
+    "result": {
+      "item": "5fs_br:crimson_crafting_table",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:crimson_planks"
+      }
+    ]
+  }
+}

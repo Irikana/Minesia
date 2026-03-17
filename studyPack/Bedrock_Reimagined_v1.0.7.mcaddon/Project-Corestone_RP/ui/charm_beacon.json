@@ -1,0 +1,788 @@
+{
+    "namespace": "charm_beacon",
+    "custom": {
+        "type": "panel",
+        "controls": [
+            {
+                "root_panel@common.root_panel": {
+                    "layer": 1,
+                    "controls": [
+                        {
+                            "charm_beacon_panel": {
+                                "type": "panel",
+                                "layer": 5,
+                                "controls": [
+                                    {
+                                        "close@common.close_button": {
+                                            "layer": 4,
+                                            "offset": [
+                                                18,
+                                                -36
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "small_charm_beacon_custom_panel_top_half@charm_beacon.small_charm_beacon_custom_panel_top_half": {}
+                                    },
+                                    {
+                                        "inventory_panel_bottom_half_with_label@smelter.inventory_panel_bottom_half_with_label": {}
+                                    },
+                                    {
+                                        "hotbar_grid@smelter.hotbar_grid_template": {}
+                                    },
+                                    {
+                                        "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {}
+                                    },
+                                    {
+                                        "flying_item_renderer@common.flying_item_renderer": {
+                                            "layer": 15
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "inventory_selected_icon_button@common.inventory_selected_icon_button": {}
+                        },
+                        {
+                            "gamepad_cursor@common.gamepad_cursor_button": {}
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "small_charm_beacon_custom_panel_top_half": {
+        "type": "panel",
+        "size": [
+            "0%",
+            "0%"
+        ],
+        "offset": [
+            0,
+            12
+        ],
+        "anchor_to": "top_left",
+        "anchor_from": "top_left",
+        "controls": [
+            {
+                "small_charm_beacon_custom_panel@charm_beacon.small_charm_beacon_custom_panel": {}
+            }
+        ]
+    },
+    "small_charm_beacon_custom_panel": {
+        "type": "collection_panel",
+        "size": [
+            162,
+            54
+        ],
+        "anchor_from": "top_left",
+        "anchor_to": "top_left",
+        "$item_collection_name": "container_items",
+        "collection_name": "container_items",
+        "$dark_border_toggle_hover_color": [
+            1,
+            1,
+            1
+        ],
+        "controls": [
+            {
+                "fuel_bar_empty": {
+                    "type": "image",
+                    "texture": "textures/gui/charm_beacon",
+                    "layer": 2,
+                    "alpha": 1,
+                    "anchor_from": "center",
+                    "anchor_to": "center",
+                    "offset": [
+                        136,
+                        176
+                    ],
+                    "size": [
+                        512,
+                        512
+                    ]
+                }
+            },
+            {
+                "item0@charm_beacon.container_item_with_picture": {
+                    "collection_index": 0,
+                    "anchor_from": "top_left",
+                    "anchor_to": "top_left",
+                    "offset": [
+                        32,
+                        49
+                    ]
+                }
+            },
+            {
+                "item1@charm_beacon.container_item_with_picture": {
+                    "collection_index": 1,
+                    "anchor_from": "top_left",
+                    "anchor_to": "top_left",
+                    "offset": [
+                        -8,
+                        49
+                    ]
+                }
+            },
+            {
+                "item2@charm_beacon.progress_bar": {
+                    "collection_index": 2,
+                    "anchor_from": "top_middle",
+                    "anchor_to": "top_middle",
+                    "offset": [
+                        35,
+                        52.75
+                    ],
+                    "size": [
+                        121.5,
+                        10.125
+                    ],
+                    "layer": 3,
+                    "controls": [
+                        {
+                            "default": {
+                                "type": "image",
+                                "texture": "textures/ui/charm_beacon/fuel_empty_image",
+                                "layer": 2,
+                                "size": [
+                                    60,
+                                    50
+                                ]
+                            }
+                        },
+                        {
+                            "progress1@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_0",
+                                "$binding_text": 0,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress2@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_1",
+                                "$binding_text": 1,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress3@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_2",
+                                "$binding_text": 2,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress4@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_3",
+                                "$binding_text": 3,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress5@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_4",
+                                "$binding_text": 4,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress6@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_5",
+                                "$binding_text": 5,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress7@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_6",
+                                "$binding_text": 6,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress8@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_7",
+                                "$binding_text": 7,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress9@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_8",
+                                "$binding_text": 8,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress10@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_9",
+                                "$binding_text": 9,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress11@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_10",
+                                "$binding_text": 10,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress12@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_11",
+                                "$binding_text": 11,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress13@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_12",
+                                "$binding_text": 12,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress14@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_13",
+                                "$binding_text": 13,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress15@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_14",
+                                "$binding_text": 14,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress16@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_15",
+                                "$binding_text": 15,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress17@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_16",
+                                "$binding_text": 16,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress18@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_17",
+                                "$binding_text": 17,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress19@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_18",
+                                "$binding_text": 18,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress20@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_19",
+                                "$binding_text": 19,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress21@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_20",
+                                "$binding_text": 20,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress22@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_21",
+                                "$binding_text": 21,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress23@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_22",
+                                "$binding_text": 22,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress24@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_23",
+                                "$binding_text": 23,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress25@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_24",
+                                "$binding_text": 24,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress26@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_25",
+                                "$binding_text": 25,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress27@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_26",
+                                "$binding_text": 26,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress28@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_27",
+                                "$binding_text": 27,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress29@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_28",
+                                "$binding_text": 28,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress30@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_29",
+                                "$binding_text": 29,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress31@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_30",
+                                "$binding_text": 30,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress32@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_31",
+                                "$binding_text": 31,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress33@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_32",
+                                "$binding_text": 32,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress34@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_33",
+                                "$binding_text": 33,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress35@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_34",
+                                "$binding_text": 34,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress36@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_35",
+                                "$binding_text": 35,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress37@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_36",
+                                "$binding_text": 36,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress38@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_37",
+                                "$binding_text": 37,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress39@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_38",
+                                "$binding_text": 38,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress40@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_39",
+                                "$binding_text": 39,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress41@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_40",
+                                "$binding_text": 40,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress42@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_41",
+                                "$binding_text": 41,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress43@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_42",
+                                "$binding_text": 42,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress44@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_43",
+                                "$binding_text": 43,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress45@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_44",
+                                "$binding_text": 44,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress46@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_45",
+                                "$binding_text": 45,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress47@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_46",
+                                "$binding_text": 46,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress48@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_47",
+                                "$binding_text": 47,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress49@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_48",
+                                "$binding_text": 48,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress50@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_49",
+                                "$binding_text": 49,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress51@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_50",
+                                "$binding_text": 50,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress52@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_51",
+                                "$binding_text": 51,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress53@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_52",
+                                "$binding_text": 52,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress54@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_53",
+                                "$binding_text": 53,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress55@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_54",
+                                "$binding_text": 54,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress56@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_55",
+                                "$binding_text": 55,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress57@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_56",
+                                "$binding_text": 56,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress58@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_57",
+                                "$binding_text": 57,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress59@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_58",
+                                "$binding_text": 58,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress59@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_59",
+                                "$binding_text": 59,
+                                "layer": 4
+                            }
+                        },
+                        {
+                            "progress59@image_template": {
+                                "$texture": "textures/ui/charm_beacon/fuel_full_image_60",
+                                "$binding_text": 60,
+                                "layer": 4
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "name": {
+                    "type": "label",
+                    "text": "ui.charm_beacon",
+                    "color": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "layer": 3,
+                    "offset": [
+                        8,
+                        -42
+                    ],
+                    "anchor_from": "top_middle",
+                    "anchor_to": "top_middle"
+                }
+            }
+        ]
+    },
+    "image_template": {
+        "type": "image",
+        "texture": "$texture",
+        "bindings": [
+            {
+                "binding_name": "#hover_text",
+                "binding_type": "collection",
+                "binding_collection_name": "container_items"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "( #hover_text - ('%.6s' * #hover_text) = $binding_text)",
+                "target_property_name": "#visible"
+            }
+        ]
+    },
+    "container_item_with_picture": {
+        "type": "input_panel",
+        "size": [
+            18,
+            18
+        ],
+        "layer": 1,
+        "$path_to_image|default": "",
+        "$cell_image_size|default": [
+            18,
+            18
+        ],
+        "$cell_overlay_ref|default": "common.cell_overlay",
+        "$button_ref|default": "common.container_slot_button_prototype",
+        "$stack_count_required|default": true,
+        "$durability_bar_required|default": true,
+        "$storage_bar_required|default": true,
+        "$item_renderer|default": "common.item_renderer",
+        "$item_renderer_panel_size|default": [
+            18,
+            18
+        ],
+        "$item_renderer_size|default": [
+            16,
+            16
+        ],
+        "$item_renderer_offset|default": [
+            0,
+            0
+        ],
+        "$background_images|default": "common.cell_image_panel",
+        "$background_image_control_name|default": "bg",
+        "$focus_id|default": "",
+        "$focus_override_down|default": "",
+        "$focus_override_up|default": "",
+        "$focus_override_left|default": "",
+        "$focus_override_right|default": "",
+        "focus_identifier": "$focus_id",
+        "focus_change_down": "$focus_override_down",
+        "focus_change_up": "$focus_override_up",
+        "focus_change_left": "$focus_override_left",
+        "focus_change_right": "$focus_override_right",
+        "focus_enabled": true,
+        "focus_wrap_enabled": false,
+        "focus_magnet_enabled": true,
+        "controls": [
+            {
+                "item_cell": {
+                    "type": "panel",
+                    "size": "$cell_image_size",
+                    "layer": 0,
+                    "controls": [
+                        {
+                            "item": {
+                                "type": "panel",
+                                "size": "$item_renderer_panel_size",
+                                "layer": 0,
+                                "controls": [
+                                    {
+                                        "stack_count_label@common.stack_count_label": {
+                                            "layer": 27
+                                        }
+                                    },
+                                    {
+                                        "$item_renderer@$item_renderer": {
+                                            "size": "$item_renderer_size",
+                                            "offset": "$item_renderer_offset",
+                                            "anchor_to": "center",
+                                            "anchor_from": "center",
+                                            "layer": 7
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "durability_bar@common.durability_bar": {
+                                "layer": 20
+                            }
+                        },
+                        {
+                            "storage_bar@common.storage_bar": {
+                                "layer": 20
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "item_cell_overlay_ref@$cell_overlay_ref": {
+                    "layer": 3
+                }
+            },
+            {
+                "item_selected_image@common.slot_selected": {
+                    "layer": 4
+                }
+            },
+            {
+                "item_button_ref@$button_ref": {
+                    "tts_ignore_count": true,
+                    "tts_skip_message": true,
+                    "tts_inherit_siblings": true,
+                    "layer": 5
+                }
+            }
+        ]
+    },
+    "progress_bar": {
+        "type": "input_panel",
+        "size": [
+            22,
+            15
+        ],
+        "layer": 1,
+        "$cell_image_size|default": [
+            22,
+            15
+        ],
+        "$cell_overlay_ref|default": "common.cell_overlay",
+        "$button_ref|default": "common.container_slot_button_prototype",
+        "$stack_count_required|default": false,
+        "$durability_bar_required|default": false,
+        "$storage_bar_required|default": false,
+        "$item_renderer|default": "common.item_renderer",
+        "$item_renderer_panel_size|default": [
+            22,
+            15
+        ],
+        "$item_renderer_size|default": [
+            22,
+            15
+        ],
+        "$item_renderer_offset|default": [
+            0,
+            0
+        ],
+        "controls": [
+            {
+                "item_cell": {
+                    "type": "panel",
+                    "size": "$cell_image_size",
+                    "layer": 0,
+                    "controls": [
+                        {
+                            "item": {
+                                "type": "panel",
+                                "size": "$item_renderer_panel_size",
+                                "layer": 0,
+                                "controls": [
+                                    {
+                                        "$item_renderer@$item_renderer": {
+                                            "size": "$item_renderer_size",
+                                            "offset": "$item_renderer_offset",
+                                            "anchor_to": "center",
+                                            "anchor_from": "center",
+                                            "layer": 7
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

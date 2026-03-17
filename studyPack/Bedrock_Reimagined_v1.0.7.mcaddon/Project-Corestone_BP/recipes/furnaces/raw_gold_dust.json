@@ -1,0 +1,19 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "5fs_br:raw_gold_dust"
+    },
+    "unlock": [
+      {
+        "item": "minecraft:raw_gold"
+      }
+    ],
+    "tags": [
+      "furnace",
+      "blast_furnace"
+    ],
+    "input": "5fs_br:raw_gold_dust",
+    "output": "minecraft:gold_ingot"
+  }
+}

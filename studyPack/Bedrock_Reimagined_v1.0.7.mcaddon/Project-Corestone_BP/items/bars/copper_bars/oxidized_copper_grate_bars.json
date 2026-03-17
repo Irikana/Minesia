@@ -1,0 +1,18 @@
+{
+	"format_version": "1.26.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "5fs_br:oxidized_copper_grate_bars",
+			"menu_category": {
+				"category": "construction"
+			}
+		},
+		"components": {
+			"minecraft:icon": "oxidized_copper_diagonal_bars",
+			"minecraft:block_placer": {
+				"block": "5fs_br:oxidized_copper_grate_bars",
+				"replace_block_item": true
+			}
+		}
+	}
+}

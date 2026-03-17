@@ -1,0 +1,21 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:structure_template_feature": {
+    "description": {
+      "identifier": "5fs_br:ocean/ocean_big_ruin_0"
+    },
+    "structure_name": "ocean:oceanBigRuins1",
+    "adjustment_radius": 8,
+    "facing_direction": "random",
+    "constraints": {
+      "grounded": {},
+      "block_intersection": {
+        "block_allowlist": [
+          "minecraft:water",  
+          "minecraft:seagrass"
+
+        ]
+      }
+    }
+  }
+}

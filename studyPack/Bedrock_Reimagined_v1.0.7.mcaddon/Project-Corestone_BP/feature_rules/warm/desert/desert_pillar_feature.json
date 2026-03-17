@@ -1,0 +1,47 @@
+{
+    "format_version": "1.21.80",
+    "minecraft:feature_rules": {
+        "description": {
+            "identifier": "5fs_br:desert_pillar_feature",
+            "places_feature": "5fs_br:warm/desert/scatter_desert_pillars_feature"
+        },
+        "conditions": {
+            "placement_pass": "before_surface_pass",
+            "minecraft:biome_filter": {
+                "all_of": [
+                    {
+                        "test": "has_biome_tag",
+                        "value": "desert"
+                    },
+                    {
+                        "test": "has_biome_tag",
+                        "operator": "!=",
+                        "value": "mutated"
+                    }
+                ]
+            }
+        },
+        "distribution": {
+            "iterations": 1,
+            "scatter_chance": {
+                "numerator": 1,
+                "denominator": 26
+            },
+            "x": {
+                "distribution": "uniform",
+                "extent": [
+                    1,
+                    15
+                ]
+            },
+            "y": "query.heightmap(variable.worldx, variable.worldz)",
+            "z": {
+                "distribution": "uniform",
+                "extent": [
+                    1,
+                    15
+                ]
+            }
+        }
+    }
+}

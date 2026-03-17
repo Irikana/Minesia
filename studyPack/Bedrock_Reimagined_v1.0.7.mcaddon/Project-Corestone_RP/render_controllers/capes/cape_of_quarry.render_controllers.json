@@ -1,0 +1,49 @@
+{
+  "format_version": "1.20.0",
+  "render_controllers": {
+    "controller.render.cape_of_quarry": {
+      "geometry": "geometry.default",
+      "arrays": {
+        "textures": {
+          "array.textures": [
+            "Texture.quarry0",
+            "Texture.quarry1",
+            "Texture.quarry2",
+            "Texture.quarry3",
+            "Texture.quarry4",
+            "Texture.quarry5",
+            "Texture.quarry6",
+            "Texture.quarry7",
+            "Texture.quarry8",
+            "Texture.quarry9",
+            "Texture.quarry10",
+            "Texture.quarry11",
+            "Texture.quarry12",
+            "Texture.quarry13",
+            "Texture.quarry14",
+            "Texture.quarry15",
+            "Texture.quarry16",
+            "Texture.quarry17",
+            "Texture.quarry18",
+            "Texture.quarry19",
+            "Texture.quarry20",
+            "Texture.quarry21",
+            "Texture.quarry22",
+            "Texture.quarry23",
+            "Texture.quarry24",
+            "Texture.quarry25"
+          ]
+        }
+      },
+      "materials": [
+        {
+          "*": "variable.is_enchanted?material.enchanted:material.default"
+        }
+      ],
+      "textures": [
+        "temp.life_time=query.life_time*8;return array.textures[temp.life_time];",
+        "texture.enchanted"
+      ]
+    }
+  }
+}

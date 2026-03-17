@@ -1,0 +1,105 @@
+{
+    "format_version": "1.26.0",
+	"minecraft:block": {
+        "description": {
+            "identifier": "5fs_br:full_bird_feeder",
+            "menu_category": {
+                "category": "none",
+                "is_hidden_in_commands": false
+            }
+        },
+        "components": {
+            "minecraft:geometry": "geometry.bird_feeder",
+            "minecraft:placement_filter": {
+                "conditions": [
+                    {
+                        "allowed_faces": [
+                            "down"
+                        ]
+                    }
+                ]
+            },
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "bird_feeder_bottom",
+                    "render_method": "alpha_test_to_opaque"
+                },
+                "bird_feeder_top_up": {
+                    "texture": "bird_feeder_top_up",
+                    "render_method": "alpha_test_to_opaque"
+                },
+                "bird_feeder_top_down": {
+                    "texture": "bird_feeder_top_down",
+                    "render_method": "alpha_test_to_opaque"
+                },
+                "bird_feeder_top": {
+                    "texture": "bird_feeder_top",
+                    "render_method": "alpha_test_to_opaque"
+                },
+                "bird_feeder_side": {
+                    "texture": "bird_feeder_side",
+                    "render_method": "alpha_test_to_opaque"
+                },
+                "bird_feeder_seeds": {
+                    "texture": "bird_feeder_seeds",
+                    "render_method": "alpha_test_to_opaque"
+                }
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 2
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 2
+            },
+            "minecraft:map_color": "#C69C6D",
+            "minecraft:collision_box": {
+                "origin": [
+                    -8,
+                    0,
+                    -8
+                ],
+                "size": [
+                    16,
+                    12,
+                    16
+                ]
+            },
+            "minecraft:selection_box": {
+                "origin": [
+                    -8,
+                    0,
+                    -8
+                ],
+                "size": [
+                    16,
+                    12,
+                    16
+                ]
+            },
+            "minecraft:loot": "loot_tables/blocks/misc/full_bird_feeder.json",
+            "minecraft:flammable": true,
+            "minecraft:light_dampening": 0,
+            "minecraft:liquid_detection": {
+                "detection_rules": [
+                    {
+                        "can_contain_liquid": true,
+                        "liquid_type": "water",
+                        "on_liquid_touches": "blocking"
+                    }
+                ]
+            },
+            "minecraft:movable": {
+                "movement_type": "popped"
+            },
+			"minecraft:precipitation_interactions": {
+				"precipitation_behavior": "obstruct_rain"
+			},
+			"minecraft:connection_rule": {
+				"accepts_connections_from": "none"
+			},
+            "5fs_br:full_bird_feeder": {},
+            "tag:5fs_br:down": {},
+            "tag:minecraft:is_axe_item_destructible": {}
+        }
+    }
+}

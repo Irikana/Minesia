@@ -1,0 +1,36 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "5fs_br:surfer",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/mobs/surfer"
+      },
+      "geometry": {
+        "default": "geometry.surfer"
+      },
+      "animations": {
+        "swimming": "animation.surfer.swimming",
+        "sleeping": "animation.surfer.sleeping_2",
+        "idle": "animation.surfer.idle",
+        "idle_on_land": "animation.surfer.idle_on_land",
+        "death": "animation.surfer.death",
+        "attack": "animation.surfer.flipper_slap_attack",
+        "riding": "animation.surfer.riding",
+        "walking": "animation.surfer.walking"
+      },
+      "animation_controllers": [
+        { "move": "controller.animation.surfer" }
+      ],
+      "render_controllers": [
+        "controller.render.default"
+      ],
+      "spawn_egg": {
+        "texture": "5fs_br:surfer"
+      }
+    }
+  }
+}

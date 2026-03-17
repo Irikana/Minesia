@@ -1,0 +1,31 @@
+{
+    "format_version": "1.26.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "5fs_br:lingering_illumination_potion_glowstone_lvl2",
+            "menu_category": {
+                "category": "equipment"
+            }
+        },
+        "components": {
+            "minecraft:icon": "5fs_br:lingering_illumination_potion",
+            "minecraft:max_stack_size": 1,
+            "5fs_br:lingering_potion": {
+                "spawn_event": "5fs_br:illumination",
+                "duration": 900, //45s * 20ticks/s
+                "amplifier": 2,
+                "affectCloud": true
+            },
+            "minecraft:projectile": {
+                "projectile_entity": "5fs_br:despawn"
+            },
+            "minecraft:throwable": {
+                "do_swing_animation": true
+            },
+            "minecraft:use_modifiers": {
+                "use_duration": 0.01,
+                "movement_modifier": 1
+            }
+        }
+    }
+}

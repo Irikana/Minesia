@@ -1,0 +1,58 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.charm_beacon",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "bb_main",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-8, 0, -8],
+							"size": [16, 16, 16],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [16, 16]},
+								"east": {"uv": [0, 0], "uv_size": [16, 16]},
+								"south": {"uv": [0, 0], "uv_size": [16, 16]},
+								"west": {"uv": [0, 0], "uv_size": [16, 16]},
+								"up": {"uv": [16, 16], "uv_size": [-16, -16]},
+								"down": {"uv": [16, 16], "uv_size": [-16, -16]}
+							}
+						},
+						{
+							"origin": [-6, 0, -6],
+							"size": [12, 3, 12],
+							"uv": {
+								"north": {"uv": [2, 13], "uv_size": [12, 3], "material_instance": "quartz"},
+								"east": {"uv": [2, 13], "uv_size": [12, 3], "material_instance": "quartz"},
+								"south": {"uv": [2, 13], "uv_size": [12, 3], "material_instance": "quartz"},
+								"west": {"uv": [2, 13], "uv_size": [12, 3], "material_instance": "quartz"},
+								"up": {"uv": [14, 13], "uv_size": [-12, -12], "material_instance": "quartz"},
+								"down": {"uv": [14, 13], "uv_size": [-12, -12], "material_instance": "quartz"}
+							}
+						},
+						{
+							"origin": [-5, 3, -5],
+							"size": [10, 10, 10],
+							"uv": {
+								"north": {"uv": [3, 3], "uv_size": [10, 10], "material_instance": "iron"},
+								"east": {"uv": [3, 3], "uv_size": [10, 10], "material_instance": "iron"},
+								"south": {"uv": [3, 3], "uv_size": [10, 10], "material_instance": "iron"},
+								"west": {"uv": [3, 3], "uv_size": [10, 10], "material_instance": "iron"},
+								"up": {"uv": [13, 13], "uv_size": [-10, -10], "material_instance": "iron"}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

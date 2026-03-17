@@ -1,0 +1,18 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:structure_template_feature": {
+        "description": {
+            "identifier": "5fs_br:jungle/liana_4_feature"
+        },
+        "structure_name": "liana:liana_4",
+        "adjustment_radius": 0,
+        "facing_direction": "random",
+        "constraints": {
+            "block_intersection": {
+                "block_allowlist": [
+                    "minecraft:air"
+                ]
+            }
+        }
+    }
+}

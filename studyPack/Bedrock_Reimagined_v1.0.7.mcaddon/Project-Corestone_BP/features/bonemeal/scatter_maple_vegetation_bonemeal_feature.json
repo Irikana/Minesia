@@ -1,0 +1,23 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:scatter_feature": {
+    "description": {
+      "identifier": "5fs_br:bonemeal/scatter_maple_vegetation_bonemeal_feature"
+    },
+    "iterations": 55,
+    "x": {
+      "distribution": "triangle",
+      "extent": [ -5, 5 ]
+    },
+    "y": {
+      "distribution": "triangle",
+      "extent": [ -5, 5 ]
+    },
+    "z": {
+      "distribution": "triangle",
+      "extent": [ -5, 5 ]
+    },
+    "coordinate_eval_order": "xyz",
+    "places_feature": "5fs_br:bonemeal/weighted_autumn_vegetation"
+  }
+}

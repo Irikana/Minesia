@@ -1,0 +1,45 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "5fs_br:spectral_vex",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/mobs/spectral_vex"
+      },
+      "geometry": {
+        "default": "geometry.spectral_vex"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;",
+          "variable.empty_handed  = !query.is_item_equipped(0) && !query.is_item_equipped(1);"
+        ],
+        "animate": [
+          "root_controller"
+        ],
+        "scale": "1.0"
+      },
+      "animations": {
+        "look_at_target": "animation.common.look_at_target",
+        "idle": "animation.spectral_vex.idle",
+        "move": "animation.spectral_vex.move",
+        "attack": "animation.spectral_vex.attack",
+        "death": "animation.spectral_vex.death",
+        "particle": "animation.spectral_vex.particle",
+        "root_controller": "controller.animation.spectral_vex.root",
+        "general_controller": "controller.animation.spectral_vex.general"
+      },
+      "render_controllers": [ "controller.render.default" ],
+	    "held_item_ignores_lighting": true,
+      "particle_effects": {
+        "lightning": "5fs_br:spectral_vex"
+      },
+      "spawn_egg": {
+        "texture": "5fs_br:spectral_vex"
+      }
+    }
+  }
+}

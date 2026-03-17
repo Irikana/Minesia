@@ -1,0 +1,35 @@
+{
+  "format_version": "1.20.0",
+  "render_controllers": {
+    "controller.render.cape_of_ocean_waves": {
+      "geometry": "geometry.default",
+      "arrays": {
+        "textures": {
+          "array.textures": [
+            "Texture.ocean_waves0",
+            "Texture.ocean_waves1",
+            "Texture.ocean_waves2",
+            "Texture.ocean_waves3",
+            "Texture.ocean_waves4",
+            "Texture.ocean_waves5",
+            "Texture.ocean_waves6",
+            "Texture.ocean_waves7",
+            "Texture.ocean_waves8",
+            "Texture.ocean_waves9",
+            "Texture.ocean_waves10",
+            "Texture.ocean_waves11"
+          ]
+        }
+      },
+      "materials": [
+        {
+          "*": "variable.is_enchanted?material.enchanted:material.default"
+        }
+      ],
+      "textures": [
+        "temp.life_time=query.life_time*8;return array.textures[temp.life_time];",
+        "texture.enchanted"
+      ]
+    }
+  }
+}

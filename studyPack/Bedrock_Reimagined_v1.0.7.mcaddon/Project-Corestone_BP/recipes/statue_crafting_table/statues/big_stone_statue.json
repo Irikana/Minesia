@@ -1,0 +1,41 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "5fs_br:big_stone_statue"
+		},
+		"tags": [
+			"crafting_table_statues"
+		],
+		"key": {
+			"S": {
+				"item": "minecraft:stone"
+			},
+            "G": {
+				"item": "minecraft:armor_stand"
+			},
+			"U": {
+				"item": "minecraft:iron_block"
+			}
+		},
+		"pattern": [
+			"SUS",
+			"SGS",
+			"SSS"
+		],
+		"result": {
+			"item": "5fs_br:big_stone_statue"
+		},
+		"unlock": [
+			{
+				"item": "minecraft:stone"
+			},
+			{
+				"item": "minecraft:iron_block"
+			},
+			{
+				"item": "minecraft:armor_stand"
+			}
+		]
+	}
+}

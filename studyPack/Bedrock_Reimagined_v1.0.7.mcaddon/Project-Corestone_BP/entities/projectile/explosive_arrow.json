@@ -1,0 +1,139 @@
+{
+	"format_version": "1.21.60",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "5fs_br:explosive_arrow",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"runtime_identifier": "minecraft:arrow"
+		},
+		"component_groups": {
+			"minecraft:exploding": {
+				"minecraft:explode": {
+					"fuse_length": 0,
+					"fuse_lit": true,
+					"power": 2,
+					"breaks_blocks": true
+				}
+			},
+			"5fs_br:can_pick_up": {
+				"minecraft:entity_sensor": {
+					"subsensors": [
+						{
+							"range": [
+								1,
+								1
+							],
+							"event_filters": {
+								"test": "is_family",
+								"subject": "other",
+								"value": "player",
+								"operator": "=="
+							},
+							"event": "5fs_br:pick_up"
+						}
+					]
+				}
+			},
+			"5fs_br:despawn": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"components": {
+			"minecraft:collision_box": {
+				"width": 0.25,
+				"height": 0.25
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": true,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:conditional_bandwidth_optimization": {
+				"default_values": {
+					"max_optimized_distance": 1000,
+					"max_dropped_ticks": 7,
+					"use_motion_prediction_hints": true
+				}
+			},
+			"minecraft:projectile": {
+				"on_hit": {
+					"impact_damage": {
+						"damage": [
+							4,
+							4
+						],
+						"knockback": true,
+						"semi_random_diff_damage": false,
+						"destroy_on_hit": true
+					},
+					"stick_in_ground": {
+						"shake_time": 0
+					},
+					"definition_event": {
+						"event_trigger": {
+							"event": "5fs_br:can_pick_up",
+							"target": "self"
+						}
+					}
+				},
+				"hit_ground_sound": "bow.hit",
+				"power": 3,
+				"gravity": 0.05,
+				"uncertainty_base": 0.5,
+				"uncertainty_multiplier": 1,
+				"stop_on_hurt": true,
+				"anchor": 1,
+				"offset": [
+					0,
+					-0.1,
+					0
+				]
+			},
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "all",
+					"deals_damage": "no"
+				}
+			},
+			"minecraft:type_family": {
+				"family": [
+					"inanimate",
+					"arrow",
+					"projectile"
+				]
+			}
+		},
+		"events": {
+			"5fs_br:pick_up": {
+				"queue_command": {
+					"command": [
+						"gamerule sendcommandfeedback false",
+						"give @p[r=5] 5fs_br:explosive_arrow",
+						"gamerule sendcommandfeedback true"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"5fs_br:despawn"
+					]
+				}
+			},
+			"5fs_br:can_pick_up": {
+				"add": {
+					"component_groups": [
+						"5fs_br:can_pick_up"
+					]
+				}
+			},
+			"5fs_br:explode_now": {
+				"add": {
+					"component_groups": [
+						"minecraft:exploding"
+					]
+				}
+			}
+		}
+	}
+}

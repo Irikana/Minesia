@@ -1,0 +1,37 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "5fs_br:waypoint",
+            "materials": {
+                "default": "mobs_xray"
+            },
+            "textures": {
+                "chest": "textures/entity/waypoint/mob_icon_chest",
+                "friendly": "textures/entity/waypoint/mob_icon_friendly",
+                "neutral": "textures/entity/waypoint/mob_icon_neutral",
+                "warning": "textures/entity/waypoint/mob_icon_warning"
+            },
+            "geometry": {
+                "default": "geometry.waypoint"
+            },
+            "animations": {
+                "north_south": "animation.waypoint.north_south",
+                "east_west": "animation.waypoint.east_west"
+            },
+            "scripts": {
+                "animate": [
+                    {
+                        "north_south": "query.property('5fs_br:rotation') == 'north_south'"
+                    },
+                    {
+                        "east_west": "query.property('5fs_br:rotation') == 'east_west'"
+                    }
+                ]
+            },
+            "render_controllers": [
+                "controller.render.waypoint"
+            ]
+        }
+    }
+}

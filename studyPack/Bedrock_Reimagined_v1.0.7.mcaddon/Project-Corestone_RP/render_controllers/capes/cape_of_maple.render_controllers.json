@@ -1,0 +1,42 @@
+{
+  "format_version": "1.20.0",
+  "render_controllers": {
+    "controller.render.cape_of_maple": {
+      "geometry": "geometry.default",
+      "arrays": {
+        "textures": {
+          "array.textures": [
+            "Texture.maple0",
+            "Texture.maple1",
+            "Texture.maple2",
+            "Texture.maple3",
+            "Texture.maple4",
+            "Texture.maple5",
+            "Texture.maple6",
+            "Texture.maple7",
+            "Texture.maple8",
+            "Texture.maple9",
+            "Texture.maple10",
+            "Texture.maple11",
+            "Texture.maple12",
+            "Texture.maple13",
+            "Texture.maple14",
+            "Texture.maple15",
+            "Texture.maple16",
+            "Texture.maple17",
+            "Texture.maple18"
+          ]
+        }
+      },
+      "materials": [
+        {
+          "*": "variable.is_enchanted?material.enchanted:material.default"
+        }
+      ],
+      "textures": [
+        "temp.life_time=query.life_time*8;return array.textures[temp.life_time];",
+        "texture.enchanted"
+      ]
+    }
+  }
+}

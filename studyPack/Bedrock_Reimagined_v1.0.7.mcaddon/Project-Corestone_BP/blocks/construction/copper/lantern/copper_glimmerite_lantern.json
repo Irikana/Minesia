@@ -1,0 +1,181 @@
+{
+    "format_version": "1.26.0",
+    "minecraft:block": {
+        "description": {
+            "identifier": "5fs_br:copper_glimmerite_lantern",
+            "menu_category": {
+                "category": "Items"
+            },
+            "traits": {
+                "minecraft:placement_position": {
+                    "enabled_states": [
+                        "minecraft:block_face"
+                    ]
+                }
+            }
+        },
+        "permutations": [
+            {
+                "condition": "query.block_state('minecraft:block_face') == 'up'",
+                "components": {
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -3,
+                            0,
+                            -3
+                        ],
+                        "size": [
+                            6,
+                            8,
+                            6
+                        ]
+                    },
+                    "minecraft:collision_box": {
+                        "origin": [
+                            -3,
+                            0,
+                            -3
+                        ],
+                        "size": [
+                            6,
+                            8,
+                            6
+                        ]
+                    },
+                    "tag:5fs_br:up": {}
+                }
+            },
+            {
+                "condition": "query.block_state('minecraft:block_face') == 'down'",
+                "components": {
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -3,
+                            2,
+                            -3
+                        ],
+                        "size": [
+                            6,
+                            8,
+                            6
+                        ]
+                    },
+                    "minecraft:collision_box": {
+                        "origin": [
+                            -3,
+                            2,
+                            -3
+                        ],
+                        "size": [
+                            6,
+                            8,
+                            6
+                        ]
+                    },
+                    "tag:5fs_br:down": {}
+                }
+            }
+        ],
+        "components": {
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 4.25,
+                "item_specific_speeds": [
+                    {
+                        "item": {
+                            "tags": "query.all_tags('minecraft:is_pickaxe')"
+                        },
+                        "destroy_speed": 3.5
+                    }
+                ]
+            },
+            "minecraft:geometry": {
+                "identifier": "geometry.lantern",
+                "bone_visibility": {
+                    "lantern_floor": "query.block_state('minecraft:block_face') == 'up'",
+                    "lantern_hanging": "query.block_state('minecraft:block_face') == 'down'"
+                }
+            },
+            "minecraft:light_emission": 15,
+            "minecraft:light_dampening": 0,
+            "minecraft:placement_filter": {
+                "conditions": [
+                    {
+                        "allowed_faces": [
+                            "up",
+                            "down"
+                        ]
+                    }
+                ]
+            },
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "copper_glimmerite_lantern",
+                    "render_method": "alpha_test_to_opaque",
+                    "ambient_occlusion": false,
+                    "face_dimming": false
+                }
+            },
+            "minecraft:transformation": {
+                "rotation": [
+                    0,
+                    90,
+                    0
+                ]
+            },
+            "minecraft:collision_box": {
+                "origin": [
+                    -8,
+                    0,
+                    -8
+                ],
+                "size": [
+                    16,
+                    15,
+                    16
+                ]
+            },
+            "minecraft:selection_box": {
+                "origin": [
+                    -8,
+                    0,
+                    -8
+                ],
+                "size": [
+                    16,
+                    15,
+                    16
+                ]
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 3.5
+            },
+            "minecraft:liquid_detection": {
+                "detection_rules": [
+                    {
+                        "can_contain_liquid": true,
+                        "liquid_type": "water",
+                        "on_liquid_touches": "blocking"
+                    }
+                ]
+            },
+            "minecraft:map_color": "#0C9400",
+            "minecraft:movable": {
+                "movement_type": "popped"
+            },
+            "minecraft:precipitation_interactions": {
+                "precipitation_behavior": "obstruct_rain"
+            },
+            "minecraft:connection_rule": {
+                "accepts_connections_from": "none"
+            },
+            "5fs_br:copper_oxidization": {
+                "oxidize_into": "5fs_br:exposed_copper_glimmerite_lantern"
+            },
+            "5fs_br:copper_interaction": {
+                "wax_into": "5fs_br:waxed_copper_glimmerite_lantern"
+            },
+            "tag:minecraft:is_pickaxe_item_destructible": {},
+            "tag:stone": {}
+        }
+    }
+}

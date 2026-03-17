@@ -1,0 +1,23 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:attachable": {
+        "description": {
+            "identifier": "5fs_br:silverfish_head",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/silverfish"
+            },
+            "geometry": {
+                "default": "geometry.silverfish_head_attachable"
+            },
+            "scripts": {
+                "parent_setup": "variable.head_layer_visible = 0.0;"
+            },
+            "render_controllers": [
+                "controller.render.default"
+            ]
+        }
+    }
+}

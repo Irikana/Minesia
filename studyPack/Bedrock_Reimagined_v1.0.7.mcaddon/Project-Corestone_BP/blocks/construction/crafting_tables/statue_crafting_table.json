@@ -1,0 +1,43 @@
+{
+  "format_version": "1.26.0",
+	"minecraft:block": {
+    "description": {
+      "identifier": "5fs_br:statue_crafting_table",
+      "menu_category": {
+        "category": "Items"
+      }
+    },
+    "components": {
+      "minecraft:geometry": "minecraft:geometry.full_block",
+      "minecraft:material_instances": {
+        "up": {
+          "texture": "stone_statue_crafting_table_top"
+        },
+        "down": {
+          "texture": "stone_statue_crafting_table_bottom"
+        },
+        "north": {
+          "texture": "stone_statue_crafting_table_front"
+        },
+        "south": {
+          "texture": "stone_statue_crafting_table_front"
+        },
+        "*": {
+          "texture": "stone_statue_crafting_table_side"
+        }
+      },
+      "minecraft:crafting_table": {
+        "crafting_tags": ["crafting_table_statues"],
+        "table_name": "%hudScreen.tooltip.crafting"
+      },
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 3
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 6
+      },
+      "minecraft:map_color": "#707070",
+      "tag:minecraft:is_pickaxe_item_destructible": {}
+    }
+  }
+}

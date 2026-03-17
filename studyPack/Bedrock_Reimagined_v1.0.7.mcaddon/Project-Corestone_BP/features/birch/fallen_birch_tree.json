@@ -1,0 +1,97 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:tree_feature": {
+    "description": {
+      "identifier": "5fs_br:birch/fallen_birch_tree"
+    },
+    "fallen_trunk": {
+      "stump_height": {
+        "range_min": 1,
+        "range_max": 1
+      },
+      "log_length": {
+        "range_min": 5,
+        "range_max": 7
+      },
+      "trunk_block": {
+        "name": "minecraft:birch_log"
+      }
+    },
+    "base_block": [
+      "minecraft:dirt",
+      {
+        "name": "minecraft:dirt",
+        "states": {
+          "dirt_type": "coarse"
+        }
+      }
+    ],
+    "may_grow_on": [
+      "minecraft:dirt",
+      "minecraft:grass",
+      "minecraft:podzol",
+      {
+        "name": "minecraft:dirt",
+        "states": {
+          "dirt_type": "coarse"
+        }
+      }
+    ],
+    "may_replace": [
+      "minecraft:air",
+      "minecraft:short_grass",
+      "minecraft:leaf_litter",
+      "minecraft:wildflowers",
+      "minecraft:allium",
+      "5fs_br:rose",
+      "5fs_br:blue_rose",
+      "5fs_br:buttercup",
+      {
+        "name": "minecraft:leaves",
+        "states": {
+          "old_leaf_type": "oak"
+        }
+      },
+      {
+        "name": "minecraft:leaves",
+        "states": {
+          "old_leaf_type": "spruce"
+        }
+      },
+      {
+        "name": "minecraft:leaves",
+        "states": {
+          "old_leaf_type": "birch"
+        }
+      },
+      {
+        "name": "minecraft:leaves",
+        "states": {
+          "old_leaf_type": "jungle"
+        }
+      },
+      {
+        "name": "minecraft:leaves2",
+        "states": {
+          "new_leaf_type": "acacia"
+        }
+      },
+      {
+        "name": "minecraft:leaves2",
+        "states": {
+          "new_leaf_type": "dark_oak"
+        }
+      }
+    ],
+    "may_grow_through": [
+      "minecraft:dirt",
+      "minecraft:grass",
+      {
+        "name": "minecraft:dirt",
+        "states": {
+          "dirt_type": "coarse"
+        }
+      }
+    ]
+  }
+}

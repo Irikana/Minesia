@@ -1,0 +1,28 @@
+{
+  "format_version": "1.26.0",
+	"minecraft:block": {
+    "description": {
+      "identifier": "5fs_br:petrified_planks",
+      "menu_category": {
+        "category": "construction",
+          "group": "minecraft:itemGroup.name.planks"
+      }
+    },
+    "components": {
+      "minecraft:geometry": "minecraft:geometry.full_block",
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "petrified_planks"
+        }
+      },
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 2
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 2
+      },
+      "minecraft:map_color": "#643F28",
+      "tag:minecraft:is_pickaxe_item_destructible": {}
+    }
+  }
+}

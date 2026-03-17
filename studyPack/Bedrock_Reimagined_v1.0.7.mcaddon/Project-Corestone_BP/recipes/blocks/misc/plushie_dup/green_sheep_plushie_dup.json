@@ -1,0 +1,39 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "5fs_br:green_sheep_plushie_dup"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "WIW",
+      "SHS",
+      "WWW"
+    ],
+    "key": {
+      "W": {
+        "item": "minecraft:green_wool"
+      },
+      "H": {
+        "item": "5fs_br:green_sheep_plushie"
+      },
+      "S": {
+        "item": "5fs_br:crystalline_slime_ball"
+      },
+      "I": {
+        "item": "5fs_br:crystalline_ingot"
+      }
+    },
+    "result": {
+      "item": "5fs_br:green_sheep_plushie",
+      "count": 2
+    },
+    "unlock": [
+      {
+        "item": "5fs_br:crystalline_ingot"
+      }
+    ]
+  }
+}

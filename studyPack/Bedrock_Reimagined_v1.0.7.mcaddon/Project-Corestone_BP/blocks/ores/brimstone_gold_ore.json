@@ -1,0 +1,56 @@
+{
+  "format_version": "1.26.0",
+	"minecraft:block": {
+    "description": {
+      "identifier": "5fs_br:brimstone_gold_ore",         
+      "menu_category": {
+        "category": "Nature"
+      }
+    },
+    "components": {
+      "minecraft:geometry": "minecraft:geometry.full_block",
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "brimstone_nether_gold_ore"
+        }
+      },
+      "minecraft:redstone_conductivity": {
+        "redstone_conductor": true
+      },
+      "minecraft:light_dampening": 15,
+      "minecraft:loot": "loot_tables/blocks/ores/brimstone_nether_gold_ore.json",
+      "minecraft:collision_box": true,
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 5,
+        "item_specific_speeds": [
+          {
+            "item": {
+              "tags": "query.all_tags('minecraft:is_pickaxe')"
+            },
+            "destroy_speed": 3
+          }
+        ]
+      },
+      "5fs_br:ore_xp": [
+        {
+          "any_tags": [
+             "5fs_br:cobalt_tier",
+             "5fs_br:dragonite_tier",
+             "minecraft:netherite_tier"
+          ],
+          "all_tags": [
+             "minecraft:is_pickaxe"
+          ],
+          "min": 4,
+          "max": 8
+        }
+      ],
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 30
+      },
+      "minecraft:map_color": "#D9A741",
+      "tag:stone": {},
+      "tag:minecraft:is_pickaxe_item_destructible": {}
+    }
+  }
+}

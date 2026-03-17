@@ -1,0 +1,37 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:feature_rules": {
+        "description": {
+            "identifier": "5fs_br:dark_oak_trees_feature",
+            "places_feature": "5fs_br:roofed_forest/dark_oak_trees_aggregate_feature"
+        },
+        "conditions": {
+            "placement_pass": "surface_pass",
+            "minecraft:biome_filter": [
+                {
+                    "test": "has_biome_tag",
+                    "operator": "==",
+                    "value": "roofed"
+                }
+            ]
+        },
+        "distribution": {
+            "iterations": 75,
+            "x": {
+                "distribution": "uniform",
+                "extent": [
+                    1,
+                    15
+                ]
+            },
+            "y": "q.heightmap(v.worldx, v.worldz)",
+            "z": {
+                "distribution": "uniform",
+                "extent": [
+                    1,
+                    15
+                ]
+            }
+        }
+    }
+}

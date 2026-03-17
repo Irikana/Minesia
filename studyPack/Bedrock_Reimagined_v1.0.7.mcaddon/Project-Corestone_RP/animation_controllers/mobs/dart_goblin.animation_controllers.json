@@ -1,0 +1,135 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.dart_goblin.root": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "animations": [
+                        "general_controller", "look_at_target", "attack_controller"
+                    ],
+                    "transitions": [
+                        {
+                            "death": "!q.is_alive"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "death": {
+                    "animations": [
+                        "death"
+                    ]
+                }
+            }
+        },
+        "controller.animation.dart_goblin.general": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "animations": [
+                        "idle_0"
+                    ],
+                    "transitions": [
+                        {
+                            "idle_0": "q.any_animation_finished && !q.facing_target_to_range_attack"
+                        },
+                        {
+                            "walk": "q.is_moving"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "idle_0": {
+                    "on_entry": [
+                        "v.random_idle = math.random_integer(0, 8);"
+                    ],
+                    "animations": [
+                        {
+                            "idle_0": "v.random_idle < 6"
+                        },
+                        {
+                            "idle_1": "v.random_idle == 7"
+                        },
+                        {
+                            "idle_2": "v.random_idle == 8"
+                        }
+                    ],
+                    "transitions": [
+                        {
+                            "default": "q.facing_target_to_range_attack"
+                        },
+                        {
+                            "idle_1": "q.any_animation_finished"
+                        },
+                        {
+                            "walk": "q.is_moving"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "idle_1": {
+                    "on_entry": [
+                        "v.random_idle = math.random_integer(0, 8);"
+                    ],
+                    "animations": [
+                        {
+                            "idle_0": "v.random_idle < 6"
+                        },
+                        {
+                            "idle_1": "v.random_idle == 7"
+                        },
+                        {
+                            "idle_2": "v.random_idle == 8"
+                        }
+                    ],
+                    "transitions": [
+                        {
+                            "default": "q.facing_target_to_range_attack"
+                        },
+                        {
+                            "idle_0": "q.any_animation_finished"
+                        },
+                        {
+                            "walk": "q.is_moving"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "walk": {
+                    "animations": [
+                        "walk"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!q.is_moving"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                }
+            }
+        },
+        "controller.animation.dart_goblin.attack": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "attack": "q.is_charged && !q.is_avoiding_mobs"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "attack": {
+                    "animations": [
+                        "attack"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "q.all_animations_finished || q.is_avoiding_mobs"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

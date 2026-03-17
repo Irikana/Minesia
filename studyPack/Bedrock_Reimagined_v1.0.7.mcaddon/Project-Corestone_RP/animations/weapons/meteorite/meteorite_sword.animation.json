@@ -1,0 +1,23 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.meteorite_sword.1fp": {
+			"loop": true,
+			"bones": {
+				"bone": {
+					"rotation": [44.19423, 29.89656, -93.78888],
+					"position": [3, 9, 5]
+				}
+			}
+		},
+		"animation.meteorite_sword.3pp": {
+			"loop": true,
+			"bones": {
+				"bone": {
+					"rotation": [86.38069, -0.24706, -179.70273],
+					"position": [0, 15, -6]
+				}
+			}
+		}
+	}
+}

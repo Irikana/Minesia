@@ -1,0 +1,32 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "5fs_br:potion_banner_to_flag"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "5fs_br:potion_banner"
+      },
+      {
+        "item": "5fs_br:moose_hide"
+      }
+    ],
+    "result": {
+      "item": "5fs_br:potion_flag",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "5fs_br:potion_banner"
+      },
+      {
+        "item": "5fs_br:moose_hide"
+      }
+    ]
+  }
+}
+

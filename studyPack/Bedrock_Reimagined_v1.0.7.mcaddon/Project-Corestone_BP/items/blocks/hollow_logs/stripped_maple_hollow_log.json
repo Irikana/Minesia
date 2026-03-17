@@ -1,0 +1,25 @@
+{
+    "format_version": "1.26.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "5fs_br:stripped_maple_hollow_log",
+            "menu_category": {
+                "category": "nature"
+            }
+        },
+        "components": {
+            "minecraft:block_placer": {
+                "block": "5fs_br:stripped_maple_hollow_log",
+                "replace_block_item": true
+            },
+            "minecraft:fuel": {
+                "duration": 4
+            },
+            "minecraft:tags": {
+                "tags": [
+                    "minecraft:logs"
+                ]
+            }
+        }
+    }
+}

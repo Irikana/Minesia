@@ -1,0 +1,21 @@
+{
+    "format_version": "1.26.0",
+	"minecraft:block": {
+        "description": {
+            "identifier": "5fs_br:resonant_crystal_block",
+            "menu_category": {
+                "category": "Nature"
+            }
+        },
+        "components": {
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 1.5
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 1.5
+            },
+            "minecraft:map_color": "#6F82C4",
+            "tag:minecraft:is_pickaxe_item_destructible": {}
+        }
+    }
+}

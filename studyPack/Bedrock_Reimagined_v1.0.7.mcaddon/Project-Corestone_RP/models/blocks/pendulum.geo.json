@@ -1,0 +1,33 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.pendulum",
+				"texture_width": 32,
+				"texture_height": 32,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "bone2",
+					"pivot": [-0.12195, 17.20488, 1.68902],
+					"cubes": [
+						{"origin": [-1.12195, 14.30488, 0.68902], "size": [2, 3, 2], "uv": [0, 23]}
+					]
+				},
+				{
+					"name": "bone",
+					"parent": "bone2",
+					"pivot": [-0.12195, 14.15488, 1.68902],
+					"cubes": [
+						{"origin": [-3.12195, 7.30488, -1.31098], "size": [6, 7, 6], "uv": [0, 10]},
+						{"origin": [-4.12195, 5.30488, -2.31098], "size": [8, 2, 8], "uv": [0, 0]}
+					]
+				}
+			]
+		}
+	]
+}

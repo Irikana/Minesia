@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "stripped_cracked_petrified_log",
+		"metalness_emissive_roughness": "stripped_cracked_petrified_log_mer"
+	}
+}

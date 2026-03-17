@@ -1,0 +1,28 @@
+{
+  "format_version": "1.20.0",
+  "render_controllers": {
+    "controller.render.cape_of_sky_night": {
+      "geometry": "geometry.default",
+      "arrays": {
+        "textures": {
+          "array.textures": [
+            "Texture.sky_night1",
+            "Texture.sky_night2",
+            "Texture.sky_night3",
+            "Texture.sky_night4",
+            "Texture.sky_night5"
+          ]
+        }
+      },
+      "materials": [
+        {
+          "*": "variable.is_enchanted?material.enchanted:material.default"
+        }
+      ],
+      "textures": [
+        "temp.life_time=query.life_time*8;return array.textures[temp.life_time];",
+        "texture.enchanted"
+      ]
+    }
+  }
+}

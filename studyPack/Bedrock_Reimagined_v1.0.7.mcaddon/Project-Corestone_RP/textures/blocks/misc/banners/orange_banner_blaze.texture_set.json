@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "orange_banner_blaze",
+		"metalness_emissive_roughness": "orange_banner_blaze_mer"
+	}
+}

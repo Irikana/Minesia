@@ -1,0 +1,32 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.canopy_cap",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "canopy_hat",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "hat",
+					"parent": "canopy_hat",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{"origin": [-4.5, 29, -4.5], "size": [9, 4, 9], "inflate": 0.25, "uv": [0, 0]},
+						{"origin": [-4.5, 29, -4.5], "size": [9, 4, 9], "inflate": 0.75, "uv": [20, 13]},
+						{"origin": [-5.0237, 29.55856, -9.775], "size": [5, 1, 5], "pivot": [-1, 30.775, -8.775], "rotation": [0, 0, -12.5], "uv": [0, 14]},
+						{"origin": [0.0237, 29.55856, -9.775], "size": [5, 1, 5], "pivot": [1, 30.775, -9.275], "rotation": [0, 0, 12.5], "uv": [0, 21]}
+					]
+				}
+			]
+		}
+	]
+}

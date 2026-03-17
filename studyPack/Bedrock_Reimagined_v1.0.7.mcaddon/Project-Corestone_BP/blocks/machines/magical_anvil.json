@@ -1,0 +1,50 @@
+{
+	"format_version": "1.26.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "5fs_br:magical_anvil",
+			"menu_category": {
+				"category": "items"
+			}
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"render_method": "alpha_test",
+					"texture": "magical_anvil"
+				}
+			},
+			"5fs_br:magicalAnvil": {},
+			"minecraft:tick": {
+				"looping": true,
+				"interval_range": [
+					4,
+					4
+				]
+			},
+			"minecraft:destruction_particles": {
+				"texture": "destroy_magical_anvil"
+			},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 10,
+				"item_specific_speeds": [
+					{
+						"item": {
+							"tags": "query.all_tags('minecraft:is_axe') && !query.all_tags('minecraft:wooden_tier')"
+						},
+						"destroy_speed": 3
+					}
+				]
+			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 6
+			},
+			"minecraft:geometry": "geometry.magical_anvil",
+			"minecraft:precipitation_interactions": {
+				"precipitation_behavior": "obstruct_rain"
+			},
+			"tag:5fs_br:stone_tier_destructible": {},
+			"tag:minecraft:is_pickaxe_item_destructible": {}
+		}
+	}
+}

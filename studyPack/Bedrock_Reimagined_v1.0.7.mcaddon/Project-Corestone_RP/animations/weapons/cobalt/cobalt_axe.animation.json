@@ -1,0 +1,23 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.cobalt_axe.1fp": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": [62.54949, 51.22589, -64.06481],
+					"position": [0, 10, 6]
+				}
+			}
+		},
+		"animation.cobalt_axe.3pp": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": [90, 0, 0],
+					"position": [0, 16, -1]
+				}
+			}
+		}
+	}
+}

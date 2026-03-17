@@ -1,0 +1,21 @@
+{
+  "format_version": "1.21.20",
+  "minecraft:structure_set": {
+    "description": {
+      "identifier": "5fs_br:stone_parkour"
+    },
+    "placement": {
+      "type": "minecraft:random_spread",
+      "salt": 88259867,
+      "separation": 35,
+      "spacing": 85,
+      "spread_type": "linear"
+    },
+    "structures": [
+      {
+        "structure": "5fs_br:stone_parkour",
+        "weight": 1
+      }
+    ]
+  }
+}

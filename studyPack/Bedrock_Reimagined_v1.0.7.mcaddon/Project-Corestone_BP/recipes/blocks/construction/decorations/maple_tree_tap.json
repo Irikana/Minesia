@@ -1,0 +1,36 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "5fs_br:maple_tree_tap"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " P ",
+      "PXP",
+      "SSS"
+    ],
+    "key": {
+      "P": {
+        "item": "5fs_br:maple_planks"
+      },
+      "X": {
+        "item": "minecraft:hopper"
+      },
+      "S": {
+        "item": "5fs_br:maple_slab"
+      }
+    },
+    "result": {
+      "item": "5fs_br:maple_tree_tap",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "5fs_br:maple_planks"
+      }
+    ]
+  }
+}

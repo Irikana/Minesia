@@ -1,0 +1,39 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "5fs_br:polar_bear_plushie_dup"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "WIW",
+      "SHS",
+      "WWW"
+    ],
+    "key": {
+      "W": {
+        "item": "minecraft:white_wool"
+      },
+      "H": {
+        "item": "5fs_br:polar_bear_plushie"
+      },
+      "S": {
+        "item": "5fs_br:crystalline_slime_ball"
+      },
+      "I": {
+        "item": "5fs_br:crystalline_ingot"
+      }
+    },
+    "result": {
+      "item": "5fs_br:polar_bear_plushie",
+      "count": 2
+    },
+    "unlock": [
+      {
+        "item": "5fs_br:crystalline_ingot"
+      }
+    ]
+  }
+}

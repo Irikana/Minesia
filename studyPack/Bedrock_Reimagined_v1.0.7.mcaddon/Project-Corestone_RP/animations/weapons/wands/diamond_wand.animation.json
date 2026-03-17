@@ -1,0 +1,24 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.diamond_wand.1fp": {
+			"loop": true,
+			"bones": {
+				"wand": {
+					"rotation": [24.43845, -3.73171, 212.10967],
+					"position": [-1, 27, 3]
+				}
+			}
+		},
+		"animation.diamond_wand.3pp": {
+			"loop": true,
+			"animation_length": 3.75,
+			"bones": {
+				"wand": {
+					"rotation": [87.5, 0, 0],
+					"position": [0, 23, 2]
+				}
+			}
+		}
+	}
+}

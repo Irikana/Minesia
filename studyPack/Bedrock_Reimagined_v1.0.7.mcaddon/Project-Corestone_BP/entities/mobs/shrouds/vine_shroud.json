@@ -1,0 +1,457 @@
+{
+  "format_version": "1.21.90",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "5fs_br:vine_shroud",
+      "spawn_category": "monster",
+      "is_spawnable": true,
+      "is_summonable": true
+    },
+    "component_groups": {
+      "5fs_br:spawn": {
+        "minecraft:behavior.emerge": {
+          "cooldown_time": 0,
+          "duration": 2,
+          "on_done": {
+            "event": "5fs_br:emerged"
+          }
+        },
+        "minecraft:timer": {
+          "time": 0.025,
+          "looping": true,
+          "time_down_event": {
+            "event": "5fs_br:emerged",
+            "target": "self",
+            "filters": {
+              "test": "on_ground",
+              "value": false
+            }
+          }
+        }
+      },
+      "5fs_br:day_time": {
+        "minecraft:movement.basic": {},
+        "minecraft:movement": {
+          "value": 0.35
+        },
+        "minecraft:collision_box": {
+          "width": 0.6,
+          "height": 1.9
+        },
+        "minecraft:behavior.random_stroll": {
+          "priority": 7,
+          "speed_multiplier": 0.6,
+          "interval": 120,
+          "xz_dist": 6,
+          "y_dist": 4
+        },
+        "minecraft:behavior.look_at_player": {
+          "priority": 8,
+          "look_distance": 6,
+          "probability": 0.02
+        },
+        "minecraft:behavior.random_look_around": {
+          "priority": 9
+        },
+        "minecraft:behavior.hurt_by_target": {
+          "priority": 3,
+          "entity_types": [
+            {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "operator": "!=",
+                    "value": "breeze"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "operator": "!=",
+                    "value": "iron_golem"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "minecraft:behavior.melee_attack": {
+          "priority": 1,
+          "on_attack": {
+            "event": "5fs_br:avoid_target"
+          },
+          "reach_multiplier": 1,
+          "speed_multiplier": 1.15
+        },
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 2,
+          "must_see": false,
+          "reselect_targets": true,
+          "within_radius": 12,
+          "entity_types": {
+            "filters": {
+              "test": "is_family",
+              "subject": "other",
+              "value": "player"
+            },
+            "max_dist": 12
+          }
+        },
+        "minecraft:environment_sensor": {
+          "triggers": [
+            {
+              "event": "5fs_br:sit_down",
+              "target": "self",
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_daytime",
+                    "value": false
+                  },
+                  {
+                    "test": "has_target",
+                    "value": false
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "5fs_br:sit_down": {
+        "minecraft:is_stunned": {},
+        "minecraft:movement": {
+          "value": 0
+        },
+        "minecraft:movement.basic": {},
+        "minecraft:behavior.timer_flag_1": {
+          "cooldown_range": 0,
+          "duration_range": 0.95,
+          "on_end": {
+            "event": "5fs_br:night_time",
+            "target": "self"
+          }
+        }
+      },
+      "5fs_br:night_time": {
+        "minecraft:collision_box": {
+          "width": 0.6,
+          "height": 1.6
+        },
+        "minecraft:is_stunned": {},
+        "minecraft:environment_sensor": {
+          "triggers": [
+            {
+              "event": "5fs_br:stand_up",
+              "target": "self",
+              "filters": {
+                "test": "is_daytime",
+                "value": true
+              }
+            }
+          ]
+        },
+        "minecraft:on_hurt_by_player": {
+          "event": "5fs_br:stand_up"
+        }
+      },
+      "5fs_br:stand_up": {
+        "minecraft:is_stunned": {},
+        "minecraft:movement.basic": {},
+        "minecraft:behavior.timer_flag_2": {
+          "cooldown_range": 0,
+          "duration_range": 0.95,
+          "on_end": {
+            "event": "5fs_br:day_time",
+            "target": "self"
+          }
+        }
+      },
+      "5fs_br:avoid_target": {
+        "minecraft:behavior.avoid_mob_type": {
+          "priority": 0,
+          "max_dist": 8,
+          "max_flee": 6,
+          "entity_types": {
+            "filters": {
+              "test": "is_target",
+              "subject": "other",
+              "value": true
+            }
+          },
+          "walk_speed_multiplier": 1.25,
+          "sprint_speed_multiplier": 1.25,
+          "remove_target": false
+        },
+        "minecraft:timer": {
+          "time": 3,
+          "looping": true,
+          "time_down_event": {
+            "event": "5fs_br:stop_avoiding_target",
+            "target": "self"
+          }
+        }
+      },
+      "5fs_br:shrinkify": {
+        "minecraft:movement": {
+          "value": 0.7
+        },
+        "minecraft:health": {
+          "max": 10
+        },
+        "minecraft:scale": {
+          "value": 0.25
+        }
+      },
+      "5fs_br:gigantify": {
+        "minecraft:movement": {
+          "value": 0.28
+        },
+        "minecraft:health": {
+          "max": 40
+        },
+        "minecraft:scale": {
+          "value": 2
+        }
+      },
+      "5fs_br:normal_scale": {
+        "minecraft:movement": {
+          "value": 0.35
+        },
+        "minecraft:health": {
+          "max": 20
+        },
+        "minecraft:scale": {
+          "value": 1
+        }
+      },
+      "5fs_br:no_fall_damage_jelly": {
+        "minecraft:damage_sensor": {
+          "triggers": {
+            "cause": "fall",
+            "deals_damage": "no"
+          }
+        }
+      }
+    },
+    "components": {
+      "minecraft:experience_reward": {
+        "on_death": "query.last_hit_by_player ? 15 : 0"
+      },
+      "minecraft:is_hidden_when_invisible": {},
+      "minecraft:breathable": {
+        "total_supply": 15,
+        "suffocate_time": 0,
+        "breathes_water": true
+      },
+      "minecraft:nameable": {},
+      "minecraft:type_family": {
+        "family": [
+          "shroud",
+          "monster",
+          "mob"
+        ]
+      },
+      "minecraft:loot": {
+        "table": "loot_tables/entities/vine_shroud.json"
+      },
+      "minecraft:health": {
+        "value": 20,
+        "max": 20
+      },
+      "minecraft:hurt_on_condition": {
+        "damage_conditions": [
+          {
+            "filters": {
+              "test": "in_lava",
+              "subject": "self",
+              "operator": "==",
+              "value": true
+            },
+            "cause": "lava",
+            "damage_per_tick": 4
+          }
+        ]
+      },
+      "minecraft:attack": {
+        "damage": [
+          4,
+          6
+        ],
+        "effect_name": "poison",
+        "effect_duration": 3
+      },
+      "minecraft:conditional_bandwidth_optimization": {},
+      "minecraft:navigation.walk": {
+        "is_amphibious": true,
+        "can_pass_doors": true,
+        "can_break_doors": true,
+        "avoid_portals": false
+      },
+      "minecraft:movement": {
+        "value": 0.35
+      },
+      "minecraft:jump.static": {},
+      "minecraft:can_climb": {},
+      "minecraft:despawn": {
+        "despawn_from_distance": {}
+      },
+      "minecraft:physics": {},
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      }
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "add": {
+          "component_groups": [
+            "5fs_br:spawn"
+          ]
+        }
+      },
+      "5fs_br:spawn_emerging": {
+        "add": {
+          "component_groups": [
+            "5fs_br:spawn"
+          ]
+        }
+      },
+      "5fs_br:spawn_not_emerging": {
+        "add": {
+          "component_groups": [
+            "5fs_br:day_time"
+          ]
+        }
+      },
+      "5fs_br:emerged": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:spawn"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:day_time"
+          ]
+        }
+      },
+      "5fs_br:avoid_target": {
+        "add": {
+          "component_groups": [
+            "5fs_br:avoid_target"
+          ]
+        }
+      },
+      "5fs_br:stop_avoiding_target": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:avoid_target"
+          ]
+        }
+      },
+      "5fs_br:sit_down": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:day_time"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:sit_down"
+          ]
+        }
+      },
+      "5fs_br:night_time": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:sit_down"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:night_time"
+          ]
+        }
+      },
+      "5fs_br:stand_up": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:night_time"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:stand_up"
+          ]
+        }
+      },
+      "5fs_br:day_time": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:stand_up"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:day_time"
+          ]
+        }
+      },
+      "5fs_br:normal_scale": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:shrinkify",
+            "5fs_br:gigantify"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:normal_scale"
+          ]
+        }
+      },
+      "5fs_br:gigantify": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:shrinkify",
+            "5fs_br:normal_scale"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:gigantify"
+          ]
+        }
+      },
+      "5fs_br:shrinkify": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:gigantify",
+            "5fs_br:normal_scale"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:shrinkify"
+          ]
+        }
+      },
+      "5fs_br:no_fall_damage_jelly": {
+        "add": {
+          "component_groups": [
+            "5fs_br:no_fall_damage_jelly"
+          ]
+        }
+      },
+      "5fs_br:fall_damage_jelly": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:no_fall_damage_jelly"
+          ]
+        }
+      }
+    }
+  }
+}

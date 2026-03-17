@@ -1,0 +1,59 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "5fs_br:vulture",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/mobs/vulture"
+            },
+            "geometry": {
+                "default": "geometry.vulture"
+            },
+            "animations": {
+                "look_at_target": "animation.common.look_at_target",
+                "idle": "animation.vulture.idle",
+                "look_around": "animation.vulture.look_around",
+                "flying": "animation.vulture.fly",
+                "ground_death": "animation.vulture.ground_death",
+                "fly_death": "animation.vulture.fly_death",
+                "attack": "animation.vulture.attack",
+                "planning": "animation.vulture.planning",
+                "walking": "animation.vulture.walk",
+                "rotation": "animation.vulture.rotation",
+                "root": "controller.animation.vulture.root",
+                "general_controller": "controller.animation.vulture.general",
+                "rotation_controller": "controller.animation.vulture.rotation",
+                "look_around_controller": "controller.animation.vulture.look_around",
+                "attack_controller": "controller.animation.vulture.attack",
+                "look_at_target_controller": "controller.animation.vulture.look_at_target"
+            },
+            "scripts": {
+                "pre_animation": [
+                    "v.flying_type = q.property('5fs_br:flying_type');"
+                ],
+                "animate": [
+                    "root"
+                ]
+            },
+            "enable_attachables": true,
+            "render_controllers": [
+                "controller.render.default"
+            ],
+            "sound_effects": {
+                "idle": "mob.vulture.idle",
+                "look_around": "mob.vulture.look_around",
+                "fly": "mob.vulture.fly",
+                "ground_death": "mob.vulture.ground_death",
+                "fly_death": "mob.vulture.fly_death",
+                "attack": "mob.vulture.attack",
+                "planning": "mob.vulture.planning"
+            },
+            "spawn_egg": {
+                "texture": "5fs_br:vulture_spawn_egg"
+            }
+        }
+    }
+}

@@ -1,0 +1,374 @@
+{
+	"namespace": "chest",
+	"advanced_smithing_table_panel": {
+		"type": "panel",
+		"$background_image_control_name": "bg",
+		"$background_images": "furnace.empty",
+		"$chest_image": "textures/gui/inventory/smithing_image",
+		"$size": [
+			"150%",
+			"150%"
+		],
+		"$offset": [
+			"5%",
+			"10%"
+		],
+		"$title_text_color": [
+			1,
+			1,
+			1
+		],
+		"controls": [
+			{
+				"container_gamepad_helpers@common.container_gamepad_helpers": {}
+			},
+			{
+				"flying_item_renderer@common.flying_item_renderer": {
+					"layer": 14
+				}
+			},
+			{
+				"selected_item_details_factory@common.selected_item_details_factory": {}
+			},
+			{
+				"item_lock_notification_factory@common.item_lock_notification_factory": {}
+			},
+			{
+				"root_panel@common.root_panel": {
+					"layer": 1,
+					"controls": [
+						{
+							"image_background": {
+								"type": "image",
+								"size": "$size",
+								"offset": "$offset",
+								"texture": "$chest_image"
+							}
+						},
+						{
+							"advanced_smithing_table_top_half@chest.smithing_top_half": {}
+						},
+						{
+							"inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {
+								"offset": [0, -1]
+							}
+						},
+						{
+							"hotbar_grid@common.hotbar_grid_template": {
+								"offset": [0, -7]
+							}
+						},
+						{
+							"inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {}
+						},
+						{
+							"inventory_selected_icon_button@common.inventory_selected_icon_button": {}
+						},
+						{
+							"gamepad_cursor@common.gamepad_cursor_button": {}
+						},
+						{
+							"close@common.close_button": {
+								"layer": 4,
+								"offset": [0, 25]
+							}
+						},
+						{
+							"x_background_image": {
+								"type": "image",
+								"texture": "textures/gui/inventory/x_close",
+								"size": [240, 26],
+								"offset": [77, -48],
+								"layer": 2
+							}
+						}
+					]
+				}
+			}
+		]
+	},
+	"smithing_background": {
+		"type": "image",
+		"texture": "textures/gui/inventory/smithing_image",
+		"size": [234, 254],
+		"offset": [10, 16],
+		"layer": 0
+	},
+	"smithing_top_half": {
+		"type": "panel",
+		"size": [
+			"100% - 14px",
+			"50% - 14px"
+		],
+		"offset": [
+			7,
+			57
+		],
+		"anchor_from": "top_left",
+		"anchor_to": "top_left",
+		"controls": [
+			{
+				"smithing_label@chest.smithing_label": {}
+			},
+			{
+				"recipe_panel@chest.recipe_panel": {}
+			}
+		]
+	},
+	"recipe_panel": {
+		"type": "panel",
+		"anchor_from": "top_left",
+		"anchor_to": "top_left",
+		"size": [
+			"100%",
+			"60%"
+		],
+		"offset": [
+			0,
+			"40%"
+		],
+		"controls": [
+			{
+				"template_item_slot": {
+					"type": "stack_panel",
+					"anchor_from": "top_left",
+					"anchor_to": "top_left",
+					"orientation": "horizontal",
+					"collection_name": "container_items",
+					"offset": [0, -37],
+					"controls": [
+						{
+							"test@chest.chest_grid_item": {
+								"collection_index": 0,
+								"$cell_overlay_ref": "chest.template_overlay_image"
+							}
+						}
+					]
+				}
+			},
+			{
+				"input_item_slot": {
+					"type": "stack_panel",
+					"anchor_from": "top_left",
+					"anchor_to": "top_left",
+					"orientation": "horizontal",
+					"collection_name": "container_items",
+					"offset": [20, -37],
+					"controls": [
+						{
+							"test@chest.chest_grid_item": {
+								"collection_index": 1,
+								"$cell_overlay_ref": "chest.input_overlay_image"
+							}
+						}
+					]
+				}
+			},
+			{
+				"material_item_slot": {
+					"type": "stack_panel",
+					"anchor_from": "top_left",
+					"anchor_to": "top_left",
+					"orientation": "horizontal",
+					"collection_name": "container_items",
+					"offset": [38, -37],
+					"controls": [
+						{
+							"test@chest.chest_grid_item": {
+								"collection_index": 2,
+								"$cell_overlay_ref": "chest.material_overlay_image"
+							}
+						}
+					]
+				}
+			},
+			{
+				"result_item_slot": {
+					"type": "stack_panel",
+					"anchor_from": "top_left",
+					"anchor_to": "top_left",
+					"orientation": "horizontal",
+					"collection_name": "container_items",
+					"offset": [94, -37],
+					"controls": [
+						{
+							"test@chest.chest_grid_item": {
+								"collection_index": 3
+							}
+						}
+					]
+				}
+			}
+		]
+	},
+	"smithing_table_item_slot": {
+		"type": "panel",
+		"controls": [
+			{
+				"container_item@common.container_item": {
+					"anchor_to": "center",
+					"anchor_from": "center",
+					"$hover_text_max_width": 500,
+					"$background_images": "chest.invisible_cell_image"
+				}
+			}
+		]
+	},
+	"invisible_cell_image": {
+		"type": "image",
+		"texture": "textures/ui/invisible",
+		"layer": 1
+	},
+	"templates_animation": {
+		"anim_type": "flip_book",
+		"initial_uv": [
+			0,
+			0
+		],
+		"frame_count": 2,
+		"frame_step": 0,
+		"fps": 1.0,
+		"easing": "linear"
+	},
+	"armors_animation": {
+		"anim_type": "flip_book",
+		"initial_uv": [
+			0,
+			0
+		],
+		"frame_count": 4,
+		"frame_step": 0,
+		"fps": 1.0,
+		"easing": "linear"
+	},
+	"armors_and_tools_animation": {
+		"anim_type": "flip_book",
+		"initial_uv": [
+			0,
+			0
+		],
+		"frame_count": 12,
+		"frame_step": 0,
+		"fps": 1.0,
+		"easing": "linear"
+	},
+	"all_materials_animation": {
+		"anim_type": "flip_book",
+		"initial_uv": [
+			0,
+			0
+		],
+		"frame_count": 7,
+		"frame_step": 0,
+		"fps": 1.0,
+		"easing": "linear"
+	},
+	"smithing_input_image_templates@chest.smithing_image": {
+		"texture": "textures/ui/templates_slot_overlay",
+		"uv": "@chest.templates_animation",
+		"uv_size": [
+			16,
+			16
+		]
+	},
+	"smithing_input_image_armors@chest.smithing_image": {
+		"texture": "textures/ui/armors_slot_overlay",
+		"uv": "@chest.armors_animation",
+		"uv_size": [
+			16,
+			16
+		]
+	},
+	"smithing_input_image_armors_and_tools@chest.smithing_image": {
+		"texture": "textures/ui/armors_and_tools_slot_overlay",
+		"uv": "@chest.armors_and_tools_animation",
+		"uv_size": [
+			16,
+			16
+		]
+	},
+	"smithing_material_image_all@chest.smithing_image": {
+		"texture": "textures/ui/smithing_material_slot_overlay",
+		"uv": "@chest.all_materials_animation",
+		"uv_size": [
+			16,
+			16
+		]
+	},
+	"template_overlay_image": {
+		"type": "panel",
+		"controls": [
+			{
+				"templates@chest.smithing_input_image_templates": {
+					"type": "image",
+					"bindings": [
+						{
+							"binding_name": "#show_input_overlay_templates",
+							"binding_name_override": "#visible"
+						}
+					]
+				}
+			}
+		]
+	},
+	"input_overlay_image": {
+		"type": "panel",
+		"controls": [
+			{
+				"armors_and_tools@chest.smithing_input_image_armors_and_tools": {
+					"type": "image"
+					// "bindings": [
+					// 	{
+					// 		"binding_name": "#show_input_overlay_armors_and_tools",
+					// 		"binding_name_override": "#visible"
+					// 	}
+					// ]
+				}
+			}
+			// {
+			// 	"armors@chest.smithing_input_image_armors": {
+			// 		"type": "image",
+			// 		"bindings": [
+			// 			{
+			// 				"binding_name": "#show_input_overlay_armors",
+			// 				"binding_name_override": "#visible"
+			// 			}
+			// 		]
+			// 	}
+			// }
+		]
+	},
+	"material_overlay_image": {
+		"type": "panel",
+		"controls": [
+			{
+				"all_materials@chest.smithing_material_image_all": {
+					"type": "image",
+					"bindings": [
+						{
+							"binding_name": "#show_input_overlay_all_materials",
+							"binding_name_override": "#visible"
+						}
+					]
+				}
+			}
+		]
+	},
+	"smithing_label": {
+		"type": "label",
+		"offset": [
+			0,
+			-25
+		],
+		"anchor_from": "top_middle",
+		"anchor_to": "top_middle",
+		"$type_label|default":"ui.smithing",
+		"text": "$type_label",
+		"color": [
+			1,
+			1,
+			1
+		],
+		"layer": 2
+	}
+}

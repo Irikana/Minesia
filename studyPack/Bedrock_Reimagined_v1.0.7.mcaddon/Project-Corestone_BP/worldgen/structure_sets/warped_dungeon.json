@@ -1,0 +1,21 @@
+{
+  "format_version": "1.21.20",
+  "minecraft:structure_set": {
+    "description": {
+      "identifier": "5fs_br:warped_dungeon"
+    },
+    "placement": {
+      "type": "minecraft:random_spread",
+      "salt": 56397508,
+      "separation": 40,
+      "spacing": 90,
+      "spread_type": "linear"
+    },
+    "structures": [
+      {
+        "structure": "5fs_br:warped_dungeon",
+        "weight": 1
+      }
+    ]
+  }
+}

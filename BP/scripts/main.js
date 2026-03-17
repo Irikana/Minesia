@@ -18,6 +18,8 @@ import { initializeStaminaSystem, updateStaminaSystem } from "./stamina/staminaM
 import { processStaminaSetEffects } from "./stamina/staminaSetEffectAdapter.js";
 import { processItemEffects } from "./custom_events/index.js";
 import { initHealthBoostManager } from "./set_effect/healthBoostManager.js";
+import { initializeWeaponEffects } from "./custom_events/item_events/weaponEffectConfig.js";
+import { initializeCriticalHitSystem } from "./critical_hit/criticalHitMain.js";
 
 const LANGUAGE_OBJECTIVE = 'minesia_language';
 
@@ -117,6 +119,9 @@ system.runTimeout(() => {
         initializeRandomDamageSystem();
         debug.logWithTag("Minesia", "✓ 随机伤害系统就绪");
 
+        initializeWeaponEffects();
+        debug.logWithTag("Minesia", "✓ 武器效果注册表就绪");
+
         initializeLoreHandler();
         debug.logWithTag("Minesia", "✓ 随机伤害Lore处理器就绪");
 
@@ -146,6 +151,12 @@ system.runTimeout(() => {
 
         initHealthBoostManager();
         debug.logWithTag("Minesia", "✓ 生命提升管理器就绪");
+
+        setEffectMain.initializeSetEffectSystem();
+        debug.logWithTag("Minesia", "✓ 套装效果系统就绪");
+
+        initializeCriticalHitSystem();
+        debug.logWithTag("Minesia", "✓ 暴击系统就绪");
 
         systemReady = true;
         debug.logWithTag("Minesia", "🎉 核心系统初始化完成!");

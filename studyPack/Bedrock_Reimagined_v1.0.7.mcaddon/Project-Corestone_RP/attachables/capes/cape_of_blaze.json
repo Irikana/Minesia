@@ -1,0 +1,54 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "5fs_br:cape_of_blaze",
+      "materials": {
+        "default": "armor",
+        "enchanted": "armor_enchanted"
+      },
+      "textures": {
+        "blaze0":  "textures/entity/gears/capes/blaze/blaze0",
+        "blaze1":  "textures/entity/gears/capes/blaze/blaze1",
+        "blaze2":  "textures/entity/gears/capes/blaze/blaze2",
+        "blaze3":  "textures/entity/gears/capes/blaze/blaze3",
+        "blaze4":  "textures/entity/gears/capes/blaze/blaze4",
+        "blaze5":  "textures/entity/gears/capes/blaze/blaze5",
+        "blaze6":  "textures/entity/gears/capes/blaze/blaze6",
+        "blaze7":  "textures/entity/gears/capes/blaze/blaze7",
+        "blaze8":  "textures/entity/gears/capes/blaze/blaze8",
+        "blaze9":  "textures/entity/gears/capes/blaze/blaze9",
+        "blaze10": "textures/entity/gears/capes/blaze/blaze10",
+        "blaze11": "textures/entity/gears/capes/blaze/blaze11",
+        "blaze12": "textures/entity/gears/capes/blaze/blaze12",
+        "blaze13": "textures/entity/gears/capes/blaze/blaze13",
+        "blaze14": "textures/entity/gears/capes/blaze/blaze14",
+        "blaze15": "textures/entity/gears/capes/blaze/blaze15",
+        "blaze16": "textures/entity/gears/capes/blaze/blaze16",
+        "blaze17": "textures/entity/gears/capes/blaze/blaze17",
+        "blaze18": "textures/entity/gears/capes/blaze/blaze18",
+        "blaze19": "textures/entity/gears/capes/blaze/blaze19",
+        "blaze20": "textures/entity/gears/capes/blaze/blaze20",
+        "blaze21": "textures/entity/gears/capes/blaze/blaze21",
+        "blaze22": "textures/entity/gears/capes/blaze/blaze22",
+        "blaze23": "textures/entity/gears/capes/blaze/blaze23",
+        "enchanted": "textures/misc/enchanted_actor_glint"
+      },
+      "geometry": {
+        "default": "geometry.custom_cape"
+      },
+      "animations": {
+        "cape": "animation.custom_cape"
+      },
+      "scripts": {
+        "parent_setup": "variable.chest_layer_visible = 0.0;",
+        "animate": [
+          "cape"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.cape_of_blaze"
+      ]
+    }
+  }
+}

@@ -1,0 +1,177 @@
+{
+    "format_version": "1.26.0",
+	"minecraft:block": {
+        "description": {
+            "identifier": "5fs_br:big_sandstone_statue",
+            "menu_category": {
+                "category": "items"
+            },
+            "traits": {
+                "minecraft:placement_direction": {
+                    "enabled_states": [
+                        "minecraft:cardinal_direction"
+                    ]
+                }
+            },
+            "states": {
+                "5fs_br:double": [
+                    "lower_bit",
+                    "upper_bit"
+                ]
+            }
+        },
+        "components": {
+            "minecraft:geometry": "geometry.empty",
+            "minecraft:item_visual": {
+                "geometry": {
+                    "identifier": "geometry.statue",
+                    "bone_visibility": {
+                        "statue_0": false,
+                        "statue_1": true,
+                        "statue_2": false
+                    }
+                },
+                "material_instances": {
+                    "*": {
+                        "texture": "sandstone_statue"
+                    }
+                }
+            },
+            "minecraft:destruction_particles": {
+                "texture": "sandstone_bottom"
+            },
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "empty_texture",
+                    "render_method": "alpha_test",
+                    "ambient_occlusion": false,
+                    "face_dimming": false
+                }
+            },
+            "minecraft:selection_box": {
+                "origin": [
+                    -8,
+                    0,
+                    -8
+                ],
+                "size": [
+                    16,
+                    16,
+                    16
+                ]
+            },
+            "minecraft:transformation": {
+                "translation": [
+                    0,
+                    0.5,
+                    0
+                ],
+                "scale": [
+                    1,
+                    2,
+                    1
+                ]
+            },
+            "minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 2.6675,
+				"item_specific_speeds": [
+					{
+						"item": {
+							"tags": "query.all_tags('minecraft:is_pickaxe')"
+						},
+						"destroy_speed": 0.8
+					}
+				]
+			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 0.8
+			},
+            "minecraft:map_color": "#F3CB8C",
+            "minecraft:collision_box": true,
+            "minecraft:light_dampening": 0,
+            "minecraft:liquid_detection": {
+                "detection_rules": [
+                    {
+                        "can_contain_liquid": true,
+                        "liquid_type": "water",
+                        "on_liquid_touches": "blocking"
+                    }
+                ]
+            },
+            "minecraft:movable": {
+                "movement_type": "immovable"
+            },
+			"minecraft:precipitation_interactions": {
+				"precipitation_behavior": "obstruct_rain"
+			},
+            "minecraft:connection_rule": {
+                "accepts_connections_from": "none"
+            },
+            "tag:minecraft:is_pickaxe_item_destructible": {}
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('5fs_br:double') == 'lower_bit'",
+                "components": {
+                    "minecraft:loot": "loot_tables/empty.json",
+                    "5fs_br:statue": {
+                        "statue": "5fs_br:big_statue",
+                        "get_entity": -0.5
+                    },
+                    "5fs_br:double_block": {},
+                    "5fs_br:no_loot_on_silk_touch": {}
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:double') == 'upper_bit'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            0,
+                            180
+                        ],
+                        "translation": [
+                            0,
+                            -0.5,
+                            0
+                        ],
+                        "scale": [
+                            1,
+                            2,
+                            1
+                        ]
+                    },
+                    "minecraft:placement_filter": {
+                        "conditions": [
+                            {
+                                "allowed_faces": [
+                                    "up"
+                                ],
+                                "block_filter": [
+                                    {
+                                        "name": "5fs_br:big_sandstone_statue",
+                                        "states": {
+                                            "5fs_br:double": "lower_bit"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "5fs_br:statue": {
+                        "get_entity": -1.5
+                    },
+                    "5fs_br:break_block_below": {
+                        "name": "5fs_br:big_sandstone_statue",
+                        "state": "5fs_br:double",
+                        "values": [
+                            "lower_bit",
+                            "upper_bit"
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

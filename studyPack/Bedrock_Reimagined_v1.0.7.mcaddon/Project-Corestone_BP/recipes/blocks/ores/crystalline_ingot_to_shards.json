@@ -1,0 +1,25 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "5fs_br:crystalline_ingot_to_shards"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "5fs_br:crystalline_ingot"
+			}
+		],
+		"result": {
+			"item": "5fs_br:raw_crystalline_shard",
+			"count": 9
+		},
+		"unlock": [
+			{
+				"item": "5fs_br:raw_crystalline"
+			}
+		]
+	}
+}

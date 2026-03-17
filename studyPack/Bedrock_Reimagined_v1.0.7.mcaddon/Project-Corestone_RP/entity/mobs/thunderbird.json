@@ -1,0 +1,58 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "5fs_br:thunderbird",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/mobs/thunderbird"
+            },
+            "geometry": {
+                "default": "geometry.thunderbird"
+            },
+            "animations": {
+                "look_at_target": "animation.common.look_at_target",
+                "idle": "animation.thunderbird.idle",
+                "flying": "animation.thunderbird.flying",
+                "death": "animation.thunderbird.death",
+                "planning": "animation.thunderbird.planning",
+                "walking": "animation.thunderbird.walking",
+                "rotation": "animation.thunderbird.rotation",
+                "perching": "animation.thunderbird.perching",
+                "lightning_attack": "animation.thunderbird.lightning_attack",
+                "swoop_attack": "animation.thunderbird.swoop_attack",
+                "root": "controller.animation.thunderbird.root",
+                "general_controller": "controller.animation.thunderbird.general",
+                "rotation_controller": "controller.animation.thunderbird.rotation",
+                "swoop_attack_controller": "controller.animation.thunderbird.swoop_attack",
+                "lightning_attack_controller": "controller.animation.thunderbird.lightning_attack",
+                "look_at_target_controller": "controller.animation.thunderbird.look_at_target"
+            },
+            "scripts": {
+                "pre_animation": [
+                    "v.flying_type = q.property('5fs_br:flying_type');"
+                ],
+                "animate": [
+                    "root"
+                ]
+            },
+            "enable_attachables": true,
+            "render_controllers": [
+                "controller.render.default"
+            ],
+            "sound_effects": {
+                "idle": "mob.thunderbird.idle",
+                "flying": "mob.thunderbird.flying",
+                "planning": "mob.thunderbird.planning",
+                "perching": "mob.thunderbird.perching",
+                "lightning_attack": "mob.thunderbird.lightning_attack",
+                "swoop_attack": "mob.thunderbird.swoop_attack"
+            },
+            "spawn_egg": {
+                "texture": "5fs_br:thunderbird_spawn_egg"
+            }
+        }
+    }
+}

@@ -1,0 +1,63 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "5fs_br:meteorite_entity_no_block_break",
+			"materials": {
+				"default": "entity_emissive_alpha"
+			},
+			"textures": {
+				"default": "textures/entity/misc/meteorite"
+			},
+			"animations": {
+                "north": "animation.meteor.north",
+                "south": "animation.meteor.south",
+                "west": "animation.meteor.west",
+                "east": "animation.meteor.east",
+                "north_falling": "animation.meteor.north_falling",
+                "south_falling": "animation.meteor.south_falling",
+                "west_falling": "animation.meteor.west_falling",
+                "east_falling": "animation.meteor.east_falling",
+                "explode": "animation.meteor.explode"
+            },
+			"scripts": {
+                 "animate": [
+                    "general_controller",
+                    {
+                        "north": "query.property('5fs_br:rotation') == 'north'"
+                    },
+                    {
+                        "south": "query.property('5fs_br:rotation') == 'south'"
+                    },
+                    {
+                        "west": "query.property('5fs_br:rotation') == 'west'"
+                    },
+                    {
+                        "east": "query.property('5fs_br:rotation') == 'east'"
+                    },
+                    {
+                        "north_falling": "query.property('5fs_br:rotation') == 'north_falling'"
+                    },
+                    {
+                        "south_falling": "query.property('5fs_br:rotation') == 'south_falling'"
+                    },
+                    {
+                        "west_falling": "query.property('5fs_br:rotation') == 'west_falling'"
+                    },
+                    {
+                        "east_falling": "query.property('5fs_br:rotation') == 'east_falling'"
+                    },
+                    {
+                        "explode": "query.property('5fs_br:rotation') == 'explode'"
+                    }
+                ]
+            },
+			"geometry": {
+				"default": "geometry.meteor"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			]
+		}
+	}
+}

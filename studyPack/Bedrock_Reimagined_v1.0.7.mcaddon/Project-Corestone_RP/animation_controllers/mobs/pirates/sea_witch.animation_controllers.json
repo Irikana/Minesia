@@ -1,0 +1,73 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.sea_witch.root": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "animations": [
+                        "general_controller", "look_at_target"
+                    ],
+                    "transitions": [
+                        {
+                            "death": "!q.is_alive"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "death": {
+                    "animations": [
+                        "death"
+                    ]
+                }
+            }
+        },
+        "controller.animation.sea_witch.general": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "animations": [
+                        "idle"
+                    ],
+                    "transitions": [
+                        {
+                            "walk": "q.is_moving"
+                        },
+                        {
+                            "cast": "q.is_casting || (q.is_charged && !q.is_avoiding_mobs)"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "walk": {
+                    "animations": [
+                        "walk"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!q.is_moving"
+                        },
+                        {
+                            "cast": "q.is_casting || (q.is_charged && !q.is_avoiding_mobs)"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "cast": {
+                    "animations": [
+                        "cast"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!q.is_casting && (q.all_animations_finished || q.is_avoiding_mobs)"
+                        },
+                        {
+                            "walk": "!q.is_casting && (q.all_animations_finished || q.is_avoiding_mobs)"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                }
+            }
+        }
+    }
+}

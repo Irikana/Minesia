@@ -1,0 +1,18 @@
+{
+    "format_version": "1.26.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "5fs_br:ender_void_on",
+            "menu_category": {
+                "category": "none",
+                "is_hidden_in_commands": true
+            }
+        },
+        "components": {
+            "minecraft:display_name": { "value": "item.5fs_br:ender_void_on" },
+            "minecraft:icon": "5fs_br:ender_void_on",
+            "minecraft:max_stack_size": 1,
+            "5fs_br:ender_void_on": {}
+        }
+    }
+}

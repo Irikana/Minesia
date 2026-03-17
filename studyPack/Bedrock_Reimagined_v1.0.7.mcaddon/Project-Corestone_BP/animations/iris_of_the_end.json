@@ -1,0 +1,26 @@
+{
+    "format_version": "1.10.0",
+    "animations": {
+        "animation.iris_of_the_end.the_watcher": {
+            "animation_length": 12,
+            "loop": true,
+            "timeline": {
+                "12.0": "/scriptevent 5fs_br:iris_check_for_minions"
+            }
+        },
+        "animation.iris_of_the_end.the_judging_eye": {
+            "animation_length": 10,
+            "loop": true,
+            "timeline": {
+                "10.0": "/scriptevent 5fs_br:iris_check_for_minions"
+            }
+        },
+        "animation.iris_of_the_end.the_final_arbiter": {
+            "animation_length": 8,
+            "loop": true,
+            "timeline": {
+                "8.0": "/scriptevent 5fs_br:iris_check_for_minions"
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:feature_rules": {
+        "description": {
+            "identifier": "5fs_br:oasis",
+            "places_feature": "5fs_br:warm/desert/oasis_feature"
+        },
+        "conditions": {
+            "placement_pass": "before_surface_pass",
+            "minecraft:biome_filter": {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "desert"
+            }
+        },
+        "distribution": {
+            "iterations": 1,
+            "x": {
+                "distribution": "uniform",
+                "extent": [
+                    -32,
+                    32
+                ]
+            },
+            "y": "query.heightmap(variable.worldx, variable.worldz) + -3",
+            "z": {
+                "distribution": "uniform",
+                "extent": [
+                    -32,
+                    32
+                ]
+            }
+        }
+    }
+}

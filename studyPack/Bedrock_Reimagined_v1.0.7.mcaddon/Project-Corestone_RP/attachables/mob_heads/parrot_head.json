@@ -1,0 +1,23 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:attachable": {
+        "description": {
+            "identifier": "5fs_br:parrot_head",
+            "materials": {
+                "default": "parrot"
+            },
+            "textures": {
+                "default": "textures/entity/parrot/parrot_red_blue"
+            },
+            "geometry": {
+                "default": "geometry.parrot_head_attachable"
+            },
+            "scripts": {
+                "parent_setup": "variable.head_layer_visible = 0.0;"
+            },
+            "render_controllers": [
+                "controller.render.default"
+            ]
+        }
+    }
+}

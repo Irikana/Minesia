@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "rose_quartz_geode_3",
+		"metalness_emissive_roughness": "rose_quartz_geode_3_mer"
+	}
+}

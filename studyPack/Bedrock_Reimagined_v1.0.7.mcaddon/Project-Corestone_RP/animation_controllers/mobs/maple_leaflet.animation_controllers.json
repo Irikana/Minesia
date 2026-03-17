@@ -1,0 +1,53 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.maple_leaflet.root": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "animations": [
+                        "general_controller"
+                    ],
+                    "transitions": [
+                        {
+                            "death": "!query.is_alive"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "death": {
+                    "animations": [
+                        "death"
+                    ]
+                }
+            }
+        },
+        "controller.animation.maple_leaflet.general": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "animations": [
+                        "idle"
+                    ],
+                    "transitions": [
+                        {
+                            "walking": "query.modified_move_speed > 0.01"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "walking": {
+                    "animations": [
+                        "walk"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "query.modified_move_speed <= 0.01"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                }
+            }
+        }
+    }
+}

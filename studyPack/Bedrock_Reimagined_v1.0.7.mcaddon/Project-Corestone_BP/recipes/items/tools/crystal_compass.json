@@ -1,0 +1,35 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "5fs_br:crystal_compass"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "#G#",
+      "GZG",
+      "#G#"
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:amethyst_shard"
+      },
+      "Z": {
+        "item": "minecraft:compass"
+      },
+      "G": {
+        "item": "minecraft:emerald"
+      }
+    },
+    "result": {
+      "item": "5fs_br:crystal_compass"
+    },
+    "unlock": [
+      {
+        "item": "minecraft:emerald"
+      }
+    ]
+  }
+}

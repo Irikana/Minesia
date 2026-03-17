@@ -1,0 +1,25 @@
+{
+    "format_version": "1.26.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "5fs_br:gray_sheep_plushie",
+            "menu_category": {
+                "category": "items"
+            }
+        },
+        "components": {
+            "minecraft:block_placer": {
+                "block": "5fs_br:gray_sheep_plushie",
+                "replace_block_item": true
+            },
+            "minecraft:fuel": {
+                "duration": 3.35
+            },
+            "minecraft:tags": {
+                "tags": [
+                    "5fs_br:sheep_plushie"
+                ]
+            }
+        }
+    }
+}

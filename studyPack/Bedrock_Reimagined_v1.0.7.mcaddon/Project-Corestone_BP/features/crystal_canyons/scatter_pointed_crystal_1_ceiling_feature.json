@@ -1,0 +1,13 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:scatter_feature": {
+        "description": {
+            "identifier": "5fs_br:crystal_canyons/scatter_pointed_crystal_1_ceiling_feature"
+        },
+        "places_feature": "5fs_br:crystal_canyons/pointed_crystal_1_ceiling_feature",
+        "iterations": 100,
+        "x": 0,
+        "y": 0,
+        "z": 0
+    }
+}

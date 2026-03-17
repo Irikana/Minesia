@@ -1,0 +1,17 @@
+{
+	"format_version": "1.26.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "5fs_br:small_ocean_mine",
+			"menu_category": {
+				"category": "items"
+			}
+		},
+		"components": {
+			"minecraft:icon": "5fs_br:small_ocean_mine",
+			"minecraft:entity_placer": {
+				"entity": "5fs_br:ocean_mine_1"
+			}
+		}
+	}
+}

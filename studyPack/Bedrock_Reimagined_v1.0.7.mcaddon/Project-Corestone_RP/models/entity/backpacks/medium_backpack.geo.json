@@ -1,0 +1,32 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.medium_backpack",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "medium_backpack",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-4, 13, 2], "size": [8, 5, 5], "uv": [0, 14]},
+						{"origin": [-1, 19.5, 5.5], "size": [2, 2, 1], "uv": [25, 7]},
+						{"origin": [-3.5, 20, 2], "size": [7, 2, 4], "inflate": 0.25, "uv": [25, 0]},
+						{"origin": [-3.5, 18, 2], "size": [7, 4, 4], "uv": [0, 25]},
+						{"origin": [-5, 14, 3], "size": [1, 4, 3], "uv": [23, 25]},
+						{"origin": [-5.1, 15, 4], "size": [0, 2, 1], "uv": [27, 11]},
+						{"origin": [5.1, 15, 4], "size": [0, 2, 1], "uv": [27, 11], "mirror": true},
+						{"origin": [4, 14, 3], "size": [1, 4, 3], "uv": [23, 25], "mirror": true},
+						{"origin": [-4, 15, -2], "size": [8, 9, 4], "inflate": 0.25, "uv": [0, 0]}
+					]
+				}
+			]
+		}
+	]
+}

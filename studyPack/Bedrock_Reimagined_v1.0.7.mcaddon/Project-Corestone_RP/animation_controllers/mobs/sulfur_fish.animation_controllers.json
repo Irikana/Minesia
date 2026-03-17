@@ -1,0 +1,44 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.sulfur_fish.general": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "animations": [
+                        "idle"
+                    ],
+                    "transitions": [
+                        {
+                            "move": "query.modified_move_speed > 0.05"
+                        },
+                        {
+                            "death": "!query.is_alive"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "move": {
+                    "animations": [
+                        "move"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "query.modified_move_speed <= 0.05"
+                        },
+                        {
+                            "death": "!query.is_alive"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "death": {
+                    "animations": [
+                        "death"
+                    ],
+                    "blend_transition": 0.2
+                }
+            }
+        }
+    }
+}

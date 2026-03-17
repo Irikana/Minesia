@@ -1,0 +1,22 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "5fs_br:overworld/weighted_nether_portal_feature"
+    },
+    "features": [
+      [
+        "5fs_br:overworld/nether_portal_0_feature",
+        1
+      ],
+      [
+        "5fs_br:overworld/nether_portal_1_feature",
+        1
+      ],
+      [
+        "5fs_br:overworld/nether_portal_2_feature",
+        1
+      ]
+    ]
+  }
+}

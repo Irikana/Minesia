@@ -1,0 +1,25 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:snap_to_surface_feature": {
+    "description": {
+      "identifier": "5fs_br:mushroom_island/small_red_mushrooms_snap_to_surface_feature"
+    },
+    "feature_to_snap": "5fs_br:mushroom_island/weighted_small_red_mushrooms_feature",
+    "surface": "floor",
+    "allow_air_placement": true,
+    "allow_underwater_placement": false,
+    "vertical_search_range": 128,
+    "allowed_surface_blocks": [
+      "minecraft:grass_block",
+      "minecraft:mycelium",
+      "minecraft:podzol",
+      "minecraft:mud",
+      "minecraft:packed_mud",
+      "minecraft:clay",
+      "minecraft:moss_block",
+      "minecraft:gravel",
+      "minecraft:stone",
+      "minecraft:deepslate"
+    ]
+  }
+}

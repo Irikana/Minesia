@@ -1,0 +1,261 @@
+{
+  "tiers": [
+    {
+      "trades": [
+        {
+          "wants": [
+            {
+              "item": "minecraft:string",
+              "quantity": {
+                "min": 15,
+                "max": 20
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:emerald"
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald"
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:arrow",
+              "quantity": {
+                "min": 8,
+                "max": 12
+              }
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "5fs_br:redwood_stick",
+              "quantity": 5
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:emerald"
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald"
+            }
+          ],
+          "gives": [
+            {
+              "item": "5fs_br:rope",
+              "quantity": {
+                "min": 5,
+                "max": 7
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trades": [
+        {
+          "wants": [
+            {
+              "item": "minecraft:gravel",
+              "quantity": 10
+            },
+            {
+              "item": "minecraft:emerald",
+              "quantity": 1
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:flint",
+              "quantity": {
+                  "min": 6,
+                  "max": 10
+                }
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": {
+                "min": 2,
+                "max": 3
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:bow"
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "5fs_br:giant_eagle_feather",
+              "quantity": 3
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": {
+                "min": 2,
+                "max": 3
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trades": [
+        {
+          "wants": [
+            {
+              "item": "5fs_br:phoenix_feather",
+              "quantity": 3
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": {
+                "min": 4,
+                "max": 7
+              }
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "5fs_br:thunderbird_feather",
+              "quantity": 3
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": {
+                "min": 4,
+                "max": 7
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trades": [
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": {
+                "min": 8,
+                "max": 10
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "5fs_br:mob_net"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trades": [
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 4
+            },
+            {
+              "item": "minecraft:arrow",
+              "quantity": 4
+            }
+          ],
+          "gives": [
+            {
+              "item": "5fs_br:sharp_arrows",
+              "quantity": 8
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 4
+            },
+            {
+              "item": "minecraft:arrow",
+              "quantity": 4
+            }
+          ],
+          "gives": [
+            {
+              "item": "5fs_br:explosive_arrow",
+              "quantity": 8
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 4
+            },
+            {
+              "item": "minecraft:arrow",
+              "quantity": 4
+            }
+          ],
+          "gives": [
+            {
+              "item": "5fs_br:zeus_arrow",
+              "quantity": 8
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 4
+            },
+            {
+              "item": "minecraft:arrow",
+              "quantity": 4
+            }
+          ],
+          "gives": [
+            {
+              "item": "5fs_br:arrow_of_jelly",
+              "quantity": 8
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

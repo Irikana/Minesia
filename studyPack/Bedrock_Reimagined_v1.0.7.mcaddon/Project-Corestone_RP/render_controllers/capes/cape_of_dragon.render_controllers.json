@@ -1,0 +1,42 @@
+{
+  "format_version": "1.20.0",
+  "render_controllers": {
+    "controller.render.cape_of_dragon": {
+      "geometry": "geometry.default",
+      "arrays": {
+        "textures": {
+          "array.textures": [
+            "Texture.dragon0",
+            "Texture.dragon1",
+            "Texture.dragon2",
+            "Texture.dragon3",
+            "Texture.dragon4",
+            "Texture.dragon5",
+            "Texture.dragon6",
+            "Texture.dragon7",
+            "Texture.dragon8",
+            "Texture.dragon9",
+            "Texture.dragon10",
+            "Texture.dragon11",
+            "Texture.dragon12",
+            "Texture.dragon13",
+            "Texture.dragon14",
+            "Texture.dragon15",
+            "Texture.dragon16",
+            "Texture.dragon17",
+            "Texture.dragon18"
+          ]
+        }
+      },
+      "materials": [
+        {
+          "*": "variable.is_enchanted?material.enchanted:material.default"
+        }
+      ],
+      "textures": [
+        "temp.life_time=query.life_time*8;return array.textures[temp.life_time];",
+        "texture.enchanted"
+      ]
+    }
+  }
+}

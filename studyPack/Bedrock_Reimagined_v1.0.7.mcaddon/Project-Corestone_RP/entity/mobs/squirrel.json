@@ -1,0 +1,57 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "5fs_br:squirrel",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/mobs/squirrel",
+                "white": "textures/entity/mobs/white_squirrel",
+                "red": "textures/entity/mobs/red_squirrel"
+            },
+            "geometry": {
+                "default": "geometry.squirrel"
+            },
+            "animations": {
+                "look_at_target": "animation.common.look_at_target",
+                "idle_0": "animation.squirrel.idle_0",
+                "idle_1": "animation.squirrel.idle_1",
+                "idle_2": "animation.squirrel.idle_2",
+                "eating": "animation.squirrel.eating",
+                "walk": "animation.squirrel.walk",
+                "swimming": "animation.squirrel.swimming",
+                "death": "animation.squirrel.death",
+                "climb": "animation.squirrel.climb",
+                "general_controller": "controller.animation.squirrel.general",
+                "climb_controller": "controller.animation.squirrel.climb",
+                "look_at_target_controller": "controller.animation.squirrel.look_at_target",
+                "root_controller": "controller.animation.squirrel.root"
+            },
+            "scripts": {
+                "pre_animation": [
+                    "t.variant = q.property('5fs_br:variant');",
+                    "v.index = t.variant == 'default' ? 0 : t.variant == 'red' ? 1 : t.variant == 'white' ? 2 : 0 ;"
+                ],
+                "animate": [
+                    "root_controller"
+                ]
+            },
+            "sound_effects": {
+                "idle": "mob.squirrel.idle",
+                "eat": "mob.squirrel.eat",
+                "standing": "mob.squirrel.standing",
+                "tail_curl": "mob.squirrel.tail_curl",
+                "climb": "mob.squirrel.climb"
+            },
+            "enable_attachables": true,
+            "render_controllers": [
+                "controller.render.squirrel"
+            ],
+            "spawn_egg": {
+                "texture": "5fs_br:squirrel"
+            }
+        }
+    }
+}

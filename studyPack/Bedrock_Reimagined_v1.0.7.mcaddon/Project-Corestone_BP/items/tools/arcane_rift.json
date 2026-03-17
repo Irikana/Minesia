@@ -1,0 +1,15 @@
+{
+    "format_version": "1.26.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "5fs_br:arcane_rift",
+			"menu_category": {
+				"category": "equipment"
+			}
+        },
+        "components": {
+            "minecraft:icon": "5fs_br:arcane_rift",
+            "minecraft:max_stack_size": 1
+        }
+    }
+}

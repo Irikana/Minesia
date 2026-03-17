@@ -1,0 +1,24 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "5fs_br:steel_brick_slab"
+    },
+    "tags": ["crafting_table"],
+    "key": {
+      "C": { "item": "5fs_br:steel_bricks" }
+    },
+    "pattern": [
+      "   ",
+      "   ",
+      "CCC"
+    ],
+    "result": {
+      "item": "5fs_br:steel_brick_slab",
+      "count": 6
+    },
+    "unlock": [
+      { "item": "5fs_br:steel_ingot" }
+    ]
+  }
+}

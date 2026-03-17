@@ -1,0 +1,44 @@
+{
+  "format_version": "1.26.0",
+	"minecraft:block": {
+    "description": {
+      "identifier": "5fs_br:molten_lava_sponge",
+      "menu_category": {
+        "category": "nature"
+      }
+    },
+    "components": {
+      "minecraft:tick": {
+        "interval_range": [5, 10],
+        "looping": true
+      },
+      "minecraft:geometry": {
+          "identifier": "minecraft:geometry.full_block"
+      },
+      "minecraft:redstone_conductivity": {
+          "redstone_conductor": true
+      },
+      "minecraft:light_dampening": 15,
+      "tag:minecraft:is_hoe_item_destructible": {},
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "molten_lava_sponge",
+          "render_method": "opaque",
+          "face_dimming": false,
+          "ambient_occlusion": false
+        }
+      },
+      "minecraft:map_color": "#4c1a0f",
+        "5fs_br:molten_lava_sponge": {},
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 0.6
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 3
+      },
+			"minecraft:precipitation_interactions": {
+				"precipitation_behavior": "obstruct_rain"
+			}
+    }
+  }
+}

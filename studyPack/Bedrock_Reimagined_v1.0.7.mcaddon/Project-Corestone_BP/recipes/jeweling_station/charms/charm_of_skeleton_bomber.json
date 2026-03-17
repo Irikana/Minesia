@@ -1,0 +1,33 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "5fs_br:charm_of_skeleton_bomber"
+		},
+		"tags": [
+			"jeweling_station"
+		],
+		"key": {
+			"O": {
+                "item": "5fs_br:crystalline_ingot"
+            },
+            "P": {
+                "item": "minecraft:bone"
+            },
+			"B": {
+				"item": "5fs_br:crystalline_tnt"
+			}
+		},
+		"pattern": [
+			"OPO",
+			"PBP",
+			"OPO"
+		],
+		"result": {
+			"item": "5fs_br:charm_of_skeleton_bomber"
+		},
+		"unlock": {
+			"context": "AlwaysUnlocked"
+		}
+	}
+}

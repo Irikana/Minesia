@@ -1,0 +1,268 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "5fs_br:maple_leaflet",
+      "spawn_category": "creature",
+      "is_spawnable": true,
+      "is_summonable": true
+    },
+    "component_groups": {
+      "5fs_br:tamed": {
+        "minecraft:is_tamed": {},
+        "minecraft:behavior.pickup_items": {
+          "can_pickup_any_item": true,
+          "priority": 1,
+          "max_dist": 16,
+          "goal_radius": 1,
+          "speed_multiplier": 1,
+          "can_pickup_to_hand_or_equipment": false
+        }
+      },
+      "5fs_br:shrinkify": {
+        "minecraft:movement": {
+          "value": 0.4
+        },
+        "minecraft:health": {
+          "max": 10
+        },
+        "minecraft:scale": {
+          "value": 0.25
+        }
+      },
+      "5fs_br:gigantify": {
+        "minecraft:movement": {
+          "value": 0.16
+        },
+        "minecraft:health": {
+          "max": 40
+        },
+        "minecraft:scale": {
+          "value": 2
+        }
+      },
+      "5fs_br:normal_scale": {
+        "minecraft:movement": {
+          "value": 0.2
+        },
+        "minecraft:health": {
+          "max": 20
+        },
+        "minecraft:scale": {
+          "value": 1
+        }
+      },
+      "5fs_br:no_fall_damage_jelly": {
+        "minecraft:damage_sensor": {
+          "triggers": {
+            "cause": "fall",
+            "deals_damage": "no"
+          }
+        }
+      }
+    },
+    "components": {
+      "minecraft:is_hidden_when_invisible": {},
+      "minecraft:type_family": {
+        "family": [
+          "maple_leaflet",
+          "mob",
+          "passive"
+        ]
+      },
+      "minecraft:behavior.avoid_mob_type": {
+        "priority": 5,
+        "max_dist": 16,
+        "max_flee": 20,
+        "entity_types": {
+          "filters": {
+            "all_of": [
+              {
+                "test": "is_family",
+                "operator": "!=",
+                "subject": "other",
+                "value": "maple_leaflet"
+              },
+              {
+                "test": "is_owner",
+                "subject": "other",
+                "operator": "==",
+                "value": false
+              }
+            ]
+          },
+          "max_dist": 16,
+          "sprint_speed_multiplier": 1
+        }
+      },
+      "minecraft:collision_box": {
+        "width": 0.6,
+        "height": 0.6
+      },
+      "minecraft:balloonable": {
+        "mass": 0.5
+      },
+      "minecraft:breathable": {
+        "totalSupply": 15,
+        "suffocateTime": 0
+      },
+      "minecraft:nameable": {},
+      "minecraft:leashable": {},
+      "minecraft:health": {
+        "value": 6
+      },
+      "minecraft:hurt_on_condition": {
+        "damage_conditions": [
+          {
+            "filters": {
+              "test": "in_lava",
+              "subject": "self",
+              "operator": "==",
+              "value": true
+            },
+            "cause": "lava",
+            "damage_per_tick": 4
+          }
+        ]
+      },
+      "minecraft:movement": {
+        "value": 0.2
+      },
+      "minecraft:navigation.walk": {
+        "can_jump": true,
+        "can_pass_doors": true,
+        "avoid_water": true,
+        "avoid_damage_blocks": true,
+        "can_path_over_water": false
+      },
+      "minecraft:shareables": {
+        "singular_pickup": true,
+        "items": [
+          {
+            "item": "5fs_br:sap",
+            "stored_in_inventory": true
+          }
+        ]
+      },
+      "minecraft:movement.basic": {},
+      "minecraft:follow_range": {
+        "value": 1024
+      },
+      "minecraft:behavior.random_stroll": {
+        "priority": 6,
+        "speed_multiplier": 0.6,
+        "xz_dist": 12,
+        "y_dist": 5
+      },
+      "minecraft:jump.static": {},
+      "minecraft:physics": {
+        "has_gravity": true
+      },
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:conditional_bandwidth_optimization": {},
+      "minecraft:inventory": {
+        "inventory_size": 5,
+        "container_type": "hopper",
+        "can_be_siphoned_from": false,
+        "private": false,
+        "restrict_to_owner": true
+      },
+      "minecraft:behavior.panic": {
+        "priority": 1,
+        "speed_multiplier": 2
+      },
+      "minecraft:behavior.follow_owner": {
+        "priority": 6,
+        "speed_multiplier": 1,
+        "start_distance": 6,
+        "stop_distance": 3,
+        "can_teleport": false
+      },
+      "minecraft:behavior.float": {
+        "priority": 0
+      },
+      "minecraft:behavior.look_at_player": {
+        "priority": 8,
+        "probability": 0.02
+      },
+      "minecraft:behavior.random_look_around": {
+        "priority": 8
+      },
+      "minecraft:tameable": {
+        "probability": 1,
+        "tame_items": [
+          "5fs_br:golden_sap"
+        ],
+        "tame_event": {
+          "event": "5fs_br:on_tame",
+          "target": "self"
+        }
+      }
+    },
+    "events": {
+      "5fs_br:on_tame": {
+        "add": {
+          "component_groups": [
+            "5fs_br:tamed"
+          ]
+        }
+      },
+      "5fs_br:normal_scale": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:shrinkify",
+            "5fs_br:gigantify"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:normal_scale"
+          ]
+        }
+      },
+      "5fs_br:gigantify": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:shrinkify",
+            "5fs_br:normal_scale"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:gigantify"
+          ]
+        }
+      },
+      "5fs_br:shrinkify": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:gigantify",
+            "5fs_br:normal_scale"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:shrinkify"
+          ]
+        }
+      },
+      "5fs_br:no_fall_damage_jelly": {
+        "add": {
+          "component_groups": [
+            "5fs_br:no_fall_damage_jelly"
+          ]
+        }
+      },
+      "5fs_br:fall_damage_jelly": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:no_fall_damage_jelly"
+          ]
+        }
+      }
+    }
+  }
+}

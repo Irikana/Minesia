@@ -1,0 +1,27 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.husk_camel": {
+      "initial_state": "idle",
+      "states": {
+        "idle": {
+          "animations": ["idle"],
+          "transitions": [
+            { "walking": "q.is_alive && q.modified_move_speed > 0.05" },
+            { "death": "!q.is_alive" }
+          ]
+        },
+        "walking": {
+          "animations": ["walking"],
+          "transitions": [
+            { "idle": "q.is_alive && q.modified_move_speed <= 0.05 && !q.is_sitting" },
+            { "death": "!q.is_alive" }
+          ]
+        },
+        "death": {
+          "animations": ["death"]
+        }
+      }
+    }
+  }
+}

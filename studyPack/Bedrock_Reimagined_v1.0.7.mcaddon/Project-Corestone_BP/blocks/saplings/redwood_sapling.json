@@ -1,0 +1,100 @@
+{
+	"format_version": "1.26.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "5fs_br:redwood_sapling",
+			"menu_category": {
+				"category": "nature"
+			},
+            "states": {
+                "5fs_br:age_bit": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ]
+            }
+		},
+		"components": {
+			"minecraft:collision_box": false,
+			"minecraft:selection_box": {
+				"origin": [
+					-6.5,
+					0,
+					-6.5
+				],
+				"size": [
+					13,
+					13,
+					13
+				]
+			},
+			"minecraft:light_dampening": 0,
+			"minecraft:geometry": "minecraft:geometry.cross",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "redwood_sapling",
+					"render_method": "alpha_test_single_sided",
+					"face_dimming": false,
+					"ambient_occlusion": false
+				}
+			},
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"block_filter": [
+							{
+								"tags": "query.any_tag('dirt')"
+							},
+							"minecraft:grass_block",
+							"minecraft:dirt",
+							"minecraft:moss_block",
+							"minecraft:pale_moss_block",
+							"minecraft:mycelium",
+							"minecraft:coarse_dirt",
+							"minecraft:dirt_with_roots",
+							"minecraft:muddy_mangrove_roots",
+                            "5fs_br:autumn_grass"
+						],
+						"allowed_faces": [
+							"up"
+						]
+					}
+				]
+			},
+			"minecraft:flammable": true,
+			"minecraft:liquid_detection": {
+				"detection_rules": [
+					{
+						"on_liquid_touches": "popped",
+						"can_contain_liquid": true
+					}
+				]
+			},
+			"minecraft:movable": {
+				"movement_type": "popped"
+			},
+			"minecraft:flower_pottable": {},
+			"minecraft:embedded_visual": {
+				"geometry": "geometry.potted_plant",
+				"material_instances": {
+					"*": {
+						"texture": "redwood_sapling",
+						"render_method": "alpha_test",
+						"ambient_occlusion": false,
+						"face_dimming": false
+					}
+				}
+			},
+            "minecraft:precipitation_interactions": {
+                "precipitation_behavior": "none"
+            },
+            "minecraft:connection_rule": {
+                "accepts_connections_from": "none"
+            },
+			"5fs_br:sapling": {}
+		}
+	}
+}

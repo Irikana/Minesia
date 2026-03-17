@@ -1,0 +1,26 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:weighted_random_feature": {
+        "description": {
+            "identifier": "5fs_br:warm/pointed_sandstone/weighted_pointed_sandstone_ceiling"
+        },
+        "features": [
+            [
+                "5fs_br:warm/pointed_sandstone/scatter_pointed_sandstone_1_ceiling_feature",
+                2
+            ],
+            [
+                "5fs_br:warm/pointed_sandstone/scatter_pointed_sandstone_2_ceiling_feature",
+                3
+            ],
+            [
+                "5fs_br:warm/pointed_sandstone/scatter_pointed_sandstone_3_ceiling_feature",
+                3
+            ],
+            [
+                "5fs_br:warm/pointed_sandstone/scatter_pointed_sandstone_4_ceiling_feature",
+                3
+            ]
+        ]
+    }
+}

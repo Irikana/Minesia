@@ -1,0 +1,32 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "5fs_br:maple_fence"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"P": {
+				"item": "5fs_br:maple_planks"
+			},
+			"S": {
+				"item": "minecraft:stick"
+			}
+		},
+		"pattern": [
+			"PSP",
+			"PSP"
+		],
+		"result": {
+			"item": "5fs_br:maple_fence",
+			"count": 3
+		},
+		"unlock": [
+			{
+				"item": "5fs_br:maple_planks"
+			}
+		]
+	}
+}

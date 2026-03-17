@@ -1,0 +1,36 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "5fs_br:chipped_ring_of_pharaohs_curse"
+		},
+		"tags": [
+			"jeweling_station"
+		],
+		"key": {
+			"A": {
+				"item": "minecraft:netherite_ingot"
+			},
+			"B": {
+				"item": "5fs_br:mummified_bones"
+			},
+			"C": {
+				"item": "5fs_br:meteorite_ingot"
+			},
+			"D": {
+				"item": "5fs_br:worn_ring_of_pharaohs_curse"
+			}
+		},
+		"pattern": [
+			"ABA",
+			"CDC",
+			"ACA"
+		],
+		"result": {
+			"item": "5fs_br:chipped_ring_of_pharaohs_curse"
+		},
+		"unlock": {
+			"context": "AlwaysUnlocked"
+		}
+	}
+}

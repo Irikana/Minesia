@@ -1,0 +1,41 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.armadillo_head_attachable",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 5,
+				"visible_bounds_offset": [0, 2.5, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "waist",
+					"parent": "root",
+					"pivot": [0, 12, 0]
+				},
+				{
+					"name": "body",
+					"parent": "waist",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "head",
+					"parent": "body",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{"origin": [1.5, 32.43388, 2.19217], "size": [2, 5, 0], "pivot": [1.5, 34.43388, 2.19217], "rotation": [-59.52, 11.8656, -19.2565], "uv": [47, 10]},
+						{"origin": [-3.5, 32.43388, 2.19217], "size": [2, 5, 0], "pivot": [-1.5, 34.43388, 2.19217], "rotation": [-59.52, -11.8655, 19.2566], "uv": [43, 10]},
+						{"origin": [-1.5, 29.49686, 0.4979], "size": [3, 5, 2], "pivot": [0, 33.49686, 1.4979], "rotation": [-90, 0, 0], "uv": [43, 15]}
+					]
+				}
+			]
+		}
+	]
+}

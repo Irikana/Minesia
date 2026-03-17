@@ -1,0 +1,96 @@
+{
+    "format_version": "1.21.60",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "5fs_br:icicle",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false,
+            "runtime_identifier": "minecraft:snowball",
+            "properties": {
+                "5fs_br:icicle_type": {
+                    "client_sync": true,
+                    "type": "enum",
+                    "default": "normal",
+                    "values": [
+                        "normal",
+                        "splash"
+                    ]
+                }
+            }
+        },
+        "component_groups": {
+            "5fs_br:normal_variant": {
+                "minecraft:variant": {
+                    "value": 0
+                }
+            },
+            "5fs_br:splash_variant": {
+                "minecraft:variant": {
+                    "value": 1
+                }
+            }
+        },
+        "components": {
+            "minecraft:collision_box": false,
+            "minecraft:physics": {},
+            "minecraft:pushable": {
+                "is_pushable": false,
+                "is_pushable_by_piston": false
+            },
+            "minecraft:projectile": {
+                "on_hit": {
+                    "impact_damage": {
+                        "damage": [
+                            3,
+                            3
+                        ],
+                        "knockback": true,
+                        "semi_random_diff_damage": false,
+                        "destroy_on_hit": false
+                    }
+                },
+                "shoot_sound": "throw",
+                "power": 1,
+                "gravity": 0.05,
+                "uncertainty_base": 0.5,
+                "uncertainty_multiplier": 1,
+                "stop_on_hurt": true,
+                "anchor": 1,
+                "offset": [
+                    0,
+                    1,
+                    0
+                ]
+            },
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "cause": "all",
+                    "deals_damage": "no"
+                }
+            },
+            "minecraft:type_family": {
+                "family": [
+                    "inanimate",
+                    "nolife"
+                ]
+            }
+        },
+        "events": {
+            "5fs_br:set_normal": {
+                "add": {
+                    "component_groups": [
+                        "5fs_br:normal_variant"
+                    ]
+                }
+            },
+            "5fs_br:set_splash": {
+                "add": {
+                    "component_groups": [
+                        "5fs_br:splash_variant"
+                    ]
+                }
+            }
+        }
+    }
+}

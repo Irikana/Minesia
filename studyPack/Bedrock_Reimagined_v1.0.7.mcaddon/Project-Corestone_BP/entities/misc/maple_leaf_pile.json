@@ -1,0 +1,245 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "5fs_br:maple_leaf_pile",
+      "spawn_category": "misc",
+      "is_spawnable": false,
+      "is_summonable": true
+    },
+    "component_groups": {
+      "5fs_br:despawn": {
+        "minecraft:instant_despawn": {}
+      },
+      "5fs_br:shrinkify": {
+        "minecraft:movement": {
+          "value": 0
+        },
+        "minecraft:health": {
+          "max": 10
+        },
+        "minecraft:scale": {
+          "value": 0.3
+        }
+      },
+      "5fs_br:gigantify": {
+        "minecraft:movement": {
+          "value": 0
+        },
+        "minecraft:health": {
+          "max": 40
+        },
+        "minecraft:scale": {
+          "value": 2.4
+        }
+      },
+      "5fs_br:normal_scale": {
+        "minecraft:movement": {
+          "value": 0
+        },
+        "minecraft:health": {
+          "max": 20
+        },
+        "minecraft:scale": {
+          "value": 1.2
+        }
+      },
+      "5fs_br:no_fall_damage_jelly": {
+        "minecraft:damage_sensor": {
+          "triggers": {
+            "cause": "fall",
+            "deals_damage": "no"
+          }
+        }
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": [
+          "leaf_pile",
+          "structure",
+          "nolife"
+        ]
+      },
+      "minecraft:interact": {
+        "interactions": [
+          {
+            "on_interact": {
+              "event": "5fs_br:despawn",
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "5fs_br:crystalline_shears"
+                  }
+                ]
+              }
+            },
+            "swing": true,
+            "hurt_item": 1,
+            "interact_text": "action.interact.pick_up",
+            "play_sounds": "pop"
+          }
+        ]
+      },
+      "minecraft:body_rotation_blocked": {},
+      "minecraft:collision_box": {
+        "width": 1.5,
+        "height": 2
+      },
+      "minecraft:rideable": {
+        "seat_count": 1,
+        "crouching_skip_interact": true,
+        "family_types": [
+          "player"
+        ],
+        "interact_text": "action.interact.hide",
+        "seats": {
+          "position": [
+            0,
+            0.1,
+            0
+          ]
+        }
+      },
+      "minecraft:scale": {
+        "value": 1.2
+      },
+      "minecraft:health": {
+        "value": 1
+      },
+      "minecraft:physics": {
+        "has_gravity": true
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "cause": "all",
+            "deals_damage": "no",
+            "on_damage": {
+              "event": "5fs_br:despawn"
+            }
+          }
+        ]
+      },
+      "minecraft:movement": {
+        "value": 0
+      },
+      "minecraft:environment_sensor": {
+        "triggers": [
+          {
+            "filters": [
+              {
+                "subject": "self",
+                "test": "rider_count",
+                "value": 0
+              },
+              {
+                "subject": "self",
+                "test": "has_tag",
+                "operator": "==",
+                "value": "5fs_br:has_hidden"
+              }
+            ],
+            "event": "5fs_br:dismount"
+          }
+        ]
+      },
+      "minecraft:on_death": {
+        "event": "5fs_br:despawn"
+      }
+    },
+    "events": {
+      "5fs_br:despawn": {
+        "queue_command": {
+          "command": [
+            "loot spawn ~ ~ ~ loot \"entities/maple_leaf_pile\"",
+            "particle 5fs_br:maple_leaf_pile ~ ~ ~",
+            "playsound block.leaf_litter.break @a[r=16] ~ ~ ~ 1 1",
+            "event entity @s 5fs_br:instant_despawn"
+          ]
+        }
+      },
+      "5fs_br:instant_despawn": {
+        "add": {
+          "component_groups": [
+            "5fs_br:despawn"
+          ]
+        }
+      },
+      "5fs_br:dismount": {
+        "sequence": [
+          {
+            "queue_command": {
+              "command": "scriptevent 5fs_br:maple_leaves_dismount"
+            }
+          }
+        ]
+      },
+      "5fs_br:normal_scale": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:shrinkify",
+            "5fs_br:gigantify"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:normal_scale"
+          ]
+        }
+      },
+      "5fs_br:gigantify": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:shrinkify",
+            "5fs_br:normal_scale"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:gigantify"
+          ]
+        }
+      },
+      "5fs_br:shrinkify": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:gigantify",
+            "5fs_br:normal_scale"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:shrinkify"
+          ]
+        }
+      },
+      "5fs_br:no_fall_damage_jelly": {
+        "add": {
+          "component_groups": [
+            "5fs_br:no_fall_damage_jelly"
+          ]
+        }
+      },
+      "5fs_br:fall_damage_jelly": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:no_fall_damage_jelly"
+          ]
+        }
+      }
+    }
+  }
+}

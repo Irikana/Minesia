@@ -1,0 +1,94 @@
+{
+	"format_version": "1.21.100",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "5fs_br:boss_spawner",
+			"is_summonable": true,
+			"is_spawnable": false,
+			"properties": {
+				"5fs_br:boss": {
+					"client_sync": true,
+					"type": "enum",
+					"default": "mummified_pharaoh",
+					"values": [
+						"crystalline_berserker",
+						"mummified_pharaoh",
+						"ombari"
+					]
+				}
+			}
+		},
+		"component_groups": {
+			"5fs_br:despawn": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"components": {
+            "minecraft:conditional_bandwidth_optimization": {},
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "cause": "all",
+                    "deals_damage": "no"
+                }
+            },
+            "minecraft:type_family": {
+                "family": [
+                    "inanimate",
+                    "nolife"
+                ]
+            },
+			"minecraft:physics": {
+				"has_collision": false,
+				"has_gravity": false
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+            "minecraft:collision_box": {
+                "width": 0,
+                "height": 0
+            },
+            "minecraft:health": {
+                "value": 1,
+				"min": 1
+            },
+            "minecraft:knockback_resistance": {
+                "value": 100,
+                "max": 100
+            },
+            "minecraft:nameable": {
+                "allow_name_tag_renaming": false,
+                "always_show": false
+            },
+			"minecraft:entity_sensor": {
+				"subsensors": [
+					{
+						"minimum_count": 1,
+						"cooldown": 0.1,
+						"event": "5fs_br:detect_player",
+						"range": [
+							256,
+							128
+						],
+						"event_filters": {
+							"test": "is_family",
+							"subject": "other",
+							"value": "player"
+						}
+					}
+				]
+			},
+            "minecraft:persistent": {}
+		},
+		"events": {
+			"5fs_br:detect_player": {
+				"queue_command": {
+					"command": [
+						"scriptevent 5fs_br:boss_spawner"
+					]
+				}
+			}
+		}
+	}
+}

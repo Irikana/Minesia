@@ -1,0 +1,34 @@
+{
+    "format_version": "1.10.0",
+    "animations": {
+        "animation.mummified_pharaoh.hammer_slam": {
+            "animation_length": 2.75,
+            "loop": false,
+            "timeline": {
+                "1.13": "/scriptevent 5fs_br:pharaoh_hammer_slam"
+            }
+        },
+        "animation.mummified_pharaoh.hammer_swing": {
+            "animation_length": 3,
+            "loop": false,
+            "timeline": {
+                "0.95": "/scriptevent 5fs_br:pharaoh_hammer_swing"
+            }
+        },
+        "animation.mummified_pharaoh.melee_attack": {
+            "animation_length": 4,
+            "loop": true
+        },
+        "animation.mummified_pharaoh.sandstorm_attack": {
+            "animation_length": 120,
+            "loop": true,
+            "timeline": {
+                "40.0": [
+                    "/weather thunder",
+                    "/tag @a[r=64] add 5fs_br:pharaoh_sandstorm",
+                    "/event entity @a[r=64] 5fs_br:sandstorm"
+                ]
+            }
+        }
+    }
+}

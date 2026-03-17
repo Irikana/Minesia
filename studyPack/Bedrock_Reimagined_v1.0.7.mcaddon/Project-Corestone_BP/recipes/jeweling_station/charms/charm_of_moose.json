@@ -1,0 +1,30 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "5fs_br:charm_of_moose"
+		},
+		"tags": [
+			"jeweling_station"
+		],
+		"key": {
+			"O": {
+                "item": "5fs_br:steel_ingot"
+            },
+            "P": {
+                "item": "5fs_br:moose_hide"
+            }
+		},
+		"pattern": [
+			"OPO",
+			"PPP",
+			"OPO"
+		],
+		"result": {
+			"item": "5fs_br:charm_of_moose"
+		},
+		"unlock": {
+			"context": "AlwaysUnlocked"
+		}
+	}
+}

@@ -1,0 +1,199 @@
+{
+    "format_version": "1.26.0",
+	"minecraft:block": {
+        "description": {
+            "identifier": "5fs_br:medium_rose_quartz_geode",
+            "menu_category": {
+                "category": "nature"
+            },
+            "states": {
+                "5fs_br:size": [
+                    0,
+                    1
+                ]
+            },
+            "traits": {
+                "minecraft:placement_position": {
+                    "enabled_states": [
+                        "minecraft:block_face"
+                    ]
+                }
+            }
+        },
+        "components": {
+            "minecraft:map_color": "#F7C1D9",
+            "minecraft:geometry": {
+                "identifier": "geometry.medium_geode",
+                "bone_visibility": {
+                    "medium_geode_0": "q.block_state('5fs_br:size') == 0",
+                    "medium_geode_1": "q.block_state('5fs_br:size') == 1"
+                }
+            },
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "rose_quartz_geode_2"
+                },
+                "geode_0": {
+                    "texture": "rose_quartz_geode_0"
+                },
+                "geode_1": {
+                    "texture": "rose_quartz_geode_1"
+                },
+                "geode_2": {
+                    "texture": "rose_quartz_geode_2"
+                },
+                "geode_3": {
+                    "texture": "rose_quartz_geode_3"
+                },
+                "geode_4": {
+                    "texture": "rose_quartz_geode_4"
+                },
+                "geode_5": {
+                    "texture": "rose_quartz_geode_5"
+                },
+                "geode_6": {
+                    "texture": "rose_quartz_geode_6"
+                },
+                "geode_7": {
+                    "texture": "rose_quartz_geode_7"
+                }
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 1.5
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 1.5
+            },
+            "minecraft:collision_box": {
+                "origin": [
+                    -5,
+                    0,
+                    -5
+                ],
+                "size": [
+                    10,
+                    10,
+                    10
+                ]
+            },
+            "minecraft:selection_box": {
+                "origin": [
+                    -5,
+                    0,
+                    -5
+                ],
+                "size": [
+                    10,
+                    10,
+                    10
+                ]
+            },
+            "minecraft:light_emission": 4,
+            "minecraft:liquid_detection": {
+                "detection_rules": [
+                    {
+                        "can_contain_liquid": true,
+                        "liquid_type": "water",
+                        "on_liquid_touches": "blocking"
+                    }
+                ]
+            },
+            "minecraft:movable": {
+                "movement_type": "popped"
+            },
+            "minecraft:loot": "loot_tables/blocks/geodes/rose_quartz/medium_geode.json",
+			"minecraft:precipitation_interactions": {
+				"precipitation_behavior": "obstruct_rain"
+			},
+            "minecraft:connection_rule": {
+                "accepts_connections_from": "none"
+            },
+            "5fs_br:random_state_on_place": {
+                "state_name": "5fs_br:size",
+                "max_state": 1,
+                "chance": 0.5
+            },
+            "tag:minecraft:is_pickaxe_item_destructible": {}
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('minecraft:block_face') == 'west'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            0,
+                            90
+                        ]
+                    },
+                    "tag:5fs_br:west": {}
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:block_face') == 'east'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            0,
+                            -90
+                        ]
+                    },
+                    "tag:5fs_br:east": {}
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:block_face') == 'down'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            180,
+                            0,
+                            0
+                        ]
+                    },
+                    "tag:5fs_br:down": {}
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:block_face') == 'up'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            0,
+                            0
+                        ]
+                    },
+                    "tag:5fs_br:up": {}
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:block_face') == 'north'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            90,
+                            180,
+                            0
+                        ]
+                    },
+                    "tag:5fs_br:north": {}
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:block_face') == 'south'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            90,
+                            0,
+                            0
+                        ]
+                    },
+                    "tag:5fs_br:south": {}
+                }
+            }
+        ]
+    }
+}

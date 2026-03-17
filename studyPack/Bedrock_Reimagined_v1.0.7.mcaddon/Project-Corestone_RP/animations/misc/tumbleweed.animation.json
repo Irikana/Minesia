@@ -1,0 +1,32 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.tumbleweed.move": {
+			"loop": true,
+			"animation_length": 1,
+			"bones": {
+				"block": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"1.0": [360, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.5": [0, 1, 0],
+						"1.0": [0, 0, 0]
+					}
+				}
+			},
+			"particle_effects": {
+				"0.0": {
+					"effect": "tumbleweed_dust",
+					"pre_effect_script": "v.surface_particle_color = q.surface_particle_color;"
+				},
+				"0.5": {
+					"effect": "tumbleweed_dust",
+					"pre_effect_script": "v.surface_particle_color = q.surface_particle_color;"
+				}
+			}
+		}
+	}
+}

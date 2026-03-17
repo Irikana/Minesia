@@ -1,0 +1,41 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "5fs_br:cape_of_ghast",
+      "materials": {
+        "default": "armor",
+        "enchanted": "armor_enchanted"
+      },
+      "textures": {
+        "ghast0":  "textures/entity/gears/capes/ghast/ghast0",
+        "ghast1":  "textures/entity/gears/capes/ghast/ghast1",
+        "ghast2":  "textures/entity/gears/capes/ghast/ghast2",
+        "ghast3":  "textures/entity/gears/capes/ghast/ghast3",
+        "ghast4":  "textures/entity/gears/capes/ghast/ghast4",
+        "ghast5":  "textures/entity/gears/capes/ghast/ghast5",
+        "ghast6":  "textures/entity/gears/capes/ghast/ghast6",
+        "ghast7":  "textures/entity/gears/capes/ghast/ghast7",
+        "ghast8":  "textures/entity/gears/capes/ghast/ghast8",
+        "ghast9":  "textures/entity/gears/capes/ghast/ghast9",
+        "ghast10": "textures/entity/gears/capes/ghast/ghast10",
+        "enchanted": "textures/misc/enchanted_actor_glint"
+      },
+      "geometry": {
+        "default": "geometry.custom_cape"
+      },
+      "animations": {
+        "cape": "animation.custom_cape"
+      },
+      "scripts": {
+        "parent_setup": "variable.chest_layer_visible = 0.0;",
+        "animate": [
+          "cape"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.cape_of_ghast"
+      ]
+    }
+  }
+}

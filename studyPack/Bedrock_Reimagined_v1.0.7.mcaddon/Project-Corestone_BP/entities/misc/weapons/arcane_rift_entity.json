@@ -1,0 +1,61 @@
+{
+  "format_version": "1.21.40",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "5fs_br:arcane_rift_entity",
+      "is_spawnable": false,
+      "is_summonable": true
+    },
+    "component_groups": {
+      "5fs_br:despawn": {
+        "minecraft:instant_despawn": {}
+      }
+    },
+    "components": {
+      "minecraft:collision_box": {
+        "width": 0.25,
+        "height": 0.25
+      },
+      "minecraft:physics": {},
+      "minecraft:conditional_bandwidth_optimization": {
+        "default_values": {
+          "max_optimized_distance": 80.0,
+          "max_dropped_ticks": 7,
+          "use_motion_prediction_hints": false
+        }
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "cause": "all",
+            "deals_damage": "no"
+          }
+        ]
+      },
+      "minecraft:timer": {
+        "looping": true,
+        "time": 0.1,
+        "time_down_event": {
+          "event": "5fs_br:particle",
+          "target": "self"
+        }
+      }
+    },
+    "events": {
+      "5fs_br:particle": {
+        "queue_command": {
+          "command": [
+            "particle 5fs_br:arcane_rift_particle ~~~"
+          ]
+        }
+      },
+      "5fs_br:despawn": {
+        "add": {
+          "component_groups": [
+            "5fs_br:despawn"
+          ]
+        }
+      }
+    }
+  }
+}

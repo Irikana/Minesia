@@ -1,0 +1,23 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.steel_wand.3pp": {
+			"loop": true,
+			"bones": {
+				"wand": {
+					"rotation": [90, 0, 0],
+					"position": [0, 21, -2]
+				}
+			}
+		},
+		"animation.steel_wand.1fp": {
+			"loop": true,
+			"bones": {
+				"wand": {
+					"rotation": [50.62539, 56.85811, 248.07543],
+					"position": [0, 25, 4]
+				}
+			}
+		}
+	}
+}

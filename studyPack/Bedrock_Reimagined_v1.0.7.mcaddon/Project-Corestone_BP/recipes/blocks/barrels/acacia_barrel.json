@@ -1,0 +1,35 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "5fs_br:acacia_barrel"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "SWS",
+      "S S",
+      "SWS"
+    ],
+    "key": {
+      "S": {
+        "item": "minecraft:acacia_planks"
+      },
+      "W": {
+        "item": "minecraft:acacia_slab"
+      }
+    },
+    "result": {
+      "item": "5fs_br:acacia_barrel"
+    },
+    "unlock": [
+      {
+        "item": "minecraft:acacia_planks"
+      },
+      {
+        "item": "minecraft:acacia_slab"
+      }
+    ]
+  }
+}

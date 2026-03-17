@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "cyan_flag_warden",
+		"metalness_emissive_roughness": "cyan_flag_warden_mer"
+	}
+}

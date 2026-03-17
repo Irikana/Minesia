@@ -1,0 +1,22 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_brewing_mix": {
+    "description": {
+      "identifier": "5fs_br:splash_illumination_potion_glowstone_lvl1"
+    },
+    "tags": [
+      "brewing_stand"
+    ],
+    "input": "5fs_br:splash_illumination_potion",
+    "reagent": "minecraft:glowstone_dust",
+    "output": "5fs_br:splash_illumination_potion_glowstone_lvl1",
+    "unlock": [
+      {
+        "item": "5fs_br:splash_illumination_potion"
+      },
+      {
+        "item": "minecraft:glowstone_dust"
+      }
+    ]
+  }
+}

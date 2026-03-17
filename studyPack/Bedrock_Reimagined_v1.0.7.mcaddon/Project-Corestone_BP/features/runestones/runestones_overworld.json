@@ -1,0 +1,73 @@
+{
+    "format_version": "1.21.60",
+    "minecraft:single_block_feature": {
+        "description": {
+            "identifier": "5fs_br:runestones/runestones_overworld"
+        },
+        "places_block": [
+            {
+                "block": {
+                    "name": "5fs_br:runestone_of_storms"
+                    
+                },
+                "weight": 25
+            },
+            {
+                "block": {
+                    "name": "5fs_br:runestone_of_shields"
+                    
+                },
+                "weight": 25
+            },
+            {
+                "block": {
+                    "name": "5fs_br:runestone_of_souls"
+                    
+                },
+                "weight": 25
+            },
+            {
+                "block": {
+                    "name": "5fs_br:runestone_of_shadows"
+                    
+                },
+                "weight": 25
+            },
+            {
+                "block": {
+                    "name": "5fs_br:runestone_of_knowledge"
+                    
+                },
+                "weight": 25
+            },
+            {
+                "block": {
+                    "name": "5fs_br:runestone_of_growth"
+                    
+                },
+                "weight": 25
+            },
+            {
+                "block": {
+                    "name": "5fs_br:runestone_of_eternity"
+                    
+                },
+                "weight": 25
+            },
+            {
+                "block": {
+                    "name": "5fs_br:runestone_of_blades"
+                    
+                },
+                "weight": 25
+            }
+        ],
+        "enforce_placement_rules": false,
+        "enforce_survivability_rules": false,
+        "may_replace": [
+            "minecraft:stone",
+            "minecraft:deepslate",
+            "5fs_br:glintrock"
+        ]
+    }
+}

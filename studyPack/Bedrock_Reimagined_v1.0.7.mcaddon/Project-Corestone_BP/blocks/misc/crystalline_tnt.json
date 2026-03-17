@@ -1,0 +1,47 @@
+{
+    "format_version": "1.26.0",
+	"minecraft:block": {
+        "description": {
+            "identifier": "5fs_br:crystalline_tnt",
+            "menu_category": {
+                "category": "items"
+            },
+            "states": {
+                "5fs_br:powered": [false, true]
+            }
+        },
+        "components": {
+            "minecraft:geometry": "minecraft:geometry.full_block",
+            "minecraft:material_instances": {
+                "up": {
+                    "texture": "crystalline_tnt_top"
+                },
+                "down": {
+                    "texture": "crystalline_tnt_bottom"
+                },
+                "*": {
+                    "texture": "crystalline_tnt_side"
+                }
+            },
+            "minecraft:tick": {
+                "looping": true,
+                "interval_range": [20, 200]
+            },
+            "minecraft:redstone_conductivity": {
+                "redstone_conductor": true
+            },
+            "minecraft:map_color": "#A8E6A3",
+            "minecraft:light_dampening": 0,
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 0
+            },
+            "minecraft:redstone_consumer": {
+                "min_power": 0
+            },
+            "5fs_br:crystalline_tnt": {}
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:scatter_feature": {
+        "description": {
+            "identifier": "5fs_br:flowers/scatter_birch_forest_flower_feature"
+        },
+        "iterations": 80,
+        "x": {
+            "distribution": "triangle",
+            "extent": [
+                -10,
+                10
+            ]
+        },
+        "y": {
+            "distribution": "triangle",
+            "extent": [
+                -4,
+                4
+            ]
+        },
+        "z": {
+            "distribution": "triangle",
+            "extent": [
+                -10,
+                10
+            ]
+        },
+        "places_feature": "5fs_br:flowers/birch_forest_flower"
+    }
+}

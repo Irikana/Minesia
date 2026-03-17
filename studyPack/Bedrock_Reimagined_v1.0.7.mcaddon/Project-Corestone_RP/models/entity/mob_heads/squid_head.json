@@ -1,0 +1,57 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.squid_head_attachable",
+				"texture_width": 64,
+				"texture_height": 32,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 3,
+				"visible_bounds_offset": [0, 1.5, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "waist",
+					"parent": "root",
+					"pivot": [0, 12, 0]
+				},
+				{
+					"name": "body",
+					"parent": "waist",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "head",
+					"parent": "body",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{
+							"origin": [-6, 24, -6],
+							"size": [12, 16, 12],
+							"uv": {
+								"north": {"uv": [12, 12], "uv_size": [12, 16]},
+								"east": {"uv": [0, 12], "uv_size": [12, 16]},
+								"south": {"uv": [36, 12], "uv_size": [12, 16]},
+								"west": {"uv": [24, 12], "uv_size": [12, 16]},
+								"up": {"uv": [12, 0], "uv_size": [12, 12]}
+							}
+						},
+						{"origin": [8.8, 7, 4], "size": [2, 18, 2], "pivot": [4.9, 32, 5], "rotation": [0, 90, 0], "uv": [48, 0]},
+						{"origin": [1.05025, 7, 6], "size": [2, 18, 2], "pivot": [-1.44975, 32, 3.5], "rotation": [0, 45, 0], "uv": [48, 0]},
+						{"origin": [-1, 7, 3.9], "size": [2, 18, 2], "uv": [48, 0]},
+						{"origin": [-3.05025, 7, 6], "size": [2, 18, 2], "pivot": [1.44975, 32, 3.5], "rotation": [0, -45, 0], "uv": [48, 0]},
+						{"origin": [-10.4, 7, 4], "size": [2, 18, 2], "pivot": [-4.9, 32, 5], "rotation": [0, -90, 0], "uv": [48, 0]},
+						{"origin": [-12.94975, 7, -8], "size": [2, 18, 2], "pivot": [-8.44975, 32, -3.5], "rotation": [-180, -45, 180], "uv": [48, 0]},
+						{"origin": [-1, 7, -15.9], "size": [2, 18, 2], "pivot": [0, 32, -9.9], "rotation": [-180, 0, 180], "uv": [48, 0]},
+						{"origin": [10.94975, 7, -8], "size": [2, 18, 2], "pivot": [8.44975, 32, -3.5], "rotation": [180, 45, 180], "uv": [48, 0]}
+					]
+				}
+			]
+		}
+	]
+}

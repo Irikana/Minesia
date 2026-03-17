@@ -1,0 +1,19 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:item": {
+    "description": {
+      "identifier": "5fs_br:maple_tree_tap",
+      "menu_category": {
+        "category": "items"
+      }
+    },
+    "components": {
+      "minecraft:icon": "5fs_br:maple_tree_tap",
+      "minecraft:max_stack_size": 1,
+      "minecraft:block_placer": {
+        "block": "5fs_br:maple_tree_tap",
+        "replace_block_item": true
+      }
+    }
+  }
+}

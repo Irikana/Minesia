@@ -1,0 +1,68 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "5fs_br:crystalline_berserker",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/crystaline_boss"
+			},
+			"geometry": {
+				"default": "geometry.crystaline_boss"
+			},
+			"scripts": {
+				"animate": [
+                    {
+                        "emerging": "q.is_emerging"
+                    },
+                    {
+                        "root_controller": "!q.is_emerging"
+                    }
+				]
+			},
+			"animations": {
+                "emerging": "animation.crystalline_berserker.emerging",
+				"look_at_target": "animation.common.look_at_target",
+				"idle_0": "animation.crystalline_berserker.idle_0",
+				"idle_1": "animation.crystalline_berserker.idle_1",
+				"walk": "animation.crystalline_berserker.walk",
+				"swim": "animation.crystalline_berserker.swimming",
+				"slam_attack": "animation.crystalline_berserker.slam_attack",
+				"punch_attack": "animation.crystalline_berserker.punch_attack",
+				"crystal_throw": "animation.crystalline_berserker.crystal_throw",
+				"fist_shoot": "animation.crystalline_berserker.fist_shoot",
+				"roll": "animation.crystalline_berserker.roll",
+				"death": "animation.crystalline_berserker.death",
+                "death_rotation": "animation.crystalline_berserker.death_rotation",
+				"root_controller": "controller.animation.crystalline_berserker.root",
+				"general_controller": "controller.animation.crystalline_berserker.general",
+				"attack_controller": "controller.animation.crystalline_berserker.attack"
+			},
+			"render_controllers": [
+				"controller.render.boss"
+			],
+			"sound_effects": {
+				"idle": "mob.crystalline_berserker.idle",
+				"idle_2": "mob.crystalline_berserker.idle_2",
+				"death": "mob.crystalline_berserker.death",
+				"crystal_throw": "mob.crystalline_berserker.crystal_throw",
+				"fist_shoot": "mob.crystalline_berserker.fist_shoot",
+				"punch": "mob.crystalline_berserker.punch",
+				"roll": "mob.crystalline_berserker.roll",
+				"slam": "mob.crystalline_berserker.slam",
+				"emerging": "mob.crystalline_berserker.emerging"
+			},
+			"particle_effects": {
+				"berserker_smash": "5fs_br:berserker_smash",
+				"berserker_emerging_crystals": "5fs_br:berserker_emerging_crystals",
+				"berserker_emerging_smoke": "5fs_br:berserker_emerging_smoke",
+				"berserker_emerged_crystals": "5fs_br:berserker_emerged_crystals"
+			},
+			"spawn_egg": {
+        		"texture": "5fs_br:crystalline_boss"
+			}
+		}
+	}
+}

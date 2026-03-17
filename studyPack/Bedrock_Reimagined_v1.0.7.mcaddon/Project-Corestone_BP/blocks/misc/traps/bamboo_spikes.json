@@ -1,0 +1,84 @@
+{
+    "format_version": "1.26.0",
+	"minecraft:block": {
+        "description": {
+            "identifier": "5fs_br:bamboo_spikes",
+            "menu_category": {
+                "category": "items"
+            }
+        },
+        "components": {
+            "minecraft:geometry":  "geometry.bamboo_spikes",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "bamboo_block",
+                    "render_method": "alpha_test"
+                },
+                "up": {
+                    "texture": "bamboo_block_top",
+                    "render_method": "alpha_test"
+                },
+                "down": {
+                    "texture": "bamboo_block_top",
+                    "render_method": "alpha_test"
+                },
+                "spike": {
+                    "texture": "bamboo_spikes",
+                    "render_method": "alpha_test"
+                }
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 2
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 2
+            },
+            "minecraft:flammable": true,
+            "minecraft:light_dampening": 0,
+            "minecraft:selection_box": {
+                "origin": [
+                    -8,
+                    0,
+                    -8
+                ],
+                "size": [
+                    16,
+                    1,
+                    16
+                ]
+            },
+            "minecraft:collision_box": {
+                "origin": [
+                    -8,
+                    0,
+                    -8
+                ],
+                "size": [
+                    16,
+                    4,
+                    16
+                ]
+            },
+            "minecraft:map_color": "#006600",
+            "minecraft:precipitation_interactions": {
+                "precipitation_behavior": "obstruct_rain"
+            },
+            "minecraft:liquid_detection": {
+                "detection_rules": [
+                    {
+                        "can_contain_liquid": true,
+                        "liquid_type": "water",
+                        "on_liquid_touches": "no_reaction"
+                    }
+                ]
+            },
+            "minecraft:connection_rule": {
+                "accepts_connections_from": "none"
+            },
+            "5fs_br:bamboo_spikes": {
+                "damage": 3
+            },
+            "tag:minecraft:is_axe_item_destructible": {}
+        }
+    }
+}

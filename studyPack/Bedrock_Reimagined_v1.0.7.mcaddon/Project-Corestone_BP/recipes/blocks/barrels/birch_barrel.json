@@ -1,0 +1,35 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "5fs_br:birch_barrel"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "SWS",
+      "S S",
+      "SWS"
+    ],
+    "key": {
+      "S": {
+        "item": "minecraft:birch_planks"
+      },
+      "W": {
+        "item": "minecraft:birch_slab"
+      }
+    },
+    "result": {
+      "item": "5fs_br:birch_barrel"
+    },
+    "unlock": [
+      {
+        "item": "minecraft:birch_planks"
+      },
+      {
+        "item": "minecraft:birch_slab"
+      }
+    ]
+  }
+}

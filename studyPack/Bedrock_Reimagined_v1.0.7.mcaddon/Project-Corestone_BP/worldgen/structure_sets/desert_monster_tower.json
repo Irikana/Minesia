@@ -1,0 +1,21 @@
+{
+  "format_version": "1.21.20",
+  "minecraft:structure_set": {
+    "description": {
+      "identifier": "5fs_br:desert_monster_tower"
+    },
+    "placement": {
+      "type": "minecraft:random_spread",
+      "salt": 53845108,
+      "separation": 42,
+      "spacing": 88,
+      "spread_type": "linear"
+    },
+    "structures": [
+      {
+        "structure": "5fs_br:desert_monster_tower",
+        "weight": 1
+      }
+    ]
+  }
+}

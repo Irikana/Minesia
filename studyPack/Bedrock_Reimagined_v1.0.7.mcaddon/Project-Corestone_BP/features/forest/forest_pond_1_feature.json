@@ -1,0 +1,20 @@
+{
+    "format_version": "1.21.60",
+    "minecraft:structure_template_feature": {
+        "description": {
+            "identifier": "5fs_br:forest/forest_pond_1_feature"
+        },
+        "structure_name": "5fs_br:pond_1",
+        "adjustment_radius": 0,
+        "facing_direction": "south",
+        "constraints": {
+            "unburied": {},
+            "block_intersection": {
+                "block_allowlist": [
+                    "minecraft:grass_block",
+                    "minecraft:dirt"
+                ]
+            }
+        }
+    }
+}

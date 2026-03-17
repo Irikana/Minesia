@@ -1,0 +1,21 @@
+{
+    "format_version": "1.10.0",
+    "animations": {
+        "animation.crystalline_berserker.crystal_throw": {
+            "animation_length": 9,
+            "loop": true,
+            "timeline": {
+                "5.0": "/event entity @s 5fs_br:crystal_throw",
+                "9.0": "/event entity @s 5fs_br:crystal_throw_end"
+            }
+        },
+        "animation.crystalline_berserker.fist_shoot": {
+            "animation_length": 14,
+            "loop": true,
+            "timeline": {
+                "9.0": "/event entity @s 5fs_br:fist_shoot",
+                "14.0": "/event entity @s 5fs_br:fist_shoot_end"
+            }
+        }
+    }
+}

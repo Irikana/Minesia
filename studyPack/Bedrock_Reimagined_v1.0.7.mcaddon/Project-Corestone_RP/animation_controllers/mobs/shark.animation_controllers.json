@@ -1,0 +1,65 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.shark": {
+      "initial_state": "swimming",
+      "states": {
+        "swimming": {
+          "animations": ["swimming"],
+          "transitions": [
+            { "idle": "q.modified_move_speed <= 0.05 && q.is_alive" },
+            { "bite": "q.is_alive && q.has_target && q.is_in_water && q.any_animation_finished" },
+            { "eating": "q.is_alive && q.is_eating" },
+            { "thrash": "v.attack_time != 0.0 && q.is_alive" },
+            { "death": "!q.is_alive" }
+          ],
+          "blend_transition": 0.2
+        },
+        "idle": {
+          "animations": ["idle"],
+          "transitions": [
+            { "swimming": "q.modified_move_speed > 0.05 && q.is_alive" },
+            { "bite": "q.is_alive && q.has_target && q.is_in_water && q.any_animation_finished" },
+            { "eating": "q.is_alive && q.is_eating" },
+            { "thrash": "v.attack_time != 0.0 && q.is_alive" },
+            { "death": "!q.is_alive" }
+          ],
+          "blend_transition": 0.2
+        },
+        "bite": {
+          "animations": ["bite"],
+          "transitions": [
+            { "eating": "q.is_alive && q.is_eating" },
+            { "swimming": "q.any_animation_finished && q.modified_move_speed > 0.05 && q.is_alive" },
+            { "idle": "q.any_animation_finished && q.modified_move_speed <= 0.05 && q.is_alive" },
+            { "death": "!q.is_alive" }
+          ],
+          "blend_transition": 0.1
+        },
+        "thrash": {
+          "animations": ["thrash"],
+          "transitions": [
+            { "eating": "q.is_alive && q.is_eating" },
+            { "swimming": "q.any_animation_finished && q.modified_move_speed > 0.05 && q.is_alive" },
+            { "idle": "q.any_animation_finished && q.modified_move_speed <= 0.05 && q.is_alive" },
+            { "death": "!q.is_alive" }
+          ],
+          "blend_transition": 0.1
+        },
+        "eating": {
+          "animations": ["eating"],
+          "transitions": [
+            { "swimming": "q.any_animation_finished && q.modified_move_speed > 0.05 && q.is_alive && !q.is_eating" },
+            { "idle": "q.any_animation_finished && q.modified_move_speed <= 0.05 && q.is_alive && !q.is_eating" },
+            { "death": "!q.is_alive" }
+          ],
+          "blend_transition": 0.1
+        },
+        "death": {
+          "animations": ["death"],
+          "blend_transition": 0.2
+        }
+      }
+    }
+  }
+}

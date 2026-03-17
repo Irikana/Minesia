@@ -1,0 +1,23 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.obsidian_axe.1fp": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": [78.92526, 59.82602, -58.50046],
+					"position": [0, 10, 3]
+				}
+			}
+		},
+		"animation.obsidian_axe.3pp": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": [90, 0, 0],
+					"position": [0, 14, -1]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,27 @@
+{
+    "format_version": "1.20.80",
+    "minecraft:recipe_shapeless": {
+        "description": {
+            "identifier": "5fs_br:green_sheep_plushie"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "ingredients": [
+            {
+                "item": "minecraft:green_dye"
+            },
+            {
+                "tag": "5fs_br:sheep_plushie"
+            }
+        ],
+        "result": {
+            "item": "5fs_br:green_sheep_plushie"
+        },
+        "unlock": [
+            {
+                "tag": "5fs_br:sheep_plushie"
+            }
+        ]
+    }
+}

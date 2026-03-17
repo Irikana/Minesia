@@ -1,0 +1,33 @@
+{
+    "format_version": "1.8.0",
+    "render_controllers": {
+        "controller.render.boss": {
+            "geometry": "Geometry.default",
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "textures": [
+                "Texture.default"
+            ],
+            "is_hurt_color": {
+                "a": "!q.is_alive ? 0 : 0.25",
+                "b": "!q.is_alive ? 0 : 0",
+                "g": "!q.is_alive ? 0 : 0",
+                "r": "!q.is_alive ? 0 : 1.0"
+            },
+            "on_fire_color": {
+                "a": 0,
+                "b": 0,
+                "g": 0,
+                "r": 0
+            },
+            "part_visibility": [
+                {
+                    "hammer": "q.mark_variant != 2"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "format_version": "1.21.60",
+    "minecraft:weighted_random_feature": {
+        "description": {
+            "identifier": "5fs_br:redwood/weighted_redwood_fern"
+        },
+        "features": [
+            [
+                "5fs_br:redwood/redwood_fern",
+                1
+            ],
+            [
+                "5fs_br:redwood/large_redwood_fern",
+                1
+            ]
+        ]
+    }
+}

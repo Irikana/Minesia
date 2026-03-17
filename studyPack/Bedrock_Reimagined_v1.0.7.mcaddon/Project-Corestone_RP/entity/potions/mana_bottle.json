@@ -1,0 +1,29 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "5fs_br:mana_bottle",
+      "materials": {
+        "default": "entity_alphatest_glint"
+      },
+      "textures": {
+        "default": "textures/items/potions/mana_bottle",
+        "glint": "textures/misc/enchanted_item_glint"
+      },
+      "geometry": {
+        "default": "geometry.item_sprite"
+      },
+      "render_controllers": [
+        "controller.render.mana_bottle"
+      ],
+      "animations": {
+        "flying": "animation.actor.billboard"
+      },
+      "scripts": {
+        "animate": [
+          "flying"
+        ]
+      }
+    }
+  }
+}

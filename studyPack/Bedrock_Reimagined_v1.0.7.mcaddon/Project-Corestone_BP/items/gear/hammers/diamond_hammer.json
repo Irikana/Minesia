@@ -1,0 +1,62 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:item": {
+    "description": {
+      "identifier": "5fs_br:diamond_hammer",
+      "menu_category": {
+        "category": "equipment"
+      }
+    },
+    "components": {
+      "minecraft:icon": "5fs_br:diamond_hammer",
+      "minecraft:repairable": {
+        "repair_items": [
+          {
+            "items": [
+              "minecraft:diamond"
+            ],
+            "repair_amount": "q.max_durability * 0.25"
+          },
+          {
+            "items": [
+              "5fs_br:diamond_hammer"
+            ],
+            "repair_amount": "c.other->q.remaining_durability + (0.12 * c.other->q.max_durability)"
+          }
+        ]
+      },
+      "minecraft:durability": {
+        "damage_chance": {
+          "min": 100,
+          "max": 100
+        },
+        "max_durability": 1170
+      },
+      "minecraft:digger": {
+        "use_efficiency": true,
+        "destroy_speeds": [
+          {
+            "block": {
+              "tags": "query.any_tag('minecraft:is_pickaxe_item_destructible')"
+            },
+            "speed": 3
+          }
+        ]
+      },
+      "5fs_br:hammers": {},
+      "minecraft:damage": 4,
+      "minecraft:max_stack_size": 1,
+      "minecraft:hand_equipped": true,
+      "minecraft:enchantable": {
+        "slot": "pickaxe",
+        "value": 10
+      },
+      "minecraft:tags": {
+        "tags": [
+          "minecraft:is_pickaxe",
+          "minecraft:diamond_tier"
+        ]
+      }
+    }
+  }
+}

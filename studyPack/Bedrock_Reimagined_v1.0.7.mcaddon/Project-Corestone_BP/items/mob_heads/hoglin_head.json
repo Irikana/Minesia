@@ -1,0 +1,25 @@
+{
+    "format_version": "1.26.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "5fs_br:hoglin_head",
+            "menu_category": {
+                "category": "items"
+            }
+        },
+        "components": {
+            "minecraft:block_placer": {
+                "block": "5fs_br:hoglin_head",
+                "replace_block_item": true
+            },
+            "minecraft:wearable": {
+                "slot": "slot.armor.head",
+                "hides_player_location": true
+            },
+            "minecraft:rarity": "uncommon",
+            "minecraft:display_name": {
+                "value": "tile.5fs_br:hoglin_head.name"
+            }
+        }
+    }
+}

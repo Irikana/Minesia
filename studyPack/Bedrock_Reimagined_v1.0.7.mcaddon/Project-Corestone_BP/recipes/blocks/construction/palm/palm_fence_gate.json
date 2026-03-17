@@ -1,0 +1,31 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "5fs_br:palm_fence_gate"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"S": {
+				"item": "minecraft:stick"
+			},
+			"P": {
+				"item": "5fs_br:palm_planks"
+			}
+		},
+		"pattern": [
+			"SPS",
+			"SPS"
+		],
+		"result": {
+			"item": "5fs_br:palm_fence_gate"
+		},
+		"unlock": [
+			{
+				"item": "5fs_br:palm_planks"
+			}
+		]
+	}
+}

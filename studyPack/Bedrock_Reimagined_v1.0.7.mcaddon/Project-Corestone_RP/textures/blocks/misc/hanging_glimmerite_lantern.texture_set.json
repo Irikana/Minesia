@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "hanging_glimmerite_lantern",
+		"metalness_emissive_roughness": "hanging_glimmerite_lantern_mer"
+	}
+}

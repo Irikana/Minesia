@@ -1,0 +1,33 @@
+{
+    "format_version": "1.20.10",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "5fs_br:maple_chiseled_bookshelf"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "AAA",
+            "BBB",
+            "AAA"
+        ],
+        "key": {
+            "A": {
+                "item": "5fs_br:maple_planks"
+            },
+            "B": {
+                "item": "5fs_br:maple_slab"
+            }
+        },
+        "unlock": [
+            {
+                "item": "minecraft:book"
+            }
+        ],
+        "result": {
+            "item": "5fs_br:maple_chiseled_bookshelf",
+            "count": 1
+        }
+    }
+}

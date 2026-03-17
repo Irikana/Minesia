@@ -1,0 +1,31 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "5fs_br:dragon_boost_pad",
+            "materials": {
+                "default": "entity_alphatest_change_color"
+            },
+            "textures": {
+                "default": "textures/entity/misc/dragon_boost_pad"
+            },
+            "geometry": {
+                "default": "geometry.dragon_boost_pad"
+            },
+            "animations": {
+                "idle": "animation.dragon_boost_pad.idle"
+            },
+            "scripts": {
+                "pre_animation": [
+                    "variable.holding_attachable = (query.is_item_name_any('slot.weapon.mainhand', 'minecraft:trident') || query.is_item_name_any('slot.weapon.mainhand', 'minecraft:shield'));"
+                ],
+                "animate": [
+                    "idle"
+                ]
+            },
+            "render_controllers": [
+                "controller.render.default"
+            ]
+        }
+    }
+}

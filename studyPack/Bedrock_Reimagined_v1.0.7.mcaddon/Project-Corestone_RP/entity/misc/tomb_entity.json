@@ -1,0 +1,17 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "5fs_br:tomb_entity",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/empty"
+            },
+            "geometry": {
+                "default": "geometry.pedestal_item"
+            }
+        }
+    }
+}

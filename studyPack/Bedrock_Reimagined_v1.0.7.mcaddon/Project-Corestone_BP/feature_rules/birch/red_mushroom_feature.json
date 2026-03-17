@@ -1,0 +1,26 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:feature_rules": {
+    "description": {
+      "identifier": "5fs_br:red_mushroom_feature",
+      "places_feature": "5fs_br:swamp/scatter_red_mushroom_feature"
+    },
+    "conditions": {
+      "placement_pass": "surface_pass",
+      "minecraft:biome_filter": [
+        {
+          "test": "has_biome_tag",
+          "operator": "==",
+          "value": "birch"
+        }
+      ]
+    },
+    "distribution": {
+      "iterations": 0.3,
+      "coordinate_eval_order": "zxy",
+      "x": 8,
+      "y": "query.heightmap(variable.worldx, variable.worldz)",
+      "z": 8
+    }
+  }
+}

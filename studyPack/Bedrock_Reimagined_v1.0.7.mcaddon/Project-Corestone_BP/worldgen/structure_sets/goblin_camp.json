@@ -1,0 +1,21 @@
+{
+    "format_version": "1.21.20",
+    "minecraft:structure_set": {
+        "description": {
+            "identifier": "5fs_br:goblin_camp"
+        },
+        "placement": {
+            "type": "minecraft:random_spread",
+            "salt": 74542735,
+            "separation": 23,
+            "spacing": 48,
+            "spread_type": "linear"
+        },
+        "structures": [
+            {
+                "structure": "5fs_br:goblin_camp",
+                "weight": 1
+            }
+        ]
+    }
+}

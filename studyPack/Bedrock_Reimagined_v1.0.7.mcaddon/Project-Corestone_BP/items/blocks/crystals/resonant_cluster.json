@@ -1,0 +1,21 @@
+{
+    "format_version": "1.26.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "5fs_br:resonant_cluster",
+            "menu_category": {
+                "category": "nature"
+            }
+        },
+        "components": {
+            "minecraft:icon": "5fs_br:resonant_cluster",
+            "minecraft:block_placer": {
+                "block": "5fs_br:resonant_cluster",
+                "replace_block_item": true
+            },
+            "minecraft:display_name": {
+                "value": "tile.5fs_br:resonant_cluster.name"
+            }
+        }
+    }
+}

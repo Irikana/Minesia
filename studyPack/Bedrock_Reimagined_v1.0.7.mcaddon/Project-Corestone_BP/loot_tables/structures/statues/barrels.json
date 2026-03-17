@@ -1,0 +1,71 @@
+{
+  "pools": [
+    {
+      "rolls": { "min": 2, "max": 4 },
+      "entries": [
+        { "type": "item", "name": "minecraft:bread", "weight": 4, "functions": [ { "function": "set_count", "count": { "min": 1, "max": 3 } } ] },
+        { "type": "item", "name": "minecraft:cooked_beef", "weight": 3, "functions": [ { "function": "set_count", "count": { "min": 1, "max": 2 } } ] },
+        { "type": "item", "name": "minecraft:arrow", "weight": 4, "functions": [ { "function": "set_count", "count": { "min": 4, "max": 10 } } ] },
+        { "type": "item", "name": "minecraft:torch", "weight": 4, "functions": [ { "function": "set_count", "count": { "min": 3, "max": 8 } } ] },
+        { "type": "item", "name": "minecraft:paper", "weight": 2, "functions": [ { "function": "set_count", "count": { "min": 2, "max": 6 } } ] }
+      ]
+    },
+    {
+      "rolls": { "min": 1, "max": 2 },
+      "entries": [
+        { "type": "item", "name": "minecraft:iron_ingot", "weight": 3, "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ] },
+        { "type": "item", "name": "minecraft:emerald", "weight": 2, "functions": [ { "function": "set_count", "count": { "min": 1, "max": 2 } } ] },
+        { "type": "item", "name": "5fs_br:steel_ingot", "weight": 2, "functions": [ { "function": "set_count", "count": { "min": 1, "max": 3 } } ] }
+      ]
+    },
+    {
+      "rolls": { "min": 0, "max": 1 },
+      "entries": [
+        { "type": "item", "name": "minecraft:iron_sword", "weight": 2, "functions": [ { "function": "set_damage", "damage": { "min": 0.20, "max": 0.70 } } ] },
+        { "type": "item", "name": "minecraft:bow", "weight": 2, "functions": [ { "function": "set_damage", "damage": { "min": 0.20, "max": 0.70 } } ] }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "empty", "weight": 70 },
+        { "type": "item", "name": "5fs_br:decorative_oak_crafting_table", "weight": 3 },
+        { "type": "item", "name": "5fs_br:decorative_spruce_crafting_table", "weight": 3 },
+        { "type": "item", "name": "5fs_br:decorative_birch_crafting_table", "weight": 3 },
+        { "type": "item", "name": "5fs_br:decorative_jungle_crafting_table", "weight": 3 },
+        { "type": "item", "name": "5fs_br:decorative_acacia_crafting_table", "weight": 3 },
+        { "type": "item", "name": "5fs_br:decorative_dark_oak_crafting_table", "weight": 3 },
+        { "type": "item", "name": "5fs_br:decorative_mangrove_crafting_table", "weight": 3 },
+        { "type": "item", "name": "5fs_br:decorative_cherry_crafting_table", "weight": 3 },
+        { "type": "item", "name": "5fs_br:decorative_bamboo_crafting_table", "weight": 3 },
+        { "type": "item", "name": "5fs_br:decorative_crimson_crafting_table", "weight": 3 },
+        { "type": "item", "name": "5fs_br:decorative_warped_crafting_table", "weight": 2 }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "empty", "weight": 70 },
+        { "type": "item", "name": "minecraft:chest", "weight": 3 },
+        { "type": "item", "name": "5fs_br:spruce_chest", "weight": 3 },
+        { "type": "item", "name": "5fs_br:birch_chest", "weight": 3 },
+        { "type": "item", "name": "5fs_br:jungle_chest", "weight": 3 },
+        { "type": "item", "name": "5fs_br:acacia_chest", "weight": 3 },
+        { "type": "item", "name": "5fs_br:dark_oak_chest", "weight": 3 },
+        { "type": "item", "name": "5fs_br:mangrove_chest", "weight": 3 },
+        { "type": "item", "name": "5fs_br:cherry_chest", "weight": 3 },
+        { "type": "item", "name": "5fs_br:bamboo_chest", "weight": 3 },
+        { "type": "item", "name": "5fs_br:crimson_chest", "weight": 3 },
+        { "type": "item", "name": "5fs_br:warped_chest", "weight": 2 }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "item", "name": "5fs_br:sky_star_fragment", "weight": 4 },
+        { "type": "item", "name": "5fs_br:mana_bottle", "weight": 6, "functions": [ { "function": "set_count", "count": { "min": 1, "max": 3 } } ] },
+        { "type": "empty", "weight": 90 }
+      ]
+    }
+  ]
+}

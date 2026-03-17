@@ -1,0 +1,13 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:scatter_feature": {
+        "description": {
+            "identifier": "5fs_br:crystal_canyons/scatter_mineshaft_entrance_3_feature"
+        },
+        "places_feature": "5fs_br:crystal_canyons/mineshaft_entrance_3_feature",
+        "iterations": 1,
+        "x": 0,
+        "y": -14,
+        "z": 0
+    }
+}

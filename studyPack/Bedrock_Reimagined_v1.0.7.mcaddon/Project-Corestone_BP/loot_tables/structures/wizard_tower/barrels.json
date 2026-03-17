@@ -1,0 +1,113 @@
+{
+  "pools": [
+    {
+      "rolls": { "min": 2, "max": 4 },
+      "entries": [
+        { "type": "item", "name": "minecraft:paper", "weight": 5, "functions": [ { "function": "set_count", "count": { "min": 3, "max": 9 } } ] },
+        { "type": "item", "name": "minecraft:book", "weight": 3, "functions": [ { "function": "set_count", "count": { "min": 1, "max": 3 } } ] },
+        { "type": "item", "name": "minecraft:glass_bottle", "weight": 4, "functions": [ { "function": "set_count", "count": { "min": 2, "max": 6 } } ] },
+        { "type": "item", "name": "minecraft:glowstone_dust", "weight": 4, "functions": [ { "function": "set_count", "count": { "min": 2, "max": 8 } } ] },
+        { "type": "item", "name": "minecraft:redstone", "weight": 4, "functions": [ { "function": "set_count", "count": { "min": 2, "max": 8 } } ] },
+        { "type": "item", "name": "minecraft:gunpowder", "weight": 3, "functions": [ { "function": "set_count", "count": { "min": 1, "max": 5 } } ] },
+        { "type": "item", "name": "minecraft:sugar", "weight": 3, "functions": [ { "function": "set_count", "count": { "min": 2, "max": 6 } } ] },
+        { "type": "item", "name": "minecraft:spider_eye", "weight": 2, "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ] }
+      ]
+    },
+    {
+      "rolls": { "min": 1, "max": 2 },
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:potion",
+          "weight": 3,
+          "functions": [ { "function": "set_potion", "id": "healing" } ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:potion",
+          "weight": 3,
+          "functions": [ { "function": "set_potion", "id": "swiftness" } ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:potion",
+          "weight": 2,
+          "functions": [ { "function": "set_potion", "id": "night_vision" } ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:potion",
+          "weight": 2,
+          "functions": [ { "function": "set_potion", "id": "fire_resistance" } ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:splash_potion",
+          "weight": 1,
+          "functions": [ { "function": "set_potion", "id": "poison" } ]
+        }
+      ]
+    },
+    {
+      "rolls": { "min": 0, "max": 1 },
+      "entries": [
+        { "type": "item", "name": "minecraft:coal", "weight": 3, "functions": [ { "function": "set_count", "count": { "min": 3, "max": 9 } } ] },
+        { "type": "item", "name": "minecraft:lapis_lazuli", "weight": 2, "functions": [ { "function": "set_count", "count": { "min": 2, "max": 6 } } ] },
+        { "type": "item", "name": "minecraft:emerald", "weight": 1, "functions": [ { "function": "set_count", "count": { "min": 1, "max": 2 } } ] }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "empty", "weight": 86 },
+        { "type": "item", "name": "5fs_br:ring_band", "weight": 4 },
+        { "type": "item", "name": "5fs_br:jeweling_station", "weight": 4 },
+        { "type": "item", "name": "5fs_br:rune_table", "weight": 2 },
+        { "type": "item", "name": "5fs_br:steel_ingot", "weight": 4, "functions": [ { "function": "set_count", "count": { "min": 1, "max": 2 } } ] },
+        { "type": "item", "name": "5fs_br:common_bag_upgrade", "weight": 2 },
+        { "type": "item", "name": "5fs_br:witch_hat", "weight": 2 },
+        { "type": "item", "name": "5fs_br:witch_flag", "weight": 2 },
+        { "type": "item", "name": "5fs_br:charm_of_witch", "weight": 1 },
+        { "type": "item", "name": "5fs_br:witch_head", "weight": 1 }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "empty", "weight": 60 },
+        { "type": "item", "name": "5fs_br:iron_wand", "weight": 8, "functions": [ { "function": "set_damage", "damage": { "min": 0.20, "max": 0.70 } } ] },
+        { "type": "item", "name": "5fs_br:golden_wand", "weight": 5, "functions": [ { "function": "set_damage", "damage": { "min": 0.20, "max": 0.70 } } ] },
+        { "type": "item", "name": "5fs_br:diamond_wand", "weight": 4, "functions": [ { "function": "set_damage", "damage": { "min": 0.10, "max": 0.40 } } ] },
+        { "type": "item", "name": "5fs_br:torch_wand", "weight": 1, "functions": [ { "function": "set_damage", "damage": { "min": 0.20, "max": 0.70 } } ] },
+        { "type": "item", "name": "5fs_br:enchanted_scroll", "weight": 8 }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "empty", "weight": 77 },
+        { "type": "item", "name": "5fs_br:rune_of_blades", "weight": 1 },
+        { "type": "item", "name": "5fs_br:rune_of_beasts", "weight": 1 },
+        { "type": "item", "name": "5fs_br:rune_of_decay", "weight": 2 },
+        { "type": "item", "name": "5fs_br:rune_of_earth", "weight": 1 },
+        { "type": "item", "name": "5fs_br:rune_of_eternity", "weight": 2 },
+        { "type": "item", "name": "5fs_br:rune_of_flame", "weight": 1 },
+        { "type": "item", "name": "5fs_br:rune_of_frost", "weight": 1 },
+        { "type": "item", "name": "5fs_br:rune_of_growth", "weight": 2 },
+        { "type": "item", "name": "5fs_br:rune_of_knowledge", "weight": 2 },
+        { "type": "item", "name": "5fs_br:rune_of_light", "weight": 1 },
+        { "type": "item", "name": "5fs_br:rune_of_shadows", "weight": 2 },
+        { "type": "item", "name": "5fs_br:rune_of_shields", "weight": 1 },
+        { "type": "item", "name": "5fs_br:rune_of_storms", "weight": 1 }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "item", "name": "5fs_br:sky_star_fragment", "weight": 4 },
+        { "type": "item", "name": "5fs_br:mana_bottle", "weight": 6, "functions": [ { "function": "set_count", "count": { "min": 1, "max": 3 } } ] },
+        { "type": "empty", "weight": 90 }
+      ]
+    }
+  ]
+}

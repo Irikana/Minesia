@@ -1,0 +1,14 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "5fs_br:crystal_canyons/pointed_crystal_ceiling_random_feature"
+    },
+    "features": [
+      [ "5fs_br:crystal_canyons/scatter_pointed_crystal_1_ceiling_feature", 2 ],
+      [ "5fs_br:crystal_canyons/scatter_pointed_crystal_2_ceiling_feature", 3 ],
+      [ "5fs_br:crystal_canyons/scatter_pointed_crystal_3_ceiling_feature", 3 ],
+      [ "5fs_br:crystal_canyons/scatter_pointed_crystal_4_ceiling_feature", 3 ]
+    ]
+  }
+}

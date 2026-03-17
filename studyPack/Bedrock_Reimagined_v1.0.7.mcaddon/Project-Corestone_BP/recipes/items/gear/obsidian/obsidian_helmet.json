@@ -1,0 +1,28 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "5fs_br:obsidian_helmet"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"ccc",
+			"c c"
+		],
+		"key": {
+			"c": {
+				"item": "5fs_br:obsidian_ingot"
+			}
+		},
+		"result": {
+			"item": "5fs_br:obsidian_helmet"
+		},
+		"unlock": [
+			{
+				"item": "5fs_br:obsidian_ingot"
+			}
+		]
+	}
+}

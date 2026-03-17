@@ -1,0 +1,18 @@
+{
+    "format_version": "1.21.20",
+    "minecraft:template_pool": {
+        "description": {
+            "identifier": "5fs_br:tuff_ruins"
+        },
+        "elements": [
+            {
+                "element": {
+                    "element_type": "minecraft:single_pool_element",
+                    "location": "5fs_br/tuffRuinsJ",
+                    "processors": "5fs_br:empty_processor"
+                },
+                "weight": 1
+            }
+        ]
+    }
+}

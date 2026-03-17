@@ -1,0 +1,37 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.crystalline_wand",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "wand",
+					"pivot": [0, 0, 0],
+					"binding": "q.item_slot_to_bone_name(c.item_slot)",
+					"cubes": [
+						{"origin": [-1, -21.29289, -2], "size": [2, 10, 4], "pivot": [0, 5.35355, 0], "rotation": [180, 0, 0], "uv": [9, 11]},
+						{"origin": [-1, -5, -1], "size": [2, 24, 2], "uv": [0, 0]},
+						{"origin": [-1, -11.08398, -17.05975], "size": [2, 2.87132, 2.12132], "inflate": 0.025, "pivot": [0, 5.35355, 0], "rotation": [-147.5, 0, 0], "uv": [22, 31]},
+						{"origin": [-1, -5, -1], "size": [2, 24, 2], "inflate": 0.25, "uv": [30, 24]},
+						{"origin": [-1.5, 17, -1.5], "size": [3, 2, 3], "uv": [9, 26]},
+						{"origin": [-1.5, 19, -3.98815], "size": [3, 3, 7.9763], "uv": [9, 0]},
+						{"origin": [-1, -14.90254, -20.25609], "size": [2, 2.82842, 2.82842], "inflate": 0.025, "pivot": [0, 5.35355, 0], "rotation": [-135, 0, 0], "uv": [31, 20]},
+						{"origin": [-1, -16.83261, -0.93998], "size": [2, 8, 2], "pivot": [0, 5.35355, 0], "rotation": [167.5, 0, 0], "uv": [22, 20]},
+						{"origin": [-1, 14.21015, 8.8566], "size": [2, 3, 3], "pivot": [0, 5.35355, 0], "rotation": [-135, 0, 0], "uv": [30, 0]},
+						{"origin": [-1, -9, -1], "size": [2, 3, 2], "inflate": 0.025, "uv": [0, 27]},
+						{"origin": [-1, -16.81792, -1.73331], "size": [2, 8, 2], "pivot": [0, 5.35355, 0], "rotation": [-10, 0, 180], "uv": [22, 20]},
+						{"origin": [-1.5, 10.67462, 5.32107], "size": [3, 4, 4], "pivot": [0, 5.35355, 0], "rotation": [-135, 0, 0], "uv": [22, 11]},
+						{"origin": [-1, -11.08399, -17.05976], "size": [2, 2.87132, 2.12132], "inflate": 0.025, "pivot": [0, 5.35355, 0], "rotation": [32.5, 0, -180], "uv": [22, 31]}
+					]
+				}
+			]
+		}
+	]
+}

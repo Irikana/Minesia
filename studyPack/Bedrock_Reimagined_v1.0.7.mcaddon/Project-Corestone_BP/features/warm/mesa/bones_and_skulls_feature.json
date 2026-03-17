@@ -1,0 +1,58 @@
+{
+	"format_version": "1.21.80",
+	"minecraft:single_block_feature": {
+		"description": {
+			"identifier": "5fs_br:warm/mesa/bones_and_skulls_feature"
+		},
+		"places_block": [
+			{
+				"block": {
+					"name": "5fs_br:bones",
+					"states": {
+						"5fs_br:count": 0
+					}
+				},
+				"weight": 1
+			},
+			{
+				"block": {
+					"name": "5fs_br:bones",
+					"states": {
+						"5fs_br:count": 1
+					}
+				},
+				"weight": 1
+			},
+			{
+				"block": {
+					"name": "5fs_br:bones",
+					"states": {
+						"5fs_br:count": 2
+					}
+				},
+				"weight": 1
+			},
+			{
+				"block": "5fs_br:skull",
+				"weight": 1
+			},
+			{
+				"block": "5fs_br:skull_and_bones",
+				"weight": 1
+			}
+		],
+		"enforce_survivability_rules": false,
+		"enforce_placement_rules": false,
+		"randomize_rotation": true,
+		"may_attach_to": {
+			"bottom": [
+				"minecraft:sand",
+				"minecraft:red_sand",
+            	"minecraft:coarse_dirt"
+			]
+		},
+		"may_replace": [
+			"minecraft:air"
+		]
+	}
+}

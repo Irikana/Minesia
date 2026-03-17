@@ -1,0 +1,127 @@
+{
+	"format_version" : "1.10.0",
+	"animation_controllers" : {
+		"controller.animation.bird.root" : {
+			"initial_state" : "default",
+			"states" : {
+				"default": {
+					"animations" : [ 
+						"general_controller", "chirp_controller", "look_at_target"
+					],
+					"transitions" : [
+						{
+							"death": "!q.is_alive"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"death": {
+					"animations": [
+						"death"
+					]
+				}
+			}
+		},
+		"controller.animation.bird.general" : {
+			"initial_state" : "default",
+			"states" : {
+				"default": {
+					"animations" : [ 
+						"idle" 
+					],
+					"transitions" : [
+						{
+							"walk" : "q.modified_move_speed >= 0.05 && q.is_on_ground"
+						},
+						{
+							"fly" : "!q.is_on_ground || q.is_jumping"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"walk": {
+					"animations" : [ 
+						"walk" 
+					],
+					"transitions" : [
+						{
+							"default" : "q.modified_move_speed < 0.05 && q.is_on_ground"
+						},
+						{
+							"fly" : "!q.is_on_ground || q.is_jumping"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"fly": {
+					"animations" : [ 
+						"fly" 
+					],
+					"transitions" : [
+						{
+							"default" : "q.modified_move_speed < 0.05 && q.is_on_ground && !q.is_jumping"
+						},
+						{
+							"walk" : "q.modified_move_speed >= 0.05 && q.is_on_ground && !q.is_jumping"
+						}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		},
+		"controller.animation.bird.chirp": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"chirp_transitioner"
+					],
+					"transitions": [
+						{
+							"chirp_transitioner": "q.any_animation_finished"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"chirp_transitioner": {
+					"on_entry": [
+						"v.r_idle = math.random_integer(0,5);"
+					],
+					"animations": [
+						{
+							"chirp_transitioner": "v.r_idle < 5"
+						},
+						{
+							"chirp": "v.r_idle == 5"
+						}
+					],
+					"transitions": [
+						{
+							"chirp": "q.any_animation_finished"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"chirp": {
+					"on_entry": [
+						"v.r_idle = math.random_integer(0,5);"
+					],
+					"animations": [
+						{
+							"chirp_transitioner": "v.r_idle < 5"
+						},
+						{
+							"chirp": "v.r_idle == 5"
+						}
+					],
+					"transitions": [
+						{
+							"chirp_transitioner": "q.any_animation_finished"
+						}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		}
+	}
+}

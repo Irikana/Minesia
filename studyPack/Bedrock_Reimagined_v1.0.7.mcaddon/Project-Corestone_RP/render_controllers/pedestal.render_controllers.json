@@ -1,0 +1,22 @@
+{
+    "format_version": "1.10.0",
+    "render_controllers": {
+        "controller.render.pedestal": {
+            "textures": [
+                "Texture.default"
+            ],
+            "geometry": "Geometry.default",
+            "materials": [
+                {
+                    "*": "material.default"
+                }
+            ],
+            "part_visibility": [
+                {
+                    "particle": "query.is_item_equipped('main_hand')"
+                }
+            ],
+			"ignore_lighting": true
+        }
+    }
+}

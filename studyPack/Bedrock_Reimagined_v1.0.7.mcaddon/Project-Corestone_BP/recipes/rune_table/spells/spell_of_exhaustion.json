@@ -1,0 +1,33 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "5fs_br:spell_of_exhaustion"
+		},
+		"tags": [
+			"runetable"
+		],
+		"key": {
+            "A": {
+				"item": "5fs_br:rune_of_venom"
+			},
+			"B": {
+				"item": "5fs_br:greater_scroll"
+			},
+			"C": {
+				"item": "5fs_br:rune_of_beasts"
+			}
+		},
+		"pattern": [
+			"   ",
+			"ABC",
+			"   "
+		],
+		"result": {
+			"item": "5fs_br:spell_of_exhaustion"
+		},
+		"unlock": {
+			"context": "AlwaysUnlocked"
+		}
+	}
+}

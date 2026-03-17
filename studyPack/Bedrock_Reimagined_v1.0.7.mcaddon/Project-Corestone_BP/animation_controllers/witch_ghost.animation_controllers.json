@@ -1,0 +1,27 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.witch_ghost.general": {
+            "states": {
+                "default": {
+                    "on_entry": [
+                        "/particle 5fs_br:witch_ghost ~~~"
+                    ],
+                    "transitions": [
+                        {
+                            "despawn": "query.life_time >= 15.0"
+                        },
+                        {
+                            "default": "query.anim_time >= 0.2"
+                        }
+                    ]
+                },
+                "despawn": {
+                    "on_entry": [
+                        "@s 5fs_br:despawn"
+                    ]
+                }
+            }
+        }
+    }
+}

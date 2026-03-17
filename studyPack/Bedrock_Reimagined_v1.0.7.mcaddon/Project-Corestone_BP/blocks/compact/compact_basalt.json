@@ -1,0 +1,35 @@
+{
+    "format_version": "1.26.0",
+	"minecraft:block": {
+        "description": {
+            "identifier": "5fs_br:compact_basalt",
+            "menu_category": {
+                "category": "Construction"
+            }
+        },
+        "components": {
+            "minecraft:geometry": "minecraft:geometry.full_block",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "compact_basalt"
+                }
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 4.25,
+                "item_specific_speeds": [
+                    {
+                        "item": {
+                            "tags": "query.all_tags('minecraft:is_pickaxe')"
+                        },
+                        "destroy_speed": 1.25
+                    }
+                ]
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 4.2
+            },
+            "minecraft:map_color": "#525252",
+            "tag:minecraft:is_pickaxe_item_destructible": {}
+        }
+    }
+}

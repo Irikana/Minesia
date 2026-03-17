@@ -1,0 +1,18 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:ore_feature": {
+    "description": {
+      "identifier": "5fs_br:crystal_canyons/glow_glintrock_feature"
+    },
+    "count": 26,
+    "replace_rules": [
+      {
+        "places_block": "5fs_br:glow_glintrock",
+        "may_replace": [
+          "minecraft:stone",
+          "minecraft:deepslate"
+        ]
+      }
+    ]
+  }
+}

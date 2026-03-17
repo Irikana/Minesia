@@ -1,0 +1,35 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "5fs_br:copper_grate_bars"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "L#L",
+      "L#L"
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:copper_block",
+        "data": 0
+      },
+      "L": {
+        "item": "minecraft:copper_ingot",
+        "data": 0
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:raw_copper",
+        "data": 0
+      }
+    ],
+    "result": {
+      "item": "5fs_br:copper_grate_bars",
+      "count": 8
+    }
+  }
+}

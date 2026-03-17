@@ -1,0 +1,27 @@
+{
+  "format_version": "1.21.20",
+  "minecraft:jigsaw": {
+    "description": {
+      "identifier": "5fs_br:plains_maze"
+    },
+    "biome_filters": [ 
+      { 
+        "any_of": [ 
+          {
+            "test": "has_biome_tag", 
+            "value": "plains" 
+          }
+        ]
+      } 
+    ], 
+    "step": "surface_structures", 
+    "terrain_adaptation": "none", 
+    "start_pool": "5fs_br:plains_maze", 
+    "max_depth": 1, 
+    "start_height": {
+        "type": "constant",
+        "value": { "absolute": -18 } 
+    },
+    "heightmap_projection": "world_surface"
+  }
+}

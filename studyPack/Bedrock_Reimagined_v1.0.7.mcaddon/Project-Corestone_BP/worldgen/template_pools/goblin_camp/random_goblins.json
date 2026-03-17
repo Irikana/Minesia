@@ -1,0 +1,30 @@
+{
+    "format_version": "1.21.80",
+    "minecraft:template_pool": {
+        "description": {
+            "identifier": "5fs_br:goblin_camp/random_goblins"
+        },
+        "elements": [
+            {
+                "element": {
+                    "element_type": "minecraft:single_pool_element",
+                    "location": "5fs_br/goblin_camp/adult_goblin"
+                },
+                "weight": 45
+            },
+            {
+                "element": {
+                    "element_type": "minecraft:single_pool_element",
+                    "location": "5fs_br/goblin_camp/baby_goblin"
+                },
+                "weight": 5
+            },
+            {
+                "element": {
+                    "element_type": "minecraft:empty_pool_element"
+                },
+                "weight": 50
+            }
+        ]
+    }
+}

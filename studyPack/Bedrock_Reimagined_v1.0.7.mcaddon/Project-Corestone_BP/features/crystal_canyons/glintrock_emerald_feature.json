@@ -1,0 +1,17 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:ore_feature": {
+    "description": {
+      "identifier": "5fs_br:crystal_canyons/glintrock_emerald_feature"
+    },
+    "count": 4,
+    "replace_rules": [
+      {
+        "places_block": "5fs_br:glintrock_emerald_ore",
+        "may_replace": [
+          "5fs_br:glintrock"
+        ]
+      }
+    ]
+  }
+}

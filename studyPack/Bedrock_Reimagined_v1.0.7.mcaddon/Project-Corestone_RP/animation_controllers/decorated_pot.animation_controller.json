@@ -1,0 +1,30 @@
+{
+	"format_version": "1.12.0",
+	"animation_controllers": {
+		"controller.animation.decorated_pot": {
+			"initial_state": "stop",
+			"states": {
+				"stop": {
+					"animations": [
+						"stop"
+					],
+					"transitions": [
+						{
+							"move": "q.property('5fs_br:move')"
+						}
+					]
+				},
+				"move": {
+					"animations": [
+						"move"
+					],
+					"transitions": [
+						{
+							"stop": "!q.property('5fs_br:move')"
+						}
+					]
+				}
+			}
+		}
+	}
+}

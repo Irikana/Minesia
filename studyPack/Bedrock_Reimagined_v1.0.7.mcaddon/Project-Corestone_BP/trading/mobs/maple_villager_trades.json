@@ -1,0 +1,505 @@
+{
+	"tiers": [
+		{
+			"total_exp_required": 0,
+			"groups": [
+				{
+					"num_to_select": 4,
+					"trades": [
+						{
+							"max_uses": 12,
+							"wants": [
+								{ "item": "minecraft:emerald", "quantity": 1, "price_multiplier": 0.05 }
+							],
+							"gives": [
+								{ "item": "5fs_br:maple_sapling", "quantity": 2 }
+							],
+							"trader_exp": 2,
+							"reward_exp": true
+						},
+						{
+							"max_uses": 12,
+							"wants": [
+								{ "item": "minecraft:emerald", "quantity": 1, "price_multiplier": 0.05 }
+							],
+							"gives": [
+								{ "item": "5fs_br:acorn", "quantity": 2 }
+							],
+							"trader_exp": 2,
+							"reward_exp": true
+						},
+						{
+							"max_uses": 3,
+							"wants": [
+								{ "item": "minecraft:emerald", "quantity": { "min": 45, "max": 55 }, "price_multiplier": 0.05 },
+								{ "item": "5fs_br:sap", "quantity": { "min": 1, "max": 5 }, "price_multiplier": 0.05 }
+							],
+							"gives": [
+								{ "item": "5fs_br:tree_sap_tap_cap", "quantity": 1 }
+							],
+							"trader_exp": 10,
+							"reward_exp": true
+						},
+						{
+							"max_uses": 8,
+							"wants": [
+								{ "item": "minecraft:emerald", "quantity": 2, "price_multiplier": 0.05 }
+							],
+							"gives": [
+								{ "item": "5fs_br:maple_syrup", "quantity": 1 }
+							],
+							"trader_exp": 2,
+							"reward_exp": true
+						},
+						{
+							"max_uses": 8,
+							"wants": [
+								{ "item": "minecraft:emerald", "quantity": 3, "price_multiplier": 0.05 }
+							],
+							"gives": [
+								{ "item": "5fs_br:sap", "quantity": 1 }
+							],
+							"trader_exp": 2,
+							"reward_exp": true
+						},
+						{
+							"max_uses": 6,
+							"wants": [
+								{ "item": "5fs_br:acorn", "quantity": 16, "price_multiplier": 0.05 }
+							],
+							"gives": [
+								{ "item": "minecraft:emerald", "quantity": 1 }
+							],
+							"trader_exp": 2,
+							"reward_exp": true
+						}
+					]
+				}
+			]
+		},
+		{
+			"total_exp_required": 10,
+			"groups": [
+				{
+					"num_to_select": 1,
+					"trades": [
+						{
+							"max_uses": 2,
+							"wants": [
+								{ "item": "minecraft:emerald", "quantity": { "min": 24, "max": 48 }, "price_multiplier": 0.05 },
+								{ "item": "5fs_br:sap", "quantity": { "min": 1, "max": 2 }, "price_multiplier": 0.05 }
+							],
+							"gives": [{ "item": "5fs_br:cow_plushie", "quantity": 1 }],
+							"trader_exp": 10, "reward_exp": true
+						},
+						{
+							"max_uses": 2,
+							"wants": [
+								{ "item": "minecraft:emerald", "quantity": { "min": 24, "max": 48 }, "price_multiplier": 0.05 },
+								{ "item": "5fs_br:sap", "quantity": { "min": 1, "max": 2 }, "price_multiplier": 0.05 }
+							],
+							"gives": [{ "item": "5fs_br:pig_plushie", "quantity": 1 }],
+							"trader_exp": 10, "reward_exp": true
+						},
+						{
+							"max_uses": 2,
+							"wants": [
+								{ "item": "minecraft:emerald", "quantity": { "min": 24, "max": 48 }, "price_multiplier": 0.05 },
+								{ "item": "5fs_br:sap", "quantity": { "min": 1, "max": 2 }, "price_multiplier": 0.05 }
+							],
+							"gives": [{ "item": "5fs_br:fox_plushie", "quantity": 1 }],
+							"trader_exp": 10, "reward_exp": true
+						},
+						{
+							"max_uses": 2,
+							"wants": [
+								{ "item": "minecraft:emerald", "quantity": { "min": 24, "max": 48 }, "price_multiplier": 0.05 },
+								{ "item": "5fs_br:sap", "quantity": { "min": 1, "max": 2 }, "price_multiplier": 0.05 }
+							],
+							"gives": [{ "item": "5fs_br:moose_plushie", "quantity": 1 }],
+							"trader_exp": 10, "reward_exp": true
+						},
+						{
+							"max_uses": 2,
+							"wants": [
+								{ "item": "minecraft:emerald", "quantity": { "min": 24, "max": 48 }, "price_multiplier": 0.05 },
+								{ "item": "5fs_br:sap", "quantity": { "min": 1, "max": 2 }, "price_multiplier": 0.05 }
+							],
+							"gives": [{ "item": "5fs_br:maple_leaflet_plushie", "quantity": 1 }],
+							"trader_exp": 10, "reward_exp": true
+						},
+						{
+							"max_uses": 2,
+							"wants": [
+								{ "item": "minecraft:emerald", "quantity": { "min": 24, "max": 48 }, "price_multiplier": 0.05 },
+								{ "item": "5fs_br:sap", "quantity": { "min": 1, "max": 2 }, "price_multiplier": 0.05 }
+							],
+							"gives": [{ "item": "5fs_br:maple_villager_plushie", "quantity": 1 }],
+							"trader_exp": 10, "reward_exp": true
+						},
+						{
+							"max_uses": 2,
+							"wants": [
+								{ "item": "minecraft:emerald", "quantity": { "min": 24, "max": 48 }, "price_multiplier": 0.05 },
+								{ "item": "5fs_br:sap", "quantity": { "min": 1, "max": 2 }, "price_multiplier": 0.05 }
+							],
+							"gives": [{ "item": "5fs_br:polar_bear_plushie", "quantity": 1 }],
+							"trader_exp": 10, "reward_exp": true
+						},
+						{
+							"max_uses": 2,
+							"wants": [
+								{ "item": "minecraft:emerald", "quantity": { "min": 24, "max": 48 }, "price_multiplier": 0.05 },
+								{ "item": "5fs_br:sap", "quantity": { "min": 1, "max": 2 }, "price_multiplier": 0.05 }
+							],
+							"gives": [{ "item": "5fs_br:panda_plushie", "quantity": 1 }],
+							"trader_exp": 10, "reward_exp": true
+						},
+						{
+							"max_uses": 2,
+							"wants": [
+								{ "item": "minecraft:emerald", "quantity": { "min": 24, "max": 48 }, "price_multiplier": 0.05 },
+								{ "item": "5fs_br:sap", "quantity": { "min": 1, "max": 2 }, "price_multiplier": 0.05 }
+							],
+							"gives": [{ "item": "5fs_br:mooshroom_plushie", "quantity": 1 }],
+							"trader_exp": 10, "reward_exp": true
+						},
+						{
+							"max_uses": 2,
+							"wants": [
+								{ "item": "minecraft:emerald", "quantity": { "min": 24, "max": 48 }, "price_multiplier": 0.05 },
+								{ "item": "5fs_br:sap", "quantity": { "min": 1, "max": 2 }, "price_multiplier": 0.05 }
+							],
+							"gives": [{ "item": "5fs_br:eagle_plushie", "quantity": 1 }],
+							"trader_exp": 10, "reward_exp": true
+						},
+						{
+							"max_uses": 2,
+							"wants": [
+								{ "item": "minecraft:emerald", "quantity": { "min": 24, "max": 48 }, "price_multiplier": 0.05 },
+								{ "item": "5fs_br:sap", "quantity": { "min": 1, "max": 2 }, "price_multiplier": 0.05 }
+							],
+							"gives": [{ "item": "5fs_br:creeper_plushie", "quantity": 1 }],
+							"trader_exp": 10, "reward_exp": true
+						},
+						{
+							"max_uses": 2,
+							"wants": [
+								{ "item": "minecraft:emerald", "quantity": { "min": 24, "max": 48 }, "price_multiplier": 0.05 },
+								{ "item": "5fs_br:sap", "quantity": { "min": 1, "max": 2 }, "price_multiplier": 0.05 }
+							],
+							"gives": [{ "item": "5fs_br:skeleton_plushie", "quantity": 1 }],
+							"trader_exp": 10, "reward_exp": true
+						},
+						{
+							"max_uses": 2,
+							"wants": [
+								{ "item": "minecraft:emerald", "quantity": { "min": 24, "max": 48 }, "price_multiplier": 0.05 },
+								{ "item": "5fs_br:sap", "quantity": { "min": 1, "max": 2 }, "price_multiplier": 0.05 }
+							],
+							"gives": [{ "item": "5fs_br:enderman_plushie", "quantity": 1 }],
+							"trader_exp": 10, "reward_exp": true
+						},
+						{
+							"max_uses": 2,
+							"wants": [
+								{ "item": "minecraft:emerald", "quantity": { "min": 24, "max": 48 }, "price_multiplier": 0.05 },
+								{ "item": "5fs_br:sap", "quantity": { "min": 1, "max": 2 }, "price_multiplier": 0.05 }
+							],
+							"gives": [{ "item": "5fs_br:booger_panda_plushie", "quantity": 1 }],
+							"trader_exp": 10, "reward_exp": true
+						},
+						{
+							"max_uses": 2,
+							"wants": [
+								{ "item": "minecraft:emerald", "quantity": { "min": 24, "max": 48 }, "price_multiplier": 0.05 },
+								{ "item": "5fs_br:sap", "quantity": { "min": 1, "max": 2 }, "price_multiplier": 0.05 }
+							],
+							"gives": [{ "item": "5fs_br:baby_skeleton_plushie", "quantity": 1 }],
+							"trader_exp": 10, "reward_exp": true
+						},
+						{
+							"max_uses": 2,
+							"wants": [
+								{ "item": "minecraft:emerald", "quantity": { "min": 24, "max": 48 }, "price_multiplier": 0.05 },
+								{ "item": "5fs_br:sap", "quantity": { "min": 1, "max": 2 }, "price_multiplier": 0.05 }
+							],
+							"gives": [{ "item": "5fs_br:baby_skeleton_bomber_plushie", "quantity": 1 }],
+							"trader_exp": 10, "reward_exp": true
+						}
+					]
+				},
+				{
+					"num_to_select": 1,
+					"trades": [
+						{
+							"max_uses": 2,
+							"wants": [
+								{ "item": "minecraft:emerald", "quantity": { "min": 24, "max": 48 }, "price_multiplier": 0.05 },
+								{ "item": "5fs_br:sap", "quantity": { "min": 1, "max": 2 }, "price_multiplier": 0.05 }
+							],
+							"gives": [{
+								"choice": [
+									{ "item": "5fs_br:sheep_plushie" },
+									{ "item": "5fs_br:black_sheep_plushie" },
+									{ "item": "5fs_br:blue_sheep_plushie" },
+									{ "item": "5fs_br:brown_sheep_plushie" },
+									{ "item": "5fs_br:cyan_sheep_plushie" },
+									{ "item": "5fs_br:gray_sheep_plushie" },
+									{ "item": "5fs_br:green_sheep_plushie" },
+									{ "item": "5fs_br:light_blue_sheep_plushie" },
+									{ "item": "5fs_br:light_gray_sheep_plushie" },
+									{ "item": "5fs_br:lime_sheep_plushie" },
+									{ "item": "5fs_br:magenta_sheep_plushie" },
+									{ "item": "5fs_br:orange_sheep_plushie" },
+									{ "item": "5fs_br:pink_sheep_plushie" },
+									{ "item": "5fs_br:purple_sheep_plushie" },
+									{ "item": "5fs_br:red_sheep_plushie" },
+									{ "item": "5fs_br:yellow_sheep_plushie" },
+									{ "item": "5fs_br:rainbow_sheep_plushie" }
+								]
+							}],
+							"trader_exp": 10, "reward_exp": true
+						}
+					]
+				},
+				{
+					"num_to_select": 1,
+					"trades": [
+						{
+							"max_uses": 2,
+							"wants": [
+								{ "item": "minecraft:emerald", "quantity": { "min": 24, "max": 48 }, "price_multiplier": 0.05 },
+								{ "item": "5fs_br:sap", "quantity": { "min": 1, "max": 2 }, "price_multiplier": 0.05 }
+							],
+							"gives": [{
+								"choice": [
+									{ "item": "5fs_br:llama_plushie" },
+									{ "item": "5fs_br:llama_plushie_black" },
+									{ "item": "5fs_br:llama_plushie_blue" },
+									{ "item": "5fs_br:llama_plushie_brown" },
+									{ "item": "5fs_br:llama_plushie_cyan" },
+									{ "item": "5fs_br:llama_plushie_gray" },
+									{ "item": "5fs_br:llama_plushie_green" },
+									{ "item": "5fs_br:llama_plushie_light_blue" },
+									{ "item": "5fs_br:llama_plushie_light_gray" },
+									{ "item": "5fs_br:llama_plushie_lime" },
+									{ "item": "5fs_br:llama_plushie_magenta" },
+									{ "item": "5fs_br:llama_plushie_orange" },
+									{ "item": "5fs_br:llama_plushie_pink" },
+									{ "item": "5fs_br:llama_plushie_purple" },
+									{ "item": "5fs_br:llama_plushie_red" },
+									{ "item": "5fs_br:llama_plushie_white" },
+									{ "item": "5fs_br:llama_plushie_yellow" }
+								]
+							}],
+							"trader_exp": 10, "reward_exp": true
+						}
+					]
+				},
+				{
+					"num_to_select": 1,
+					"trades": [
+						{
+							"max_uses": 2,
+							"wants": [
+								{ "item": "minecraft:emerald", "quantity": { "min": 24, "max": 48 }, "price_multiplier": 0.05 },
+								{ "item": "5fs_br:sap", "quantity": { "min": 1, "max": 2 }, "price_multiplier": 0.05 }
+							],
+							"gives": [{ "item": "5fs_br:cow_plushie", "quantity": 1 }],
+							"trader_exp": 10, "reward_exp": true
+						},
+						{
+							"max_uses": 2,
+							"wants": [
+								{ "item": "minecraft:emerald", "quantity": { "min": 24, "max": 48 }, "price_multiplier": 0.05 },
+								{ "item": "5fs_br:sap", "quantity": { "min": 1, "max": 2 }, "price_multiplier": 0.05 }
+							],
+							"gives": [{ "item": "5fs_br:pig_plushie", "quantity": 1 }],
+							"trader_exp": 10, "reward_exp": true
+						},
+						{
+							"max_uses": 2,
+							"wants": [
+								{ "item": "minecraft:emerald", "quantity": { "min": 24, "max": 48 }, "price_multiplier": 0.05 },
+								{ "item": "5fs_br:sap", "quantity": { "min": 1, "max": 2 }, "price_multiplier": 0.05 }
+							],
+							"gives": [{ "item": "5fs_br:fox_plushie", "quantity": 1 }],
+							"trader_exp": 10, "reward_exp": true
+						},
+						{
+							"max_uses": 2,
+							"wants": [
+								{ "item": "minecraft:emerald", "quantity": { "min": 24, "max": 48 }, "price_multiplier": 0.05 },
+								{ "item": "5fs_br:sap", "quantity": { "min": 1, "max": 2 }, "price_multiplier": 0.05 }
+							],
+							"gives": [{ "item": "5fs_br:moose_plushie", "quantity": 1 }],
+							"trader_exp": 10, "reward_exp": true
+						},
+						{
+							"max_uses": 2,
+							"wants": [
+								{ "item": "minecraft:emerald", "quantity": { "min": 24, "max": 48 }, "price_multiplier": 0.05 },
+								{ "item": "5fs_br:sap", "quantity": { "min": 1, "max": 2 }, "price_multiplier": 0.05 }
+							],
+							"gives": [{ "item": "5fs_br:creeper_plushie", "quantity": 1 }],
+							"trader_exp": 10, "reward_exp": true
+						},
+						{
+							"max_uses": 2,
+							"wants": [
+								{ "item": "minecraft:emerald", "quantity": { "min": 24, "max": 48 }, "price_multiplier": 0.05 },
+								{ "item": "5fs_br:sap", "quantity": { "min": 1, "max": 2 }, "price_multiplier": 0.05 }
+							],
+							"gives": [{ "item": "5fs_br:skeleton_plushie", "quantity": 1 }],
+							"trader_exp": 10, "reward_exp": true
+						},
+						{
+							"max_uses": 2,
+							"wants": [
+								{ "item": "minecraft:emerald", "quantity": { "min": 24, "max": 48 }, "price_multiplier": 0.05 },
+								{ "item": "5fs_br:sap", "quantity": { "min": 1, "max": 2 }, "price_multiplier": 0.05 }
+							],
+							"gives": [{ "item": "5fs_br:enderman_plushie", "quantity": 1 }],
+							"trader_exp": 10, "reward_exp": true
+						},
+						{
+							"max_uses": 2,
+							"wants": [
+								{ "item": "minecraft:emerald", "quantity": { "min": 24, "max": 48 }, "price_multiplier": 0.05 },
+								{ "item": "5fs_br:sap", "quantity": { "min": 1, "max": 2 }, "price_multiplier": 0.05 }
+							],
+							"gives": [{ "item": "5fs_br:panda_plushie", "quantity": 1 }],
+							"trader_exp": 10, "reward_exp": true
+						},
+						{
+							"max_uses": 2,
+							"wants": [
+								{ "item": "minecraft:emerald", "quantity": { "min": 32, "max": 48 }, "price_multiplier": 0.05 },
+								{ "item": "5fs_br:sap", "quantity": { "min": 4, "max": 8 }, "price_multiplier": 0.05 }
+							],
+							"gives": [{ "item": "5fs_br:phoenix_plushie", "quantity": 1 }],
+							"trader_exp": 15, "reward_exp": true
+						},
+						{
+							"max_uses": 2,
+							"wants": [
+								{ "item": "minecraft:emerald", "quantity": { "min": 32, "max": 48 }, "price_multiplier": 0.05 },
+								{ "item": "5fs_br:sap", "quantity": { "min": 4, "max": 8 }, "price_multiplier": 0.05 }
+							],
+							"gives": [{ "item": "5fs_br:thunderbird_plushie", "quantity": 1 }],
+							"trader_exp": 15, "reward_exp": true
+						},
+						{
+							"max_uses": 1,
+							"wants": [
+								{ "item": "5fs_br:compact_emerald", "quantity": { "min": 16, "max": 32 }, "price_multiplier": 0.05 },
+								{ "item": "5fs_br:golden_sap", "quantity": 1, "price_multiplier": 0.05 }
+							],
+							"gives": [{ "item": "5fs_br:crystalline_berserker_plushie", "quantity": 1 }],
+							"trader_exp": 20, "reward_exp": true
+						},
+						{
+							"max_uses": 1,
+							"wants": [
+								{ "item": "5fs_br:compact_emerald", "quantity": { "min": 16, "max": 32 }, "price_multiplier": 0.05 },
+								{ "item": "5fs_br:golden_sap", "quantity": 1, "price_multiplier": 0.05 }
+							],
+							"gives": [{ "item": "5fs_br:mummified_pharoah_plushie", "quantity": 1 }],
+							"trader_exp": 20, "reward_exp": true
+						},
+						{
+							"max_uses": 1,
+							"wants": [
+								{ "item": "5fs_br:compact_emerald", "quantity": { "min": 16, "max": 32 }, "price_multiplier": 0.05 },
+								{ "item": "5fs_br:golden_sap", "quantity": 1, "price_multiplier": 0.05 }
+							],
+							"gives": [{ "item": "5fs_br:ombari_the_jungle_king_plushie", "quantity": 1 }],
+							"trader_exp": 20, "reward_exp": true
+						},
+						{
+							"max_uses": 1,
+							"wants": [
+								{ "item": "5fs_br:compact_emerald", "quantity": { "min": 16, "max": 32 }, "price_multiplier": 0.05 },
+								{ "item": "5fs_br:golden_sap", "quantity": 1, "price_multiplier": 0.05 }
+							],
+							"gives": [{ "item": "5fs_br:wither_plushie", "quantity": 1 }],
+							"trader_exp": 20, "reward_exp": true
+						},
+						{
+							"max_uses": 1,
+							"wants": [
+								{ "item": "5fs_br:compact_emerald", "quantity": { "min": 16, "max": 32 }, "price_multiplier": 0.05 },
+								{ "item": "5fs_br:golden_sap", "quantity": 1, "price_multiplier": 0.05 }
+							],
+							"gives": [{ "item": "5fs_br:simurgh_plushie", "quantity": 1 }],
+							"trader_exp": 20, "reward_exp": true
+						}
+					]
+				}
+			]
+		},
+		{
+			"total_exp_required": 70,
+			"groups": [
+				{
+					"num_to_select": 3,
+					"trades": [
+						{
+							"max_uses": 8,
+							"wants": [
+								{ "item": "minecraft:emerald", "quantity": { "min": 4, "max": 8 }, "price_multiplier": 0.05 },
+								{ "item": "5fs_br:sap", "quantity": 1, "price_multiplier": 0.05 }
+							],
+							"gives": [{ "item": "5fs_br:goblin_bile", "quantity": 1 }],
+							"trader_exp": 10, "reward_exp": true
+						},
+						{
+							"max_uses": 8,
+							"wants": [
+								{ "item": "minecraft:emerald", "quantity": { "min": 6, "max": 10 }, "price_multiplier": 0.05 },
+								{ "item": "5fs_br:sap", "quantity": 1, "price_multiplier": 0.05 }
+							],
+							"gives": [{ "item": "5fs_br:shark_hide", "quantity": 1 }],
+							"trader_exp": 10, "reward_exp": true
+						},
+						{
+							"max_uses": 8,
+							"wants": [
+								{ "item": "minecraft:emerald", "quantity": { "min": 6, "max": 10 }, "price_multiplier": 0.05 },
+								{ "item": "5fs_br:sap", "quantity": 1, "price_multiplier": 0.05 }
+							],
+							"gives": [{ "item": "5fs_br:moose_hide", "quantity": 1 }],
+							"trader_exp": 10, "reward_exp": true
+						},
+						{
+							"max_uses": 8,
+							"wants": [
+								{ "item": "minecraft:emerald", "quantity": { "min": 8, "max": 12 }, "price_multiplier": 0.05 },
+								{ "item": "5fs_br:sap", "quantity": 1, "price_multiplier": 0.05 }
+							],
+							"gives": [{ "item": "5fs_br:giant_eagle_feather", "quantity": 1 }],
+							"trader_exp": 10, "reward_exp": true
+						},
+						{
+							"max_uses": 12,
+							"wants": [
+								{ "item": "minecraft:emerald", "quantity": { "min": 2, "max": 4 }, "price_multiplier": 0.05 }
+							],
+							"gives": [{ "item": "minecraft:gunpowder", "quantity": 2 }],
+							"trader_exp": 5, "reward_exp": true
+						},
+						{
+							"max_uses": 8,
+							"wants": [
+								{ "item": "minecraft:emerald", "quantity": { "min": 4, "max": 8 }, "price_multiplier": 0.05 }
+							],
+							"gives": [{ "item": "minecraft:phantom_membrane", "quantity": 1 }],
+							"trader_exp": 8, "reward_exp": true
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,54 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "5fs_br:cape_of_pig",
+      "materials": {
+        "default": "armor",
+        "enchanted": "armor_enchanted"
+      },
+      "textures": {
+        "pig0":  "textures/entity/gears/capes/pig/pig0",
+        "pig1":  "textures/entity/gears/capes/pig/pig1",
+        "pig2":  "textures/entity/gears/capes/pig/pig2",
+        "pig3":  "textures/entity/gears/capes/pig/pig3",
+        "pig4":  "textures/entity/gears/capes/pig/pig4",
+        "pig5":  "textures/entity/gears/capes/pig/pig5",
+        "pig6":  "textures/entity/gears/capes/pig/pig6",
+        "pig7":  "textures/entity/gears/capes/pig/pig7",
+        "pig8":  "textures/entity/gears/capes/pig/pig8",
+        "pig9":  "textures/entity/gears/capes/pig/pig9",
+        "pig10": "textures/entity/gears/capes/pig/pig10",
+        "pig11": "textures/entity/gears/capes/pig/pig11",
+        "pig12": "textures/entity/gears/capes/pig/pig12",
+        "pig13": "textures/entity/gears/capes/pig/pig13",
+        "pig14": "textures/entity/gears/capes/pig/pig14",
+        "pig15": "textures/entity/gears/capes/pig/pig15",
+        "pig16": "textures/entity/gears/capes/pig/pig16",
+        "pig17": "textures/entity/gears/capes/pig/pig17",
+        "pig18": "textures/entity/gears/capes/pig/pig18",
+        "pig19": "textures/entity/gears/capes/pig/pig19",
+        "pig20": "textures/entity/gears/capes/pig/pig20",
+        "pig21": "textures/entity/gears/capes/pig/pig21",
+        "pig22": "textures/entity/gears/capes/pig/pig22",
+        "pig23": "textures/entity/gears/capes/pig/pig23",
+        "enchanted": "textures/misc/enchanted_actor_glint"
+      },
+      "geometry": {
+        "default": "geometry.custom_cape"
+      },
+      "animations": {
+        "cape": "animation.custom_cape"
+      },
+      "scripts": {
+        "parent_setup": "variable.chest_layer_visible = 0.0;",
+        "animate": [
+          "cape"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.cape_of_pig"
+      ]
+    }
+  }
+}

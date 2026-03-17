@@ -1,0 +1,22 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "5fs_br:icicle",
+            "materials": {
+                "default": "entity_alphatest_change_color"
+            },
+            "textures": {
+                "normal": "textures/entity/projectiles/icicle/icicle_projectile",
+                "splash": "textures/entity/projectiles/icicle/splash_icicle_projectile"
+            },
+            "geometry": {
+                "normal": "geometry.icicle_projectile",
+                "splash": "geometry.splash_icicle_projectile"
+            },
+            "render_controllers": [
+                "controller.render.icicle"
+            ]
+        }
+    }
+}

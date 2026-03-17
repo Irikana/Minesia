@@ -1,0 +1,15 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "5fs_br:fossil/weighted_fossil_feature"
+    },
+    "features": [
+      ["5fs_br:fossil/fossil_1_feature", 2],
+      ["5fs_br:fossil/fossil_2_feature", 2],
+      ["5fs_br:fossil/fossil_3_feature", 2],
+      ["5fs_br:fossil/fossil_4_feature", 2],
+      ["5fs_br:fossil/fossil_5_feature", 2]
+    ]
+  }
+}

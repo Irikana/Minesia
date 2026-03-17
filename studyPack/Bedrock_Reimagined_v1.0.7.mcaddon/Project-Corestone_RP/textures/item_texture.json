@@ -1,0 +1,4362 @@
+{
+    "resource_pack_name": "dynamic_biomes_RP",
+    "texture_name": "atlas.items",
+    "texture_data": {
+        "5fs_br:small_backpack": {
+            "textures": "textures/items/backpacks/small_backpack"
+        },
+        "5fs_br:large_backpack": {
+            "textures": "textures/items/backpacks/large_backpack"
+        },
+        "5fs_br:medium_backpack": {
+            "textures": "textures/items/backpacks/medium_backpack"
+        },
+        "5fs_br:backpacksystem.unusable_slot": {
+            "textures": "textures/entity/cape_invisible"
+        },
+        "5fs_br:liana": {
+            "textures": "textures/items/plants/liana"
+        },
+        "5fs_br:rafflesia_icon": {
+            "textures": "textures/items/flowers/rafflesia_icon"
+        },
+        "5fs_br:pirate_brute": {
+            "textures": "textures/items/eggs/pirate_brute"
+        },
+        "5fs_br:pirate_raider": {
+            "textures": "textures/items/eggs/pirate_raider"
+        },
+        "5fs_br:pirate_captain": {
+            "textures": "textures/items/eggs/pirate_captain"
+        },
+        "5fs_br:mana_bottle": {
+            "textures": "textures/items/potions/mana_bottle"
+        },
+        "5fs_br:pirate_sharpshooter": {
+            "textures": "textures/items/eggs/pirate_sharpshooter"
+        },
+        "5fs_br:sea_witch": {
+            "textures": "textures/items/eggs/sea_witch"
+        },
+        "5fs_br:empty": {
+            "textures": "textures/empty"
+        },
+        "5fs_br:red_mushroom": {
+            "textures": [
+                "textures/items/plants/mushrooms/red_mushroom"
+            ]
+        },
+        "5fs_br:poisonous_green_mushroom": {
+            "textures": [
+                "textures/items/plants/mushrooms/poisonous_green_mushroom"
+            ]
+        },
+        "5fs_br:poisonous_purple_mushroom": {
+            "textures": [
+                "textures/items/plants/mushrooms/poisonous_purple_mushroom"
+            ]
+        },
+        "5fs_br:compact_cobalt_ingot": {
+            "textures": [
+                "textures/items/compact/compact_cobalt_ingot"
+            ]
+        },
+        "5fs_br:compact_raw_cobalt": {
+            "textures": [
+                "textures/items/compact/compact_raw_cobalt"
+            ]
+        },
+        "5fs_br:compact_raw_cobalt_dust": {
+            "textures": [
+                "textures/items/compact/compact_raw_cobalt_dust"
+            ]
+        },
+        "5fs_br:compact_netherite_ingot": {
+            "textures": [
+                "textures/items/compact/compact_netherite_ingot"
+            ]
+        },
+        "5fs_br:compact_sulfur_infused_dragonite_ingot": {
+            "textures": [
+                "textures/items/compact/compact_sulfur_infused_dragonite_ingot"
+            ]
+        },
+        "5fs_br:water_moss_algae": {
+            "textures": [
+                "textures/items/plants/water_moss_algae"
+            ]
+        },
+        "5fs_br:yellow_magic_bed_icon": {
+            "textures": [
+                "textures/items/misc/beds/yellow_magic_bed_icon"
+            ]
+        },
+        "5fs_br:purple_magic_bed_icon": {
+            "textures": [
+                "textures/items/misc/beds/purple_magic_bed_icon"
+            ]
+        },
+        "5fs_br:enchanting_table_bed_icon": {
+            "textures": [
+                "textures/items/misc/beds/enchanting_table_bed_icon"
+            ]
+        },
+        "5fs_br:enderman_bed_icon": {
+            "textures": [
+                "textures/items/misc/beds/enderman_bed_icon"
+            ]
+        },
+        "5fs_br:night_sky_bed_icon": {
+            "textures": [
+                "textures/items/misc/beds/night_sky_bed_icon"
+            ]
+        },
+        "5fs_br:panda_bed_icon": {
+            "textures": [
+                "textures/items/misc/beds/panda_bed_icon"
+            ]
+        },
+        "5fs_br:coral_cove_bed_icon": {
+            "textures": [
+                "textures/items/misc/beds/coral_cove_bed_icon"
+            ]
+        },
+        "5fs_br:deep_ocean_bed_icon": {
+            "textures": [
+                "textures/items/misc/beds/deep_ocean_bed_icon"
+            ]
+        },
+        "5fs_br:ocean_waves_bed_icon": {
+            "textures": [
+                "textures/items/misc/beds/ocean_waves_bed_icon"
+            ]
+        },
+        "5fs_br:barrel_bed_icon": {
+            "textures": [
+                "textures/items/misc/beds/barrel_bed_icon"
+            ]
+        },
+        "5fs_br:cow_bed_icon": {
+            "textures": [
+                "textures/items/misc/beds/cow_bed_icon"
+            ]
+        },
+        "5fs_br:bear_bed_icon": {
+            "textures": [
+                "textures/items/misc/beds/bear_bed_icon"
+            ]
+        },
+        "5fs_br:quarry_bed_icon": {
+            "textures": [
+                "textures/items/misc/beds/quarry_bed_icon"
+            ]
+        },
+        "5fs_br:crystal_canyon_bed_icon": {
+            "textures": [
+                "textures/items/misc/beds/crystal_canyon_bed_icon"
+            ]
+        },
+        "5fs_br:ores_bed_icon": {
+            "textures": [
+                "textures/items/misc/beds/ores_bed_icon"
+            ]
+        },
+        "5fs_br:ice_spikes_bed_icon": {
+            "textures": [
+                "textures/items/misc/beds/ice_spikes_bed_icon"
+            ]
+        },
+        "5fs_br:glimmerite_bed_icon": {
+            "textures": [
+                "textures/items/misc/beds/glimmerite_bed_icon"
+            ]
+        },
+        "5fs_br:frozen_bed_icon": {
+            "textures": [
+                "textures/items/misc/beds/frozen_bed_icon"
+            ]
+        },
+        "5fs_br:tree_bed_icon": {
+            "textures": [
+                "textures/items/misc/beds/tree_bed_icon"
+            ]
+        },
+        "5fs_br:cactus_bed_icon": {
+            "textures": [
+                "textures/items/misc/beds/cactus_bed_icon"
+            ]
+        },
+        "5fs_br:creeper_bed_icon": {
+            "textures": [
+                "textures/items/misc/beds/creeper_bed_icon"
+            ]
+        },
+        "5fs_br:wither_bed_icon": {
+            "textures": [
+                "textures/items/misc/beds/wither_bed_icon"
+            ]
+        },
+        "5fs_br:furnace_bed_icon": {
+            "textures": [
+                "textures/items/misc/beds/furnace_bed_icon"
+            ]
+        },
+        "5fs_br:meteor_bed_icon": {
+            "textures": [
+                "textures/items/misc/beds/meteor_bed_icon"
+            ]
+        },
+        "5fs_br:warden_bed_icon": {
+            "textures": [
+                "textures/items/misc/beds/warden_bed_icon"
+            ]
+        },
+        "5fs_br:prismarine_bed_icon": {
+            "textures": [
+                "textures/items/misc/beds/prismarine_bed_icon"
+            ]
+        },
+        "5fs_br:beach_bed_icon": {
+            "textures": [
+                "textures/items/misc/beds/beach_bed_icon"
+            ]
+        },
+        "5fs_br:crystalline_berserker_bed_icon": {
+            "textures": [
+                "textures/items/misc/beds/crystalline_berserker_bed_icon"
+            ]
+        },
+        "5fs_br:potion_bed_icon": {
+            "textures": [
+                "textures/items/misc/beds/potion_bed_icon"
+            ]
+        },
+        "5fs_br:turtle_bed_icon": {
+            "textures": [
+                "textures/items/misc/beds/turtle_bed_icon"
+            ]
+        },
+        "5fs_br:dragonite_bed_icon": {
+            "textures": [
+                "textures/items/misc/beds/dragonite_bed_icon"
+            ]
+        },
+        "5fs_br:shulker_bed_icon": {
+            "textures": [
+                "textures/items/misc/beds/shulker_bed_icon"
+            ]
+        },
+        "5fs_br:witch_bed_icon": {
+            "textures": [
+                "textures/items/misc/beds/witch_bed_icon"
+            ]
+        },
+        "5fs_br:blaze_bed_icon": {
+            "textures": [
+                "textures/items/misc/beds/blaze_bed_icon"
+            ]
+        },
+        "5fs_br:pumpkin_bed_icon": {
+            "textures": [
+                "textures/items/misc/beds/pumpkin_bed_icon"
+            ]
+        },
+        "5fs_br:fox_bed_icon": {
+            "textures": [
+                "textures/items/misc/beds/fox_bed_icon"
+            ]
+        },
+        "5fs_br:flower_bed_icon": {
+            "textures": [
+                "textures/items/misc/beds/flower_bed_icon"
+            ]
+        },
+        "5fs_br:cherry_bed_icon": {
+            "textures": [
+                "textures/items/misc/beds/cherry_bed_icon"
+            ]
+        },
+        "5fs_br:pig_bed_icon": {
+            "textures": [
+                "textures/items/misc/beds/pig_bed_icon"
+            ]
+        },
+        "5fs_br:amethyst_bed_icon": {
+            "textures": [
+                "textures/items/misc/beds/amethyst_bed_icon"
+            ]
+        },
+        "5fs_br:breeze_bed_icon": {
+            "textures": [
+                "textures/items/misc/beds/breeze_bed_icon"
+            ]
+        },
+        "5fs_br:dragon_bed_icon": {
+            "textures": [
+                "textures/items/misc/beds/dragon_bed_icon"
+            ]
+        },
+        "5fs_br:lumberjack_bed_icon": {
+            "textures": [
+                "textures/items/misc/beds/lumberjack_bed_icon"
+            ]
+        },
+        "5fs_br:maple_bed_icon": {
+            "textures": [
+                "textures/items/misc/beds/maple_bed_icon"
+            ]
+        },
+        "5fs_br:redstone_bed_icon": {
+            "textures": [
+                "textures/items/misc/beds/redstone_bed_icon"
+            ]
+        },
+        "5fs_br:ghast_bed_icon": {
+            "textures": [
+                "textures/items/misc/beds/ghast_bed_icon"
+            ]
+        },
+        "5fs_br:sheep_bed_icon": {
+            "textures": [
+                "textures/items/misc/beds/sheep_bed_icon"
+            ]
+        },
+        "5fs_br:snowy_bed_icon": {
+            "textures": [
+                "textures/items/misc/beds/snowy_bed_icon"
+            ]
+        },
+        "5fs_br:honeycomb_bed_icon": {
+            "textures": [
+                "textures/items/misc/beds/honeycomb_bed_icon"
+            ]
+        },
+        "5fs_br:bee_bed_icon": {
+            "textures": [
+                "textures/items/misc/beds/bee_bed_icon"
+            ]
+        },
+        "5fs_br:glowstone_bed_icon": {
+            "textures": [
+                "textures/items/misc/beds/glowstone_bed_icon"
+            ]
+        },
+        "5fs_br:torch_offhand": {
+            "textures": [
+                "textures/items/misc/tools/torch_offhand"
+            ]
+        },
+        "5fs_br:giant_eagle_feather": {
+            "textures": [
+                "textures/items/nature/giant_eagle_feather"
+            ]
+        },
+        "5fs_br:ender_essence": {
+            "textures": [
+                "textures/items/nature/ender_essence"
+            ]
+        },
+        "5fs_br:eclipse_shard": {
+            "textures": [
+                "textures/items/nature/eclipse_shard"
+            ]
+        },
+        "5fs_br:goblin_bile": {
+            "textures": [
+                "textures/items/nature/goblin_bile"
+            ]
+        },
+        "5fs_br:beaver_tail": {
+            "textures": [
+                "textures/items/food/beaver_tail"
+            ]
+        },
+        "5fs_br:cooked_beaver_tail": {
+            "textures": [
+                "textures/items/food/cooked_beaver_tail"
+            ]
+        },
+        "5fs_br:redwood_sentinel_core": {
+            "textures": [
+                "textures/items/misc/cores/redwood_sentinel_core"
+            ]
+        },
+        "5fs_br:ombari_core": {
+            "textures": [
+                "textures/items/misc/cores/ombari_core"
+            ]
+        },
+        "5fs_br:crystalline_berserker_core": {
+            "textures": [
+                "textures/items/misc/cores/crystalline_berserker_core"
+            ]
+        },
+        "5fs_br:mummified_pharoah_core": {
+            "textures": [
+                "textures/items/misc/cores/mummified_pharoah_core"
+            ]
+        },
+        "5fs_br:eclipsion_core": {
+            "textures": [
+                "textures/items/misc/cores/eclipsion_core"
+            ]
+        },
+        "5fs_br:pirate_captain_core": {
+            "textures": [
+                "textures/items/misc/cores/pirate_captain_core"
+            ]
+        },
+        "5fs_br:simurgh_core": {
+            "textures": [
+                "textures/items/misc/cores/simurgh_core"
+            ]
+        },
+        "5fs_br:sea_witch_wand": {
+            "textures": [
+                "textures/items/weapons/wands/sea_witch_wand"
+            ]
+        },
+        "5fs_br:mana_sword": {
+            "textures": [
+                "textures/items/misc/tools/mana_sword"
+            ]
+        },
+        "5fs_br:crystalline_shears": {
+            "textures": [
+                "textures/items/misc/tools/crystalline_shears"
+            ]
+        },
+        "5fs_br:large_ocean_mine": {
+            "textures": [
+                "textures/items/misc/ocean_mines/large_ocean_mine"
+            ]
+        },
+        "5fs_br:medium_ocean_mine": {
+            "textures": [
+                "textures/items/misc/ocean_mines/medium_ocean_mine"
+            ]
+        },
+        "5fs_br:small_ocean_mine": {
+            "textures": [
+                "textures/items/misc/ocean_mines/small_ocean_mine"
+            ]
+        },
+        "5fs_br:giant_pumpkin_seed": {
+            "textures": [
+                "textures/items/seeds/giant_pumpkin_seed"
+            ]
+        },
+        "5fs_br:giant_pumpkin_pie": {
+            "textures": [
+                "textures/items/food/giant_pumpkin_pie"
+            ]
+        },
+        "5fs_br:cattail_icon": {
+            "textures": [
+                "textures/items/plants/cattail_icon"
+            ]
+        },
+        "5fs_br:buttercup": {
+            "textures": [
+                "textures/blocks/flowers/buttercup"
+            ]
+        },
+        "5fs_br:redwood_boat": {
+            "textures": [
+                "textures/items/boats/redwood_boat"
+            ]
+        },
+        "5fs_br:redwood_chest_boat": {
+            "textures": [
+                "textures/items/boats/redwood_chest_boat"
+            ]
+        },
+        "5fs_br:simurgh_saddle": {
+            "textures": [
+                "textures/items/misc/saddles/simurgh_saddle"
+            ]
+        },
+        "5fs_br:redwood_grass": {
+            "textures": [
+                "textures/blocks/plants/redwood/redwood_grass"
+            ]
+        },
+        "5fs_br:redwood_fern_icon": {
+            "textures": [
+                "textures/blocks/plants/redwood/redwood_fern_icon"
+            ]
+        },
+        "5fs_br:redwood_sprout_icon": {
+            "textures": [
+                "textures/blocks/plants/redwood/redwood_sprout_icon"
+            ]
+        },
+        "5fs_br:tall_redwood_grass_icon": {
+            "textures": [
+                "textures/blocks/plants/redwood/tall_redwood_grass_icon"
+            ]
+        },
+        "5fs_br:large_redwood_fern_icon": {
+            "textures": [
+                "textures/blocks/plants/redwood/large_redwood_fern_icon"
+            ]
+        },
+        "5fs_br:splash_shrinkify_potion": {
+            "textures": [
+                "textures/items/potions/splash_shrinkify_potion"
+            ]
+        },
+        "5fs_br:lingering_shrinkify_potion": {
+            "textures": [
+                "textures/items/potions/lingering_shrinkify_potion"
+            ]
+        },
+        "5fs_br:shrinkify_potion": {
+            "textures": [
+                "textures/items/potions/shrinkify_potion"
+            ]
+        },
+        "5fs_br:splash_gigantify_potion": {
+            "textures": [
+                "textures/items/potions/splash_gigantify_potion"
+            ]
+        },
+        "5fs_br:lingering_gigantify_potion": {
+            "textures": [
+                "textures/items/potions/lingering_gigantify_potion"
+            ]
+        },
+        "5fs_br:gigantify_potion": {
+            "textures": [
+                "textures/items/potions/gigantify_potion"
+            ]
+        },
+        "5fs_br:giant_shark_fin_soup": {
+            "textures": [
+                "textures/items/food/giant_shark_fin_soup"
+            ]
+        },
+        "5fs_br:giant_rabbit_stew": {
+            "textures": [
+                "textures/items/food/giant_rabbit_stew"
+            ]
+        },
+        "5fs_br:giant_mushroom_stew": {
+            "textures": [
+                "textures/items/food/giant_mushroom_stew"
+            ]
+        },
+        "5fs_br:giant_redwood_bowl": {
+            "textures": [
+                "textures/items/food/giant_redwood_bowl"
+            ]
+        },
+        "5fs_br:redwood_flower": {
+            "textures": [
+                "textures/blocks/flowers/redwood_flower_icon"
+            ]
+        },
+        "5fs_br:tall_redwood_flower_icon": {
+            "textures": [
+                "textures/blocks/flowers/tall_redwood_flower_icon"
+            ]
+        },
+        "5fs_br:redwood_leaf_litter": {
+            "textures": [
+                "textures/blocks/flowers/redwood_leaf_litter"
+            ]
+        },
+        "5fs_br:redwood_yellow_mushroom": {
+            "textures": [
+                "textures/blocks/flowers/redwood_yellow_mushroom"
+            ]
+        },
+        "5fs_br:redwood_brown_mushroom": {
+            "textures": [
+                "textures/blocks/flowers/redwood_brown_mushroom"
+            ]
+        },
+        "5fs_br:enchanted_scroll": {
+            "textures": [
+                "textures/items/misc/scrolls/enchanted_scroll"
+            ]
+        },
+        "5fs_br:greater_scroll": {
+            "textures": [
+                "textures/items/misc/scrolls/greater_scroll"
+            ]
+        },
+        "5fs_br:ancient_scroll": {
+            "textures": [
+                "textures/items/misc/scrolls/ancient_scroll"
+            ]
+        },
+        "5fs_br:mythic_scroll": {
+            "textures": [
+                "textures/items/misc/scrolls/mythic_scroll"
+            ]
+        },
+        "5fs_br:basic_scroll": {
+            "textures": [
+                "textures/items/misc/scrolls/basic_scroll"
+            ]
+        },
+        "5fs_br:spell_of_transformation": {
+            "textures": [
+                "textures/items/misc/spells/spell_of_transformation"
+            ]
+        },
+        "5fs_br:spell_of_sight": {
+            "textures": [
+                "textures/items/misc/spells/spell_of_sight"
+            ]
+        },
+        "5fs_br:spell_of_exhaustion": {
+            "textures": [
+                "textures/items/misc/spells/spell_of_exhaustion"
+            ]
+        },
+        "5fs_br:spell_of_repositioning": {
+            "textures": [
+                "textures/items/misc/spells/spell_of_repositioning"
+            ]
+        },
+        "5fs_br:spell_of_bladeworks": {
+            "textures": [
+                "textures/items/misc/spells/spell_of_bladeworks"
+            ]
+        },
+        "5fs_br:spell_of_voidwalking": {
+            "textures": [
+                "textures/items/misc/spells/spell_of_voidwalking"
+            ]
+        },
+        "5fs_br:spell_of_hailstorm": {
+            "textures": [
+                "textures/items/misc/spells/spell_of_hailstorm"
+            ]
+        },
+        "5fs_br:spell_of_blazing_inferno": {
+            "textures": [
+                "textures/items/misc/spells/spell_of_blazing_inferno"
+            ]
+        },
+        "5fs_br:spell_of_raging_fury": {
+            "textures": [
+                "textures/items/misc/spells/spell_of_raging_fury"
+            ]
+        },
+        "5fs_br:spell_of_trickery": {
+            "textures": [
+                "textures/items/misc/spells/spell_of_trickery"
+            ]
+        },
+        "5fs_br:spell_of_bunkering": {
+            "textures": [
+                "textures/items/misc/spells/spell_of_bunkering"
+            ]
+        },
+        "5fs_br:spell_of_chain_lightning": {
+            "textures": [
+                "textures/items/misc/spells/spell_of_chain_lightning"
+            ]
+        },
+        "5fs_br:spell_of_destruction": {
+            "textures": [
+                "textures/items/misc/spells/spell_of_destruction"
+            ]
+        },
+        "5fs_br:spell_of_ghastly_shackles": {
+            "textures": [
+                "textures/items/misc/spells/spell_of_ghastly_shackles"
+            ]
+        },
+        "5fs_br:spell_of_mysteries": {
+            "textures": [
+                "textures/items/misc/spells/spell_of_mysteries"
+            ]
+        },
+        "5fs_br:rune_of_light": {
+            "textures": [
+                "textures/items/misc/runes/rune_of_light"
+            ]
+        },
+        "5fs_br:rune_of_souls": {
+            "textures": [
+                "textures/items/misc/runes/rune_of_souls"
+            ]
+        },
+        "5fs_br:rune_of_growth": {
+            "textures": [
+                "textures/items/misc/runes/rune_of_growth"
+            ]
+        },
+        "5fs_br:rune_of_decay": {
+            "textures": [
+                "textures/items/misc/runes/rune_of_decay"
+            ]
+        },
+        "5fs_br:rune_of_knowledge": {
+            "textures": [
+                "textures/items/misc/runes/rune_of_knowledge"
+            ]
+        },
+        "5fs_br:rune_of_venom": {
+            "textures": [
+                "textures/items/misc/runes/rune_of_venom"
+            ]
+        },
+        "5fs_br:rune_of_shadows": {
+            "textures": [
+                "textures/items/misc/runes/rune_of_shadows"
+            ]
+        },
+        "5fs_br:rune_of_beasts": {
+            "textures": [
+                "textures/items/misc/runes/rune_of_beasts"
+            ]
+        },
+        "5fs_br:rune_of_shields": {
+            "textures": [
+                "textures/items/misc/runes/rune_of_shields"
+            ]
+        },
+        "5fs_br:rune_of_void": {
+            "textures": [
+                "textures/items/misc/runes/rune_of_void"
+            ]
+        },
+        "5fs_br:rune_of_eternity": {
+            "textures": [
+                "textures/items/misc/runes/rune_of_eternity"
+            ]
+        },
+        "5fs_br:rune_of_tides": {
+            "textures": [
+                "textures/items/misc/runes/rune_of_tides"
+            ]
+        },
+        "5fs_br:rune_of_frost": {
+            "textures": [
+                "textures/items/misc/runes/rune_of_frost"
+            ]
+        },
+        "5fs_br:rune_of_blades": {
+            "textures": [
+                "textures/items/misc/runes/rune_of_blades"
+            ]
+        },
+        "5fs_br:rune_of_earth": {
+            "textures": [
+                "textures/items/misc/runes/rune_of_earth"
+            ]
+        },
+        "5fs_br:rune_of_storms": {
+            "textures": [
+                "textures/items/misc/runes/rune_of_storms"
+            ]
+        },
+        "5fs_br:rune_of_flame": {
+            "textures": [
+                "textures/items/misc/runes/rune_of_flame"
+            ]
+        },
+        "5fs_br:ender_chalice": {
+            "textures": [
+                "textures/items/misc/water_bottles/ender_chalice"
+            ]
+        },
+        "5fs_br:crystalline_chalice": {
+            "textures": [
+                "textures/items/misc/water_bottles/crystalline_chalice"
+            ]
+        },
+        "5fs_br:steel_canteen_full": {
+            "textures": [
+                "textures/items/misc/water_bottles/steel_canteen_full"
+            ]
+        },
+        "5fs_br:iron_canteen_full": {
+            "textures": [
+                "textures/items/misc/water_bottles/iron_canteen_full"
+            ]
+        },
+        "5fs_br:waterskin_full": {
+            "textures": [
+                "textures/items/misc/water_bottles/waterskin_full"
+            ]
+        },
+        "5fs_br:ender_chalice_empty": {
+            "textures": [
+                "textures/items/misc/water_bottles/ender_chalice_empty"
+            ]
+        },
+        "5fs_br:crystalline_chalice_empty": {
+            "textures": [
+                "textures/items/misc/water_bottles/crystalline_chalice_empty"
+            ]
+        },
+        "5fs_br:steel_canteen_empty": {
+            "textures": [
+                "textures/items/misc/water_bottles/steel_canteen_empty"
+            ]
+        },
+        "5fs_br:iron_canteen_empty": {
+            "textures": [
+                "textures/items/misc/water_bottles/iron_canteen_empty"
+            ]
+        },
+        "5fs_br:waterskin_empty": {
+            "textures": [
+                "textures/items/misc/water_bottles/waterskin_empty"
+            ]
+        },
+        "5fs_br:lingering_potion_of_blindness": {
+            "textures": [
+                "textures/items/potions/lingering_potion_of_blindness"
+            ]
+        },
+        "5fs_br:splash_potion_of_blindness": {
+            "textures": [
+                "textures/items/potions/splash_potion_of_blindness"
+            ]
+        },
+        "5fs_br:potion_of_blindness": {
+            "textures": [
+                "textures/items/potions/potion_of_blindness"
+            ]
+        },
+        "5fs_br:lingering_potion_of_conduit_power": {
+            "textures": [
+                "textures/items/potions/lingering_potion_of_conduit_power"
+            ]
+        },
+        "5fs_br:splash_potion_of_conduit_power": {
+            "textures": [
+                "textures/items/potions/splash_potion_of_conduit_power"
+            ]
+        },
+        "5fs_br:potion_of_conduit_power": {
+            "textures": [
+                "textures/items/potions/potion_of_conduit_power"
+            ]
+        },
+        "5fs_br:lingering_potion_of_decay": {
+            "textures": [
+                "textures/items/potions/lingering_potion_of_decay"
+            ]
+        },
+        "5fs_br:splash_potion_of_decay": {
+            "textures": [
+                "textures/items/potions/splash_potion_of_decay"
+            ]
+        },
+        "5fs_br:potion_of_decay": {
+            "textures": [
+                "textures/items/potions/potion_of_decay"
+            ]
+        },
+        "5fs_br:giant_shark_tooth": {
+            "textures": [
+                "textures/items/nature/giant_shark_tooth"
+            ]
+        },
+        "5fs_br:shark_fin_soup": {
+            "textures": [
+                "textures/items/food/shark_fin_soup"
+            ]
+        },
+        "5fs_br:sharp_arrows": {
+            "textures": [
+                "textures/items/projectiles/sharp_arrows"
+            ]
+        },
+        "5fs_br:shark_hide": {
+            "textures": [
+                "textures/items/nature/shark_hide"
+            ]
+        },
+        "5fs_br:ancient_bark": {
+            "textures": [
+                "textures/items/misc/ancient_bark"
+            ]
+        },
+        "5fs_br:cooked_shark_fin": {
+            "textures": [
+                "textures/items/food/cooked_shark_fin"
+            ]
+        },
+        "5fs_br:raw_shark_fin": {
+            "textures": [
+                "textures/items/food/raw_shark_fin"
+            ]
+        },
+        "5fs_br:shark_tooth": {
+            "textures": [
+                "textures/items/nature/shark_tooth"
+            ]
+        },
+        "5fs_br:rusted_ring_of_pharaohs_curse": {
+            "textures": [
+                "textures/items/misc/accessory/rings/rusted_ring_of_pharaohs_curse"
+            ]
+        },
+        "5fs_br:cracked_ring_of_pharaohs_curse": {
+            "textures": [
+                "textures/items/misc/accessory/rings/cracked_ring_of_pharaohs_curse"
+            ]
+        },
+        "5fs_br:chipped_ring_of_pharaohs_curse": {
+            "textures": [
+                "textures/items/misc/accessory/rings/chipped_ring_of_pharaohs_curse"
+            ]
+        },
+        "5fs_br:worn_ring_of_pharaohs_curse": {
+            "textures": [
+                "textures/items/misc/accessory/rings/worn_ring_of_pharaohs_curse"
+            ]
+        },
+        "5fs_br:pristine_ring_of_pharaohs_curse": {
+            "textures": [
+                "textures/items/misc/accessory/rings/pristine_ring_of_pharaohs_curse"
+            ]
+        },
+        "5fs_br:mask_of_the_wild": {
+            "textures": [
+                "textures/items/misc/accessory/mask_of_the_wild"
+            ]
+        },
+        "5fs_br:mummified_bones": {
+            "textures": [
+                "textures/items/nature/mummified_bones"
+            ]
+        },
+        "5fs_br:mummified_hammer": {
+            "textures": [
+                "textures/items/weapons/hammers/mummified_hammer"
+            ]
+        },
+        "5fs_br:butterfly": {
+            "textures": [
+                "textures/items/eggs/butterfly"
+            ]
+        },
+        "5fs_br:dragonfly": {
+            "textures": [
+                "textures/items/eggs/dragonfly"
+            ]
+        },
+        "5fs_br:duck": {
+            "textures": [
+                "textures/items/eggs/duck"
+            ]
+        },
+        "5fs_br:epic_pet_belt": {
+            "textures": [
+                "textures/items/misc/belts/epic_pet_belt"
+            ]
+        },
+        "5fs_br:legendary_pet_belt": {
+            "textures": [
+                "textures/items/misc/belts/legendary_pet_belt"
+            ]
+        },
+        "5fs_br:rare_pet_belt": {
+            "textures": [
+                "textures/items/misc/belts/rare_pet_belt"
+            ]
+        },
+        "5fs_br:uncommon_pet_belt": {
+            "textures": [
+                "textures/items/misc/belts/uncommon_pet_belt"
+            ]
+        },
+        "5fs_br:common_pet_belt": {
+            "textures": [
+                "textures/items/misc/belts/common_pet_belt"
+            ]
+        },
+        "5fs_br:pet_panda": {
+            "textures": [
+                "textures/items/misc/accessory/pets/pet_panda"
+            ]
+        },
+        "5fs_br:pet_fox": {
+            "textures": [
+                "textures/items/misc/accessory/pets/pet_fox"
+            ]
+        },
+        "5fs_br:pet_surfer": {
+            "textures": [
+                "textures/items/misc/accessory/pets/pet_surfer"
+            ]
+        },
+        "5fs_br:pet_meteorite_golem": {
+            "textures": [
+                "textures/items/misc/accessory/pets/pet_meteorite_golem"
+            ]
+        },
+        "5fs_br:charm_of_drowned": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_drowned"
+            ]
+        },
+        "5fs_br:charm_of_squid": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_squid"
+            ]
+        },
+        "5fs_br:pet_maple_leaflet": {
+            "textures": [
+                "textures/items/misc/accessory/pets/pet_maple_leaflet"
+            ]
+        },
+        "5fs_br:pet_parrot": {
+            "textures": [
+                "textures/items/misc/accessory/pets/pet_parrot"
+            ]
+        },
+        "5fs_br:pet_axolotl": {
+            "textures": [
+                "textures/items/misc/accessory/pets/pet_axolotl"
+            ]
+        },
+        "5fs_br:pet_horse": {
+            "textures": [
+                "textures/items/misc/accessory/pets/pet_horse"
+            ]
+        },
+        "5fs_br:pet_mule": {
+            "textures": [
+                "textures/items/misc/accessory/pets/pet_mule"
+            ]
+        },
+        "5fs_br:pet_donkey": {
+            "textures": [
+                "textures/items/misc/accessory/pets/pet_donkey"
+            ]
+        },
+        "5fs_br:pet_llama": {
+            "textures": [
+                "textures/items/misc/accessory/pets/pet_llama"
+            ]
+        },
+        "5fs_br:pet_cat": {
+            "textures": [
+                "textures/items/misc/accessory/pets/pet_cat"
+            ]
+        },
+        "5fs_br:pet_wolf": {
+            "textures": [
+                "textures/items/misc/accessory/pets/pet_wolf"
+            ]
+        },
+        "5fs_br:redwood_sapling": {
+            "textures": [
+                "textures/items/saplings/redwood_sapling"
+            ]
+        },
+        "5fs_br:music_disc_sands_of_fury": {
+            "textures": [
+                "textures/items/misc/music/music_disc_sands_of_fury"
+            ]
+        },
+        "5fs_br:music_disc_roots_and_rainforests": {
+            "textures": [
+                "textures/items/misc/music/music_disc_roots_and_rainforests"
+            ]
+        },
+        "5fs_br:weathered_copper_ladder": {
+            "textures": [
+                "textures/blocks/misc/ladders/weathered_copper_ladder"
+            ]
+        },
+        "5fs_br:oxidized_copper_ladder": {
+            "textures": [
+                "textures/blocks/misc/ladders/oxidized_copper_ladder"
+            ]
+        },
+        "5fs_br:exposed_copper_ladder": {
+            "textures": [
+                "textures/blocks/misc/ladders/exposed_copper_ladder"
+            ]
+        },
+        "5fs_br:copper_ladder": {
+            "textures": [
+                "textures/blocks/misc/ladders/copper_ladder"
+            ]
+        },
+        "5fs_br:redwood_ladder": {
+            "textures": [
+                "textures/blocks/construction/redwood/redwood_ladder"
+            ]
+        },
+        "5fs_br:spruce_ladder": {
+            "textures": [
+                "textures/blocks/misc/ladders/spruce_ladder"
+            ]
+        },
+        "5fs_br:acacia_ladder": {
+            "textures": [
+                "textures/blocks/misc/ladders/acacia_ladder"
+            ]
+        },
+        "5fs_br:jungle_ladder": {
+            "textures": [
+                "textures/blocks/misc/ladders/jungle_ladder"
+            ]
+        },
+        "5fs_br:birch_ladder": {
+            "textures": [
+                "textures/blocks/misc/ladders/birch_ladder"
+            ]
+        },
+        "5fs_br:dark_oak_ladder": {
+            "textures": [
+                "textures/blocks/misc/ladders/dark_oak_ladder"
+            ]
+        },
+        "5fs_br:pale_oak_ladder": {
+            "textures": [
+                "textures/blocks/misc/ladders/pale_oak_ladder"
+            ]
+        },
+        "5fs_br:bamboo_ladder": {
+            "textures": [
+                "textures/blocks/misc/ladders/bamboo_ladder"
+            ]
+        },
+        "5fs_br:cherry_ladder": {
+            "textures": [
+                "textures/blocks/misc/ladders/cherry_ladder"
+            ]
+        },
+        "5fs_br:crimson_ladder": {
+            "textures": [
+                "textures/blocks/misc/ladders/crimson_ladder"
+            ]
+        },
+        "5fs_br:warped_ladder": {
+            "textures": [
+                "textures/blocks/misc/ladders/warped_ladder"
+            ]
+        },
+        "5fs_br:mangrove_ladder": {
+            "textures": [
+                "textures/blocks/misc/ladders/mangrove_ladder"
+            ]
+        },
+        "5fs_br:petrified_ladder": {
+            "textures": [
+                "textures/blocks/misc/ladders/petrified_ladder"
+            ]
+        },
+        "5fs_br:maple_ladder": {
+            "textures": [
+                "textures/blocks/misc/ladders/maple_ladder"
+            ]
+        },
+        "5fs_br:redwood_stick": {
+            "textures": [
+                "textures/items/misc/redwood_stick"
+            ]
+        },
+        "5fs_br:redwood_door": {
+            "textures": [
+                "textures/items/construction/redwood/redwood_door"
+            ]
+        },
+        "5fs_br:black_sleeping_bag": {
+            "textures": [
+                "textures/items/misc/sleeping_bags/black_sleeping_bag"
+            ]
+        },
+        "5fs_br:blue_sleeping_bag": {
+            "textures": [
+                "textures/items/misc/sleeping_bags/blue_sleeping_bag"
+            ]
+        },
+        "5fs_br:brown_sleeping_bag": {
+            "textures": [
+                "textures/items/misc/sleeping_bags/brown_sleeping_bag"
+            ]
+        },
+        "5fs_br:cyan_sleeping_bag": {
+            "textures": [
+                "textures/items/misc/sleeping_bags/cyan_sleeping_bag"
+            ]
+        },
+        "5fs_br:gray_sleeping_bag": {
+            "textures": [
+                "textures/items/misc/sleeping_bags/gray_sleeping_bag"
+            ]
+        },
+        "5fs_br:green_sleeping_bag": {
+            "textures": [
+                "textures/items/misc/sleeping_bags/green_sleeping_bag"
+            ]
+        },
+        "5fs_br:light_blue_sleeping_bag": {
+            "textures": [
+                "textures/items/misc/sleeping_bags/light_blue_sleeping_bag"
+            ]
+        },
+        "5fs_br:light_gray_sleeping_bag": {
+            "textures": [
+                "textures/items/misc/sleeping_bags/light_gray_sleeping_bag"
+            ]
+        },
+        "5fs_br:lime_sleeping_bag": {
+            "textures": [
+                "textures/items/misc/sleeping_bags/lime_sleeping_bag"
+            ]
+        },
+        "5fs_br:magenta_sleeping_bag": {
+            "textures": [
+                "textures/items/misc/sleeping_bags/magenta_sleeping_bag"
+            ]
+        },
+        "5fs_br:orange_sleeping_bag": {
+            "textures": [
+                "textures/items/misc/sleeping_bags/orange_sleeping_bag"
+            ]
+        },
+        "5fs_br:pink_sleeping_bag": {
+            "textures": [
+                "textures/items/misc/sleeping_bags/pink_sleeping_bag"
+            ]
+        },
+        "5fs_br:purple_sleeping_bag": {
+            "textures": [
+                "textures/items/misc/sleeping_bags/purple_sleeping_bag"
+            ]
+        },
+        "5fs_br:red_sleeping_bag": {
+            "textures": [
+                "textures/items/misc/sleeping_bags/red_sleeping_bag"
+            ]
+        },
+        "5fs_br:white_sleeping_bag": {
+            "textures": [
+                "textures/items/misc/sleeping_bags/white_sleeping_bag"
+            ]
+        },
+        "5fs_br:yellow_sleeping_bag": {
+            "textures": [
+                "textures/items/misc/sleeping_bags/yellow_sleeping_bag"
+            ]
+        },
+        "5fs_br:gold_bars": {
+            "textures": [
+                "textures/items/construction/gold/gold_bars"
+            ]
+        },
+        "5fs_br:gold_chain": {
+            "textures": [
+                "textures/items/construction/gold/gold_chain"
+            ]
+        },
+        "5fs_br:gold_door": {
+            "textures": [
+                "textures/items/construction/gold/gold_door"
+            ]
+        },
+        "5fs_br:phoenix_feather": {
+            "textures": [
+                "textures/items/misc/feathers/phoenix_feather"
+            ]
+        },
+        "5fs_br:thunderbird_feather": {
+            "textures": [
+                "textures/items/misc/feathers/thunderbird_feather"
+            ]
+        },
+        "5fs_br:reward_bag": {
+            "textures": [
+                "textures/items/misc/reward_bag"
+            ]
+        },
+        "5fs_br:sap": {
+            "textures": [
+                "textures/items/food/sap"
+            ]
+        },
+        "5fs_br:cape_of_purple_magic": {
+            "textures": [
+                "textures/items/armors/capes/cape_of_purple_magic"
+            ]
+        },
+        "5fs_br:cape_of_yellow_magic": {
+            "textures": [
+                "textures/items/armors/capes/cape_of_yellow_magic"
+            ]
+        },
+        "5fs_br:cape_of_enchanting_table": {
+            "textures": [
+                "textures/items/armors/capes/cape_of_enchanting_table"
+            ]
+        },
+        "5fs_br:cape_of_enderman": {
+            "textures": [
+                "textures/items/armors/capes/cape_of_enderman"
+            ]
+        },
+        "5fs_br:cape_of_night_sky": {
+            "textures": [
+                "textures/items/armors/capes/cape_of_night_sky"
+            ]
+        },
+        "5fs_br:cape_of_panda": {
+            "textures": [
+                "textures/items/armors/capes/cape_of_panda"
+            ]
+        },
+        "5fs_br:cape_of_coral_cove": {
+            "textures": [
+                "textures/items/armors/capes/cape_of_coral_cove"
+            ]
+        },
+        "5fs_br:cape_of_deep_ocean": {
+            "textures": [
+                "textures/items/armors/capes/cape_of_deep_ocean"
+            ]
+        },
+        "5fs_br:cape_of_ocean_waves": {
+            "textures": [
+                "textures/items/armors/capes/cape_of_ocean_waves"
+            ]
+        },
+        "5fs_br:cape_of_barrel": {
+            "textures": [
+                "textures/items/armors/capes/cape_of_barrel"
+            ]
+        },
+        "5fs_br:cape_of_cow": {
+            "textures": [
+                "textures/items/armors/capes/cape_of_cow"
+            ]
+        },
+        "5fs_br:cape_of_bear": {
+            "textures": [
+                "textures/items/armors/capes/cape_of_bear"
+            ]
+        },
+        "5fs_br:cape_of_quarry": {
+            "textures": [
+                "textures/items/armors/capes/cape_of_quarry"
+            ]
+        },
+        "5fs_br:cape_of_crystal_canyons": {
+            "textures": [
+                "textures/items/armors/capes/cape_of_crystal_canyons"
+            ]
+        },
+        "5fs_br:cape_of_cave": {
+            "textures": [
+                "textures/items/armors/capes/cape_of_cave"
+            ]
+        },
+        "5fs_br:cape_of_ice_spikes": {
+            "textures": [
+                "textures/items/armors/capes/cape_of_ice_spikes"
+            ]
+        },
+        "5fs_br:cape_of_glimmerite": {
+            "textures": [
+                "textures/items/armors/capes/cape_of_glimmerite"
+            ]
+        },
+        "5fs_br:cape_of_frozen": {
+            "textures": [
+                "textures/items/armors/capes/cape_of_frozen"
+            ]
+        },
+        "5fs_br:cape_of_tree": {
+            "textures": [
+                "textures/items/armors/capes/cape_of_tree"
+            ]
+        },
+        "5fs_br:cape_of_cactus": {
+            "textures": [
+                "textures/items/armors/capes/cape_of_cactus"
+            ]
+        },
+        "5fs_br:cape_of_creeper": {
+            "textures": [
+                "textures/items/armors/capes/cape_of_creeper"
+            ]
+        },
+        "5fs_br:cape_of_wither": {
+            "textures": [
+                "textures/items/armors/capes/cape_of_wither"
+            ]
+        },
+        "5fs_br:cape_of_furnace": {
+            "textures": [
+                "textures/items/armors/capes/cape_of_furnace"
+            ]
+        },
+        "5fs_br:cape_of_meteor": {
+            "textures": [
+                "textures/items/armors/capes/cape_of_meteor"
+            ]
+        },
+        "5fs_br:cape_of_warden": {
+            "textures": [
+                "textures/items/armors/capes/cape_of_warden"
+            ]
+        },
+        "5fs_br:cape_of_prismarine": {
+            "textures": [
+                "textures/items/armors/capes/cape_of_prismarine"
+            ]
+        },
+        "5fs_br:cape_of_beach": {
+            "textures": [
+                "textures/items/armors/capes/cape_of_beach"
+            ]
+        },
+        "5fs_br:cape_of_crystalline_boss": {
+            "textures": [
+                "textures/items/armors/capes/cape_of_crystalline_boss"
+            ]
+        },
+        "5fs_br:cape_of_potion": {
+            "textures": [
+                "textures/items/armors/capes/cape_of_potion"
+            ]
+        },
+        "5fs_br:cape_of_turtle": {
+            "textures": [
+                "textures/items/armors/capes/cape_of_turtle"
+            ]
+        },
+        "5fs_br:cape_of_dragonite": {
+            "textures": [
+                "textures/items/armors/capes/cape_of_dragonite"
+            ]
+        },
+        "5fs_br:cape_of_shulker": {
+            "textures": [
+                "textures/items/armors/capes/cape_of_shulker"
+            ]
+        },
+        "5fs_br:cape_of_witch": {
+            "textures": [
+                "textures/items/armors/capes/cape_of_witch"
+            ]
+        },
+        "5fs_br:cape_of_blaze": {
+            "textures": [
+                "textures/items/armors/capes/cape_of_blaze"
+            ]
+        },
+        "5fs_br:cape_of_pumpkin": {
+            "textures": [
+                "textures/items/armors/capes/cape_of_pumpkin"
+            ]
+        },
+        "5fs_br:cape_of_fox": {
+            "textures": [
+                "textures/items/armors/capes/cape_of_fox"
+            ]
+        },
+        "5fs_br:cape_of_flower": {
+            "textures": [
+                "textures/items/armors/capes/cape_of_flower"
+            ]
+        },
+        "5fs_br:cape_of_cherry": {
+            "textures": [
+                "textures/items/armors/capes/cape_of_cherry"
+            ]
+        },
+        "5fs_br:cape_of_pig": {
+            "textures": [
+                "textures/items/armors/capes/cape_of_pig"
+            ]
+        },
+        "5fs_br:cape_of_amethyst": {
+            "textures": [
+                "textures/items/armors/capes/cape_of_amethyst"
+            ]
+        },
+        "5fs_br:cape_of_breeze": {
+            "textures": [
+                "textures/items/armors/capes/cape_of_breeze"
+            ]
+        },
+        "5fs_br:cape_of_dragon": {
+            "textures": [
+                "textures/items/armors/capes/cape_of_dragon"
+            ]
+        },
+        "5fs_br:cape_of_lumberjack": {
+            "textures": [
+                "textures/items/armors/capes/cape_of_lumberjack"
+            ]
+        },
+        "5fs_br:cape_of_maple": {
+            "textures": [
+                "textures/items/armors/capes/cape_of_maple"
+            ]
+        },
+        "5fs_br:cape_of_redstone": {
+            "textures": [
+                "textures/items/armors/capes/cape_of_redstone"
+            ]
+        },
+        "5fs_br:cape_of_ghast": {
+            "textures": [
+                "textures/items/armors/capes/cape_of_ghast"
+            ]
+        },
+        "5fs_br:cape_of_sheep": {
+            "textures": [
+                "textures/items/armors/capes/cape_of_sheep"
+            ]
+        },
+        "5fs_br:cape_of_snowy": {
+            "textures": [
+                "textures/items/armors/capes/cape_of_snowy"
+            ]
+        },
+        "5fs_br:cape_of_honeycomb": {
+            "textures": [
+                "textures/items/armors/capes/cape_of_honeycomb"
+            ]
+        },
+        "5fs_br:cape_of_bee": {
+            "textures": [
+                "textures/items/armors/capes/cape_of_bee"
+            ]
+        },
+        "5fs_br:cape_of_glowstone": {
+            "textures": [
+                "textures/items/armors/capes/cape_of_glowstone"
+            ]
+        },
+        "5fs_br:wooden_hammer": {
+            "textures": [
+                "textures/items/weapons/hammers/wooden_hammer"
+            ]
+        },
+        "5fs_br:stone_hammer": {
+            "textures": [
+                "textures/items/weapons/hammers/stone_hammer"
+            ]
+        },
+        "5fs_br:copper_hammer": {
+            "textures": [
+                "textures/items/weapons/hammers/copper_hammer"
+            ]
+        },
+        "5fs_br:iron_hammer": {
+            "textures": [
+                "textures/items/weapons/hammers/iron_hammer"
+            ]
+        },
+        "5fs_br:golden_hammer": {
+            "textures": [
+                "textures/items/weapons/hammers/golden_hammer"
+            ]
+        },
+        "5fs_br:emerald_hammer": {
+            "textures": [
+                "textures/items/weapons/hammers/emerald_hammer"
+            ]
+        },
+        "5fs_br:diamond_hammer": {
+            "textures": [
+                "textures/items/weapons/hammers/diamond_hammer"
+            ]
+        },
+        "5fs_br:netherite_hammer": {
+            "textures": [
+                "textures/items/weapons/hammers/netherite_hammer"
+            ]
+        },
+        "5fs_br:crystalline_hammer": {
+            "textures": [
+                "textures/items/weapons/hammers/crystalline_hammer"
+            ]
+        },
+        "5fs_br:meteorite_hammer": {
+            "textures": [
+                "textures/items/weapons/hammers/meteorite_hammer"
+            ]
+        },
+        "5fs_br:obsidian_hammer": {
+            "textures": [
+                "textures/items/weapons/hammers/obsidian_hammer"
+            ]
+        },
+        "5fs_br:dropper_minecart": {
+            "textures": [
+                "textures/items/misc/minecarts/dropper_minecart"
+            ]
+        },
+        "5fs_br:dispenser_minecart": {
+            "textures": [
+                "textures/items/misc/minecarts/dispenser_minecart"
+            ]
+        },
+        "5fs_br:bedrock_reimagined_book": {
+            "textures": [
+                "textures/items/misc/bedrock_reimagined_book"
+            ]
+        },
+        "5fs_br:cobalt_chestplate": {
+            "textures": [
+                "textures/items/armors/cobalt/cobalt_chestplate"
+            ]
+        },
+        "5fs_br:cobalt_leggings": {
+            "textures": [
+                "textures/items/armors/cobalt/cobalt_leggings"
+            ]
+        },
+        "5fs_br:cobalt_helmet": {
+            "textures": [
+                "textures/items/armors/cobalt/cobalt_helmet"
+            ]
+        },
+        "5fs_br:cobalt_boots": {
+            "textures": [
+                "textures/items/armors/cobalt/cobalt_boots"
+            ]
+        },
+        "5fs_br:cobalt_axe": {
+            "textures": [
+                "textures/items/weapons/cobalt/cobalt_axe"
+            ]
+        },
+        "5fs_br:cobalt_pickaxe": {
+            "textures": [
+                "textures/items/weapons/cobalt/cobalt_pickaxe"
+            ]
+        },
+        "5fs_br:cobalt_sword": {
+            "textures": [
+                "textures/items/weapons/cobalt/cobalt_sword"
+            ]
+        },
+        "5fs_br:cobalt_hammer": {
+            "textures": [
+                "textures/items/weapons/cobalt/cobalt_hammer"
+            ]
+        },
+        "5fs_br:cobalt_hoe": {
+            "textures": [
+                "textures/items/weapons/cobalt/cobalt_hoe"
+            ]
+        },
+        "5fs_br:cobalt_shovel": {
+            "textures": [
+                "textures/items/weapons/cobalt/cobalt_shovel"
+            ]
+        },
+        "5fs_br:ender_void_on": {
+            "textures": [
+                "textures/items/misc/tools/ender_void_on"
+            ]
+        },
+        "5fs_br:ender_void_off": {
+            "textures": [
+                "textures/items/misc/tools/ender_void_off"
+            ]
+        },
+        "5fs_br:sky_star_fragment": {
+            "textures": [
+                "textures/items/misc/sky_star_fragment"
+            ]
+        },
+        "5fs_br:sky_star_fragment_1": {
+            "textures": [
+                "textures/items/misc/sky_star_fragment_1"
+            ]
+        },
+        "5fs_br:sky_star": {
+            "textures": [
+                "textures/items/misc/sky_star"
+            ]
+        },
+        "5fs_br:sky_star_1": {
+            "textures": [
+                "textures/items/misc/sky_star_1"
+            ]
+        },
+        "5fs_br:sky_star_2": {
+            "textures": [
+                "textures/items/misc/sky_star_2"
+            ]
+        },
+        "5fs_br:sky_star_3": {
+            "textures": [
+                "textures/items/misc/sky_star_3"
+            ]
+        },
+        "5fs_br:steel_hammer": {
+            "textures": [
+                "textures/items/weapons/steel/steel_hammer"
+            ]
+        },
+        "5fs_br:raw_cobalt": {
+            "textures": [
+                "textures/items/minerals/raw_cobalt"
+            ]
+        },
+        "5fs_br:raw_cobalt_dust": {
+            "textures": [
+                "textures/items/dust/raw_cobalt_dust"
+            ]
+        },
+        "5fs_br:cobalt_ingot": {
+            "textures": [
+                "textures/items/minerals/cobalt_ingot"
+            ]
+        },
+        "5fs_br:obsidian_helmet": {
+            "textures": [
+                "textures/items/armors/obsidian_helmet"
+            ]
+        },
+        "5fs_br:obsidian_chestplate": {
+            "textures": [
+                "textures/items/armors/obsidian_chestplate"
+            ]
+        },
+        "5fs_br:obsidian_leggings": {
+            "textures": [
+                "textures/items/armors/obsidian_leggings"
+            ]
+        },
+        "5fs_br:obsidian_boots": {
+            "textures": [
+                "textures/items/armors/obsidian_boots"
+            ]
+        },
+        "5fs_br:common_bag_upgrade": {
+            "textures": [
+                "textures/items/misc/accessory_upgrades/common_bag_upgrade"
+            ]
+        },
+        "5fs_br:uncommon_bag_upgrade": {
+            "textures": [
+                "textures/items/misc/accessory_upgrades/uncommon_bag_upgrade"
+            ]
+        },
+        "5fs_br:rare_bag_upgrade": {
+            "textures": [
+                "textures/items/misc/accessory_upgrades/rare_bag_upgrade"
+            ]
+        },
+        "5fs_br:epic_bag_upgrade": {
+            "textures": [
+                "textures/items/misc/accessory_upgrades/epic_bag_upgrade"
+            ]
+        },
+        "5fs_br:mythical_bag_upgrade": {
+            "textures": [
+                "textures/items/misc/accessory_upgrades/mythical_bag_upgrade"
+            ]
+        },
+        "5fs_br:legendary_bag_upgrade": {
+            "textures": [
+                "textures/items/misc/accessory_upgrades/legendary_bag_upgrade"
+            ]
+        },
+        "5fs_br:ring_band": {
+            "textures": [
+                "textures/items/misc/accessory/rings/ring_band"
+            ]
+        },
+        "5fs_br:arcane_rift": {
+            "textures": [
+                "textures/items/misc/arcane_rift"
+            ]
+        },
+        "copper_diagonal_bars": {
+            "textures": [
+                "textures/blocks/construction/copper/copper_diagonal_bar"
+            ]
+        },
+        "exposed_copper_diagonal_bars": {
+            "textures": [
+                "textures/blocks/construction/copper/exposed_copper_diagonal_bar"
+            ]
+        },
+        "oxidized_copper_diagonal_bars": {
+            "textures": [
+                "textures/blocks/construction/copper/oxidized_copper_diagonal_bar"
+            ]
+        },
+        "weathered_copper_diagonal_bars": {
+            "textures": [
+                "textures/blocks/construction/copper/weathered_copper_diagonal_bar"
+            ]
+        },
+        "5fs_br:dragonite_hammer": {
+            "textures": [
+                "textures/items/weapons/dragonite/dragonite_hammer"
+            ]
+        },
+        "5fs_br:dragonite_sword": {
+            "textures": [
+                "textures/items/weapons/dragonite/dragonite_sword"
+            ]
+        },
+        "5fs_br:dragonite_hoe": {
+            "textures": [
+                "textures/items/weapons/dragonite/dragonite_hoe"
+            ]
+        },
+        "5fs_br:dragonite_axe": {
+            "textures": [
+                "textures/items/weapons/dragonite/dragonite_axe"
+            ]
+        },
+        "5fs_br:dragonite_pickaxe": {
+            "textures": [
+                "textures/items/weapons/dragonite/dragonite_pickaxe"
+            ]
+        },
+        "5fs_br:dragonite_shovel": {
+            "textures": [
+                "textures/items/weapons/dragonite/dragonite_shovel"
+            ]
+        },
+        "5fs_br:meteorite_sword": {
+            "textures": [
+                "textures/items/weapons/meteorite/meteorite_sword"
+            ]
+        },
+        "5fs_br:meteorite_hoe": {
+            "textures": [
+                "textures/items/weapons/meteorite/meteorite_hoe"
+            ]
+        },
+        "5fs_br:meteorite_axe": {
+            "textures": [
+                "textures/items/weapons/meteorite/meteorite_axe"
+            ]
+        },
+        "5fs_br:meteorite_pickaxe": {
+            "textures": [
+                "textures/items/weapons/meteorite/meteorite_pickaxe"
+            ]
+        },
+        "5fs_br:meteorite_shovel": {
+            "textures": [
+                "textures/items/weapons/meteorite/meteorite_shovel"
+            ]
+        },
+        "5fs_br:electrical_circuit_board": {
+            "textures": [
+                "textures/items/misc/electrical_circuit_board"
+            ]
+        },
+        "5fs_br:empty_meteorite_lava_bucket": {
+            "textures": [
+                "textures/items/misc/empty_meteorite_lava_bucket"
+            ]
+        },
+        "5fs_br:copper_nugget": {
+            "textures": [
+                "textures/items/misc/copper_nugget"
+            ]
+        },
+        "5fs_br:steel_rod": {
+            "textures": [
+                "textures/items/misc/steel_rod"
+            ]
+        },
+        "5fs_br:coffin": {
+            "textures": [
+                "textures/items/misc/coffin"
+            ]
+        },
+        "5fs_br:crystalline_chisel": {
+            "textures": [
+                "textures/items/misc/crystalline_chisel"
+            ]
+        },
+        "5fs_br:gelatin": {
+            "textures": [
+                "textures/items/food/gelatin"
+            ]
+        },
+        "5fs_br:gelatin_nibbles": {
+            "textures": [
+                "textures/items/food/gelatin_nibbles"
+            ]
+        },
+        "5fs_br:venison_cooked": {
+            "textures": [
+                "textures/items/food/venison_cooked"
+            ]
+        },
+        "5fs_br:emerald_nugget": {
+            "textures": [
+                "textures/items/minerals/emerald_nugget"
+            ]
+        },
+        "5fs_br:lantern_holder": {
+            "textures": [
+                "textures/items/misc/lantern_holder"
+            ]
+        },
+        "5fs_br:netherite_safe": {
+            "textures": [
+                "textures/items/misc/netherite_safe"
+            ]
+        },
+        "5fs_br:rope": {
+            "textures": [
+                "textures/items/misc/rope"
+            ]
+        },
+        "5fs_br:rope_knot": {
+            "textures": [
+                "textures/items/misc/rope_knot"
+            ]
+        },
+        "5fs_br:meteorite_trident": {
+            "textures": [
+                "textures/items/weapons/tridents/meteorite_trident"
+            ]
+        },
+        "5fs_br:dragonite_trident": {
+            "textures": [
+                "textures/items/weapons/tridents/dragonite_trident"
+            ]
+        },
+        "5fs_br:void_totem": {
+            "textures": [
+                "textures/items/misc/void_totem"
+            ]
+        },
+        "5fs_br:maple_wood_chunk": {
+            "textures": [
+                "textures/items/misc/maple_wood_chunk"
+            ]
+        },
+        "5fs_br:sandstone_key": {
+            "textures": [
+                "textures/items/misc/sandstone_key"
+            ]
+        },
+        "5fs_br:red_sandstone_key": {
+            "textures": [
+                "textures/items/misc/red_sandstone_key"
+            ]
+        },
+        "5fs_br:netherite_door": {
+            "textures": [
+                "textures/items/construction/netherite_door"
+            ]
+        },
+        "5fs_br:emerald_sword": {
+            "textures": [
+                "textures/items/weapons/emerald/emerald_sword"
+            ]
+        },
+        "5fs_br:emerald_pickaxe": {
+            "textures": [
+                "textures/items/weapons/emerald/emerald_pickaxe"
+            ]
+        },
+        "5fs_br:emerald_shovel": {
+            "textures": [
+                "textures/items/weapons/emerald/emerald_shovel"
+            ]
+        },
+        "5fs_br:emerald_axe": {
+            "textures": [
+                "textures/items/weapons/emerald/emerald_axe"
+            ]
+        },
+        "5fs_br:emerald_hoe": {
+            "textures": [
+                "textures/items/weapons/emerald/emerald_hoe"
+            ]
+        },
+        "5fs_br:sulfur_infused_dragonite_ingot": {
+            "textures": [
+                "textures/items/minerals/sulfur_infused_dragonite_ingot"
+            ]
+        },
+        "5fs_br:rose_quartz": {
+            "textures": [
+                "textures/items/minerals/rose_quartz"
+            ]
+        },
+        "5fs_br:rose_quartz_dust": {
+            "textures": [
+                "textures/items/dust/rose_quartz_dust"
+            ]
+        },
+        "5fs_br:sweeping_edge": {
+            "textures": [
+                "textures/items/misc/upgrades/sweeping_edge"
+            ]
+        },
+        "5fs_br:void_leech": {
+            "textures": [
+                "textures/items/misc/upgrades/void_leech"
+            ]
+        },
+        "5fs_br:draconic_core": {
+            "textures": [
+                "textures/items/misc/upgrades/sweeping_edge"
+            ]
+        },
+        "5fs_br:rift_cleave": {
+            "textures": [
+                "textures/items/misc/upgrades/rift_cleave"
+            ]
+        },
+        "5fs_br:ender_coil": {
+            "textures": [
+                "textures/items/misc/upgrades/ender_coil"
+            ]
+        },
+        "5fs_br:blink_shell": {
+            "textures": [
+                "textures/items/misc/upgrades/blink_shell"
+            ]
+        },
+        "5fs_br:void_step": {
+            "textures": [
+                "textures/items/misc/upgrades/void_step"
+            ]
+        },
+        "5fs_br:breath_filter": {
+            "textures": [
+                "textures/items/misc/upgrades/breath_filter"
+            ]
+        },
+        "5fs_br:white_aura": {
+            "textures": [
+                "textures/items/misc/auras/white_aura"
+            ]
+        },
+        "5fs_br:black_aura": {
+            "textures": [
+                "textures/items/misc/auras/black_aura"
+            ]
+        },
+        "5fs_br:red_aura": {
+            "textures": [
+                "textures/items/misc/auras/red_aura"
+            ]
+        },
+        "5fs_br:pink_aura": {
+            "textures": [
+                "textures/items/misc/auras/pink_aura"
+            ]
+        },
+        "5fs_br:lime_aura": {
+            "textures": [
+                "textures/items/misc/auras/lime_aura"
+            ]
+        },
+        "5fs_br:orange_aura": {
+            "textures": [
+                "textures/items/misc/auras/orange_aura"
+            ]
+        },
+        "5fs_br:purple_aura": {
+            "textures": [
+                "textures/items/misc/auras/purple_aura"
+            ]
+        },
+        "5fs_br:blue_aura": {
+            "textures": [
+                "textures/items/misc/auras/blue_aura"
+            ]
+        },
+        "5fs_br:light_blue_aura": {
+            "textures": [
+                "textures/items/misc/auras/light_blue_aura"
+            ]
+        },
+        "5fs_br:gray_aura": {
+            "textures": [
+                "textures/items/misc/auras/gray_aura"
+            ]
+        },
+        "5fs_br:magenta_aura": {
+            "textures": [
+                "textures/items/misc/auras/magenta_aura"
+            ]
+        },
+        "5fs_br:light_gray_aura": {
+            "textures": [
+                "textures/items/misc/auras/light_gray_aura"
+            ]
+        },
+        "5fs_br:yellow_aura": {
+            "textures": [
+                "textures/items/misc/auras/yellow_aura"
+            ]
+        },
+        "5fs_br:cyan_aura": {
+            "textures": [
+                "textures/items/misc/auras/cyan_aura"
+            ]
+        },
+        "5fs_br:brown_aura": {
+            "textures": [
+                "textures/items/misc/auras/brown_aura"
+            ]
+        },
+        "5fs_br:green_aura": {
+            "textures": [
+                "textures/items/misc/auras/green_aura"
+            ]
+        },
+        "5fs_br:key": {
+            "textures": [
+                "textures/items/misc/key"
+            ]
+        },
+        "5fs_br:quiver": {
+            "textures": [
+                "textures/items/misc/quiver"
+            ]
+        },
+        "5fs_br:settings": {
+            "textures": [
+                "textures/items/misc/icon_settings"
+            ]
+        },
+        "5fs_br:eye_of_the_dragon": {
+            "textures": [
+                "textures/items/misc/eye_of_the_dragon"
+            ]
+        },
+        "5fs_br:plant_fibers": {
+            "textures": [
+                "textures/items/misc/plant_fibers"
+            ]
+        },
+        "5fs_br:torch_wand": {
+            "textures": [
+                "textures/items/weapons/wands/torch_wand"
+            ]
+        },
+        "5fs_br:stone_wand": {
+            "textures": [
+                "textures/items/weapons/wands/stone_wand"
+            ]
+        },
+        "5fs_br:cobalt_wand": {
+            "textures": [
+                "textures/items/weapons/wands/cobalt_wand"
+            ]
+        },
+        "5fs_br:copper_wand": {
+            "textures": [
+                "textures/items/weapons/wands/copper_wand"
+            ]
+        },
+        "5fs_br:iron_wand": {
+            "textures": [
+                "textures/items/weapons/wands/iron_wand"
+            ]
+        },
+        "5fs_br:wooden_wand": {
+            "textures": [
+                "textures/items/weapons/wands/wooden_wand"
+            ]
+        },
+        "5fs_br:steel_wand": {
+            "textures": [
+                "textures/items/weapons/wands/steel_wand"
+            ]
+        },
+        "5fs_br:golden_wand": {
+            "textures": [
+                "textures/items/weapons/wands/golden_wand"
+            ]
+        },
+        "5fs_br:crystalline_wand": {
+            "textures": [
+                "textures/items/weapons/wands/crystalline_wand"
+            ]
+        },
+        "5fs_br:diamond_wand": {
+            "textures": [
+                "textures/items/weapons/wands/diamond_wand"
+            ]
+        },
+        "5fs_br:netherite_wand": {
+            "textures": [
+                "textures/items/weapons/wands/netherite_wand"
+            ]
+        },
+        "5fs_br:dragonite_wand": {
+            "textures": [
+                "textures/items/weapons/wands/dragonite_wand"
+            ]
+        },
+        "5fs_br:obsidian_wand": {
+            "textures": [
+                "textures/items/weapons/wands/obsidian_wand"
+            ]
+        },
+        "5fs_br:golden_sap": {
+            "textures": [
+                "textures/items/misc/golden_sap"
+            ]
+        },
+        "5fs_br:moose_antler": {
+            "textures": [
+                "textures/items/misc/moose_antler"
+            ]
+        },
+        "5fs_br:moose_hide": {
+            "textures": [
+                "textures/items/misc/moose_hide"
+            ]
+        },
+        "5fs_br:deer_hide": {
+            "textures": [
+                "textures/items/misc/deer_hide"
+            ]
+        },
+        "5fs_br:lucky_acorn": {
+            "textures": [
+                "textures/items/food/lucky_acorn"
+            ]
+        },
+        "5fs_br:raw_venison": {
+            "textures": [
+                "textures/items/food/raw_venison"
+            ]
+        },
+        "5fs_br:meteorite_upgrade": {
+            "textures": [
+                "textures/items/misc/upgrades/meteorite_upgrade"
+            ]
+        },
+        "5fs_br:bottled_sand": {
+            "textures": [
+                "textures/items/misc/bottled_sand"
+            ]
+        },
+        "5fs_br:debug_stick": {
+            "textures": [
+                "textures/items/stick"
+            ]
+        },
+        "5fs_br:explosive_arrow": {
+            "textures": [
+                "textures/items/misc/explosive_arrow"
+            ]
+        },
+        "5fs_br:zeus_arrow": {
+            "textures": [
+                "textures/items/misc/zeus_arrow"
+            ]
+        },
+        "5fs_br:obsidian_ingot": {
+            "textures": [
+                "textures/items/minerals/obsidian_ingot"
+            ]
+        },
+        "5fs_br:obsidian_sword": {
+            "textures": [
+                "textures/items/weapons/obsidian/obsidian_sword"
+            ]
+        },
+        "5fs_br:obsidian_pickaxe": {
+            "textures": [
+                "textures/items/weapons/obsidian/obsidian_pickaxe"
+            ]
+        },
+        "5fs_br:obsidian_shovel": {
+            "textures": [
+                "textures/items/weapons/obsidian/obsidian_shovel"
+            ]
+        },
+        "5fs_br:obsidian_axe": {
+            "textures": [
+                "textures/items/weapons/obsidian/obsidian_axe"
+            ]
+        },
+        "5fs_br:obsidian_hoe": {
+            "textures": [
+                "textures/items/weapons/obsidian/obsidian_hoe"
+            ]
+        },
+        "5fs_br:steel_ingot": {
+            "textures": [
+                "textures/items/minerals/steel_ingot"
+            ]
+        },
+        "5fs_br:steel_sword": {
+            "textures": [
+                "textures/items/weapons/steel/steel_sword"
+            ]
+        },
+        "5fs_br:steel_pickaxe": {
+            "textures": [
+                "textures/items/weapons/steel/steel_pickaxe"
+            ]
+        },
+        "5fs_br:steel_shovel": {
+            "textures": [
+                "textures/items/weapons/steel/steel_shovel"
+            ]
+        },
+        "5fs_br:steel_axe": {
+            "textures": [
+                "textures/items/weapons/steel/steel_axe"
+            ]
+        },
+        "5fs_br:steel_hoe": {
+            "textures": [
+                "textures/items/weapons/steel/steel_hoe"
+            ]
+        },
+        "5fs_br:spawner_wrench": {
+            "textures": [
+                "textures/items/misc/spawner_wrench"
+            ]
+        },
+        "5fs_br:spawner_wrench_with_spawner": {
+            "textures": [
+                "textures/items/misc/spawner_wrench_box"
+            ]
+        },
+        "5fs_br:charm_of_zombie": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_zombie"
+            ]
+        },
+        "5fs_br:charm_of_creeper": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_creeper"
+            ]
+        },
+        "5fs_br:charm_of_skeleton": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_skeleton"
+            ]
+        },
+        "5fs_br:charm_of_zombie_chicken": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_zombie_chicken"
+            ]
+        },
+        "5fs_br:charm_of_thunderbird": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_thunderbird"
+            ]
+        },
+        "5fs_br:charm_of_sulfur_fish": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_sulfur_fish"
+            ]
+        },
+        "5fs_br:charm_of_squirrel": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_squirrel"
+            ]
+        },
+        "5fs_br:charm_of_spectral_vex": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_spectral_vex"
+            ]
+        },
+        "5fs_br:charm_of_skeleton_bomber": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_skeleton_bomber"
+            ]
+        },
+        "5fs_br:charm_of_shroud": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_shroud"
+            ]
+        },
+        "5fs_br:charm_of_phoenix": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_phoenix"
+            ]
+        },
+        "5fs_br:charm_of_mummified_pharaoh": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_mummified_pharaoh"
+            ]
+        },
+        "5fs_br:charm_of_moose": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_moose"
+            ]
+        },
+        "5fs_br:charm_of_groundhog": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_groundhog"
+            ]
+        },
+        "5fs_br:charm_of_goblin": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_goblin"
+            ]
+        },
+        "5fs_br:charm_of_glimmering_moth": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_glimmering_moth"
+            ]
+        },
+        "5fs_br:charm_of_giant_eagle": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_giant_eagle"
+            ]
+        },
+        "5fs_br:charm_of_angler_slime": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_angler_slime"
+            ]
+        },
+        "5fs_br:charm_of_baby_skeleton": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_baby_skeleton"
+            ]
+        },
+        "5fs_br:charm_of_beaver": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_beaver"
+            ]
+        },
+        "5fs_br:charm_of_butterfly": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_butterfly"
+            ]
+        },
+        "5fs_br:charm_of_crystal_golem": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_crystal_golem"
+            ]
+        },
+        "5fs_br:charm_of_crystal_wraith": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_crystal_wraith"
+            ]
+        },
+        "5fs_br:charm_of_crystalline_slime": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_crystalline_slime"
+            ]
+        },
+        "5fs_br:charm_of_dart_goblin": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_dart_goblin"
+            ]
+        },
+        "5fs_br:charm_of_deer": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_deer"
+            ]
+        },
+        "5fs_br:charm_of_duck": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_duck"
+            ]
+        },
+        "5fs_br:charm_of_spider": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_spider"
+            ]
+        },
+        "5fs_br:charm_of_enderman": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_enderman"
+            ]
+        },
+        "5fs_br:charm_of_witch": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_witch"
+            ]
+        },
+        "5fs_br:charm_of_cow": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_cow"
+            ]
+        },
+        "5fs_br:charm_of_sheep": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_sheep"
+            ]
+        },
+        "5fs_br:charm_of_pig": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_pig"
+            ]
+        },
+        "5fs_br:charm_of_chicken": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_chicken"
+            ]
+        },
+        "5fs_br:charm_of_wolf": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_wolf"
+            ]
+        },
+        "5fs_br:charm_of_axolotl": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_axolotl"
+            ]
+        },
+        "5fs_br:charm_of_stray": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_stray"
+            ]
+        },
+        "5fs_br:charm_of_slime": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_slime"
+            ]
+        },
+        "5fs_br:charm_of_slime_magma": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_slime_magma"
+            ]
+        },
+        "5fs_br:charm_of_skeleton_wither": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_skeleton_wither"
+            ]
+        },
+        "5fs_br:charm_of_silverfish": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_silverfish"
+            ]
+        },
+        "5fs_br:charm_of_shulker": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_shulker"
+            ]
+        },
+        "5fs_br:charm_of_pillager": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_pillager"
+            ]
+        },
+        "5fs_br:charm_of_husk": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_husk"
+            ]
+        },
+        "5fs_br:charm_of_guardian": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_guardian"
+            ]
+        },
+        "5fs_br:charm_of_hoglin": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_hoglin"
+            ]
+        },
+        "5fs_br:charm_of_ghast": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_ghast"
+            ]
+        },
+        "5fs_br:charm_of_evoker": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_evoker"
+            ]
+        },
+        "5fs_br:charm_of_endermite": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_endermite"
+            ]
+        },
+        "5fs_br:charm_of_bogged": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_bogged"
+            ]
+        },
+        "5fs_br:charm_of_blaze": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_blaze"
+            ]
+        },
+        "5fs_br:charm_of_piglin": {
+            "textures": [
+                "textures/items/misc/charm/charm_of_piglin"
+            ]
+        },
+        "5fs_br:belt_of_spawning": {
+            "textures": [
+                "textures/items/misc/charm/belt_of_spawning"
+            ]
+        },
+        "5fs_br:belt_of_despawning": {
+            "textures": [
+                "textures/items/misc/charm/belt_of_despawning"
+            ]
+        },
+        "5fs_br:talisman_of_moonlight": {
+            "textures": [
+                "textures/items/misc/talisman/talisman_of_moonlight"
+            ]
+        },
+        "5fs_br:talisman_of_rejuvination": {
+            "textures": [
+                "textures/items/misc/talisman/talisman_of_rejuvination"
+            ]
+        },
+        "5fs_br:talisman_of_crafting": {
+            "textures": [
+                "textures/items/misc/talisman/talisman_of_crafting"
+            ]
+        },
+        "5fs_br:talisman_of_clouds": {
+            "textures": [
+                "textures/items/misc/talisman/talisman_of_clouds"
+            ]
+        },
+        "5fs_br:talisman_of_healing": {
+            "textures": [
+                "textures/items/misc/talisman/talisman_of_healing"
+            ]
+        },
+        "5fs_br:talisman_of_deception": {
+            "textures": [
+                "textures/items/misc/talisman/talisman_of_deception"
+            ]
+        },
+        "5fs_br:talisman_of_location": {
+            "textures": [
+                "textures/items/misc/talisman/talisman_of_location"
+            ]
+        },
+        "5fs_br:talisman_of_direction": {
+            "textures": [
+                "textures/items/misc/talisman/talisman_of_direction"
+            ]
+        },
+        "5fs_br:talisman_of_the_fallen": {
+            "textures": [
+                "textures/items/misc/talisman/talisman_of_the_fallen"
+            ]
+        },
+        "5fs_br:talisman_of_harvesting": {
+            "textures": [
+                "textures/items/misc/talisman/talisman_of_harvesting"
+            ]
+        },
+        "5fs_br:rusted_ring_of_health": {
+            "textures": [
+                "textures/items/misc/accessory/rings/rusted_ring_of_health"
+            ]
+        },
+        "5fs_br:cracked_ring_of_health": {
+            "textures": [
+                "textures/items/misc/accessory/rings/cracked_ring_of_health"
+            ]
+        },
+        "5fs_br:worn_ring_of_health": {
+            "textures": [
+                "textures/items/misc/accessory/rings/worn_ring_of_health"
+            ]
+        },
+        "5fs_br:chipped_ring_of_health": {
+            "textures": [
+                "textures/items/misc/accessory/rings/chipped_ring_of_health"
+            ]
+        },
+        "5fs_br:pristine_ring_of_health": {
+            "textures": [
+                "textures/items/misc/accessory/rings/pristine_ring_of_health"
+            ]
+        },
+        "5fs_br:rusted_ring_of_magnetism": {
+            "textures": [
+                "textures/items/misc/accessory/rings/rusted_ring_of_magnetism"
+            ]
+        },
+        "5fs_br:cracked_ring_of_magnetism": {
+            "textures": [
+                "textures/items/misc/accessory/rings/cracked_ring_of_magnetism"
+            ]
+        },
+        "5fs_br:worn_ring_of_magnetism": {
+            "textures": [
+                "textures/items/misc/accessory/rings/worn_ring_of_magnetism"
+            ]
+        },
+        "5fs_br:chipped_ring_of_magnetism": {
+            "textures": [
+                "textures/items/misc/accessory/rings/chipped_ring_of_magnetism"
+            ]
+        },
+        "5fs_br:pristine_ring_of_magnetism": {
+            "textures": [
+                "textures/items/misc/accessory/rings/pristine_ring_of_magnetism"
+            ]
+        },
+        "5fs_br:rusted_ring_of_experience": {
+            "textures": [
+                "textures/items/misc/accessory/rings/rusted_ring_of_experience"
+            ]
+        },
+        "5fs_br:cracked_ring_of_experience": {
+            "textures": [
+                "textures/items/misc/accessory/rings/cracked_ring_of_experience"
+            ]
+        },
+        "5fs_br:worn_ring_of_experience": {
+            "textures": [
+                "textures/items/misc/accessory/rings/worn_ring_of_experience"
+            ]
+        },
+        "5fs_br:chipped_ring_of_experience": {
+            "textures": [
+                "textures/items/misc/accessory/rings/chipped_ring_of_experience"
+            ]
+        },
+        "5fs_br:pristine_ring_of_experience": {
+            "textures": [
+                "textures/items/misc/accessory/rings/pristine_ring_of_experience"
+            ]
+        },
+        "5fs_br:rusted_ring_of_excavation": {
+            "textures": [
+                "textures/items/misc/accessory/rings/rusted_ring_of_excavation"
+            ]
+        },
+        "5fs_br:cracked_ring_of_excavation": {
+            "textures": [
+                "textures/items/misc/accessory/rings/cracked_ring_of_excavation"
+            ]
+        },
+        "5fs_br:worn_ring_of_excavation": {
+            "textures": [
+                "textures/items/misc/accessory/rings/worn_ring_of_excavation"
+            ]
+        },
+        "5fs_br:chipped_ring_of_excavation": {
+            "textures": [
+                "textures/items/misc/accessory/rings/chipped_ring_of_excavation"
+            ]
+        },
+        "5fs_br:pristine_ring_of_excavation": {
+            "textures": [
+                "textures/items/misc/accessory/rings/pristine_ring_of_excavation"
+            ]
+        },
+        "5fs_br:rusted_ring_of_greed": {
+            "textures": [
+                "textures/items/misc/accessory/rings/rusted_ring_of_greed"
+            ]
+        },
+        "5fs_br:cracked_ring_of_greed": {
+            "textures": [
+                "textures/items/misc/accessory/rings/cracked_ring_of_greed"
+            ]
+        },
+        "5fs_br:worn_ring_of_greed": {
+            "textures": [
+                "textures/items/misc/accessory/rings/worn_ring_of_greed"
+            ]
+        },
+        "5fs_br:chipped_ring_of_greed": {
+            "textures": [
+                "textures/items/misc/accessory/rings/chipped_ring_of_greed"
+            ]
+        },
+        "5fs_br:pristine_ring_of_greed": {
+            "textures": [
+                "textures/items/misc/accessory/rings/pristine_ring_of_greed"
+            ]
+        },
+        "5fs_br:rusted_ring_of_thirst": {
+            "textures": [
+                "textures/items/misc/accessory/rings/rusted_ring_of_thirst"
+            ]
+        },
+        "5fs_br:cracked_ring_of_thirst": {
+            "textures": [
+                "textures/items/misc/accessory/rings/cracked_ring_of_thirst"
+            ]
+        },
+        "5fs_br:worn_ring_of_thirst": {
+            "textures": [
+                "textures/items/misc/accessory/rings/worn_ring_of_thirst"
+            ]
+        },
+        "5fs_br:chipped_ring_of_thirst": {
+            "textures": [
+                "textures/items/misc/accessory/rings/chipped_ring_of_thirst"
+            ]
+        },
+        "5fs_br:pristine_ring_of_thirst": {
+            "textures": [
+                "textures/items/misc/accessory/rings/pristine_ring_of_thirst"
+            ]
+        },
+        "5fs_br:rusted_ring_of_gluttony": {
+            "textures": [
+                "textures/items/misc/accessory/rings/rusted_ring_of_gluttony"
+            ]
+        },
+        "5fs_br:cracked_ring_of_gluttony": {
+            "textures": [
+                "textures/items/misc/accessory/rings/cracked_ring_of_gluttony"
+            ]
+        },
+        "5fs_br:worn_ring_of_gluttony": {
+            "textures": [
+                "textures/items/misc/accessory/rings/worn_ring_of_gluttony"
+            ]
+        },
+        "5fs_br:chipped_ring_of_gluttony": {
+            "textures": [
+                "textures/items/misc/accessory/rings/chipped_ring_of_gluttony"
+            ]
+        },
+        "5fs_br:pristine_ring_of_gluttony": {
+            "textures": [
+                "textures/items/misc/accessory/rings/pristine_ring_of_gluttony"
+            ]
+        },
+        "5fs_br:rusted_ring_of_mana": {
+            "textures": [
+                "textures/items/misc/accessory/rings/rusted_ring_of_mana"
+            ]
+        },
+        "5fs_br:cracked_ring_of_mana": {
+            "textures": [
+                "textures/items/misc/accessory/rings/cracked_ring_of_mana"
+            ]
+        },
+        "5fs_br:worn_ring_of_mana": {
+            "textures": [
+                "textures/items/misc/accessory/rings/worn_ring_of_mana"
+            ]
+        },
+        "5fs_br:chipped_ring_of_mana": {
+            "textures": [
+                "textures/items/misc/accessory/rings/chipped_ring_of_mana"
+            ]
+        },
+        "5fs_br:pristine_ring_of_mana": {
+            "textures": [
+                "textures/items/misc/accessory/rings/pristine_ring_of_mana"
+            ]
+        },
+        "5fs_br:captain_pirate_hat": {
+            "textures": [
+                "textures/items/misc/accessory/captain_pirate_hat"
+            ]
+        },
+        "5fs_br:chef_hat": {
+            "textures": [
+                "textures/items/misc/accessory/chef_hat"
+            ]
+        },
+        "5fs_br:witch_hat": {
+            "textures": [
+                "textures/items/misc/accessory/witch_hat"
+            ]
+        },
+        "5fs_br:wizard_hat": {
+            "textures": [
+                "textures/items/misc/accessory/wizard_hat"
+            ]
+        },
+        "5fs_br:mushroom_cap": {
+            "textures": [
+                "textures/items/misc/accessory/mushroom_cap"
+            ]
+        },
+        "5fs_br:miners_hat": {
+            "textures": [
+                "textures/items/misc/accessory/miners_hat"
+            ]
+        },
+        "5fs_br:crystal_geode_hat": {
+            "textures": [
+                "textures/items/misc/accessory/crystal_geode_hat"
+            ]
+        },
+        "5fs_br:canopy_cap": {
+            "textures": [
+                "textures/items/misc/accessory/canopy_cap"
+            ]
+        },
+        "5fs_br:eye_of_the_beholder": {
+            "textures": [
+                "textures/items/misc/accessory/eye_of_the_beholder"
+            ]
+        },
+        "5fs_br:scorched_cap": {
+            "textures": [
+                "textures/items/misc/accessory/scorched_cap"
+            ]
+        },
+        "5fs_br:coral_crown": {
+            "textures": [
+                "textures/items/misc/accessory/coral_crown"
+            ]
+        },
+        "5fs_br:frostbitten_crown": {
+            "textures": [
+                "textures/items/misc/accessory/frostbitten_crown"
+            ]
+        },
+        "5fs_br:tree_sap_tap_cap": {
+            "textures": [
+                "textures/items/misc/accessory/tree_sap_tap_cap"
+            ]
+        },
+        "5fs_br:baby_dragon_hat": {
+            "textures": [
+                "textures/items/misc/accessory/baby_dragon_hat"
+            ]
+        },
+        "5fs_br:dragon_hat": {
+            "textures": [
+                "textures/items/misc/accessory/dragon_hat"
+            ]
+        },
+        "5fs_br:dragonite_helmet": {
+            "textures": [
+                "textures/items/armors/dragonite_helmet"
+            ]
+        },
+        "5fs_br:dragonite_chestplate": {
+            "textures": [
+                "textures/items/armors/dragonite_chestplate"
+            ]
+        },
+        "5fs_br:dragonite_leggings": {
+            "textures": [
+                "textures/items/armors/dragonite_leggings"
+            ]
+        },
+        "5fs_br:dragonite_boots": {
+            "textures": [
+                "textures/items/armors/dragonite_boots"
+            ]
+        },
+        "5fs_br:meteorite_helmet": {
+            "textures": [
+                "textures/items/armors/meteorite/meteorite_helmet"
+            ]
+        },
+        "5fs_br:meteorite_chestplate": {
+            "textures": [
+                "textures/items/armors/meteorite/meteorite_chestplate"
+            ]
+        },
+        "5fs_br:meteorite_leggings": {
+            "textures": [
+                "textures/items/armors/meteorite/meteorite_leggings"
+            ]
+        },
+        "5fs_br:meteorite_boots": {
+            "textures": [
+                "textures/items/armors/meteorite/meteorite_boots"
+            ]
+        },
+        "5fs_br:moose_antlers_hat": {
+            "textures": [
+                "textures/items/armors/moose_antlers_hat"
+            ]
+        },
+        "5fs_br:raw_dragonite": {
+            "textures": [
+                "textures/items/minerals/raw_dragonite"
+            ]
+        },
+        "5fs_br:dragon_scales": {
+            "textures": [
+                "textures/items/misc/dragon_scales"
+            ]
+        },
+        "5fs_br:dragonite_nugget": {
+            "textures": [
+                "textures/items/minerals/dragonite_nugget"
+            ]
+        },
+        "5fs_br:dragonite_ingot": {
+            "textures": [
+                "textures/items/minerals/dragonite_ingot"
+            ]
+        },
+        "5fs_br:raw_dragonite_dust": {
+            "textures": [
+                "textures/items/dust/raw_dragonite_dust"
+            ]
+        },
+        "5fs_br:big_bundle": {
+            "textures": [
+                "textures/items/misc/big_bundles/big_bundle"
+            ]
+        },
+        "5fs_br:big_white_bundle": {
+            "textures": [
+                "textures/items/misc/big_bundles/big_white_bundle"
+            ]
+        },
+        "5fs_br:big_light_gray_bundle": {
+            "textures": [
+                "textures/items/misc/big_bundles/big_light_gray_bundle"
+            ]
+        },
+        "5fs_br:big_gray_bundle": {
+            "textures": [
+                "textures/items/misc/big_bundles/big_gray_bundle"
+            ]
+        },
+        "5fs_br:big_black_bundle": {
+            "textures": [
+                "textures/items/misc/big_bundles/big_black_bundle"
+            ]
+        },
+        "5fs_br:big_brown_bundle": {
+            "textures": [
+                "textures/items/misc/big_bundles/big_brown_bundle"
+            ]
+        },
+        "5fs_br:big_red_bundle": {
+            "textures": [
+                "textures/items/misc/big_bundles/big_red_bundle"
+            ]
+        },
+        "5fs_br:big_orange_bundle": {
+            "textures": [
+                "textures/items/misc/big_bundles/big_orange_bundle"
+            ]
+        },
+        "5fs_br:big_yellow_bundle": {
+            "textures": [
+                "textures/items/misc/big_bundles/big_yellow_bundle"
+            ]
+        },
+        "5fs_br:big_lime_bundle": {
+            "textures": [
+                "textures/items/misc/big_bundles/big_lime_bundle"
+            ]
+        },
+        "5fs_br:big_green_bundle": {
+            "textures": [
+                "textures/items/misc/big_bundles/big_green_bundle"
+            ]
+        },
+        "5fs_br:big_cyan_bundle": {
+            "textures": [
+                "textures/items/misc/big_bundles/big_cyan_bundle"
+            ]
+        },
+        "5fs_br:big_light_blue_bundle": {
+            "textures": [
+                "textures/items/misc/big_bundles/big_light_blue_bundle"
+            ]
+        },
+        "5fs_br:big_blue_bundle": {
+            "textures": [
+                "textures/items/misc/big_bundles/big_blue_bundle"
+            ]
+        },
+        "5fs_br:big_purple_bundle": {
+            "textures": [
+                "textures/items/misc/big_bundles/big_purple_bundle"
+            ]
+        },
+        "5fs_br:big_magenta_bundle": {
+            "textures": [
+                "textures/items/misc/big_bundles/big_magenta_bundle"
+            ]
+        },
+        "5fs_br:big_pink_bundle": {
+            "textures": [
+                "textures/items/misc/big_bundles/big_pink_bundle"
+            ]
+        },
+        "5fs_br:big_blue_bundle_open_front": {
+            "textures": [
+                "textures/items/misc/big_bundles/big_blue_bundle_open_front"
+            ]
+        },
+        "5fs_br:big_black_bundle_open_front": {
+            "textures": [
+                "textures/items/misc/big_bundles/big_black_bundle_open_front"
+            ]
+        },
+        "5fs_br:big_bundle_open_front": {
+            "textures": [
+                "textures/items/misc/big_bundles/big_bundle_open_front"
+            ]
+        },
+        "5fs_br:big_white_bundle_open_front": {
+            "textures": [
+                "textures/items/misc/big_bundles/big_white_bundle_open_front"
+            ]
+        },
+        "5fs_br:big_light_gray_bundle_open_front": {
+            "textures": [
+                "textures/items/misc/big_bundles/big_light_gray_bundle_open_front"
+            ]
+        },
+        "5fs_br:big_gray_bundle_open_front": {
+            "textures": [
+                "textures/items/misc/big_bundles/big_gray_bundle_open_front"
+            ]
+        },
+        "5fs_br:big_brown_bundle_open_front": {
+            "textures": [
+                "textures/items/misc/big_bundles/big_brown_bundle_open_front"
+            ]
+        },
+        "5fs_br:big_red_bundle_open_front": {
+            "textures": [
+                "textures/items/misc/big_bundles/big_red_bundle_open_front"
+            ]
+        },
+        "5fs_br:big_orange_bundle_open_front": {
+            "textures": [
+                "textures/items/misc/big_bundles/big_orange_bundle_open_front"
+            ]
+        },
+        "5fs_br:big_yellow_bundle_open_front": {
+            "textures": [
+                "textures/items/misc/big_bundles/big_yellow_bundle_open_front"
+            ]
+        },
+        "5fs_br:big_lime_bundle_open_front": {
+            "textures": [
+                "textures/items/misc/big_bundles/big_lime_bundle_open_front"
+            ]
+        },
+        "5fs_br:big_green_bundle_open_front": {
+            "textures": [
+                "textures/items/misc/big_bundles/big_green_bundle_open_front"
+            ]
+        },
+        "5fs_br:big_cyan_bundle_open_front": {
+            "textures": [
+                "textures/items/misc/big_bundles/big_cyan_bundle_open_front"
+            ]
+        },
+        "5fs_br:big_light_blue_bundle_open_front": {
+            "textures": [
+                "textures/items/misc/big_bundles/big_light_blue_bundle_open_front"
+            ]
+        },
+        "5fs_br:big_purple_bundle_open_front": {
+            "textures": [
+                "textures/items/misc/big_bundles/big_purple_bundle_open_front"
+            ]
+        },
+        "5fs_br:big_magenta_bundle_open_front": {
+            "textures": [
+                "textures/items/misc/big_bundles/big_magenta_bundle_open_front"
+            ]
+        },
+        "5fs_br:big_pink_bundle_open_front": {
+            "textures": [
+                "textures/items/misc/big_bundles/big_pink_bundle_open_front"
+            ]
+        },
+        "5fs_br:compact_dragonite_nugget": {
+            "textures": [
+                "textures/items/compact/compact_dragonite_nugget"
+            ]
+        },
+        "5fs_br:compact_rose_quartz": {
+            "textures": [
+                "textures/items/compact/compact_rose_quartz"
+            ]
+        },
+        "5fs_br:compact_rose_quartz_dust": {
+            "textures": [
+                "textures/items/compact/compact_rose_quartz_dust"
+            ]
+        },
+        "5fs_br:compact_gold_ingot": {
+            "textures": [
+                "textures/items/compact/compact_gold_ingot"
+            ]
+        },
+        "5fs_br:compact_iron_ingot": {
+            "textures": [
+                "textures/items/compact/compact_iron_ingot"
+            ]
+        },
+        "5fs_br:compact_copper_ingot": {
+            "textures": [
+                "textures/items/compact/compact_copper_ingot"
+            ]
+        },
+        "5fs_br:compact_meteorite_scrap": {
+            "textures": [
+                "textures/items/compact/compact_meteorite_scrap"
+            ]
+        },
+        "5fs_br:compact_netherite_scrap": {
+            "textures": [
+                "textures/items/compact/compact_netherite_scrap"
+            ]
+        },
+        "5fs_br:compact_raw_gold_nugget": {
+            "textures": [
+                "textures/items/compact/compact_raw_gold_nugget"
+            ]
+        },
+        "5fs_br:compact_coal": {
+            "textures": [
+                "textures/items/compact/compact_coal"
+            ]
+        },
+        "5fs_br:compact_diamond": {
+            "textures": [
+                "textures/items/compact/compact_diamond"
+            ]
+        },
+        "5fs_br:compact_raw_iron": {
+            "textures": [
+                "textures/items/compact/compact_raw_iron"
+            ]
+        },
+        "5fs_br:compact_emerald": {
+            "textures": [
+                "textures/items/compact/compact_emerald"
+            ]
+        },
+        "5fs_br:compact_lapis": {
+            "textures": [
+                "textures/items/compact/compact_lapis"
+            ]
+        },
+        "5fs_br:compact_quartz": {
+            "textures": [
+                "textures/items/compact/compact_quartz"
+            ]
+        },
+        "5fs_br:compact_raw_copper": {
+            "textures": [
+                "textures/items/compact/compact_raw_copper"
+            ]
+        },
+        "5fs_br:compact_raw_crystalline": {
+            "textures": [
+                "textures/items/compact/compact_raw_crystalline"
+            ]
+        },
+        "5fs_br:compact_raw_gold": {
+            "textures": [
+                "textures/items/compact/compact_raw_gold"
+            ]
+        },
+        "5fs_br:compact_raw_sulfur": {
+            "textures": [
+                "textures/items/compact/compact_raw_sulfur"
+            ]
+        },
+        "5fs_br:compact_redstone_dust": {
+            "textures": [
+                "textures/items/compact/compact_redstone_dust"
+            ]
+        },
+        "5fs_br:compact_resonant_crystal_shard": {
+            "textures": [
+                "textures/items/compact/compact_resonant_crystal_shard"
+            ]
+        },
+        "5fs_br:compact_crystalline_ingot": {
+            "textures": [
+                "textures/items/compact/compact_crystalline_ingot"
+            ]
+        },
+        "5fs_br:compact_dragonite_ingot": {
+            "textures": [
+                "textures/items/compact/compact_dragonite_ingot"
+            ]
+        },
+        "5fs_br:compact_meteorite_ingot": {
+            "textures": [
+                "textures/items/compact/compact_meteorite_ingot"
+            ]
+        },
+        "5fs_br:compact_obsidian_ingot": {
+            "textures": [
+                "textures/items/compact/compact_obsidian_ingot"
+            ]
+        },
+        "5fs_br:compact_steel_ingot": {
+            "textures": [
+                "textures/items/compact/compact_steel_ingot"
+            ]
+        },
+        "5fs_br:compact_sulfur_ingot": {
+            "textures": [
+                "textures/items/compact/compact_sulfur_ingot"
+            ]
+        },
+        "5fs_br:compact_glimmerite_dust": {
+            "textures": [
+                "textures/items/compact/compact_glimmerite_dust"
+            ]
+        },
+        "5fs_br:compact_raw_copper_dust": {
+            "textures": [
+                "textures/items/compact/compact_raw_copper_dust"
+            ]
+        },
+        "5fs_br:compact_raw_iron_dust": {
+            "textures": [
+                "textures/items/compact/compact_raw_iron_dust"
+            ]
+        },
+        "5fs_br:compact_raw_gold_dust": {
+            "textures": [
+                "textures/items/compact/compact_raw_gold_dust"
+            ]
+        },
+        "5fs_br:compact_raw_dragonite": {
+            "textures": [
+                "textures/items/compact/compact_raw_dragonite"
+            ]
+        },
+        "5fs_br:compact_raw_dragonite_dust": {
+            "textures": [
+                "textures/items/compact/compact_raw_dragonite_dust"
+            ]
+        },
+        "5fs_br:compact_raw_meteorite_dust": {
+            "textures": [
+                "textures/items/compact/compact_raw_meteorite_dust"
+            ]
+        },
+        "5fs_br:compact_raw_quartz_dust": {
+            "textures": [
+                "textures/items/compact/compact_raw_quartz_dust"
+            ]
+        },
+        "5fs_br:compact_raw_resonant_crystal_dust": {
+            "textures": [
+                "textures/items/compact/compact_raw_resonant_crystal_dust"
+            ]
+        },
+        "5fs_br:compact_raw_sulfur_dust": {
+            "textures": [
+                "textures/items/compact/compact_raw_sulfur_dust"
+            ]
+        },
+        "5fs_br:crystal_golem": {
+            "textures": [
+                "textures/items/eggs/crystal_golem"
+            ]
+        },
+        "5fs_br:skeleton_spider": {
+            "textures": [
+                "textures/items/eggs/skeleton_spider"
+            ]
+        },
+        "5fs_br:crystal_wraith": {
+            "textures": [
+                "textures/items/eggs/crystal_wraith"
+            ]
+        },
+        "5fs_br:glimmering_moth": {
+            "textures": [
+                "textures/items/eggs/glimmering_moth"
+            ]
+        },
+        "5fs_br:angler_slime": {
+            "textures": [
+                "textures/items/eggs/angler_slime"
+            ]
+        },
+        "5fs_br:fawn": {
+            "textures": [
+                "textures/items/eggs/fawn"
+            ]
+        },
+        "5fs_br:deer": {
+            "textures": [
+                "textures/items/eggs/deer"
+            ]
+        },
+        "5fs_br:giant_eagle": {
+            "textures": [
+                "textures/items/eggs/giant_eagle"
+            ]
+        },
+        "5fs_br:emperor_penguin": {
+            "textures": [
+                "textures/items/eggs/emperor_penguin"
+            ]
+        },
+        "5fs_br:little_penguin": {
+            "textures": [
+                "textures/items/eggs/little_penguin"
+            ]
+        },
+        "5fs_br:macaroni_penguin": {
+            "textures": [
+                "textures/items/eggs/macaroni_penguin"
+            ]
+        },
+        "5fs_br:adelie_penguin": {
+            "textures": [
+                "textures/items/eggs/adelie_penguin"
+            ]
+        },
+        "5fs_br:chinstrap_penguin": {
+            "textures": [
+                "textures/items/eggs/chinstrap_penguin"
+            ]
+        },
+        "5fs_br:beaver": {
+            "textures": [
+                "textures/items/eggs/beaver"
+            ]
+        },
+        "5fs_br:tiger_shark": {
+            "textures": [
+                "textures/items/eggs/tiger_shark"
+            ]
+        },
+        "5fs_br:hammerhead_shark": {
+            "textures": [
+                "textures/items/eggs/hammerhead_shark"
+            ]
+        },
+        "5fs_br:maple_spirit": {
+            "textures": [
+                "textures/items/eggs/maple_spirit"
+            ]
+        },
+        "5fs_br:mummy_boss": {
+            "textures": [
+                "textures/items/eggs/mummy_boss"
+            ]
+        },
+        "5fs_br:mummy_skeleton": {
+            "textures": [
+                "textures/items/eggs/mummy_skeleton"
+            ]
+        },
+        "5fs_br:mummy_husk": {
+            "textures": [
+                "textures/items/eggs/mummy_husk"
+            ]
+        },
+        "5fs_br:great_white_shark": {
+            "textures": [
+                "textures/items/eggs/great_white_shark"
+            ]
+        },
+        "5fs_br:squirrel": {
+            "textures": [
+                "textures/items/eggs/squirrel"
+            ]
+        },
+        "5fs_br:skeleton_cod": {
+            "textures": [
+                "textures/items/eggs/skeleton_cod"
+            ]
+        },
+        "5fs_br:skeleton_salmon": {
+            "textures": [
+                "textures/items/eggs/skeleton_salmon"
+            ]
+        },
+        "5fs_br:skeleton_dolphin": {
+            "textures": [
+                "textures/items/eggs/skeleton_dolphin"
+            ]
+        },
+        "5fs_br:golden_maple_spirit": {
+            "textures": [
+                "textures/items/eggs/golden_maple_spirit"
+            ]
+        },
+        "5fs_br:spectral_vex": {
+            "textures": [
+                "textures/items/eggs/spectral_vex"
+            ]
+        },
+        "5fs_br:moose": {
+            "textures": [
+                "textures/items/eggs/moose"
+            ]
+        },
+        "5fs_br:maple_leaflet": {
+            "textures": [
+                "textures/items/eggs/maple_leaflet"
+            ]
+        },
+        "5fs_br:sulfur_fish": {
+            "textures": [
+                "textures/items/eggs/sulfur_fish"
+            ]
+        },
+        "5fs_br:surfer": {
+            "textures": [
+                "textures/items/eggs/surfer"
+            ]
+        },
+        "5fs_br:technoblade": {
+            "textures": [
+                "textures/items/eggs/technoblade"
+            ]
+        },
+        "5fs_br:husk_camel": {
+            "textures": [
+                "textures/items/eggs/husk_camel"
+            ]
+        },
+        "5fs_br:brown_bear": {
+            "textures": [
+                "textures/items/eggs/brown_bear"
+            ]
+        },
+        "5fs_br:black_bear": {
+            "textures": [
+                "textures/items/eggs/black_bear"
+            ]
+        },
+        "5fs_br:witch_ghost": {
+            "textures": [
+                "textures/items/eggs/witch_ghost"
+            ]
+        },
+        "5fs_br:stray_horse": {
+            "textures": [
+                "textures/items/eggs/stray_horse"
+            ]
+        },
+        "5fs_br:bogged_horse": {
+            "textures": [
+                "textures/items/eggs/bogged_horse"
+            ]
+        },
+        "5fs_br:wither_skeleton_horse": {
+            "textures": [
+                "textures/items/eggs/wither_skeleton_horse"
+            ]
+        },
+        "5fs_br:zombie_chicken": {
+            "textures": [
+                "textures/items/eggs/zombie_chicken"
+            ]
+        },
+        "5fs_br:meteorite_golem": {
+            "textures": [
+                "textures/items/eggs/meteorite_golem"
+            ]
+        },
+        "5fs_br:maple_villager": {
+            "textures": [
+                "textures/items/eggs/maple_villager"
+            ]
+        },
+        "5fs_br:groundhog": {
+            "textures": [
+                "textures/items/eggs/groundhog"
+            ]
+        },
+        "5fs_br:crystalline_boss": {
+            "textures": [
+                "textures/items/eggs/crystalline_boss"
+            ]
+        },
+        "5fs_br:giant_jungle_boss": {
+            "textures": [
+                "textures/items/eggs/giant_jungle_boss"
+            ]
+        },
+        "5fs_br:crystallized_slime_egg": {
+            "textures": [
+                "textures/items/eggs/crystallized_slime_egg"
+            ]
+        },
+        "5fs_br:wizard_trader": {
+            "textures": [
+                "textures/items/eggs/wizard_trader_spawn_egg"
+            ]
+        },
+        "5fs_br:accessory_trader": {
+            "textures": [
+                "textures/items/eggs/accessory_trader"
+            ]
+        },
+        "5fs_br:common_accessory_bag": {
+            "textures": [
+                "textures/items/misc/accessory/common_accessory_bag"
+            ]
+        },
+        "5fs_br:uncommon_accessory_bag": {
+            "textures": [
+                "textures/items/misc/accessory/uncommon_accessory_bag"
+            ]
+        },
+        "5fs_br:rare_accessory_bag": {
+            "textures": [
+                "textures/items/misc/accessory/rare_accessory_bag"
+            ]
+        },
+        "5fs_br:epic_accessory_bag": {
+            "textures": [
+                "textures/items/misc/accessory/epic_accessory_bag"
+            ]
+        },
+        "5fs_br:legendary_accessory_bag": {
+            "textures": [
+                "textures/items/misc/accessory/legendary_accessory_bag"
+            ]
+        },
+        "5fs_br:mythical_accessory_bag": {
+            "textures": [
+                "textures/items/misc/accessory/mythical_accessory_bag"
+            ]
+        },
+        "5fs_br:glimmerite_lantern": {
+            "textures": [
+                "textures/items/misc/glimmerite_lantern"
+            ]
+        },
+        "5fs_br:crystal_compass": {
+            "textures": [
+                "textures/items/misc/crystal_compass"
+            ]
+        },
+        "5fs_br:maple_tree_tap": {
+            "textures": [
+                "textures/items/misc/maple_tree_tap"
+            ]
+        },
+        "5fs_br:acorn": {
+            "textures": [
+                "textures/items/misc/acorn"
+            ]
+        },
+        "5fs_br:rocks": {
+            "textures": [
+                "textures/items/misc/rocks"
+            ]
+        },
+        "5fs_br:crystalline_slime_ball": {
+            "textures": [
+                "textures/items/misc/crystalline_slime_ball"
+            ]
+        },
+        "5fs_br:raw_meteorite_dust": {
+            "textures": [
+                "textures/items/dust/raw_meteorite_dust"
+            ]
+        },
+        "5fs_br:meteorite_scrap": {
+            "textures": [
+                "textures/items/minerals/meteorite_scrap"
+            ]
+        },
+        "5fs_br:meteorite_nugget": {
+            "textures": [
+                "textures/items/minerals/meteorite_nugget"
+            ]
+        },
+        "5fs_br:meteorite_ingot": {
+            "textures": [
+                "textures/items/minerals/meteorite_ingot"
+            ]
+        },
+        "5fs_br:glimmering_pearl": {
+            "textures": [
+                "textures/items/misc/glimmering_pearl"
+            ]
+        },
+        "5fs_br:sulfur_ingot": {
+            "textures": [
+                "textures/items/minerals/sulfur_ingot"
+            ]
+        },
+        "5fs_br:maple_leaf_pile": {
+            "textures": [
+                "textures/items/maple_leaf_pile"
+            ]
+        },
+        "5fs_br:glimmerite_dust": {
+            "textures": [
+                "textures/items/dust/glimmerite_dust"
+            ]
+        },
+        "5fs_br:raw_copper_dust": {
+            "textures": [
+                "textures/items/dust/raw_copper_dust"
+            ]
+        },
+        "5fs_br:raw_gold_dust": {
+            "textures": [
+                "textures/items/dust/raw_gold_dust"
+            ]
+        },
+        "5fs_br:raw_iron_dust": {
+            "textures": [
+                "textures/items/dust/raw_iron_dust"
+            ]
+        },
+        "5fs_br:raw_quartz_dust": {
+            "textures": [
+                "textures/items/dust/raw_quartz_dust"
+            ]
+        },
+        "5fs_br:raw_sulfur_dust": {
+            "textures": [
+                "textures/items/dust/raw_sulfur_dust"
+            ]
+        },
+        "5fs_br:raw_resonant_crystal_dust": {
+            "textures": [
+                "textures/items/dust/raw_resonant_crystal_dust"
+            ]
+        },
+        "5fs_br:raw_sulfur": {
+            "textures": [
+                "textures/items/minerals/raw_sulfur"
+            ]
+        },
+        "5fs_br:raw_crystalline": {
+            "textures": [
+                "textures/items/minerals/raw_crystalline"
+            ]
+        },
+        "5fs_br:crystalline_ingot": {
+            "textures": [
+                "textures/items/minerals/crystalline_ingot"
+            ]
+        },
+        "5fs_br:raw_crystalline_shard": {
+            "textures": [
+                "textures/items/minerals/raw_crystalline_shard"
+            ]
+        },
+        "5fs_br:bottle_of_jelly": {
+            "textures": [
+                "textures/items/potions/bottle_of_jelly"
+            ]
+        },
+        "5fs_br:splash_bottle_of_jelly": {
+            "textures": [
+                "textures/items/potions/splash_bottle_of_jelly"
+            ]
+        },
+        "5fs_br:lingering_bottle_of_jelly": {
+            "textures": [
+                "textures/items/potions/lingering_bottle_of_jelly"
+            ]
+        },
+        "5fs_br:illumination_potion": {
+            "textures": [
+                "textures/items/potions/illumination_potion"
+            ]
+        },
+        "5fs_br:splash_illumination_potion": {
+            "textures": [
+                "textures/items/potions/splash_illumination_potion"
+            ]
+        },
+        "5fs_br:lingering_illumination_potion": {
+            "textures": [
+                "textures/items/potions/lingering_illumination_potion"
+            ]
+        },
+        "5fs_br:arrow_of_jelly": {
+            "textures": [
+                "textures/items/misc/arrow_of_jelly"
+            ]
+        },
+        "5fs_br:resonant_crystal_shard": {
+            "textures": [
+                "textures/items/minerals/resonant_crystal_shard"
+            ]
+        },
+        "5fs_br:small_resonant_bud": {
+            "textures": [
+                "textures/blocks/resonant_crystal/small_resonant_bud"
+            ]
+        },
+        "5fs_br:medium_resonant_bud": {
+            "textures": [
+                "textures/blocks/resonant_crystal/medium_resonant_bud"
+            ]
+        },
+        "5fs_br:resonant_cluster": {
+            "textures": [
+                "textures/blocks/resonant_crystal/resonant_cluster"
+            ]
+        },
+        "5fs_br:crystal_bloom": {
+            "textures": [
+                "textures/items/flowers/crystal_bloom"
+            ]
+        },
+        "5fs_br:crystal_bulb": {
+            "textures": [
+                "textures/items/flowers/crystal_bulb"
+            ]
+        },
+        "5fs_br:pointed_crystal_item": {
+            "textures": [
+                "textures/blocks/pointed_crystal/pointed_crystal_tip"
+            ]
+        },
+        "5fs_br:crystalline_sword": {
+            "textures": [
+                "textures/items/weapons/crystalline_sword"
+            ]
+        },
+        "5fs_br:crystalline_pickaxe": {
+            "textures": [
+                "textures/items/weapons/crystalline_pickaxe"
+            ]
+        },
+        "5fs_br:crystalline_shovel": {
+            "textures": [
+                "textures/items/weapons/crystalline_shovel"
+            ]
+        },
+        "5fs_br:crystalline_axe": {
+            "textures": [
+                "textures/items/weapons/crystalline_axe"
+            ]
+        },
+        "5fs_br:crystalline_hoe": {
+            "textures": [
+                "textures/items/weapons/crystalline_hoe"
+            ]
+        },
+        "5fs_br:crystalline_helmet": {
+            "textures": [
+                "textures/items/armors/crystalline_helmet"
+            ]
+        },
+        "5fs_br:crystalline_chestplate": {
+            "textures": [
+                "textures/items/armors/crystalline_chestplate"
+            ]
+        },
+        "5fs_br:crystalline_leggings": {
+            "textures": [
+                "textures/items/armors/crystalline_leggings"
+            ]
+        },
+        "5fs_br:crystalline_mace": {
+            "textures": [
+                "textures/items/weapons/crystalline_mace"
+            ]
+        },
+        "5fs_br:crystalline_boots": {
+            "textures": [
+                "textures/items/armors/crystalline_boots"
+            ]
+        },
+        "5fs_br:crystalline_shield": {
+            "textures": [
+                "textures/items/armors/crystalline_shield"
+            ]
+        },
+        "5fs_br:crystalline_apple": {
+            "textures": [
+                "textures/items/food/crystalline_apple"
+            ]
+        },
+        "5fs_br:jar_of_glimmering_moth": {
+            "textures": [
+                "textures/items/misc/jar_of_glimmering_moth"
+            ]
+        },
+        "5fs_br:jar_of_maple_spirit": {
+            "textures": [
+                "textures/items/misc/jar_of_maple_spirit"
+            ]
+        },
+        "5fs_br:jar_of_golden_maple_spirit": {
+            "textures": [
+                "textures/items/misc/jar_of_golden_maple_spirit"
+            ]
+        },
+        "5fs_br:empty_jar": {
+            "textures": [
+                "textures/items/misc/empty_jar"
+            ]
+        },
+        "5fs_br:sap_jar_250ml": {
+            "textures": [
+                "textures/items/misc/sap_jar_250ml"
+            ]
+        },
+        "5fs_br:sap_jar_500ml": {
+            "textures": [
+                "textures/items/misc/sap_jar_500ml"
+            ]
+        },
+        "5fs_br:sap_bucket_250ml": {
+            "textures": [
+                "textures/items/misc/sap_bucket_250ml"
+            ]
+        },
+        "5fs_br:sap_bucket_500ml": {
+            "textures": [
+                "textures/items/misc/sap_bucket_500ml"
+            ]
+        },
+        "5fs_br:sap_bucket_750ml": {
+            "textures": [
+                "textures/items/misc/sap_bucket_750ml"
+            ]
+        },
+        "5fs_br:sap_bucket_1000ml": {
+            "textures": [
+                "textures/items/misc/sap_bucket_1000ml"
+            ]
+        },
+        "5fs_br:maple_syrup": {
+            "textures": [
+                "textures/items/food/maple_syrup"
+            ]
+        },
+        "5fs_br:maple_door": {
+            "textures": [
+                "textures/items/construction/maple_door"
+            ]
+        },
+        "5fs_br:maple_sign": {
+            "textures": [
+                "textures/items/construction/maple_sign"
+            ]
+        },
+        "5fs_br:maple_boat": {
+            "textures": [
+                "textures/items/boats/maple_boat"
+            ]
+        },
+        "5fs_br:maple_chest_boat": {
+            "textures": [
+                "textures/items/boats/maple_chest_boat"
+            ]
+        },
+        "5fs_br:maple_sapling": {
+            "textures": [
+                "textures/items/saplings/maple_sapling"
+            ]
+        },
+        "5fs_br:maple_leaf_litter_item": {
+            "textures": [
+                "textures/blocks/maple_leaf_litter"
+            ]
+        },
+        "5fs_br:infused_bonemeal": {
+            "textures": [
+                "textures/items/misc/infused_bonemeal"
+            ]
+        },
+        "5fs_br:blooming_touch": {
+            "textures": [
+                "textures/items/books/book_enchanted"
+            ]
+        },
+        "shears": {
+            "textures": [
+                "textures/items/shears"
+            ]
+        },
+        "5fs_br:maple_leaf_litter": {
+            "textures": "textures/blocks/leaves/maple_leaf_litter"
+        },
+        "5fs_br:meteorite_lava_bucket": {
+            "textures": "textures/items/misc/meteorite_lava_bucket"
+        },
+        "copper_chain": {
+            "textures": "textures/items/construction/copper_chain/copper_chain"
+        },
+        "exposed_copper_chain": {
+            "textures": "textures/items/construction/copper_chain/exposed_copper_chain"
+        },
+        "weathered_copper_chain": {
+            "textures": "textures/items/construction/copper_chain/weathered_copper_chain"
+        },
+        "oxidized_copper_chain": {
+            "textures": "textures/items/construction/copper_chain/oxidized_copper_chain"
+        },
+        "copper_bars": {
+            "textures": "textures/blocks/construction/copper/copper_bar"
+        },
+        "exposed_copper_bars": {
+            "textures": "textures/blocks/construction/copper/exposed_copper_bar"
+        },
+        "weathered_copper_bars": {
+            "textures": "textures/blocks/construction/copper/weathered_copper_bar"
+        },
+        "oxidized_copper_bars": {
+            "textures": "textures/blocks/construction/copper/oxidized_copper_bar"
+        },
+        "5fs_br:ash": {
+            "textures": "textures/items/misc/ash"
+        },
+        "5fs_br:bucket_squirrel": {
+            "textures": "textures/items/misc/bucket_squirrel"
+        },
+        "5fs_br:duck_egg": {
+            "textures": "textures/items/misc/duck_egg"
+        },
+        "5fs_br:tumbleweed": {
+            "textures": "textures/blocks/plants/tumbleweed"
+        },
+        "5fs_br:tall_dead_bush": {
+            "textures": "textures/blocks/plants/tall_deadbush_upper"
+        },
+        "5fs_br:coconut": {
+            "textures": "textures/items/food/coconut"
+        },
+        "5fs_br:coconut_half": {
+            "textures": "textures/items/food/coconut_half"
+        },
+        "5fs_br:pointed_sandstone": {
+            "textures": "textures/blocks/pointed_crystal/pointed_sandstone_tip"
+        },
+        "5fs_br:pointed_red_sandstone": {
+            "textures": "textures/blocks/pointed_crystal/pointed_red_sandstone_tip"
+        },
+        "5fs_br:eye_of_iris": {
+            "textures": "textures/items/misc/eye_of_iris"
+        },
+        "5fs_br:charm_of_meteor": {
+            "textures": "textures/items/misc/charm/charm_of_meteor"
+        },
+        "5fs_br:tuff_key": {
+            "textures": "textures/items/misc/tuff_key"
+        },
+        //
+        // Maple Forest Vegetation
+        "5fs_br:autumn_bush": {
+            "textures": [
+                "textures/blocks/plants/maple_forest/autumn_bush"
+            ]
+        },
+        "5fs_br:short_autumn_grass": {
+            "textures": [
+                "textures/blocks/plants/maple_forest/short_autumn_grass"
+            ]
+        },
+        "5fs_br:tall_autumn_grass": {
+            "textures": [
+                "textures/blocks/plants/maple_forest/tall_autumn_grass"
+            ]
+        },
+        "5fs_br:autumn_sprouts": {
+            "textures": [
+                "textures/blocks/plants/maple_forest/autumn_sprouts"
+            ]
+        },
+        "5fs_br:maple_flower": {
+            "textures": [
+                "textures/blocks/plants/maple_forest/maple_flower"
+            ]
+        },
+        "5fs_br:tall_maple_flower": {
+            "textures": [
+                "textures/blocks/plants/maple_forest/tall_maple_flower_upper"
+            ]
+        },
+        "5fs_br:maple_bush": {
+            "textures": [
+                "textures/blocks/plants/maple_forest/maple_bush"
+            ]
+        },
+        //
+        // Flowers
+        "5fs_br:rose": {
+            "textures": "textures/blocks/plants/flower_rose"
+        },
+        "5fs_br:blue_rose": {
+            "textures": "textures/blocks/plants/flower_rose_blue"
+        },
+        //
+        // Flower Pots
+        "mossy_cobblestone_flower_pot": {
+            "textures": "textures/items/pots/mossy_cobblestone_flower_pot"
+        },
+        "mossy_stone_brick_flower_pot": {
+            "textures": "textures/items/pots/mossy_stone_brick_flower_pot"
+        },
+        "sandstone_flower_pot": {
+            "textures": "textures/items/pots/sandstone_flower_pot"
+        },
+        //
+        // Dead Ocean
+        "5fs_br:dead_kelp": {
+            "textures": "textures/items/plants/sea_grass/dead_kelp"
+        },
+        "5fs_br:dead_seagrass": {
+            "textures": "textures/items/plants/sea_grass/dead_seagrass"
+        },
+        "5fs_br:dried_dead_kelp": {
+            "textures": "textures/items/food/dried_dead_kelp"
+        },
+        //
+        // Polypores
+        "5fs_br:brown_polypore": {
+            "textures": "textures/items/plants/polypores/brown_polypore"
+        },
+        "5fs_br:red_polypore": {
+            "textures": "textures/items/plants/polypores/red_polypore"
+        },
+        "5fs_br:redwood_yellow_polypore": {
+            "textures": "textures/items/plants/polypores/redwood_yellow_polypore"
+        },
+        //
+        //Lily Pads
+        "5fs_br:pink_flowered_lilypad": {
+            "textures": "textures/items/plants/lily_pad_pink"
+        },
+        "5fs_br:magenta_flowered_lilypad": {
+            "textures": "textures/items/plants/lily_pad_magenta"
+        },
+        "5fs_br:yellow_flowered_lilypad": {
+            "textures": "textures/items/plants/lily_pad_yellow"
+        },
+        //
+        // Spawn Eggs
+        "5fs_br:phoenix_spawn_egg": {
+            "textures": "textures/items/eggs/phoenix_spawn_egg"
+        },
+        "5fs_br:thunderbird_spawn_egg": {
+            "textures": "textures/items/eggs/thunderbird_spawn_egg"
+        },
+        "5fs_br:goblin_spawn_egg": {
+            "textures": "textures/items/eggs/goblin_spawn_egg"
+        },
+        "5fs_br:dart_goblin_spawn_egg": {
+            "textures": "textures/items/eggs/dart_goblin_spawn_egg"
+        },
+        "5fs_br:baby_skeleton_spawn_egg": {
+            "textures": "textures/items/eggs/baby_skeleton_spawn_egg"
+        },
+        "5fs_br:skeleton_bomber_spawn_egg": {
+            "textures": "textures/items/eggs/skeleton_bomber_spawn_egg"
+        },
+        "5fs_br:pipit_bird_spawn_egg": {
+            "textures": "textures/items/eggs/pipit_bird_spawn_egg"
+        },
+        "5fs_br:finch_bird_spawn_egg": {
+            "textures": "textures/items/eggs/finch_bird_spawn_egg"
+        },
+        "5fs_br:jay_bird_spawn_egg": {
+            "textures": "textures/items/eggs/jay_bird_spawn_egg"
+        },
+        "5fs_br:vulture_spawn_egg": {
+            "textures": "textures/items/eggs/vulture_spawn_egg"
+        },
+        "5fs_br:sand_shroud_spawn_egg": {
+            "textures": "textures/items/eggs/sand_shroud_spawn_egg"
+        },
+        "5fs_br:vine_shroud_spawn_egg": {
+            "textures": "textures/items/eggs/vine_shroud_spawn_egg"
+        },
+        "5fs_br:scorched_shroud_spawn_egg": {
+            "textures": "textures/items/eggs/scorched_shroud_spawn_egg"
+        },
+        "5fs_br:moss_shroud_spawn_egg": {
+            "textures": "textures/items/eggs/moss_shroud_spawn_egg"
+        },
+        "5fs_br:hollow_shroud_spawn_egg": {
+            "textures": "textures/items/eggs/hollow_shroud_spawn_egg"
+        },
+        "5fs_br:stone_shroud_spawn_egg": {
+            "textures": "textures/items/eggs/stone_shroud_spawn_egg"
+        },
+        "5fs_br:dark_shroud_spawn_egg": {
+            "textures": "textures/items/eggs/dark_shroud_spawn_egg"
+        },
+        "5fs_br:fire_shroud_spawn_egg": {
+            "textures": "textures/items/eggs/fire_shroud_spawn_egg"
+        },
+        "5fs_br:void_shroud_spawn_egg": {
+            "textures": "textures/items/eggs/void_shroud_spawn_egg"
+        },
+        "5fs_br:iris_of_the_end_spawn_egg": {
+            "textures": "textures/items/eggs/iris_of_the_end_spawn_egg"
+        },
+        "5fs_br:iris_minion_spawn_egg": {
+            "textures": "textures/items/eggs/iris_minion_spawn_egg"
+        },
+        "5fs_br:redwood_sentinel_spawn_egg": {
+            "textures": "textures/items/eggs/redwood_sentinel_spawn_egg"
+        },
+        //
+        // Palm Wood
+        "5fs_br:palm_door": {
+            "textures": "textures/items/construction/palm/palm_door"
+        },
+        "5fs_br:palm_sapling": {
+            "textures": "textures/blocks/wood/palm/palm_sapling"
+        },
+        "5fs_br:palm_boat": {
+            "textures": "textures/items/boats/palm_boat"
+        },
+        "5fs_br:palm_chest_boat": {
+            "textures": "textures/items/boats/palm_chest_boat"
+        },
+        "5fs_br:palm_ladder": {
+            "textures": "textures/blocks/misc/ladders/palm_ladder"
+        },
+        // Mob Net
+        "5fs_br:mob_net": {
+            "textures": [
+                "textures/items/misc/mob_net"
+            ]
+        },
+        "5fs_br:mob_net_full": {
+            "textures": [
+                "textures/items/misc/mob_net_full"
+            ]
+        },
+        //
+        // Lanterns
+        "5fs_br:gold_lantern": {
+            "textures": "textures/items/construction/gold/gold_lantern"
+        },
+        "5fs_br:copper_soul_lantern": {
+            "textures": "textures/items/construction/copper_lanterns/copper_soul_lantern"
+        },
+        "5fs_br:exposed_copper_soul_lantern": {
+            "textures": "textures/items/construction/copper_lanterns/exposed_copper_soul_lantern"
+        },
+        "5fs_br:weathered_copper_soul_lantern": {
+            "textures": "textures/items/construction/copper_lanterns/weathered_copper_soul_lantern"
+        },
+        "5fs_br:oxidized_copper_soul_lantern": {
+            "textures": "textures/items/construction/copper_lanterns/oxidized_copper_soul_lantern"
+        },
+        "5fs_br:copper_glimmerite_lantern": {
+            "textures": "textures/items/construction/copper_lanterns/copper_glimmerite_lantern"
+        },
+        "5fs_br:exposed_copper_glimmerite_lantern": {
+            "textures": "textures/items/construction/copper_lanterns/exposed_copper_glimmerite_lantern"
+        },
+        "5fs_br:weathered_copper_glimmerite_lantern": {
+            "textures": "textures/items/construction/copper_lanterns/weathered_copper_glimmerite_lantern"
+        },
+        "5fs_br:oxidized_copper_glimmerite_lantern": {
+            "textures": "textures/items/construction/copper_lanterns/oxidized_copper_glimmerite_lantern"
+        },
+        //
+        // Spears
+        "5fs_br:cobalt_spear": {
+            "textures": "textures/items/spear/cobalt_spear"
+        },
+        "5fs_br:crystalline_spear": {
+            "textures": "textures/items/spear/crystalline_spear"
+        },
+        "5fs_br:meteorite_spear": {
+            "textures": "textures/items/spear/meteorite_spear"
+        },
+        "5fs_br:obsidian_spear": {
+            "textures": "textures/items/spear/obsidian_spear"
+        },
+        "5fs_br:dragonite_spear": {
+            "textures": "textures/items/spear/dragonite_spear"
+        },
+        "5fs_br:steel_spear": {
+            "textures": "textures/items/spear/steel_spear"
+        },
+        //
+        // Mob Armor
+        "5fs_br:crystalline_horse_armor": {
+            "textures": [
+                "textures/items/armors/crystalline_horse_armor"
+            ]
+        },
+        "5fs_br:crystalline_wolf_armor": {
+            "textures": [
+                "textures/items/armors/crystalline_wolf_armor"
+            ]
+        },
+        "5fs_br:dragonite_horse_armor": {
+            "textures": [
+                "textures/items/armors/dragonite_horse_armor"
+            ]
+        },
+        "5fs_br:dragonite_wolf_armor": {
+            "textures": [
+                "textures/items/armors/dragonite_wolf_armor"
+            ]
+        },
+        //
+        // Petals
+        "5fs_br:yellow_petals": {
+            "textures": "textures/items/plants/yellow_petals"
+        },
+        // Mini Statues
+        "5fs_br:ombari_statue": {
+            "textures": "textures/items/statues/ombari_statue"
+        },
+        "5fs_br:mummified_pharaoh_statue": {
+            "textures": "textures/items/statues/mummified_pharaoh_statue"
+        },
+        "5fs_br:crystalline_berserker_statue": {
+            "textures": "textures/items/statues/crystalline_berserker_statue"
+        },
+        "5fs_br:creeper_statue": {
+            "textures": "textures/items/statues/creeper_statue"
+        },
+        "5fs_br:dolphin_statue": {
+            "textures": "textures/items/statues/dolphin_statue"
+        },
+        "5fs_br:ghast_statue": {
+            "textures": "textures/items/statues/ghast_statue"
+        },
+        "5fs_br:guardian_statue": {
+            "textures": "textures/items/statues/guardian_statue"
+        },
+        "5fs_br:mana_star_statue": {
+            "textures": "textures/items/statues/mana_star_statue"
+        },
+        "5fs_br:parrot_statue": {
+            "textures": "textures/items/statues/parrot_statue"
+        },
+        "5fs_br:pickaxe_statue": {
+            "textures": "textures/items/statues/pickaxe_statue"
+        },
+        "5fs_br:pirate_captain_statue": {
+            "textures": "textures/items/statues/pirate_captain_statue"
+        },
+        "5fs_br:pumpkin_statue": {
+            "textures": "textures/items/statues/pumpkin_statue"
+        },
+        "5fs_br:redwood_sentinel_statue": {
+            "textures": "textures/items/statues/redwood_sentinel_statue"
+        },
+        "5fs_br:villager_statue": {
+            "textures": "textures/items/statues/villager_statue"
+        },
+        "5fs_br:wither_statue": {
+            "textures": "textures/items/statues/wither_statue"
+        },
+        "5fs_br:iris_of_the_end_statue": {
+            "textures": "textures/items/statues/iris_of_the_end_statue"
+        },
+        //
+        // Keys
+        "5fs_br:desert_trial_key": {
+            "textures": "textures/items/keys/desert_trial_key"
+        },
+        "5fs_br:jungle_trial_key": {
+            "textures": "textures/items/keys/jungle_trial_key"
+        },
+        "5fs_br:crystal_trial_key": {
+            "textures": "textures/items/keys/crystal_trial_key"
+        }
+    }
+}

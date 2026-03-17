@@ -1,0 +1,15 @@
+{
+    "format_version": "1.21.80",
+    "minecraft:scatter_feature": {
+        "description": {
+            "identifier": "5fs_br:trees/jungle/scatter_big_jungle_tree_2_feature"
+        },
+        "places_feature": "5fs_br:trees/jungle/big_jungle_tree_2_feature",
+        "distribution": {
+            "iterations": 1,
+            "x": -14,
+            "y": 0,
+            "z": -8
+        }
+    }
+}

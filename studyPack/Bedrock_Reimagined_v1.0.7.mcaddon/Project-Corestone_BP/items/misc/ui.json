@@ -1,0 +1,14 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "5fs_br:ui",
+            "menu_category": {
+                "category": "none"
+            }
+		},
+		"components": {
+			"minecraft:icon": "5fs_br:empty"
+		}
+	}
+}

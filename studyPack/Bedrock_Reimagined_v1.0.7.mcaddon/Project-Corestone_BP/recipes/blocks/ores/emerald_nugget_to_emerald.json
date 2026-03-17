@@ -1,0 +1,29 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "5fs_br:emerald_nugget_to_emerald"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"#": {
+				"item": "5fs_br:emerald_nugget"
+			}
+		},
+		"pattern": [
+			"###",
+			"###",
+			"###"
+		],
+		"result": {
+			"item": "minecraft:emerald"
+		},
+		"unlock": [
+			{
+				"item": "minecraft:emerald"
+			}
+		]
+	}
+}

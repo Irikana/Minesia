@@ -1,0 +1,44 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "5fs_br:cape_of_warden",
+      "materials": {
+        "default": "armor",
+        "enchanted": "armor_enchanted"
+      },
+      "textures": {
+        "warden0":  "textures/entity/gears/capes/warden/warden0",
+        "warden1":  "textures/entity/gears/capes/warden/warden1",
+        "warden2":  "textures/entity/gears/capes/warden/warden2",
+        "warden3":  "textures/entity/gears/capes/warden/warden3",
+        "warden4":  "textures/entity/gears/capes/warden/warden4",
+        "warden5":  "textures/entity/gears/capes/warden/warden5",
+        "warden6":  "textures/entity/gears/capes/warden/warden6",
+        "warden7":  "textures/entity/gears/capes/warden/warden7",
+        "warden8":  "textures/entity/gears/capes/warden/warden8",
+        "warden9":  "textures/entity/gears/capes/warden/warden9",
+        "warden10": "textures/entity/gears/capes/warden/warden10",
+        "warden11": "textures/entity/gears/capes/warden/warden11",
+        "warden12": "textures/entity/gears/capes/warden/warden12",
+        "warden13": "textures/entity/gears/capes/warden/warden13",
+        "enchanted": "textures/misc/enchanted_actor_glint"
+      },
+      "geometry": {
+        "default": "geometry.custom_cape"
+      },
+      "animations": {
+        "cape": "animation.custom_cape"
+      },
+      "scripts": {
+        "parent_setup": "variable.chest_layer_visible = 0.0;",
+        "animate": [
+          "cape"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.cape_of_warden"
+      ]
+    }
+  }
+}

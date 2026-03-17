@@ -1,0 +1,98 @@
+{
+    "format_version": "1.26.0",
+	"minecraft:block": {
+        "description": {
+            "identifier": "5fs_br:dead_kelp",
+            "states": {
+                "5fs_br:kelp_age": {
+                    "values": {
+                        "min": 0,
+                        "max": 15
+                    }
+                },
+                "5fs_br:state": [
+                    "head",
+                    "body"
+                ]
+            }
+        },
+        "components": {
+            "minecraft:liquid_detection": {
+                "detection_rules": [
+                    {
+                        "can_contain_liquid": true,
+                        "liquid_type": "water",
+                        "on_liquid_touches": "no_reaction"
+                    }
+                ]
+            },
+            "minecraft:geometry": "minecraft:geometry.cross",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "dead_kelp_body",
+                    "render_method": "alpha_test_single_sided",
+                    "ambient_occlusion": false,
+                    "face_dimming": false
+                }
+            },
+            "minecraft:collision_box": false,
+            "minecraft:movable": {
+                "movement_type": "popped"
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 0
+            },
+            "minecraft:placement_filter": {
+                "conditions": [
+                    {
+                        "allowed_faces": [
+                            "up"
+                        ]
+                    }
+                ]
+            },
+            "minecraft:precipitation_interactions": {
+                "precipitation_behavior": "none"
+            },
+            "minecraft:connection_rule": {
+                "accepts_connections_from": "none"
+            },
+            "5fs_br:crystallineShears": {},
+            "minecraft:loot": "loot_tables/empty.json",
+            "5fs_br:prevent_placement_0": {},
+            "5fs_br:kelp": {}
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('5fs_br:state') == 'body'",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "dead_kelp_body",
+                            "render_method": "alpha_test_single_sided",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:state') == 'head'",
+                "components": {
+                    "minecraft:geometry": "minecraft:geometry.cross",
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "dead_kelp_head",
+                            "render_method": "alpha_test_single_sided",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        }
+                    }
+                }
+            }
+        ]
+    }
+}

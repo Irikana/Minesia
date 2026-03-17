@@ -1,0 +1,29 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "5fs_br:dragonite_nugget_to_ingot"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"#": {
+				"item": "5fs_br:dragonite_nugget"
+			}
+		},
+		"pattern": [
+			"###",
+			"###",
+			"###"
+		],
+		"result": {
+			"item": "5fs_br:dragonite_ingot"
+		},
+		"unlock": [
+			{
+				"item": "5fs_br:dragonite_ingot"
+			}
+		]
+	}
+}

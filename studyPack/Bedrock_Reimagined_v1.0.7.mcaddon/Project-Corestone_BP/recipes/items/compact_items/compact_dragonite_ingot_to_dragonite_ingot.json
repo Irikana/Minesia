@@ -1,0 +1,25 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "5fs_br:compact_dragonite_to_dragonite_ingot"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "5fs_br:compact_dragonite_ingot"
+      }
+    ],
+    "result": {
+      "item": "5fs_br:dragonite_ingot",
+      "count": 4
+    },
+    "unlock": [
+      {
+        "item": "5fs_br:dragonite_ingot"
+      }
+    ]
+  }
+}

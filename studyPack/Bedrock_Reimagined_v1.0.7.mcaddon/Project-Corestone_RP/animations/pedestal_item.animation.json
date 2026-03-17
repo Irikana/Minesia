@@ -1,0 +1,131 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.pedestal_item.item": {
+			"loop": true,
+			"animation_length": 5,
+			"bones": {
+				"root": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"5.0": [0, -360, 0]
+					},
+					"position": {
+						"0.0": {
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"2.5": {
+							"post": [0, 2, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"5.0": {
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						}
+					}
+				},
+				"rightItem": {
+					"rotation": [104.5, 10.40902, 195.17964],
+					"position": [
+						"q.is_item_name_any('slot.weapon.mainhand', '5fs_br:amethyst_bed', '5fs_br:barrel_bed', '5fs_br:beach_bed', '5fs_br:bear_bed', '5fs_br:bee_bed', '5fs_br:blaze_bed', '5fs_br:breeze_bed', '5fs_br:cactus_bed', '5fs_br:cherry_bed', '5fs_br:coral_cove_bed', '5fs_br:cow_bed', '5fs_br:creeper_bed', '5fs_br:crystal_canyon_bed', '5fs_br:crystalline_berserker_bed', '5fs_br:deep_ocean_bed', '5fs_br:dragon_bed', '5fs_br:dragonite_bed', '5fs_br:enchanting_table_bed', '5fs_br:enderman_bed', '5fs_br:flower_bed', '5fs_br:fox_bed', '5fs_br:frozen_bed', '5fs_br:furnace_bed', '5fs_br:ghast_bed', '5fs_br:glimmerite_bed', '5fs_br:glowstone_bed', '5fs_br:honeycomb_bed', '5fs_br:ice_spikes_bed', '5fs_br:lumberjack_bed', '5fs_br:maple_bed', '5fs_br:meteor_bed', '5fs_br:night_sky_bed', '5fs_br:ocean_waves_bed', '5fs_br:ores_bed', '5fs_br:panda_bed', '5fs_br:pig_bed', '5fs_br:potion_bed', '5fs_br:prismarine_bed', '5fs_br:pumpkin_bed', '5fs_br:purple_magic_bed', '5fs_br:quarry_bed', '5fs_br:redstone_bed', '5fs_br:sheep_bed', '5fs_br:shulker_bed', '5fs_br:snowy_bed', '5fs_br:tree_bed', '5fs_br:turtle_bed', '5fs_br:warden_bed', '5fs_br:witch_bed', '5fs_br:wither_bed', '5fs_br:yellow_magic_bed') ? 1 : 1",
+						"q.is_item_name_any('slot.weapon.mainhand', '5fs_br:amethyst_bed', '5fs_br:barrel_bed', '5fs_br:beach_bed', '5fs_br:bear_bed', '5fs_br:bee_bed', '5fs_br:blaze_bed', '5fs_br:breeze_bed', '5fs_br:cactus_bed', '5fs_br:cherry_bed', '5fs_br:coral_cove_bed', '5fs_br:cow_bed', '5fs_br:creeper_bed', '5fs_br:crystal_canyon_bed', '5fs_br:crystalline_berserker_bed', '5fs_br:deep_ocean_bed', '5fs_br:dragon_bed', '5fs_br:dragonite_bed', '5fs_br:enchanting_table_bed', '5fs_br:enderman_bed', '5fs_br:flower_bed', '5fs_br:fox_bed', '5fs_br:frozen_bed', '5fs_br:furnace_bed', '5fs_br:ghast_bed', '5fs_br:glimmerite_bed', '5fs_br:glowstone_bed', '5fs_br:honeycomb_bed', '5fs_br:ice_spikes_bed', '5fs_br:lumberjack_bed', '5fs_br:maple_bed', '5fs_br:meteor_bed', '5fs_br:night_sky_bed', '5fs_br:ocean_waves_bed', '5fs_br:ores_bed', '5fs_br:panda_bed', '5fs_br:pig_bed', '5fs_br:potion_bed', '5fs_br:prismarine_bed', '5fs_br:pumpkin_bed', '5fs_br:purple_magic_bed', '5fs_br:quarry_bed', '5fs_br:redstone_bed', '5fs_br:sheep_bed', '5fs_br:shulker_bed', '5fs_br:snowy_bed', '5fs_br:tree_bed', '5fs_br:turtle_bed', '5fs_br:warden_bed', '5fs_br:witch_bed', '5fs_br:wither_bed', '5fs_br:yellow_magic_bed') ? 5.5 : 0",
+						"q.is_item_name_any('slot.weapon.mainhand', '5fs_br:amethyst_bed', '5fs_br:barrel_bed', '5fs_br:beach_bed', '5fs_br:bear_bed', '5fs_br:bee_bed', '5fs_br:blaze_bed', '5fs_br:breeze_bed', '5fs_br:cactus_bed', '5fs_br:cherry_bed', '5fs_br:coral_cove_bed', '5fs_br:cow_bed', '5fs_br:creeper_bed', '5fs_br:crystal_canyon_bed', '5fs_br:crystalline_berserker_bed', '5fs_br:deep_ocean_bed', '5fs_br:dragon_bed', '5fs_br:dragonite_bed', '5fs_br:enchanting_table_bed', '5fs_br:enderman_bed', '5fs_br:flower_bed', '5fs_br:fox_bed', '5fs_br:frozen_bed', '5fs_br:furnace_bed', '5fs_br:ghast_bed', '5fs_br:glimmerite_bed', '5fs_br:glowstone_bed', '5fs_br:honeycomb_bed', '5fs_br:ice_spikes_bed', '5fs_br:lumberjack_bed', '5fs_br:maple_bed', '5fs_br:meteor_bed', '5fs_br:night_sky_bed', '5fs_br:ocean_waves_bed', '5fs_br:ores_bed', '5fs_br:panda_bed', '5fs_br:pig_bed', '5fs_br:potion_bed', '5fs_br:prismarine_bed', '5fs_br:pumpkin_bed', '5fs_br:purple_magic_bed', '5fs_br:quarry_bed', '5fs_br:redstone_bed', '5fs_br:sheep_bed', '5fs_br:shulker_bed', '5fs_br:snowy_bed', '5fs_br:tree_bed', '5fs_br:turtle_bed', '5fs_br:warden_bed', '5fs_br:witch_bed', '5fs_br:wither_bed', '5fs_br:yellow_magic_bed') ? -7.3 : -7.3"
+					],
+					"scale": "q.is_item_name_any('slot.weapon.mainhand', '5fs_br:amethyst_bed', '5fs_br:barrel_bed', '5fs_br:beach_bed', '5fs_br:bear_bed', '5fs_br:bee_bed', '5fs_br:blaze_bed', '5fs_br:breeze_bed', '5fs_br:cactus_bed', '5fs_br:cherry_bed', '5fs_br:coral_cove_bed', '5fs_br:cow_bed', '5fs_br:creeper_bed', '5fs_br:crystal_canyon_bed', '5fs_br:crystalline_berserker_bed', '5fs_br:deep_ocean_bed', '5fs_br:dragon_bed', '5fs_br:dragonite_bed', '5fs_br:enchanting_table_bed', '5fs_br:enderman_bed', '5fs_br:flower_bed', '5fs_br:fox_bed', '5fs_br:frozen_bed', '5fs_br:furnace_bed', '5fs_br:ghast_bed', '5fs_br:glimmerite_bed', '5fs_br:glowstone_bed', '5fs_br:honeycomb_bed', '5fs_br:ice_spikes_bed', '5fs_br:lumberjack_bed', '5fs_br:maple_bed', '5fs_br:meteor_bed', '5fs_br:night_sky_bed', '5fs_br:ocean_waves_bed', '5fs_br:ores_bed', '5fs_br:panda_bed', '5fs_br:pig_bed', '5fs_br:potion_bed', '5fs_br:prismarine_bed', '5fs_br:pumpkin_bed', '5fs_br:purple_magic_bed', '5fs_br:quarry_bed', '5fs_br:redstone_bed', '5fs_br:sheep_bed', '5fs_br:shulker_bed', '5fs_br:snowy_bed', '5fs_br:tree_bed', '5fs_br:turtle_bed', '5fs_br:warden_bed', '5fs_br:witch_bed', '5fs_br:wither_bed', '5fs_br:yellow_magic_bed') ? 0.5 : 1"
+				}
+			}
+		},
+		"animation.pedestal_item.equippable": {
+			"loop": true,
+			"animation_length": 5,
+			"bones": {
+				"root": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"5.0": [0, -360, 0]
+					},
+					"position": {
+						"0.0": {
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"2.5": {
+							"post": [0, 2, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"5.0": {
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						}
+					}
+				},
+				"rightItem": {
+					"rotation": [
+						"q.is_item_name_any('slot.weapon.mainhand', 'minecraft:shield') ? -90 : q.is_item_name_any('slot.weapon.mainhand', 'minecraft:bow') ? -90 : -70.0093",
+						"q.is_item_name_any('slot.weapon.mainhand', 'minecraft:trident') ? -80 : -0.4339868564",
+						0.5
+					],
+					"position": [
+						"q.is_item_name_any('slot.weapon.mainhand', 'minecraft:bow') ? -1.5 : 0",
+						"q.is_item_name_any('slot.weapon.mainhand', 'minecraft:crossbow') ? 6 : q.is_item_name_any('slot.weapon.mainhand', 'minecraft:shield') ? 4 : q.is_item_name_any('slot.weapon.mainhand', 'minecraft:bow') ? 4 : q.is_item_name_any('slot.weapon.mainhand', 'minecraft:trident') ? 4 : q.is_item_name_any('slot.weapon.mainhand', 'minecraft:shield') ? 4 : q.is_item_name_any('slot.weapon.mainhand', 'minecraft:bow') ? 4 : 0",
+						"q.is_item_name_any('slot.weapon.mainhand', 'minecraft:shield') ? -6 : -4.5"
+					],
+					"scale": "q.is_item_name_any('slot.weapon.mainhand', 'minecraft:crossbow') ? 0.25 : q.is_item_name_any('slot.weapon.mainhand', 'minecraft:bow') ? 0.75 : q.is_item_name_any('slot.weapon.mainhand', 'minecraft:trident') ? 0.5 : q.is_item_name_any('slot.weapon.mainhand', 'minecraft:shield') ? 0.5 : 1"
+				}
+			}
+		},
+		"animation.pedestal_item.particle": {
+			"loop": true,
+			"animation_length": 0.1,
+			"particle_effects": {
+				"0.0": {
+					"effect": "pedestal",
+					"locator": "locator"
+				}
+			}
+		},
+		"animation.pedestal_item.iris_of_the_end": {
+			"loop": true,
+			"animation_length": 10,
+			"bones": {
+				"root": {
+					"rotation": [0, "-(q.anim_time * q.anim_time * 360) / 5", 0]
+				},
+				"rightItem": {
+					"rotation": [104.5, 10.40902, 195.17964],
+					"position": [1, 0, -7.3]
+				}
+			},
+			"sound_effects": {
+				"0.0": {
+					"effect": "boss"
+				}
+			},
+			"particle_effects": {
+				"0.0": {
+					"effect": "pedestal_eye_of_iris",
+					"locator": "locator"
+				}
+			}
+		},
+		"animation.pedestal_item.boss": {
+			"loop": true,
+			"animation_length": 10,
+			"bones": {
+				"root": {
+					"rotation": [0, "-(q.anim_time * q.anim_time * 360) / 5", 0]
+				},
+				"rightItem": {
+					"rotation": [104.5, 10.40902, 195.17964],
+					"position": [1, 0, -7.3]
+				}
+			},
+			"sound_effects": {
+				"0.0": {
+					"effect": "boss"
+				}
+			}
+		}
+	}
+}

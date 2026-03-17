@@ -1,0 +1,38 @@
+{
+    "format_version": "1.21.60",
+    "minecraft:weighted_random_feature": {
+        "description": {
+            "identifier": "5fs_br:jungle/weighted_liana_feature"
+        },
+        "features": [
+            [
+                "5fs_br:jungle/scatter_liana_0_feature",
+                1
+            ],
+            [
+                "5fs_br:jungle/scatter_liana_1_feature",
+                1
+            ],
+            [
+                "5fs_br:jungle/scatter_liana_2_feature",
+                1
+            ],
+            [
+                "5fs_br:jungle/scatter_liana_3_feature",
+                1
+            ],
+            [
+                "5fs_br:jungle/scatter_liana_4_feature",
+                1
+            ],
+            [
+                "5fs_br:jungle/scatter_liana_5_feature",
+                1
+            ],
+            [
+                "5fs_br:jungle/scatter_liana_6_feature",
+                1
+            ]
+        ]
+    }
+}

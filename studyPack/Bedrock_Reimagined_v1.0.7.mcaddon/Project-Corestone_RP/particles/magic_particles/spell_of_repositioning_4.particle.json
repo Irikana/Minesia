@@ -1,0 +1,66 @@
+{
+	"format_version": "1.10.0",
+	"particle_effect": {
+		"description": {
+			"identifier": "5fs_bt:spell_of_repositioning_4",
+			"basic_render_parameters": {
+				"material": "particles_add",
+				"texture": "textures/particles/magic_particles/yuan_1"
+			}
+		},
+		"curves": {
+			"variable.size1": {
+				"type": "linear",
+				"input": "v.particle_age",
+				"horizontal_range": "v.particle_lifetime",
+				"nodes": [
+					0.95,
+					1,
+					0.95
+				]
+			}
+		},
+		"components": {
+			"minecraft:emitter_rate_steady": {
+				"spawn_rate": 5,
+				"max_particles": 10
+			},
+			"minecraft:emitter_lifetime_once": {
+				"active_time": 0.5
+			},
+			"minecraft:emitter_shape_disc": {
+				"radius": 4,
+				"direction": [
+					0,
+					1,
+					0
+				]
+			},
+			"minecraft:particle_lifetime_expression": {
+				"max_lifetime": "math.random(0.3,0.7)"
+			},
+			"minecraft:particle_initial_spin": {
+				"rotation": 90
+			},
+			"minecraft:particle_initial_speed": "math.random(10,26)",
+			"minecraft:particle_motion_dynamic": {
+				"linear_drag_coefficient": "math.random(3,1)"
+			},
+			"minecraft:particle_appearance_billboard": {
+				"size": [
+					"1*variable.size1*variable.particle_random_1+0.3",
+					"1*variable.size1*variable.particle_random_1+0.3"
+				],
+				"facing_camera_mode": "rotate_xyz"
+			},
+			"minecraft:particle_appearance_tinting": {
+				"color": [
+					0.72157,
+					0.48627,
+					1,
+					1
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,19 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "5fs_br:raw_sulfur_dust"
+    },
+    "unlock": [
+      {
+        "item": "5fs_br:raw_sulfur"
+      }
+    ],
+    "tags": [
+      "furnace",
+      "blast_furnace"
+    ],
+    "input": "5fs_br:raw_sulfur_dust",
+    "output": "5fs_br:sulfur_ingot"
+  }
+}

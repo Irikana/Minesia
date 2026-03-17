@@ -1,0 +1,36 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "5fs_br:pristine_ring_of_greed"
+		},
+		"tags": [
+			"jeweling_station"
+		],
+		"key": {
+			"A": {
+				"item": "5fs_br:dragonite_ingot"
+			},
+			"B": {
+				"item": "5fs_br:golden_sap"
+			},
+			"C": {
+				"item": "5fs_br:cobalt_ingot"
+			},
+			"D": {
+				"item": "5fs_br:chipped_ring_of_greed"
+			}
+		},
+		"pattern": [
+			"ABA",
+			"CDC",
+			"ACA"
+		],
+		"result": {
+			"item": "5fs_br:pristine_ring_of_greed"
+		},
+		"unlock": {
+			"context": "AlwaysUnlocked"
+		}
+	}
+}

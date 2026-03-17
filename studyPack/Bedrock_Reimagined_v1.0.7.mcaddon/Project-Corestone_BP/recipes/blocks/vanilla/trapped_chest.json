@@ -1,0 +1,27 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "5fs_br:trapped_chest"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "tag": "5fs_br:chest"
+      },
+      {
+        "item": "minecraft:tripwire_hook"
+      }
+    ],
+    "unlock": [
+      {
+        "item": "minecraft:tripwire_hook"
+      }
+    ],
+    "result": {
+      "item": "minecraft:trapped_chest"
+    }
+  }
+}

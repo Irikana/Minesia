@@ -1,0 +1,179 @@
+{
+    "format_version": "1.26.0",
+	"minecraft:block": {
+        "description": {
+            "identifier": "5fs_br:cloud_fountain",
+            "menu_category": {
+                "category": "items"
+            },
+            "traits": {
+                "minecraft:placement_direction": {
+                    "enabled_states": [
+                        "minecraft:cardinal_direction"
+                    ]
+                }
+            }
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'north' ",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            180,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'south' ",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            0,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'east' ",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            90,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'west' ",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            270,
+                            0
+                        ]
+                    }
+                }
+            }
+        ],
+        "components": {
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "cloud_fountain_bottom"
+                },
+                "cloud_fountain_side": {
+                    "texture": "cloud_fountain_side"
+                },
+                "cloud_fountain_top": {
+                    "texture": "cloud_fountain_top"
+                },
+                "cloud_fountain_top_up": {
+                    "texture": "cloud_fountain_top_up"
+                },
+                "cloud_0": {
+                    "texture": "cloud_fountain_cloud_0"
+                },
+                "cloud_1": {
+                    "texture": "cloud_fountain_cloud_1"
+                },
+                "cloud_20": {
+                    "texture": "cloud_fountain_cloud_20"
+                },
+                "cloud_21": {
+                    "texture": "cloud_fountain_cloud_21"
+                },
+                "cloud_30": {
+                    "texture": "cloud_fountain_cloud_30"
+                },
+                "cloud_31": {
+                    "texture": "cloud_fountain_cloud_31"
+                },
+                "cloud_40": {
+                    "texture": "cloud_fountain_cloud_40"
+                },
+                "cloud_41": {
+                    "texture": "cloud_fountain_cloud_41"
+                },
+                "cloud_50": {
+                    "texture": "cloud_fountain_cloud_50"
+                },
+                "cloud_51": {
+                    "texture": "cloud_fountain_cloud_51"
+                },
+                "cloud_fountain_water": {
+                    "texture": "fountain_water",
+                    "tint_method": "water"
+                },
+                "cloud_fountain_flowing_water": {
+                    "texture": "fountain_flowing_water",
+                    "tint_method": "water"
+                }
+            },
+            "minecraft:map_color": "#808080",
+            "minecraft:geometry": "geometry.cloud_fountain",
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 5,
+                "item_specific_speeds": [
+                    {
+                        "item": {
+                            "tags": "query.all_tags('minecraft:is_pickaxe')"
+                        },
+                        "destroy_speed": 1.5
+                    }
+                ]
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 6
+            },
+            "minecraft:liquid_detection": {
+                "detection_rules": [
+                    {
+                        "can_contain_liquid": true,
+                        "liquid_type": "water",
+                        "on_liquid_touches": "blocking"
+                    }
+                ]
+            },
+            "minecraft:collision_box": {
+                "origin": [
+                    -8,
+                    0,
+                    -8
+                ],
+                "size": [
+                    16,
+                    24,
+                    16
+                ]
+            },
+            "minecraft:selection_box": {
+                "origin": [
+                    -8,
+                    0,
+                    -8
+                ],
+                "size": [
+                    16,
+                    11,
+                    16
+                ]
+            },
+			"minecraft:precipitation_interactions": {
+				"precipitation_behavior": "obstruct_rain"
+			},
+			"minecraft:connection_rule": {
+				"accepts_connections_from": "none"
+			},
+            "5fs_br:cloudFountain": {},
+            "tag:minecraft:is_pickaxe_item_destructible": {}
+        }
+    }
+}

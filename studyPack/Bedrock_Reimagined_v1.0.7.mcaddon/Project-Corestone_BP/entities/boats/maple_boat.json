@@ -1,0 +1,543 @@
+{
+  "format_version": "1.21.130",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "5fs_br:maple_boat",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "minecraft:floating": {
+        "minecraft:buoyant": {
+          "base_buoyancy": 0.6,
+          "apply_gravity": true,
+          "simulate_waves": true,
+          "big_wave_speed": 5,
+          "liquid_blocks": [
+            "minecraft:water",
+            "minecraft:flowing_water"
+          ]
+        }
+      },
+      "minecraft:can_ride": {
+        "minecraft:rideable": {
+          "seat_count": 2,
+          "interact_text": "action.interact.ride.boat",
+          "family_types": [
+            "player"
+          ],
+          "pull_in_entities": true,
+          "seats": [
+            {
+              "position": [
+                0,
+                0.1,
+                0
+              ],
+              "min_rider_count": 0,
+              "max_rider_count": 1
+            },
+            {
+              "position": [
+                0,
+                0.1,
+                0.2
+              ],
+              "min_rider_count": 2,
+              "max_rider_count": 2
+            },
+            {
+              "position": [
+                0,
+                0.1,
+                -0.6
+              ],
+              "min_rider_count": 2,
+              "max_rider_count": 2
+            }
+          ]
+        },
+        "minecraft:input_ground_controlled": {}
+      },
+      "minecraft:above_bubble_column_down": {
+        "minecraft:buoyant": {
+          "base_buoyancy": 1,
+          "apply_gravity": true,
+          "simulate_waves": false,
+          "liquid_blocks": [
+            "minecraft:water",
+            "minecraft:flowing_water",
+            "minecraft:bubble_column"
+          ],
+          "drag_down_on_buoyancy_removed": 0.7
+        },
+        "minecraft:behavior.timer_flag_1": {
+          "cooldown_range": [
+            0,
+            0
+          ],
+          "duration_range": [
+            0.1,
+            0.1
+          ],
+          "on_start": {
+            "event": "5fs_br:stay_afloat"
+          }
+        },
+        "minecraft:timer": {
+          "looping": false,
+          "time": 3,
+          "time_down_event": {
+            "event": "minecraft:sink",
+            "target": "self"
+          }
+        },
+        "minecraft:out_of_control": {},
+        "minecraft:is_saddled": {}
+      },
+      "minecraft:above_bubble_column_up": {
+        "minecraft:buoyant": {
+          "base_buoyancy": 1,
+          "apply_gravity": true,
+          "simulate_waves": false,
+          "liquid_blocks": [
+            "minecraft:water",
+            "minecraft:flowing_water"
+          ],
+          "drag_down_on_buoyancy_removed": 0.7
+        },
+        "minecraft:out_of_control": {},
+        "minecraft:is_saddled": {}
+      },
+      "5fs_br:despawn": {
+        "minecraft:instant_despawn": {}
+      },
+      "5fs_br:shrinkify": {
+        "minecraft:movement": {
+          "value": 0.08
+        },
+        "minecraft:health": {
+          "max": 10
+        },
+        "minecraft:scale": {
+          "value": 0.25
+        }
+      },
+      "5fs_br:gigantify": {
+        "minecraft:movement": {
+          "value": 0.03
+        },
+        "minecraft:health": {
+          "max": 40
+        },
+        "minecraft:scale": {
+          "value": 2
+        }
+      },
+      "5fs_br:normal_scale": {
+        "minecraft:movement": {
+          "value": 0.04
+        },
+        "minecraft:health": {
+          "max": 20
+        },
+        "minecraft:scale": {
+          "value": 1
+        }
+      },
+      "5fs_br:no_fall_damage_jelly": {
+        "minecraft:damage_sensor": {
+          "triggers": {
+            "cause": "fall",
+            "deals_damage": "no"
+          }
+        }
+      }
+    },
+    "components": {
+      "minecraft:rideable": {
+        "seat_count": 2,
+        "interact_text": "action.interact.ride.boat",
+        "family_types": [
+          "player"
+        ],
+        "pull_in_entities": true,
+        "seats": [
+          {
+            "position": [
+              0,
+              0.1,
+              0
+            ],
+            "min_rider_count": 0,
+            "max_rider_count": 1
+          },
+          {
+            "position": [
+              0,
+              0.1,
+              0.2
+            ],
+            "min_rider_count": 2,
+            "max_rider_count": 2
+          },
+          {
+            "position": [
+              0,
+              0.1,
+              -0.6
+            ],
+            "min_rider_count": 2,
+            "max_rider_count": 2
+          }
+        ]
+      },
+      "minecraft:loot": {
+        "table": "loot_tables/entities/boat/maple_boat.json"
+      },
+      "minecraft:knockback_resistance": {
+        "value": 100
+      },
+      "minecraft:type_family": {
+        "family": [
+          "boat",
+          "inanimate",
+          "nolife"
+        ]
+      },
+      "minecraft:collision_box": {
+        "width": 1.4,
+        "height": 0.455
+      },
+      "minecraft:hurt_on_condition": {
+        "damage_conditions": [
+          {
+            "filters": {
+              "test": "in_lava",
+              "subject": "self",
+              "operator": "==",
+              "value": true
+            },
+            "cause": "lava",
+            "damage_per_tick": 4
+          }
+        ]
+      },
+      "minecraft:leashable": {},
+      "minecraft:movement": {
+        "value": 0.04
+      },
+      "minecraft:underwater_movement": {
+        "value": 0.07
+      },
+      "minecraft:physics": {},
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:buoyant": {
+        "base_buoyancy": 0.6,
+        "apply_gravity": true,
+        "simulate_waves": true,
+        "big_wave_speed": 5,
+        "liquid_blocks": [
+          "minecraft:water",
+          "minecraft:flowing_water"
+        ]
+      },
+      "minecraft:conditional_bandwidth_optimization": {
+        "default_values": {
+          "max_optimized_distance": 60,
+          "max_dropped_ticks": 20,
+          "use_motion_prediction_hints": true
+        },
+        "conditional_values": [
+          {
+            "max_optimized_distance": 0,
+            "max_dropped_ticks": 0,
+            "use_motion_prediction_hints": true,
+            "conditional_values": [
+              {
+                "test": "is_moving",
+                "subject": "self",
+                "operator": "==",
+                "value": true
+              }
+            ]
+          }
+        ]
+      },
+      "minecraft:inside_block_notifier": {
+        "block_list": [
+          {
+            "block": {
+              "name": "minecraft:bubble_column",
+              "states": {
+                "drag_down": true
+              }
+            },
+            "entered_block_event": {
+              "event": "minecraft:entered_bubble_column_down",
+              "target": "self"
+            },
+            "exited_block_event": {
+              "event": "minecraft:exited_bubble_column",
+              "target": "self"
+            }
+          },
+          {
+            "block": {
+              "name": "minecraft:bubble_column",
+              "states": {
+                "drag_down": false
+              }
+            },
+            "entered_block_event": {
+              "event": "minecraft:entered_bubble_column_up",
+              "target": "self"
+            },
+            "exited_block_event": {
+              "event": "minecraft:exited_bubble_column",
+              "target": "self"
+            }
+          }
+        ]
+      },
+      "minecraft:health": {
+        "value": 40
+      },
+      "minecraft:on_death": {
+        "event": "5fs_br:despawn",
+        "target": "self"
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "cause": "entity_attack",
+            "on_damage": {
+              "event": "5fs_br:despawn",
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  },
+                  {
+                    "test": "has_ability",
+                    "operator": "==",
+                    "subject": "other",
+                    "value": "invulnerable"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "cause": "contact",
+            "deals_damage": "yes"
+          },
+          {
+            "cause": "falling_block",
+            "deals_damage": "no"
+          },
+          {
+            "cause": "anvil",
+            "deals_damage": "no"
+          },
+          {
+            "cause": "suffocation",
+            "deals_damage": "no"
+          },
+          {
+            "cause": "soul_campfire",
+            "deals_damage": "no"
+          },
+          {
+            "cause": "drowning",
+            "deals_damage": "no"
+          },
+          {
+            "cause": "freezing",
+            "deals_damage": "no"
+          },
+          {
+            "cause": "magma",
+            "deals_damage": "no"
+          },
+          {
+            "cause": "fall",
+            "deals_damage": "no"
+          },
+          {
+            "cause": "campfire",
+            "deals_damage": "no"
+          },
+          {
+            "cause": "fireworks",
+            "deals_damage": "no"
+          },
+          {
+            "cause": "stalactite",
+            "deals_damage": "no"
+          },
+          {
+            "cause": "stalagmite",
+            "deals_damage": "no"
+          },
+          {
+            "cause": "lightning",
+            "deals_damage": "no"
+          },
+          {
+            "on_damage": {
+              "event": "5fs_br:play_animation",
+              "target": "self"
+            }
+          }
+        ]
+      },
+      "minecraft:variable_max_auto_step": {
+        "base_value": 0.5
+      },
+      "minecraft:nameable": {
+        "allow_name_tag_renaming": true,
+        "always_show": false
+      },
+      "minecraft:is_collidable": {}
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "add": {
+          "component_groups": [
+            "minecraft:can_ride",
+            "minecraft:floating"
+          ]
+        }
+      },
+      "minecraft:entered_bubble_column_down": {
+        "remove": {
+          "component_groups": [
+            "minecraft:floating"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "minecraft:above_bubble_column_down"
+          ]
+        }
+      },
+      "minecraft:entered_bubble_column_up": {
+        "remove": {
+          "component_groups": [
+            "minecraft:floating"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "minecraft:above_bubble_column_up"
+          ]
+        }
+      },
+      "minecraft:exited_bubble_column": {
+        "remove": {
+          "component_groups": [
+            "minecraft:above_bubble_column_down",
+            "minecraft:above_bubble_column_up"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "minecraft:floating",
+            "minecraft:can_ride"
+          ]
+        }
+      },
+      "minecraft:sink": {
+        "remove": {
+          "component_groups": [
+            "minecraft:floating",
+            "minecraft:can_ride",
+            "minecraft:above_bubble_column_down",
+            "minecraft:above_bubble_column_up"
+          ]
+        }
+      },
+      "5fs_br:despawn": {
+        "add": {
+          "component_groups": [
+            "5fs_br:despawn"
+          ]
+        }
+      },
+      "5fs_br:stay_afloat": {
+        "queue_command": {
+          "command": [
+            "tp @s ~~0.125~"
+          ]
+        }
+      },
+      "5fs_br:play_animation": {
+        "queue_command": {
+          "command": [
+            "playanimation @s animation.boat_geometry.hurt"
+          ]
+        }
+      },
+      "5fs_br:normal_scale": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:shrinkify",
+            "5fs_br:gigantify"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:normal_scale"
+          ]
+        }
+      },
+      "5fs_br:gigantify": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:shrinkify",
+            "5fs_br:normal_scale"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:gigantify"
+          ]
+        }
+      },
+      "5fs_br:shrinkify": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:gigantify",
+            "5fs_br:normal_scale"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:shrinkify"
+          ]
+        }
+      },
+      "5fs_br:no_fall_damage_jelly": {
+        "add": {
+          "component_groups": [
+            "5fs_br:no_fall_damage_jelly"
+          ]
+        }
+      },
+      "5fs_br:fall_damage_jelly": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:no_fall_damage_jelly"
+          ]
+        }
+      }
+    }
+  }
+}

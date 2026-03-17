@@ -1,0 +1,156 @@
+{
+    "format_version": "1.26.0",
+	"minecraft:block": {
+        "description": {
+            "identifier": "5fs_br:wall_torch",
+            "menu_category": {
+                "category": "items"
+            },
+            "traits": {
+                "minecraft:placement_position": {
+                    "enabled_states": [
+                        "minecraft:block_face"
+                    ]
+                }
+            },
+            "states": {
+                "5fs_br:torch_type": [
+                    "normal",
+                    "leaning"
+                ]
+            }
+        },
+        "permutations": [
+            {
+                "condition": "query.block_state('5fs_br:torch_type') == 'leaning'",
+                "components": {
+                    "minecraft:geometry": "geometry.leaning_wall_torch"
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:torch_type') == 'normal'",
+                "components": {
+                    "minecraft:geometry": "geometry.wall_torch"
+                }
+            },
+            {
+                "condition": "query.block_state('minecraft:block_face') == 'north'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            0,
+                            0
+                        ]
+                    },
+                    "tag:5fs_br:north": {}
+                }
+            },
+            {
+                "condition": "query.block_state('minecraft:block_face') == 'south'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            180,
+                            0
+                        ]
+                    },
+                    "tag:5fs_br:south": {}
+                }
+            },
+            {
+                "condition": "query.block_state('minecraft:block_face') == 'east'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            -90,
+                            0
+                        ]
+                    },
+                    "tag:5fs_br:east": {}
+                }
+            },
+            {
+                "condition": "query.block_state('minecraft:block_face') == 'west'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            90,
+                            0
+                        ]
+                    },
+                    "tag:5fs_br:west": {}
+                }
+            }
+        ],
+        "components": {
+            "minecraft:geometry": "geometry.wall_torch",
+            "5fs_br:wall_torch": {},
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "wall_torch",
+                    "render_method": "alpha_test_to_opaque",
+                    "ambient_occlusion": true,
+                    "face_dimming": true
+                },
+                "wall_torch_fire": {
+                    "texture": "wall_torch_fire",
+                    "render_method": "alpha_test_to_opaque",
+                    "ambient_occlusion": false,
+                    "face_dimming": false
+                }
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 0
+            },
+            "minecraft:placement_filter": {
+                "conditions": [
+                    {
+                        "allowed_faces": [
+                            "side"
+                        ]
+                    }
+                ]
+            },
+            "minecraft:light_emission": 15,
+            "minecraft:light_dampening": 0,
+            "minecraft:selection_box": {
+                "origin": [
+                    -3,
+                    1.5,
+                    0
+                ],
+                "size": [
+                    6,
+                    11,
+                    8
+                ]
+            },
+            "minecraft:collision_box": false,
+            "minecraft:liquid_detection": {
+                "detection_rules": [
+                    {
+                        "can_contain_liquid": true,
+                        "liquid_type": "water",
+                        "on_liquid_touches": "popped"
+                    }
+                ]
+            },
+            "minecraft:movable": {
+                "movement_type": "popped"
+            },
+            "minecraft:precipitation_interactions": {
+                "precipitation_behavior": "obstruct_rain"
+            },
+			"minecraft:connection_rule": {
+				"accepts_connections_from": "none"
+			}
+        }
+    }
+}

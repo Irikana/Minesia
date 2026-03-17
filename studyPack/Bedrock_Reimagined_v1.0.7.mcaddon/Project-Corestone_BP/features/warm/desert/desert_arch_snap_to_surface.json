@@ -1,0 +1,15 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:snap_to_surface_feature": {
+        "description": {
+            "identifier": "5fs_br:warm/desert/desert_arch_snap_to_surface"
+        },
+        "feature_to_snap": "5fs_br:warm/arches/weighted_desert_arch_feature",
+        "vertical_search_range": 128,
+        "surface": "floor",
+        "allowed_surface_blocks": [
+            "minecraft:sand",
+            "minecraft:sandstone"
+	]
+    }
+}

@@ -1,0 +1,31 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.chef_hat",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "head2",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "hat",
+					"parent": "head2",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{"origin": [-4.5, 30, -4.5], "size": [9, 3, 9], "inflate": 0.025, "uv": [2, 16]},
+						{"origin": [-5, 34.24322, -4.95249], "size": [10, 4, 10], "inflate": 0.5, "pivot": [0, 34.375, 0.25], "rotation": [-10, 0, 0], "uv": [0, 0]},
+						{"origin": [-4, 32, -4], "size": [8, 5, 8], "uv": [0, 29]}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,25 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:client_biome": {
+    "description": {
+      "identifier": "5fs_br:maple_forest"
+    },
+    "components": {
+      "minecraft:fog_appearance": {
+        "fog_identifier": "5fs_br:maple_forest"
+      },
+      "minecraft:sky_color": {
+        "sky_color": "#87CEEB"
+      },
+      "minecraft:water_appearance": {
+        "surface_color": "#146B3A"
+      },
+      "minecraft:foliage_appearance": {
+        "color": "#32CD32"
+      },
+      "minecraft:grass_appearance": {
+        "color": "#32CD32"
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:scatter_feature": {
+        "description": {
+            "identifier": "5fs_br:forest/scatter_red_tulip_feature"
+        },
+        "iterations": 50,
+        "x": {
+            "distribution": "uniform",
+            "extent": [
+                -1,
+                10
+            ]
+        },
+        "y": {
+            "distribution": "uniform",
+            "extent": [
+                1,
+                5
+            ]
+        },
+        "z": {
+            "distribution": "uniform",
+            "extent": [
+                -1,
+                9
+            ]
+        },
+        "coordinate_eval_order": "xyz",
+        "places_feature": "5fs_br:flowers/red_tulip"
+    }
+}

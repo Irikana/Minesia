@@ -1,0 +1,13 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:scatter_feature": {
+        "description": {
+            "identifier": "5fs_br:crystal_canyons/scatter_resonant_crystal_formation_1_feature"
+        },
+        "places_feature": "5fs_br:crystal_canyons/resonant_crystal_formation_1_feature",
+        "iterations": 1,
+        "x": -5,
+        "y": -1,
+        "z": -5
+    }
+}

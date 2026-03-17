@@ -1,0 +1,199 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.phoenix.root": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "animations": [
+                        "general_controller", "look_at_target_controller", "rotation_controller", "swoop_attack_controller", "ranged_attack_controller", "particles"
+                    ],
+                    "transitions": [
+                        {
+                            "death": "!q.is_alive"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "death": {
+                    "animations": [
+                        {
+                            "death_ground": "q.is_sheared"
+                        },
+                        {
+                            "death_flying": "!q.is_sheared"
+                        }
+                    ]
+                }
+            }
+        },
+        "controller.animation.phoenix.general": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "animations": [
+                        "idle"
+                    ],
+                    "transitions": [
+                        {
+                            "walking": "q.modified_move_speed >= 0.05"
+                        },
+                        {
+                            "flying": "!q.is_sheared && !q.is_chested"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "walking": {
+                    "animations": [
+                        "walking"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "q.modified_move_speed <= 0.05"
+                        },
+                        {
+                            "flying": "!q.is_sheared"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "flying": {
+                    "animations": [
+                        "flying"
+                    ],
+                    "transitions": [
+                        {
+                            "perching": "q.timer_flag_2"
+                        },
+                        {
+                            "planning": "!q.is_on_ground && v.flying_type == 'planning'"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "planning": {
+                    "animations": [
+                        "planning"
+                    ],
+                    "transitions": [
+                        {
+                            "perching": "q.timer_flag_2"
+                        },
+                        {
+                            "flying": "!q.is_on_ground && v.flying_type == 'flying'"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "perching": {
+                    "animations": [
+                        "perching"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "q.is_sheared && !q.timer_flag_2"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                }
+            }
+        },
+        "controller.animation.phoenix.look_at_target": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "look_at_target": "q.is_sheared"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "look_at_target": {
+                    "animations": [
+                        "look_at_target"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!q.is_sheared"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                }
+            }
+        },
+        "controller.animation.phoenix.rotation": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "rotation": "!q.is_sheared && !q.is_saddled && !q.timer_flag_2"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "rotation": {
+                    "animations": [
+                        "rotation"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "q.is_sheared || q.is_saddled || q.timer_flag_2"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                }
+            }
+        },
+        "controller.animation.phoenix.swoop_attack": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "swoop_attack": "v.attack_time > 0.0"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "swoop_attack": {
+                    "animations": [
+                        "swoop_attack"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "q.all_animations_finished"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                }
+            }
+        },
+        "controller.animation.phoenix.ranged_attack": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "ranged_attack": "q.is_saddled"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "ranged_attack": {
+                    "animations": [
+                        "ranged_attack"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!q.is_saddled"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                }
+            }
+        }
+    }
+}

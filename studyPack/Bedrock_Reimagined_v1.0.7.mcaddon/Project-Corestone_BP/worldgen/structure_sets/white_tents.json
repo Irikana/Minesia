@@ -1,0 +1,21 @@
+{
+  "format_version": "1.21.20",
+  "minecraft:structure_set": {
+    "description": {
+      "identifier": "5fs_br:white_tents"
+    },
+    "placement": {
+      "type": "minecraft:random_spread",
+      "salt": 83468317,
+      "separation": 22,
+      "spacing": 58,
+      "spread_type": "linear"
+    },
+    "structures": [
+      {
+        "structure": "5fs_br:white_tents",
+        "weight": 1
+      }
+    ]
+  }
+}

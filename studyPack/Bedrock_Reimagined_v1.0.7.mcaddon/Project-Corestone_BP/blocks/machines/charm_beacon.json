@@ -1,0 +1,76 @@
+{
+    "format_version": "1.26.0",
+	"minecraft:block": {
+        "description": {
+            "identifier": "5fs_br:charm_beacon",
+            "menu_category": {
+                "category": "items"
+            },
+            "states": {
+                "5fs_br:active": [
+                    false,
+                    true
+                ]
+            }
+        },
+        "components": {
+            "minecraft:geometry": "geometry.charm_beacon",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "obsidian_glass",
+                    "render_method": "blend"
+                },
+                "quartz": {
+                    "texture": "charm_beacon_quartz",
+                    "render_method": "opaque"
+                },
+                "iron": {
+                    "texture": "charm_beacon_iron",
+                    "render_method": "opaque"
+                }
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 16.6667,
+                "item_specific_speeds": [
+                    {
+                        "item": {
+                            "tags": "query.all_tags('minecraft:is_pickaxe') && !query.any_tag('minecraft:wooden_tier')"
+                        },
+                        "destroy_speed": 5
+                    }
+                ]
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 6
+            },
+            "minecraft:light_dampening": 15,
+            "minecraft:map_color": "#4E4E4E",
+            "minecraft:tick": {
+                "looping": true,
+                "interval_range": [
+                    1,
+                    1
+                ]
+            },
+            "minecraft:movable": {
+                "movement_type": "immovable"
+            },
+            "5fs_br:charm_beacon": {},
+            "tag:minecraft:is_pickaxe_item_destructible": {}
+        },
+        "permutations": [
+            {
+                "condition": "!q.block_state('5fs_br:active')",
+                "components": {
+                    "minecraft:light_emission": 5
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:active')",
+                "components": {
+                    "minecraft:light_emission": 15
+                }
+            }
+        ]
+    }
+}

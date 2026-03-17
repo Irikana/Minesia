@@ -1,0 +1,66 @@
+{
+    "format_version": "1.21.60",
+    "minecraft:single_block_feature": {
+        "description": {
+            "identifier": "5fs_br:redwood/redwood_leaf_litter"
+        },
+        "places_block": [
+            {
+                "block": {
+                    "name": "5fs_br:redwood_leaf_litter",
+                    "states": {
+                        "5fs_br:growth": 0
+                    }
+                },
+                "weight": 25
+            },
+            {
+                "block": {
+                    "name": "5fs_br:redwood_leaf_litter",
+                    "states": {
+                        "5fs_br:growth": 1
+                    }
+                },
+                "weight": 25
+            },
+            {
+                "block": {
+                    "name": "5fs_br:redwood_leaf_litter",
+                    "states": {
+                        "5fs_br:growth": 2
+                    }
+                },
+                "weight": 25
+            },
+            {
+                "block": {
+                    "name": "5fs_br:redwood_leaf_litter",
+                    "states": {
+                        "5fs_br:growth": 3
+                    }
+                },
+                "weight": 25
+            }
+        ],
+        "enforce_placement_rules": false,
+        "enforce_survivability_rules": false,
+        "may_replace": [
+            "minecraft:air"
+        ],
+        "randomize_rotation": true,
+        "may_attach_to": {
+            "min_sides_must_attach": 1,
+            "bottom": [
+                "minecraft:grass_block",
+	        	"minecraft:dirt",
+                "minecraft:podzol"
+            ]
+        },
+        "may_not_attach_to": {
+            "bottom": [
+                "minecraft:gravel",
+                "minecraft:sand"
+            ]
+        }
+    }
+}

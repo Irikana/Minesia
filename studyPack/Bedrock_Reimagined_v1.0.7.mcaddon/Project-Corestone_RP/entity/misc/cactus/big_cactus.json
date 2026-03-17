@@ -1,0 +1,49 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "5fs_br:large_cactus",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"cactus_0": "textures/blocks/cactus/large_cactus_0",
+				"cactus_1": "textures/blocks/cactus/large_cactus_1",
+				"cactus_2": "textures/blocks/cactus/large_cactus_2"
+			},
+			"geometry": {
+				"default": "geometry.large_cactus"
+			},
+			"animations": {
+                "north": "animation.5fs_br.tile_entity.north",
+                "south": "animation.5fs_br.tile_entity.south",
+                "west": "animation.5fs_br.tile_entity.west",
+                "east": "animation.5fs_br.tile_entity.east"
+			},
+			"scripts": {
+				"pre_animation": [
+					"v.variant = q.property('5fs_br:variant');",
+					"v.rotation = q.property('5fs_br:rotation');",
+					"v.type = v.variant == 0 ? 0 : v.variant == 1 ? 1 : v.variant == 2 ? 2 : 0;"
+				],
+				"animate": [
+					{
+                        "north": "v.rotation == 'north'"
+                    },
+                    {
+                        "south": "v.rotation == 'south'"
+                    },
+                    {
+                        "west": "v.rotation == 'west'"
+                    },
+                    {
+                        "east": "v.rotation == 'east'"
+                    }
+				]
+			},
+			"render_controllers": [
+				"controller.render.cactus"
+			]
+		}
+	}
+}

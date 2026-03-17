@@ -1,0 +1,17 @@
+{
+    "format_version": "1.21.80",
+    "minecraft:ore_feature": {
+        "description": {
+            "identifier": "5fs_br:warm/limestone_feature"
+        },
+        "count": 60,
+        "replace_rules": [
+            {
+                "places_block": "5fs_br:limestone",
+                "may_replace": [
+                    "minecraft:stone"
+                ]
+            }
+        ]
+    }
+}

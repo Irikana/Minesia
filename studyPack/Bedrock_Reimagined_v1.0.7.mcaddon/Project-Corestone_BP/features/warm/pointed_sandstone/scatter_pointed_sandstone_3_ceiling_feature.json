@@ -1,0 +1,13 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:scatter_feature": {
+        "description": {
+            "identifier": "5fs_br:warm/pointed_sandstone/scatter_pointed_sandstone_3_ceiling_feature"
+        },
+        "places_feature": "5fs_br:warm/pointed_sandstone/pointed_sandstone_3_ceiling_feature",
+        "iterations": 100,
+        "x": 0,
+        "y": -2,
+        "z": 0
+    }
+}

@@ -1,0 +1,41 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "5fs_br:pink_crystalline_glazed_terracotta"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "CCC",
+      "STS",
+      "CCC"
+    ],
+    "key": {
+      "C": {
+        "item": "minecraft:glass"
+      },
+      "S": {
+        "item": "5fs_br:raw_crystalline_shard"
+      },
+      "T": {
+        "item": "minecraft:pink_glazed_terracotta"
+      }
+    },
+    "result": {
+      "item": "5fs_br:pink_crystalline_glazed_terracotta"
+    },
+    "unlock": [
+      {
+        "item": "minecraft:glass"
+      },
+      {
+        "item": "5fs_br:raw_crystalline_shard"
+      },
+      {
+        "item": "minecraft:pink_glazed_terracotta"
+      }
+    ]
+  }
+}

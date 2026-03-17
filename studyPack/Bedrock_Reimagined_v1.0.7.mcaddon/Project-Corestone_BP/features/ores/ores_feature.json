@@ -1,0 +1,44 @@
+{
+    "format_version": "1.21.60",
+    "minecraft:single_block_feature": {
+        "description": {
+            "identifier": "5fs_br:ores/ores_feature"
+        },
+        "places_block": [
+            {
+                "block": {
+                    "name": "minecraft:coal_ore"
+                    
+                },
+                "weight": 90
+            },
+            {
+                "block": {
+                    "name": "minecraft:coal_block"
+                },
+                "weight": 20
+            },
+            {
+                "block": {
+                    "name": "minecraft:iron_ore"
+                    
+                },
+                "weight": 30
+            },
+            {
+                "block": {
+                    "name": "minecraft:copper_ore"
+                    
+                },
+                "weight": 60
+            }
+            
+        ],
+        "enforce_placement_rules": false,
+        "enforce_survivability_rules": false,
+        "may_replace": [
+            "minecraft:stone",
+            "minecraft:andesite"
+        ]
+    }
+}

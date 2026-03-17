@@ -1,0 +1,23 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:feature_rules": {
+        "description": {
+            "identifier": "5fs_br:birch_forest_flower_feature",
+            "places_feature": "5fs_br:flowers/scatter_birch_forest_flower_feature"
+        },
+        "conditions": {
+            "placement_pass": "after_surface_pass",
+            "minecraft:biome_filter": {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "birch"
+            }
+        },
+        "distribution": {
+            "iterations": 3,
+            "x": 0,
+            "y": "query.heightmap(variable.worldx, variable.worldz)",
+            "z": 0
+        }
+    }
+}

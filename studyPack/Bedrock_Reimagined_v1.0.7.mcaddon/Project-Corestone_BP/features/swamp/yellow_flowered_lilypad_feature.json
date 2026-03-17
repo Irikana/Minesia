@@ -1,0 +1,21 @@
+{
+    "format_version": "1.21.60",
+    "minecraft:single_block_feature": {
+        "description": {
+            "identifier": "5fs_br:swamp/yellow_flowered_lilypad_feature"
+        },
+        "places_block": "5fs_br:yellow_flowered_lilypad",
+        "enforce_placement_rules": false,
+        "enforce_survivability_rules": false,
+        "may_replace": [
+            "minecraft:air"
+        ],
+        "randomize_rotation": true,
+        "may_attach_to": {
+            "min_sides_must_attach": 1,
+            "bottom": [
+                "minecraft:water"
+            ]
+        }
+    }
+}

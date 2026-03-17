@@ -1,0 +1,1148 @@
+{
+  "namespace": "hud",
+  "new_feedback_elements": {
+    "type": "panel",
+    "$update_string": "data",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "bottom": {
+          "type": "panel",
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "controls": [
+            {
+              "control_image_one": {
+                "type": "panel",
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "size": [
+                  "100%",
+                  "100%"
+                ],
+                "$multiplier_preset": 0.01,
+                "$min": 1.0,
+                "use_anchored_offset": true,
+                "propagate_alpha": true,
+                "property_bag": {
+                  "#size_binding_x": 0.0,
+                  "#size_binding_y": 0.0,
+                  "#anchored_offset_value_x": 0.0,
+                  "#anchored_offset_value_y": 0.0,
+                  "#multiplier_preset": "$multiplier_preset"
+                },
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "data_control",
+                    "source_property_name": "(#text11)",
+                    "target_property_name": "#text11"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "($min * (#text11 - ':'))",
+                    "target_property_name": "#value_1"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "data_control",
+                    "source_property_name": "(#text12)",
+                    "target_property_name": "#text12"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "($min * (#text12 - ':'))",
+                    "target_property_name": "#value_2"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "data_control",
+                    "source_property_name": "(#text13)",
+                    "target_property_name": "#text13"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "($min * (#text13 - ':'))",
+                    "target_property_name": "#value_3"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "data_control",
+                    "source_property_name": "(#text14)",
+                    "target_property_name": "#text14"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "($min * (#text14 - ':'))",
+                    "target_property_name": "#value_4"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(#value_1 * #multiplier_preset)",
+                    "target_property_name": "#size_binding_x"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(#value_2 * #multiplier_preset)",
+                    "target_property_name": "#anchored_offset_value_y"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(#value_3 * #multiplier_preset)",
+                    "target_property_name": "#anchored_offset_value_x"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(#value_4 * #multiplier_preset)",
+                    "target_property_name": "#alpha"
+                  }
+                ],
+                "controls": [
+                  {
+                    "hunger_and_drink@bars_commons.hunger_and_drink_panel": {}
+                  }
+                ]
+              }
+            },
+            {
+              "control_image_two": {
+                "type": "panel",
+                "anchor_from": "bottom_right",
+                "anchor_to": "bottom_right",
+                "size": [
+                  "100%",
+                  "100%"
+                ],
+                "$multiplier_preset": 0.01,
+                "$min": 1.0,
+                "use_anchored_offset": true,
+                "propagate_alpha": true,
+                "property_bag": {
+                  "#size_binding_x": 0.0,
+                  "#size_binding_y": 0.0,
+                  "#anchored_offset_value_x": 0.0,
+                  "#anchored_offset_value_y": 0.0,
+                  "#multiplier_preset": "$multiplier_preset"
+                },
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "data_control",
+                    "source_property_name": "(#text11)",
+                    "target_property_name": "#text11"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "($min * (#text11 - ':'))",
+                    "target_property_name": "#value_1"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "data_control",
+                    "source_property_name": "(#text12)",
+                    "target_property_name": "#text12"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "($min * (#text12 - ':'))",
+                    "target_property_name": "#value_2"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "data_control",
+                    "source_property_name": "(#text13)",
+                    "target_property_name": "#text13"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "($min * (#text13 - ':'))",
+                    "target_property_name": "#value_3"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "data_control",
+                    "source_property_name": "(#text14)",
+                    "target_property_name": "#text14"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "($min * (#text14 - ':'))",
+                    "target_property_name": "#value_4"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(#value_1 * #multiplier_preset)",
+                    "target_property_name": "#size_binding_x"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(#value_2 * #multiplier_preset)",
+                    "target_property_name": "#anchored_offset_value_y"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(#value_3 * #multiplier_preset)",
+                    "target_property_name": "#anchored_offset_value_x"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(#value_4 * #multiplier_preset)",
+                    "target_property_name": "#alpha"
+                  }
+                ],
+                "controls": [
+                  {
+                    "mana_and_life_panel@bars_commons.mana_and_life_panel": {}
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "data_control": {
+          "type": "panel",
+          "size": [
+            0,
+            0
+          ],
+          "property_bag": {
+            "#preserved_text": "",
+            "#text1": "",
+            "#text2": "",
+            "#text3": "",
+            "#text4": "",
+            "#text5": "",
+            "#text6": "",
+            "#text7": "",
+            "#text8": "",
+            "#text9": "",
+            "#text10": "",
+            "#text11": "",
+            "#text12": "",
+            "#text13": "",
+            "#text14": "",
+            "#split_seperator": ",",
+            "#value_life": 0.0
+          },
+          "$min": 1.0,
+          "$update_string": "data",
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string"
+            },
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_name_override": "#preserved_text",
+              "binding_condition": "visibility_changed"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not (#hud_title_text_string = #preserved_text) and not ((#hud_title_text_string - $update_string) = #hud_title_text_string))",
+              "target_property_name": "#visible"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "( #preserved_text )",
+              "target_property_name": "#text_0"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "( #text_0 - $update_string)",
+              "target_property_name": "#text1"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "( #text_0 - ($update_string + #text1 + #split_seperator))",
+              "target_property_name": "#text2"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "( #text_0 - ($update_string + #text1 + #split_seperator + #text2 + #split_seperator))",
+              "target_property_name": "#text3"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "( #text_0 - ($update_string + #text1 + #split_seperator + #text2 + #split_seperator + #text3 + #split_seperator))",
+              "target_property_name": "#text4"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "( #text_0 - ($update_string + #text1 + #split_seperator + #text2 + #split_seperator + #text3 + #split_seperator + #text4 + #split_seperator))",
+              "target_property_name": "#text5"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "( #text_0 - ($update_string + #text1 + #split_seperator + #text2 + #split_seperator + #text3 + #split_seperator + #text4 + #split_seperator + #text5 + #split_seperator))",
+              "target_property_name": "#text6"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "( #text_0 - ($update_string + #text1 + #split_seperator + #text2 + #split_seperator + #text3 + #split_seperator + #text4 + #split_seperator + #text5 + #split_seperator + #text6 + #split_seperator))",
+              "target_property_name": "#text7"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "( #text_0 - ($update_string + #text1 + #split_seperator + #text2 + #split_seperator + #text3 + #split_seperator + #text4 + #split_seperator + #text5 + #split_seperator + #text6 + #split_seperator + #text7 + #split_seperator))",
+              "target_property_name": "#text8"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "( #text_0 - ($update_string + #text1 + #split_seperator + #text2 + #split_seperator + #text3 + #split_seperator + #text4 + #split_seperator + #text5 + #split_seperator + #text6 + #split_seperator + #text7 + #split_seperator + #text8 + #split_seperator))",
+              "target_property_name": "#text9"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "( #text_0 - ($update_string + #text1 + #split_seperator + #text2 + #split_seperator + #text3 + #split_seperator + #text4 + #split_seperator + #text5 + #split_seperator + #text6 + #split_seperator + #text7 + #split_seperator + #text8 + #split_seperator + #text9 + #split_seperator))",
+              "target_property_name": "#text10"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "( #text_0 - ($update_string + #text1 + #split_seperator + #text2 + #split_seperator + #text3 + #split_seperator + #text4 + #split_seperator + #text5 + #split_seperator + #text6 + #split_seperator + #text7 + #split_seperator + #text8 + #split_seperator + #text9 + #split_seperator + #text10 + #split_seperator))",
+              "target_property_name": "#text11"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "( #text_0 - ($update_string + #text1 + #split_seperator + #text2 + #split_seperator + #text3 + #split_seperator + #text4 + #split_seperator + #text5 + #split_seperator + #text6 + #split_seperator + #text7 + #split_seperator + #text8 + #split_seperator + #text9 + #split_seperator + #text10 + #split_seperator + #text11 + #split_seperator))",
+              "target_property_name": "#text12"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "( #text_0 - ($update_string + #text1 + #split_seperator + #text2 + #split_seperator + #text3 + #split_seperator + #text4 + #split_seperator + #text5 + #split_seperator + #text6 + #split_seperator + #text7 + #split_seperator + #text8 + #split_seperator + #text9 + #split_seperator + #text10 + #split_seperator + #text11 + #split_seperator + #text12 + #split_seperator))",
+              "target_property_name": "#text13"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "( #text_0 - ($update_string + #text1 + #split_seperator + #text2 + #split_seperator + #text3 + #split_seperator + #text4 + #split_seperator + #text5 + #split_seperator + #text6 + #split_seperator + #text7 + #split_seperator + #text8 + #split_seperator + #text9 + #split_seperator + #text10 + #split_seperator + #text11 + #split_seperator + #text12 + #split_seperator + #text13 + #split_seperator))",
+              "target_property_name": "#text14"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "($min * (#text3 - ','))",
+              "target_property_name": "#value_life"
+            }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#show_survival_ui",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+  "hud_title_text": {
+    "$update_string": "inspecting:",
+    "$title_txt": "$title_text",
+    "visible": "(($title_txt - $update_string) = $title_txt)",
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "offset": [
+      0,
+      -19
+    ],
+    "layer": 1,
+    "alpha": "@hud.anim_title_text_alpha_in",
+    "propagate_alpha": true,
+    "controls": [
+      {
+        "title_frame": {
+          "type": "panel",
+          "size": [
+            "100%",
+            "100%cm"
+          ],
+          "controls": [
+            {
+              "title": {
+                "type": "label",
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "color": "$title_command_text_color",
+                "enable_profanity_filter": true,
+                "text": "#text",
+                "layer": 31,
+                "localize": false,
+                "font_size": "extra_large",
+                "variables": [
+                  {
+                    "requires": "(not $title_shadow)",
+                    "$show_shadow": false
+                  },
+                  {
+                    "requires": "$title_shadow",
+                    "$show_shadow": true
+                  }
+                ],
+                "shadow": "$show_shadow",
+                "text_alignment": "center",
+                "offset": [
+                  0,
+                  6
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#hud_title_text_string",
+                    "binding_name_override": "#text",
+                    "binding_type": "global"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(((#text - 'data') = #text) and ((#text - 'fake_actionbar:') = #text) and ((#text - 'minimap:') = #text))",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "subtitle_frame": {
+          "type": "panel",
+          "size": [
+            "100%",
+            "100%cm"
+          ],
+          "controls": [
+            {
+              "subtitle": {
+                "type": "label",
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "color": "$title_command_text_color",
+                "enable_profanity_filter": true,
+                "text": "#text",
+                "layer": 31,
+                // "alpha":0.0,
+                "localize": false,
+                "font_size": "large",
+                "variables": [
+                  {
+                    "requires": "$subtitle_initially_visible",
+                    "$anim_type": 1.0
+                  },
+                  {
+                    "requires": "(not $subtitle_initially_visible)",
+                    "$anim_type": "@hud.anim_subtitle_text_alpha_in"
+                  },
+                  {
+                    "requires": "(not $title_shadow)",
+                    "$show_shadow": false
+                  },
+                  {
+                    "requires": "$title_shadow",
+                    "$show_shadow": true
+                  }
+                ],
+                "shadow": "$show_shadow",
+                "alpha": 0.0,
+                "text_alignment": "center",
+                "offset": [
+                  1,
+                  19
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#hud_subtitle_text_string",
+                    "binding_name_override": "#text",
+                    "binding_type": "global"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "root_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          // { // just for debugging
+          //   "item_rend":{
+          //     "type": "custom",
+          //     "renderer": "inventory_item_renderer",
+          //     "size": [
+          //         "42%",
+          //         "42%"
+          //     ],
+          //     "anchor_from": "center",
+          //     "anchor_to": "center",
+          //     "layer": 10,
+          //     "$bag_data|default": {
+          //         "#item_id_aux": 43515904
+          //     },
+          //     "property_bag": "$bag_data"
+          //   }
+          // },
+          {
+            "new_feedback_elements@hud.new_feedback_elements": {}
+          },
+          {
+            "inspecting_display_hud@waila_hud.inspecting_display_hud": {}
+          },
+          {
+            "fake_actionbar@hud.fake_actionbar": {}
+          },
+          {
+            "minimap_display_hud@hud.minimap_display_hud": {}
+          }
+        ]
+      }
+    ]
+  },
+  "root_panel/hud_actionbar_text_area": {
+    "ignored": true
+  },
+  "hud_actionbar_text": {
+    "ignored": true
+  },
+  "minimap_display_hud": {
+    "type": "panel",
+    "size": [
+      90,
+      90
+    ],
+    "offset": [
+      -5,
+      5
+    ],
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "controls": [
+      {
+        "minimap_stack": {
+          "type": "stack_panel",
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "size": [
+            "100%",
+            "100%c"
+          ],
+          "controls": [
+            {
+              "minimap_display_hud": {
+                "type": "panel",
+                "size": [
+                  "100%",
+                  "100%c"
+                ],
+                "factory": {
+                  "name": "hud_actionbar_text_factory",
+                  "control_ids": {
+                    "hud_actionbar_text": "minimap@hud.minimap_full_display"
+                  }
+                }
+              }
+            },
+            {
+              "coordinates": {
+                "type": "image",
+                "texture": "textures/gui/hud/minimap_hud_background",
+                "size": [
+                  "100%",
+                  18
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#player_position_visible",
+                    "binding_name_override": "#visible",
+                    "binding_condition": "always",
+                    "binding_type": "global"
+                  }
+                ],
+                "controls": [
+                  {
+                    "player_position@hud.player_position": {
+                      "offset": [
+                        0,
+                        -3.5
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "minimap_full_display": {
+    "type": "stack_panel",
+    "$atext": "$actionbar_text",
+    "visible": "(($atext - '§h§i§d§e') = $atext)",
+    "$blocks_label": "(%.12528s * $atext)",
+    "$entities_label": "(($atext) - (%.12528s * $atext))",
+    "size": [
+      90,
+      "100%c"
+    ],
+    "controls": [
+      {
+        "display": {
+          "type": "image",
+          "texture": "textures/gui/hud/minimap_hud_background",
+          "size": [
+            "100%",
+            90
+          ],
+          "controls": [
+            {
+              "blocks_map_label@blocks_map_label": {
+                "layer": 100,
+                "offset": [
+                  0,
+                  -1
+                ]
+              }
+            },
+            {
+              "blocks_map_label@blocks_map_label": {
+                "layer": 110,
+                "offset": [
+                  1,
+                  -1
+                ]
+              }
+            },
+            {
+              "entities_map_label@entities_map_label": {
+                "layer": 115,
+                "offset": [
+                  -18,
+                  -44
+                ]
+              }
+            },
+            {
+              "player_icon@player_indicator": {
+                "$player_rotation|default": "minimap_player_nn",
+                "variables": [
+                  {
+                    "requires": "(not (($atext - '§m§m§p§n§n') = $atext))",
+                    "$player_rotation": "minimap_player_nn"
+                  },
+                  {
+                    "requires": "(not (($atext - '§m§m§p§n§e') = $atext))",
+                    "$player_rotation": "minimap_player_ne"
+                  },
+                  {
+                    "requires": "(not (($atext - '§m§m§p§e§e') = $atext))",
+                    "$player_rotation": "minimap_player_ee"
+                  },
+                  {
+                    "requires": "(not (($atext - '§m§m§p§s§e') = $atext))",
+                    "$player_rotation": "minimap_player_se"
+                  },
+                  {
+                    "requires": "(not (($atext - '§m§m§p§s§s') = $atext))",
+                    "$player_rotation": "minimap_player_ss"
+                  },
+                  {
+                    "requires": "(not (($atext - '§m§m§p§s§w') = $atext))",
+                    "$player_rotation": "minimap_player_sw"
+                  },
+                  {
+                    "requires": "(not (($atext - '§m§m§p§w§w') = $atext))",
+                    "$player_rotation": "minimap_player_ww"
+                  },
+                  {
+                    "requires": "(not (($atext - '§m§m§p§n§w') = $atext))",
+                    "$player_rotation": "minimap_player_nw"
+                  }
+                ]
+              }
+            },
+            {
+              "north_indicator": {
+                "type": "image",
+                "layer": 150,
+                "texture": "textures/gui/hud/minimap_hud_north",
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "offset": [
+                  0,
+                  -3.5
+                ],
+                "size": [
+                  10,
+                  10
+                ]
+              }
+            },
+            {
+              "east_indicator": {
+                "type": "image",
+                "layer": 150,
+                "texture": "textures/gui/hud/minimap_hud_east",
+                "anchor_from": "right_middle",
+                "anchor_to": "right_middle",
+                "offset": [
+                  3.5,
+                  0
+                ],
+                "size": [
+                  10,
+                  10
+                ]
+              }
+            },
+            {
+              "south_indicator": {
+                "type": "image",
+                "layer": 150,
+                "texture": "textures/gui/hud/minimap_hud_south",
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "offset": [
+                  0,
+                  3.5
+                ],
+                "size": [
+                  10,
+                  10
+                ]
+              }
+            },
+            {
+              "west_indicator": {
+                "type": "image",
+                "layer": 150,
+                "texture": "textures/gui/hud/minimap_hud_west",
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "offset": [
+                  -3.5,
+                  0
+                ],
+                "size": [
+                  10,
+                  10
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "padding": {
+          "type": "panel",
+          "size": [
+            0,
+            5
+          ]
+        }
+      }
+    ]
+  },
+  "blocks_map_label": {
+    "type": "label",
+    "text": "$blocks_label",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "font_scale_factor": 0.15,
+    "font_size": "small",
+    "line_padding": 6,
+    "localize": true
+  },
+  "entities_map_label": {
+    "type": "label",
+    "text": "$entities_label",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "font_scale_factor": 1.25,
+    "font_size": "small",
+    "line_padding": 6,
+    "localize": true
+  },
+  "player_indicator": {
+    "type": "image",
+    "layer": 120,
+    "texture": "('textures/gui/hud/minimap_player/' + $player_rotation)",
+    "size": [
+      9,
+      9
+    ]
+  },
+  "fake_actionbar": {
+  "type": "panel",
+  "size": ["100%", "100%"],
+  "controls": [
+    {
+      "fake_actionbar_data_control": {
+        "type": "panel",
+        "size": [0, 0],
+        "$update_string": "fake_actionbar:",
+        "property_bag": {
+          "#preserved_fake_actionbar": ""
+        },
+        "bindings": [
+          {
+            "binding_name": "#hud_title_text_string"
+          },
+          {
+            "binding_name": "#hud_title_text_string",
+            "binding_name_override": "#preserved_fake_actionbar",
+            "binding_condition": "visibility_changed"
+          },
+          {
+            "binding_type": "view",
+            "source_property_name": "(not (#hud_title_text_string = #preserved_fake_actionbar) and not ((#hud_title_text_string - $update_string) = #hud_title_text_string))",
+            "target_property_name": "#visible"
+          }
+        ]
+      }
+    },
+    {
+      "actionbar": {
+        "type": "image",
+        "size": ["100%c + 12px", "100%c + 5px"],
+        "offset": [0, "50%-68px"],
+        "alpha": 0.3,
+        "texture": "textures/ui/hud_tip_text_background",
+        "layer": 25,
+        "controls": [
+          {
+            "actionbar_message": {
+              "type": "label",
+              "anchor_from": "center",
+              "anchor_to": "center",
+              "color": "$tool_tip_text",
+              "enable_profanity_filter": true,
+              "layer": 31,
+              "text": "#text",
+              "shadow": true,
+              "localize": false,
+              "bindings": [
+                {
+                  "binding_type": "view",
+                  "source_control_name": "fake_actionbar_data_control",
+                  "source_property_name": "(#preserved_fake_actionbar - 'fake_actionbar:')",
+                  "target_property_name": "#text"
+                }
+              ]
+            }
+          }
+        ],
+        "bindings": [
+          {
+            "binding_type": "view",
+            "source_control_name": "fake_actionbar_data_control",
+            "source_property_name": "(not ((#preserved_fake_actionbar - 'fake_actionbar:') = ''))",
+            "target_property_name": "#visible"
+          }
+        ]
+      }
+    }
+  ]
+},
+  "boss_health_panel": {
+    "type": "panel",
+    "size": [
+      182,
+      50
+    ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "$progress_bar_collection": "boss_bars",
+    "controls": [
+      {
+        "vanilla_bossbar": {
+          "type": "panel",
+          "controls": [
+            {
+              "boss_name@boss_name_panel": {}
+            },
+            {
+              "progress_bar_for_collections@common.progress_bar_for_collections": {
+                "offset": [
+                  0,
+                  10
+                ]
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#bossName",
+              "binding_type": "collection",
+              "binding_collection_name": "boss_bars"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(((#bossName - $ender_boss_string) = #bossName) and ((#bossName - $wither_boss_string) = #bossName) and ((#bossName - $crystalline_boss_string) = #bossName) and ((#bossName - $giant_jungle_boss_string) = #bossName) and ((#bossName - $mummy_boss_string) = #bossName) = #bossName))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "ender_bossbar@boss_commons.ender_bossbar": {
+          "offset": [
+            0,
+            -16
+          ],
+          "layer": 2,
+          "bindings": [
+            {
+              "binding_name": "#bossName",
+              "binding_type": "collection",
+              "binding_collection_name": "boss_bars"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((#bossName - $ender_boss_string) = #bossName))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "wither_bossbar@boss_commons.wither_bossbar": {
+          "offset": [
+            0,
+            -16
+          ],
+          "layer": 2,
+          "bindings": [
+            {
+              "binding_name": "#bossName",
+              "binding_type": "collection",
+              "binding_collection_name": "boss_bars"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((#bossName - $wither_boss_string) = #bossName))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "crystalline_bossbar@boss_commons.crystalline_bossbar": {
+          "offset": [
+            0,
+            -16
+          ],
+          "layer": 2,
+          "bindings": [
+            {
+              "binding_name": "#bossName",
+              "binding_type": "collection",
+              "binding_collection_name": "boss_bars"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((#bossName - $crystalline_boss_string) = #bossName))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "mummy_bossbar@boss_commons.mummy_bossbar": {
+          "offset": [
+            0,
+            -16
+          ],
+          "layer": 2,
+          "bindings": [
+            {
+              "binding_name": "#bossName",
+              "binding_type": "collection",
+              "binding_collection_name": "boss_bars"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((#bossName - $mummy_boss_string) = #bossName))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "giant_jungle_bossbar@boss_commons.giant_jungle_bossbar": {
+          "offset": [
+            0,
+            -16
+          ],
+          "layer": 2,
+          "bindings": [
+            {
+              "binding_name": "#bossName",
+              "binding_type": "collection",
+              "binding_collection_name": "boss_bars"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((#bossName - $giant_jungle_boss_string) = #bossName))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "iris_bossbar@boss_commons.iris_bossbar": {
+          "offset": [
+            0,
+            -16
+          ],
+          "layer": 2,
+          "bindings": [
+            {
+              "binding_name": "#bossName",
+              "binding_type": "collection",
+              "binding_collection_name": "boss_bars"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((#bossName - $iris_boss_string) = #bossName))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "pirate_captain_bossbar@boss_commons.pirate_captain_bossbar": {
+          "offset": [
+            0,
+            -16
+          ],
+          "layer": 2,
+          "bindings": [
+            {
+              "binding_name": "#bossName",
+              "binding_type": "collection",
+              "binding_collection_name": "boss_bars"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((#bossName - $pirate_captain_boss_string) = #bossName))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "redwood_sentinel_bossbar@boss_commons.redwood_sentinel_bossbar": {
+          "offset": [
+            0,
+            -16
+          ],
+          "layer": 2,
+          "bindings": [
+            {
+              "binding_name": "#bossName",
+              "binding_type": "collection",
+              "binding_collection_name": "boss_bars"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((#bossName - $redwood_sentinel_boss_string) = #bossName))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#bar_visible",
+        "binding_type": "collection",
+        "binding_collection_name": "boss_bars",
+        "binding_name_override": "#visible"
+      },
+      {
+        "binding_name": "#bossName",
+        "binding_type": "collection",
+        "binding_collection_name": "boss_bars"
+      }
+    ]
+  },
+  "root_panel/chat_stack": {
+    "controls": [
+      {
+        "paper_doll_padding": {
+          "type": "panel",
+          "size": [
+            "100%",
+            50
+          ],
+          "bindings": [
+            {
+              "binding_name": "#paper_doll_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "non_centered_gui_padding": {
+          "type": "panel",
+          "size": [
+            "100%",
+            32
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_visible_not_centered",
+              "binding_name_override": "#visible",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "number_of_days_played@hud.number_of_days_played": {}
+      },
+      {
+        "game_tip@game_tip.game_tip_chat_stack_factory": {
+          "size": [
+            "100%",
+            "100%c"
+          ]
+        }
+      },
+      {
+        "chat_panel@hud.chat_panel": {}
+      }
+    ]
+  },
+  "player_position": {
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "type": "image",
+    "alpha": 0,
+    "bindings": []
+  },
+  "player_position/player_position_text": {
+    "offset": [
+      0,
+      -1.5
+    ],
+    "font_scale_factor": 0.8,
+    "text_alignment": "center"
+  },
+  "root_panel/mob_effects_renderer": {
+    "offset": [
+      0,
+      54
+    ]
+  }
+}

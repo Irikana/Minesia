@@ -1,0 +1,35 @@
+{
+    "format_version": "1.26.0",
+	"minecraft:block": {
+        "description": {
+            "identifier": "5fs_br:meteor",
+            "menu_category": {
+                "category": "Construction"
+            }
+        },
+        "components": {
+            "minecraft:geometry": "minecraft:geometry.full_block",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "meteor",
+                    "render_method": "opaque"
+                }
+            },
+            "minecraft:light_dampening": 15,
+            "minecraft:loot": "loot_tables/blocks/misc/meteor.json",
+            "minecraft:collision_box": true,
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 15
+            },
+            "minecraft:redstone_conductivity": {
+                "redstone_conductor": true
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 90
+            },
+            "minecraft:map_color": "#1a1a1a",
+            "tag:stone": {},
+            "tag:minecraft:is_pickaxe_item_destructible": {}
+        }
+    }
+}

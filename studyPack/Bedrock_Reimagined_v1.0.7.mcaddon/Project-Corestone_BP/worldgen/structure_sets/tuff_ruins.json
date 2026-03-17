@@ -1,0 +1,21 @@
+{
+  "format_version": "1.21.20",
+  "minecraft:structure_set": {
+    "description": {
+      "identifier": "5fs_br:tuff_ruins"
+    },
+    "placement": {
+      "type": "minecraft:random_spread",
+      "salt": 83582867,
+      "separation": 33,
+      "spacing": 75,
+      "spread_type": "linear"
+    },
+    "structures": [
+      {
+        "structure": "5fs_br:tuff_ruins",
+        "weight": 1
+      }
+    ]
+  }
+}

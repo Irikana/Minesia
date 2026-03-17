@@ -1,0 +1,41 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.angler_slime": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "animations": [ "idle" ],
+          "transitions": [
+            { "idle_2": "q.is_on_ground && q.modified_move_speed <= 0.05 && q.is_alive && q.property('5fs_br:anim')" },
+            { "death": "!q.is_alive" }
+          ],
+          "blend_transition": 0.2
+        },
+
+        "idle_2": {
+          "animations": [ "idle_2" ],
+          "transitions": [
+            { "default": "q.property('5fs_br:anim')" },
+            { "death": "!q.is_alive" }
+          ],
+          "blend_transition": 0.2
+        },
+
+        "splitting": {
+          "animations": [ "splitting" ],
+          "transitions": [
+            { "default": "q.all_animations_finished && q.is_on_ground && q.is_alive && !q.is_baby && q.property('5fs_br:anim')" },
+            { "idle_2": "q.all_animations_finished && q.is_on_ground && q.is_alive && !q.is_baby && q.property('5fs_br:anim')" },
+            { "death": "!q.is_alive" }
+          ],
+          "blend_transition": 0.1
+        },
+
+        "death": {
+          "animations": [ "death" ]
+        }
+      }
+    }
+  }
+}

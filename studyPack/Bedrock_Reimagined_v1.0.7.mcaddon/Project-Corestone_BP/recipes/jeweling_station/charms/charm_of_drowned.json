@@ -1,0 +1,33 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "5fs_br:charm_of_drowned"
+		},
+		"tags": [
+			"jeweling_station"
+		],
+		"key": {
+			"O": {
+                "item": "minecraft:diamond"
+            },
+            "P": {
+                "item": "minecraft:rotten_flesh"
+            },
+			"T": {
+				"item": "minecraft:trident"
+			}
+		},
+		"pattern": [
+			"OPO",
+			"PTP",
+			"OPO"
+		],
+		"result": {
+			"item": "5fs_br:charm_of_drowned"
+		},
+		"unlock": {
+			"context": "AlwaysUnlocked"
+		}
+	}
+}

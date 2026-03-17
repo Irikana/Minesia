@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "glimmerite_block",
+		"metalness_emissive_roughness": "glimmerite_block_mer"
+	}
+}

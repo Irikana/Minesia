@@ -1,0 +1,22 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_brewing_mix": {
+    "description": {
+      "identifier": "5fs_br:bottle_of_jelly"
+    },
+    "tags": [
+      "brewing_stand"
+    ],
+    "input": "minecraft:potion_type:awkward",
+    "reagent": "5fs_br:crystalline_slime_ball",
+    "output": "5fs_br:bottle_of_jelly",
+    "unlock": [
+      {
+        "item": "minecraft:potion_type:awkward"
+      },
+      {
+        "item": "5fs_br:crystalline_slime_ball"
+      }
+    ]
+  }
+}

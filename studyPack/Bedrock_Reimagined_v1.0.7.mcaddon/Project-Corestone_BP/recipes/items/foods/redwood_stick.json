@@ -1,0 +1,29 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "5fs_br:redwood_stick"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "  L",
+      " L",
+      "L"
+    ],
+    "key": {
+      "L": {
+        "item": "5fs_br:redwood_log"
+      }
+    },
+    "result": {
+      "item": "5fs_br:redwood_stick"
+    },
+    "unlock": [
+      {
+        "item": "5fs_br:redwood_log"
+      }
+    ]
+  }
+}

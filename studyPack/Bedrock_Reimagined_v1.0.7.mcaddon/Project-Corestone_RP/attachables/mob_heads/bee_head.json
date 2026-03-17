@@ -1,0 +1,23 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:attachable": {
+        "description": {
+            "identifier": "5fs_br:bee_head",
+            "materials": {
+                "default": "bee"
+            },
+            "textures": {
+                "default": "textures/entity/bee/bee"
+            },
+            "geometry": {
+                "default": "geometry.bee_head_attachable"
+            },
+            "scripts": {
+                "parent_setup": "variable.head_layer_visible = 0.0;"
+            },
+            "render_controllers": [
+                "controller.render.default"
+            ]
+        }
+    }
+}

@@ -1,0 +1,605 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "5fs_br:phoenix",
+      "spawn_category": "monster",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false,
+      "properties": {
+        "5fs_br:flying_type": {
+          "client_sync": true,
+          "type": "enum",
+          "default": "flying",
+          "values": [
+            "flying",
+            "planning"
+          ]
+        }
+      }
+    },
+    "component_groups": {
+      "5fs_br:redwood_variant": {
+        "minecraft:scale": {
+          "value": 2
+        },
+        "minecraft:health": {
+          "value": 70,
+          "max": 70
+        }
+      },
+      "5fs_br:ground_mode": {
+        "minecraft:navigation.generic": {
+          "avoid_damage_blocks": true,
+          "avoid_portals": true,
+          "avoid_water": true,
+          "can_sink": false,
+          "can_path_from_air": true
+        },
+        "minecraft:movement": {
+          "value": 0.425,
+          "max": 0.425
+        },
+        "minecraft:jump.static": {},
+        "minecraft:behavior.random_stroll": {
+          "interval": 120,
+          "xz_dist": 3,
+          "speed_multiplier": 0.425,
+          "y_dist": 7
+        },
+        "minecraft:movement.basic": {},
+        "minecraft:is_sheared": {},
+        "minecraft:timer": {
+          "time": [
+            10,
+            20
+          ],
+          "looping": true,
+          "time_down_event": {
+            "event": "5fs_br:fly",
+            "target": "self"
+          }
+        },
+        "minecraft:entity_sensor": {
+          "subsensors": [
+            {
+              "cooldown": -1,
+              "minimum_count": 1,
+              "range": [
+                16,
+                16
+              ],
+              "event_filters": {
+                "test": "is_target",
+                "subject": "other",
+                "value": true
+              },
+              "event": "5fs_br:fly"
+            }
+          ]
+        },
+        "minecraft:environment_sensor": {
+          "triggers": [
+            {
+              "event": "5fs_br:fly",
+              "target": "self",
+              "filters": {
+                "test": "in_water",
+                "value": true
+              }
+            }
+          ]
+        },
+        "minecraft:pushable": {
+          "is_pushable": true,
+          "is_pushable_by_piston": true
+        },
+        "minecraft:collision_box": {
+          "width": 1,
+          "height": 1.3
+        },
+        "minecraft:physics": {}
+      },
+      "5fs_br:flying_swoop_mode": {
+        "minecraft:physics": {
+          "has_gravity": false
+        },
+        "minecraft:collision_box": {
+          "width": 1.5,
+          "height": 0.8
+        },
+        "minecraft:movement": {
+          "value": 1.5
+        },
+        "minecraft:movement.glide": {
+          "start_speed": 0.25,
+          "speed_when_turning": 0.75
+        },
+        "minecraft:timer": {
+          "time": [
+            15,
+            30
+          ],
+          "looping": true,
+          "time_down_event": {
+            "event": "5fs_br:land_on_ground",
+            "filters": {
+              "test": "has_target",
+              "value": false
+            }
+          }
+        },
+        "minecraft:behavior.timer_flag_3": {
+          "cooldown_range": [
+            7,
+            11
+          ],
+          "duration_range": 0,
+          "on_end": {
+            "event": "5fs_br:change_flying_type"
+          }
+        },
+        "minecraft:behavior.swoop_attack": {
+          "priority": 0,
+          "damage_reach": 0.2,
+          "speed_multiplier": 1.4,
+          "delay_range": [
+            1,
+            4
+          ]
+        },
+        "minecraft:follow_range": {
+          "value": 48,
+          "max": 48
+        },
+        "minecraft:behavior.circle_around_anchor": {
+          "priority": 2,
+          "radius_change": 1,
+          "radius_adjustment_chance": 0.1,
+          "height_adjustment_chance": 0.05,
+          "goal_radius": 1.5,
+          "angle_change": 12,
+          "radius_range": [
+            8,
+            18
+          ],
+          "height_offset_range": [
+            -2,
+            4
+          ],
+          "height_above_target_range": [
+            15,
+            25
+          ]
+        },
+        "minecraft:behavior.timer_flag_1": {
+          "cooldown_range": 0,
+          "duration_range": [
+            8,
+            15
+          ],
+          "on_end": {
+            "event": "5fs_br:range_attack_mode",
+            "target": "self",
+            "filters": {
+              "test": "has_target",
+              "value": true
+            }
+          }
+        }
+      },
+      "5fs_br:flying_ranged_mode": {
+        "minecraft:physics": {},
+        "minecraft:movement": {
+          "value": 0.03
+        },
+        "minecraft:navigation.float": {
+          "can_path_over_water": true
+        },
+        "minecraft:behavior.float_wander": {
+          "priority": 2,
+          "must_reach": true,
+          "random_reselect": true,
+          "float_duration": [
+            2,
+            7
+          ],
+          "float_wander_has_move_control": false
+        },
+        "minecraft:is_saddled": {},
+        "minecraft:can_fly": {},
+        "minecraft:jump.static": {},
+        "minecraft:shooter": {
+          "def": "5fs_br:phoenix_fireball"
+        },
+        "minecraft:behavior.ranged_attack": {
+          "priority": 1,
+          "attack_radius": 64,
+          "charge_shoot_trigger": 1,
+          "charge_charged_trigger": 0.3,
+          "burst_shots": 5,
+          "burst_interval": 0.3
+        },
+        "minecraft:follow_range": {
+          "value": 48,
+          "max": 48
+        },
+        "minecraft:behavior.timer_flag_1": {
+          "cooldown_range": 0,
+          "duration_range": 2.1,
+          "on_end": {
+            "event": "5fs_br:swoop_attack_mode",
+            "target": "self"
+          }
+        }
+      },
+      "5fs_br:landing_mode": {
+        "minecraft:physics": {
+          "has_gravity": false
+        },
+        "minecraft:movement": {
+          "value": 1.5
+        },
+        "minecraft:movement.glide": {
+          "start_speed": 0.05,
+          "speed_when_turning": 0.5
+        },
+        "minecraft:behavior.circle_around_anchor": {
+          "priority": 1,
+          "radius_change": 1,
+          "radius_adjustment_chance": 0.2,
+          "height_adjustment_chance": 0.5,
+          "goal_radius": 1,
+          "angle_change": 15,
+          "radius_range": [
+            0.5,
+            0.5
+          ],
+          "height_offset_range": [
+            0.5,
+            0.5
+          ],
+          "height_above_target_range": [
+            0.5,
+            0.5
+          ]
+        },
+        "minecraft:ageable": {
+          "duration": 30,
+          "grow_up": {
+            "event": "5fs_br:fly",
+            "target": "self"
+          }
+        },
+        "minecraft:timer": {
+          "time": 0,
+          "looping": true,
+          "time_down_event": {
+            "event": "5fs_br:check_for_ground",
+            "target": "self"
+          }
+        }
+      },
+      "5fs_br:perching": {
+        "minecraft:collision_box": {
+          "width": 1.5,
+          "height": 1.6
+        },
+        "minecraft:physics": {},
+        "minecraft:behavior.timer_flag_2": {
+          "cooldown_range": 0,
+          "duration_range": 0.99,
+          "on_end": {
+            "event": "5fs_br:landed"
+          }
+        }
+      },
+      "5fs_br:shrinkify": {
+        "minecraft:movement": {
+          "value": 0.85
+        },
+        "minecraft:health": {
+          "max": 17.5
+        },
+        "minecraft:scale": {
+          "value": 0.25
+        }
+      },
+      "5fs_br:gigantify": {
+        "minecraft:movement": {
+          "value": 0.34
+        },
+        "minecraft:health": {
+          "max": 70
+        },
+        "minecraft:scale": {
+          "value": 2
+        }
+      },
+      "5fs_br:normal_scale": {
+        "minecraft:movement": {
+          "value": 0.43
+        },
+        "minecraft:health": {
+          "max": 35
+        },
+        "minecraft:scale": {
+          "value": 1
+        }
+      },
+      "5fs_br:no_fall_damage_jelly": {
+        "minecraft:damage_sensor": {
+          "triggers": {
+            "cause": "fall",
+            "deals_damage": "no"
+          }
+        }
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": [
+          "phoenix",
+          "bird",
+          "monster",
+          "mob"
+        ]
+      },
+      "minecraft:despawn": {
+        "despawn_from_distance": {
+          "min_distance": 64,
+          "max_distance": 80
+        }
+      },
+      "minecraft:conditional_bandwidth_optimization": {},
+      "minecraft:experience_reward": {
+        "on_death": "query.last_hit_by_player ? 40 : 0"
+      },
+      "minecraft:loot": {
+        "table": "loot_tables/entities/phoenix.json"
+      },
+      "minecraft:fire_immune": {},
+      "minecraft:breathable": {
+        "total_supply": 15,
+        "suffocate_time": 0
+      },
+      "minecraft:behavior.nearest_attackable_target": {
+        "reselect_targets": true,
+        "scan_interval": 20,
+        "within_radius": 48,
+        "must_see_forget_duration": 0.5,
+        "target_search_height": 80,
+        "entity_types": {
+          "filters": {
+            "test": "is_family",
+            "subject": "other",
+            "value": "player"
+          },
+          "max_dist": 48
+        }
+      },
+      "minecraft:attack": {
+        "damage": 3
+      },
+      "minecraft:nameable": {},
+      "minecraft:health": {
+        "value": 35,
+        "max": 35
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "cause": "fall",
+            "deals_damage": "no"
+          }
+        ]
+      },
+      "minecraft:behavior.look_at_player": {
+        "priority": 3,
+        "look_distance": 32,
+        "probability": 0.02
+      },
+      "minecraft:behavior.random_look_around": {
+        "priority": 4
+      }
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "trigger": "5fs_br:redwood_variant",
+        "add": {
+          "component_groups": [
+            "5fs_br:ground_mode"
+          ]
+        }
+      },
+      "5fs_br:redwood_variant": {
+        "filters": {
+          "test": "has_biome_tag",
+          "value": "redwood_forest"
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:redwood_variant"
+          ]
+        }
+      },
+      "5fs_br:fly": {
+        "add": {
+          "component_groups": [
+            "5fs_br:flying_swoop_mode"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "5fs_br:landing_mode",
+            "5fs_br:ground_mode"
+          ]
+        }
+      },
+      "5fs_br:land_on_ground": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:flying_swoop_mode",
+            "5fs_br:flying_ranged_mode"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:landing_mode"
+          ]
+        }
+      },
+      "5fs_br:landed": {
+        "set_property": {
+          "5fs_br:flying_type": "flying"
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:ground_mode"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "5fs_br:perching"
+          ]
+        }
+      },
+      "5fs_br:check_for_ground": {
+        "queue_command": {
+          "command": [
+            "scriptevent 5fs_br:bird_check_for_ground"
+          ]
+        }
+      },
+      "5fs_br:change_flying_type": {
+        "sequence": [
+          {
+            "filters": {
+              "test": "enum_property",
+              "domain": "5fs_br:flying_type",
+              "operator": "==",
+              "value": "flying"
+            },
+            "set_property": {
+              "5fs_br:flying_type": "planning"
+            }
+          },
+          {
+            "filters": {
+              "test": "enum_property",
+              "domain": "5fs_br:flying_type",
+              "operator": "==",
+              "value": "planning"
+            },
+            "set_property": {
+              "5fs_br:flying_type": "flying"
+            }
+          }
+        ]
+      },
+      "5fs_br:flying": {
+        "set_property": {
+          "5fs_br:flying_type": "flying"
+        }
+      },
+      "5fs_br:planning": {
+        "set_property": {
+          "5fs_br:flying_type": "planning"
+        }
+      },
+      "5fs_br:perching": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:landing_mode"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:perching"
+          ]
+        }
+      },
+      "5fs_br:range_attack_mode": {
+        "add": {
+          "component_groups": [
+            "5fs_br:flying_ranged_mode"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "5fs_br:flying_swoop_mode"
+          ]
+        },
+        "set_property": {
+          "5fs_br:flying_type": "flying"
+        }
+      },
+      "5fs_br:swoop_attack_mode": {
+        "add": {
+          "component_groups": [
+            "5fs_br:flying_swoop_mode"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "5fs_br:flying_ranged_mode"
+          ]
+        }
+      },
+      "5fs_br:normal_scale": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:shrinkify",
+            "5fs_br:gigantify"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:normal_scale"
+          ]
+        }
+      },
+      "5fs_br:gigantify": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:shrinkify",
+            "5fs_br:normal_scale"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:gigantify"
+          ]
+        }
+      },
+      "5fs_br:shrinkify": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:gigantify",
+            "5fs_br:normal_scale"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:shrinkify"
+          ]
+        }
+      },
+      "5fs_br:no_fall_damage_jelly": {
+        "add": {
+          "component_groups": [
+            "5fs_br:no_fall_damage_jelly"
+          ]
+        }
+      },
+      "5fs_br:fall_damage_jelly": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:no_fall_damage_jelly"
+          ]
+        }
+      }
+    }
+  }
+}

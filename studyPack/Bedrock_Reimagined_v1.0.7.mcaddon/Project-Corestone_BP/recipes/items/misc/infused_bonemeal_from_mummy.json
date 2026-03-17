@@ -1,0 +1,31 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "5fs_br:infused_bonemeal_from_mummy"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "5fs_br:mummified_bones"
+      },
+      {
+        "item": "5fs_br:infused_bonemeal"
+      }
+    ],
+    "result": {
+      "item": "5fs_br:infused_bonemeal",
+      "count": 3
+    },
+    "unlock": [
+      {
+        "item": "5fs_br:mummified_bones"
+      },
+      {
+        "item": "5fs_br:infused_bonemeal"
+      }
+    ]
+  }
+}

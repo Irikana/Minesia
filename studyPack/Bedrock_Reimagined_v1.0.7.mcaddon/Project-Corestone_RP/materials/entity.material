@@ -1,0 +1,82 @@
+{
+  "materials": {
+    "version": "1.0.0",
+    "pedestal_item:entity_alphatest": {
+      "+defines": [
+        "USE_OVERLAY",
+        "USE_EMISSIVE"
+      ],
+      "+states": [
+        "EnableStencilTest",
+        "StencilWrite",
+        "DisableDepthWrite",
+        "Blending"
+      ],
+      "frontFace": {
+        "stencilFunc": "Always",
+        "stencilFailOp": "Replace",
+        "stencilDepthFailOp": "Replace",
+        "stencilPassOp": "Replace"
+      },
+      "backFace": {
+        "stencilFunc": "Always",
+        "stencilFailOp": "Replace",
+        "stencilDepthFailOp": "Replace",
+        "stencilPassOp": "Replace"
+      },
+      "stencilRef": 2
+    },
+    "mobs_xray:entity_alphatest": {
+      "+states": [
+        "InvertCulling",
+        "EnableStencilTest",
+        "DisableDepthWrite",
+        "Blending"
+      ],
+      "+defines": [
+        "USE_OVERLAY"
+      ],
+      "-defines": [
+        "FANCY"
+      ],
+      "depthFunc": "Always",
+      "frontFace": {
+        "stencilFunc": "NotEqual"
+      },
+      "backFace": {
+        "stencilFunc": "Equal"
+      },
+      "stencilRef": 2,
+      "stencilReadMark": 2
+    },
+    "iris_base:entity_alphatest": {
+      "+states": [ "EnableStencilTest", "StencilWrite" ],
+      "frontFace": {
+        "stencilFunc": "Always",
+        "stencilFailOp": "Replace",
+        "stencilDepthFailOp": "Replace",
+        "stencilPassOp": "Replace"
+      },
+      "backFace": {
+        "stencilFunc": "Always",
+        "stencilFailOp": "Replace",
+        "stencilDepthFailOp": "Replace",
+        "stencilPassOp": "Replace"
+      },
+      "stencilRef": 2
+    },
+    "iris:entity_static": {
+      "+states": [ "InvertCulling", "EnableStencilTest", "DisableDepthWrite", "Blending" ],
+      "+defines": [ "USE_OVERLAY" ],
+      "-defines": [ "FANCY" ],
+      "frontFace": {
+        "stencilFunc": "NotEqual"
+      },
+      "backFace": {
+        "stencilFunc": "Equal"
+      },
+      "stencilRef": 2,
+      "stencilReadMark": 2
+    }
+  }
+}

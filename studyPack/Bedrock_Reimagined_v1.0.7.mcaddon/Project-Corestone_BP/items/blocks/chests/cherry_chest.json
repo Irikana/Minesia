@@ -1,0 +1,25 @@
+{
+    "format_version": "1.26.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "5fs_br:cherry_chest",
+            "menu_category": {
+                "category": "items"
+            }
+        },
+        "components": {
+            "minecraft:fuel": {
+                "duration": 15
+            },
+            "minecraft:block_placer": {
+                "block": "5fs_br:cherry_chest",
+                "replace_block_item": true
+            },
+            "minecraft:tags": {
+                "tags": [
+                    "5fs_br:chest"
+                ]
+            }
+        }
+    }
+}

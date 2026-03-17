@@ -1,0 +1,30 @@
+{
+	"format_version": "1.26.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "5fs_br:maple_log_slab",
+			"menu_category": {
+				"category": "construction"
+			}
+		},
+		"components": {
+			"minecraft:block_placer": {
+				"block": "5fs_br:maple_log_slab",
+				"replace_block_item": true
+			},
+			"minecraft:display_name": {
+				"value": "tile.5fs_br:maple_log_slab.name"
+			},
+			"minecraft:tags": {
+				"tags": [
+					"minecraft:wooden_slabs",
+					"5fs_br:is_slab"
+				]
+			},
+			"minecraft:fuel": {
+				"duration": 15
+			},
+			"5fs_br:item_animation": {}
+		}
+	}
+}

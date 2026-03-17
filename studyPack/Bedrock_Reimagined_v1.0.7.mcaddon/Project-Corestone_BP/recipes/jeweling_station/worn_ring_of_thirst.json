@@ -1,0 +1,36 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "5fs_br:worn_ring_of_thirst"
+		},
+		"tags": [
+			"jeweling_station"
+		],
+		"key": {
+			"A": {
+				"item": "5fs_br:compact_diamond"
+			},
+			"B": {
+				"item": "minecraft:potion"
+			},
+			"C": {
+				"item": "5fs_br:crystalline_ingot"
+			},
+			"D": {
+				"item": "5fs_br:cracked_ring_of_thirst"
+			}
+		},
+		"pattern": [
+			"ABA",
+			"CDC",
+			"ACA"
+		],
+		"result": {
+			"item": "5fs_br:worn_ring_of_thirst"
+		},
+		"unlock": {
+			"context": "AlwaysUnlocked"
+		}
+	}
+}

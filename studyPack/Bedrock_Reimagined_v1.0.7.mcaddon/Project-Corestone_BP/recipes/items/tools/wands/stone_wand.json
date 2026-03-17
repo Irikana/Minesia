@@ -1,0 +1,35 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "5fs_br:stone_wand"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "  #",
+      " Z ",
+      "S  "
+    ],
+    "key": {
+      "#": {
+        "item": "5fs_br:mana_bottle"
+      },
+      "S": {
+        "item": "minecraft:stick"
+      },
+      "Z": {
+        "item": "minecraft:stone"
+      }
+    },
+    "result": {
+      "item": "5fs_br:stone_wand"
+    },
+    "unlock": [
+      {
+        "item": "minecraft:stone"
+      }
+    ]
+  }
+}

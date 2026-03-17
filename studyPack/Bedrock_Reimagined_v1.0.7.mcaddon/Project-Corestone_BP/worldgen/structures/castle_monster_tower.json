@@ -1,0 +1,57 @@
+{
+  "format_version": "1.21.20",
+  "minecraft:jigsaw": {
+    "description": {
+      "identifier": "5fs_br:castle_monster_tower"
+    },
+    "biome_filters": [
+      {
+        "any_of": [
+          {
+            "test": "has_biome_tag",
+            "value": "forest"
+          },
+          {
+            "test": "has_biome_tag",
+            "value": "birch"
+          },
+          {
+            "test": "has_biome_tag",
+            "value": "taiga"
+          },
+          {
+            "test": "has_biome_tag",
+            "value": "savanna"
+          },
+          {
+            "test": "has_biome_tag",
+            "value": "plains"
+          },
+          {
+            "test": "has_biome_tag",
+            "value": "jungle"
+          },
+          {
+            "test": "has_biome_tag",
+            "value": "cherry"
+          },
+          {
+            "test": "has_biome_tag",
+            "value": "pale_oak"
+          }
+        ]
+      }
+    ],
+    "step": "surface_structures",
+    "terrain_adaptation": "beard_thin",
+    "start_pool": "5fs_br:castle_monster_tower",
+    "max_depth": 1,
+    "start_height": {
+      "type": "constant",
+      "value": {
+        "absolute": 0
+      }
+    },
+    "heightmap_projection": "world_surface"
+  }
+}

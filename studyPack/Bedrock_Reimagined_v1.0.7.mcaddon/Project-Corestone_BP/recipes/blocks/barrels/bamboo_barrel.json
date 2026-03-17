@@ -1,0 +1,35 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "5fs_br:bamboo_barrel"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "SWS",
+      "S S",
+      "SWS"
+    ],
+    "key": {
+      "S": {
+        "item": "minecraft:bamboo_planks"
+      },
+      "W": {
+        "item": "minecraft:bamboo_slab"
+      }
+    },
+    "result": {
+      "item": "5fs_br:bamboo_barrel"
+    },
+    "unlock": [
+      {
+        "item": "minecraft:bamboo_planks"
+      },
+      {
+        "item": "minecraft:bamboo_slab"
+      }
+    ]
+  }
+}

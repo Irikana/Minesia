@@ -1,0 +1,199 @@
+{
+  "namespace": "smelter",
+
+  // COPPER
+  "content_root_copper_blast_furnace": {
+    "type": "panel",
+    "$custom_background_texture": "textures/gui/inventory/furnace_copper/copper_blast_furnace",
+    "$inventory_label": "container.copper_blast_furnace.inventory",
+    "$type_label": "ui.blast.furnace.copper",
+    "controls": [
+      { "main@smelter.main": {} },
+      {
+        "background@smelter.background": {
+          "layer": 2,
+          "$custom_background_texture": "textures/gui/inventory/furnace_copper/copper_blast_furnace"
+        }
+      }
+    ]
+  },
+
+  "content_root_copper_furnace": {
+    "type": "panel",
+    "$custom_background_texture": "textures/gui/inventory/furnace_copper/copper_furnace",
+    "$inventory_label": "container.copper_furnace.inventory",
+    "$type_label": "ui.copper.furnace",
+    "controls": [
+      { "main@smelter.main": {} },
+      {
+        "background@smelter.background": {
+          "layer": 2,
+          "$custom_background_texture": "textures/gui/inventory/furnace_copper/copper_furnace"
+        }
+      }
+    ]
+  },
+
+  "content_root_copper_smoker": {
+    "type": "panel",
+    "$custom_background_texture": "textures/gui/inventory/furnace_copper/copper_smoker",
+    "$inventory_label": "container.copper_smoker.inventory",
+    "$type_label": "ui.copper.smoker",
+    "controls": [
+      { "main@smelter.main": {} },
+      {
+        "background@smelter.background": {
+          "layer": 2,
+          "$custom_background_texture": "textures/gui/inventory/furnace_copper/copper_smoker"
+        }
+      }
+    ]
+  },
+
+  // EXPOSED
+  "content_root_exposed_copper_blast_furnace": {
+    "type": "panel",
+    "$custom_background_texture": "textures/gui/inventory/furnace_copper/exposed_copper_blast_furnace",
+    "$inventory_label": "container.exposed_copper_blast_furnace.inventory",
+    "$type_label": "ui.blast.furnace.exposed.copper",
+    "controls": [
+      { "main@smelter.main": {} },
+      {
+        "background@smelter.background": {
+          "layer": 2,
+          "$custom_background_texture": "textures/gui/inventory/furnace_copper/exposed_copper_blast_furnace"
+        }
+      }
+    ]
+  },
+
+  "content_root_exposed_copper_furnace": {
+    "type": "panel",
+    "$custom_background_texture": "textures/gui/inventory/furnace_copper/exposed_copper_furnace",
+    "$inventory_label": "container.exposed_copper_furnace.inventory",
+    "$type_label": "ui.exposed.copper.furnace",
+    "controls": [
+      { "main@smelter.main": {} },
+      {
+        "background@smelter.background": {
+          "layer": 2,
+          "$custom_background_texture": "textures/gui/inventory/furnace_copper/exposed_copper_furnace"
+        }
+      }
+    ]
+  },
+
+  "content_root_exposed_copper_smoker": {
+    "type": "panel",
+    "$custom_background_texture": "textures/gui/inventory/furnace_copper/exposed_copper_smoker",
+    "$inventory_label": "container.exposed_copper_smoker.inventory",
+    "$type_label": "ui.exposed.copper.smoker",
+    "controls": [
+      { "main@smelter.main": {} },
+      {
+        "background@smelter.background": {
+          "layer": 2,
+          "$custom_background_texture": "textures/gui/inventory/furnace_copper/exposed_copper_smoker"
+        }
+      }
+    ]
+  },
+
+  // WEATHERED
+  "content_root_weathered_copper_blast_furnace": {
+    "type": "panel",
+    "$custom_background_texture": "textures/gui/inventory/furnace_copper/weathered_copper_blast_furnace",
+    "$inventory_label": "container.weathered_copper_blast_furnace.inventory",
+    "$type_label": "ui.blast.furnace.weathered.copper",
+    "controls": [
+      { "main@smelter.main": {} },
+      {
+        "background@smelter.background": {
+          "layer": 2,
+          "$custom_background_texture": "textures/gui/inventory/furnace_copper/weathered_copper_blast_furnace"
+        }
+      }
+    ]
+  },
+
+  "content_root_weathered_copper_furnace": {
+    "type": "panel",
+    "$custom_background_texture": "textures/gui/inventory/furnace_copper/weathered_copper_furnace",
+    "$inventory_label": "container.weathered_copper_furnace.inventory",
+    "$type_label": "ui.weathered.copper.furnace",
+    "controls": [
+      { "main@smelter.main": {} },
+      {
+        "background@smelter.background": {
+          "layer": 2,
+          "$custom_background_texture": "textures/gui/inventory/furnace_copper/weathered_copper_furnace"
+        }
+      }
+    ]
+  },
+
+  "content_root_weathered_copper_smoker": {
+    "type": "panel",
+    "$custom_background_texture": "textures/gui/inventory/furnace_copper/weathered_copper_smoker",
+    "$inventory_label": "container.weathered_copper_smoker.inventory",
+    "$type_label": "ui.weathered.copper.smoker",
+    "controls": [
+      { "main@smelter.main": {} },
+      {
+        "background@smelter.background": {
+          "layer": 2,
+          "$custom_background_texture": "textures/gui/inventory/furnace_copper/weathered_copper_smoker"
+        }
+      }
+    ]
+  },
+
+  // OXIDIZED
+  "content_root_oxidized_copper_blast_furnace": {
+    "type": "panel",
+    "$custom_background_texture": "textures/gui/inventory/furnace_copper/oxidized_copper_blast_furnace",
+    "$inventory_label": "container.oxidized_copper_blast_furnace.inventory",
+    "$type_label": "ui.blast.furnace.oxidized.copper",
+    "controls": [
+      { "main@smelter.main": {} },
+      {
+        "background@smelter.background": {
+          "layer": 2,
+          "$custom_background_texture": "textures/gui/inventory/furnace_copper/oxidized_copper_blast_furnace"
+        }
+      }
+    ]
+  },
+
+  "content_root_oxidized_copper_furnace": {
+    "type": "panel",
+    "$custom_background_texture": "textures/gui/inventory/furnace_copper/oxidized_copper_furnace",
+    "$inventory_label": "container.oxidized_copper_furnace.inventory",
+    "$type_label": "ui.oxidized.copper.furnace",
+    "controls": [
+      { "main@smelter.main": {} },
+      {
+        "background@smelter.background": {
+          "layer": 2,
+          "$custom_background_texture": "textures/gui/inventory/furnace_copper/oxidized_copper_furnace"
+        }
+      }
+    ]
+  },
+
+  "content_root_oxidized_copper_smoker": {
+    "type": "panel",
+    "$custom_background_texture": "textures/gui/inventory/furnace_copper/oxidized_copper_smoker",
+    "$inventory_label": "container.oxidized_copper_smoker.inventory",
+    "$type_label": "ui.oxidized.copper.smoker",
+    "controls": [
+      { "main@smelter.main": {} },
+      {
+        "background@smelter.background": {
+          "layer": 2,
+          "$custom_background_texture": "textures/gui/inventory/furnace_copper/oxidized_copper_smoker"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,67 @@
+{
+    "format_version": "1.12.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "5fs_br:bed_entity",
+            "runtime_identifier": "minecraft:tnt",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false,
+            "animations": {
+                "teleport": "animation.tile_entity.teleport"
+            },
+            "scripts": {
+                "animate": [
+                    "teleport"
+                ]
+            }
+        },
+        "component_groups": {
+            "from_explosion": {
+                "minecraft:explode": {
+                    "fuse_length": 0.05,
+                    "fuse_lit": true,
+                    "power": 5,
+                    "damage_scaling": 1,
+                    "causes_fire": true,
+                    "destroy_affected_by_griefing": true
+                }
+            }
+        },
+        "components": {
+            "minecraft:type_family": {
+                "family": [
+                    "bed",
+                    "inanimate",
+                    "nolife"
+                ]
+            },
+            "minecraft:timer": {
+                "looping": false,
+                "time": 0.1,
+                "time_down_event": {
+                    "event": "5fs_br:from_explosion",
+                    "target": "self"
+                }
+            },
+            "minecraft:collision_box": {
+                "width": 0.98,
+                "height": 0.98
+            },
+            "minecraft:physics": {},
+            "minecraft:pushable": {
+                "is_pushable": false,
+                "is_pushable_by_piston": true
+            }
+        },
+        "events": {
+            "5fs_br:from_explosion": {
+                "add": {
+                    "component_groups": [
+                        "from_explosion"
+                    ]
+                }
+            }
+        }
+    }
+}

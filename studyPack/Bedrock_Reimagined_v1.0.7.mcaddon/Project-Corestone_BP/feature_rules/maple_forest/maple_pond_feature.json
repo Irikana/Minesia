@@ -1,0 +1,54 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:feature_rules": {
+    "description": {
+      "identifier": "5fs_br:maple_pond_feature",
+      "places_feature": "5fs_br:maple_forest/maple_pond_1_feature"
+    },
+    "conditions": {
+      "placement_pass": "final_pass",
+      "minecraft:biome_filter": [
+        {
+          "any_of": [
+            {
+              "test": "has_biome_tag",
+              "operator": "==",
+              "value": "maple_forest"
+            }
+          ]
+        },
+        {
+          "test": "has_biome_tag",
+          "operator": "!=",
+          "value": "birch"
+        },
+        {
+          "test": "has_biome_tag",
+          "operator": "!=",
+          "value": "roofed"
+        },
+        {
+          "test": "has_biome_tag",
+          "operator": "!=",
+          "value": "extreme_hills"
+        },
+        {
+          "test": "has_biome_tag",
+          "operator": "!=",
+          "value": "taiga"
+        }
+      ]
+    },
+    "distribution": {
+      "iterations": 2,
+      "scatter_chance": {
+        "numerator": 1,
+        "denominator": 3
+      },
+      "coordinate_eval_order": "zxy",
+      "x": 0,
+      "y": "query.heightmap(variable.worldx, variable.worldz) -2",
+      "z": 0
+    }
+  }
+}

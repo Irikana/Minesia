@@ -1,0 +1,15 @@
+{
+    "format_version": "1.21.80",
+    "minecraft:scatter_feature": {
+        "description": {
+            "identifier": "5fs_br:forest/scatter_small_oak_log_ns_1"
+        },
+        "places_feature": "5fs_br:forest/small_oak_log_ns_1",
+        "distribution": {
+            "iterations": 1,
+            "x": 1,
+            "y": 0,
+            "z": 1
+        }
+    }
+}

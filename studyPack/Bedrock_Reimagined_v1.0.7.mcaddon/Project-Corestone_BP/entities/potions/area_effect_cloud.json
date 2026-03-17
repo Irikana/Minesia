@@ -1,0 +1,62 @@
+{
+	"format_version": "1.8.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "5fs_br:area_effect_cloud",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:physics": {
+				"has_collision": false,
+				"has_gravity": false
+			},
+			"minecraft:conditional_bandwidth_optimization": {},
+			"minecraft:collision_box": {
+				"width": 0,
+				"height": 0
+			},
+			"minecraft:despawn": {
+				"despawn_from_distance": {
+					"max_distance": 300,
+					"min_distance": 256
+				},
+				"despawn_from_inactivity": true,
+				"despawn_from_simulation_edge": false,
+				"remove_child_entities": false
+			},
+			"minecraft:breathable": {
+				"total_supply": 15,
+				"breathes_air": true,
+				"breathes_lava": true,
+				"breathes_solids": true,
+				"breathes_water": true,
+				"suffocate_time": 0,
+				"inhale_time": 0,
+				"generates_bubbles": false
+			},
+			"minecraft:type_family": {
+				"family": [
+					"5fs_br:projectile",
+					"5fs_br:splash_potion"
+				]
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "all",
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			}
+		}
+	}
+}

@@ -1,0 +1,164 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.crystal_wraith.general": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "animations": [
+            "idle"
+          ],
+          "transitions": [
+            {
+              "fly": "query.is_moving && !query.is_on_ground"
+            },
+            {
+              "dash_attack": "query.has_target && query.is_charging"
+            },
+            {
+              "summoning_attack": "query.has_target"
+            },
+            {
+              "ranged_attack": "query.has_target"
+            },
+            {
+              "wraith_spin": "query.has_target"
+            },
+            {
+              "enrage": "query.variant == 1"
+            },
+            {
+              "special": "query.is_angry"
+            },
+            {
+              "death": "!query.is_alive"
+            }
+          ],
+          "blend_transition": 0.2
+        },
+        "fly": {
+          "animations": [
+            "fly"
+          ],
+          "transitions": [
+            {
+              "default": "!query.is_moving || query.is_on_ground"
+            },
+            {
+              "dash_attack": "query.has_target && query.is_charging"
+            },
+            {
+              "summoning_attack": "query.has_target"
+            },
+            {
+              "ranged_attack": "query.has_target"
+            },
+            {
+              "wraith_spin": "query.has_target"
+            },
+            {
+              "enrage": "query.variant == 1"
+            },
+            {
+              "special": "query.is_angry"
+            },
+            {
+              "death": "!query.is_alive"
+            }
+          ],
+          "blend_transition": 0.2
+        },
+        "dash_attack": {
+          "animations": [
+            "attack_anim"
+          ],
+          "transitions": [
+            {
+              "default": "!query.is_charging"
+            },
+            {
+              "death": "!query.is_alive"
+            }
+          ],
+          "blend_transition": 0.2
+        },
+        "summoning_attack": {
+          "animations": [
+            "attack_anim"
+          ],
+          "transitions": [
+            {
+              "default": "!query.is_riding"
+            },
+            {
+              "death": "!query.is_alive"
+            }
+          ],
+          "blend_transition": 0.2
+        },
+        "ranged_attack": {
+          "animations": [
+            "attack_anim"
+          ],
+          "transitions": [
+            {
+              "default": "!query.is_sheared"
+            },
+            {
+              "death": "!query.is_alive"
+            }
+          ],
+          "blend_transition": 0.2
+        },
+        "wraith_spin": {
+          "animations": [
+            "fly_spin"
+          ],
+          "transitions": [
+            {
+              "default": "!query.is_sitting"
+            },
+            {
+              "death": "!query.is_alive"
+            }
+          ],
+          "blend_transition": 0.2
+        },
+        "enrage": {
+          "animations": [
+            "attack_anim"
+          ],
+          "transitions": [
+            {
+              "default": "query.variant == 0"
+            },
+            {
+              "death": "!query.is_alive"
+            }
+          ],
+          "blend_transition": 0.2
+        },
+        "special": {
+          "animations": [
+            "attack_anim"
+          ],
+          "transitions": [
+            {
+              "default": "!query.is_angry"
+            },
+            {
+              "death": "!query.is_alive"
+            }
+          ],
+          "blend_transition": 0.2
+        },
+        "death": {
+          "animations": [
+            "death"
+          ],
+          "blend_transition": 0
+        }
+      }
+    }
+  }
+}

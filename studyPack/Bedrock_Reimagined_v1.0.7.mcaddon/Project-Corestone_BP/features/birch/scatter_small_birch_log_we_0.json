@@ -1,0 +1,15 @@
+{
+    "format_version": "1.21.80",
+    "minecraft:scatter_feature": {
+        "description": {
+            "identifier": "5fs_br:birch/scatter_small_birch_log_we_0"
+        },
+        "places_feature": "5fs_br:birch/small_birch_log_we_0",
+        "distribution": {
+            "iterations": 1,
+            "x": 2,
+            "y": 0,
+            "z": -1
+        }
+    }
+}

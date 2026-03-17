@@ -1,0 +1,43 @@
+v1.0.7
+
+## Blocks
+- Fixed Quarry not summoning the Quarry Entity
+- Removed the Rotation Trait from some Custom Sandstone Blocks
+- Fixed Crystalline and Dragonite Blast Furnaces having their UIs swapped
+- Fixed Charm Beacon not working
+- Cattail no longer has an invisible block placed above it to extend its selection box
+- Small Rocks can no longer be placed on top of each other
+- Small Rocks now get destroyed when pushed by a Piston or when Water flows on them
+- Moose Antlers can no longer be placed on blocks that contain liquid, or be destroyed by liquid
+- Custom Sleeping Animation now stops when viewing the Player in Paper Doll view and when the Player wakes up
+
+## Items
+- Melon Slice and Sweet Berries now restore 10 Thirst Points after being consumed
+
+## Mobs
+- Crystal Golem will no longer target Players that have a full Crystalline Armor Set
+- Villagers, Wandering Traders, Wizard and Accessory Traders, and Maple Villager will now avoid Quicksand
+- Entities that can attack will now target entities that hit them, such as the Warden
+- Warden no longer has a Boss Bar
+- Improved Iron Golem attack timing — it previously attacked some entities faster than others
+- Fixed Iron Golem not attacking some custom entities that it should
+- Reduced Crystal Golem spawn rate
+- Cleaned up Shroud spawn rules and removed unnecessary spawn conditions
+- Added a setting for Shroud spawn rate
+
+## Forge
+- Fixed Cobalt Ingot recipe not working in the Forge
+
+## Structures
+- Removed Reinforced Sandstone from one of the Sandstone Arches
+
+## UI
+- Fixed multiple UIs on various platforms, namely Pocket UI bugs
+
+## Dynamic Lighting
+- Fixed being unable to place blocks while holding an off-hand Torch or any dynamic lighting item (note: this is still a little glitchy but is much better than not being able to place blocks at all)
+
+## Guidebook
+- Added Netherite Ingot, Meteorite Ingot, Dragonite Ingot, and Cobalt Ingot pages to the Special Materials section
+- All forge ingot recipes are now searchable in the Guidebook
+

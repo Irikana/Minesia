@@ -1,0 +1,72 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.spectral_vex.root": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "animations": [
+                        "particle", "general_controller", "look_at_target"
+                    ],
+                    "transitions": [
+                        {
+                            "death": "!q.is_alive"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "death": {
+                    "animations": [
+                        "death"
+                    ]
+                }
+            }
+        },
+        "controller.animation.spectral_vex.general": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "animations": [
+                        "idle"
+                    ],
+                    "transitions": [
+                        {
+                            "move": "q.is_moving"
+                        },
+                        {
+                            "attack": "v.attack_time > 0.0"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "move": {
+                    "animations": [
+                        "move"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!q.is_moving"
+                        },
+                        {
+                            "attack": "v.attack_time > 0.0"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "attack": {
+                    "animations": [
+                        "attack"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!q.is_moving && q.all_animations_finished"
+                        },
+                        {
+                            "move": "q.is_moving && q.all_animations_finished"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

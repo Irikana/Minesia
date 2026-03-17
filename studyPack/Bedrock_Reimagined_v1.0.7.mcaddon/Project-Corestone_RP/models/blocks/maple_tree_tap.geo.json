@@ -1,0 +1,164 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.maple_tree_tap",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "root2",
+					"pivot": [0, 0.85, 5],
+					"cubes": [
+						{
+							"origin": [-4, 0, 0.1],
+							"size": [8, 2, 8],
+							"uv": {
+								"north": {"uv": [8, 10], "uv_size": [8, 2], "material_instance": "maple_tree_tap_2"},
+								"east": {"uv": [16, 12], "uv_size": [-8, 2], "material_instance": "maple_tree_tap_2"},
+								"south": {"uv": [8, 14], "uv_size": [8, 2], "material_instance": "maple_tree_tap_2"},
+								"west": {"uv": [8, 12], "uv_size": [8, 2], "material_instance": "maple_tree_tap_2"},
+								"up": {"uv": [0, 0], "uv_size": [8, 8], "material_instance": "maple_tree_tap_1"},
+								"down": {"uv": [0, 16], "uv_size": [8, -8], "material_instance": "maple_tree_tap_1"}
+							}
+						},
+						{
+							"origin": [-5.23164, 14.64281, -0.9],
+							"size": [6, 2, 9],
+							"pivot": [2, 14.39001, 4.1],
+							"rotation": [0, 0, -22.5],
+							"uv": {
+								"north": {"uv": [10, 12], "uv_size": [6, 2]},
+								"east": {"uv": [1, 12], "uv_size": [9, 2]},
+								"south": {"uv": [10, 14], "uv_size": [6, 2]},
+								"up": {"uv": [0, 0], "uv_size": [6, 9]},
+								"down": {"uv": [6, 9], "uv_size": [6, -9]}
+							}
+						},
+						{
+							"origin": [-0.76836, 14.64281, -0.9],
+							"size": [6, 2, 9],
+							"pivot": [-2, 14.39001, 4.1],
+							"rotation": [0, 0, 22.5],
+							"uv": {
+								"north": {"uv": [16, 12], "uv_size": [-6, 2]},
+								"south": {"uv": [16, 14], "uv_size": [-6, 2]},
+								"west": {"uv": [10, 12], "uv_size": [-9, 2]},
+								"up": {"uv": [6, 0], "uv_size": [-6, 9]},
+								"down": {"uv": [12, 9], "uv_size": [-6, -9]}
+							}
+						},
+						{
+							"origin": [-2, 2, 7.1],
+							"size": [4, 13, 1],
+							"uv": {
+								"north": {"uv": [12, 3], "uv_size": [4, 13], "material_instance": "maple_tree_tap_1"},
+								"east": {"uv": [15, 3], "uv_size": [1, 13], "material_instance": "maple_tree_tap_1"},
+								"south": {"uv": [12, 3], "uv_size": [4, 13], "material_instance": "maple_tree_tap_1"},
+								"west": {"uv": [15, 3], "uv_size": [1, 13], "material_instance": "maple_tree_tap_1"}
+							}
+						},
+						{
+							"origin": [-1, 10, 3.1],
+							"size": [2, 2, 4],
+							"uv": {
+								"north": {"uv": [8, 3], "uv_size": [2, 2], "material_instance": "maple_tree_tap_1"},
+								"east": {"uv": [12, 3], "uv_size": [-4, 2], "material_instance": "maple_tree_tap_1"},
+								"west": {"uv": [8, 3], "uv_size": [4, 2], "material_instance": "maple_tree_tap_1"},
+								"up": {"uv": [8, 5], "uv_size": [2, 4], "material_instance": "maple_tree_tap_1"},
+								"down": {"uv": [8, 9], "uv_size": [2, -4], "material_instance": "maple_tree_tap_1"}
+							}
+						},
+						{
+							"origin": [-1, 9, 3.1],
+							"size": [2, 1, 2],
+							"inflate": 0.25,
+							"uv": {
+								"north": {"uv": [8, 10], "uv_size": [2, 1], "material_instance": "maple_tree_tap_1"},
+								"east": {"uv": [8, 10], "uv_size": [2, 1], "material_instance": "maple_tree_tap_1"},
+								"south": {"uv": [8, 10], "uv_size": [2, 1], "material_instance": "maple_tree_tap_1"},
+								"west": {"uv": [8, 10], "uv_size": [2, 1], "material_instance": "maple_tree_tap_1"},
+								"up": {"uv": [8, 9], "uv_size": [2, 2], "material_instance": "maple_tree_tap_1"},
+								"down": {"uv": [10, 11], "uv_size": [2, -2], "material_instance": "maple_tree_tap_1"}
+							}
+						}
+					]
+				},
+				{
+					"name": "jar",
+					"parent": "root2",
+					"pivot": [0, 1.85, 6],
+					"cubes": [
+						{
+							"origin": [-3, 6.75, 1],
+							"size": [6, 1, 6],
+							"uv": {
+								"north": {"uv": [10, 9], "uv_size": [6, 1], "material_instance": "jar"},
+								"east": {"uv": [10, 4], "uv_size": [6, 1], "material_instance": "jar"},
+								"south": {"uv": [10, 10], "uv_size": [-6, 1], "material_instance": "jar"},
+								"west": {"uv": [16, 9], "uv_size": [-6, 1], "material_instance": "jar"},
+								"up": {"uv": [10, 4], "uv_size": [6, 6], "material_instance": "jar"}
+							}
+						},
+						{
+							"origin": [-3, 1.85, 1],
+							"size": [6, 6, 6],
+							"inflate": -0.25,
+							"uv": {
+								"north": {"uv": [10, 10], "uv_size": [6, 6], "material_instance": "jar"},
+								"east": {"uv": [10, 10], "uv_size": [6, 6], "material_instance": "jar"},
+								"south": {"uv": [10, 10], "uv_size": [6, 6], "material_instance": "jar"},
+								"west": {"uv": [10, 10], "uv_size": [6, 6], "material_instance": "jar"},
+								"down": {"uv": [4, 16], "uv_size": [6, -6], "material_instance": "jar"}
+							}
+						}
+					]
+				},
+				{
+					"name": "sap_500ml",
+					"parent": "root2",
+					"pivot": [0, 4.65, 4],
+					"cubes": [
+						{
+							"origin": [-3, 1.65, 1],
+							"size": [6, 6, 6],
+							"inflate": -0.55,
+							"uv": {
+								"north": {"uv": [10, 4], "uv_size": [6, 6], "material_instance": "sap"},
+								"east": {"uv": [10, 10], "uv_size": [-6, 6], "material_instance": "sap"},
+								"south": {"uv": [10, 10], "uv_size": [6, 6], "material_instance": "sap"},
+								"west": {"uv": [4, 10], "uv_size": [6, 6], "material_instance": "sap"},
+								"up": {"uv": [4, 4], "uv_size": [6, 6], "material_instance": "sap"}
+							}
+						}
+					]
+				},
+				{
+					"name": "sap_250ml",
+					"parent": "root2",
+					"pivot": [0, 4.65, 4],
+					"cubes": [
+						{
+							"origin": [-3, 1.65, 1],
+							"size": [6, 4, 6],
+							"inflate": -0.55,
+							"uv": {
+								"north": {"uv": [10, 4], "uv_size": [6, 4], "material_instance": "sap"},
+								"east": {"uv": [10, 10], "uv_size": [-6, 4], "material_instance": "sap"},
+								"south": {"uv": [10, 10], "uv_size": [6, 4], "material_instance": "sap"},
+								"west": {"uv": [4, 10], "uv_size": [6, 4], "material_instance": "sap"},
+								"up": {"uv": [4, 4], "uv_size": [6, 6], "material_instance": "sap"},
+								"down": {"uv": [0, 0], "uv_size": [0, 0]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,21 @@
+{
+    "format_version": "1.26.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "5fs_br:palm_door",
+            "menu_category": {
+                "category": "construction"
+            }
+        },
+        "components": {
+            "minecraft:block_placer": {
+                "block": "5fs_br:palm_door",
+                "replace_block_item": true
+            },
+            "minecraft:fuel": {
+                "duration": 3.0
+            },
+            "minecraft:icon": "5fs_br:palm_door"
+        }
+    }
+}

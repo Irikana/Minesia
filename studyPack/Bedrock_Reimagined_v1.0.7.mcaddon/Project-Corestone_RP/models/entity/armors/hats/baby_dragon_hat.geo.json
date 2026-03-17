@@ -1,0 +1,43 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.baby_dragon_hat",
+				"texture_width": 32,
+				"texture_height": 32,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "baby_dragon_hat",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "hat",
+					"parent": "baby_dragon_hat",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{"origin": [-5.5, 32.5, -3.5], "size": [4, 3, 4], "uv": [0, 8]},
+						{"origin": [-1.5, 32.5, 0.5], "size": [6, 3, 4], "uv": [0, 0]},
+						{"origin": [-1.5, 34.5, 4.5], "size": [6, 0, 4], "pivot": [1.5, 34.5, 4.5], "rotation": [-45, 0, 0], "uv": [9, 15]},
+						{"origin": [-0.5, 33.73463, -3.34776], "size": [6, 0, 4], "pivot": [2.5, 33.73463, -1.34776], "rotation": [-157.5, 0, 0], "uv": [9, 15]},
+						{"origin": [-1.5, 30.5, 4.5], "size": [2, 3, 1], "uv": [0, 22]},
+						{"origin": [1.5, 30.5, 4.5], "size": [2, 3, 1], "uv": [7, 22]},
+						{"origin": [-1, 35.5, 2], "size": [2, 1, 1], "uv": [21, 5]},
+						{"origin": [-3.5, 35.5, -2], "size": [2, 1, 1], "pivot": [-2.5, 36, -1.5], "rotation": [0, -90, 0], "uv": [21, 5]},
+						{"origin": [-5.5, 35.5, -2], "size": [2, 1, 1], "pivot": [-4.5, 36, -1.5], "rotation": [0, -90, 0], "uv": [21, 5]},
+						{"origin": [2, 35.5, 2], "size": [2, 1, 1], "uv": [14, 22]},
+						{"origin": [6, 32.5, 2], "size": [2, 1, 1], "pivot": [7, 33, 2.5], "rotation": [0, 0, 90], "uv": [14, 22]},
+						{"origin": [6, 29.5, 2], "size": [1, 1, 1], "pivot": [7, 30, 2.5], "rotation": [0, 0, 90], "uv": [14, 22]},
+						{"origin": [-4.5, 32.5, 0.5], "size": [3, 2, 3], "uv": [0, 16]},
+						{"origin": [4.5, 29.5, 1.5], "size": [2, 5, 2], "uv": [17, 8]},
+						{"origin": [-4.5, 32.5, -5.5], "size": [2, 2, 2], "uv": [21, 0]}
+					]
+				}
+			]
+		}
+	]
+}

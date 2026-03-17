@@ -1,0 +1,98 @@
+{
+  "format_version": "1.21.20",
+  "minecraft:template_pool": {
+    "description": {
+      "identifier": "mike:ew7x4"
+    },
+    "elements": [
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "5fs_br/crystal_mineshaft/ewHall_CC",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 2
+      },
+	  {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "5fs_br/crystal_mineshaft/ewHall2_CC",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 4
+      },
+	  {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "5fs_br/crystal_mineshaft/ewHall3_CC",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 4
+      },
+	  {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "5fs_br/crystal_mineshaft/ewHall4_CC",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 2
+      },
+	  {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "5fs_br/crystal_mineshaft/ewHall5_CC",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 4
+      },
+	  {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "5fs_br/crystal_mineshaft/ewUp_CC",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 2
+      },
+	  {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "5fs_br/crystal_mineshaft/ewUp2_CC",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 1
+      },
+	  {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "5fs_br/crystal_mineshaft/ewUp3_CC",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 1
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "5fs_br/crystal_mineshaft/ewRoom_CC",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 2
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "5fs_br/crystal_mineshaft/ewRoom2_CC",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 2
+      },
+	  {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "5fs_br/crystal_mineshaft/esRoom_CC",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 2
+      }
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "5fs_br:jay_bird",
+            "materials": {
+                "default": "parrot"
+            },
+            "textures": {
+                "bird_0": "textures/entity/mobs/birds/jay_bird_0",
+                "bird_1": "textures/entity/mobs/birds/jay_bird_1",
+                "bird_2": "textures/entity/mobs/birds/jay_bird_2"
+            },
+            "geometry": {
+                "default": "geometry.jay_bird"
+            },
+            "scripts": {
+                "pre_animation": [
+                    "t.variant = q.property('5fs_br:variant');",
+                    "v.index = t.variant == 0 ? 0 : t.variant == 1 ? 1 : t.variant == 2 ? 2 : 0;"
+                ],
+                "animate": [
+                    "root_controller"
+                ]
+            },
+            "animations": {
+                "look_at_target": "animation.common.look_at_target",
+                "idle": "animation.jay_bird.idle",
+                "walk": "animation.jay_bird.walk",
+                "fly": "animation.jay_bird.fly",
+                "chirp": "animation.jay_bird.chirp",
+                "chirp_transitioner": "animation.jay_bird.chirp_transitioner",
+                "death": "animation.jay_bird.death",
+                "general_controller": "controller.animation.bird.general",
+                "chirp_controller": "controller.animation.bird.chirp",
+                "root_controller": "controller.animation.bird.root"
+            },
+            "render_controllers": [
+                "controller.render.bird"
+            ],
+            "spawn_egg": {
+                "texture": "5fs_br:jay_bird_spawn_egg"
+            }
+        }
+    }
+}

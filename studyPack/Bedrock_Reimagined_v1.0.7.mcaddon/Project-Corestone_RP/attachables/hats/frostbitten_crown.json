@@ -1,0 +1,25 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:attachable": {
+        "description": {
+            "identifier": "5fs_br:frostbitten_crown",
+            "materials": {
+                "default": "armor",
+                "enchanted": "armor_enchanted"
+            },
+            "textures": {
+                "default": "textures/entity/hats/frostbitten_crown",
+                "enchanted": "textures/misc/enchanted_actor_glint"
+            },
+            "geometry": {
+                "default": "geometry.frostbitten_crown"
+            },
+            "scripts": {
+                "parent_setup": "variable.head_layer_visible = 0.0;"
+            },
+            "render_controllers": [
+                "controller.render.armor"
+            ]
+        }
+    }
+}

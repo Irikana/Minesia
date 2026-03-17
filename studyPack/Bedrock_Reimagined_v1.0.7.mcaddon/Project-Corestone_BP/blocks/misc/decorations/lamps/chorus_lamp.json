@@ -1,0 +1,40 @@
+{
+  "format_version": "1.26.0",
+	"minecraft:block": {
+    "description": {
+      "identifier": "5fs_br:chorus_lamp",
+      "menu_category": {
+        "category": "items"
+      }
+    },
+    "components": {
+      "minecraft:geometry": "minecraft:geometry.full_block",
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "chorus_lamp",
+          "face_dimming": false,
+          "ambient_occlusion": false
+        },
+        "up": {
+          "face_dimming": false,
+          "ambient_occlusion": false,
+			    "texture": "chorus_lamp_top"
+				},
+				"down": {
+          "face_dimming": false,
+          "ambient_occlusion": false,
+			    "texture": "chorus_lamp_top"
+			  }
+      },
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 0.3
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 0.3
+      },
+      "minecraft:light_emission": 15,
+      "minecraft:map_color": "#D8B7DD",
+      "tag:minecraft:is_pickaxe_item_destructible": {}
+    }
+  }
+}

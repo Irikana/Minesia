@@ -1,0 +1,40 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.witch_ghost": {
+      "initial_state": "fly",
+      "states": {
+        "fly": {
+          "animations": [ "fly" ],
+          "transitions": [
+            { "attack": "query.is_alive && v.attack_time > 0.0" },
+            { "death": "!query.is_alive" },
+            { "idle": "query.is_on_ground && query.is_alive" }
+          ],
+          "blend_transition": 0.15
+        },
+        "idle": {
+          "animations": [ "idle" ],
+          "transitions": [
+            { "fly": "query.is_alive && !query.is_on_ground" },
+            { "attack": "query.is_alive && v.attack_time > 0.0" },
+            { "death": "!query.is_alive" }
+          ],
+          "blend_transition": 0.2
+        },
+        "attack": {
+          "animations": [ "attack" ],
+          "transitions": [
+            { "fly": "query.is_alive && !query.is_on_ground && q.any_animation_finished" },
+            { "idle": "query.is_alive && query.is_on_ground && q.any_animation_finished" },
+            { "death": "!query.is_alive" }
+          ],
+          "blend_transition": 0.1
+        },
+        "death": {
+          "animations": [ "death" ]
+        }
+      }
+    }
+  }
+}

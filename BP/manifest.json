@@ -17,7 +17,7 @@
 		"version": [
 			0,
 			0,
-			13
+			14
 		]
 	},
 	"modules": [
@@ -44,6 +44,10 @@
 				{
 					"type": "number",
 					"identifier": "minesia:stamina"
+				},
+				{
+					"type": "number",
+					"identifier": "minesia:critical_rate"
 				}
 			]
 		}
@@ -92,7 +96,7 @@
 			"version": [
 				0,
 				0,
-				13
+				14
 			]
 		}
 	]

@@ -1,0 +1,47 @@
+{
+  "format_version": "1.20.0",
+  "render_controllers": {
+    "controller.render.cape_of_pig": {
+      "geometry": "geometry.default",
+      "arrays": {
+        "textures": {
+          "array.textures": [
+            "Texture.pig0",
+            "Texture.pig1",
+            "Texture.pig2",
+            "Texture.pig3",
+            "Texture.pig4",
+            "Texture.pig5",
+            "Texture.pig6",
+            "Texture.pig7",
+            "Texture.pig8",
+            "Texture.pig9",
+            "Texture.pig10",
+            "Texture.pig11",
+            "Texture.pig12",
+            "Texture.pig13",
+            "Texture.pig14",
+            "Texture.pig15",
+            "Texture.pig16",
+            "Texture.pig17",
+            "Texture.pig18",
+            "Texture.pig19",
+            "Texture.pig20",
+            "Texture.pig21",
+            "Texture.pig22",
+            "Texture.pig23"
+          ]
+        }
+      },
+      "materials": [
+        {
+          "*": "variable.is_enchanted?material.enchanted:material.default"
+        }
+      ],
+      "textures": [
+        "temp.life_time=query.life_time*8;return array.textures[temp.life_time];",
+        "texture.enchanted"
+      ]
+    }
+  }
+}

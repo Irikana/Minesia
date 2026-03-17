@@ -1,0 +1,22 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:scatter_feature": {
+    "description": {
+      "identifier": "5fs_br:warm/desert/scatter_coconut_feature"
+    },
+    "iterations": 20,
+    "x": {
+      "distribution": "uniform",
+      "extent": [ -1, 2 ]
+    },
+    "y": {
+      "distribution": "uniform",
+      "extent": [ 5, 10 ]
+    },
+    "z": {
+      "distribution": "uniform",
+      "extent": [ -1, 2 ]
+    },
+    "places_feature": "5fs_br:warm/desert/coconut_feature"
+  }
+}

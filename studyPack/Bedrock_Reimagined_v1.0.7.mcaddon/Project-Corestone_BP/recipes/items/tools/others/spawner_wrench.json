@@ -1,0 +1,35 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "5fs_br:spawner_wrench"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " cc",
+      " m ",
+      "m  "
+    ],
+    "key": {
+      "c": {
+        "item": "5fs_br:compact_iron_ingot"
+      },
+      "m": {
+        "item": "5fs_br:compact_meteorite_ingot"
+      }
+    },
+    "result": {
+      "item": "5fs_br:spawner_wrench"
+    },
+    "unlock": [
+      {
+        "item": "5fs_br:compact_iron_ingot"
+      },
+      {
+        "item": "5fs_br:compact_meteorite_ingot"
+      }
+    ]
+  }
+}

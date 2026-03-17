@@ -1,0 +1,31 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "5fs_br:maple_leaf_pile",
+			"materials": {
+				"default": "arrow"
+			},
+			"textures": {
+				"default": "textures/entity/misc/maple_leaf_pile"
+			},
+			"geometry": {
+				"default": "geometry.maple_leaf_pile"
+			},
+			"animations": {
+				"move": "animation.maple_leaf_pile.animation"
+			},
+			"scripts": {
+				"animate": [
+					"move"
+				]
+			},
+			"render_controllers": [
+				"controller.render.no_hurt"
+			],
+     "spawn_egg": {
+       "texture": "5fs_br:maple_leaf_pile"
+     }
+		}
+	}
+}

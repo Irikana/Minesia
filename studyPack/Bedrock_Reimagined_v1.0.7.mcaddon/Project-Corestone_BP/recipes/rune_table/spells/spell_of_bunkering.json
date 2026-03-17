@@ -1,0 +1,36 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "5fs_br:spell_of_bunkering"
+		},
+		"tags": [
+			"runetable"
+		],
+		"key": {
+			"A": {
+				"item": "5fs_br:rune_of_shields"
+			},
+			"B": {
+				"item": "5fs_br:basic_scroll"
+			},
+			"C": {
+				"item": "5fs_br:rune_of_beasts"
+			},
+			"D": {
+				"item": "5fs_br:rune_of_earth"
+			}
+		},
+		"pattern": [
+			" D ",
+			"ABC",
+			"   "
+		],
+		"result": {
+			"item": "5fs_br:spell_of_bunkering"
+		},
+		"unlock": {
+			"context": "AlwaysUnlocked"
+		}
+	}
+}

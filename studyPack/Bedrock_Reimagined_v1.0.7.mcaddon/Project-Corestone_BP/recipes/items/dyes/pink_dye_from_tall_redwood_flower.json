@@ -1,0 +1,24 @@
+{
+    "format_version": "1.20.80",
+    "minecraft:recipe_shapeless": {
+        "description": {
+            "identifier": "5fs_br:pink_dye_from_tall_redwood_flower"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "ingredients": [
+            {
+                "item": "5fs_br:tall_redwood_flower"
+            }
+        ],
+        "result": {
+            "item": "minecraft:pink_dye"
+        },
+        "unlock": [
+            {
+                "item": "5fs_br:tall_redwood_flower"
+            }
+        ]
+    }
+}

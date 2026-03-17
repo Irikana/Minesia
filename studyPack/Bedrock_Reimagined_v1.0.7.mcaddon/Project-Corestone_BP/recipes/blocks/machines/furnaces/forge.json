@@ -1,0 +1,39 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "5fs_br:forge"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "ISI",
+      "STS",
+      "CCC"
+    ],
+    "key": {
+      "C": {
+        "item": "minecraft:smooth_stone"
+      },
+      "S": {
+        "item": "5fs_br:compact_coal"
+      },
+      "T": {
+        "item": "minecraft:blast_furnace"
+      },
+      "I": {
+        "item": "5fs_br:compact_iron_ingot"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:blast_furnace",
+        "data": 0
+      }
+    ],
+    "result": {
+      "item": "5fs_br:forge"
+    }
+  }
+}

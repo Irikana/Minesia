@@ -1,0 +1,21 @@
+{
+    "format_version": "1.26.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "5fs_br:villager_statue",
+            "menu_category": {
+                "category": "items"
+            }
+        },
+        "components": {
+            "minecraft:icon": "5fs_br:villager_statue",
+            "minecraft:block_placer": {
+                "block": "5fs_br:villager_statue",
+                "replace_block_item": true
+            },
+            "minecraft:display_name": {
+                "value": "tile.5fs_br:villager_statue.name"
+            }
+        }
+    }
+}

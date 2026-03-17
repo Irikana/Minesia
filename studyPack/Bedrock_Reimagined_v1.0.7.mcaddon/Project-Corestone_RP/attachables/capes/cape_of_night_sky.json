@@ -1,0 +1,35 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:attachable": {
+        "description": {
+            "identifier": "5fs_br:cape_of_night_sky",
+            "materials": {
+                "default": "armor",
+                "enchanted": "armor_enchanted"
+            },
+            "textures": {
+                "sky_night1":  "textures/entity/gears/capes/sky_night/sky_night1",
+                "sky_night2":  "textures/entity/gears/capes/sky_night/sky_night2",
+                "sky_night3":  "textures/entity/gears/capes/sky_night/sky_night3",
+                "sky_night4":  "textures/entity/gears/capes/sky_night/sky_night4",
+                "sky_night5":  "textures/entity/gears/capes/sky_night/sky_night5",
+                "enchanted": "textures/misc/enchanted_actor_glint"
+            },
+            "geometry": {
+                "default": "geometry.custom_cape"
+            },
+            "animations": {
+                "cape": "animation.custom_cape"
+            },
+            "scripts": {
+                "parent_setup": "variable.chest_layer_visible = 0.0;",
+                "animate": [
+                    "cape"
+                ]
+            },
+            "render_controllers": [
+                "controller.render.cape_of_sky_night"
+            ]
+        }
+    }
+}

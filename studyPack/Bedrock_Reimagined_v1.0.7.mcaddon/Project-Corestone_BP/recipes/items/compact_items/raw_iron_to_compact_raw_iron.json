@@ -1,0 +1,30 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "5fs_br:raw_iron_to_compact_raw_iron"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "   ",
+      " RR",
+      " RR"
+    ],
+    "key": {
+      "R": {
+        "item": "minecraft:raw_iron"
+      }
+    },
+    "result": {
+      "item": "5fs_br:compact_raw_iron",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:raw_iron"
+      }
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.squirrel.eat_acorn": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "eating": "q.is_item_name_any('slot.weapon.mainhand', 0, '5fs_br:acorn') && !q.is_avoiding_mobs && !q.has_target && !q.is_in_water"
+                        }
+                    ]
+                },
+                "eating": {
+                    "animations": [
+                        "eating_acorn"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!q.is_item_name_any('slot.weapon.mainhand', 0, '5fs_br:acorn') || q.is_avoiding_mobs || q.has_target && !q.is_in_water"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:scatter_feature": {
+    "description": {
+      "identifier": "5fs_br:deadly_sea/scatter_dead_seagrass_feature"
+    },
+    "iterations": 50,
+    "x": {
+      "distribution": "gaussian",
+      "extent": [ -8, 8 ]
+    },
+    "y": "query.heightmap(variable.worldx, variable.worldz)",
+    "z": {
+      "distribution": "gaussian",
+      "extent": [ -8, 8 ]
+    },
+    "coordinate_eval_order": "zxy",
+    "places_feature": "5fs_br:deadly_sea/dead_seagrass_feature"
+  }
+}

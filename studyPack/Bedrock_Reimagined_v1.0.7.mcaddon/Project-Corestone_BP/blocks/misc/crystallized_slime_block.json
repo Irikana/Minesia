@@ -1,0 +1,44 @@
+{
+    "format_version": "1.26.0",
+	"minecraft:block": {
+        "description": {
+            "identifier": "5fs_br:crystallized_slime_block",
+            "menu_category": {
+                "category": "construction"
+            }
+        },
+        "components": {
+            "minecraft:geometry": "geometry.slime_block",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "crystallized_slime_block",
+                    "render_method": "blend",
+                    "ambient_occlusion": false,
+                    "face_dimming": false
+                }
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 0
+            },
+            "minecraft:entity_fall_on": {
+                "min_fall_distance": 0
+            },
+            "minecraft:tick": {
+                "interval_range": [
+                    0,
+                    0
+                ]
+            },
+            "minecraft:friction": 0.2,
+            "minecraft:map_color": "#A8E6A3",
+            "minecraft:movable": {
+                "movement_type": "push_pull",
+                "sticky": "same"
+            },
+            "5fs_br:slime_block": {}
+        }
+    }
+}

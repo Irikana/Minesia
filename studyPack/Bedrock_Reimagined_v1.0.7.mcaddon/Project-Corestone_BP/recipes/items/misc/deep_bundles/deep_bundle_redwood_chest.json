@@ -1,0 +1,36 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "5fs_br:deep_bundle_redwood_chest"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "LZL",
+      "ZGZ",
+      "LZL"
+    ],
+    "key": {
+      "Z": {
+        "item": "5fs_br:moose_hide"
+      },
+      "G": {
+        "item": "5fs_br:redwood_chest"
+      },
+      "L": {
+        "item": "minecraft:leather"
+      }
+    },
+    "result": {
+      "item": "5fs_br:deep_bundle",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "5fs_br:moose_hide"
+      }
+    ]
+  }
+}

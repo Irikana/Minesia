@@ -1,0 +1,511 @@
+{
+	"namespace": "forge",
+	"content_root_forge":{
+		"type":"panel",
+		"$custom_background_texture":"textures/gui/inventory/furnace_backgrounds/forge",
+		"$inventory_label":"container.forge.inventory",
+		"$type_label":"ui.forge",
+		"controls":[
+			{
+				"main@forge.main":{}
+			},
+			{
+				"background@forge.background":{
+					"layer":2,
+					"$custom_background_texture":"textures/gui/inventory/furnace_backgrounds/forge"
+				}
+			}
+		]
+	},
+    "content_root_dragon_forge":{
+		"type":"panel",
+		"$custom_background_texture":"textures/gui/inventory/furnace_backgrounds/dragon_forge",
+		"$inventory_label":"container.dragon_forge.inventory",
+		"$type_label":"ui.dragon_forge",
+		
+		"controls":[
+			{
+				"main@forge.main":{}
+			},
+			{
+				"background@forge.background":{
+					"layer":2,
+					"$custom_background_texture":"textures/gui/inventory/furnace_backgrounds/dragon_forge"
+				}
+			}
+		]
+	},
+	"main": {
+		"type": "panel",
+		"controls": [
+			{
+				"container_gamepad_helpers@common.container_gamepad_helpers": {}
+			},
+			{
+				"selected_item_details_factory@common.selected_item_details_factory": {}
+			},
+			{
+				"item_lock_notification_factory@common.item_lock_notification_factory": {}
+			},
+			{
+				"root_panel@common.root_panel": {
+					"layer": 1,
+					"controls": [
+						{
+							"chest_panel": {
+								"type": "panel",
+								"layer": 5,
+								"controls": [
+									{
+										"small_chest_panel_top_half@forge.top_half": {}
+									},
+									{
+										"inventory_panel_bottom_half_with_label@forge.inventory_panel_bottom_half_with_label": {}
+									},
+									{
+										"hotbar_grid@forge.hotbar_grid_template": {}
+									},
+									{
+										"inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {}
+									},
+									{
+										"flying_item_renderer@common.flying_item_renderer": {
+											"layer": 15
+										}
+									}
+								]
+							}
+						},
+						{
+							"inventory_selected_icon_button@common.inventory_selected_icon_button": {}
+						},
+						{
+							"gamepad_cursor@common.gamepad_cursor_button": {}
+						}
+					]
+				}
+			}
+		]
+	},
+	"background": {
+		"type": "image",
+		"texture": "$custom_background_texture",
+		"layer": -10,
+		"uv_size": [
+			234,
+			254
+		],
+                "size": [
+			234,
+			254
+                ],
+                "offset": [
+                  10,
+                  16
+                ],
+		"controls": [
+			{
+				"close@common.close_button": {
+					"layer": 3,
+					"offset": [-3, 9]
+				}
+			}
+		]
+	},
+	"inventory_panel_bottom_half_with_label@forge.inventory_panel_bottom_half": {
+		"anchor_from": "bottom_left",
+		"anchor_to": "bottom_left",
+		"size": [
+			"100%",
+			93
+		],
+		"controls": [
+			{
+				"inventory_panel@forge.inventory_panel": {}
+			},
+			{
+				"inventory_label@common.section_heading_label": {
+					"anchor_from": "top_left",
+					"anchor_to": "top_left",
+					"offset": [
+						7,
+						3
+					],
+					"layer": 2,
+					"color": [
+						1,
+						1,
+						1
+					],
+					"$inventory_label|default":"container.forge.inventory",
+					"text": "$inventory_label"
+				}
+			}
+		]
+	},
+	"inventory_panel_bottom_half": {
+		"type": "panel",
+		"size": [
+			"100%",
+			"50%"
+		],
+		"anchor_from": "left_middle",
+		"anchor_to": "top_left",
+		"controls": [
+			{
+				"inventory_panel@forge.inventory_panel": {}
+			}
+		]
+	},
+	"inventory_panel": {
+		"type": "panel",
+		"size": [
+			88,
+			83
+		],
+		"anchor_from": "bottom_middle",
+		"anchor_to": "bottom_middle",
+		"controls": [
+			{
+				"inventory_grid": {
+					"type": "grid",
+					"size": [
+						162,
+						54
+					],
+					"anchor_from": "bottom_middle",
+					"anchor_to": "bottom_middle",
+					"offset": [
+						0,
+						-26
+					],
+					"grid_dimensions": [
+						9,
+						3
+					],
+					"grid_item_template": "forge.grid_item_for_inventory",
+					"collection_name": "inventory_items"
+				}
+			}
+		]
+	},
+	"hotbar_grid_template": {
+		"type": "grid",
+		"size": [
+			162,
+			18
+		],
+		"anchor_from": "bottom_middle",
+		"anchor_to": "bottom_middle",
+		"offset": [
+			0,
+			-5
+		],
+		"grid_dimensions": [
+			9,
+			1
+		],
+		"grid_item_template": "forge.grid_item_for_hotbar",
+		"collection_name": "hotbar_items"
+	},
+	"grid_item_for_inventory@forge.container_item": {
+		"$item_collection_name": "inventory_items"
+	},
+	"grid_item_for_hotbar@smelter.container_item": {
+		"$item_collection_name": "hotbar_items"
+	},
+	"container_item@common.container_item": {
+		"$background_images": "forge.cell_image"
+	},
+	"furnace_label": {
+		"type": "label",
+		"offset": [
+			-22,
+			-13
+		],
+		"anchor_from": "top_middle",
+		"anchor_to": "top_middle",
+		"$type_label|default":"ui.forge",
+		"text": "$type_label",
+		"color": [
+			1,
+			1,
+			1
+		],
+		"layer": 2
+	},
+	"input_grid_panel": {
+		"type": "panel"
+	},
+	"cell_image": {
+		"type": "image",
+		"texture": "textures/ui/invisible",
+		"layer": 1
+	},
+	"furnace_grid": {
+		"type": "stack_panel",
+		"$index": 0,
+		"$collection_name": "collection",
+		"collection_name": "$collection_name",
+		"$slot_size": [
+			18,
+			18
+		],
+		"controls": [
+			{
+				"left_top@chest.chest_grid_item": {
+					"ignored": false,
+					"$cell_image_size": "$slot_size",
+					"size": "$slot_size",
+					"collection_index": "$index"
+				}
+			}
+		]
+	},
+	"furnace_screen_slots": {
+		"type": "panel",
+		"size": [
+			56,
+			56
+		],
+		"anchor_from": "top_middle",
+		"anchor_to": "top_middle",
+		"controls": [
+			{
+				"material_input@forge.furnace_grid": {
+					"$collection_name": "container_items",
+					"$index": 1,
+					"offset": [
+						-26,
+						-24.3
+					],
+					"$background_images": "forge.cell_image"
+				}
+			},
+            {
+				"material_input@forge.furnace_grid": {
+					"$collection_name": "container_items",
+					"$index": 2,
+					"offset": [
+						6,
+						-24.5
+					],
+					"$background_images": "forge.cell_image"
+				}
+			},
+			{
+				"fuel_input@forge.furnace_grid": {
+					"$collection_name": "container_items",
+					"$index": 0,
+					"offset": [
+						-9.2,
+						15
+					],
+					"$background_images": "forge.cell_image"
+				}
+			},
+			{
+				"output@forge.furnace_grid": {
+					"$collection_name": "container_items",
+					"$index": 3,
+					"offset": [
+						53,
+						-8
+					],
+					"$slot_size": [
+						26,
+						26
+					],
+					"$background_images": "forge.cell_image"
+				}
+			},
+			{
+				"progress@forge.item_data": {
+					"$name": "progress",
+					"anchor_from": "top_left",
+					"anchor_to": "top_left",
+					"offset": [
+						15,
+						7
+					]
+				}
+			},
+			{
+				"burning@forge.item_data": {
+					"$name": "burning",
+					"anchor_from": "top_left",
+					"anchor_to": "top_left",
+					"offset": [
+						-7.1,
+						18
+					]
+				}
+			}
+		]
+	},
+	"item_data": {
+		"type": "stack_panel",
+		"factory": {
+			"name": "buttons",
+			"control_name": "('smelter.' + $name)"
+		},
+		"collection_name": "container_items",
+		"bindings": [
+			{
+				"binding_name": "(#zero + 20)",
+				"binding_name_override": "#collection_length"
+			}
+		]
+	},
+	"burning": {
+		"type": "panel",
+		"size": [
+			0,
+			1
+		],
+		"anchor_to": "bottom_left",
+		"anchor_from": "bottom_left",
+		"controls": [
+			{
+				"clipper": {
+					"type": "panel",
+					"clips_children": true,
+					"size": [
+						16,
+						1
+					],
+					"offset": [
+						-1,
+						9
+					],
+					"anchor_to": "bottom_left",
+					"anchor_from": "bottom_left",
+					"controls": [
+						{
+							"image": {
+								"anchor_to": "bottom_left",
+								"anchor_from": "bottom_left",
+								"type": "image",
+    							"size": [ 16, 16 ],
+								"texture": "textures/gui/inventory/Furnace_Fuel_Full"
+							}
+						}
+					],
+					"bindings": [
+						{
+							"binding_name": "#hover_text",
+							"binding_name_override": "#burn",
+							"binding_type": "collection",
+							"binding_collection_name": "container_items"
+						},
+						{
+							"binding_type": "view",
+							"source_property_name": "(#burn - 'ui:§burn' - '§o' - '§f' )",
+							"target_property_name": "#amount"
+						},
+						{
+							"binding_type": "view",
+							"source_property_name": "(not(#burn - 'ui:§burn' = #burn))",
+							"target_property_name": "#visible"
+						},
+						{
+							"binding_type": "view",
+							"source_property_name": "#amount",
+							"target_property_name": "#size_binding_y"
+						}
+					]
+				}
+			}
+		]
+	},
+	"progress": {
+		"type": "panel",
+		"size": [
+			1,
+			0
+		],
+		"anchor_to": "top_left",
+		"anchor_from": "top_left",
+		"controls": [
+			{
+				"clipper": {
+					"type": "panel",
+					"clips_children": true,
+					"size": [
+						1,
+						17
+					],
+					"offset": [
+						-1,
+						8
+					],
+					"anchor_to": "top_left",
+					"anchor_from": "top_left",
+					"controls": [
+						{
+							"image": {
+								"anchor_to": "top_left",
+								"anchor_from": "top_left",
+								"type": "image",
+								"size": [
+									22,
+									16
+								],
+								"texture": "textures/gui/inventory/Furnace_Arrow_Full"
+							}
+						}
+					],
+					"bindings": [
+						{
+							"binding_name": "#hover_text",
+							"binding_name_override": "#progress",
+							"binding_type": "collection",
+							"binding_collection_name": "container_items"
+						},
+						{
+							"binding_type": "view",
+							"source_property_name": "(#progress - 'ui:§prog' - '§o' - '§f' )",
+							"target_property_name": "#amount"
+						},
+						{
+							"binding_type": "view",
+							"source_property_name": "(not(#progress - 'ui:§prog' = #progress))",
+							"target_property_name": "#visible"
+						},
+						{
+							"binding_type": "view",
+							"source_property_name": "#amount",
+							"target_property_name": "#size_binding_x"
+						}
+					]
+				}
+			}
+		]
+	},
+	"top_half": {
+		"type": "panel",
+		"size": [
+			"100%",
+			"50% - 12px"
+		],
+		"offset": [
+			0,
+			12
+		],
+		"anchor_to": "top_left",
+		"anchor_from": "top_left",
+		"controls": [
+			{
+				"chest_label@forge.furnace_label": {}
+			},
+			{
+				"grid@forge.furnace_screen_slots": {
+					"offset": [
+						5,
+						10
+					]
+				}
+			}
+		]
+	}
+}

@@ -1,0 +1,122 @@
+{
+    "format_version": "1.26.0",
+    "minecraft:block": {
+        "description": {
+            "identifier": "5fs_br:fountain",
+            "menu_category": {
+                "category": "items"
+            },
+            "states": {
+                "5fs_br:powered": [
+                    false,
+                    true
+                ]
+            }
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('5fs_br:powered')",
+                "components": {
+                    "minecraft:tick": {
+                        "looping": true,
+                        "interval_range": [
+                            1,
+                            2
+                        ]
+                    },
+                    "5fs_br:fountain": {},
+                    "5fs_br:detect_redstone": {}
+                }
+            }
+        ],
+        "components": {
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "fountain_bottom"
+                },
+                "fountain_bottom_up": {
+                    "texture": "fountain_bottom_up"
+                },
+                "fountain_leg": {
+                    "texture": "fountain_leg"
+                },
+                "fountain_side": {
+                    "texture": "fountain_side"
+                },
+                "fountain_top_down": {
+                    "texture": "fountain_top_down"
+                },
+                "fountain_top": {
+                    "texture": "fountain_top"
+                },
+                "fountain_water": {
+                    "texture": "fountain_water",
+                    "tint_method": "water"
+                }
+            },
+            "minecraft:geometry": "geometry.fountain",
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 5,
+                "item_specific_speeds": [
+                    {
+                        "item": {
+                            "tags": "query.all_tags('minecraft:is_pickaxe')"
+                        },
+                        "destroy_speed": 1.5
+                    }
+                ]
+            },
+            "minecraft:map_color": "#808080",
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 6
+            },
+            "minecraft:redstone_conductivity": {
+                "redstone_conductor": true
+            },
+            "minecraft:liquid_detection": {
+                "detection_rules": [
+                    {
+                        "can_contain_liquid": true,
+                        "liquid_type": "water",
+                        "on_liquid_touches": "blocking"
+                    }
+                ]
+            },
+            "minecraft:collision_box": {
+                "origin": [
+                    -8,
+                    0,
+                    -8
+                ],
+                "size": [
+                    16,
+                    24,
+                    16
+                ]
+            },
+            "minecraft:selection_box": {
+                "origin": [
+                    -6,
+                    0,
+                    -6
+                ],
+                "size": [
+                    12,
+                    16,
+                    12
+                ]
+            },
+            "minecraft:precipitation_interactions": {
+                "precipitation_behavior": "obstruct_rain"
+            },
+            "minecraft:connection_rule": {
+                "accepts_connections_from": "none"
+            },
+            "minecraft:redstone_consumer": {
+                "min_power": 0
+            },
+            "5fs_br:detect_redstone": {},
+            "tag:minecraft:is_pickaxe_item_destructible": {}
+        }
+    }
+}

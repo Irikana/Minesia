@@ -1,0 +1,32 @@
+{
+    "format_version": "1.21.60",
+    "minecraft:single_block_feature": {
+        "description": {
+            "identifier": "5fs_br:vegetation/log_moss_carpet"
+        },
+        "places_block": "minecraft:moss_carpet",
+        "enforce_placement_rules": false,
+        "enforce_survivability_rules": false,
+        "may_replace": [
+            "minecraft:air",
+            "minecraft:leaf_litter"
+        ],
+        "may_attach_to": {
+            "min_sides_must_attach": 1,
+            "bottom": [
+                {
+                    "name": "minecraft:birch_log",
+                    "states": {
+                      "pillar_axis": "x"
+                    }
+                },
+                {
+                    "name": "minecraft:birch_log",
+                    "states": {
+                        "pillar_axis": "z"
+                    }
+                }
+            ]
+        }
+    }
+}

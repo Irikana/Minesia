@@ -1,0 +1,13 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:scatter_feature": {
+        "description": {
+            "identifier": "5fs_br:beaver_lair/scatter_beaver_lair_south"
+        },
+        "places_feature": "5fs_br:beaver_lair/beaver_lair_south_feature",
+        "iterations": 1,
+        "x": -3,
+        "y": 0,
+        "z": -3
+    }
+}

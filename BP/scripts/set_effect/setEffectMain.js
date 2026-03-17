@@ -9,11 +9,12 @@ import * as setEffectsModule from "./set_effects.js";
 import { MinesiaLevelSystem } from "../minesia_level/level_system.js";
 import { MinesiaLevelEventSystem } from "../minesia_level/minesiaLevelEvent.js";
 import { debug } from "../debug/debugManager.js";
+import { getCachedEquipment, hasEquipmentChanged, getEquipmentStateHash, clearPlayerCache } from "./equipmentCache.js";
 
 import { processItemEffects } from "../custom_events/index.js";
 
-const lastPlayerEquipment = new Map();
 const playerProcessingCooldown = new Map();
+const playerLastEquipmentHash = new Map();
 
 export function handleAllPlayersSetEffects() {
     try {
@@ -31,16 +32,15 @@ export function handleAllPlayersSetEffects() {
             const equippable = player.getComponent('minecraft:equippable');
             if (!equippable) continue;
 
-            const currentEquipmentState = getEquipmentState(equippable);
-            const lastEquipmentState = lastPlayerEquipment.get(playerId);
+            const currentEquipment = getCachedEquipment(player);
+            const currentHash = getEquipmentStateHash(currentEquipment);
+            const lastHash = playerLastEquipmentHash.get(playerId);
 
-            const shouldProcess = currentEquipmentState !== lastEquipmentState;
+            const shouldProcess = currentHash !== lastHash;
 
             if (shouldProcess) {
                 debug.logWithTag("SetEffectMain", `${player.name}: 装备状态变化`);
-                debug.logWithTag("SetEffectMain", `旧状态: ${lastEquipmentState || 'none'}`);
-                debug.logWithTag("SetEffectMain", `新状态: ${currentEquipmentState}`);
-                lastPlayerEquipment.set(playerId, currentEquipmentState);
+                playerLastEquipmentHash.set(playerId, currentHash);
             }
 
             actionsModule.clearStates(player);
@@ -93,4 +93,16 @@ function processItemRules(player, equippable) {
             }
         }
     }
+}
+
+export function initializeSetEffectSystem() {
+    world.beforeEvents.playerLeave.subscribe((event) => {
+        if (event.player) {
+            clearPlayerCache(event.player.id);
+            playerProcessingCooldown.delete(event.player.id);
+            playerLastEquipmentHash.delete(event.player.id);
+        }
+    });
+    
+    debug.logWithTag("SetEffectMain", "套装效果系统初始化完成");
 }

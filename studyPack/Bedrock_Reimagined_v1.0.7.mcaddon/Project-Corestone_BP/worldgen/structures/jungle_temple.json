@@ -1,0 +1,40 @@
+{
+  "format_version": "1.21.20",
+  "minecraft:jigsaw": {
+    "description": { "identifier": "5fs_br:jungle_temple" },
+    "step": "surface_structures", 
+    "terrain_adaptation": "bury", 
+    "start_pool": "5fs_br:jungle_temple",
+    "biome_filters": [
+      {
+        "all_of": [
+          {
+            "any_of": [
+              {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "jungle"
+              }
+            ]
+          },
+          {
+            "test": "has_biome_tag",
+            "operator": "!=",
+            "value": "river"
+          },
+          {
+            "test": "has_biome_tag",
+            "operator": "!=",
+            "value": "ocean"
+          }
+        ]
+      }
+    ],
+    "max_depth": 7, 
+    "start_height": {
+        "type": "constant",
+        "value": { "absolute": -13 } 
+    },
+    "heightmap_projection": "world_surface"
+  }
+}

@@ -1,0 +1,623 @@
+{
+    "format_version": "1.21.90",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "5fs_br:squirrel",
+            "is_spawnable": true,
+            "is_summonable": true,
+            "is_experimental": false,
+            "properties": {
+                "5fs_br:variant": {
+                    "type": "enum",
+                    "values": [
+                        "default",
+                        "white",
+                        "red"
+                    ],
+                    "default": "default",
+                    "client_sync": true
+                }
+            },
+            "animations": {
+                "eating_acorn": "animation.squirrel.eat_acorn",
+                "eating_acorn_controller": "controller.animation.squirrel.eat_acorn"
+            },
+            "scripts": {
+                "animate": [
+                    "eating_acorn_controller"
+                ]
+            }
+        },
+        "component_groups": {
+            "5fs_br:on_ground": {
+                "minecraft:damage_sensor": {
+                    "triggers": [
+                        {
+                            "cause": "fall",
+                            "deals_damage": "no"
+                        }
+                    ]
+                },
+                "minecraft:navigation.generic": {
+                    "can_path_over_water": true
+                },
+                "minecraft:behavior.random_stroll": {
+                    "priority": 7,
+                    "speed_multiplier": 1
+                },
+                "minecraft:movement": {
+                    "value": 0.2
+                },
+                "minecraft:timer": {
+                    "time": [
+                        15,
+                        40
+                    ],
+                    "looping": true,
+                    "time_down_event": {
+                        "event": "5fs_br:search_for_leaves",
+                        "target": "self"
+                    }
+                },
+                "minecraft:equip_item": {},
+                "minecraft:behavior.equip_item": {
+                    "priority": 1
+                },
+                "minecraft:behavior.pickup_items": {
+                    "can_pickup_any_item": false,
+                    "priority": 1,
+                    "max_dist": 10,
+                    "goal_radius": 2,
+                    "speed_multiplier": 1
+                },
+                "minecraft:behavior.tempt": {
+                    "priority": 3,
+                    "speed_multiplier": 1,
+                    "items": [
+                        "5fs_br:acorn"
+                    ],
+                    "can_get_scared": true
+                }
+            },
+            "5fs_br:go_to_leaves": {
+                "minecraft:navigation.climb": {
+                    "can_path_over_water": true
+                },
+                "minecraft:can_climb": {},
+                "minecraft:behavior.melee_attack": {
+                    "priority": 0,
+                    "on_attack": {
+                        "event": "5fs_br:squirrel_leaves"
+                    },
+                    "reach_multiplier": 2,
+                    "track_target": true,
+                    "speed_multiplier": 1
+                },
+                "minecraft:ageable": {
+                    "duration": 30,
+                    "grow_up": {
+                        "event": "5fs_br:failed_to_find_leaves"
+                    }
+                },
+                "minecraft:behavior.timer_flag_1": {
+                    "cooldown_range": 0.25,
+                    "duration_range": 0,
+                    "on_end": {
+                        "event": "5fs_br:detect_blocking_block",
+                        "filters": {
+                            "test": "is_climbing",
+                            "value": true
+                        }
+                    }
+                },
+                "minecraft:behavior.timer_flag_2": {
+                    "cooldown_range": 0.25,
+                    "duration_range": 0,
+                    "on_end": {
+                        "event": "5fs_br:squirrel_leaves"
+                    }
+                },
+                "minecraft:behavior.random_stroll": {
+                    "priority": 2,
+                    "speed_multiplier": 1
+                }
+            },
+            "5fs_br:search_for_leaves": {
+                "minecraft:navigation.climb": {
+                    "can_path_over_water": true
+                },
+                "minecraft:can_climb": {},
+                "minecraft:behavior.melee_attack": {
+                    "priority": 0,
+                    "on_attack": {
+                        "event": "5fs_br:squirrel_leaves"
+                    },
+                    "reach_multiplier": 2,
+                    "track_target": true,
+                    "speed_multiplier": 1
+                },
+                "minecraft:ageable": {
+                    "duration": 30,
+                    "grow_up": {
+                        "event": "5fs_br:failed_to_find_leaves"
+                    }
+                },
+                "minecraft:timer": {
+                    "time": 0,
+                    "looping": true,
+                    "time_down_event": {
+                        "event": "5fs_br:squirrel_detect_leaves",
+                        "target": "self"
+                    }
+                },
+                "minecraft:behavior.timer_flag_1": {
+                    "cooldown_range": 0.25,
+                    "duration_range": 0,
+                    "on_end": {
+                        "event": "5fs_br:detect_blocking_block",
+                        "filters": {
+                            "test": "is_climbing",
+                            "value": true
+                        }
+                    }
+                },
+                "minecraft:behavior.timer_flag_2": {
+                    "cooldown_range": 0.25,
+                    "duration_range": 0,
+                    "on_end": {
+                        "event": "5fs_br:squirrel_leaves"
+                    }
+                },
+                "minecraft:behavior.random_stroll": {
+                    "priority": 2,
+                    "speed_multiplier": 1
+                },
+                "minecraft:movement": {
+                    "value": 0.2
+                },
+                "minecraft:behavior.move_to_block": {
+                    "priority": 1,
+                    "tick_interval": 20,
+                    "start_chance": 1,
+                    "search_range": 32,
+                    "search_height": 3,
+                    "goal_radius": 3,
+                    "speed_multiplier": 1,
+                    "stay_duration": 60,
+                    "target_selection_method": "nearest",
+                    "target_blocks": [
+                        "minecraft:oak_log",
+                        "minecraft:spruce_log",
+                        "minecraft:birch_log",
+                        "minecraft:jungle_log",
+                        "minecraft:acacia_log",
+                        "minecraft:dark_oak_log",
+                        "minecraft:cherry_log",
+                        "minecraft:mangrove_log",
+                        "minecraft:pale_oak_log",
+                        "5fs_br:maple_log",
+                        "5fs_br:maple_wood",
+                        "5fs_br:redwood_log"
+                    ]
+                }
+            },
+            "5fs_br:redwood_variant": {
+                "minecraft:health": {
+                    "value": 12,
+                    "max": 12
+                },
+                "minecraft:loot": {
+                    "table": "loot_tables/entities/redwood_squirrel.json"
+                },
+                "minecraft:scale": {
+                    "value": 4
+                },
+                "minecraft:mark_variant": {
+                    "value": 1
+                }
+            },
+            "5fs_br:eating_acorn": {
+                "minecraft:damage_sensor": {
+                    "triggers": [
+                        {
+                            "on_damage": {
+                                "event": "5fs_br:cancel_eating_acorn",
+                                "target": "self"
+                            }
+                        },
+                        {
+                            "cause": "fall",
+                            "deals_damage": "no"
+                        }
+                    ]
+                },
+                "minecraft:movement": {
+                    "value": 0
+                },
+                "minecraft:behavior.eat_carried_item": {
+                    "priority": 0,
+                    "delay_before_eating": 0
+                },
+                "minecraft:behavior.timer_flag_1": {
+                    "cooldown_range": 0,
+                    "duration_range": 2,
+                    "on_end": {
+                        "event": "5fs_br:stop_eating_acorn",
+                        "target": "self"
+                    }
+                }
+            }
+        },
+        "components": {
+            "minecraft:is_hidden_when_invisible": {},
+            "minecraft:experience_reward": {
+                "on_death": "q.last_hit_by_player ? Math.random(5,8) : 0"
+            },
+            "minecraft:nameable": {},
+            "minecraft:type_family": {
+                "family": [
+                    "mob",
+                    "animal",
+                    "squirrel",
+                    "passive"
+                ]
+            },
+            "minecraft:health": {
+                "value": 6,
+                "max": 6
+            },
+            "minecraft:behavior.nearest_attackable_target": {
+                "priority": 0,
+                "must_see": false,
+                "reselect_targets": false,
+                "within_radius": 64,
+                "attack_interval": 15,
+                "must_reach": true,
+                "target_search_height": 64,
+                "entity_types": {
+                    "filters": {
+                        "test": "is_family",
+                        "subject": "other",
+                        "value": "squirrel_leaves"
+                    },
+                    "max_dist": 64
+                }
+            },
+            "minecraft:attack": {
+                "damage": 1
+            },
+            "minecraft:interact": {
+                "interactions": [
+                    {
+                        "on_interact": {
+                            "filters": {
+                                "test": "has_equipment",
+                                "subject": "other",
+                                "domain": "hand",
+                                "value": "minecraft:bucket:0"
+                            },
+                            "event": "5fs_br:bucketed"
+                        },
+                        "use_item": true,
+                        "interact_text": "action.interact.catch",
+                        "swing": true,
+                        "play_sounds": "bucket.fill.fish"
+                    }
+                ]
+            },
+            "minecraft:behavior.avoid_block": {
+                "priority": 2,
+                "tick_interval": 5,
+                "search_range": 8,
+                "search_height": 4,
+                "walk_speed_modifier": 1,
+                "sprint_speed_modifier": 1,
+                "target_selection_method": "nearest",
+                "target_blocks": [
+                    "minecraft:fire",
+                    "minecraft:beehive"
+                ]
+            },
+            "minecraft:inventory": {
+                "inventory_size": 1,
+                "can_be_siphoned_from": false,
+                "restrict_to_owner": true
+            },
+            "minecraft:behavior.float": {
+                "priority": 10
+            },
+            "minecraft:behavior.tempt": {
+                "priority": 3,
+                "speed_multiplier": 0.3,
+                "items": [
+                    "5fs_br:acorn"
+                ],
+                "can_get_scared": true
+            },
+            "minecraft:behavior.look_at_player": {
+                "priority": 8,
+                "look_distance": 6,
+                "probability": 0.05
+            },
+            "minecraft:collision_box": {
+                "width": 0.37,
+                "height": 0.55
+            },
+            "minecraft:physics": {},
+            "minecraft:pushable": {
+                "is_pushable": true,
+                "is_pushable_by_piston": true
+            },
+            "minecraft:conditional_bandwidth_optimization": {},
+            "minecraft:despawn": {
+                "despawn_from_distance": {}
+            },
+            "minecraft:loot": {
+                "table": "loot_tables/entities/squirrel.json"
+            },
+            "minecraft:shareables": {
+                "singular_pickup": true,
+                "all_items": false,
+                "items": [
+                    {
+                        "item": "5fs_br:acorn",
+                        "priority": 0,
+                        "max_amount": 1
+                    }
+                ]
+            },
+            "minecraft:movement.basic": {},
+            "minecraft:jump.static": {},
+            "minecraft:behavior.avoid_mob_type": {
+                "max_dist": 5,
+                "max_flee": 4,
+                "priority": 2,
+                "entity_types": {
+                    "filters": {
+                        "all_of": [
+                            {
+                                "test": "is_family",
+                                "subject": "other",
+                                "value": "player"
+                            },
+                            {
+                                "test": "is_sneaking",
+                                "subject": "other",
+                                "value": false
+                            }
+                        ]
+                    },
+                    "walk_speed_multiplier": 1.25,
+                    "sprint_speed_multiplier": 1.25
+                }
+            },
+            "minecraft:follow_range": {
+                "value": 12,
+                "max": 12
+            },
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "cause": "fall",
+                    "deals_damage": "no"
+                }
+            }
+        },
+        "events": {
+            "minecraft:entity_spawned": {
+                "sequence": [
+                    {
+                        "add": {
+                            "component_groups": [
+                                "5fs_br:on_ground"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_biome_tag",
+                                    "value": "maple_forest"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "subject": "other",
+                                    "domain": "hand",
+                                    "operator": "!=",
+                                    "value": "5fs_br:bucket_of_squirrel"
+                                }
+                            ]
+                        },
+                        "add": {
+                            "component_groups": [
+                                "5fs_br:on_ground"
+                            ]
+                        },
+                        "set_property": {
+                            "5fs_br:variant": "red"
+                        }
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_biome_tag",
+                                    "value": "frozen"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "subject": "other",
+                                    "domain": "hand",
+                                    "operator": "!=",
+                                    "value": "5fs_br:bucket_of_squirrel"
+                                }
+                            ]
+                        },
+                        "add": {
+                            "component_groups": [
+                                "5fs_br:on_ground"
+                            ]
+                        },
+                        "set_property": {
+                            "5fs_br:variant": "white"
+                        }
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_biome_tag",
+                                    "value": "redwood_forest"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "subject": "other",
+                                    "domain": "hand",
+                                    "operator": "!=",
+                                    "value": "5fs_br:bucket_of_squirrel"
+                                }
+                            ]
+                        },
+                        "add": {
+                            "component_groups": [
+                                "5fs_br:on_ground",
+                                "5fs_br:redwood_variant"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "5fs_br:search_for_leaves": {
+                "remove": {
+                    "component_groups": [
+                        "5fs_br:on_ground"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "5fs_br:search_for_leaves"
+                    ]
+                }
+            },
+            "5fs_br:go_to_leaves": {
+                "remove": {
+                    "component_groups": [
+                        "5fs_br:search_for_leaves"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "5fs_br:go_to_leaves"
+                    ]
+                }
+            },
+            "5fs_br:squirrel_leaves": {
+                "queue_command": {
+                    "command": [
+                        "scriptevent 5fs_br:squirrel"
+                    ]
+                }
+            },
+            "5fs_br:failed_to_find_leaves": {
+                "add": {
+                    "component_groups": [
+                        "5fs_br:on_ground"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "5fs_br:search_for_leaves",
+                        "5fs_br:go_to_leaves"
+                    ]
+                }
+            },
+            "5fs_br:squirrel_detect_leaves": {
+                "trigger": "5fs_br:squirrel_leaves",
+                "queue_command": {
+                    "command": [
+                        "scriptevent 5fs_br:squirrel_detect_leaves"
+                    ]
+                }
+            },
+            "5fs_br:detect_blocking_block": {
+                "queue_command": {
+                    "command": [
+                        "scriptevent 5fs_br:squirrel_detect_blocking_block"
+                    ]
+                }
+            },
+            "5fs_br:spawned_on_ground": {
+                "add": {
+                    "component_groups": [
+                        "5fs_br:on_ground"
+                    ]
+                }
+            },
+            "5fs_br:start_eating_acorn": {
+                "add": {
+                    "component_groups": [
+                        "5fs_br:eating_acorn"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "5fs_br:on_ground",
+                        "5fs_br:search_for_leaves"
+                    ]
+                }
+            },
+            "5fs_br:stop_eating_acorn": {
+                "randomize": [
+                    {
+                        "remove": {
+                            "component_groups": [
+                                "5fs_br:eating_acorn"
+                            ]
+                        },
+                        "add": {
+                            "component_groups": [
+                                "5fs_br:on_ground"
+                            ]
+                        },
+                        "queue_command": {
+                            "command": [
+                                "loot spawn ~ ~ ~ loot \"gameplay/entities/squirrel_eating\""
+                            ]
+                        },
+                        "weight": 2
+                    },
+                    {
+                        "remove": {
+                            "component_groups": [
+                                "5fs_br:eating_acorn"
+                            ]
+                        },
+                        "add": {
+                            "component_groups": [
+                                "5fs_br:on_ground"
+                            ]
+                        },
+                        "weight": 8
+                    }
+                ]
+            },
+            "5fs_br:cancel_eating_acorn": {
+                "remove": {
+                    "component_groups": [
+                        "5fs_br:eating_acorn"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "5fs_br:on_ground"
+                    ]
+                }
+            },
+            "5fs_br:bucketed": {
+                "drop_item": {
+                    "slot": "slot.weapon.mainhand"
+                }
+            }
+        }
+    }
+}

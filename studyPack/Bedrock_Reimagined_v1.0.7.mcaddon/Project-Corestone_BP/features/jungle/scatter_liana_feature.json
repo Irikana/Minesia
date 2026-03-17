@@ -1,0 +1,31 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:scatter_feature": {
+        "description": {
+            "identifier": "5fs_br:jungle/scatter_liana_feature"
+        },
+        "iterations": 75,
+        "x": {
+            "distribution": "uniform",
+            "extent": [
+                -12,
+                12
+            ]
+        },
+        "y": {
+            "distribution": "uniform",
+            "extent": [
+                0,
+                4
+            ]
+        },
+        "z": {
+            "distribution": "uniform",
+            "extent": [
+                -12,
+                12
+            ]
+        },
+        "places_feature": "5fs_br:jungle/liana_snap_to_ceiling_feature"
+    }
+}

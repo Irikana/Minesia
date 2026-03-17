@@ -1,0 +1,38 @@
+{
+    "format_version": "1.10.0",
+    "render_controllers": {
+        "controller.render.clock": {
+            "textures": [
+                "Texture.default"
+            ],
+            "geometry": "Geometry.default",
+            "materials": [
+                {
+                    "*": "material.default"
+                }
+            ],
+            "part_visibility": [
+                {
+                    "time_30": "query.time_of_day >= 0.0000 && query.time_of_day < 0.0833",
+                    "time_35": "query.time_of_day >= 0.0833 && query.time_of_day < 0.1666",
+                    "time_40": "query.time_of_day >= 0.1666 && query.time_of_day < 0.2499",
+                    "time_45": "query.time_of_day >= 0.2499 && query.time_of_day < 0.3332",
+                    "time_50": "query.time_of_day >= 0.3332 && query.time_of_day < 0.4165",
+                    "time_55": "query.time_of_day >= 0.4165 && query.time_of_day < 0.4998",
+                    "time_0": "query.time_of_day >= 0.4998 && query.time_of_day < 0.5831",
+                    "time_5": "query.time_of_day >= 0.5831 && query.time_of_day < 0.6664",
+                    "time_10": "query.time_of_day >= 0.6664 && query.time_of_day < 0.7497",
+                    "time_15": "query.time_of_day >= 0.7497 && query.time_of_day < 0.8330",
+                    "time_20": "query.time_of_day >= 0.8330 && query.time_of_day < 0.9163",
+                    "time_25": "query.time_of_day >= 0.9163 && query.time_of_day <= 1.0000"
+                },
+                {
+                    "legs": "v.legs"
+                },
+                {
+                    "bells": "v.bells"
+                }
+            ]
+        }
+    }
+}

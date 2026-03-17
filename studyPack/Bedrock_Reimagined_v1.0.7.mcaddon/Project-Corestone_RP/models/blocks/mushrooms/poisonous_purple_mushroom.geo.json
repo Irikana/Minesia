@@ -1,0 +1,31 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.poisonous_purple_mushroom",
+				"texture_width": 32,
+				"texture_height": 32,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 1.5,
+				"visible_bounds_offset": [0, 0.25, 0]
+			},
+			"bones": [
+				{
+					"name": "bb_main",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-1.23587, 1.90242, -1], "size": [2, 2, 2], "pivot": [-0.23539, 4.65242, 0.00048], "rotation": [0, 0, -5], "uv": [0, 13]},
+						{"origin": [-1, 0, -1], "size": [2, 2, 2], "uv": [8, 13]},
+						{"origin": [0.53595, 1.66928, -1], "size": [0, 2, 2], "pivot": [-0.23539, 4.65242, 0.00048], "rotation": [0, 0, -20], "uv": [16, 8]},
+						{"origin": [-1.00667, 1.66903, -0.99903], "size": [0, 2, 2], "pivot": [-0.23539, 4.65242, 0.00048], "rotation": [-90, -75, 85], "uv": [0, 17]},
+						{"origin": [0.53595, 1.66928, -0.99903], "size": [0, 2, 2], "pivot": [-0.23539, 4.65242, 0.00048], "rotation": [90, -75, -95], "uv": [16, 16]},
+						{"origin": [-1.00667, 1.66903, -1], "size": [0, 2, 2], "pivot": [-0.23539, 4.65242, 0.00048], "rotation": [0, 0, 10], "uv": [16, 12]},
+						{"origin": [-3.23587, 3.90242, -3], "size": [6, 2, 6], "pivot": [-0.23539, 4.65242, 0.00048], "rotation": [0, 0, -5], "uv": [0, 0]},
+						{"origin": [-2.23587, 5.90242, -2], "size": [4, 1, 4], "pivot": [-0.23539, 4.65242, 0.00048], "rotation": [0, 0, -5], "uv": [0, 8]}
+					]
+				}
+			]
+		}
+	]
+}

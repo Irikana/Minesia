@@ -1,0 +1,99 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.trader.root": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "animations": [
+                        "general_controller", "look_at_target"
+                    ],
+                    "transitions": [
+                        {
+                            "death": "!q.is_alive"
+                        }
+                    ]
+                },
+                "death": {
+                    "animations": [
+                        "death"
+                    ]
+                }
+            }
+        },
+        "controller.animation.trader.general": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "animations": [
+                        "idle"
+                    ],
+                    "transitions": [
+                        {
+                            "idle": "q.any_animation_finished"
+                        },
+                        {
+                            "walking": "q.modified_move_speed >= 0.02"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "idle": {
+                    "on_entry": [
+                        "v.random_idle = math.random_integer(0, 7);"
+                    ],
+                    "animations": [
+                        {
+                            "idle": "v.random_idle < 7"
+                        },
+                        {
+                            "special": "v.random_idle == 7"
+                        }
+                    ],
+                    "transitions": [
+                        {
+                            "special": "q.any_animation_finished"
+                        },
+                        {
+                            "walking": "q.modified_move_speed >= 0.02"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "special": {
+                    "on_entry": [
+                        "v.random_idle = math.random_integer(0, 7);"
+                    ],
+                    "animations": [
+                        {
+                            "idle": "v.random_idle < 7"
+                        },
+                        {
+                            "special": "v.random_idle == 7"
+                        }
+                    ],
+                    "transitions": [
+                        {
+                            "idle": "q.any_animation_finished"
+                        },
+                        {
+                            "walking": "q.modified_move_speed >= 0.02"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "walking": {
+                    "animations": [
+                        "walking"
+                    ],
+                    "transitions": [
+                        {
+                            "idle": "q.modified_move_speed < 0.02"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                }
+            }
+        }
+    }
+}

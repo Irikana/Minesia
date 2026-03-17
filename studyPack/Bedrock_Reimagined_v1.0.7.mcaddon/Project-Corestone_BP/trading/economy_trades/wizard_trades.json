@@ -1,0 +1,728 @@
+{
+  "format_version": "1.18.10",
+  "tiers": [
+    {
+      "total_exp_required": 0,
+      "groups": [
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 4,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "5fs_br:basic_scroll",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 2,
+              "max_uses": 12,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 8,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "5fs_br:enchanted_scroll",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 2,
+              "max_uses": 12,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 8,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "choice": [
+                    {
+                      "item": "minecraft:map",
+                      "quantity": 1,
+                      "functions": [
+                        {
+                          "function": "exploration_map",
+                          "destination": "5fs_br:jungle_temple"
+                        },
+                        {
+                          "function": "set_name",
+                          "name": "§rJungle Temple Map\n§9Bedrock Reimagined"
+                        }
+                      ],
+                      "filters": {
+                        "test": "in_overworld",
+                        "subject": "self",
+                        "value": true,
+                        "operator": "="
+                      }
+                    },
+                    {
+                      "item": "minecraft:map",
+                      "quantity": 1,
+                      "functions": [
+                        {
+                          "function": "exploration_map",
+                          "destination": "5fs_br:jungle_mineshaft"
+                        },
+                        {
+                          "function": "set_name",
+                          "name": "§rJungle Mineshaft Map\n§9Bedrock Reimagined"
+                        }
+                      ],
+                      "filters": {
+                        "test": "in_overworld",
+                        "subject": "self",
+                        "value": true,
+                        "operator": "="
+                      }
+                    },
+                    {
+                      "item": "minecraft:map",
+                      "quantity": 1,
+                      "functions": [
+                        {
+                          "function": "exploration_map",
+                          "destination": "5fs_br:goblin_camp"
+                        },
+                        {
+                          "function": "set_name",
+                          "name": "§rGoblin Camp Map\n§9Bedrock Reimagined"
+                        }
+                      ],
+                      "filters": {
+                        "test": "in_overworld",
+                        "subject": "self",
+                        "value": true,
+                        "operator": "="
+                      }
+                    },
+                    {
+                      "item": "minecraft:map",
+                      "quantity": 1,
+                      "functions": [
+                        {
+                          "function": "exploration_map",
+                          "destination": "5fs_br:catacombs"
+                        },
+                        {
+                          "function": "set_name",
+                          "name": "§rCatacombs Map\n§9Bedrock Reimagined"
+                        }
+                      ],
+                      "filters": {
+                        "test": "in_overworld",
+                        "subject": "self",
+                        "value": true,
+                        "operator": "="
+                      }
+                    },
+                    {
+                      "item": "minecraft:map",
+                      "quantity": 1,
+                      "functions": [
+                        {
+                          "function": "exploration_map",
+                          "destination": "5fs_br:basic_dungeon"
+                        },
+                        {
+                          "function": "set_name",
+                          "name": "§rBasic Dungeon Map\n§9Bedrock Reimagined"
+                        }
+                      ],
+                      "filters": {
+                        "test": "in_overworld",
+                        "subject": "self",
+                        "value": true,
+                        "operator": "="
+                      }
+                    },
+                    {
+                      "item": "minecraft:map",
+                      "quantity": 1,
+                      "functions": [
+                        {
+                          "function": "exploration_map",
+                          "destination": "5fs_br:crystal_canyon_mineshaft"
+                        },
+                        {
+                          "function": "set_name",
+                          "name": "§rCrystal Canyon Mineshaft Map\n§9Bedrock Reimagined"
+                        }
+                      ],
+                      "filters": {
+                        "test": "in_overworld",
+                        "subject": "self",
+                        "value": true,
+                        "operator": "="
+                      }
+                    },
+                    {
+                      "item": "minecraft:map",
+                      "quantity": 1,
+                      "functions": [
+                        {
+                          "function": "exploration_map",
+                          "destination": "5fs_br:wizard_tower"
+                        },
+                        {
+                          "function": "set_name",
+                          "name": "§rWizard Tower Map\n§9Bedrock Reimagined"
+                        }
+                      ],
+                      "filters": {
+                        "test": "in_overworld",
+                        "subject": "self",
+                        "value": true,
+                        "operator": "="
+                      }
+                    }
+                  ]
+                }
+              ],
+              "trader_exp": 10,
+              "max_uses": 12,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 12,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "5fs_br:copper_wand",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 2,
+              "max_uses": 6,
+              "reward_exp": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "total_exp_required": 10,
+      "groups": [
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 16,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "5fs_br:arcane_rift",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 10,
+              "max_uses": 12,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 32,
+                  "price_multiplier": 0.05
+                },
+                {
+                  "item": "5fs_br:rune_of_decay",
+                  "quantity": 1,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "5fs_br:spell_of_destruction",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 30,
+              "max_uses": 6,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 32,
+                  "price_multiplier": 0.05
+                },
+                {
+                  "item": "5fs_br:rune_of_beasts",
+                  "quantity": 1,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "5fs_br:spell_of_bunkering",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 30,
+              "max_uses": 6,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 32,
+                  "price_multiplier": 0.05
+                },
+                {
+                  "item": "5fs_br:rune_of_frost",
+                  "quantity": 1,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "5fs_br:spell_of_hailstorm",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 30,
+              "max_uses": 6,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 20,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "5fs_br:iron_wand",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 10,
+              "max_uses": 6,
+              "reward_exp": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "total_exp_required": 70,
+      "groups": [
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 8,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "choice": [
+                    {
+                      "item": "5fs_br:rune_of_beasts"
+                    },
+                    {
+                      "item": "5fs_br:rune_of_decay"
+                    },
+                    {
+                      "item": "5fs_br:rune_of_earth"
+                    },
+                    {
+                      "item": "5fs_br:rune_of_flame"
+                    },
+                    {
+                      "item": "5fs_br:rune_of_frost"
+                    },
+                    {
+                      "item": "5fs_br:rune_of_growth"
+                    },
+                    {
+                      "item": "5fs_br:rune_of_light"
+                    },
+                    {
+                      "item": "5fs_br:rune_of_souls"
+                    },
+                    {
+                      "item": "5fs_br:rune_of_storms"
+                    },
+                    {
+                      "item": "5fs_br:rune_of_tides"
+                    },
+                    {
+                      "item": "5fs_br:rune_of_void"
+                    }
+                  ]
+                }
+              ],
+              "trader_exp": 20,
+              "max_uses": 12,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 24,
+                  "price_multiplier": 0.05
+                },
+                {
+                  "item": "5fs_br:rune_of_light",
+                  "quantity": 1,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "5fs_br:torch_wand",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 30,
+              "max_uses": 6,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 32,
+                  "price_multiplier": 0.05
+                },
+                {
+                  "item": "5fs_br:rune_of_earth",
+                  "quantity": 1,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "5fs_br:golden_wand",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 30,
+              "max_uses": 6,
+              "reward_exp": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "total_exp_required": 150,
+      "groups": [
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 32,
+                  "price_multiplier": 0.05
+                },
+                {
+                  "item": "5fs_br:rune_of_light",
+                  "quantity": 1,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "5fs_br:spell_of_voidwalking",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 30,
+              "max_uses": 6,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 32,
+                  "price_multiplier": 0.05
+                },
+                {
+                  "item": "5fs_br:rune_of_growth",
+                  "quantity": 1,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "5fs_br:spell_of_bladeworks",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 30,
+              "max_uses": 6,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 40,
+                  "price_multiplier": 0.05
+                },
+                {
+                  "item": "5fs_br:rune_of_tides",
+                  "quantity": 1,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "5fs_br:sea_witch_wand",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 30,
+              "max_uses": 6,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 48,
+                  "price_multiplier": 0.05
+                },
+                {
+                  "item": "5fs_br:rune_of_flame",
+                  "quantity": 1,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "5fs_br:steel_wand",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 30,
+              "max_uses": 6,
+              "reward_exp": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "total_exp_required": 250,
+      "groups": [
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 64,
+                  "price_multiplier": 0.05
+                },
+                {
+                  "item": "5fs_br:rune_of_void",
+                  "quantity": 1,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "5fs_br:spell_of_repositioning",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 30,
+              "max_uses": 3,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 64,
+                  "price_multiplier": 0.05
+                },
+                {
+                  "item": "5fs_br:rune_of_storms",
+                  "quantity": 1,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "5fs_br:spell_of_raging_fury_-",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 30,
+              "max_uses": 3,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 64,
+                  "price_multiplier": 0.05
+                },
+                {
+                  "item": "5fs_br:rune_of_souls",
+                  "quantity": 1,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "5fs_br:spell_of_ghastly_shackles",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 30,
+              "max_uses": 3,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 64,
+                  "price_multiplier": 0.05
+                },
+                {
+                  "item": "5fs_br:rune_of_void",
+                  "quantity": 1,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "5fs_br:diamond_wand",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 30,
+              "max_uses": 3,
+              "reward_exp": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

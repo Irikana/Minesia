@@ -1,0 +1,21 @@
+{
+  "format_version": "1.21.20",
+  "minecraft:structure_set": {
+    "description": {
+      "identifier": "5fs_br:catacombs"
+    },
+    "placement": {
+      "type": "minecraft:random_spread",
+      "salt": 42638253,
+      "separation": 13,
+      "spacing": 32,
+      "spread_type": "linear"
+    },
+    "structures": [
+      {
+        "structure": "5fs_br:catacombs",
+        "weight": 1
+      }
+    ]
+  }
+}

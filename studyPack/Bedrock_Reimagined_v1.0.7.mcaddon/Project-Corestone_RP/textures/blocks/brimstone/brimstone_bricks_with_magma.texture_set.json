@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "brimstone_bricks_with_magma",
+		"metalness_emissive_roughness": "brimstone_bricks_with_magma_mer"
+	}
+}

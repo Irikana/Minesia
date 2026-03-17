@@ -1,0 +1,182 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "match_tool",
+                    "minecraft:match_tool_filter_any": [
+                        "minecraft:iron_tier",
+                        "5fs_br:steel_tier",
+                        "5fs_br:emerald_tier",
+                        "minecraft:diamond_tier",
+                        "5fs_br:obsidian_tier",
+                        "minecraft:netherite_tier",
+                        "5fs_br:crystalline_tier",
+                        "5fs_br:meteorite_tier",
+                        "5fs_br:cobalt_tier",
+                        "5fs_br:dragonite_tier",
+                        "5fs_br:mummified_tier"
+                    ],
+                    "minecraft:match_tool_filter_all": [
+                        "minecraft:is_pickaxe"
+                    ],
+                    "count": 1
+                }
+            ],
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:emerald"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "match_tool",
+                    "minecraft:match_tool_filter_any": [
+                        "minecraft:iron_tier",
+                        "5fs_br:steel_tier",
+                        "5fs_br:emerald_tier",
+                        "minecraft:diamond_tier",
+                        "5fs_br:obsidian_tier",
+                        "minecraft:netherite_tier",
+                        "5fs_br:crystalline_tier",
+                        "5fs_br:meteorite_tier",
+                        "5fs_br:cobalt_tier",
+                        "5fs_br:dragonite_tier",
+                        "5fs_br:mummified_tier"
+                    ],
+                    "minecraft:match_tool_filter_all": [
+                        "minecraft:is_pickaxe"
+                    ],
+                    "enchantments": [
+                        {
+                            "enchantment": "fortune",
+                            "levels": {
+                                "range_min": 1,
+                                "range_max": 1
+                            }
+                        }
+                    ],
+                    "count": 1
+                }
+            ],
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:emerald",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 0,
+                                "max": 1
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "match_tool",
+                    "minecraft:match_tool_filter_any": [
+                        "minecraft:iron_tier",
+                        "5fs_br:steel_tier",
+                        "5fs_br:emerald_tier",
+                        "minecraft:diamond_tier",
+                        "5fs_br:obsidian_tier",
+                        "minecraft:netherite_tier",
+                        "5fs_br:crystalline_tier",
+                        "5fs_br:meteorite_tier",
+                        "5fs_br:cobalt_tier",
+                        "5fs_br:dragonite_tier",
+                        "5fs_br:mummified_tier"
+                    ],
+                    "minecraft:match_tool_filter_all": [
+                        "minecraft:is_pickaxe"
+                    ],
+                    "enchantments": [
+                        {
+                            "enchantment": "fortune",
+                            "levels": {
+                                "range_min": 2,
+                                "range_max": 2
+                            }
+                        }
+                    ],
+                    "count": 1
+                }
+            ],
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:emerald",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 0,
+                                "max": 2
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "match_tool",
+                    "minecraft:match_tool_filter_any": [
+                        "minecraft:iron_tier",
+                        "5fs_br:steel_tier",
+                        "5fs_br:emerald_tier",
+                        "minecraft:diamond_tier",
+                        "5fs_br:obsidian_tier",
+                        "minecraft:netherite_tier",
+                        "5fs_br:crystalline_tier",
+                        "5fs_br:meteorite_tier",
+                        "5fs_br:cobalt_tier",
+                        "5fs_br:dragonite_tier",
+                        "5fs_br:mummified_tier"
+                    ],
+                    "minecraft:match_tool_filter_all": [
+                        "minecraft:is_pickaxe"
+                    ],
+                    "enchantments": [
+                        {
+                            "enchantment": "fortune",
+                            "levels": {
+                                "range_min": 3,
+                                "range_max": 3
+                            }
+                        }
+                    ],
+                    "count": 1
+                }
+            ],
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:emerald",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 0,
+                                "max": 3
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

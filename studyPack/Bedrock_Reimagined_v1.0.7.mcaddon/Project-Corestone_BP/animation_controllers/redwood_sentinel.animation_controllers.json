@@ -1,0 +1,30 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.redwood_sentinel.general": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "branch_swipe": "q.is_powered && q.is_delayed_attacking"
+                        }
+                    ]
+                },
+                "branch_swipe": {
+                    "animations": [
+                        "branch_swipe"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!q.is_delayed_attacking"
+                        }
+                    ],
+                    "on_exit": [
+                        "/event entity @s 5fs_br:attacked"
+                    ]
+                }
+            }
+        } 
+    }
+}

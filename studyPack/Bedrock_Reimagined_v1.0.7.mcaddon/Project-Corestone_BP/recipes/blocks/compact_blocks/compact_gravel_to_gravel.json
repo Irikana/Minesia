@@ -1,0 +1,25 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "5fs_br:compact_gravel_to_gravel"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "5fs_br:compact_gravel"
+      }
+    ],
+    "result": {
+      "item": "minecraft:gravel",
+      "count": 4
+    },
+    "unlock": [
+      {
+        "item": "5fs_br:compact_gravel"
+      }
+    ]
+  }
+}

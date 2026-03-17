@@ -1,0 +1,23 @@
+{
+    "format_version": "1.21.60",
+    "minecraft:snap_to_surface_feature": {
+        "description": {
+            "identifier": "5fs_br:vegetation/tall_grass_snap_to_surface_feature"
+        },
+        "feature_to_snap": "5fs_br:vegetation/tall_grass_feature",
+        "surface": "floor",
+        "allow_air_placement": true,
+        "allow_underwater_placement": false,
+        "vertical_search_range": 128,
+        "allowed_surface_blocks": [
+            "minecraft:grass_block",
+            "minecraft:dirt",
+            "minecraft:moss_block",
+            "minecraft:pale_moss_block",
+            "minecraft:mycelium",
+            "minecraft:coarse_dirt",
+            "minecraft:dirt_with_roots",
+            "minecraft:muddy_mangrove_roots"
+        ]
+    }
+}

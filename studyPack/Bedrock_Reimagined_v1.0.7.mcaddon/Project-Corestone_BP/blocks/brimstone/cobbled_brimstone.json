@@ -1,0 +1,39 @@
+{
+    "format_version": "1.26.0",
+	"minecraft:block": {
+        "description": {
+            "identifier": "5fs_br:cobbled_brimstone",
+            "menu_category": {
+                "category": "Construction"
+            }
+        },
+        "components": {
+            "minecraft:geometry": "minecraft:geometry.full_block",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "cobbled_brimstone"
+                }
+            },
+            "minecraft:redstone_conductivity": {
+                "redstone_conductor": true
+            },
+            "minecraft:light_dampening": 15,
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 10,
+				"item_specific_speeds": [
+					{
+						"item": {
+							"tags": "query.all_tags('minecraft:is_pickaxe')"
+						},
+						"destroy_speed": 3
+					}
+				]
+			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 6
+			},
+            "minecraft:map_color": "#2B1C1E",
+            "tag:minecraft:is_pickaxe_item_destructible": {}
+        }
+    }
+}

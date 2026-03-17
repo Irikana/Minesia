@@ -1,0 +1,45 @@
+{
+    "format_version": "1.21.80",
+    "minecraft:template_pool": {
+        "description": {
+            "identifier": "5fs_br:ships/pirates"
+        },
+        "elements": [
+            {
+                "element": {
+                    "element_type": "minecraft:single_pool_element",
+                    "location": "5fs_br/ships/pirate_brute"
+                },
+                "weight": 20
+            },
+            {
+                "element": {
+                    "element_type": "minecraft:single_pool_element",
+                    "location": "5fs_br/ships/pirate_raider"
+                },
+                "weight": 20
+            },
+            {
+                "element": {
+                    "element_type": "minecraft:single_pool_element",
+                    "location": "5fs_br/ships/sea_witch"
+                },
+                "weight": 20
+            },
+            {
+                "element": {
+                    "element_type": "minecraft:single_pool_element",
+                    "location": "5fs_br/ships/pirate_captain"
+                },
+                "weight": 20
+            },
+            {
+                "element": {
+                    "element_type": "minecraft:single_pool_element",
+                    "location": "5fs_br/ships/pirate_sharpshooter"
+                },
+                "weight": 20
+            }
+        ]
+    }
+}

@@ -1,0 +1,157 @@
+{
+    "format_version": "1.26.0",
+	"minecraft:block": {
+        "description": {
+            "identifier": "5fs_br:moose_antlers",
+            "menu_category": {
+                 "category": "items"
+            },
+            "traits": {
+                "minecraft:placement_position": {
+                    "enabled_states": [
+                        "minecraft:block_face"
+                    ]
+                }
+            }
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('minecraft:block_face') == 'north'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            0,
+                            0
+                        ]
+                    },
+                    "tag:5fs_br:north": {}
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:block_face') == 'south'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            180,
+                            0
+                        ]
+                    },
+                    "tag:5fs_br:south": {}
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:block_face') == 'east'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            -90,
+                            0
+                        ]
+                    },
+                    "tag:5fs_br:east": {}
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:block_face') == 'west'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            90,
+                            0
+                        ]
+                    },
+                    "tag:5fs_br:west": {}
+                }
+            }
+        ],
+        "components": {
+            "minecraft:geometry": "geometry.moose_antlers",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "moose_antlers_head_1"
+                },
+                "moose_antlers_base": {
+                    "texture": "moose_antlers_base"
+                },
+                "moose_antlers_antler_0": {
+                    "texture": "moose_antlers_antler_0"
+                },
+                "moose_antlers_antler_1": {
+                    "texture": "moose_antlers_antler_1"
+                },
+                "moose_antlers_head_0": {
+                    "texture": "moose_antlers_head_0"
+                },
+                "moose_antlers_head_1": {
+                    "texture": "moose_antlers_head_1"
+                }
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 2
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 2
+            },
+            "minecraft:selection_box": {
+                "origin": [
+                    -7,
+                    3,
+                    -4
+                ],
+                "size": [
+                    14,
+                    13,
+                    12
+                ]
+            },
+            "minecraft:collision_box": {
+                "origin": [
+                    -7,
+                    3,
+                    -4
+                ],
+                "size": [
+                    14,
+                    13,
+                    12
+                ]
+            },
+            "minecraft:placement_filter": {
+                "conditions": [
+                    {
+                        "allowed_faces": [
+                            "north",
+                            "south",
+                            "west",
+                            "east"
+                        ]
+                    }
+                ]
+            },
+            "minecraft:liquid_detection": {
+                "detection_rules": [
+                    {
+                        "can_contain_liquid": true,
+                        "liquid_type": "water",
+                        "on_liquid_touches": "blocking"
+                    }
+                ]
+            },
+            "minecraft:movable": {
+                "movement_type": "popped"
+            },
+			"minecraft:precipitation_interactions": {
+				"precipitation_behavior": "obstruct_rain"
+			},
+			"minecraft:connection_rule": {
+				"accepts_connections_from": "none"
+			},
+            "5fs_br:prevent_placement_0": {},
+            "tag:minecraft:is_pickaxe_item_destructible": {}
+        }
+    }
+}

@@ -1,0 +1,35 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "5fs_br:dragonfly",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "blue_dragonfly": "textures/entity/mobs/dragonfly/blue_dragonfly",
+        "green_dragonfly": "textures/entity/mobs/dragonfly/green_dragonfly",
+        "orange_dragonfly": "textures/entity/mobs/dragonfly/orange_dragonfly",
+        "red_dragonfly": "textures/entity/mobs/dragonfly/red_dragonfly"
+      },
+      "geometry": {
+        "default": "geometry.dragonfly"
+      },
+      "animations": {
+        "fly": "animation.dragonfly.fly",
+        "fly_idle": "animation.dragonfly.fly_idle",
+        "on_ground": "animation.dragonfly.on_ground",
+        "death": "animation.dragonfly.death"
+      },
+      "animation_controllers": [
+        { "move": "controller.animation.dragonfly" }
+      ],
+      "render_controllers": [
+        "controller.render.dragonfly"
+      ],
+      "spawn_egg": {
+        "texture": "5fs_br:dragonfly"
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:ore_feature": {
+    "description": {
+      "identifier": "5fs_br:nether/stone_brimstone_layer_feature"
+    },
+    "count": 100,
+    "replace_rules": [
+      {
+        "places_block": "5fs_br:brimstone",
+        "may_replace": [
+          "minecraft:netherrack",
+          "minecraft:blackstone",
+          "minecraft:gravel",
+          "minecraft:quartz_ore",
+          "minecraft:nether_gold_ore"
+        ]
+      }
+    ]
+  }
+}

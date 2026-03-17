@@ -1,0 +1,21 @@
+{
+    "format_version": "1.21.70",
+    "minecraft:item": {
+        "description": {
+            "identifier": "5fs_br:rafflesia",
+            "menu_category": {
+                "category": "nature"
+            }
+        },
+        "components": {
+            "minecraft:icon": "5fs_br:rafflesia_icon",
+            "minecraft:block_placer": {
+                "block": "5fs_br:rafflesia",
+                "replace_block_item": true
+            },
+            "minecraft:compostable": {
+                "composting_chance": 65
+            }
+        }
+    }
+}

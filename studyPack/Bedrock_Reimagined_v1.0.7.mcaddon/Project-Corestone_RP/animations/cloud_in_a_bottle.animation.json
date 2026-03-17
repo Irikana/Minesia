@@ -1,0 +1,33 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.5fs_br.cloud_in_a_bottle.first_person": {
+			"loop": true,
+			"bones": {
+				"item": {
+					"rotation": [-5.93762, -20.13904, -74.34913],
+					"position": [13.56343, 12.90924, 5.90746]
+				}
+			}
+		},
+		"animation.5fs_br.cloud_in_a_bottle.third_person": {
+			"loop": true,
+			"bones": {
+				"item": {
+					"rotation": [90, -52.5, -90],
+					"position": [-0.5, 20.16797, -3.91567],
+					"scale": 0.6
+				}
+			}
+		},
+		"animation.5fs_br.cloud_in_a_bottle.first_person_left": {
+			"loop": true,
+			"bones": {
+				"item": {
+					"rotation": [41.56238, -20.13904, -74.34913],
+					"position": [15.56343, 24.90924, -17.09254]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,27 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:snap_to_surface_feature": {
+    "description": {
+      "identifier": "5fs_br:deadly_sea/tall_dead_seagrass_snap_to_surface_feature"
+    },
+    "feature_to_snap": "5fs_br:deadly_sea/tall_dead_seagrass_feature",
+    "surface": "floor",
+    "allow_air_placement": false,
+    "allow_underwater_placement": true,
+    "vertical_search_range": 128,
+    "allowed_surface_blocks": [
+      "minecraft:gravel",
+      "minecraft:sand",
+      "minecraft:clay",
+      "minecraft:dirt",
+      "minecraft:stone",
+      "minecraft:diorite",
+      "minecraft:granite",
+      "minecraft:dead_brain_coral_block",
+      "minecraft:dead_bubble_coral_block",
+      "minecraft:dead_fire_coral_block",
+      "minecraft:dead_horn_coral_block",
+      "minecraft:dead_tube_coral_block"
+    ]
+  }
+}

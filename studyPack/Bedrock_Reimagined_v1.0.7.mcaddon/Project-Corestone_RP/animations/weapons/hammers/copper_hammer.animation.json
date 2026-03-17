@@ -1,0 +1,27 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.copper_hammer.1fp": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": [82.47138, 63.90584, -61.70072],
+					"position": [0, 7, 5]
+				},
+				"bone": {
+					"rotation": [60.38243, 57.01573, -80.39947],
+					"position": [0, -1, 4]
+				}
+			}
+		},
+		"animation.copper_hammer.3pp": {
+			"loop": true,
+			"bones": {
+				"bone": {
+					"rotation": [90, 0, 0],
+					"position": [0, 8, -5]
+				}
+			}
+		}
+	}
+}

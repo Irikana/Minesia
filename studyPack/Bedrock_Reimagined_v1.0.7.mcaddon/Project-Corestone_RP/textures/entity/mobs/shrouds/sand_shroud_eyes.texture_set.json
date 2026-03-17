@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "sand_shroud_eyes",
+		"metalness_emissive_roughness": "sand_shroud_eyes_mer"
+	}
+}

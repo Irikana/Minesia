@@ -1,0 +1,21 @@
+{
+  "format_version": "1.21.20",
+  "minecraft:structure_set": {
+    "description": {
+      "identifier": "5fs_br:campsite"
+    },
+    "placement": {
+      "type": "minecraft:random_spread",
+      "salt": 83469677,
+      "separation": 20,
+      "spacing": 52,
+      "spread_type": "linear"
+    },
+    "structures": [
+      {
+        "structure": "5fs_br:campsite",
+        "weight": 1
+      }
+    ]
+  }
+}

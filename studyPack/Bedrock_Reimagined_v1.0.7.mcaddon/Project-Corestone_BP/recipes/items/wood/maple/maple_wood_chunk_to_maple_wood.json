@@ -1,0 +1,30 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "5fs_br:maple_wood_chunk_to_maple_wood"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " P ",
+      "PPP",
+      " P "
+    ],
+    "key": {
+      "P": {
+        "item": "5fs_br:maple_wood_chunk"
+      }
+    },
+    "result": {
+      "item": "5fs_br:maple_wood",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "5fs_br:maple_wood_chunk"
+      }
+    ]
+  }
+}

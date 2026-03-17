@@ -1,0 +1,37 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "5fs_br:accessory_trader",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/mobs/traders/accessory_trader"
+      },
+      "geometry": {
+        "default": "geometry.accessory_trader"
+      },
+      "animations": {
+        "look_at_target": "animation.common.look_at_target",
+        "idle": "animation.accessory_trader.idle",
+        "death": "animation.accessory_trader.death",
+        "special": "animation.accessory_trader.special",
+        "walking": "animation.accessory_trader.walking",
+        "root_controller": "controller.animation.trader.root",
+        "general_controller": "controller.animation.trader.general"
+      },
+      "scripts": {
+        "animate": [
+          "root_controller"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ],
+      "spawn_egg": {
+        "texture": "5fs_br:accessory_trader"
+      }
+    }
+  }
+}

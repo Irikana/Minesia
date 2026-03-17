@@ -1,0 +1,17 @@
+{
+    "format_version": "1.21.80",
+    "minecraft:ore_feature": {
+        "description": {
+            "identifier": "5fs_br:savanna/packed_mud_feature"
+        },
+        "count": 20,
+        "replace_rules": [
+            {
+                "places_block": "minecraft:packed_mud",
+                "may_replace": [
+                    "minecraft:grass_block"
+                ]
+            }
+        ]
+    }
+}

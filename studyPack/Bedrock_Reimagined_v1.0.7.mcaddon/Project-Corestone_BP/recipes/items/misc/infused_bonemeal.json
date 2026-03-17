@@ -1,0 +1,31 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "5fs_br:infused_bonemeal"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "minecraft:bone_meal"
+      },
+      {
+        "item": "5fs_br:sap"
+      }
+    ],
+    "result": {
+      "item": "5fs_br:infused_bonemeal",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:bone_meal"
+      },
+      {
+        "item": "5fs_br:sap"
+      }
+    ]
+  }
+}

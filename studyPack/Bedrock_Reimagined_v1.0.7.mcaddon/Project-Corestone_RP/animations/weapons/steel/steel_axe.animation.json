@@ -1,0 +1,23 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.steel_axe.1fp": {
+			"loop": true,
+			"bones": {
+				"bone": {
+					"rotation": [64.66593, 59.76465, -84.3926],
+					"position": [0, 23, 2]
+				}
+			}
+		},
+		"animation.steel_axe.3pp": {
+			"loop": true,
+			"bones": {
+				"bone": {
+					"rotation": [90, 0, 0],
+					"position": [0, 21, 4]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "decorative_petrified_crafting_table_top",
+		"metalness_emissive_roughness": "decorative_petrified_crafting_table_top_mer"
+	}
+}

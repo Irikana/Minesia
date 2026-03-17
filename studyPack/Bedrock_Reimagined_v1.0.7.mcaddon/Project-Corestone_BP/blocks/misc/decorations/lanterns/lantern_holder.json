@@ -1,0 +1,735 @@
+{
+    "format_version": "1.26.0",
+	"minecraft:block": {
+        "description": {
+            "identifier": "5fs_br:lantern_holder",
+            "menu_category": {
+                "category": "items"
+            },
+            "states": {
+                "5fs_br:lantern_bit": [
+                    false,
+                    true
+                ],
+                "5fs_br:texture_0": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15
+                ],
+                "5fs_br:texture_1": [
+                    0,
+                    1
+                ],
+                "5fs_br:light": [
+                    0,
+                    2,
+                    6,
+                    9,
+                    10,
+                    12,
+                    15
+                ]
+            },
+            "traits": {
+                "minecraft:placement_position": {
+                    "enabled_states": [
+                        "minecraft:block_face"
+                    ]
+                }
+            }
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('5fs_br:lantern_bit') == true",
+                "components": {
+                    "minecraft:collision_box": {
+                        "origin": [
+                            -3,
+                            0,
+                            -6
+                        ],
+                        "size": [
+                            6,
+                            14,
+                            14
+                        ]
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -3,
+                            0,
+                            -6
+                        ],
+                        "size": [
+                            6,
+                            14,
+                            14
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:block_face') == 'north'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            0,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:block_face') == 'south'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            180,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:block_face') == 'east'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            -90,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:block_face') == 'west'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            90,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:texture_0') == 1 && q.block_state('5fs_br:texture_1') == 0",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "lantern_holder",
+                            "render_method": "alpha_test_to_opaque"
+                        },
+                        "lantern": {
+                            "texture": "lantern",
+                            "render_method": "alpha_test_to_opaque"
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/lantern_holder/lantern.json",
+                    "tag:minecraft:lantern": {}
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:texture_0') == 2 && q.block_state('5fs_br:texture_1') == 0",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "lantern_holder",
+                            "render_method": "alpha_test_to_opaque"
+                        },
+                        "lantern": {
+                            "texture": "soul_lantern",
+                            "render_method": "alpha_test_to_opaque"
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/lantern_holder/soul_lantern.json",
+                    "tag:minecraft:soul_lantern": {}
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:texture_0') == 3 && q.block_state('5fs_br:texture_1') == 0",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "lantern_holder",
+                            "render_method": "alpha_test_to_opaque"
+                        },
+                        "lantern": {
+                            "texture": "gold_lantern",
+                            "render_method": "alpha_test_to_opaque"
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/lantern_holder/gold_lantern.json",
+                    "tag:5fs_br:gold_lantern": {}
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:texture_0') == 4 && q.block_state('5fs_br:texture_1') == 0",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "lantern_holder",
+                            "render_method": "alpha_test_to_opaque"
+                        },
+                        "lantern": {
+                            "texture": "copper_glimmerite_lantern",
+                            "render_method": "alpha_test_to_opaque"
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/lantern_holder/copper_glimmerite_lantern.json",
+                    "tag:5fs_br:copper_glimmerite_lantern": {}
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:texture_0') == 5 && q.block_state('5fs_br:texture_1') == 0",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "lantern_holder",
+                            "render_method": "alpha_test_to_opaque"
+                        },
+                        "lantern": {
+                            "texture": "exposed_copper_glimmerite_lantern",
+                            "render_method": "alpha_test_to_opaque"
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/lantern_holder/exposed_copper_glimmerite_lantern.json",
+                    "tag:5fs_br:exposed_copper_glimmerite_lantern": {}
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:texture_0') == 6 && q.block_state('5fs_br:texture_1') == 0",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "lantern_holder",
+                            "render_method": "alpha_test_to_opaque"
+                        },
+                        "lantern": {
+                            "texture": "weathered_copper_glimmerite_lantern",
+                            "render_method": "alpha_test_to_opaque"
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/lantern_holder/weathered_copper_glimmerite_lantern.json",
+                    "tag:5fs_br:weathered_copper_glimmerite_lantern": {}
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:texture_0') == 7 && q.block_state('5fs_br:texture_1') == 0",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "lantern_holder",
+                            "render_method": "alpha_test_to_opaque"
+                        },
+                        "lantern": {
+                            "texture": "oxidized_copper_glimmerite_lantern",
+                            "render_method": "alpha_test_to_opaque"
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/lantern_holder/oxidized_copper_glimmerite_lantern.json",
+                    "tag:5fs_br:oxidized_copper_glimmerite_lantern": {}
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:texture_0') == 8 && q.block_state('5fs_br:texture_1') == 0",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "lantern_holder",
+                            "render_method": "alpha_test_to_opaque"
+                        },
+                        "lantern": {
+                            "texture": "copper_soul_lantern",
+                            "render_method": "alpha_test_to_opaque"
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/lantern_holder/copper_soul_lantern.json",
+                    "tag:5fs_br:copper_soul_lantern": {}
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:texture_0') == 9 && q.block_state('5fs_br:texture_1') == 0",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "lantern_holder",
+                            "render_method": "alpha_test_to_opaque"
+                        },
+                        "lantern": {
+                            "texture": "exposed_copper_soul_lantern",
+                            "render_method": "alpha_test_to_opaque"
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/lantern_holder/exposed_copper_soul_lantern.json",
+                    "tag:5fs_br:exposed_copper_soul_lantern": {}
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:texture_0') == 10 && q.block_state('5fs_br:texture_1') == 0",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "lantern_holder",
+                            "render_method": "alpha_test_to_opaque"
+                        },
+                        "lantern": {
+                            "texture": "weathered_copper_soul_lantern",
+                            "render_method": "alpha_test_to_opaque"
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/lantern_holder/weathered_copper_soul_lantern.json",
+                    "tag:5fs_br:weathered_copper_soul_lantern": {}
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:texture_0') == 11 && q.block_state('5fs_br:texture_1') == 0",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "lantern_holder",
+                            "render_method": "alpha_test_to_opaque"
+                        },
+                        "lantern": {
+                            "texture": "oxidized_copper_soul_lantern",
+                            "render_method": "alpha_test_to_opaque"
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/lantern_holder/oxidized_copper_soul_lantern.json",
+                    "tag:5fs_br:oxidized_copper_soul_lantern": {}
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:texture_0') == 12 && q.block_state('5fs_br:texture_1') == 0",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "lantern_holder",
+                            "render_method": "alpha_test_to_opaque"
+                        },
+                        "lantern": {
+                            "texture": "copper_glimmerite_lantern",
+                            "render_method": "alpha_test_to_opaque"
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/lantern_holder/waxed_copper_glimmerite_lantern.json",
+                    "tag:5fs_br:waxed_copper_glimmerite_lantern": {}
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:texture_0') == 13 && q.block_state('5fs_br:texture_1') == 0",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "lantern_holder",
+                            "render_method": "alpha_test_to_opaque"
+                        },
+                        "lantern": {
+                            "texture": "exposed_copper_glimmerite_lantern",
+                            "render_method": "alpha_test_to_opaque"
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/lantern_holder/waxed_exposed_copper_glimmerite_lantern.json",
+                    "tag:5fs_br:waxed_exposed_copper_glimmerite_lantern": {}
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:texture_0') == 14 && q.block_state('5fs_br:texture_1') == 0",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "lantern_holder",
+                            "render_method": "alpha_test_to_opaque"
+                        },
+                        "lantern": {
+                            "texture": "weathered_copper_glimmerite_lantern",
+                            "render_method": "alpha_test_to_opaque"
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/lantern_holder/waxed_weathered_copper_glimmerite_lantern.json",
+                    "tag:5fs_br:waxed_weathered_copper_glimmerite_lantern": {}
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:texture_0') == 15 && q.block_state('5fs_br:texture_1') == 0",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "lantern_holder",
+                            "render_method": "alpha_test_to_opaque"
+                        },
+                        "lantern": {
+                            "texture": "oxidized_copper_glimmerite_lantern",
+                            "render_method": "alpha_test_to_opaque"
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/lantern_holder/waxed_oxidized_copper_glimmerite_lantern.json",
+                    "tag:5fs_br:waxed_oxidized_copper_glimmerite_lantern": {}
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:texture_0') == 1 && q.block_state('5fs_br:texture_1') == 1",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "lantern_holder",
+                            "render_method": "alpha_test_to_opaque"
+                        },
+                        "lantern": {
+                            "texture": "copper_soul_lantern",
+                            "render_method": "alpha_test_to_opaque"
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/lantern_holder/waxed_copper_soul_lantern.json",
+                    "tag:5fs_br:waxed_copper_soul_lantern": {}
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:texture_0') == 2 && q.block_state('5fs_br:texture_1') == 1",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "lantern_holder",
+                            "render_method": "alpha_test_to_opaque"
+                        },
+                        "lantern": {
+                            "texture": "exposed_copper_soul_lantern",
+                            "render_method": "alpha_test_to_opaque"
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/lantern_holder/waxed_exposed_copper_soul_lantern.json",
+                    "tag:5fs_br:waxed_exposed_copper_soul_lantern": {}
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:texture_0') == 3 && q.block_state('5fs_br:texture_1') == 1",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "lantern_holder",
+                            "render_method": "alpha_test_to_opaque"
+                        },
+                        "lantern": {
+                            "texture": "weathered_copper_soul_lantern",
+                            "render_method": "alpha_test_to_opaque"
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/lantern_holder/waxed_weathered_copper_soul_lantern.json",
+                    "tag:5fs_br:waxed_weathered_copper_soul_lantern": {}
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:texture_0') == 4 && q.block_state('5fs_br:texture_1') == 1",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "lantern_holder",
+                            "render_method": "alpha_test_to_opaque"
+                        },
+                        "lantern": {
+                            "texture": "oxidized_copper_soul_lantern",
+                            "render_method": "alpha_test_to_opaque"
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/lantern_holder/waxed_oxidized_copper_soul_lantern.json",
+                    "tag:5fs_br:waxed_oxidized_copper_soul_lantern": {}
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:texture_0') == 5 && q.block_state('5fs_br:texture_1') == 1",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "lantern_holder",
+                            "render_method": "alpha_test_to_opaque"
+                        },
+                        "lantern": {
+                            "texture": "glimmerite_lantern",
+                            "render_method": "alpha_test_to_opaque"
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/lantern_holder/glimmerite_lantern.json",
+                    "tag:5fs_br:glimmerite_lantern": {}
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:texture_0') == 6 && q.block_state('5fs_br:texture_1') == 1",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "lantern_holder",
+                            "render_method": "alpha_test_to_opaque"
+                        },
+                        "lantern": {
+                            "texture": "copper_lantern",
+                            "render_method": "alpha_test_to_opaque"
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/lantern_holder/copper_lantern.json",
+                    "tag:minecraft:copper_lantern": {}
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:texture_0') == 7 && q.block_state('5fs_br:texture_1') == 1",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "lantern_holder",
+                            "render_method": "alpha_test_to_opaque"
+                        },
+                        "lantern": {
+                            "texture": "exposed_copper_lantern",
+                            "render_method": "alpha_test_to_opaque"
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/lantern_holder/exposed_copper_lantern.json",
+                    "tag:minecraft:exposed_copper_lantern": {}
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:texture_0') == 8 && q.block_state('5fs_br:texture_1') == 1",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "lantern_holder",
+                            "render_method": "alpha_test_to_opaque"
+                        },
+                        "lantern": {
+                            "texture": "weathered_copper_lantern",
+                            "render_method": "alpha_test_to_opaque"
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/lantern_holder/weathered_copper_lantern.json",
+                    "tag:minecraft:weathered_copper_lantern": {}
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:texture_0') == 9 && q.block_state('5fs_br:texture_1') == 1",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "lantern_holder",
+                            "render_method": "alpha_test_to_opaque"
+                        },
+                        "lantern": {
+                            "texture": "oxidized_copper_lantern",
+                            "render_method": "alpha_test_to_opaque"
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/lantern_holder/oxidized_copper_lantern.json",
+                    "tag:minecraft:oxidized_copper_lantern": {}
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:texture_0') == 10 && q.block_state('5fs_br:texture_1') == 1",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "lantern_holder",
+                            "render_method": "alpha_test_to_opaque"
+                        },
+                        "lantern": {
+                            "texture": "copper_lantern",
+                            "render_method": "alpha_test_to_opaque"
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/lantern_holder/waxed_copper_lantern.json",
+                    "tag:minecraft:waxed_copper_lantern": {}
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:texture_0') == 11 && q.block_state('5fs_br:texture_1') == 1",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "lantern_holder",
+                            "render_method": "alpha_test_to_opaque"
+                        },
+                        "lantern": {
+                            "texture": "exposed_copper_lantern",
+                            "render_method": "alpha_test_to_opaque"
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/lantern_holder/waxed_exposed_copper_lantern.json",
+                    "tag:minecraft:waxed_exposed_copper_lantern": {}
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:texture_0') == 12 && q.block_state('5fs_br:texture_1') == 1",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "lantern_holder",
+                            "render_method": "alpha_test_to_opaque"
+                        },
+                        "lantern": {
+                            "texture": "weathered_copper_lantern",
+                            "render_method": "alpha_test_to_opaque"
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/lantern_holder/waxed_weathered_copper_lantern.json",
+                    "tag:minecraft:waxed_weathered_copper_lantern": {}
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:texture_0') == 13 && q.block_state('5fs_br:texture_1') == 1",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "lantern_holder",
+                            "render_method": "alpha_test_to_opaque"
+                        },
+                        "lantern": {
+                            "texture": "oxidized_copper_lantern",
+                            "render_method": "alpha_test_to_opaque"
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/lantern_holder/waxed_oxidized_copper_lantern.json",
+                    "tag:minecraft:waxed_oxidized_copper_lantern": {}
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:light') == 0",
+                "components": {
+                    "minecraft:light_emission": 0
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:light') == 2",
+                "components": {
+                    "minecraft:light_emission": 2
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:light') == 6",
+                "components": {
+                    "minecraft:light_emission": 6
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:light') == 9",
+                "components": {
+                    "minecraft:light_emission": 9
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:light') == 10",
+                "components": {
+                    "minecraft:light_emission": 10
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:light') == 12",
+                "components": {
+                    "minecraft:light_emission": 12
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:light') == 15",
+                "components": {
+                    "minecraft:light_emission": 15
+                }
+            }
+        ],
+        "components": {
+            "minecraft:placement_filter": {
+                "conditions": [
+                    {
+                        "allowed_faces": [
+                            "side"
+                        ]
+                    }
+                ]
+            },
+            "minecraft:geometry": {
+                "identifier": "geometry.lantern_holder",
+                "bone_visibility": {
+                    "lantern": "q.block_state('5fs_br:lantern_bit') == true"
+                }
+            },
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "lantern_holder",
+                    "render_method": "alpha_test_to_opaque"
+                }
+            },
+            "minecraft:collision_box": {
+                "origin": [
+                    -2,
+                    5,
+                    -6
+                ],
+                "size": [
+                    4,
+                    9,
+                    14
+                ]
+            },
+            "minecraft:selection_box": {
+                "origin": [
+                    -2,
+                    5,
+                    -6
+                ],
+                "size": [
+                    4,
+                    9,
+                    14
+                ]
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 4.25,
+                "item_specific_speeds": [
+                    {
+                        "item": {
+                            "tags": "query.all_tags('minecraft:is_pickaxe')"
+                        },
+                        "destroy_speed": 3.5
+                    }
+                ]
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 3.5
+            },
+            "minecraft:light_dampening": 0,
+            "minecraft:liquid_detection": {
+                "detection_rules": [
+                    {
+                        "can_contain_liquid": true,
+                        "liquid_type": "water",
+                        "on_liquid_touches": "blocking"
+                    }
+                ]
+            },
+            "minecraft:movable": {
+                "movement_type": "popped"
+            },
+            "minecraft:loot": "loot_tables/blocks/lantern_holder/lantern_holder.json",
+			"minecraft:precipitation_interactions": {
+				"precipitation_behavior": "obstruct_rain"
+			},
+			"minecraft:connection_rule": {
+				"accepts_connections_from": "none"
+			},
+            "5fs_br:lantern_holder": {},
+            "tag:minecraft:is_pickaxe_item_destructible": {}
+        }
+    }
+}

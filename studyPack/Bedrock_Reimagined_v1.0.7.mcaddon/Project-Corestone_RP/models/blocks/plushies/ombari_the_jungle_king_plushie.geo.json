@@ -1,0 +1,761 @@
+{
+	"format_version": "1.21.20",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.ombari_the_jungle_king_plushie",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3,
+				"visible_bounds_offset": [0, 0.5, 0]
+			},
+			"bones": [
+				{
+					"name": "jungle_plushie",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-8.06, 0.62, -4.96],
+							"size": [3.72, 4.96, 4.96],
+							"pivot": [-4.96, 2.48, -2.48],
+							"rotation": [-84, 35, 6],
+							"uv": {
+								"north": {"uv": [4, 0], "uv_size": [3, 4], "material_instance": "jungle_boss_4"},
+								"east": {"uv": [0, 0], "uv_size": [4, 4], "material_instance": "jungle_boss_4"},
+								"south": {"uv": [7, 0], "uv_size": [3, 4], "material_instance": "jungle_boss_4"},
+								"west": {"uv": [4, 0], "uv_size": [-4, 4], "material_instance": "jungle_boss_4"},
+								"up": {"uv": [13, 0], "uv_size": [-3, 4], "material_instance": "jungle_boss_4"},
+								"down": {"uv": [16, 4], "uv_size": [-3, -4], "material_instance": "jungle_boss_4"}
+							}
+						},
+						{
+							"origin": [-7.44, 4.96, -4.96],
+							"size": [2.48, 4.96, 3.72],
+							"pivot": [-4.96, 2.48, -2.48],
+							"rotation": [-96, 35, 6],
+							"uv": {
+								"north": {"uv": [0, 12], "uv_size": [3, 4], "material_instance": "jungle_boss_2"},
+								"east": {"uv": [0, 12], "uv_size": [3, 4], "material_instance": "jungle_boss_2"},
+								"south": {"uv": [0, 12], "uv_size": [3, 4], "material_instance": "jungle_boss_2"},
+								"west": {"uv": [0, 12], "uv_size": [3, 4], "material_instance": "jungle_boss_2"},
+								"up": {"uv": [3, 16], "uv_size": [-3, -4], "material_instance": "jungle_boss_2"},
+								"down": {"uv": [3, 16], "uv_size": [-3, -4], "material_instance": "jungle_boss_2"}
+							}
+						},
+						{
+							"origin": [4.96, 4.96, -4.96],
+							"size": [2.48, 4.96, 3.72],
+							"pivot": [4.96, 2.48, -2.48],
+							"rotation": [-96, -35, -6],
+							"uv": {
+								"north": {"uv": [0, 12], "uv_size": [3, 4], "material_instance": "jungle_boss_2"},
+								"east": {"uv": [0, 12], "uv_size": [3, 4], "material_instance": "jungle_boss_2"},
+								"south": {"uv": [0, 12], "uv_size": [3, 4], "material_instance": "jungle_boss_2"},
+								"west": {"uv": [0, 12], "uv_size": [3, 4], "material_instance": "jungle_boss_2"},
+								"up": {"uv": [3, 16], "uv_size": [-3, -4], "material_instance": "jungle_boss_2"},
+								"down": {"uv": [3, 16], "uv_size": [-3, -4], "material_instance": "jungle_boss_2"}
+							}
+						},
+						{
+							"origin": [4.34, 0.62, -4.96],
+							"size": [3.72, 4.96, 4.96],
+							"pivot": [4.96, 2.48, -2.48],
+							"rotation": [-84, -35, -6],
+							"uv": {
+								"north": {"uv": [4, 0], "uv_size": [3, 4], "material_instance": "jungle_boss_4"},
+								"east": {"uv": [0, 0], "uv_size": [4, 4], "material_instance": "jungle_boss_4"},
+								"south": {"uv": [7, 0], "uv_size": [3, 4], "material_instance": "jungle_boss_4"},
+								"west": {"uv": [4, 0], "uv_size": [-4, 4], "material_instance": "jungle_boss_4"},
+								"up": {"uv": [13, 0], "uv_size": [-3, 4], "material_instance": "jungle_boss_4"},
+								"down": {"uv": [16, 4], "uv_size": [-3, -4], "material_instance": "jungle_boss_4"}
+							}
+						},
+						{
+							"origin": [-11.32348, 13.68165, -5.00185],
+							"size": [6.2, 1.24, 1.24],
+							"pivot": [-7.71808, 9.92579, -1.78396],
+							"rotation": [-25, -29, 48],
+							"uv": {
+								"north": {"uv": [16, 4], "uv_size": [-5, 1], "material_instance": "jungle_boss_5"},
+								"east": {"uv": [11, 1], "uv_size": [1, 1], "material_instance": "jungle_boss_5"},
+								"south": {"uv": [16, 3], "uv_size": [-5, 1], "material_instance": "jungle_boss_5"},
+								"west": {"uv": [12, 2], "uv_size": [1, 1], "material_instance": "jungle_boss_5"},
+								"up": {"uv": [16, 2], "uv_size": [-5, -1], "material_instance": "jungle_boss_5"},
+								"down": {"uv": [16, 3], "uv_size": [-5, -1], "material_instance": "jungle_boss_5"}
+							}
+						},
+						{
+							"origin": [-11.32348, 13.68165, 2.43815],
+							"size": [6.2, 1.24, 1.24],
+							"pivot": [-7.71808, 9.92579, -1.78396],
+							"rotation": [-25, -29, 48],
+							"uv": {
+								"north": {"uv": [11, 3], "uv_size": [5, 1], "material_instance": "jungle_boss_5"},
+								"east": {"uv": [15, 0], "uv_size": [1, 1], "material_instance": "jungle_boss_5"},
+								"south": {"uv": [11, 1], "uv_size": [5, 1], "material_instance": "jungle_boss_5"},
+								"west": {"uv": [14, 0], "uv_size": [1, 1], "material_instance": "jungle_boss_5"},
+								"up": {"uv": [16, 2], "uv_size": [-5, -1], "material_instance": "jungle_boss_5"},
+								"down": {"uv": [16, 3], "uv_size": [-5, -1], "material_instance": "jungle_boss_5"}
+							}
+						},
+						{
+							"origin": [-11.32348, 13.68165, -3.76185],
+							"size": [1.24, 1.24, 6.2],
+							"pivot": [-7.71808, 9.92579, -1.78396],
+							"rotation": [-25, -29, 48],
+							"uv": {
+								"east": {"uv": [11, 0], "uv_size": [5, 1], "material_instance": "jungle_boss_5"},
+								"west": {"uv": [13, 0], "uv_size": [3, 1], "material_instance": "jungle_boss_5"},
+								"up": {"uv": [11, 5], "uv_size": [-1, -5], "material_instance": "jungle_boss_5"},
+								"down": {"uv": [11, 5], "uv_size": [-1, -5], "material_instance": "jungle_boss_5"}
+							}
+						},
+						{
+							"origin": [-10.08348, 9.96165, -4.38185],
+							"size": [4.96, 3.72, 7.44],
+							"pivot": [-7.71808, 9.92579, -1.78396],
+							"rotation": [-25, -29, 48],
+							"uv": {
+								"north": {"uv": [4, 0], "uv_size": [4, 3], "material_instance": "jungle_boss_5"},
+								"east": {"uv": [6, 3], "uv_size": [-6, 3], "material_instance": "jungle_boss_5"},
+								"south": {"uv": [0, 0], "uv_size": [4, 3], "material_instance": "jungle_boss_5"},
+								"west": {"uv": [3, 13], "uv_size": [6, 3], "material_instance": "jungle_boss_5"},
+								"up": {"uv": [13, 16], "uv_size": [-4, -6], "material_instance": "jungle_boss_5"},
+								"down": {"uv": [12, 16], "uv_size": [4, -6], "material_instance": "jungle_boss_5"}
+							}
+						},
+						{
+							"origin": [5.55752, 5.33491, -3.38153],
+							"size": [2.48, 4.96, 4.96],
+							"pivot": [7.71808, 9.92579, -1.78396],
+							"rotation": [-27, 29, -48],
+							"uv": {
+								"north": {"uv": [0, 9], "uv_size": [2, 4], "material_instance": "jungle_boss_5"},
+								"east": {"uv": [6, 5], "uv_size": [4, 4], "material_instance": "jungle_boss_5"},
+								"south": {"uv": [6, 9], "uv_size": [2, 4], "material_instance": "jungle_boss_5"},
+								"west": {"uv": [2, 9], "uv_size": [4, 4], "material_instance": "jungle_boss_5"},
+								"down": {"uv": [8, 5], "uv_size": [2, -4], "material_instance": "jungle_boss_5"}
+							}
+						},
+						{
+							"origin": [4.86597, 4.37596, 1.28832],
+							"size": [3.72, 6.2, 3.72],
+							"pivot": [7.71808, 9.92579, -1.78396],
+							"rotation": [-92, 29, -48],
+							"uv": {
+								"north": {"uv": [3, 11], "uv_size": [3, 5], "material_instance": "jungle_boss_6"},
+								"east": {"uv": [0, 11], "uv_size": [3, 5], "material_instance": "jungle_boss_6"},
+								"south": {"uv": [9, 11], "uv_size": [3, 5], "material_instance": "jungle_boss_6"},
+								"west": {"uv": [6, 11], "uv_size": [3, 5], "material_instance": "jungle_boss_6"},
+								"up": {"uv": [3, 11], "uv_size": [-3, -3], "material_instance": "jungle_boss_6"},
+								"down": {"uv": [3, 11], "uv_size": [3, -3], "material_instance": "jungle_boss_6"}
+							}
+						},
+						{
+							"origin": [9.60972, 2.79111, -0.01168],
+							"size": [3.84, 3.84, 3.84],
+							"inflate": 0.25,
+							"pivot": [7.71808, 9.92579, -1.78396],
+							"rotation": [-96.32771, 73.92187, -53.11217],
+							"uv": {
+								"north": {"uv": [13, 7], "uv_size": [3, 3], "material_instance": "jungle_boss_6"},
+								"east": {"uv": [10, 7], "uv_size": [3, 3], "material_instance": "jungle_boss_6"},
+								"south": {"uv": [13, 4], "uv_size": [3, 3], "material_instance": "jungle_boss_6"},
+								"west": {"uv": [10, 4], "uv_size": [3, 3], "material_instance": "jungle_boss_6"},
+								"up": {"uv": [13, 13], "uv_size": [3, -3], "material_instance": "jungle_boss_6"},
+								"down": {"uv": [16, 13], "uv_size": [-3, 3], "material_instance": "jungle_boss_6"}
+							}
+						},
+						{
+							"origin": [11.54062, 4.28576, 1.25422],
+							"size": [1.24, 4.96, 2.48],
+							"pivot": [7.71808, 9.92579, -1.78396],
+							"rotation": [-75, 39, -22],
+							"uv": {
+								"north": {"uv": [14, 0], "uv_size": [2, 4], "material_instance": "jungle_boss_6"},
+								"east": {"uv": [14, 0], "uv_size": [2, 4], "material_instance": "jungle_boss_6"},
+								"south": {"uv": [14, 0], "uv_size": [2, 4], "material_instance": "jungle_boss_6"},
+								"west": {"uv": [14, 0], "uv_size": [2, 4], "material_instance": "jungle_boss_6"},
+								"up": {"uv": [16, 4], "uv_size": [-2, -4], "material_instance": "jungle_boss_6"},
+								"down": {"uv": [16, 4], "uv_size": [-2, -4], "material_instance": "jungle_boss_6"}
+							}
+						},
+						{
+							"origin": [9.44079, 3.03259, -0.02659],
+							"size": [2.48, 7.44, 3.72],
+							"pivot": [7.71808, 9.92579, -1.78396],
+							"rotation": [-92, 41, -48],
+							"uv": {
+								"north": {"uv": [3, 0], "uv_size": [2, 6], "material_instance": "jungle_boss_6"},
+								"east": {"uv": [0, 0], "uv_size": [3, 6], "material_instance": "jungle_boss_6"},
+								"south": {"uv": [3, 0], "uv_size": [2, 6], "material_instance": "jungle_boss_6"},
+								"west": {"uv": [5, 0], "uv_size": [3, 6], "material_instance": "jungle_boss_6"},
+								"up": {"uv": [10, 3], "uv_size": [-2, -3], "material_instance": "jungle_boss_6"},
+								"down": {"uv": [12, 3], "uv_size": [-2, -3], "material_instance": "jungle_boss_6"}
+							}
+						},
+						{
+							"origin": [9.0743, 4.28576, -0.57748],
+							"size": [1.24, 4.96, 2.48],
+							"pivot": [7.71808, 9.92579, -1.78396],
+							"rotation": [-111.96591, 35.96028, -79.5463],
+							"uv": {
+								"north": {"uv": [14, 0], "uv_size": [2, 4], "material_instance": "jungle_boss_6"},
+								"east": {"uv": [14, 0], "uv_size": [2, 4], "material_instance": "jungle_boss_6"},
+								"south": {"uv": [14, 0], "uv_size": [2, 4], "material_instance": "jungle_boss_6"},
+								"west": {"uv": [14, 0], "uv_size": [2, 4], "material_instance": "jungle_boss_6"},
+								"up": {"uv": [16, 4], "uv_size": [-2, -4], "material_instance": "jungle_boss_6"},
+								"down": {"uv": [16, 4], "uv_size": [-2, -4], "material_instance": "jungle_boss_6"}
+							}
+						},
+						{
+							"origin": [-12.78062, 4.28576, 1.25422],
+							"size": [1.24, 4.96, 2.48],
+							"pivot": [-7.71808, 9.92579, -1.78396],
+							"rotation": [-75, -39, 22],
+							"uv": {
+								"north": {"uv": [14, 0], "uv_size": [2, 4], "material_instance": "jungle_boss_6"},
+								"east": {"uv": [14, 0], "uv_size": [2, 4], "material_instance": "jungle_boss_6"},
+								"south": {"uv": [14, 0], "uv_size": [2, 4], "material_instance": "jungle_boss_6"},
+								"west": {"uv": [14, 0], "uv_size": [2, 4], "material_instance": "jungle_boss_6"},
+								"up": {"uv": [16, 4], "uv_size": [-2, -4], "material_instance": "jungle_boss_6"},
+								"down": {"uv": [16, 4], "uv_size": [-2, -4], "material_instance": "jungle_boss_6"}
+							}
+						},
+						{
+							"origin": [-11.92079, 3.03259, -0.02659],
+							"size": [2.48, 7.44, 3.72],
+							"pivot": [-7.71808, 9.92579, -1.78396],
+							"rotation": [-92, -41, 48],
+							"uv": {
+								"north": {"uv": [3, 0], "uv_size": [2, 6], "material_instance": "jungle_boss_6"},
+								"east": {"uv": [8, 0], "uv_size": [-3, 6], "material_instance": "jungle_boss_6"},
+								"south": {"uv": [3, 0], "uv_size": [2, 6], "material_instance": "jungle_boss_6"},
+								"west": {"uv": [0, 0], "uv_size": [3, 6], "material_instance": "jungle_boss_6"},
+								"up": {"uv": [10, 3], "uv_size": [-2, -3], "material_instance": "jungle_boss_6"},
+								"down": {"uv": [12, 3], "uv_size": [-2, -3], "material_instance": "jungle_boss_6"}
+							}
+						},
+						{
+							"origin": [-10.3143, 4.28576, -0.57748],
+							"size": [1.24, 4.96, 2.48],
+							"pivot": [-7.71808, 9.92579, -1.78396],
+							"rotation": [-111.96591, -35.96028, 79.5463],
+							"uv": {
+								"north": {"uv": [15, 0], "uv_size": [1, 4], "material_instance": "jungle_boss_6"},
+								"east": {"uv": [15, 0], "uv_size": [1, 4], "material_instance": "jungle_boss_6"},
+								"south": {"uv": [15, 0], "uv_size": [1, 4], "material_instance": "jungle_boss_6"},
+								"west": {"uv": [15, 0], "uv_size": [1, 4], "material_instance": "jungle_boss_6"},
+								"up": {"uv": [16, 4], "uv_size": [-1, -4], "material_instance": "jungle_boss_6"},
+								"down": {"uv": [16, 4], "uv_size": [-1, -4], "material_instance": "jungle_boss_6"}
+							}
+						},
+						{
+							"origin": [-13.44972, 2.79111, -0.01168],
+							"size": [3.84, 3.84, 3.84],
+							"inflate": 0.25,
+							"pivot": [-7.71808, 9.92579, -1.78396],
+							"rotation": [-96.32771, -73.92187, 53.11217],
+							"uv": {
+								"north": {"uv": [16, 7], "uv_size": [-3, 3], "material_instance": "jungle_boss_6"},
+								"east": {"uv": [10, 4], "uv_size": [3, 3], "material_instance": "jungle_boss_6"},
+								"south": {"uv": [16, 4], "uv_size": [-3, 3], "material_instance": "jungle_boss_6"},
+								"west": {"uv": [13, 7], "uv_size": [-3, 3], "material_instance": "jungle_boss_6"},
+								"up": {"uv": [16, 13], "uv_size": [-3, -3], "material_instance": "jungle_boss_6"},
+								"down": {"uv": [16, 16], "uv_size": [-3, -3], "material_instance": "jungle_boss_6"}
+							}
+						},
+						{
+							"origin": [-8.58597, 4.37596, 1.28832],
+							"size": [3.72, 6.2, 3.72],
+							"pivot": [-7.71808, 9.92579, -1.78396],
+							"rotation": [-92, -29, 48],
+							"uv": {
+								"north": {"uv": [6, 11], "uv_size": [-3, 5], "material_instance": "jungle_boss_6"},
+								"east": {"uv": [9, 11], "uv_size": [-3, 5], "material_instance": "jungle_boss_6"},
+								"south": {"uv": [7, 11], "uv_size": [3, 5], "material_instance": "jungle_boss_6"},
+								"west": {"uv": [3, 11], "uv_size": [-3, 5], "material_instance": "jungle_boss_6"},
+								"up": {"uv": [3, 11], "uv_size": [-3, -3], "material_instance": "jungle_boss_6"},
+								"down": {"uv": [6, 11], "uv_size": [-3, -3], "material_instance": "jungle_boss_6"}
+							}
+						},
+						{
+							"origin": [-8.03752, 5.33491, -3.38153],
+							"size": [2.48, 4.96, 4.96],
+							"pivot": [-7.71808, 9.92579, -1.78396],
+							"rotation": [-27, -29, 48],
+							"uv": {
+								"north": {"uv": [6, 9], "uv_size": [2, 4], "material_instance": "jungle_boss_5"},
+								"east": {"uv": [2, 9], "uv_size": [4, 4], "material_instance": "jungle_boss_5"},
+								"south": {"uv": [0, 9], "uv_size": [2, 4], "material_instance": "jungle_boss_5"},
+								"west": {"uv": [10, 5], "uv_size": [-4, 4], "material_instance": "jungle_boss_5"},
+								"down": {"uv": [10, 5], "uv_size": [-2, -4], "material_instance": "jungle_boss_5"}
+							}
+						},
+						{
+							"origin": [5.12348, 9.96165, -4.38185],
+							"size": [4.96, 3.72, 7.44],
+							"pivot": [7.71808, 9.92579, -1.78396],
+							"rotation": [-25, 29, -48],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [4, 3], "material_instance": "jungle_boss_5"},
+								"east": {"uv": [3, 13], "uv_size": [6, 3], "material_instance": "jungle_boss_5"},
+								"south": {"uv": [4, 0], "uv_size": [4, 3], "material_instance": "jungle_boss_5"},
+								"west": {"uv": [0, 3], "uv_size": [6, 3], "material_instance": "jungle_boss_5"},
+								"up": {"uv": [9, 16], "uv_size": [4, -6], "material_instance": "jungle_boss_5"},
+								"down": {"uv": [16, 16], "uv_size": [-4, -6], "material_instance": "jungle_boss_5"}
+							}
+						},
+						{
+							"origin": [10.08348, 13.68165, -3.76185],
+							"size": [1.24, 1.24, 6.2],
+							"pivot": [7.71808, 9.92579, -1.78396],
+							"rotation": [-25, 29, -48],
+							"uv": {
+								"east": {"uv": [13, 0], "uv_size": [3, 1], "material_instance": "jungle_boss_5"},
+								"west": {"uv": [11, 0], "uv_size": [5, 1], "material_instance": "jungle_boss_5"},
+								"up": {"uv": [11, 5], "uv_size": [-1, -5], "material_instance": "jungle_boss_5"},
+								"down": {"uv": [11, 5], "uv_size": [-1, -5], "material_instance": "jungle_boss_5"}
+							}
+						},
+						{
+							"origin": [5.12348, 13.68165, 2.43815],
+							"size": [6.2, 1.24, 1.24],
+							"pivot": [7.71808, 9.92579, -1.78396],
+							"rotation": [-25, 29, -48],
+							"uv": {
+								"north": {"uv": [16, 3], "uv_size": [-5, 1], "material_instance": "jungle_boss_5"},
+								"east": {"uv": [13, 4], "uv_size": [1, 1], "material_instance": "jungle_boss_5"},
+								"south": {"uv": [16, 4], "uv_size": [-5, 1], "material_instance": "jungle_boss_5"},
+								"west": {"uv": [15, 2], "uv_size": [1, 1], "material_instance": "jungle_boss_5"},
+								"up": {"uv": [11, 2], "uv_size": [5, -1], "material_instance": "jungle_boss_5"},
+								"down": {"uv": [11, 3], "uv_size": [5, -1], "material_instance": "jungle_boss_5"}
+							}
+						},
+						{
+							"origin": [-3.1, 8.06, -3.72],
+							"size": [6.2, 6.2, 4.96],
+							"uv": {
+								"north": {"uv": [0, 7], "uv_size": [5, 5], "material_instance": "jungle_boss_0"},
+								"east": {"uv": [5, 7], "uv_size": [4, 5], "material_instance": "jungle_boss_0"},
+								"south": {"uv": [0, 7], "uv_size": [5, 5], "material_instance": "jungle_boss_0"},
+								"west": {"uv": [9, 7], "uv_size": [-4, 5], "material_instance": "jungle_boss_0"},
+								"up": {"uv": [0, 3], "uv_size": [5, 4], "material_instance": "jungle_boss_0"},
+								"down": {"uv": [10, 7], "uv_size": [-5, -4], "material_instance": "jungle_boss_0"}
+							}
+						},
+						{
+							"origin": [1.11584, 9.8771, -4.64373],
+							"size": [1.24, 1.24, 2.48],
+							"pivot": [0, 10.27299, -5.19471],
+							"rotation": [32, -5, 8],
+							"uv": {
+								"north": {"uv": [14, 0], "uv_size": [1, 1], "material_instance": "jungle_boss_0"},
+								"east": {"uv": [14, 1], "uv_size": [2, 1], "material_instance": "jungle_boss_0"},
+								"west": {"uv": [16, 1], "uv_size": [-2, 1], "material_instance": "jungle_boss_0"},
+								"up": {"uv": [15, 2], "uv_size": [-1, -2], "material_instance": "jungle_boss_0"},
+								"down": {"uv": [14, 0], "uv_size": [1, 2], "material_instance": "jungle_boss_0"}
+							}
+						},
+						{
+							"origin": [-2.35584, 9.8771, -4.64373],
+							"size": [1.24, 1.24, 2.48],
+							"pivot": [0, 10.27299, -5.19471],
+							"rotation": [32, 5, -8],
+							"uv": {
+								"north": {"uv": [15, 1], "uv_size": [1, 1], "material_instance": "jungle_boss_0"},
+								"east": {"uv": [14, 1], "uv_size": [2, 1], "material_instance": "jungle_boss_0"},
+								"west": {"uv": [14, 1], "uv_size": [2, 1], "material_instance": "jungle_boss_0"},
+								"up": {"uv": [15, 2], "uv_size": [-1, -2], "material_instance": "jungle_boss_0"},
+								"down": {"uv": [15, 0], "uv_size": [-1, 2], "material_instance": "jungle_boss_0"}
+							}
+						},
+						{
+							"origin": [-2.12221, 9.99459, -7.46569],
+							"size": [1.24, 1.24, 1.24],
+							"pivot": [0, 10.27299, -5.19471],
+							"rotation": [23, 9, 4],
+							"uv": {
+								"north": {"uv": [5, 1], "uv_size": [1, 1], "material_instance": "jungle_boss_0"},
+								"east": {"uv": [5, 1], "uv_size": [1, 1], "material_instance": "jungle_boss_0"},
+								"south": {"uv": [5, 1], "uv_size": [1, 1], "material_instance": "jungle_boss_0"},
+								"west": {"uv": [5, 0], "uv_size": [1, 1], "material_instance": "jungle_boss_0"},
+								"up": {"uv": [6, 1], "uv_size": [-1, -1], "material_instance": "jungle_boss_0"},
+								"down": {"uv": [6, 1], "uv_size": [-1, -1], "material_instance": "jungle_boss_0"}
+							}
+						},
+						{
+							"origin": [0.88221, 9.99459, -7.46569],
+							"size": [1.24, 1.24, 1.24],
+							"pivot": [0, 10.27299, -5.19471],
+							"rotation": [23, -9, -4],
+							"uv": {
+								"north": {"uv": [5, 1], "uv_size": [1, 1], "material_instance": "jungle_boss_0"},
+								"east": {"uv": [5, 0], "uv_size": [1, 1], "material_instance": "jungle_boss_0"},
+								"south": {"uv": [5, 1], "uv_size": [1, 1], "material_instance": "jungle_boss_0"},
+								"west": {"uv": [5, 1], "uv_size": [1, 1], "material_instance": "jungle_boss_0"},
+								"up": {"uv": [6, 1], "uv_size": [-1, -1], "material_instance": "jungle_boss_0"},
+								"down": {"uv": [7, 2], "uv_size": [-1, -1], "material_instance": "jungle_boss_0"}
+							}
+						},
+						{
+							"origin": [-0.62, 9.33195, -7.57682],
+							"size": [1.24, 1.24, 1.24],
+							"pivot": [0, 10.27299, -5.19471],
+							"rotation": [20, 0, 0],
+							"uv": {
+								"north": {"uv": [5, 1], "uv_size": [1, 1], "material_instance": "jungle_boss_0"},
+								"east": {"uv": [6, 1], "uv_size": [1, 1], "material_instance": "jungle_boss_0"},
+								"south": {"uv": [5, 1], "uv_size": [1, 1], "material_instance": "jungle_boss_0"},
+								"west": {"uv": [6, 1], "uv_size": [1, 1], "material_instance": "jungle_boss_0"},
+								"up": {"uv": [6, 2], "uv_size": [-1, -1], "material_instance": "jungle_boss_0"},
+								"down": {"uv": [6, 2], "uv_size": [-1, -1], "material_instance": "jungle_boss_0"}
+							}
+						},
+						{
+							"origin": [-1.86, 9.06207, -7.12647],
+							"size": [3.72, 1.24, 4.96],
+							"pivot": [0, 10.27299, -5.19471],
+							"rotation": [32, 0, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [3, 1], "material_instance": "jungle_boss_0"},
+								"east": {"uv": [0, 0], "uv_size": [4, 1], "material_instance": "jungle_boss_0"},
+								"south": {"uv": [12.28986, 5.33333], "uv_size": [0.69565, 0.23188], "material_instance": "jungle_boss_0"},
+								"west": {"uv": [0, 1], "uv_size": [4, 1], "material_instance": "jungle_boss_0"},
+								"up": {"uv": [2, 12], "uv_size": [3, 4], "material_instance": "jungle_boss_0"},
+								"down": {"uv": [16, 11], "uv_size": [-3, -4], "material_instance": "jungle_boss_0"}
+							}
+						},
+						{
+							"origin": [-3.73285, 13.24278, -5.98444],
+							"size": [2.528, 1.288, 1.288],
+							"inflate": 0.1,
+							"pivot": [1.25115, 13.26678, -7.20044],
+							"rotation": [-15, 0, -10],
+							"uv": {
+								"north": {"uv": [15, 3], "uv_size": [1, 1], "material_instance": "jungle_boss_0"},
+								"east": {"uv": [15, 3], "uv_size": [1, 1], "material_instance": "jungle_boss_0"},
+								"south": {"uv": [15, 3], "uv_size": [1, 1], "material_instance": "jungle_boss_0"},
+								"west": {"uv": [15, 3], "uv_size": [1, 1], "material_instance": "jungle_boss_0"},
+								"up": {"uv": [16, 4], "uv_size": [-1, -1], "material_instance": "jungle_boss_0"},
+								"down": {"uv": [16, 4], "uv_size": [-1, -1], "material_instance": "jungle_boss_0"}
+							}
+						},
+						{
+							"origin": [-3.88339, 13.01664, -10.04388],
+							"size": [1.24, 1.24, 2.48],
+							"pivot": [1.07661, 14.25664, -7.56388],
+							"rotation": [-60, 0, -10],
+							"uv": {
+								"north": {"uv": [14, 5], "uv_size": [1, 1], "material_instance": "jungle_boss_0"},
+								"east": {"uv": [16, 5], "uv_size": [-2, 1], "material_instance": "jungle_boss_0"},
+								"west": {"uv": [14, 5], "uv_size": [2, 1], "material_instance": "jungle_boss_0"},
+								"up": {"uv": [16, 6], "uv_size": [0, -2], "material_instance": "jungle_boss_0"},
+								"down": {"uv": [16, 4], "uv_size": [-1, 2], "material_instance": "jungle_boss_0"}
+							}
+						},
+						{
+							"origin": [-3.744, 13.306, -8.704],
+							"size": [1.288, 1.288, 2.528],
+							"inflate": 0.1,
+							"pivot": [1.24, 13.33, -7.44],
+							"rotation": [-15, 0, -10],
+							"uv": {
+								"north": {"uv": [13, 1], "uv_size": [1, 1], "material_instance": "jungle_boss_0"},
+								"east": {"uv": [12, 1], "uv_size": [2, 1], "material_instance": "jungle_boss_0"},
+								"south": {"uv": [13, 0], "uv_size": [1, 1], "material_instance": "jungle_boss_0"},
+								"west": {"uv": [14, 1], "uv_size": [-2, 1], "material_instance": "jungle_boss_0"},
+								"up": {"uv": [14, 0], "uv_size": [-1, 2], "material_instance": "jungle_boss_0"},
+								"down": {"uv": [14, 2], "uv_size": [-1, -2], "material_instance": "jungle_boss_0"}
+							}
+						},
+						{
+							"origin": [1.20485, 13.24278, -5.98444],
+							"size": [2.528, 1.288, 1.288],
+							"inflate": 0.1,
+							"pivot": [-1.25115, 13.26678, -7.20044],
+							"rotation": [-15, 0, 10],
+							"uv": {
+								"north": {"uv": [15, 3], "uv_size": [1, 1], "material_instance": "jungle_boss_0"},
+								"east": {"uv": [15, 3], "uv_size": [1, 1], "material_instance": "jungle_boss_0"},
+								"south": {"uv": [15, 3], "uv_size": [1, 1], "material_instance": "jungle_boss_0"},
+								"west": {"uv": [15, 3], "uv_size": [1, 1], "material_instance": "jungle_boss_0"},
+								"up": {"uv": [16, 4], "uv_size": [-1, -1], "material_instance": "jungle_boss_0"},
+								"down": {"uv": [16, 4], "uv_size": [-1, -1], "material_instance": "jungle_boss_0"}
+							}
+						},
+						{
+							"origin": [2.456, 13.306, -8.704],
+							"size": [1.288, 1.288, 2.528],
+							"inflate": 0.1,
+							"pivot": [-1.24, 13.33, -7.44],
+							"rotation": [-15, 0, 10],
+							"uv": {
+								"north": {"uv": [13, 1], "uv_size": [1, 1], "material_instance": "jungle_boss_0"},
+								"east": {"uv": [12, 1], "uv_size": [2, 1], "material_instance": "jungle_boss_0"},
+								"south": {"uv": [12, 1], "uv_size": [1, 1], "material_instance": "jungle_boss_0"},
+								"west": {"uv": [14, 1], "uv_size": [-2, 1], "material_instance": "jungle_boss_0"},
+								"up": {"uv": [14, 0], "uv_size": [-1, 2], "material_instance": "jungle_boss_0"},
+								"down": {"uv": [14, 2], "uv_size": [-1, -2], "material_instance": "jungle_boss_0"}
+							}
+						},
+						{
+							"origin": [2.64339, 13.01664, -10.04388],
+							"size": [1.24, 1.24, 2.48],
+							"pivot": [-1.07661, 14.25664, -7.56388],
+							"rotation": [-60, 0, 10],
+							"uv": {
+								"north": {"uv": [14, 5], "uv_size": [1, 1], "material_instance": "jungle_boss_0"},
+								"east": {"uv": [16, 5], "uv_size": [-2, 1], "material_instance": "jungle_boss_0"},
+								"west": {"uv": [14, 5], "uv_size": [2, 1], "material_instance": "jungle_boss_0"},
+								"up": {"uv": [16, 6], "uv_size": [-1, -2], "material_instance": "jungle_boss_0"},
+								"down": {"uv": [16, 4], "uv_size": [-1, 2], "material_instance": "jungle_boss_0"}
+							}
+						},
+						{
+							"origin": [0.62, 11.47, -7.13],
+							"size": [2.48, 1.24, 1.24],
+							"pivot": [1.86, 11.47, -7.13],
+							"rotation": [2, 1, -22],
+							"uv": {
+								"north": {"uv": [14, 1], "uv_size": [2, 1], "material_instance": "jungle_boss_0"},
+								"east": {"uv": [6, 1], "uv_size": [1, 1], "material_instance": "jungle_boss_0"},
+								"south": {"uv": [5, 1], "uv_size": [2, 1], "material_instance": "jungle_boss_0"},
+								"west": {"uv": [5, 1], "uv_size": [1, 1], "material_instance": "jungle_boss_0"},
+								"up": {"uv": [7, 2], "uv_size": [-2, -1], "material_instance": "jungle_boss_0"},
+								"down": {"uv": [7, 2], "uv_size": [-2, -1], "material_instance": "jungle_boss_0"}
+							}
+						},
+						{
+							"origin": [-3.1, 11.47, -7.13],
+							"size": [2.48, 1.24, 1.24],
+							"pivot": [-1.86, 11.47, -7.13],
+							"rotation": [2, -1, 22],
+							"uv": {
+								"north": {"uv": [5, 1], "uv_size": [2, 1], "material_instance": "jungle_boss_0"},
+								"east": {"uv": [15, 1], "uv_size": [1, 1], "material_instance": "jungle_boss_0"},
+								"south": {"uv": [14, 1], "uv_size": [2, 1], "material_instance": "jungle_boss_0"},
+								"west": {"uv": [6, 1], "uv_size": [1, 1], "material_instance": "jungle_boss_0"},
+								"up": {"uv": [16, 2], "uv_size": [-2, -1], "material_instance": "jungle_boss_0"},
+								"down": {"uv": [16, 2], "uv_size": [-2, -1], "material_instance": "jungle_boss_0"}
+							}
+						},
+						{
+							"origin": [-1.86, 10.54, -6.2],
+							"size": [3.72, 2.48, 3.72],
+							"pivot": [0.62, -5.58, -3.72],
+							"rotation": [2, 0, 0],
+							"uv": {
+								"north": {"uv": [13, 12], "uv_size": [3, 2], "material_instance": "jungle_boss_0"},
+								"east": {"uv": [11, 14], "uv_size": [3, 2], "material_instance": "jungle_boss_0"},
+								"west": {"uv": [14, 14], "uv_size": [-3, 2], "material_instance": "jungle_boss_0"},
+								"up": {"uv": [11, 16], "uv_size": [-3, -3], "material_instance": "jungle_boss_0"},
+								"down": {"uv": [8, 16], "uv_size": [-3, -3], "material_instance": "jungle_boss_0"}
+							}
+						},
+						{
+							"origin": [-5.58, 5.58, -2.48],
+							"size": [11.16, 7.44, 7.44],
+							"uv": {
+								"north": {"uv": [7, 10], "uv_size": [9, 6], "material_instance": "jungle_boss_1"},
+								"east": {"uv": [1, 10], "uv_size": [6, 6], "material_instance": "jungle_boss_1"},
+								"south": {"uv": [7, 4], "uv_size": [9, 6], "material_instance": "jungle_boss_1"},
+								"west": {"uv": [1, 4], "uv_size": [6, 6], "material_instance": "jungle_boss_1"},
+								"up": {"uv": [16, 16], "uv_size": [-9, -6], "material_instance": "jungle_boss_2"},
+								"down": {"uv": [16, 10], "uv_size": [-9, -6], "material_instance": "jungle_boss_2"}
+							}
+						},
+						{
+							"origin": [-3.1, 4.96, 4.96],
+							"size": [6.2, 4.96, 6.2],
+							"pivot": [0.62, -3.72, 8.68],
+							"rotation": [25, 0, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [5, 4], "material_instance": "jungle_boss_2"},
+								"east": {"uv": [0, 0], "uv_size": [5, 4], "material_instance": "jungle_boss_2"},
+								"south": {"uv": [0, 0], "uv_size": [5, 4], "material_instance": "jungle_boss_2"},
+								"west": {"uv": [0, 0], "uv_size": [5, 4], "material_instance": "jungle_boss_2"},
+								"down": {"uv": [5, 6], "uv_size": [-5, -4], "material_instance": "jungle_boss_2"}
+							}
+						},
+						{
+							"origin": [8.68, 0, 12.4],
+							"size": [2.48, 2.48, 6.2],
+							"pivot": [9.92, -8.68, 13.64],
+							"rotation": [152, 75, 157],
+							"uv": {
+								"north": {"uv": [5, 14], "uv_size": [2, 2], "material_instance": "jungle_boss_4"},
+								"east": {"uv": [0, 14], "uv_size": [5, 2], "material_instance": "jungle_boss_4"},
+								"south": {"uv": [5, 14], "uv_size": [2, 2], "material_instance": "jungle_boss_4"},
+								"west": {"uv": [0, 14], "uv_size": [5, 2], "material_instance": "jungle_boss_4"},
+								"up": {"uv": [0, 9], "uv_size": [2, 5], "material_instance": "jungle_boss_4"},
+								"down": {"uv": [4, 14], "uv_size": [-2, -5], "material_instance": "jungle_boss_4"}
+							}
+						},
+						{
+							"origin": [5.58, 3.72, 13.02],
+							"size": [1.24, 1.24, 2.48],
+							"pivot": [6.82, -7.44, 13.02],
+							"rotation": [87, 82, 91],
+							"uv": {
+								"north": {"uv": [15, 10], "uv_size": [1, 1], "material_instance": "jungle_boss_4"},
+								"east": {"uv": [12, 8], "uv_size": [2, 1], "material_instance": "jungle_boss_4"},
+								"south": {"uv": [15, 9], "uv_size": [1, 1], "material_instance": "jungle_boss_4"},
+								"west": {"uv": [14, 10], "uv_size": [2, 1], "material_instance": "jungle_boss_4"},
+								"up": {"uv": [16, 11], "uv_size": [-1, -2], "material_instance": "jungle_boss_4"}
+							}
+						},
+						{
+							"origin": [3.1, 0, 11.78],
+							"size": [3.72, 3.72, 6.2],
+							"pivot": [5.58, -7.44, 13.02],
+							"rotation": [87, 82, 91],
+							"uv": {
+								"north": {"uv": [5, 4], "uv_size": [3, 3], "material_instance": "jungle_boss_3"},
+								"east": {"uv": [0, 4], "uv_size": [5, 3], "material_instance": "jungle_boss_3"},
+								"south": {"uv": [5, 4], "uv_size": [3, 3], "material_instance": "jungle_boss_3"},
+								"west": {"uv": [0, 1], "uv_size": [5, 3], "material_instance": "jungle_boss_3"},
+								"up": {"uv": [10, 11], "uv_size": [3, 5], "material_instance": "jungle_boss_4"},
+								"down": {"uv": [16, 16], "uv_size": [-3, -5], "material_instance": "jungle_boss_4"}
+							}
+						},
+						{
+							"origin": [0.62, 3.72, 12.4],
+							"size": [2.48, 1.24, 2.48],
+							"pivot": [1.86, -7.44, 11.16],
+							"rotation": [13, 62, 12],
+							"uv": {
+								"north": {"uv": [14, 10], "uv_size": [2, 1], "material_instance": "jungle_boss_4"},
+								"east": {"uv": [14, 10], "uv_size": [2, 1], "material_instance": "jungle_boss_4"},
+								"south": {"uv": [12, 10], "uv_size": [2, 1], "material_instance": "jungle_boss_4"},
+								"west": {"uv": [13, 8], "uv_size": [2, 1], "material_instance": "jungle_boss_4"},
+								"up": {"uv": [13, 8], "uv_size": [2, 2], "material_instance": "jungle_boss_4"}
+							}
+						},
+						{
+							"origin": [-0.62, 0, 9.92],
+							"size": [4.96, 3.72, 6.2],
+							"pivot": [1.86, -7.44, 11.16],
+							"rotation": [13, 62, 12],
+							"uv": {
+								"north": {"uv": [12, 3], "uv_size": [4, 3], "material_instance": "jungle_boss_3"},
+								"east": {"uv": [11, 0], "uv_size": [5, 3], "material_instance": "jungle_boss_3"},
+								"south": {"uv": [12, 3], "uv_size": [4, 3], "material_instance": "jungle_boss_3"},
+								"west": {"uv": [16, 0], "uv_size": [-5, 3], "material_instance": "jungle_boss_3"},
+								"up": {"uv": [4, 12], "uv_size": [-4, -5], "material_instance": "jungle_boss_3"},
+								"down": {"uv": [8, 12], "uv_size": [-4, -5], "material_instance": "jungle_boss_3"}
+							}
+						},
+						{
+							"origin": [-1.24, 4.96, 7.44],
+							"size": [2.48, 1.24, 2.48],
+							"pivot": [0, -7.44, 6.2],
+							"rotation": [0, 27, -4],
+							"uv": {
+								"north": {"uv": [14, 10], "uv_size": [2, 1], "material_instance": "jungle_boss_4"},
+								"east": {"uv": [13, 8], "uv_size": [2, 1], "material_instance": "jungle_boss_4"},
+								"south": {"uv": [14, 10], "uv_size": [2, 1], "material_instance": "jungle_boss_4"},
+								"west": {"uv": [14, 10], "uv_size": [2, 1], "material_instance": "jungle_boss_4"},
+								"up": {"uv": [16, 10], "uv_size": [-2, -2], "material_instance": "jungle_boss_4"}
+							}
+						},
+						{
+							"origin": [-2.48, 0, 3.72],
+							"size": [4.96, 4.96, 7.44],
+							"pivot": [0, -7.44, 6.2],
+							"rotation": [0, 27, -4],
+							"uv": {
+								"north": {"uv": [12, 12], "uv_size": [4, 4], "material_instance": "jungle_boss_3"},
+								"east": {"uv": [6, 12], "uv_size": [6, 4], "material_instance": "jungle_boss_3"},
+								"south": {"uv": [12, 12], "uv_size": [4, 4], "material_instance": "jungle_boss_3"},
+								"west": {"uv": [1, 12], "uv_size": [6, 4], "material_instance": "jungle_boss_3"},
+								"up": {"uv": [8, 6], "uv_size": [4, 6], "material_instance": "jungle_boss_3"},
+								"down": {"uv": [16, 12], "uv_size": [-4, -6], "material_instance": "jungle_boss_3"}
+							}
+						},
+						{
+							"origin": [-2.48, 1.24, 3.72],
+							"size": [4.96, 2.48, 4.96],
+							"pivot": [0, -3.72, 6.2],
+							"rotation": [12, 0, 0],
+							"uv": {
+								"north": {"uv": [0, 14], "uv_size": [4, 2], "material_instance": "jungle_boss_2"},
+								"east": {"uv": [0, 14], "uv_size": [4, 2], "material_instance": "jungle_boss_2"},
+								"south": {"uv": [0, 14], "uv_size": [4, 2], "material_instance": "jungle_boss_2"},
+								"west": {"uv": [0, 14], "uv_size": [4, 2], "material_instance": "jungle_boss_2"},
+								"down": {"uv": [4, 16], "uv_size": [-4, -2], "material_instance": "jungle_boss_2"}
+							}
+						},
+						{
+							"origin": [5.12348, 13.68165, -5.00185],
+							"size": [6.2, 1.24, 1.24],
+							"pivot": [7.71808, 9.92579, -1.78396],
+							"rotation": [-25, 29, -48],
+							"uv": {
+								"north": {"uv": [11, 1], "uv_size": [5, 1], "material_instance": "jungle_boss_5"},
+								"east": {"uv": [15, 2], "uv_size": [1, 1], "material_instance": "jungle_boss_5"},
+								"south": {"uv": [16, 3], "uv_size": [-5, 1], "material_instance": "jungle_boss_5"},
+								"west": {"uv": [15, 2], "uv_size": [1, 1], "material_instance": "jungle_boss_5"},
+								"up": {"uv": [11, 2], "uv_size": [5, -1], "material_instance": "jungle_boss_5"},
+								"down": {"uv": [11, 3], "uv_size": [5, -1], "material_instance": "jungle_boss_5"}
+							}
+						}
+					]
+				}
+			],
+			"item_display_transforms": {
+				"thirdperson_righthand": {
+					"rotation": [75, 45, 0],
+					"translation": [0, 2, 2.75],
+					"scale": [0.5, 0.5, 0.5],
+					"rotation_pivot": [0, 0, 0],
+					"scale_pivot": [0, 0, 0]
+				},
+				"thirdperson_lefthand": {
+					"rotation": [75, 45, 0],
+					"translation": [0, 2, 2.75],
+					"scale": [0.5, 0.5, 0.5],
+					"rotation_pivot": [0, 0, 0],
+					"scale_pivot": [0, 0, 0]
+				},
+				"firstperson_righthand": {
+					"rotation": [0, 135, 0],
+					"translation": [0, 3.5, 0],
+					"scale": [0.4, 0.4, 0.4],
+					"rotation_pivot": [0, 0, 0],
+					"scale_pivot": [0, 0, 0]
+				},
+				"firstperson_lefthand": {
+					"rotation": [0, 135, 0],
+					"translation": [0, 3.5, 0],
+					"scale": [0.4, 0.4, 0.4],
+					"rotation_pivot": [0, 0, 0],
+					"scale_pivot": [0, 0, 0]
+				},
+				"ground": {
+					"rotation": [0, 0, 0],
+					"translation": [0, 3, 0],
+					"scale": [0.4, 0.4, 0.4],
+					"rotation_pivot": [0, 0, 0],
+					"scale_pivot": [0, 0, 0]
+				},
+				"gui": {
+					"rotation": [30, -135, 0],
+					"translation": [-1.25, 0, 0],
+					"scale": [0.6, 0.6, 0.6],
+					"rotation_pivot": [0, 0, 0],
+					"scale_pivot": [0, 0, 0],
+					"fit_to_frame": false
+				},
+				"fixed": {
+					"rotation": [0, 0, 0],
+					"translation": [0, 0, 0],
+					"scale": [0.8, 0.8, 0.8],
+					"rotation_pivot": [0, 0, 0],
+					"scale_pivot": [0, 0, 0]
+				}
+			}
+		}
+	]
+}

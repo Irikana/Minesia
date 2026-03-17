@@ -1,0 +1,37 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "5fs_br:golden_maple_spirit",
+            "materials": {
+                "default": "entity_emissive_alpha"
+            },
+            "textures": {
+                "default": "textures/entity/mobs/golden_maple_spirit"
+            },
+            "geometry": {
+                "default": "geometry.maple_spirit"
+            },
+            "animations": {
+                "idle": "animation.maple_spirit.idle",
+                "walking": "animation.maple_spirit.walking",
+                "death": "animation.maple_spirit.death",
+                "root_controller": "controller.animation.maple_spirit.root"
+            },
+            "scripts": {
+              "animate": [
+                "root_controller"
+              ]
+            },
+            "render_controllers": [
+                "controller.render.default"
+            ],
+            "sound_effects": {
+                "idle": "mob.golden_maple_spirit.idle"
+            },
+            "spawn_egg": {
+                "texture": "5fs_br:golden_maple_spirit"
+            }
+        }
+    }
+}

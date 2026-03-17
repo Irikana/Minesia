@@ -1,0 +1,56 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:growing_plant_feature": {
+    "description": {
+      "identifier": "5fs_br:swamp/vine_feature"
+    },
+    "height_distribution": [
+      [
+        {
+          "range_min": 4,
+          "range_max": 13
+        },
+        2
+      ],
+      [
+        {
+          "range_min": 4,
+          "range_max": 5
+        },
+        3
+      ],
+      [
+        {
+          "range_min": 4,
+          "range_max": 7
+        },
+        10
+      ]
+    ],
+    "growth_direction": "DOWN",
+    "age": {
+      "range_min": 17,
+      "range_max": 26
+    },
+    "body_blocks": [
+      [
+        "minecraft:vine",
+        4
+      ],
+      [
+        "minecraft:vine",
+        1
+      ]
+    ],
+    "head_blocks": [
+      [
+        "minecraft:vine",
+        4
+      ],
+      [
+        "minecraft:vine",
+        1
+      ]
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "5fs_br:sulfur_block"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"#": {
+				"item": "5fs_br:sulfur_ingot"
+			}
+		},
+		"pattern": [
+			"###",
+			"###",
+			"###"
+		],
+		"result": {
+			"item": "5fs_br:sulfur_block"
+		},
+		"unlock": [
+			{
+				"item": "5fs_br:sulfur_ingot"
+			}
+		]
+	}
+}

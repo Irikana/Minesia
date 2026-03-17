@@ -1,0 +1,22 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:structure_template_feature": {
+        "description": {
+            "identifier": "5fs_br:crystal_canyons/mineshaft_feature"
+        },
+        "structure_name": "5fs_br:crystal_canyon_mineshaft/mineshaft1",
+        "adjustment_radius": 0,
+        "facing_direction": "south",
+        "constraints": {
+            "grounded": {},
+      		"block_intersection": {
+        		"block_allowlist": [
+                    "minecraft:air",
+                    "minecraft:stone",
+                    "minecraft:deepslate",
+                    "5fs_br:glimmerite_block"
+        		]
+      		}
+    	}
+    }
+}

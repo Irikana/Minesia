@@ -1,0 +1,45 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "5fs_br:skeleton_bomber",
+      "materials": {
+        "default": "skeleton"
+      },
+      "textures": {
+        "default": "textures/entity/mobs/skeleton/skeleton_bomber"
+      },
+      "geometry": {
+        "default": "geometry.skeleton_bomber"
+      },
+      "animations": {
+        "look_at_target": "animation.common.look_at_target",
+        "idle_0": "animation.skeleton_bomber.idle_0",
+        "idle_1": "animation.skeleton_bomber.idle_1",
+        "walk": "animation.skeleton_bomber.walk",
+        "shoot": "animation.skeleton_bomber.attack",
+        "death": "animation.skeleton_bomber.death",
+        "general_controller": "controller.animation.skeleton_bomber.general",
+        "attack_controller": "controller.animation.baby_skeleton.attack",
+        "root_controller": "controller.animation.baby_skeleton.root"
+      },
+      "scripts": {
+        "scale": "0.5",
+        "pre_animation": [
+          "v.attacking = q.is_sheared;"
+        ],
+        "animate": [
+          "root_controller"
+        ]
+      },
+      "render_controllers": [ "controller.render.skeleton" ],
+      "enable_attachables": true,
+      "sound_effects": {
+        "throw": "mob.skeleton_bomber.throw"
+      },
+      "spawn_egg": {
+        "texture": "5fs_br:skeleton_bomber_spawn_egg"
+      }
+    }
+  }
+}

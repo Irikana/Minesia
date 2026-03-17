@@ -1,0 +1,13 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:scatter_feature": {
+        "description": {
+            "identifier": "5fs_br:warm/arches/scatter_mesa_arch_2_east"
+        },
+        "places_feature": "5fs_br:warm/arches/mesa_arch_2_east",
+        "iterations": 1,
+        "x": -7,
+        "y": -1,
+        "z": 3
+    }
+}

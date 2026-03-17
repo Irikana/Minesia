@@ -1,0 +1,26 @@
+{
+  "format_version": "1.21.20",
+  "minecraft:jigsaw": {
+    "description": {
+      "identifier": "5fs_br:crystal_canyon_mineshaft"
+    },
+    "biome_filters": [
+      {
+        "test": "has_biome_tag",
+        "operator": "==",
+        "value": "crystal_canyons"
+      }
+    ],
+    "step": "underground_structures",
+    "terrain_adaptation": "bury",
+    "start_pool": "mike:ns7x4",
+    "max_depth": 8,
+    "start_height": {
+      "type": "constant",
+      "value": {
+        "absolute": -64
+      }
+    },
+    "heightmap_projection": "world_surface"
+  }
+}

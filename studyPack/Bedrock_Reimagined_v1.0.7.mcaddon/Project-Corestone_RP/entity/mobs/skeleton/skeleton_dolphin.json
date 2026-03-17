@@ -1,0 +1,37 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "5fs_br:skeleton_dolphin",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/mobs/skeleton/skeleton_dolphin"
+      },
+      "geometry": {
+        "default": "geometry.skeleton_dolphin"
+      },
+      "animations": {
+        "death": "animation.dolphin.death",
+        "idle": "animation.dolphin.idle",
+        "swimming": "animation.dolphin.swimming",
+        "move_controller": "controller.animation.dolphin"
+      },
+      "scripts": {
+        "animate": [
+          "move_controller"
+        ]
+      },
+      "particle_effects": {
+        "dolphin_move_particle": "minecraft:dolphin_move_particle"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ],
+      "spawn_egg": {
+        "texture": "5fs_br:skeleton_dolphin"
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.obsidian_wand.1fp": {
+			"loop": true,
+			"bones": {
+				"wand": {
+					"rotation": [22.79588, 28.02432, 211.17023],
+					"position": [0, 16, 2]
+				}
+			}
+		},
+		"animation.obsidian_wand.3pp": {
+			"loop": true,
+			"bones": {
+				"wand": {
+					"rotation": [90, 0, 0],
+					"position": [0, 17, 0]
+				}
+			}
+		}
+	}
+}

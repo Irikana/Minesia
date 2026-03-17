@@ -1,0 +1,27 @@
+{
+    "format_version": "1.20.80",
+    "minecraft:recipe_shapeless": {
+        "description": {
+            "identifier": "5fs_br:lime_llama_plushie"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "ingredients": [
+            {
+                "item": "minecraft:lime_carpet"
+            },
+            {
+                "tag": "5fs_br:llama_plushie"
+            }
+        ],
+        "result": {
+            "item": "5fs_br:llama_plushie_lime"
+        },
+        "unlock": [
+            {
+                "tag": "5fs_br:llama_plushie"
+            }
+        ]
+    }
+}

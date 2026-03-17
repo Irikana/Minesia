@@ -1,0 +1,478 @@
+{
+
+  "namespace": "boss_commons",
+
+
+  "boss_health_template": {
+    "type": "panel",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "size": [240, 61],
+    "bindings": [
+      {
+        "binding_name": "(#bossName = $boss_name)",
+        "binding_type": "collection",
+        "binding_collection_name": "boss_bars",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "filled_bossbar_template": {
+  },
+
+  //Boss
+
+  "wither_bossbar@boss_health_template": {
+    "controls": [
+      {
+        "wither_empty_health@wither_empty_health": {
+          "layer": 1,
+          "size": [176, 12], 
+          "offset": [0,17],
+          "keep_ratio": false
+        }
+      },
+      {
+        "wither_filled_health@wither_filled_health": {
+          "layer": 3,
+          "size": [176, 12],
+          "offset": [0,24],
+          "keep_ratio": false
+        }
+      },
+      {
+        "wither_overlay_bossbar@wither_overlay_bossbar": {
+          "layer": 2,
+          "size": [176, 58],
+          "offset": [0,17],
+          "keep_ratio": false
+        }
+      }
+    ]
+  },
+
+    "ender_bossbar@boss_health_template": {
+    "controls": [
+      {
+        "ender_empty_health@ender_empty_health": {
+          "layer": 1,
+          "size": [176, 12], 
+          "offset": [0,17],
+          "keep_ratio": false
+        }
+      },
+      {
+        "ender_filled_health@ender_filled_health": {
+          "layer": 3,
+          "size": [176, 12],
+          "offset": [0,24],
+          "keep_ratio": false
+        }
+      },
+      {
+        "ender_overlay_bossbar@ender_overlay_bossbar": {
+          "layer": 2,
+          "size": [176, 58],
+          "offset": [0,17],
+          "keep_ratio": false
+        }
+      }
+    ]
+  },
+
+  "crystalline_bossbar@boss_health_template": {
+    "controls": [
+      {
+        "cryatalline_empty_health@crystalline_empty_health": {
+          "layer": 1,
+          "size": [176, 12], 
+          "offset": [0,17],
+          "keep_ratio": false
+        }
+      },
+      {
+        "crystalline_filled_health@crystalline_filled_health": {
+          "layer": 3,
+          "size": [176, 12],
+          "offset": [0,24],
+          "keep_ratio": false
+        }
+      },
+      {
+        "crystalline_overlay_bossbar@crystalline_overlay_bossbar": {
+          "layer": 2,
+          "size": [176, 58],
+          "offset": [0,17],
+          "keep_ratio": false
+        }
+      }
+    ]
+  },
+
+  "mummy_bossbar@boss_health_template": {
+    "controls": [
+      {
+        "mummy_empty_health@mummy_empty_health": {
+          "layer": 1,
+          "size": [120, 12], 
+          "offset": [0,24],
+          "keep_ratio": false
+        }
+      },
+      {
+        "mummy_filled_health@mummy_filled_health": {
+          "layer": 3,
+          "size": [176, 64],
+          "offset": [0,17],
+          "keep_ratio": false
+        }
+      },
+      {
+        "mummy_overlay_bossbar@mummy_overlay_bossbar": {
+          "layer": 2,
+          "size": [176, 64],
+          "offset": [0,17],
+          "keep_ratio": false
+        }
+      }
+    ]
+  },
+
+  "giant_jungle_bossbar@boss_health_template": {
+    "controls": [
+      {
+        "giant_jungle_empty_health@giant_jungle_empty_health": {
+          "layer": 1,
+          "size": [6, 3], 
+          "offset": [0,17],
+          "keep_ratio": false
+        }
+      },
+      {
+        "giant_jungle_filled_health@giant_jungle_filled_health": {
+          "layer": 3,
+          "size": [176, 80],
+          "offset": [0,17],
+          "keep_ratio": false
+        }
+      },
+      {
+        "giant_jungle_overlay_bossbar@giant_jungle_overlay_bossbar": {
+          "layer": 2,
+          "size": [176, 80],
+          "offset": [0,17],
+          "keep_ratio": false
+        }
+      }
+    ]
+  },
+
+  "iris_bossbar@boss_health_template": {
+    "controls": [
+      {
+        "iris_empty_health@iris_empty_health": {
+          "layer": 1,
+          "size": [6, 3], 
+          "offset": [0,17],
+          "keep_ratio": false
+        }
+      },
+      {
+        "iris_filled_health@iris_filled_health": {
+          "layer": 3,
+          "size": [176, 80],
+          "offset": [0,17],
+          "keep_ratio": false
+        }
+      },
+      {
+        "iris_overlay_bossbar@iris_overlay_bossbar": {
+          "layer": 2,
+          "size": [176, 80],
+          "offset": [0,17],
+          "keep_ratio": false
+        }
+      }
+    ]
+  },
+
+  "pirate_captain_bossbar@boss_health_template": {
+    "controls": [
+      {
+        "pirate_captain_empty_health@pirate_captain_empty_health": {
+          "layer": 1,
+          "size": [6, 3], 
+          "offset": [0,17],
+          "keep_ratio": false
+        }
+      },
+      {
+        "pirate_captain_filled_health@pirate_captain_filled_health": {
+          "layer": 3,
+          "size": [176, 80],
+          "offset": [0,17],
+          "keep_ratio": false
+        }
+      },
+      {
+        "pirate_captain_overlay_bossbar@pirate_captain_overlay_bossbar": {
+          "layer": 2,
+          "size": [176, 80],
+          "offset": [0,17],
+          "keep_ratio": false
+        }
+      }
+    ]
+  },
+
+  "redwood_sentinel_bossbar@boss_health_template": {
+    "controls": [
+      {
+        "redwood_sentinel_empty_health@redwood_sentinel_empty_health": {
+          "layer": 1,
+          "size": [6, 3], 
+          "offset": [0,17],
+          "keep_ratio": false
+        }
+      },
+      {
+        "redwood_sentinel_filled_health@redwood_sentinel_filled_health": {
+          "layer": 3,
+          "size": [176, 80],
+          "offset": [0,17],
+          "keep_ratio": false
+        }
+      },
+      {
+        "redwood_sentinel_overlay_bossbar@redwood_sentinel_overlay_bossbar": {
+          "layer": 2,
+          "size": [176, 80],
+          "offset": [0,17],
+          "keep_ratio": false
+        }
+      }
+    ]
+  },
+
+  //////////////////////////////////
+  // Textures
+  //////////////////////////////////
+
+  ////WITHER
+
+  "wither_filled_health": {
+    "type": "image",
+    "texture": "textures/ui/boss_wither_full",
+    "clip_direction": "left",
+    "clip_pixelperfect": true,
+    "bindings": [
+      {
+        "binding_name": "#progress_percentage",
+        "binding_name_override": "#clip_ratio",
+        "binding_type": "collection",
+        "binding_collection_name": "$progress_bar_collection"
+      }
+    ]
+  },
+
+  "wither_empty_health": {
+    "type": "image",
+    "texture": "textures/ui/empty_bossbar"
+  },
+
+  "wither_overlay_bossbar": {
+    "type": "image",
+    "texture": "textures/ui/boss_wither_empty"
+  },
+
+
+  "ender_filled_health": {
+    "type": "image",
+    "texture": "textures/ui/boss_dragon_full",
+    "clip_direction": "left",
+    "clip_pixelperfect": true,
+    "bindings": [
+      {
+        "binding_name": "#progress_percentage",
+        "binding_name_override": "#clip_ratio",
+        "binding_type": "collection",
+        "binding_collection_name": "$progress_bar_collection"
+      }
+    ]
+  },
+
+  "ender_empty_health": {
+    "type": "image",
+    "texture": "textures/ui/empty_bossbar"
+  },
+
+  "ender_overlay_bossbar": {
+    "type": "image",
+    "texture": "textures/ui/boss_dragon_empty"
+  },
+
+
+
+
+   "crystalline_filled_health": {
+    "type": "image",
+    "texture": "textures/ui/boss_golem_full",
+    "clip_direction": "left",
+    "clip_pixelperfect": true,
+    "bindings": [
+      {
+        "binding_name": "#progress_percentage",
+        "binding_name_override": "#clip_ratio",
+        "binding_type": "collection",
+        "binding_collection_name": "$progress_bar_collection"
+      }
+    ]
+  },
+
+  "crystalline_empty_health": {
+    "type": "image",
+    "texture": "textures/ui/empty_bossbar"
+  },
+
+  "crystalline_overlay_bossbar": {
+    "type": "image",
+    "texture": "textures/ui/boss_golem_empty"
+  },
+
+
+
+
+   "mummy_filled_health": {
+    "type": "image",
+    "texture": "textures/ui/boss_mummy_full",
+    "clip_direction": "left",
+    "clip_pixelperfect": true,
+    "bindings": [
+      {
+        "binding_name": "#progress_percentage",
+        "binding_name_override": "#clip_ratio",
+        "binding_type": "collection",
+        "binding_collection_name": "$progress_bar_collection"
+      }
+    ]
+  },
+
+  "mummy_empty_health": {
+    "type": "image",
+    "texture": "textures/ui/empty_bossbar"
+  },
+  "mummy_overlay_bossbar": {
+    "type": "image",
+    "texture": "textures/ui/boss_mummy_empty"
+  },
+
+
+
+  "giant_jungle_filled_health": {
+    "type": "image",
+    "texture": "textures/ui/boss_jungle_full",
+    "clip_direction": "left",
+    "clip_pixelperfect": true,
+    "bindings": [
+      {
+        "binding_name": "#progress_percentage",
+        "binding_name_override": "#clip_ratio",
+        "binding_type": "collection",
+        "binding_collection_name": "$progress_bar_collection"
+      }
+    ]
+  },
+
+  "giant_jungle_empty_health": {
+    "type": "image",
+    "texture": "textures/ui/empty_bossbar"
+  },
+
+  "giant_jungle_overlay_bossbar": {
+    "type": "image",
+    "texture": "textures/ui/boss_jungle_empty"
+  },
+
+
+
+
+   "iris_filled_health": {
+    "type": "image",
+    "texture": "textures/ui/boss_iris_full",
+    "clip_direction": "left",
+    "clip_pixelperfect": true,
+    "bindings": [
+      {
+        "binding_name": "#progress_percentage",
+        "binding_name_override": "#clip_ratio",
+        "binding_type": "collection",
+        "binding_collection_name": "$progress_bar_collection"
+      }
+    ]
+  },
+
+  "iris_empty_health": {
+    "type": "image",
+    "texture": "textures/ui/empty_bossbar"
+  },
+
+  "iris_overlay_bossbar": {
+    "type": "image",
+    "texture": "textures/ui/boss_iris_empty"
+  },
+
+  "pirate_captain_filled_health": {
+    "type": "image",
+    "texture": "textures/ui/pirate_captain_full",
+    "clip_direction": "left",
+    "clip_pixelperfect": true,
+    "bindings": [
+      {
+        "binding_name": "#progress_percentage",
+        "binding_name_override": "#clip_ratio",
+        "binding_type": "collection",
+        "binding_collection_name": "$progress_bar_collection"
+      }
+    ]
+  },
+
+  "pirate_captain_empty_health": {
+    "type": "image",
+    "texture": "textures/ui/empty_bossbar"
+  },
+
+  "pirate_captain_overlay_bossbar": {
+    "type": "image",
+    "texture": "textures/ui/pirate_captain_empty"
+  },
+
+
+  
+  "redwood_sentinel_filled_health": {
+    "type": "image",
+    "texture": "textures/ui/redwood_sentinel_full",
+    "clip_direction": "left",
+    "clip_pixelperfect": true,
+    "bindings": [
+      {
+        "binding_name": "#progress_percentage",
+        "binding_name_override": "#clip_ratio",
+        "binding_type": "collection",
+        "binding_collection_name": "$progress_bar_collection"
+      }
+    ]
+  },
+
+  "redwood_sentinel_empty_health": {
+    "type": "image",
+    "texture": "textures/ui/empty_bossbar"
+  },
+
+  "redwood_sentinel_overlay_bossbar": {
+    "type": "image",
+    "texture": "textures/ui/redwood_sentinel_empty"
+  }
+
+  
+}

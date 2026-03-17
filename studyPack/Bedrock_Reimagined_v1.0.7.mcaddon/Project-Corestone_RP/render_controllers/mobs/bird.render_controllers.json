@@ -1,0 +1,25 @@
+{
+    "format_version": "1.10.0",
+    "render_controllers": {
+        "controller.render.bird": {
+            "arrays": {
+                "textures": {
+                    "Array.textures": [
+                        "Texture.bird_0",
+                        "Texture.bird_1",
+                        "Texture.bird_2"
+                    ]
+                }
+            },
+            "geometry": "Geometry.default",
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "textures": [
+                "Array.textures[v.index]"
+            ]
+        }
+    }
+}

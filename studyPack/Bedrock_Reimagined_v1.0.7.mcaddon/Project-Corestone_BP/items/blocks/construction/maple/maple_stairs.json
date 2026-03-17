@@ -1,0 +1,20 @@
+{
+    "format_version": "1.26.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "5fs_br:maple_stairs",
+            "menu_category": {
+                "category": "construction"
+            }
+        },
+        "components": {
+            "minecraft:block_placer": {
+                "block": "5fs_br:maple_stairs",
+                "replace_block_item": true
+            },
+            "minecraft:fuel": {
+                "duration": 8
+            }
+        }
+    }
+}

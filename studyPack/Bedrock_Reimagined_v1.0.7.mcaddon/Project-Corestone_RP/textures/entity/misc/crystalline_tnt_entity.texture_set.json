@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "crystalline_tnt_entity",
+		"metalness_emissive_roughness": "crystalline_tnt_entity_mer"
+	}
+}

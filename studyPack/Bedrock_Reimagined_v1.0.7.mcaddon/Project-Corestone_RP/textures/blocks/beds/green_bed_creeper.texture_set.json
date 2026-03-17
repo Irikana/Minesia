@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "green_bed_creeper",
+		"metalness_emissive_roughness": "green_bed_creeper_mer"
+	}
+}

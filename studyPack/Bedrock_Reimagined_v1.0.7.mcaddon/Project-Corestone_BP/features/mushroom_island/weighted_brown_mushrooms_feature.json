@@ -1,0 +1,18 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "5fs_br:mushroom_island/weighted_brown_mushrooms_feature"
+    },
+    "features": [
+      ["5fs_br:mushroom_island/scatter_brown_mushroom_1_feature", 1],
+      ["5fs_br:mushroom_island/scatter_brown_mushroom_2_feature", 1],
+      ["5fs_br:mushroom_island/scatter_brown_mushroom_3_feature", 1],
+      ["5fs_br:mushroom_island/scatter_brown_mushroom_4_feature", 1],
+      ["5fs_br:mushroom_island/scatter_brown_mushroom_5_feature", 1],
+      ["5fs_br:mushroom_island/scatter_brown_mushroom_6_feature", 1],
+      ["5fs_br:mushroom_island/scatter_brown_mushroom_7_feature", 1],
+      ["5fs_br:mushroom_island/scatter_brown_mushroom_8_feature", 1]
+    ]
+  }
+}

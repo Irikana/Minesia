@@ -1,0 +1,153 @@
+{
+	"format_version": "1.21.20",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.enderman_plushie",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "bb_main",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-3, 0, -6],
+							"size": [2, 2, 7],
+							"pivot": [-2, 0, 0],
+							"rotation": [0, 22.5, 0],
+							"uv": {
+								"north": {"uv": [0, 8], "uv_size": [2, 2], "material_instance": "enderman_1"},
+								"east": {"uv": [7, 8], "uv_size": [-7, 2], "material_instance": "enderman_1"},
+								"west": {"uv": [0, 8], "uv_size": [7, 2], "material_instance": "enderman_1"},
+								"up": {"uv": [7, 1], "uv_size": [-2, 7], "material_instance": "enderman_1"},
+								"down": {"uv": [15, 7], "uv_size": [-2, -7], "material_instance": "enderman_1"}
+							}
+						},
+						{
+							"origin": [-3, 0, -2],
+							"size": [6, 8, 4],
+							"uv": {
+								"north": {"uv": [10, 8], "uv_size": [6, 8], "material_instance": "enderman_1"},
+								"east": {"uv": [6, 8], "uv_size": [4, 8], "material_instance": "enderman_1"},
+								"south": {"uv": [10, 8], "uv_size": [6, 8], "material_instance": "enderman_1"},
+								"west": {"uv": [6, 8], "uv_size": [4, 8], "material_instance": "enderman_1"},
+								"up": {"uv": [16, 5], "uv_size": [-6, -4], "material_instance": "enderman_1"},
+								"down": {"uv": [16, 4], "uv_size": [-6, -4], "material_instance": "enderman_1"}
+							}
+						},
+						{
+							"origin": [-3.5, 7.5, -4],
+							"size": [7, 7, 7],
+							"pivot": [0, 7.5, 0],
+							"rotation": [-7.46207, 0.43399, 9.99067],
+							"uv": {
+								"north": {"uv": [9, 9], "uv_size": [7, 7], "material_instance": "enderman_0"},
+								"east": {"uv": [2, 9], "uv_size": [7, 7], "material_instance": "enderman_0"},
+								"south": {"uv": [2, 2], "uv_size": [7, 7], "material_instance": "enderman_0"},
+								"west": {"uv": [9, 9], "uv_size": [-7, 7], "material_instance": "enderman_0"},
+								"up": {"uv": [16, 9], "uv_size": [-7, -7], "material_instance": "enderman_0"},
+								"down": {"uv": [16, 7], "uv_size": [-7, -7], "material_instance": "enderman_1"}
+							}
+						},
+						{
+							"origin": [1, 0, -6],
+							"size": [2, 2, 7],
+							"pivot": [2, 0, 0],
+							"rotation": [0, -22.5, 0],
+							"uv": {
+								"north": {"uv": [0, 8], "uv_size": [2, 2], "material_instance": "enderman_1"},
+								"east": {"uv": [7, 8], "uv_size": [-7, 2], "material_instance": "enderman_1"},
+								"west": {"uv": [0, 8], "uv_size": [7, 2], "material_instance": "enderman_1"},
+								"up": {"uv": [7, 1], "uv_size": [-2, 7], "material_instance": "enderman_1"},
+								"down": {"uv": [10, 7], "uv_size": [-2, -7], "material_instance": "enderman_1"}
+							}
+						},
+						{
+							"origin": [2.14699, -2.33316, -1],
+							"size": [2, 8, 2],
+							"pivot": [0, 4.6717, 0],
+							"rotation": [0, 0, -32.5],
+							"uv": {
+								"north": {"uv": [2, 0], "uv_size": [2, 8], "material_instance": "enderman_1"},
+								"east": {"uv": [7, 0], "uv_size": [2, 8], "material_instance": "enderman_1"},
+								"south": {"uv": [4, 0], "uv_size": [-2, 8], "material_instance": "enderman_1"},
+								"west": {"uv": [3, 0], "uv_size": [2, 8], "material_instance": "enderman_1"},
+								"down": {"uv": [2, 8], "uv_size": [2, -2], "material_instance": "enderman_1"}
+							}
+						},
+						{
+							"origin": [2.14699, -2.33316, -1],
+							"size": [2, 8, 2],
+							"pivot": [0, 4.6717, 0],
+							"rotation": [180, 0, -147.5],
+							"uv": {
+								"north": {"uv": [2, 0], "uv_size": [2, 8], "material_instance": "enderman_1"},
+								"east": {"uv": [7, 0], "uv_size": [2, 8], "material_instance": "enderman_1"},
+								"south": {"uv": [4, 0], "uv_size": [-2, 8], "material_instance": "enderman_1"},
+								"west": {"uv": [3, 0], "uv_size": [2, 8], "material_instance": "enderman_1"},
+								"down": {"uv": [2, 8], "uv_size": [2, -2], "material_instance": "enderman_1"}
+							}
+						}
+					]
+				}
+			],
+			"item_display_transforms": {
+				"thirdperson_righthand": {
+					"rotation": [75, 45, 0],
+					"translation": [0, 2, 3.5],
+					"scale": [0.5, 0.5, 0.5],
+					"rotation_pivot": [0, 0, 0],
+					"scale_pivot": [0, 0, 0]
+				},
+				"thirdperson_lefthand": {
+					"rotation": [75, 45, 0],
+					"translation": [0, 2, 3.5],
+					"scale": [0.5, 0.5, 0.5],
+					"rotation_pivot": [0, 0, 0],
+					"scale_pivot": [0, 0, 0]
+				},
+				"firstperson_righthand": {
+					"rotation": [0, 135, 0],
+					"translation": [0, 3.5, 0],
+					"scale": [0.4, 0.4, 0.4],
+					"rotation_pivot": [0, 0, 0],
+					"scale_pivot": [0, 0, 0]
+				},
+				"firstperson_lefthand": {
+					"rotation": [0, 135, 0],
+					"translation": [0, 3.5, 0],
+					"scale": [0.4, 0.4, 0.4],
+					"rotation_pivot": [0, 0, 0],
+					"scale_pivot": [0, 0, 0]
+				},
+				"ground": {
+					"rotation": [0, 0, 0],
+					"translation": [0, 3, 0],
+					"scale": [0.6, 0.6, 0.6],
+					"rotation_pivot": [0, 0, 0],
+					"scale_pivot": [0, 0, 0]
+				},
+				"gui": {
+					"rotation": [30, -135, 0],
+					"translation": [0, 0.5, 0],
+					"scale": [0.8, 0.8, 0.8],
+					"rotation_pivot": [0, 0, 0],
+					"scale_pivot": [0, 0, 0],
+					"fit_to_frame": false
+				},
+				"fixed": {
+					"rotation": [0, 0, 0],
+					"translation": [0, 0, 0],
+					"scale": [0.8, 0.8, 0.8],
+					"rotation_pivot": [0, 0, 0],
+					"scale_pivot": [0, 0, 0]
+				}
+			}
+		}
+	]
+}

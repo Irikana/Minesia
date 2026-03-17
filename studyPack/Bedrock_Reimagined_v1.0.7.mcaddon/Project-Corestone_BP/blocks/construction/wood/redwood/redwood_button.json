@@ -1,0 +1,209 @@
+{
+    "format_version": "1.26.0",
+	"minecraft:block": {
+        "description": {
+            "identifier": "5fs_br:redwood_button",
+            "menu_category": {
+                "category": "items",
+                "group": "minecraft:itemGroup.name.buttons"
+            },
+            "traits": {
+                "minecraft:placement_position": {
+                    "enabled_states": [
+                        "minecraft:block_face"
+                    ]
+                }
+            },
+            "states": {
+                "5fs_br:button_pressed_bit": [
+                    false,
+                    true
+                ]
+            }
+        },
+        "permutations": [
+            {
+                "condition": "query.block_state('minecraft:block_face') == 'north'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            -90,
+                            0,
+                            0
+                        ]
+                    },
+                    "tag:5fs_br:north": {}
+                }
+            },
+            {
+                "condition": "query.block_state('minecraft:block_face') == 'south'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            90,
+                            0,
+                            -180
+                        ]
+                    },
+                    "tag:5fs_br:south": {}
+                }
+            },
+            {
+                "condition": "query.block_state('minecraft:block_face') == 'west'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            -90,
+                            -90,
+                            0
+                        ]
+                    },
+                    "tag:5fs_br:west": {}
+                }
+            },
+            {
+                "condition": "query.block_state('minecraft:block_face') == 'east'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            90,
+                            90,
+                            0
+                        ]
+                    },
+                    "tag:5fs_br:east": {}
+                }
+            },
+            {
+                "condition": "query.block_state('minecraft:block_face') == 'up'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            0,
+                            0
+                        ]
+                    },
+                    "tag:5fs_br:up": {}
+                }
+            },
+            {
+                "condition": "query.block_state('minecraft:block_face') == 'down'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            -180,
+                            0,
+                            0
+                        ]
+                    },
+                    "tag:5fs_br:down": {}
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:button_pressed_bit') == false",
+                "components": {
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -3,
+                            0,
+                            -2
+                        ],
+                        "size": [
+                            6,
+                            2,
+                            4
+                        ]
+                    },
+                    "minecraft:redstone_producer": {
+                        "power": 0,
+                        "strongly_powered_face": "down",
+                        "transform_relative": true
+                    },
+                    "5fs_br:button": {
+                        "click_on_sound": "random.wood_click",
+                        "sound_pitch": 0.6
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:button_pressed_bit') == true",
+                "components": {
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -3,
+                            0,
+                            -2
+                        ],
+                        "size": [
+                            6,
+                            1,
+                            4
+                        ]
+                    },
+                    "minecraft:redstone_producer": {
+                        "power": 15,
+                        "strongly_powered_face": "down",
+                        "transform_relative": true
+                    },
+                    "minecraft:tick": {
+                        "interval_range": [
+                            30,
+                            30
+                        ]
+                    },
+                    "5fs_br:button_pressed": {
+                        "click_off_sound": "random.wood_click",
+                        "sound_pitch": 0.5
+                    }
+                }
+            }
+        ],
+        "components": {
+            "minecraft:geometry": {
+                "identifier": "geometry.button",
+                "bone_visibility": {
+                    "unpressed": "q.block_state('5fs_br:button_pressed_bit') == false",
+                    "pressed": "q.block_state('5fs_br:button_pressed_bit') == true"
+                }
+            },
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "redwood_planks"
+                }
+            },
+            "minecraft:item_visual": {
+                "geometry": "geometry.button_inventory",
+                "material_instances": {
+                    "*": {
+                        "texture": "redwood_planks"
+                    }
+                }
+            },
+            "minecraft:collision_box": false,
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0.5
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 0.5
+            },
+            "minecraft:flammable": true,
+            "minecraft:liquid_detection": {
+                "detection_rules": [
+                    {
+                        "can_contain_liquid": true,
+                        "liquid_type": "water",
+                        "on_liquid_touches": "popped"
+                    }
+                ]
+            },
+            "minecraft:movable": {
+                "movement_type": "popped"
+            },
+			"minecraft:precipitation_interactions": {
+				"precipitation_behavior": "obstruct_rain"
+			},
+            "tag:minecraft:is_axe_item_destructible": {}
+        }
+    }
+}

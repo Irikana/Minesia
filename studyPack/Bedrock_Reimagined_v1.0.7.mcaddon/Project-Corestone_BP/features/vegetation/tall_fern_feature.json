@@ -1,0 +1,41 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:growing_plant_feature": {
+        "description": {
+            "identifier": "5fs_br:vegetation/tall_fern_feature"
+        },
+        "height_distribution": [
+            [
+                {
+                    "range_min": 2,
+                    "range_max": 2
+                },
+                100
+            ]
+        ],
+        "growth_direction": "UP",
+        "body_blocks": [
+            [
+                {
+                    "name": "minecraft:large_fern",
+                    "states": {
+                        "upper_block_bit": false
+                    }
+                },
+                1
+            ]
+        ],
+        "head_blocks": [
+            [
+                {
+                    "name": "minecraft:large_fern",
+                    "states": {
+                        "upper_block_bit": true
+                    }
+                },
+                1
+            ]
+        ],
+        "allow_water": false
+    }
+}

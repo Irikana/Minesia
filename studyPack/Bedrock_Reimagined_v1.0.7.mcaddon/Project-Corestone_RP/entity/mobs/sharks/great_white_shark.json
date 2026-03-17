@@ -1,0 +1,34 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "5fs_br:great_white_shark",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "grey": "textures/entity/mobs/sharks/great_white_shark",
+        "black": "textures/entity/mobs/sharks/black_great_white_shark"
+      },
+      "geometry": {
+        "default": "geometry.great_white_shark"
+      },
+      "animations": {
+        "idle": "animation.great_white_shark.idle",
+        "bite": "animation.great_white_shark.bite",
+        "eating": "animation.great_white_shark.eating",
+        "swimming": "animation.great_white_shark.swimming",
+        "thrash": "animation.great_white_shark.thrash",
+        "death": "animation.great_white_shark.death"
+      },
+      "animation_controllers": [
+        { "move": "controller.animation.shark" }
+      ],
+      "enable_attachables": true,
+      "render_controllers": [ "controller.render.great_white_shark" ],
+      "spawn_egg": {
+        "texture": "5fs_br:great_white_shark"
+      }
+    }
+  }
+}

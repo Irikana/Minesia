@@ -1,0 +1,22 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_brewing_mix": {
+    "description": {
+      "identifier": "5fs_br:splash_bottle_of_jelly"
+    },
+    "tags": [
+      "brewing_stand"
+    ],
+    "input": "5fs_br:bottle_of_jelly",
+    "reagent": "minecraft:gunpowder",
+    "output": "5fs_br:splash_bottle_of_jelly",
+    "unlock": [
+      {
+        "item": "5fs_br:bottle_of_jelly"
+      },
+      {
+        "item": "minecraft:gunpowder"
+      }
+    ]
+  }
+}

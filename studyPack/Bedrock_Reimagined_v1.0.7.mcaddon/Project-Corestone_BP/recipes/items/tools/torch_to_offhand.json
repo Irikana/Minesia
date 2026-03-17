@@ -1,0 +1,25 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "5fs_br:torch_to_offhand"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "minecraft:torch"
+      }
+    ],
+    "result": {
+      "item": "5fs_br:torch_offhand",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:torch"
+      }
+    ]
+  }
+}

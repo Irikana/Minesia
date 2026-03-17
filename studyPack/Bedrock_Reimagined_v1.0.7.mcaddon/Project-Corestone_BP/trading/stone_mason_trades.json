@@ -1,0 +1,420 @@
+{
+  "tiers": [
+    {
+      "trades": [
+        {
+          "wants": [
+            {
+              "item": "minecraft:clay_ball",
+              "quantity": {
+                "min": 10,
+                "max": 13
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:emerald"
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": {
+                "min": 1,
+                "max": 2
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:brick",
+              "quantity": {
+                "min": 16,
+                "max": 16
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trades":[
+      {
+        "wants": [
+          {
+            "item": "minecraft:stone:0",
+            "quantity": {
+              "min": 20,
+              "max": 26
+            }
+          }
+        ],
+        "gives": [
+          {
+            "item": "minecraft:emerald"
+          }
+        ]
+      },
+      {
+        "wants": [
+          {
+            "item": "5fs_br:ash",
+            "quantity": 4
+          }
+        ],
+        "gives": [
+          {
+            "item": "minecraft:emerald"
+          }
+        ]
+      },
+      {
+        "wants": [
+          {
+            "item": "minecraft:emerald",
+            "quantity": {
+              "min": 1,
+              "max": 2
+            }
+          }
+        ],
+        "gives": [
+          {
+            "item": "minecraft:stonebrick:3",
+            "quantity": {
+              "min": 4,
+              "max": 4
+            }
+          }
+        ]
+      },
+      {
+        "wants": [
+          {
+            "item": "minecraft:emerald",
+            "quantity": 2
+          }
+        ],
+        "gives": [
+          {
+            "choice": [
+              {"item": "5fs_br:mossy_stone_brick_flower_pot"},
+              {"item": "5fs_br:mossy_cobblestone_flower_pot"},
+              {"item": "5fs_br:sandstone_flower_pot"}
+            ]
+          }
+        ]
+      },
+      {
+        "wants": [
+          {
+            "item": "minecraft:emerald",
+            "quantity": 2
+          }
+        ],
+        "gives": [
+          {
+            "choice": [
+              {"item": "5fs_br:mossy_cobblestone_decorated_pot"},
+              {"item": "5fs_br:mossy_stone_brick_decorated_pot"},
+              {"item": "5fs_br:mossy_cobblestone_trap_decorated_pot"},
+              {"item": "5fs_br:mossy_stone_brick_trap_decorated_pot"},
+              {"item": "5fs_br:sandstone_decorated_pot"},
+              {"item": "5fs_br:sandstone_trap_decorated_pot"}
+            ]
+          }
+        ]
+      }
+      ]
+    },
+    {
+      "trades": [
+        {
+          "wants": [
+            {
+              "item": "minecraft:stone:1",
+              "quantity": {
+                "min": 16,
+                "max": 21
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:emerald"
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:stone:5",
+              "quantity": {
+                "min": 16,
+                "max": 21
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:emerald"
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:stone:3",
+              "quantity": {
+                "min": 16,
+                "max": 21
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:emerald"
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": {
+                "min": 1,
+                "max": 2
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:stone:2",
+              "quantity": {
+                "min": 4,
+                "max": 4
+              }
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": {
+                "min": 1,
+                "max": 2
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:stone:6",
+              "quantity": {
+                "min": 4,
+                "max": 4
+              }
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": {
+                "min": 1,
+                "max": 2
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:stone:4",
+              "quantity": {
+                "min": 4,
+                "max": 4
+              }
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 2
+            }
+          ],
+          "gives": [
+            {
+              "choice": [
+                {"item": "5fs_br:black_checkered_tiles", "quantity": 4},
+                {"item": "5fs_br:blue_checkered_tiles", "quantity": 4},
+                {"item": "5fs_br:brown_checkered_tiles", "quantity": 4},
+                {"item": "5fs_br:cyan_checkered_tiles", "quantity": 4},
+                {"item": "5fs_br:gray_checkered_tiles", "quantity": 4},
+                {"item": "5fs_br:green_checkered_tiles", "quantity": 4},
+                {"item": "5fs_br:light_blue_checkered_tiles", "quantity": 4},
+                {"item": "5fs_br:light_gray_checkered_tiles", "quantity": 4},
+                {"item": "5fs_br:lime_checkered_tiles", "quantity": 4},
+                {"item": "5fs_br:magenta_checkered_tiles", "quantity": 4},
+                {"item": "5fs_br:orange_checkered_tiles", "quantity": 4},
+                {"item": "5fs_br:pink_checkered_tiles", "quantity": 4},
+                {"item": "5fs_br:purple_checkered_tiles", "quantity": 4},
+                {"item": "5fs_br:red_checkered_tiles", "quantity": 4},
+                {"item": "5fs_br:white_checkered_tiles", "quantity": 4},
+                {"item": "5fs_br:yellow_checkered_tiles", "quantity": 4}
+              ]
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "5fs_br:brimstone",
+              "quantity": 12
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trades": [
+        {
+          "wants": [
+            {
+              "item": "minecraft:quartz",
+              "quantity": {
+                "min": 20,
+                "max": 26
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:emerald"
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 1
+            }
+          ],
+          "gives": [
+            {
+              "item": "5fs_br:meteor",
+              "quantity": 3
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "5fs_br:glintrock",
+              "quantity": 8
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:emerald"
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 3
+            }
+          ],
+          "gives": [
+            {
+              "choice": [
+                {"item": "5fs_br:black_crystalline_glazed_terracotta"},
+                {"item": "5fs_br:blue_crystalline_glazed_terracotta"},
+                {"item": "5fs_br:brown_crystalline_glazed_terracotta"},
+                {"item": "5fs_br:cyan_crystalline_glazed_terracotta"},
+                {"item": "5fs_br:gray_crystalline_glazed_terracotta"},
+                {"item": "5fs_br:green_crystalline_glazed_terracotta"},
+                {"item": "5fs_br:light_blue_crystalline_glazed_terracotta"},
+                {"item": "5fs_br:light_gray_crystalline_glazed_terracotta"},
+                {"item": "5fs_br:lime_crystalline_glazed_terracotta"},
+                {"item": "5fs_br:magenta_crystalline_glazed_terracotta"},
+                {"item": "5fs_br:orange_crystalline_glazed_terracotta"},
+                {"item": "5fs_br:pink_crystalline_glazed_terracotta"},
+                {"item": "5fs_br:purple_crystalline_glazed_terracotta"},
+                {"item": "5fs_br:red_crystalline_glazed_terracotta"},
+                {"item": "5fs_br:white_crystalline_glazed_terracotta"},
+                {"item": "5fs_br:yellow_crystalline_glazed_terracotta"}
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trades": [
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": {
+                "min": 1,
+                "max": 2
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:quartz_block:2"
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 8
+            }
+          ],
+          "gives": [
+            {
+              "choice": [
+                {"item": "5fs_br:big_stone_statue"},
+              {"item": "5fs_br:big_sandstone_statue"},
+              {"item": "5fs_br:big_red_sandstone_statue"},
+              {"item": "5fs_br:small_stone_statue"},
+              {"item": "5fs_br:small_sandstone_statue"},
+              {"item": "5fs_br:small_red_sandstone_statue"}
+              ]
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 1
+            }
+          ],
+          "gives": [
+            {
+              "item": "5fs_br:rose_quartz_block"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "crystalline_tnt_top",
+		"metalness_emissive_roughness": "crystalline_tnt_top_mer"
+	}
+}

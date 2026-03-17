@@ -1,0 +1,20 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:ore_feature": {
+    "description": {
+      "identifier": "5fs_br:nether/placeholder_cobalt_weird_feature"
+    },
+    "count": 3,
+    "replace_rules": [
+      {
+        "places_block": "5fs_br:brimstone_cobalt_ore",
+        "may_replace": [
+          "5fs_br:brimstone",
+          "minecraft:netherrack",
+          "minecraft:blackstone",
+          "minecraft:gravel"
+        ]
+      }
+    ]
+  }
+}

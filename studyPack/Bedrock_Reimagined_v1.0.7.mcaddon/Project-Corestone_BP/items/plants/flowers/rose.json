@@ -1,0 +1,24 @@
+{
+    "format_version": "1.26.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "5fs_br:rose",
+            "menu_category": {
+                "category": "nature"
+            }
+        },
+        "components": {
+            "minecraft:icon": "5fs_br:rose",
+            "minecraft:block_placer": {
+                "block": "5fs_br:rose",
+                "replace_block_item": true
+            },
+            "minecraft:display_name": {
+                "value": "tile.5fs_br:rose.name"
+            },
+            "minecraft:compostable": {
+                "composting_chance": 65
+            }
+        }
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "5fs_br:pirate_raider",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/mobs/pirates/pirate_raider"
+            },
+            "geometry": {
+                "default": "geometry.pirate_raider"
+            },
+            "animations": {
+                "look_at_target": "animation.common.look_at_target",
+                "idle": "animation.pirate_raider.idle",
+                "walk_target": "animation.pirate_raider.walk_target",
+                "walk": "animation.pirate_raider.walk",
+                "attack": "animation.pirate_raider.attack",
+                "death": "animation.pirate_raider.death",
+                "general_controller": "controller.animation.pirate.general",
+                "attack_controller": "controller.animation.pirate.attack",
+                "root_controller": "controller.animation.pirate.root"
+            },
+            "scripts": {
+                "animate": [
+                    "root_controller"
+                ]
+            },
+            "render_controllers": [
+                "controller.render.default"
+            ],
+            "sound_effects": {
+                "idle": "mob.pirate.raider.idle",
+                "attack": "mob.pirate.raider.attack"
+            },
+            "spawn_egg": {
+                "texture": "5fs_br:pirate_raider"
+            }
+        }
+    }
+}

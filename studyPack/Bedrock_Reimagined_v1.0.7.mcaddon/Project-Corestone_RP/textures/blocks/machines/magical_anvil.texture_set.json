@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "magical_anvil",
+		"metalness_emissive_roughness": "magical_anvil_mer"
+	}
+}

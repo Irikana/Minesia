@@ -1,0 +1,778 @@
+{
+  "format_version": "1.21.90",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "5fs_br:brown_bear",
+      "spawn_category": "creature",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "properties": {
+        "5fs_br:anim": {
+          "client_sync": true,
+          "type": "enum",
+          "values": [
+            "none",
+            "roar",
+            "sleep",
+            "sit",
+            "stand_on_legs"
+          ],
+          "default": "none"
+        }
+      }
+    },
+    "component_groups": {
+      "5fs_br:redwood_variant": {
+        "minecraft:health": {
+          "value": 20,
+          "max": 20
+        },
+        "minecraft:movement": {
+          "value": 2.5
+        },
+        "minecraft:scale": {
+          "value": 2.5
+        }
+      },
+      "5fs_br:sit": {
+        "minecraft:on_hurt": {
+          "event": "5fs_br:stop_anim"
+        },
+        "minecraft:timer": {
+          "looping": false,
+          "time": 7,
+          "time_down_event": {
+            "event": "5fs_br:stop_anim"
+          }
+        },
+        "minecraft:movement": {
+          "value": 0
+        }
+      },
+      "5fs_br:roar": {
+        "minecraft:on_hurt": {
+          "event": "5fs_br:stop_anim"
+        },
+        "minecraft:timer": {
+          "looping": false,
+          "time": 1.25,
+          "time_down_event": {
+            "event": "5fs_br:stop_anim"
+          }
+        },
+        "minecraft:movement": {
+          "value": 0
+        }
+      },
+      "5fs_br:stand_on_legs": {
+        "minecraft:on_hurt": {
+          "event": "5fs_br:stop_anim"
+        },
+        "minecraft:movement": {
+          "value": 0
+        },
+        "minecraft:timer": {
+          "looping": false,
+          "time": 3,
+          "time_down_event": {
+            "event": "5fs_br:stop_anim"
+          }
+        }
+      },
+      "5fs_br:bear_sleeping": {
+        "minecraft:on_hurt": {
+          "event": "5fs_br:start_stand"
+        },
+        "minecraft:pushable": {
+          "is_pushable": false,
+          "is_pushable_by_piston": false
+        },
+        "minecraft:environment_sensor": {
+          "triggers": [
+            {
+              "event": "5fs_br:start_sleep",
+              "target": "self",
+              "filters": {
+                "test": "is_daytime",
+                "value": false
+              }
+            },
+            {
+              "event": "5fs_br:start_stand",
+              "target": "self",
+              "filters": {
+                "test": "is_daytime",
+                "value": true
+              }
+            }
+          ]
+        },
+        "minecraft:movement": {
+          "value": 0
+        }
+      },
+      "5fs_br:bear_baby": {
+        "minecraft:is_baby": {},
+        "minecraft:scale": {
+          "value": 0.5
+        },
+        "minecraft:ageable": {
+          "duration": 1200,
+          "grow_up": {
+            "event": "minecraft:ageable_grow_up",
+            "target": "self"
+          }
+        },
+        "minecraft:behavior.follow_parent": {
+          "priority": 4,
+          "speed_multiplier": 1.25
+        }
+      },
+      "5fs_br:bear_baby_scared": {
+        "minecraft:angry": {
+          "duration": 1,
+          "broadcast_anger": true,
+          "broadcast_range": 41,
+          "calm_event": {
+            "event": "5fs_br:bear_baby_on_calm",
+            "target": "self"
+          }
+        }
+      },
+      "5fs_br:bear_adult": {
+        "minecraft:experience_reward": {
+          "on_death": "query.last_hit_by_player ? 20 : 0"
+        },
+        "minecraft:loot": {
+          "table": "loot_tables/entities/bears/bears.json"
+        },
+        "minecraft:leashable_to": {}
+      },
+      "5fs_br:bear_stand": {
+        "minecraft:on_target_acquired": {
+          "event": "minecraft:on_anger",
+          "target": "self"
+        },
+        "minecraft:on_friendly_anger": {
+          "event": "minecraft:on_anger",
+          "target": "self"
+        },
+        "minecraft:movement": {
+          "value": 0.25
+        },
+        "minecraft:water_movement": {
+          "drag_factor": 0.98
+        },
+        "minecraft:behavior.random_stroll": {
+          "priority": 3
+        },
+        "minecraft:behavior.look_at_player": {
+          "priority": 6,
+          "target_distance": 6,
+          "probability": 0.02
+        },
+        "minecraft:timer": {
+          "looping": true,
+          "time": 30,
+          "time_down_event": {
+            "event": "5fs_br:random_anim"
+          }
+        },
+        "minecraft:behavior.random_look_around": {
+          "priority": 7
+        },
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 4,
+          "attack_interval": 15,
+          "entity_types": [
+            {
+              "filters": {
+                "test": "is_family",
+                "subject": "other",
+                "value": "fox"
+              },
+              "max_dist": 16
+            }
+          ],
+          "must_see": false
+        }
+      },
+      "5fs_br:bear_adult_hostile": {
+        "minecraft:angry": {
+          "duration": 500,
+          "broadcast_anger": false,
+          "broadcast_range": 20,
+          "calm_event": {
+            "event": "minecraft:on_calm",
+            "target": "self"
+          }
+        },
+        "minecraft:entity_sensor": {
+          "subsensors": [
+            {
+              "cooldown": 0,
+              "minimum_count": 1,
+              "event": "5fs_br:choose_attack",
+              "range": [
+                1.5,
+                1.5
+              ]
+            }
+          ]
+        }
+      },
+      "5fs_br:melee_attack": {
+        "minecraft:attack": {
+          "damage": 3
+        },
+        "minecraft:behavior.melee_attack": {
+          "priority": 3
+        }
+      },
+      "5fs_br:ranged_attack": {
+        "minecraft:attack": {
+          "damage": 5
+        },
+        "minecraft:behavior.delayed_attack": {
+          "attack_duration": 1.25,
+          "hit_delay_pct": 0.4,
+          "reach_multiplier": 1.5,
+          "attack_once": true,
+          "priority": 0,
+          "speed_multiplier": 1.5,
+          "on_attack": {
+            "event": "5fs_br:melee_attack"
+          }
+        }
+      },
+      "5fs_br:shrinkify": {
+        "minecraft:movement": {
+          "value": 0.5
+        },
+        "minecraft:health": {
+          "max": 10
+        },
+        "minecraft:scale": {
+          "value": 0.25
+        }
+      },
+      "5fs_br:gigantify": {
+        "minecraft:movement": {
+          "value": 0.2
+        },
+        "minecraft:health": {
+          "max": 40
+        },
+        "minecraft:scale": {
+          "value": 2
+        }
+      },
+      "5fs_br:normal_scale": {
+        "minecraft:movement": {
+          "value": 0.25
+        },
+        "minecraft:health": {
+          "max": 20
+        },
+        "minecraft:scale": {
+          "value": 1
+        }
+      },
+      "5fs_br:no_fall_damage_jelly": {
+        "minecraft:damage_sensor": {
+          "triggers": {
+            "cause": "fall",
+            "deals_damage": "no"
+          }
+        }
+      }
+    },
+    "components": {
+      "minecraft:is_hidden_when_invisible": {},
+      "minecraft:type_family": {
+        "family": [
+          "bear",
+          "mob",
+          "neutral"
+        ]
+      },
+      "minecraft:breathable": {
+        "total_supply": 15,
+        "suffocate_time": 0
+      },
+      "minecraft:nameable": {},
+      "minecraft:health": {
+        "value": 25
+      },
+      "minecraft:hurt_on_condition": {
+        "damage_conditions": [
+          {
+            "filters": {
+              "test": "in_lava",
+              "subject": "self",
+              "operator": "==",
+              "value": true
+            },
+            "cause": "lava",
+            "damage_per_tick": 4
+          }
+        ]
+      },
+      "minecraft:collision_box": {
+        "width": 1.5,
+        "height": 1.3
+      },
+      "minecraft:movement": {
+        "value": 0.25
+      },
+      "minecraft:water_movement": {
+        "drag_factor": 0.98
+      },
+      "minecraft:navigation.walk": {
+        "can_path_over_water": true,
+        "avoid_damage_blocks": true
+      },
+      "minecraft:movement.basic": {},
+      "minecraft:jump.static": {},
+      "minecraft:can_climb": {},
+      "minecraft:follow_range": {
+        "value": 48
+      },
+      "minecraft:despawn": {
+        "despawn_from_distance": {}
+      },
+      "minecraft:behavior.float": {
+        "priority": 0
+      },
+      "minecraft:behavior.tempt": {
+        "priority": 2,
+        "speed_multiplier": 1.2,
+        "items": [
+          "minecraft:honeycomb",
+          "minecraft:honey_bottle",
+          "minecraft:beehive",
+          "minecraft:salmon",
+          "minecraft:cooked_salmon",
+          "minecraft:sweet_berries",
+          "minecraft:apple"
+        ]
+      },
+      "minecraft:shareables": {
+        "singular_pickup": false,
+        "all_items": false,
+        "items": [
+          {
+            "item": "minecraft:is_food",
+            "priority": 0,
+            "max_amount": 1
+          }
+        ]
+      },
+      "minecraft:inventory": {
+        "inventory_size": 1,
+        "can_be_siphoned_from": false,
+        "restrict_to_owner": true
+      },
+      "minecraft:equip_item": {},
+      "minecraft:behavior.equip_item": {
+        "priority": 1
+      },
+      "minecraft:behavior.pickup_items": {
+        "priority": 1,
+        "max_dist": 30,
+        "goal_radius": 5,
+        "speed_multiplier": 0.1
+      },
+      "minecraft:behavior.eat_carried_item": {
+        "priority": 1,
+        "delay_before_eating": 2
+      },
+      "minecraft:environment_sensor": {
+        "triggers": [
+          {
+            "event": "5fs_br:start_sleep",
+            "target": "self",
+            "filters": {
+              "test": "is_daytime",
+              "value": false
+            }
+          }
+        ]
+      },
+      "minecraft:behavior.nap": {
+        "priority": 3,
+        "cooldown_min": 2,
+        "cooldown_max": 7,
+        "mob_detect_dist": 12,
+        "mob_detect_height": 6,
+        "can_nap_filters": {
+          "all_of": [
+            {
+              "test": "hourly_clock_time",
+              "operator": ">",
+              "value": 13000
+            },
+            {
+              "test": "hourly_clock_time",
+              "operator": "<",
+              "value": 24000
+            }
+          ]
+        },
+        "wake_mob_exceptions": {
+          "any_of": [
+            {
+              "test": "trusts",
+              "subject": "other",
+              "value": true
+            },
+            {
+              "test": "is_sneaking",
+              "subject": "other",
+              "value": true
+            }
+          ]
+        }
+      },
+      "minecraft:behavior.panic": {
+        "priority": 1,
+        "speed_multiplier": 1.25,
+        "damage_sources": [
+          "campfire",
+          "fire",
+          "fire_tick",
+          "freezing",
+          "lightning",
+          "lava",
+          "magma",
+          "temperature",
+          "soul_campfire"
+        ],
+        "ignore_mob_damage": true
+      },
+      "minecraft:behavior.hurt_by_target": {
+        "priority": 2
+      },
+      "minecraft:physics": {},
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:leashable": {},
+      "minecraft:balloonable": {},
+      "minecraft:conditional_bandwidth_optimization": {}
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "sequence": [
+          {
+            "randomize": [
+              {
+                "weight": 7,
+                "add": {
+                  "component_groups": [
+                    "5fs_br:bear_adult",
+                    "5fs_br:bear_stand"
+                  ]
+                }
+              },
+              {
+                "weight": 3,
+                "add": {
+                  "component_groups": [
+                    "5fs_br:bear_baby",
+                    "5fs_br:bear_wild"
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "filters": {
+              "test": "has_biome_tag",
+              "value": "redwood_forest"
+            },
+            "add": {
+              "component_groups": [
+                "5fs_br:redwood_variant"
+              ]
+            }
+          }
+        ]
+      },
+      "minecraft:entity_born": {
+        "add": {
+          "component_groups": [
+            "5fs_br:bear_baby",
+            "5fs_br:bear_wild"
+          ]
+        },
+        "sequence": [
+          {
+            "filters": {
+              "test": "has_biome_tag",
+              "value": "redwood_forest"
+            },
+            "add": {
+              "component_groups": [
+                "5fs_br:redwood_variant"
+              ]
+            }
+          }
+        ]
+      },
+      "minecraft:ageable_grow_up": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:bear_baby",
+            "5fs_br:bear_wild",
+            "5fs_br:bear_baby_scared"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:bear_adult",
+            "5fs_br:bear_stand"
+          ]
+        }
+      },
+      "minecraft:on_calm": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:bear_adult_hostile"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:bear_stand"
+          ]
+        }
+      },
+      "minecraft:on_anger": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:bear_stand"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:bear_adult_hostile"
+          ]
+        }
+      },
+      "5fs_br:bear_baby_on_calm": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:bear_baby_scared"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:bear_wild"
+          ]
+        }
+      },
+      "minecraft:on_scared": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:bear_wild"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:bear_baby_scared"
+          ]
+        }
+      },
+      "5fs_br:choose_attack": {
+        "randomize": [
+          {
+            "trigger": "5fs_br:melee_attack",
+            "weight": 5
+          },
+          {
+            "trigger": "5fs_br:ranged_attack",
+            "weight": 5
+          }
+        ]
+      },
+      "5fs_br:ranged_attack": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:melee_attack",
+            "5fs_br:bear_adult_hostile"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:ranged_attack",
+            "5fs_br:bear_stand"
+          ]
+        }
+      },
+      "5fs_br:melee_attack": {
+        "add": {
+          "component_groups": [
+            "5fs_br:melee_attack",
+            "5fs_br:bear_stand"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "5fs_br:ranged_attack",
+            "5fs_br:bear_adult_hostile"
+          ]
+        }
+      },
+      "5fs_br:start_sleep": {
+        "add": {
+          "component_groups": [
+            "5fs_br:bear_sleeping"
+          ]
+        },
+        "set_property": {
+          "5fs_br:anim": "sleep"
+        },
+        "remove": {
+          "component_groups": [
+            "5fs_br:bear_stand"
+          ]
+        }
+      },
+      "5fs_br:start_stand": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:bear_sleeping"
+          ]
+        },
+        "set_property": {
+          "5fs_br:anim": "none"
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:bear_stand"
+          ]
+        }
+      },
+      "5fs_br:sit": {
+        "add": {
+          "component_groups": [
+            "5fs_br:sit"
+          ]
+        },
+        "set_property": {
+          "5fs_br:anim": "sit"
+        }
+      },
+      "5fs_br:roar": {
+        "add": {
+          "component_groups": [
+            "5fs_br:roar"
+          ]
+        },
+        "set_property": {
+          "5fs_br:anim": "roar"
+        }
+      },
+      "5fs_br:stand_on_legs": {
+        "add": {
+          "component_groups": [
+            "5fs_br:stand_on_legs"
+          ]
+        },
+        "set_property": {
+          "5fs_br:anim": "stand_on_legs"
+        }
+      },
+      "5fs_br:random_anim": {
+        "randomize": [
+          {
+            "weight": 50,
+            "trigger": "5fs_br:roar"
+          },
+          {
+            "weight": 50,
+            "trigger": "5fs_br:stand_on_legs"
+          },
+          {
+            "weight": 50,
+            "trigger": "5fs_br:sit"
+          }
+        ]
+      },
+      "5fs_br:stop_anim": {
+        "set_property": {
+          "5fs_br:anim": "none"
+        },
+        "remove": {
+          "component_groups": [
+            "5fs_br:roar",
+            "5fs_br:stand_on_legs",
+            "5fs_br:sit"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:bear_stand"
+          ]
+        }
+      },
+      "5fs_br:become_calm": {
+        "reset_target": {}
+      },
+      "5fs_br:normal_scale": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:shrinkify",
+            "5fs_br:gigantify"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:normal_scale"
+          ]
+        }
+      },
+      "5fs_br:gigantify": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:shrinkify",
+            "5fs_br:normal_scale"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:gigantify"
+          ]
+        }
+      },
+      "5fs_br:shrinkify": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:gigantify",
+            "5fs_br:normal_scale"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:shrinkify"
+          ]
+        }
+      },
+      "5fs_br:no_fall_damage_jelly": {
+        "add": {
+          "component_groups": [
+            "5fs_br:no_fall_damage_jelly"
+          ]
+        }
+      },
+      "5fs_br:fall_damage_jelly": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:no_fall_damage_jelly"
+          ]
+        }
+      }
+    }
+  }
+}

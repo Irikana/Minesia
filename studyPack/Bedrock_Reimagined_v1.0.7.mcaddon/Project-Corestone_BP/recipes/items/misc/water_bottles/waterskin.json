@@ -1,0 +1,33 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "5fs_br:waterskin"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"S": {
+				"item": "minecraft:string"
+			},
+			"D": {
+				"item": "minecraft:leather"
+			}
+		},
+		"pattern": [
+			" DS",
+			"D D",
+			" D "
+		],
+		"result": {
+			"item": "5fs_br:waterskin_empty",
+			"count": 1
+		},
+		"unlock": [
+			{
+				"item": "minecraft:leather"
+			}
+		]
+	}
+}

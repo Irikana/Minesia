@@ -1,0 +1,21 @@
+{
+  "format_version": "1.21.20",
+  "minecraft:structure_set": {
+    "description": {
+      "identifier": "5fs_br:tiny_ships"
+    },
+    "placement": {
+      "type": "minecraft:random_spread",
+      "salt": 56328567,
+      "separation": 50,
+      "spacing": 110,
+      "spread_type": "linear"
+    },
+    "structures": [
+      {
+        "structure": "5fs_br:tiny_ships",
+        "weight": 1
+      }
+    ]
+  }
+}

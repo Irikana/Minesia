@@ -1,0 +1,21 @@
+{
+  "format_version": "1.21.20",
+  "minecraft:structure_set": {
+    "description": {
+      "identifier": "5fs_br:mangrove_hut"
+    },
+    "placement": {
+      "type": "minecraft:random_spread",
+      "salt": 8348307,
+      "separation": 12,
+      "spacing": 30,
+      "spread_type": "linear"
+    },
+    "structures": [
+      {
+        "structure": "5fs_br:mangrove_hut",
+        "weight": 1
+      }
+    ]
+  }
+}

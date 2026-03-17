@@ -1,0 +1,25 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "5fs_br:compact_crystalline_to_crystalline_ingot"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "5fs_br:compact_crystalline_ingot"
+      }
+    ],
+    "result": {
+      "item": "5fs_br:crystalline_ingot",
+      "count": 4
+    },
+    "unlock": [
+      {
+        "item": "5fs_br:crystalline_ingot"
+      }
+    ]
+  }
+}

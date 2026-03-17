@@ -1,0 +1,106 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.mummified_skeleton.root": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "animations": [
+                        "general_controller",
+                        "attack_controller",
+                        "look_at_target",
+                        "emerging_controller"
+                    ],
+                    "transitions": [
+                        {
+                            "death": "!q.is_alive"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "death": {
+                    "animations": [
+                        "death"
+                    ]
+                }
+            }
+        },
+        "controller.animation.mummified_skeleton.general": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "animations": [
+                        "idle"
+                    ],
+                    "transitions": [
+						{
+							"idle": "q.any_animation_finished"
+						},
+                        {
+                            "walk": "q.is_moving"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+				"idle": {
+                    "on_entry": [
+                        "v.random_idle = math.random_integer(0,3);"
+                    ],
+					"animations": [
+						{
+							"idle": "v.random_idle <= 2"
+						},
+						{
+							"idle_1": "v.random_idle == 3"
+						}
+					],
+					"transitions": [
+						{
+							"idle_1": "!q.is_moving && q.any_animation_finished"
+						},
+                        {
+                            "walk": "q.is_moving"
+                        }
+					],
+					"blend_transition": 0.2
+				},
+				"idle_1": {
+                    "on_entry": [
+                        "v.random_idle = math.random_integer(0,3);"
+                    ],
+					"animations": [
+						{
+							"idle": "v.random_idle <= 2"
+						},
+						{
+							"idle_1": "v.random_idle == 3"
+						}
+					],
+					"transitions": [
+						{
+							"idle": "!q.is_moving && q.any_animation_finished"
+						},
+                        {
+                            "walk": "q.is_moving"
+                        }
+					],
+					"blend_transition": 0.2
+				},
+                "walk": {
+                    "animations": [
+                        "walking",
+                        {
+                            "walk_arms": "!q.is_charged"
+                        }
+                    ],
+                    "transitions": [
+                        {
+                            "idle": "!q.is_moving"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                }
+            }
+        }
+    }
+}

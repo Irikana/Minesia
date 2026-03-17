@@ -1,0 +1,23 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.steel_shovel.1fp": {
+			"loop": true,
+			"bones": {
+				"bone": {
+					"rotation": [89.55384, 59.55299, -63.5618],
+					"position": [0, 21, 4]
+				}
+			}
+		},
+		"animation.steel_shovel.3pp": {
+			"loop": true,
+			"bones": {
+				"bone": {
+					"rotation": [82.5, 0, 0],
+					"position": [0, 21, 2]
+				}
+			}
+		}
+	}
+}

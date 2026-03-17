@@ -1,0 +1,108 @@
+{
+  "namespace": "chest",
+  "quarry_panel_top_half": {
+    "type": "panel",
+    "controls": [
+      {
+        "quarry_1_label@chest.quarry_1_label": {}
+      },
+      {
+        "side_slot_1@chest.side_slot_1": {}
+      },
+      {
+        "side_slot_2@chest.side_slot_2": {}
+      },
+      {
+        "quarry_top_grid@chest.quarry_top_grid": {}
+      }
+    ]
+  },
+  "quarry_1_label": {
+    "type": "label",
+    "offset": [
+      40,
+      -35
+    ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "text": "$container_title",
+    "size": [
+      "90%",
+      "default"
+    ],
+    "color": "$title_text_color",
+    "layer": 2
+  },
+  "chest_grid_item@common.container_item": {
+    "$item_collection_name": "container_items"
+  },
+  "quarrry_item_slot_invisibility@chest.chest_grid_item": {
+    "$item_collection_name": "container_items",
+    "$background_images": "common.cell_image_panel",
+    "$cell_image_size": [
+      0,
+      0
+    ]
+  },
+  "invisible_image": {
+    "type": "image",
+    "texture": "textures/gui/invisible",
+    "layer": 1
+  },
+  "content_root_quarry": {
+    "type": "panel",
+    "$custom_background_texture": "textures/gui/quarry",
+    "$inventory_label": "container.diamond_quarry.inventory",
+    "$type_label": "ui.diamond_quarry",
+    "$chest_image": "textures/gui/inventory/quarrys/quarry",
+    "controls": [
+      {
+        "quarry_custom_panel@chest.quarry_custom_panel": {}
+      },
+      {
+        "background_panel": {
+          "type": "panel",
+          "size": [
+            214,
+            300
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            33,
+            11
+          ],
+          "layer": 2,
+          "controls": [
+            // {
+            //   "background_custom": {
+            //     "type": "image",
+            //     "texture": "textures/gui/inventory/quarrys/crystalline_quarry",
+            //     "size": [
+            //       256.8,
+            //       268.2
+            //     ],
+            //     "anchor_from": "center",
+            //     "anchor_to": "center",
+            //     "offset": [
+            //       8,
+            //       -11
+            //     ],
+            //     "layer": 3
+            //   }
+            // },
+            {
+              "close@common.close_button": {
+                "layer": 4,
+                "offset": [
+                  -58,
+                  11
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

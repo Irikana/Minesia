@@ -1,0 +1,46 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "5fs_br:finch_bird",
+            "materials": {
+                "default": "parrot"
+            },
+            "textures": {
+                "bird_0": "textures/entity/mobs/birds/finch_bird_0",
+                "bird_1": "textures/entity/mobs/birds/finch_bird_1",
+                "bird_2": "textures/entity/mobs/birds/finch_bird_2"
+            },
+            "geometry": {
+                "default": "geometry.finch_bird"
+            },
+            "scripts": {
+                "pre_animation": [
+                    "t.variant = q.property('5fs_br:variant');",
+                    "v.index = t.variant == 0 ? 0 : t.variant == 1 ? 1 : t.variant == 2 ? 2 : 0;"
+                ],
+                "animate": [
+                    "root_controller"
+                ]
+            },
+            "animations": {
+                "look_at_target": "animation.common.look_at_target",
+                "idle": "animation.finch_bird.idle",
+                "walk": "animation.finch_bird.walk",
+                "fly": "animation.finch_bird.fly",
+                "chirp": "animation.finch_bird.chirp",
+                "chirp_transitioner": "animation.finch_bird.chirp_transitioner",
+                "death": "animation.finch_bird.death",
+                "general_controller": "controller.animation.bird.general",
+                "chirp_controller": "controller.animation.bird.chirp",
+                "root_controller": "controller.animation.bird.root"
+            },
+            "render_controllers": [
+                "controller.render.bird"
+            ],
+            "spawn_egg": {
+                "texture": "5fs_br:finch_bird_spawn_egg"
+            }
+        }
+    }
+}

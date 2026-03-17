@@ -1,0 +1,23 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.emerald_shovel.1fp": {
+			"loop": true,
+			"bones": {
+				"bone": {
+					"rotation": [80.31282, 59.44094, -68.48327],
+					"position": [0, 21, 4]
+				}
+			}
+		},
+		"animation.emerald_shovel.3pp": {
+			"loop": true,
+			"bones": {
+				"bone": {
+					"rotation": [87.5, 0, 0],
+					"position": [0, 21, 2]
+				}
+			}
+		}
+	}
+}

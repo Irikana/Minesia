@@ -1,0 +1,20 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:structure_template_feature": {
+        "description": {
+            "identifier": "5fs_br:roofed_forest/dark_oak_hollow_log_1_feature"
+        },
+        "structure_name": "hollow_logs:darkOakHollowLog1",
+        "adjustment_radius": 16,
+        "facing_direction": "random",
+        "constraints": {
+            "grounded": {},
+            "block_intersection": {
+                "block_allowlist": [
+                    "minecraft:air",
+                    "minecraft:short_grass"
+                ]
+            }
+        }
+    }
+}

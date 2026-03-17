@@ -1,0 +1,23 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.emerald_sword.3pp": {
+			"loop": true,
+			"bones": {
+				"bone": {
+					"rotation": [82.5, 0, 0],
+					"position": [0, 16, -7]
+				}
+			}
+		},
+		"animation.emerald_sword.1fp": {
+			"loop": true,
+			"bones": {
+				"bone": {
+					"rotation": [113.81122, -46.47421, 91.05271],
+					"position": [0, 12, 1]
+				}
+			}
+		}
+	}
+}

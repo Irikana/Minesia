@@ -1,0 +1,27 @@
+{
+	"format_version": "1.20.0",
+	"render_controllers": {
+		"controller.render.torch_wand": {
+			"geometry": "geometry.default",
+			"arrays": {
+				"textures": {
+					"array.textures": [
+						"Texture.torch_wand0",
+						"Texture.torch_wand1",
+						"Texture.torch_wand2",
+						"Texture.torch_wand3"
+					]
+				}
+			},
+			"materials": [
+				{
+					"*": "variable.is_enchanted?material.enchanted:material.default"
+				}
+			],
+			"textures": [
+				"temp.life_time=query.life_time*8;return array.textures[temp.life_time];",
+				"texture.enchanted"
+			]
+		}
+	}
+}

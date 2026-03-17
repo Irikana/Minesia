@@ -1,0 +1,23 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.experience_orb.particles": {
+			"loop": true,
+			"animation_length": 7,
+			"bones": {
+				"bone": {
+					"rotation": [0, "-query.life_time * 30", 0],
+					"position": [0, "2+math.sin(query.life_time * 180) * 1", 0],
+					"scale": 1
+				}
+			},
+			"particle_effects": {
+				"0.5": {
+					"effect": "xp_orb_halo",
+					"locator": "exp",
+					"pre_effect_script": "v.surface_particle_color = q.surface_particle_color;"
+				}
+			}
+		}
+	}
+}

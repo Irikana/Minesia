@@ -1,0 +1,20 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:structure_template_feature": {
+        "description": {
+            "identifier": "5fs_br:forest/small_oak_log_ns_0"
+        },
+        "structure_name": "trees:smallOakFallenTree",
+        "adjustment_radius": 16,
+        "facing_direction": "north",
+        "constraints": {
+            "grounded": {},
+            "block_intersection": {
+                "block_allowlist": [
+                    "minecraft:air",
+                    "minecraft:short_grass"
+                ]
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:structure_template_feature": {
+        "description": {
+            "identifier": "5fs_br:jungle/jungle_hollow_log_1_feature"
+        },
+        "structure_name": "hollow_logs:jungleHollowLog1",
+        "adjustment_radius": 16,
+        "facing_direction": "random",
+        "constraints": {
+            "grounded": {},
+            "block_intersection": {
+                "block_allowlist": [
+                    "minecraft:air",
+                    "minecraft:short_grass",
+                    "minecraft:fern"
+                ]
+            }
+        }
+    }
+}

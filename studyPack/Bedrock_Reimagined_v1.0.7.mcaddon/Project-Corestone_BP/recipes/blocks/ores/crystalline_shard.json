@@ -1,0 +1,29 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "5fs_br:crystalline_shard"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"#": {
+				"item": "5fs_br:raw_crystalline_shard"
+			}
+		},
+		"pattern": [
+			"###",
+			"###",
+			"###"
+		],
+		"result": {
+			"item": "5fs_br:crystalline_ingot"
+		},
+		"unlock": [
+			{
+				"item": "5fs_br:raw_crystalline"
+			}
+		]
+	}
+}

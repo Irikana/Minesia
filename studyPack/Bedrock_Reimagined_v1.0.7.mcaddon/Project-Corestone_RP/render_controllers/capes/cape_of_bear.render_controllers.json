@@ -1,0 +1,56 @@
+{
+  "format_version": "1.20.0",
+  "render_controllers": {
+    "controller.render.cape_of_bear": {
+      "geometry": "geometry.default",
+      "arrays": {
+        "textures": {
+          "array.textures": [
+            "Texture.bear0",
+            "Texture.bear1",
+            "Texture.bear2",
+            "Texture.bear3",
+            "Texture.bear4",
+            "Texture.bear5",
+            "Texture.bear6",
+            "Texture.bear7",
+            "Texture.bear8",
+            "Texture.bear9",
+            "Texture.bear10",
+            "Texture.bear11",
+            "Texture.bear12",
+            "Texture.bear13",
+            "Texture.bear14",
+            "Texture.bear15",
+            "Texture.bear16",
+            "Texture.bear17",
+            "Texture.bear18",
+            "Texture.bear19",
+            "Texture.bear20",
+            "Texture.bear21",
+            "Texture.bear22",
+            "Texture.bear23",
+            "Texture.bear24",
+            "Texture.bear25",
+            "Texture.bear26",
+            "Texture.bear27",
+            "Texture.bear28",
+            "Texture.bear29",
+            "Texture.bear30",
+            "Texture.bear31",
+            "Texture.bear32"
+          ]
+        }
+      },
+      "materials": [
+        {
+          "*": "variable.is_enchanted?material.enchanted:material.default"
+        }
+      ],
+      "textures": [
+        "temp.life_time=query.life_time*8;return array.textures[temp.life_time];",
+        "texture.enchanted"
+      ]
+    }
+  }
+}

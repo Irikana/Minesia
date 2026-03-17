@@ -1,0 +1,122 @@
+{
+    "format_version": "1.26.0",
+	"minecraft:block": {
+        "description": {
+            "identifier": "5fs_br:redwood_pressure_plate",
+            "menu_category": {
+                "category": "items",
+                "group": "minecraft:itemGroup.name.pressurePlate"
+            },
+            "states": {
+                "5fs_br:redstone_signal": [
+                    0,
+                    1
+                ]
+            }
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('5fs_br:redstone_signal') == 0",
+                "components": {
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -7,
+                            0,
+                            -7
+                        ],
+                        "size": [
+                            14,
+                            1,
+                            14
+                        ]
+                    },
+                    "minecraft:redstone_producer": {
+                        "power": 0,
+                        "strongly_powered_face": "down",
+                        "transform_relative": true
+                    },
+                    "minecraft:tick": {
+                        "interval_range": [
+                            4,
+                            4
+                        ]
+                    },
+                    "5fs_br:pressure_plate": {
+                        "click_on_sound": "click_on.wooden_pressure_plate",
+                        "sound_pitch": 1
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:redstone_signal') == 1",
+                "components": {
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -7,
+                            0,
+                            -7
+                        ],
+                        "size": [
+                            14,
+                            0.5,
+                            14
+                        ]
+                    },
+                    "minecraft:redstone_producer": {
+                        "power": 15,
+                        "strongly_powered_face": "down",
+                        "transform_relative": true
+                    },
+                    "minecraft:tick": {
+                        "interval_range": [
+                            20,
+                            20
+                        ]
+                    },
+                    "5fs_br:pressure_plate_pressed": {
+                        "click_off_sound": "click_off.wooden_pressure_plate",
+                        "sound_pitch": 0.99
+                    }
+                }
+            }
+        ],
+        "components": {
+            "minecraft:geometry": {
+                "identifier": "geometry.pressure_plate",
+                "bone_visibility": {
+                    "unpressed": "q.block_state('5fs_br:redstone_signal') == 0",
+                    "pressed": "q.block_state('5fs_br:redstone_signal') == 1"
+                }
+            },
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "redwood_planks"
+                }
+            },
+            "minecraft:collision_box": false,
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0.5
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 0.5
+            },
+            "minecraft:flammable": true,
+            "minecraft:liquid_detection": {
+                "detection_rules": [
+                    {
+                        "can_contain_liquid": true,
+                        "liquid_type": "water",
+                        "on_liquid_touches": "popped"
+                    }
+                ]
+            },
+            "minecraft:movable": {
+                "movement_type": "popped"
+            },
+			"minecraft:precipitation_interactions": {
+				"precipitation_behavior": "obstruct_rain"
+			},
+            "tag:minecraft:is_axe_item_destructible": {}
+        }
+    }
+}

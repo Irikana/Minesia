@@ -1,0 +1,36 @@
+﻿{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "5fs_br:cracked_ring_of_health"
+		},
+		"tags": [
+			"jeweling_station"
+		],
+		"key": {
+			"A": {
+				"item": "5fs_br:steel_rod"
+			},
+			"B": {
+				"item": "minecraft:glistering_melon_slice"
+			},
+			"C": {
+				"item": "minecraft:iron_block"
+			},
+			"D": {
+				"item": "5fs_br:rusted_ring_of_health"
+			}
+		},
+		"pattern": [
+			"ABA",
+			"CDC",
+			"ACA"
+		],
+		"result": {
+			"item": "5fs_br:cracked_ring_of_health"
+		},
+		"unlock": {
+			"context": "AlwaysUnlocked"
+		}
+	}
+}

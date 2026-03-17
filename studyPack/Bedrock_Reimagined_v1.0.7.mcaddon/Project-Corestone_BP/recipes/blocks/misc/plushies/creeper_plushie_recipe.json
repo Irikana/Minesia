@@ -1,0 +1,33 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "5fs_br:creeper_plushie_recipe"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "WWW",
+      "WHW",
+      "WWW"
+    ],
+    "key": {
+      "W": {
+        "item": "minecraft:green_wool"
+      },
+      "H": {
+        "item": "minecraft:creeper_head"
+      }
+    },
+    "result": {
+      "item": "5fs_br:creeper_plushie",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:creeper_head"
+      }
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+{
+    "format_version": "1.8.0",
+    "minecraft:spawn_rules": {
+        "description": {
+            "identifier": "5fs_br:moss_shroud",
+            "population_control": "monster"
+        },
+        "conditions": [
+            {
+                "minecraft:spawns_on_surface": {},
+                "minecraft:biome_filter": {
+                    "all_of": [
+                        {
+                            "test": "has_biome_tag",
+                            "value": "forest"
+                        },
+                        {
+                            "test": "has_biome_tag",
+                            "operator": "!=",
+                            "value": "jungle"
+                        },
+                        {
+                            "test": "has_biome_tag",
+                            "operator": "!=",
+                            "value": "roofed"
+                        }
+                    ]
+                },
+                "minecraft:spawns_on_block_prevented_filter": [
+                    "5fs_br:redwood_leaves"
+                ],
+                "minecraft:difficulty_filter": {
+                    "min": "easy",
+                    "max": "hard"
+                },
+                "minecraft:weight": {
+                    "default": 1
+                },
+                "minecraft:herd": {
+                    "min_size": 1,
+                    "max_size": 2
+                }
+            }
+        ]
+    }
+}

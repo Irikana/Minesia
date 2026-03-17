@@ -1,0 +1,191 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.vulture.root": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "animations": [
+                        "general_controller", "look_at_target_controller", "rotation_controller", "attack_controller"
+                    ],
+                    "transitions": [
+                        {
+                            "death": "!q.is_alive"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "death": {
+                    "animations": [
+                        {
+                            "ground_death": "q.is_sheared"
+                        },
+                        {
+                            "fly_death": "!q.is_sheared"
+                        }
+                    ]
+                }
+            }
+        },
+        "controller.animation.vulture.general": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "animations": [
+                        "idle"
+                    ],
+                    "transitions": [
+                        {
+                            "walking": "q.modified_move_speed >= 0.05"
+                        },
+                        {
+                            "flying": "!q.is_sheared && !q.is_chested"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "walking": {
+                    "animations": [
+                        "walking"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "q.modified_move_speed <= 0.05"
+                        },
+                        {
+                            "flying": "!q.is_sheared"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "flying": {
+                    "animations": [
+                        "flying"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "q.is_sheared"
+                        },
+                        {
+                            "planning": "!q.is_on_ground && v.flying_type == 'planning'"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "planning": {
+                    "animations": [
+                        "planning"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "q.is_sheared"
+                        },
+                        {
+                            "flying": "!q.is_on_ground && v.flying_type == 'flying'"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                }
+            }
+        },
+        "controller.animation.vulture.look_around": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "animations": [
+                        "look_at_target"
+                    ],
+                    "transitions": [
+                        {
+                            "look_around": "q.is_croaking"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "look_around": {
+                    "animations": [
+                        "look_around"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!q.is_croaking"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                }
+            }
+        },
+        "controller.animation.vulture.look_at_target": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "look_around": "q.is_sheared"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "look_around": {
+                    "animations": [
+                        "look_around_controller"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!q.is_sheared"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                }
+            }
+        },
+        "controller.animation.vulture.rotation": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "rotation": "!q.is_sheared && !q.is_saddled"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "rotation": {
+                    "animations": [
+                        "rotation"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "q.is_sheared || q.is_saddled"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                }
+            }
+        },
+        "controller.animation.vulture.attack": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "attack": "v.attack_time > 0.0"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "attack": {
+                    "animations": [
+                        "attack"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "q.all_animations_finished"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                }
+            }
+        }
+    }
+}

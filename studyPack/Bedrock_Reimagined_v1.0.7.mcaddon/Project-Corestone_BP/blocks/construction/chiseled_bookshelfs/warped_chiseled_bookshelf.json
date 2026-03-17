@@ -1,0 +1,364 @@
+{
+    "format_version": "1.26.0",
+	"minecraft:block": {
+        "description": {
+            "identifier": "5fs_br:warped_chiseled_bookshelf",
+            "menu_category": {
+                "category": "Items"
+            },
+            "states": {
+                "5fs_br:slot_0_occupied": [false, true],
+                "5fs_br:slot_1_occupied": [false, true],
+                "5fs_br:slot_2_occupied": [false, true],
+                "5fs_br:slot_3_occupied": [false, true],
+                "5fs_br:slot_4_occupied": [false, true],
+                "5fs_br:slot_5_occupied": [false, true]
+            },
+            "traits": {
+                "minecraft:placement_direction": {
+                    "enabled_states": ["minecraft:cardinal_direction"],
+                    "y_rotation_offset": 180
+                }
+            }
+        },
+        "components": {
+            "minecraft:map_color": "#2A8A85",
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 1.5
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 1.5
+            },
+            "minecraft:geometry": {
+                "identifier": "geometry.chiseled_bookshelf",
+                "culling": "5fs_br:chiseled_bookshelf_culling",
+                "bone_visibility": {
+                    "empty_slot_0": "!q.block_state('5fs_br:slot_0_occupied')",
+                    "empty_slot_1": "!q.block_state('5fs_br:slot_1_occupied')",
+                    "empty_slot_2": "!q.block_state('5fs_br:slot_2_occupied')",
+                    "empty_slot_3": "!q.block_state('5fs_br:slot_3_occupied')",
+                    "empty_slot_4": "!q.block_state('5fs_br:slot_4_occupied')",
+                    "empty_slot_5": "!q.block_state('5fs_br:slot_5_occupied')",
+                    "occupied_slot_0": "q.block_state('5fs_br:slot_0_occupied')",
+                    "occupied_slot_1": "q.block_state('5fs_br:slot_1_occupied')",
+                    "occupied_slot_2": "q.block_state('5fs_br:slot_2_occupied')",
+                    "occupied_slot_3": "q.block_state('5fs_br:slot_3_occupied')",
+                    "occupied_slot_4": "q.block_state('5fs_br:slot_4_occupied')",
+                    "occupied_slot_5": "q.block_state('5fs_br:slot_5_occupied')"
+                }
+            },
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "warped_chiseled_bookshelf_top"
+                },
+                "side": {
+                    "texture": "warped_chiseled_bookshelf_side"
+                },
+                "empty_slot": {
+                    "texture": "warped_chiseled_bookshelf_empty"
+                },
+                "occupied_slot": {
+                    "texture": "warped_chiseled_bookshelf_occupied"
+                }
+            }
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'north'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            0,
+                            0
+                        ]
+                    },
+                    "5fs_br:chiseled_bookshelf": {
+                        "slot_0": {
+                            "origin": [
+                                11,
+                                0
+                            ],
+                            "size": [
+                                5,
+                                8
+                            ]
+                        },
+                        "slot_1": {
+                            "origin": [
+                                6,
+                                0
+                            ],
+                            "size": [
+                                5,
+                                8
+                            ]
+                        },
+                        "slot_2": {
+                            "origin": [
+                                0,
+                                0
+                            ],
+                            "size": [
+                                6,
+                                8
+                            ]
+                        },
+                        "slot_3": {
+                            "origin": [
+                                11,
+                                8
+                            ],
+                            "size": [
+                                5,
+                                8
+                            ]
+                        },
+                        "slot_4": {
+                            "origin": [
+                                6,
+                                8
+                            ],
+                            "size": [
+                                5,
+                                8
+                            ]
+                        },
+                        "slot_5": {
+                            "origin": [
+                                0,
+                                8
+                            ],
+                            "size": [
+                                6,
+                                8
+                            ]
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'west'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            90,
+                            0
+                        ]
+                    },
+                    "5fs_br:chiseled_bookshelf": {
+                        "slot_0": {
+                            "origin": [
+                                11,
+                                0
+                            ],
+                            "size": [
+                                5,
+                                8
+                            ]
+                        },
+                        "slot_1": {
+                            "origin": [
+                                6,
+                                0
+                            ],
+                            "size": [
+                                5,
+                                8
+                            ]
+                        },
+                        "slot_2": {
+                            "origin": [
+                                0,
+                                0
+                            ],
+                            "size": [
+                                6,
+                                8
+                            ]
+                        },
+                        "slot_3": {
+                            "origin": [
+                                11,
+                                8
+                            ],
+                            "size": [
+                                5,
+                                8
+                            ]
+                        },
+                        "slot_4": {
+                            "origin": [
+                                6,
+                                8
+                            ],
+                            "size": [
+                                5,
+                                8
+                            ]
+                        },
+                        "slot_5": {
+                            "origin": [
+                                0,
+                                8
+                            ],
+                            "size": [
+                                6,
+                                8
+                            ]
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'south'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            180,
+                            0
+                        ]
+                    },
+                    "5fs_br:chiseled_bookshelf": {
+                        "slot_0": {
+                            "origin": [
+                                11,
+                                0
+                            ],
+                            "size": [
+                                5,
+                                8
+                            ]
+                        },
+                        "slot_1": {
+                            "origin": [
+                                6,
+                                0
+                            ],
+                            "size": [
+                                5,
+                                8
+                            ]
+                        },
+                        "slot_2": {
+                            "origin": [
+                                0,
+                                0
+                            ],
+                            "size": [
+                                6,
+                                8
+                            ]
+                        },
+                        "slot_3": {
+                            "origin": [
+                                11,
+                                8
+                            ],
+                            "size": [
+                                5,
+                                8
+                            ]
+                        },
+                        "slot_4": {
+                            "origin": [
+                                6,
+                                8
+                            ],
+                            "size": [
+                                5,
+                                8
+                            ]
+                        },
+                        "slot_5": {
+                            "origin": [
+                                0,
+                                8
+                            ],
+                            "size": [
+                                6,
+                                8
+                            ]
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'east'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            -90,
+                            0
+                        ]
+                    },
+                    "5fs_br:chiseled_bookshelf": {
+                        "slot_0": {
+                            "origin": [
+                                11,
+                                0
+                            ],
+                            "size": [
+                                5,
+                                8
+                            ]
+                        },
+                        "slot_1": {
+                            "origin": [
+                                6,
+                                0
+                            ],
+                            "size": [
+                                5,
+                                8
+                            ]
+                        },
+                        "slot_2": {
+                            "origin": [
+                                0,
+                                0
+                            ],
+                            "size": [
+                                6,
+                                8
+                            ]
+                        },
+                        "slot_3": {
+                            "origin": [
+                                11,
+                                8
+                            ],
+                            "size": [
+                                5,
+                                8
+                            ]
+                        },
+                        "slot_4": {
+                            "origin": [
+                                6,
+                                8
+                            ],
+                            "size": [
+                                5,
+                                8
+                            ]
+                        },
+                        "slot_5": {
+                            "origin": [
+                                0,
+                                8
+                            ],
+                            "size": [
+                                6,
+                                8
+                            ]
+                        }
+                    }
+                }
+            }
+        ]
+    }
+}

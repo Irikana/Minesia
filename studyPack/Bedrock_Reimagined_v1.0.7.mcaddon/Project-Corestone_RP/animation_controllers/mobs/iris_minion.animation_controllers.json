@@ -1,0 +1,73 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.iris_minion.root": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "animations": [
+                        "general_controller", "particles"
+                    ],
+                    "transitions": [
+                        {
+                            "death": "!q.is_alive"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "death": {
+                    "animations": [
+                        "death"
+                    ]
+                }
+            }
+        },
+        "controller.animation.iris_minion.general": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "animations": [
+                        "idle"
+                    ],
+                    "transitions": [
+                        {
+                            "shoot": "q.is_charged"
+                        },
+                        {
+                            "attack": "v.attack_time > 0"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "shoot": {
+                    "animations": [
+                        "shoot"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "q.all_animations_finished"
+                        },
+                        {
+                            "attack": "v.attack_time > 0"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "attack": {
+                    "animations": [
+                        "attack"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "q.all_animations_finished"
+                        },
+                        {
+                            "shoot": "q.is_charged"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                }
+            }
+        }
+    }
+}

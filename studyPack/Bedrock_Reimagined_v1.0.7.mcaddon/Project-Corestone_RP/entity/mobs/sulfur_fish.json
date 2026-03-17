@@ -1,0 +1,35 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "5fs_br:sulfur_fish",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/mobs/sulfur_fish"
+      },
+      "geometry": {
+        "default": "geometry.sulfur_fish"
+      },
+      "animations": {
+        "idle": "animation.sulfur_fish.idle",
+        "move": "animation.sulfur_fish.move",
+        "death": "animation.sulfur_fish.death",
+        "general_controller": "controller.animation.sulfur_fish.general"
+      },
+      "scripts": {
+        "animate": [
+          "general_controller"
+        ]
+      },
+      "sound_effects": {
+        "idle": "mob.sulfur_fish.idle"
+      },
+      "render_controllers": [ "controller.render.default" ],
+      "spawn_egg": {
+        "texture": "5fs_br:sulfur_fish"
+      }
+    }
+  }
+}

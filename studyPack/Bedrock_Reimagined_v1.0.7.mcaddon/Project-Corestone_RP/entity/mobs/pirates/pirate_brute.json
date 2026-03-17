@@ -1,0 +1,43 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "5fs_br:pirate_brute",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/mobs/pirates/pirate_brute"
+            },
+            "geometry": {
+                "default": "geometry.pirate_brute"
+            },
+            "animations": {
+                "look_at_target": "animation.common.look_at_target",
+                "idle": "animation.pirate_brute.idle",
+                "walk_target": "animation.pirate_brute.walk_target",
+                "walk": "animation.pirate_brute.walk",
+                "attack": "animation.pirate_brute.attack",
+                "death": "animation.pirate_brute.death",
+                "general_controller": "controller.animation.pirate.general",
+                "attack_controller": "controller.animation.pirate.attack",
+                "root_controller": "controller.animation.pirate.root"
+            },
+            "scripts": {
+                "animate": [
+                    "root_controller"
+                ]
+            },
+            "render_controllers": [
+                "controller.render.default"
+            ],
+            "sound_effects": {
+                "idle": "mob.pirate.brute.idle",
+                "attack": "mob.pirate.brute.attack"
+            },
+            "spawn_egg": {
+                "texture": "5fs_br:pirate_brute"
+            }
+        }
+    }
+}

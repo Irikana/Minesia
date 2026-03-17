@@ -1,0 +1,35 @@
+{
+  "format_version": "1.26.0",
+	"minecraft:block": {
+    "description": {
+      "identifier": "5fs_br:compact_end_stone",
+      "menu_category": {
+        "category": "Construction"
+      }
+    },
+    "components": {
+      "minecraft:geometry": "minecraft:geometry.full_block",
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "compact_end_stone"
+        }
+      },
+      "minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 10,
+				"item_specific_speeds": [
+					{
+						"item": {
+							"tags": "query.all_tags('minecraft:is_pickaxe')"
+						},
+						"destroy_speed": 3
+					}
+				]
+			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 9
+			},
+			"minecraft:map_color": "#D2C68A",
+			"tag:minecraft:is_pickaxe_item_destructible": {}
+    }
+  }
+}

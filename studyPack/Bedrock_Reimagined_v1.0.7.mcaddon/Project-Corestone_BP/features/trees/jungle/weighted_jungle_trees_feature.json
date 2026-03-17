@@ -1,0 +1,22 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "5fs_br:trees/jungle/weighted_jungle_trees_feature"
+    },
+    "features": [
+      ["5fs_br:trees/jungle/scatter_jungle_tree_0_feature", 1],
+      ["5fs_br:trees/jungle/scatter_jungle_tree_1_feature", 1],
+      ["5fs_br:trees/jungle/scatter_jungle_tree_2_feature", 1],
+      ["5fs_br:trees/jungle/scatter_jungle_tree_3_feature", 1],
+      ["5fs_br:trees/jungle/scatter_jungle_tree_4_feature", 1],
+      ["5fs_br:trees/jungle/scatter_jungle_tree_5_feature", 1],
+      ["5fs_br:trees/jungle/scatter_big_jungle_tree_0_feature", 1],
+      ["5fs_br:trees/jungle/scatter_big_jungle_tree_1_feature", 1],
+      ["5fs_br:trees/jungle/scatter_big_jungle_tree_2_feature", 1],
+      ["5fs_br:trees/jungle/scatter_big_jungle_tree_3_feature", 1],
+      ["5fs_br:trees/jungle/scatter_big_jungle_tree_4_feature", 1],
+      ["5fs_br:trees/jungle/scatter_big_jungle_tree_5_feature", 1]
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "5fs_br:cape_of_ocean_waves",
+      "materials": {
+        "default": "armor",
+        "enchanted": "armor_enchanted"
+      },
+      "textures": {
+        "ocean_waves0":  "textures/entity/gears/capes/ocean_waves/ocean_waves0",
+        "ocean_waves1":  "textures/entity/gears/capes/ocean_waves/ocean_waves1",
+        "ocean_waves2":  "textures/entity/gears/capes/ocean_waves/ocean_waves2",
+        "ocean_waves3":  "textures/entity/gears/capes/ocean_waves/ocean_waves3",
+        "ocean_waves4":  "textures/entity/gears/capes/ocean_waves/ocean_waves4",
+        "ocean_waves5":  "textures/entity/gears/capes/ocean_waves/ocean_waves5",
+        "ocean_waves6":  "textures/entity/gears/capes/ocean_waves/ocean_waves6",
+        "ocean_waves7":  "textures/entity/gears/capes/ocean_waves/ocean_waves7",
+        "ocean_waves8":  "textures/entity/gears/capes/ocean_waves/ocean_waves8",
+        "ocean_waves9":  "textures/entity/gears/capes/ocean_waves/ocean_waves9",
+        "ocean_waves10": "textures/entity/gears/capes/ocean_waves/ocean_waves10",
+        "ocean_waves11": "textures/entity/gears/capes/ocean_waves/ocean_waves11",
+        "enchanted":     "textures/misc/enchanted_actor_glint"
+      },
+      "geometry": {
+        "default": "geometry.custom_cape"
+      },
+      "animations": {
+        "cape": "animation.custom_cape"
+      },
+      "scripts": {
+        "parent_setup": "variable.chest_layer_visible = 0.0;",
+        "animate": [
+          "cape"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.cape_of_ocean_waves"
+      ]
+    }
+  }
+}

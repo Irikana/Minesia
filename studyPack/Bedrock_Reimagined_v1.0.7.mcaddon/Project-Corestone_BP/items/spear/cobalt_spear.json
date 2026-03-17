@@ -1,0 +1,115 @@
+{
+    "format_version": "1.26.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "5fs_br:cobalt_spear",
+            "menu_category": {
+                "category": "equipment"
+            }
+        },
+        "components": {
+            "minecraft:icon": {
+                "textures": {
+                    "default": "5fs_br:cobalt_spear"
+                }
+            },
+            "minecraft:tags": {
+                "tags": [
+                    "5fs_br:cobalt_tier",
+                    "minecraft:is_spear"
+                ]
+            },
+            "minecraft:max_stack_size": 1,
+            "minecraft:durability": {
+                "max_durability": 1561,
+                "damage_chance": {
+                    "min": 0,
+                    "max": 100
+                }
+            },
+            "minecraft:repairable": {
+                "repair_items": [
+                    {
+                        "items": [
+                            "5fs_br:cobalt_spear"
+                        ],
+                        "repair_amount": "context.other->query.remaining_durability"
+                    },
+                    {
+                        "items": [
+                            "5fs_br:cobalt_ingot"
+                        ],
+                        "repair_amount": "query.max_durability * 0.25"
+                    }
+                ]
+            },
+            "minecraft:enchantable": {
+                "slot": "melee_spear",
+                "value": 13
+            },
+            "minecraft:hand_equipped": {
+                "value": true
+            },
+            "minecraft:use_modifiers": {
+                "use_duration": 72000,
+                "emit_vibrations": false,
+                "start_sound": "item.spear.use",
+                "movement_modifier": 1
+            },
+            "minecraft:cooldown": {
+                "category": "spear",
+                "duration": 1.3,
+                "type": "attack"
+            },
+            "minecraft:swing_duration": {
+                "value": 1.3
+            },
+            "minecraft:swing_sounds": {
+                "attack_miss": "item.spear.attack_miss",
+                "attack_hit": "item.spear.attack_hit"
+            },
+            "minecraft:damage": {
+                "value": 6
+            },
+            "minecraft:piercing_weapon": {
+                "reach": {
+                    "min": 2,
+                    "max": 4.5
+                },
+                "creative_reach": {
+                    "min": 2,
+                    "max": 7.5
+                },
+                "hitbox_margin": 0.25
+            },
+            "minecraft:kinetic_weapon": {
+                "delay": 6,
+                "reach": {
+                    "min": 2,
+                    "max": 4.5
+                },
+                "creative_reach": {
+                    "min": 2,
+                    "max": 7.5
+                },
+                "hitbox_margin": 0.25,
+                "damage_multiplier": 1.2,
+                "damage_conditions": {
+                    "max_duration": 150,
+                    "min_relative_speed": 4.6
+                },
+                "knockback_conditions": {
+                    "max_duration": 105,
+                    "min_speed": 5.1
+                },
+                "dismount_conditions": {
+                    "max_duration": 60,
+                    "min_speed": 8.0
+                }
+            },
+            "minecraft:fire_resistant": {
+                "value": true
+            }
+        }
+    }
+}

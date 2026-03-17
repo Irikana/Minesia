@@ -1,0 +1,34 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "5fs_br:pipe_joint"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " B ",
+      "BLB",
+      " B "
+    ],
+    "key": {
+      "L": {
+        "item": "5fs_br:pipe"
+      },
+      "B": {
+        "item": "minecraft:iron_ingot"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:iron_ingot",
+        "data": 0
+      }
+    ],
+    "result": {
+      "item": "5fs_br:pipe_joint",
+      "count": 1
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.redwood_bush_2",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "bb_main",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [0, 0, -14.01789],
+							"size": [0, 20, 28],
+							"pivot": [0, 10, -0.01789],
+							"rotation": [0, -135, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [0, 20]},
+								"east": {"uv": [3, 0], "uv_size": [28, 20]},
+								"south": {"uv": [0, 0], "uv_size": [0, 20]},
+								"up": {"uv": [0, 28], "uv_size": [0, -28]},
+								"down": {"uv": [0, 28], "uv_size": [0, -28]}
+							}
+						},
+						{
+							"origin": [0, 0, -14.01789],
+							"size": [0, 20, 28],
+							"pivot": [0, 10, -0.01789],
+							"rotation": [0, -45, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [0, 20]},
+								"east": {"uv": [3, 0], "uv_size": [28, 20]},
+								"south": {"uv": [0, 0], "uv_size": [0, 20]},
+								"up": {"uv": [0, 28], "uv_size": [0, -28]},
+								"down": {"uv": [0, 28], "uv_size": [0, -28]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,14 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.custom_cape": {
+			"loop": true,
+			"bones": {
+				"bone": {
+					"rotation": ["math.lerp(0.0, -126.0, query.cape_flap_amount) - 6.0", 0, 0],
+					"position": [0, "query.get_root_locator_offset('armor_offset.default_neck', 1)", 0]
+				}
+			}
+		}
+	}
+}

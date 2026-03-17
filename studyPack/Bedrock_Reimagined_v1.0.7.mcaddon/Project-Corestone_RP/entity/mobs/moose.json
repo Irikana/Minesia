@@ -1,0 +1,47 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "5fs_br:moose",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/mobs/moose"
+      },
+      "geometry": {
+        "default": "geometry.moose"
+      },
+      "animations": {
+        "idle": "animation.moose.idle",
+        "walk": "animation.moose.walk",
+        "run": "animation.moose.run",
+        "run_attack": "animation.moose.run_attack",
+        "charge_attack": "animation.moose.charge_attack",
+        "stomp_attack": "animation.moose.stomp_attack",
+        "drop_antlers": "animation.moose.drop_antlers",
+        "sleep": "animation.moose.sleeping",
+        "death": "animation.moose.death",
+        "general_controller": "controller.animation.moose.general",
+        "charge_attack_controller": "controller.animation.moose.charge_attack_controller",
+        "stomp_attack_controller": "controller.animation.moose.stomp_attack_controller",
+        "drop_antlers_controller": "controller.animation.moose.drop_antlers_controller"
+      },
+      "scripts": {
+        "pre_animation": [
+          "v.has_antlers = query.property('5fs_br:antlers');"
+        ],
+        "animate": [
+          "general_controller",
+          "charge_attack_controller",
+          "stomp_attack_controller",
+          "drop_antlers_controller"
+        ]
+      },
+      "render_controllers": [ "controller.render.moose" ],
+      "spawn_egg": {
+        "texture": "5fs_br:moose"
+      }
+    }
+  }
+}

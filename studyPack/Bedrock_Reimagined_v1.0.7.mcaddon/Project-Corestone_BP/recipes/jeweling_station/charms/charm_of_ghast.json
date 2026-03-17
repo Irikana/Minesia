@@ -1,0 +1,30 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "5fs_br:charm_of_ghast"
+		},
+		"tags": [
+			"jeweling_station"
+		],
+		"key": {
+			"O": {
+                "item": "5fs_br:obsidian_ingot"
+            },
+            "T": {
+                "item": "minecraft:ghast_tear"
+            }
+		},
+		"pattern": [
+			"OTO",
+			"TTT",
+			"OTO"
+		],
+		"result": {
+			"item": "5fs_br:charm_of_ghast"
+		},
+		"unlock": {
+			"context": "AlwaysUnlocked"
+		}
+	}
+}

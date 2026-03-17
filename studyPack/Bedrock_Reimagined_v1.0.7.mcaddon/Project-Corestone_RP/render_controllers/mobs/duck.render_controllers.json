@@ -1,0 +1,31 @@
+{
+    "format_version": "1.10.0",
+    "render_controllers": {
+        "controller.render.duck": {
+            "arrays": {
+                "textures": {
+                    "Array.textures": [
+                        "Texture.default",
+                        "Texture.white",
+                        "Texture.black"
+                    ]
+                },
+                "geometries": {
+                    "Array.geometries": [
+                        "Geometry.default",
+                        "Geometry.baby"
+                    ]
+                }
+            },
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "geometry": "Array.geometries[v.baby]",
+            "textures": [
+                "q.is_baby ? Texture.baby : Array.textures[v.index]"
+            ]
+        }
+    }
+}

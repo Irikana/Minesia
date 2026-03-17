@@ -1,0 +1,423 @@
+{
+	"format_version": "1.21.20",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.moose_antlers",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 4.5,
+				"visible_bounds_offset": [0, 1.75, 0]
+			},
+			"bones": [
+				{
+					"name": "bb_main",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-7, 3, 6],
+							"size": [14, 14, 2],
+							"uv": {
+								"north": {"uv": [2, 2], "uv_size": [14, 14], "material_instance": "moose_antlers_base"},
+								"east": {"uv": [2, 2], "uv_size": [-2, 14], "material_instance": "moose_antlers_base"},
+								"south": {"uv": [2, 2], "uv_size": [14, 14], "material_instance": "moose_antlers_base"},
+								"west": {"uv": [0, 2], "uv_size": [2, 14], "material_instance": "moose_antlers_base"},
+								"up": {"uv": [2, 2], "uv_size": [14, -2], "material_instance": "moose_antlers_base"},
+								"down": {"uv": [2, 0], "uv_size": [14, 2], "material_instance": "moose_antlers_base"}
+							}
+						}
+					]
+				},
+				{
+					"name": "head",
+					"pivot": [0, 25.82738, -0.40631],
+					"rotation": [52.5, 0, 0],
+					"cubes": [
+						{
+							"origin": [-3.5, 9.3162, -14.67534],
+							"size": [7, 7, 8],
+							"uv": {
+								"north": {"uv": [9, 9], "uv_size": [7, 7], "material_instance": "moose_antlers_head_0"},
+								"east": {"uv": [1, 9], "uv_size": [8, 7], "material_instance": "moose_antlers_head_0"},
+								"south": {"uv": [9, 0], "uv_size": [7, 7], "material_instance": "moose_antlers_head_0"},
+								"west": {"uv": [9, 9], "uv_size": [-8, 7], "material_instance": "moose_antlers_head_0"},
+								"up": {"uv": [0, 0], "uv_size": [7, 8], "material_instance": "moose_antlers_head_0"}
+							}
+						},
+						{
+							"origin": [-3.5, 9.3162, -14.67534],
+							"size": [7, 0, 6],
+							"uv": {
+								"down": {"uv": [16, 16], "uv_size": [-7, -6], "material_instance": "moose_antlers_head_1"}
+							}
+						}
+					]
+				},
+				{
+					"name": "muzzle",
+					"parent": "head",
+					"pivot": [0, 27.07738, -4.65631],
+					"rotation": [-2.5, 0, 0],
+					"cubes": [
+						{
+							"origin": [-2.5, 10.18851, -19.94465],
+							"size": [5, 3, 6],
+							"inflate": 0.01,
+							"uv": {
+								"north": {"uv": [6, 0], "uv_size": [5, 3], "material_instance": "moose_antlers_head_1"},
+								"east": {"uv": [0, 0], "uv_size": [6, 3], "material_instance": "moose_antlers_head_1"},
+								"west": {"uv": [6, 0], "uv_size": [-6, 3], "material_instance": "moose_antlers_head_1"},
+								"up": {"uv": [0, 3], "uv_size": [5, 6], "material_instance": "moose_antlers_head_1"},
+								"down": {"uv": [5, 9], "uv_size": [5, -6], "material_instance": "moose_antlers_head_1"}
+							}
+						}
+					]
+				},
+				{
+					"name": "jaw",
+					"parent": "muzzle",
+					"pivot": [0, 26.57738, -4.65631],
+					"rotation": [-2.5, 0, 0],
+					"cubes": [
+						{
+							"origin": [-2.5, 8.75581, -16.94817],
+							"size": [5, 1, 4],
+							"uv": {
+								"north": {"uv": [11, 4], "uv_size": [5, 1], "material_instance": "moose_antlers_head_1"},
+								"east": {"uv": [11.25, 5], "uv_size": [4, 1], "material_instance": "moose_antlers_head_1"},
+								"west": {"uv": [11.5, 6], "uv_size": [4, 1], "material_instance": "moose_antlers_head_1"},
+								"up": {"uv": [11, 3], "uv_size": [5, 4], "material_instance": "moose_antlers_head_1moose_antlers_head_1"},
+								"down": {"uv": [11, 7], "uv_size": [5, -4], "material_instance": "moose_antlers_head_1"}
+							}
+						},
+						{
+							"origin": [-2, 8.75581, -18.94817],
+							"size": [4, 1, 2],
+							"uv": {
+								"north": {"uv": [12, 1], "uv_size": [4, 1], "material_instance": "moose_antlers_head_1"},
+								"east": {"uv": [14, 0], "uv_size": [2, 1], "material_instance": "moose_antlers_head_1"},
+								"west": {"uv": [14, 0], "uv_size": [2, 1], "material_instance": "moose_antlers_head_1"},
+								"up": {"uv": [12, 0], "uv_size": [4, 2], "material_instance": "moose_antlers_head_1moose_antlers_head_1"},
+								"down": {"uv": [16, 2], "uv_size": [-4, -2], "material_instance": "moose_antlers_head_1"}
+							}
+						}
+					]
+				},
+				{
+					"name": "antler_right",
+					"parent": "head",
+					"pivot": [2.25, 32.82738, -0.90631],
+					"cubes": [
+						{
+							"origin": [-5.06855, 16.57304, -10.92534],
+							"size": [4, 2, 3],
+							"inflate": 0.01,
+							"pivot": [3.75, 32.82738, 0.09369],
+							"rotation": [0, 0, -22.5],
+							"uv": {
+								"north": {"uv": [3, 12], "uv_size": [4, 2], "material_instance": "moose_antlers_head_1"},
+								"south": {"uv": [3, 14], "uv_size": [4, 2], "material_instance": "moose_antlers_head_1"},
+								"up": {"uv": [0, 9], "uv_size": [4, 3], "material_instance": "moose_antlers_head_1"},
+								"down": {"uv": [4, 12], "uv_size": [4, -3], "material_instance": "moose_antlers_head_1"}
+							}
+						},
+						{
+							"origin": [4.24521, 15.83903, -13.26397],
+							"size": [5, 2, 7],
+							"uv": {
+								"north": {"uv": [11, 5], "uv_size": [5, 2], "material_instance": "moose_antlers_antler_1"},
+								"east": {"uv": [4, 5], "uv_size": [7, 2], "material_instance": "moose_antlers_antler_1"},
+								"west": {"uv": [4, 7], "uv_size": [7, 2], "material_instance": "moose_antlers_antler_1"},
+								"up": {"uv": [6, 9], "uv_size": [5, 7], "material_instance": "moose_antlers_antler_1"},
+								"down": {"uv": [11, 16], "uv_size": [5, -7], "material_instance": "moose_antlers_antler_1"}
+							}
+						},
+						{
+							"origin": [4.24521, 21.90795, -13.58059],
+							"size": [7, 2, 7],
+							"inflate": 0.025,
+							"pivot": [3.75, 37.30534, 5.33297],
+							"rotation": [22.5, 0, 0],
+							"uv": {
+								"north": {"uv": [9, 5], "uv_size": [7, 2], "material_instance": "moose_antlers_antler_0"},
+								"east": {"uv": [2, 5], "uv_size": [7, 2], "material_instance": "moose_antlers_antler_0"},
+								"south": {"uv": [9, 7], "uv_size": [7, 2], "material_instance": "moose_antlers_antler_0"},
+								"west": {"uv": [2, 7], "uv_size": [7, 2], "material_instance": "moose_antlers_antler_0"},
+								"up": {"uv": [2, 9], "uv_size": [7, 7], "material_instance": "moose_antlers_antler_0"},
+								"down": {"uv": [9, 16], "uv_size": [7, -7], "material_instance": "moose_antlers_antler_0"}
+							}
+						},
+						{
+							"origin": [1.72278, 24.54767, -11.55866],
+							"size": [3, 2, 2],
+							"inflate": -0.025,
+							"pivot": [10.5481, 34.37299, 4.01627],
+							"rotation": [16.32495, 15.69986, -42.73421],
+							"uv": {
+								"north": {"uv": [2, 2], "uv_size": [3, 2], "material_instance": "moose_antlers_antler_0"},
+								"south": {"uv": [7, 2], "uv_size": [3, 2], "material_instance": "moose_antlers_antler_0"},
+								"west": {"uv": [5, 2], "uv_size": [2, 2], "material_instance": "moose_antlers_antler_0"},
+								"up": {"uv": [0, 0], "uv_size": [3, 2], "material_instance": "moose_antlers_antler_0"},
+								"down": {"uv": [3, 2], "uv_size": [3, -2], "material_instance": "moose_antlers_antler_0"}
+							}
+						},
+						{
+							"origin": [4.24521, 37.59014, -10.92295],
+							"size": [2, 2, 3],
+							"inflate": -0.025,
+							"pivot": [4.74521, 36.40232, 8.91551],
+							"rotation": [67.5, 0, 0],
+							"uv": {
+								"east": {"uv": [9, 1], "uv_size": [3, 2], "material_instance": "moose_antlers_antler_1"},
+								"south": {"uv": [14, 3], "uv_size": [2, 2], "material_instance": "moose_antlers_antler_1"},
+								"west": {"uv": [11, 3], "uv_size": [3, 2], "material_instance": "moose_antlers_antler_1"},
+								"up": {"uv": [12, 0], "uv_size": [2, 3], "material_instance": "moose_antlers_antler_1"},
+								"down": {"uv": [14, 3], "uv_size": [2, -3], "material_instance": "moose_antlers_antler_1"}
+							}
+						},
+						{
+							"origin": [7.24521, 37.59014, -10.92295],
+							"size": [2, 2, 5],
+							"inflate": -0.025,
+							"pivot": [4.74521, 36.40232, 8.91551],
+							"rotation": [67.5, 0, 0],
+							"uv": {
+								"east": {"uv": [13, 0], "uv_size": [-5, 2], "material_instance": "moose_antlers_antler_0"},
+								"south": {"uv": [12, 0], "uv_size": [2, 2], "material_instance": "moose_antlers_antler_0"},
+								"west": {"uv": [8, 0], "uv_size": [5, 2], "material_instance": "moose_antlers_antler_0"},
+								"up": {"uv": [0, 0], "uv_size": [2, 5], "material_instance": "moose_antlers_antler_1"},
+								"down": {"uv": [2, 5], "uv_size": [2, -5], "material_instance": "moose_antlers_antler_1"}
+							}
+						},
+						{
+							"origin": [10.24521, 37.59014, -10.92295],
+							"size": [1, 2, 4],
+							"inflate": -0.025,
+							"pivot": [4.74521, 36.40232, 8.91551],
+							"rotation": [67.5, 0, 0],
+							"uv": {
+								"north": {"uv": [10.5, 10.25], "uv_size": [0.25, 0.5], "material_instance": "moose_antlers_antler_0"},
+								"east": {"uv": [13, 0], "uv_size": [-4, 2], "material_instance": "moose_antlers_antler_0"},
+								"south": {"uv": [14, 1], "uv_size": [1, 2], "material_instance": "moose_antlers_antler_0"},
+								"west": {"uv": [9, 0], "uv_size": [4, 2], "material_instance": "moose_antlers_antler_0"},
+								"up": {"uv": [14, 0], "uv_size": [1, 4], "material_instance": "moose_antlers_antler_0"},
+								"down": {"uv": [16, 4], "uv_size": [-1, -4], "material_instance": "moose_antlers_antler_0"}
+							}
+						},
+						{
+							"origin": [5.25479, 36.71384, -23.28767],
+							"size": [1, 3, 2],
+							"inflate": -0.025,
+							"pivot": [9.25479, 33.7672, -2.66514],
+							"rotation": [67.5, 0, 0],
+							"uv": {
+								"north": {"uv": [4, 13], "uv_size": [-1, 3], "material_instance": "moose_antlers_antler_1"},
+								"east": {"uv": [5, 13], "uv_size": [-2, 3], "material_instance": "moose_antlers_antler_1"},
+								"south": {"uv": [4, 13], "uv_size": [1, 3], "material_instance": "moose_antlers_antler_1"},
+								"west": {"uv": [2, 13], "uv_size": [-2, 3], "material_instance": "moose_antlers_antler_1"},
+								"up": {"uv": [1, 13], "uv_size": [-1, 2], "material_instance": "moose_antlers_antler_1"}
+							}
+						},
+						{
+							"origin": [7.25479, 36.71384, -23.28767],
+							"size": [1, 3, 2],
+							"inflate": -0.025,
+							"pivot": [11.25479, 33.7672, -2.66514],
+							"rotation": [67.5, 0, 0],
+							"uv": {
+								"north": {"uv": [4, 13], "uv_size": [-1, 3], "material_instance": "moose_antlers_antler_1"},
+								"east": {"uv": [5, 13], "uv_size": [-2, 3], "material_instance": "moose_antlers_antler_1"},
+								"south": {"uv": [4, 13], "uv_size": [1, 3], "material_instance": "moose_antlers_antler_1"},
+								"west": {"uv": [2, 13], "uv_size": [-2, 3], "material_instance": "moose_antlers_antler_1"},
+								"up": {"uv": [1, 13], "uv_size": [-1, 2], "material_instance": "moose_antlers_antler_1"}
+							}
+						}
+					]
+				},
+				{
+					"name": "antler_left",
+					"parent": "head",
+					"pivot": [-2.25, 32.82738, -0.90631],
+					"cubes": [
+						{
+							"origin": [1.06855, 16.57304, -10.92534],
+							"size": [4, 2, 3],
+							"inflate": 0.01,
+							"pivot": [-3.75, 32.82738, 0.09369],
+							"rotation": [0, 0, 22.5],
+							"uv": {
+								"north": {"uv": [7, 12], "uv_size": [-4, 2], "material_instance": "moose_antlers_head_1"},
+								"south": {"uv": [7, 14], "uv_size": [-4, 2], "material_instance": "moose_antlers_head_1"},
+								"up": {"uv": [4, 9], "uv_size": [-4, 3], "material_instance": "moose_antlers_head_1"},
+								"down": {"uv": [8, 12], "uv_size": [-4, -3], "material_instance": "moose_antlers_head_1"}
+							}
+						},
+						{
+							"origin": [-9.24521, 15.83903, -13.26397],
+							"size": [5, 2, 7],
+							"uv": {
+								"north": {"uv": [16, 5], "uv_size": [-5, 2], "material_instance": "moose_antlers_antler_1"},
+								"east": {"uv": [11, 7], "uv_size": [-7, 2], "material_instance": "moose_antlers_antler_1"},
+								"west": {"uv": [11, 5], "uv_size": [-7, 2], "material_instance": "moose_antlers_antler_1"},
+								"up": {"uv": [11, 9], "uv_size": [-5, 7], "material_instance": "moose_antlers_antler_1"},
+								"down": {"uv": [16, 16], "uv_size": [-5, -7], "material_instance": "moose_antlers_antler_1"}
+							}
+						},
+						{
+							"origin": [-11.24521, 21.90795, -13.58059],
+							"size": [7, 2, 7],
+							"inflate": 0.025,
+							"pivot": [-3.75, 37.30534, 5.33297],
+							"rotation": [22.5, 0, 0],
+							"uv": {
+								"north": {"uv": [16, 5], "uv_size": [-7, 2], "material_instance": "moose_antlers_antler_0"},
+								"east": {"uv": [9, 7], "uv_size": [-7, 2], "material_instance": "moose_antlers_antler_0"},
+								"south": {"uv": [16, 7], "uv_size": [-7, 2], "material_instance": "moose_antlers_antler_0"},
+								"west": {"uv": [9, 5], "uv_size": [-7, 2], "material_instance": "moose_antlers_antler_0"},
+								"up": {"uv": [9, 9], "uv_size": [-7, 7], "material_instance": "moose_antlers_antler_0"},
+								"down": {"uv": [16, 16], "uv_size": [-7, -7], "material_instance": "moose_antlers_antler_0"}
+							}
+						},
+						{
+							"origin": [-4.72278, 24.54767, -11.55866],
+							"size": [3, 2, 2],
+							"inflate": -0.025,
+							"pivot": [-10.5481, 34.37299, 4.01627],
+							"rotation": [16.32495, -15.69986, 42.73421],
+							"uv": {
+								"north": {"uv": [5, 2], "uv_size": [-3, 2], "material_instance": "moose_antlers_antler_0"},
+								"east": {"uv": [7, 2], "uv_size": [-2, 2], "material_instance": "moose_antlers_antler_0"},
+								"south": {"uv": [10, 2], "uv_size": [-3, 2], "material_instance": "moose_antlers_antler_0"},
+								"up": {"uv": [3, 0], "uv_size": [-3, 2], "material_instance": "moose_antlers_antler_0"},
+								"down": {"uv": [6, 2], "uv_size": [-3, -2], "material_instance": "moose_antlers_antler_0"}
+							}
+						},
+						{
+							"origin": [-6.24521, 37.59014, -10.92295],
+							"size": [2, 2, 3],
+							"inflate": -0.025,
+							"pivot": [-4.74521, 36.40232, 8.91551],
+							"rotation": [67.5, 0, 0],
+							"uv": {
+								"east": {"uv": [14, 3], "uv_size": [-3, 2], "material_instance": "moose_antlers_antler_1"},
+								"south": {"uv": [16, 3], "uv_size": [-2, 2], "material_instance": "moose_antlers_antler_1"},
+								"west": {"uv": [12, 1], "uv_size": [-3, 2], "material_instance": "moose_antlers_antler_1"},
+								"up": {"uv": [14, 0], "uv_size": [-2, 3], "material_instance": "moose_antlers_antler_1"},
+								"down": {"uv": [16, 3], "uv_size": [-2, -3], "material_instance": "moose_antlers_antler_1"}
+							}
+						},
+						{
+							"origin": [-9.24521, 37.59014, -10.92295],
+							"size": [2, 2, 5],
+							"inflate": -0.025,
+							"pivot": [-4.74521, 36.40232, 8.91551],
+							"rotation": [67.5, 0, 0],
+							"uv": {
+								"east": {"uv": [13, 0], "uv_size": [-5, 2], "material_instance": "moose_antlers_antler_0"},
+								"south": {"uv": [14, 0], "uv_size": [-2, 2], "material_instance": "moose_antlers_antler_0"},
+								"west": {"uv": [8, 0], "uv_size": [5, 2], "material_instance": "moose_antlers_antler_0"},
+								"up": {"uv": [2, 0], "uv_size": [-2, 5], "material_instance": "moose_antlers_antler_1"},
+								"down": {"uv": [4, 5], "uv_size": [-2, -5], "material_instance": "moose_antlers_antler_1"}
+							}
+						},
+						{
+							"origin": [-11.24521, 37.59014, -10.92295],
+							"size": [1, 2, 4],
+							"inflate": -0.025,
+							"pivot": [-4.74521, 36.40232, 8.91551],
+							"rotation": [67.5, 0, 0],
+							"uv": {
+								"east": {"uv": [13, 0], "uv_size": [-4, 2], "material_instance": "moose_antlers_antler_0"},
+								"south": {"uv": [14, 1], "uv_size": [1, 2], "material_instance": "moose_antlers_antler_0"},
+								"west": {"uv": [9, 0], "uv_size": [4, 2], "material_instance": "moose_antlers_antler_0"},
+								"up": {"uv": [15, 0], "uv_size": [-1, 4], "material_instance": "moose_antlers_antler_0"},
+								"down": {"uv": [16, 4], "uv_size": [-1, -4], "material_instance": "moose_antlers_antler_0"}
+							}
+						},
+						{
+							"origin": [-8.24521, 36.71384, -23.28767],
+							"size": [1, 3, 2],
+							"inflate": -0.025,
+							"pivot": [-4.24521, 33.7672, -2.66514],
+							"rotation": [67.5, 0, 0],
+							"uv": {
+								"north": {"uv": [4, 13], "uv_size": [-1, 3], "material_instance": "moose_antlers_antler_1"},
+								"east": {"uv": [5, 13], "uv_size": [-2, 3], "material_instance": "moose_antlers_antler_1"},
+								"south": {"uv": [4, 13], "uv_size": [1, 3], "material_instance": "moose_antlers_antler_1"},
+								"west": {"uv": [2, 13], "uv_size": [-2, 3], "material_instance": "moose_antlers_antler_1"},
+								"up": {"uv": [1, 13], "uv_size": [-1, 2], "material_instance": "moose_antlers_antler_1"}
+							}
+						},
+						{
+							"origin": [-6.24521, 36.71384, -23.28767],
+							"size": [1, 3, 2],
+							"inflate": -0.025,
+							"pivot": [-2.24521, 33.7672, -2.66514],
+							"rotation": [67.5, 0, 0],
+							"uv": {
+								"north": {"uv": [4, 13], "uv_size": [-1, 3], "material_instance": "moose_antlers_antler_1"},
+								"east": {"uv": [5, 13], "uv_size": [-2, 3], "material_instance": "moose_antlers_antler_1"},
+								"south": {"uv": [4, 13], "uv_size": [1, 3], "material_instance": "moose_antlers_antler_1"},
+								"west": {"uv": [2, 13], "uv_size": [-2, 3], "material_instance": "moose_antlers_antler_1"},
+								"up": {"uv": [1, 13], "uv_size": [-1, 2], "material_instance": "moose_antlers_antler_1"}
+							}
+						}
+					]
+				}
+			],
+			"item_display_transforms": {
+				"thirdperson_righthand": {
+					"rotation": [75, 45, 0],
+					"translation": [0, 2.5, 0],
+					"scale": [0.375, 0.375, 0.375],
+					"rotation_pivot": [0, 0, 0],
+					"scale_pivot": [0, 0, 0]
+				},
+				"thirdperson_lefthand": {
+					"rotation": [75, 45, 0],
+					"translation": [0, 2.5, 0],
+					"scale": [0.375, 0.375, 0.375],
+					"rotation_pivot": [0, 0, 0],
+					"scale_pivot": [0, 0, 0]
+				},
+				"firstperson_righthand": {
+					"rotation": [0, -45, 0],
+					"translation": [0, 0, 0],
+					"scale": [0.4, 0.4, 0.4],
+					"rotation_pivot": [0, 0, 0],
+					"scale_pivot": [0, 0, 0]
+				},
+				"firstperson_lefthand": {
+					"rotation": [0, -45, 0],
+					"translation": [0, 0, 0],
+					"scale": [0.4, 0.4, 0.4],
+					"rotation_pivot": [0, 0, 0],
+					"scale_pivot": [0, 0, 0]
+				},
+				"ground": {
+					"rotation": [0, 0, 0],
+					"translation": [0, 3, 0],
+					"scale": [0.25, 0.25, 0.25],
+					"rotation_pivot": [0, 0, 0],
+					"scale_pivot": [0, 0, 0]
+				},
+				"gui": {
+					"rotation": [30, -135, 0],
+					"translation": [1, -3.5, 0],
+					"scale": [0.55, 0.55, 0.55],
+					"rotation_pivot": [0, 0, 0],
+					"scale_pivot": [0, 0, 0],
+					"fit_to_frame": false
+				},
+				"fixed": {
+					"rotation": [0, 0, 0],
+					"translation": [0, -1.5, -2.5],
+					"scale": [0.5, 0.5, 0.5],
+					"rotation_pivot": [0, 0, 0],
+					"scale_pivot": [0, 0, 0]
+				}
+			}
+		}
+	]
+}

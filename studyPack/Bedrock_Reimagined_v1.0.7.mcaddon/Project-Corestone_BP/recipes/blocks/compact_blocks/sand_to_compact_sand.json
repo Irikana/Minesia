@@ -1,0 +1,34 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "5fs_br:sand_to_compact_sand"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "minecraft:sand"
+      },
+      {
+        "item": "minecraft:sand"
+      },
+      {
+        "item": "minecraft:sand"
+      },
+      {
+        "item": "minecraft:sand"
+      }
+    ],
+    "result": {
+      "item": "5fs_br:compact_sand",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:sand"
+      }
+    ]
+  }
+}

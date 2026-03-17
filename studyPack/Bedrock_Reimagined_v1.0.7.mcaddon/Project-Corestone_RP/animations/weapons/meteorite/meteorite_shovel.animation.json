@@ -1,0 +1,23 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.meteorite_shovel.1fp": {
+			"loop": true,
+			"bones": {
+				"bone": {
+					"rotation": [54.69603, 47.75097, -83.32058],
+					"position": [3, 9, 5]
+				}
+			}
+		},
+		"animation.meteorite_shovel.3pp": {
+			"loop": true,
+			"bones": {
+				"bone": {
+					"rotation": [86.38069, -0.24706, -179.70273],
+					"position": [0, 15, -5]
+				}
+			}
+		}
+	}
+}

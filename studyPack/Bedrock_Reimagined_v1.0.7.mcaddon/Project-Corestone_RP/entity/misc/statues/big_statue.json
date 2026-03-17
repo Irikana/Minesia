@@ -1,0 +1,50 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "5fs_br:big_statue",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"stone_statue": "textures/blocks/misc/statues/stone_statue",
+				"sandstone_statue": "textures/blocks/misc/statues/sandstone_statue",
+				"red_sandstone_statue": "textures/blocks/misc/statues/red_sandstone_statue"
+			},
+			"geometry": {
+				"default": "geometry.big_statue"
+			},
+			"animations": {
+                "north": "animation.5fs_br.tile_entity.north",
+                "south": "animation.5fs_br.tile_entity.south",
+                "west": "animation.5fs_br.tile_entity.west",
+                "east": "animation.5fs_br.tile_entity.east"
+			},
+			"scripts": {
+				"pre_animation": [
+					"t.type = q.property('5fs_br:type');",
+					"v.variant = q.property('5fs_br:variant');",
+					"v.rotation = q.property('5fs_br:rotation');",
+					"v.type = t.type == 'stone_statue' ? 0 : t.type == 'sandstone_statue' ? 1 : t.type == 'red_sandstone_statue' ? 2 : 0;"
+				],
+				"animate": [
+					{
+                        "north": "v.rotation == 'north'"
+                    },
+                    {
+                        "south": "v.rotation == 'south'"
+                    },
+                    {
+                        "west": "v.rotation == 'west'"
+                    },
+                    {
+                        "east": "v.rotation == 'east'"
+                    }
+				]
+			},
+			"render_controllers": [
+				"controller.render.statue"
+			]
+		}
+	}
+}

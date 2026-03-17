@@ -1,0 +1,280 @@
+{
+    "format_version": "1.26.0",
+	"minecraft:block": {
+        "description": {
+            "identifier": "5fs_br:steel_counter",
+            "menu_category": {
+                "category": "Construction"
+            },
+            "states": {
+                "5fs_br:number": {
+                    "values": {
+                        "min": 0,
+                        "max": 15
+                    }
+                }
+            },
+            "traits": {
+                "minecraft:placement_direction": {
+                    "enabled_states": [
+                        "minecraft:cardinal_direction"
+                    ],
+                    "y_rotation_offset": 180
+                }
+            }
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'north'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            0,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'west'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            90,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'south'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            180,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'east'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            -90,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:number') == 0",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "steel_counter_off"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:number') == 1",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "steel_counter_1"
+                        }
+                    },
+                    "minecraft:light_emission": 10
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:number') == 2",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "steel_counter_2"
+                        }
+                    },
+                    "minecraft:light_emission": 10
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:number') == 3",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "steel_counter_3"
+                        }
+                    },
+                    "minecraft:light_emission": 10
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:number') == 4",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "steel_counter_4"
+                        }
+                    },
+                    "minecraft:light_emission": 10
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:number') == 5",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "steel_counter_5"
+                        }
+                    },
+                    "minecraft:light_emission": 10
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:number') == 6",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "steel_counter_6"
+                        }
+                    },
+                    "minecraft:light_emission": 10
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:number') == 7",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "steel_counter_7"
+                        }
+                    },
+                    "minecraft:light_emission": 10
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:number') == 8",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "steel_counter_8"
+                        }
+                    },
+                    "minecraft:light_emission": 10
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:number') == 9",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "steel_counter_9"
+                        }
+                    },
+                    "minecraft:light_emission": 10
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:number') == 10",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "steel_counter_10"
+                        }
+                    },
+                    "minecraft:light_emission": 10
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:number') == 11",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "steel_counter_11"
+                        }
+                    },
+                    "minecraft:light_emission": 10
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:number') == 12",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "steel_counter_12"
+                        }
+                    },
+                    "minecraft:light_emission": 10
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:number') == 13",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "steel_counter_13"
+                        }
+                    },
+                    "minecraft:light_emission": 10
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:number') == 14",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "steel_counter_14"
+                        }
+                    },
+                    "minecraft:light_emission": 10
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:number') == 15",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "steel_counter_15"
+                        }
+                    },
+                    "minecraft:light_emission": 10
+                }
+            }
+        ],
+        "components": {
+            "minecraft:geometry": "minecraft:geometry.full_block",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "steel_counter_off"
+                }
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 10,
+                "item_specific_speeds": [
+                    {
+                        "item": {
+                            "tags": "query.all_tags('minecraft:is_pickaxe') && !query.all_tags('minecraft:wooden_tier')"
+                        },
+                        "destroy_speed": 3
+                    }
+                ]
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 6
+            },
+            "minecraft:map_color": "#8A9C88",
+            "minecraft:redstone_consumer": {
+                "min_power": 0
+            },
+            "5fs_br:steel_counter": {},
+            "tag:minecraft:is_pickaxe_item_destructible": {}
+        }
+    }
+}

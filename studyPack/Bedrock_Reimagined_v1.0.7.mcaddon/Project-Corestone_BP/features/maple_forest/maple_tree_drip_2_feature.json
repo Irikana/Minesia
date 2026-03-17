@@ -1,0 +1,20 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:structure_template_feature": {
+        "description": {
+            "identifier": "5fs_br:maple_forest/maple_tree_drip_2_feature"
+        },
+        "structure_name": "5fs_br:mapleTree2",
+        "adjustment_radius": 0,
+        "facing_direction": "south",
+        "constraints": {
+            "block_intersection": {
+                "block_allowlist": [
+                    "minecraft:air",
+                    "minecraft:wildflowers",
+                    "5fs_br:maple_sapling"
+                ]
+            }
+        }
+    }
+}

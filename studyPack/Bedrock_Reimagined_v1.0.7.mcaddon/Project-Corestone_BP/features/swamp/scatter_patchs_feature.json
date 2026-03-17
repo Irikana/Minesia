@@ -1,0 +1,32 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "5fs_br:swamp/scatter_patchs_feature"
+		},
+		"iterations": 200,
+		"x": {
+			"distribution": "uniform",
+			"extent": [
+				0,
+				64
+			]
+		},
+		"y": {
+			"distribution": "triangle",
+			"extent": [
+				-60,
+				65
+			]
+		},
+		"z": {
+			"distribution": "uniform",
+			"extent": [
+				0,
+				64
+			]
+		},
+		"coordinate_eval_order": "zxy",
+		"places_feature": "5fs_br:swamp/weighted_patchs_feature"
+	}
+}

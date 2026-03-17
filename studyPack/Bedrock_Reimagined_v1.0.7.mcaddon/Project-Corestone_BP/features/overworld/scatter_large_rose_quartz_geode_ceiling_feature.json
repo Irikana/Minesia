@@ -1,0 +1,23 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:scatter_feature": {
+      "description": {
+        "identifier": "5fs_br:overworld/scatter_large_rose_quartz_geode_ceiling_feature"
+      },
+      "coordinate_eval_order": "xzy",
+      "iterations": 8,
+      "places_feature": "5fs_br:overworld/rose_quartz_big_geode_1_snap_to_ceiling_feature",
+        "x": {
+          "distribution": "gaussian",
+          "extent": [-4, 4]
+        },
+        "z": {
+          "distribution": "gaussian",
+          "extent": [-4, 4]
+        },
+        "y": {
+          "distribution": "gaussian",
+          "extent": [-1, 1]
+      }
+    }
+  }

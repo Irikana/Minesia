@@ -1,0 +1,35 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "5fs_br:jungle_barrel"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "SWS",
+      "S S",
+      "SWS"
+    ],
+    "key": {
+      "S": {
+        "item": "minecraft:jungle_planks"
+      },
+      "W": {
+        "item": "minecraft:jungle_slab"
+      }
+    },
+    "result": {
+      "item": "5fs_br:jungle_barrel"
+    },
+    "unlock": [
+      {
+        "item": "minecraft:jungle_planks"
+      },
+      {
+        "item": "minecraft:jungle_slab"
+      }
+    ]
+  }
+}

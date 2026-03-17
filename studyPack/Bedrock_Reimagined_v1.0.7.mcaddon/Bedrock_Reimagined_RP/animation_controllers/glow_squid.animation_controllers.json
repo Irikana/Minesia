@@ -1,0 +1,1 @@
+{"format_version":"1.19.0","animation_controllers":{"controller.animation.glow_squid.general":{"states":{"default":{"animations":["updated_rotate",{"idle":"q.is_alive"},{"death":"!q.is_alive"}]}}}}}

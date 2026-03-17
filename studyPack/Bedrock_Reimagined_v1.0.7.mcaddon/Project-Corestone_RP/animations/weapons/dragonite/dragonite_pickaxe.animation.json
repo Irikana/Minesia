@@ -1,0 +1,23 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.dragonite_pickaxe.1fp": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": [70.72635, 61.09238, 289.98004],
+					"position": [0, 14, 2]
+				}
+			}
+		},
+		"animation.dragonite_pickaxe.3pp": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": [92.5, 0, 0],
+					"position": [0, 16, -1]
+				}
+			}
+		}
+	}
+}

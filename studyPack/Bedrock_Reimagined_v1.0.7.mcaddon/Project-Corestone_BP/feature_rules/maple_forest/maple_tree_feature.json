@@ -1,0 +1,25 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:feature_rules": {
+    "description": {
+      "identifier": "5fs_br:maple_tree_feature",
+      "places_feature": "5fs_br:maple_forest/scatter_maple_tree_feature"
+    },
+    "conditions": {
+      "placement_pass": "surface_pass",
+      "minecraft:biome_filter": [
+        { 
+          "test": "has_biome_tag", 
+          "operator": "==",
+          "value": "maple_forest"
+        }
+      ]
+    },
+    "distribution": {
+      "iterations": 20,
+      "x": 0,
+      "y": "q.heightmap(v.worldx, v.worldz)",
+      "z": 0
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.iris_of_the_end": {
+            "initial_state": "the_watcher",
+            "states": {
+                "the_watcher": {
+                    "animations": [
+                        "the_watcher"
+                    ],
+                    "transitions": [
+                        {
+                            "the_judging_eye": "q.mark_variant == 1"
+                        },
+                        {
+                            "the_final_arbiter": "q.mark_variant == 2"
+                        }
+                    ]
+                },
+                "the_judging_eye": {
+                    "animations": [
+                        "the_judging_eye"
+                    ],
+                    "transitions": [
+                        {
+                            "the_watcher": "q.mark_variant == 0"
+                        },
+                        {
+                            "the_final_arbiter": "q.mark_variant == 2"
+                        }
+                    ]
+                },
+                "the_final_arbiter": {
+                    "animations": [
+                        "the_final_arbiter"
+                    ],
+                    "transitions": [
+                        {
+                            "the_watcher": "q.mark_variant == 0"
+                        },
+                        {
+                            "the_judging_eye": "q.mark_variant == 1"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

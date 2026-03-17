@@ -1,0 +1,61 @@
+{
+    "format_version": "1.21.60",
+    "minecraft:single_block_feature": {
+        "description": {
+            "identifier": "5fs_br:vegetation/leaf_litter_feature"
+        },
+        "places_block": [
+            {
+                "block": {
+                    "name": "minecraft:leaf_litter",
+                    "states": {
+                        "growth": 0
+                    }
+                },
+                "weight": 25
+            },
+            {
+                "block": {
+                    "name": "minecraft:leaf_litter",
+                    "states": {
+                        "growth": 1
+                    }
+                },
+                "weight": 25
+            },
+            {
+                "block": {
+                    "name": "minecraft:leaf_litter",
+                    "states": {
+                        "growth": 2
+                    }
+                },
+                "weight": 25
+            },
+            {
+                "block": {
+                    "name": "minecraft:leaf_litter",
+                    "states": {
+                        "growth": 3
+                    }
+                },
+                "weight": 25
+            }
+        ],
+        "enforce_placement_rules": false,
+        "enforce_survivability_rules": false,
+        "may_replace": [
+            "minecraft:air"
+        ],
+        "randomize_rotation": true,
+        "may_attach_to": {
+            "min_sides_must_attach": 1,
+            "bottom": [
+                "minecraft:birch_log",
+                {
+                    "tags": "q.any_tag('dirt')"
+                }
+            ]
+        }
+    }
+}

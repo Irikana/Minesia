@@ -1,0 +1,36 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "5fs_br:ocean_mine_1",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/mobs/ocean_mines/ocean_mine_1"
+      },
+      "animations": {
+        "idle": "animation.ocean_mine_1.idle",
+        "explosion": "animation.ocean_mine_1.explosion"
+      },
+      "scripts": {
+        "animate": [
+          {
+            "idle": "q.is_alive && !query.is_roaring"
+          },
+          {
+            "explosion": "query.is_roaring"
+          }
+        ]
+      },
+      "geometry": {
+        "default": "geometry.ocean_mine_1",
+        "large": "geometry.ocean_mine_1",
+        "small": "geometry.small_ocean_mine_1"
+      },
+      "render_controllers": [
+        "controller.render.ocean_mine"
+      ]
+    }
+  }
+}

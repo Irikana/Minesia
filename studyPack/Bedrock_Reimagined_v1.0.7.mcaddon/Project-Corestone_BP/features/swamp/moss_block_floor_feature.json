@@ -1,0 +1,26 @@
+{
+	"format_version": "1.20.20",
+	"minecraft:vegetation_patch_feature": {
+		"description": {
+			"identifier": "5fs_br:swamp/moss_block_floor_feature"
+		},
+		"replaceable_blocks": [
+			"minecraft:stone",
+			"minecraft:deepslate"
+		],
+		"ground_block": "minecraft:moss_block",
+		"surface": "floor",
+		"depth": {
+			"range_min": 2,
+			"range_max": 4
+		},
+		"vertical_range": 4,
+		"extra_edge_column_chance": 0.003,
+		"vegetation_feature": "5fs_br:empty_feature",
+		"vegetation_chance": 1,
+		"horizontal_radius": {
+			"range_min": 4,
+			"range_max": 6
+		}
+	}
+}

@@ -1,0 +1,49 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "5fs_br:mummified_skeleton",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/mobs/mummy_skeleton"
+            },
+            "geometry": {
+                "default": "geometry.mummy_skeleton"
+            },
+            "animations": {
+                "look_at_target": "animation.common.look_at_target",
+                "idle_1": "animation.mummified_skeleton.idle_1",
+                "idle": "animation.mummified_skeleton.idle",
+                "walking": "animation.mummified_skeleton.walking",
+                "walk_arms": "animation.mummified_skeleton.walk_arms",
+                "spawn": "animation.mummified_skeleton.spawn",
+                "death": "animation.mummified_skeleton.death",
+                "attack": "animation.mummified_skeleton.shooting",
+                "general_controller": "controller.animation.mummified_skeleton.general",
+                "root_controller": "controller.animation.mummified_skeleton.root",
+                "attack_controller": "controller.animation.baby_skeleton.attack",
+                "emerging_controller": "controller.animation.mummified_husk.emerging"
+            },
+            "scripts": {
+                "pre_animation": [
+                    "v.attacking = q.facing_target_to_range_attack;"
+                ],
+                "animate": [
+                    "root_controller"
+                ]
+            },
+            "sound_effects": {
+                "emerging": "mob.mummified_skeleton.emerging"
+            },
+            "enable_attachables": true,
+            "render_controllers": [
+                "controller.render.default"
+            ],
+            "spawn_egg": {
+                "texture": "5fs_br:mummy_skeleton"
+            }
+        }
+    }
+}

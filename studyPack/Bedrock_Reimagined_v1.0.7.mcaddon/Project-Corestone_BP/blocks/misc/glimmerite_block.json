@@ -1,0 +1,35 @@
+{
+  "format_version": "1.26.0",
+	"minecraft:block": {
+    "description": {
+      "identifier": "5fs_br:glimmerite_block",
+      "menu_category": {
+        "category": "nature"
+      }
+    },
+    "components": {
+      "minecraft:geometry": {
+          "identifier": "minecraft:geometry.full_block"
+      },
+      "minecraft:map_color": "#ADD8E6",
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "glimmerite_block",
+          "render_method": "opaque",
+          "face_dimming": false,
+          "ambient_occlusion": false
+        }
+      },
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 1
+      },
+      "minecraft:light_dampening": 15,
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 10
+      },
+      "minecraft:light_emission": 15,
+      "minecraft:loot": "loot_tables/blocks/glimmerite_block.json",
+      "tag:minecraft:is_pickaxe_item_destructible": {}
+    }
+  }
+}

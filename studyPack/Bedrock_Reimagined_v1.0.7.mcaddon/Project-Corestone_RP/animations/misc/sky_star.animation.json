@@ -1,0 +1,14 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.sky_star.idle": {
+			"loop": true,
+			"animation_length": 0.5,
+			"bones": {
+				"outer2": {
+					"position": [0, 0, 0]
+				}
+			}
+		}
+	}
+}

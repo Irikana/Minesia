@@ -1,0 +1,27 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "5fs_br:pale_oak_chest_boat"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "tag": "5fs_br:chest"
+      },
+      {
+        "item": "minecraft:pale_oak_boat"
+      }
+    ],
+    "unlock": [
+      {
+        "item": "minecraft:pale_oak_boat"
+      }
+    ],
+    "result": {
+      "item": "minecraft:pale_oak_chest_boat"
+    }
+  }
+}

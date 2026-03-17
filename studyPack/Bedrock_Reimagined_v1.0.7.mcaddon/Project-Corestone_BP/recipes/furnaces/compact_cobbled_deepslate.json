@@ -1,0 +1,18 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "5fs_br:compact_cobbled_deepslate"
+    },
+    "unlock": [
+      {
+        "item": "5fs_br:compact_cobbled_deepslate"
+      }
+    ],
+    "tags": [
+      "furnace"
+    ],
+    "input": "5fs_br:compact_cobbled_deepslate",
+    "output": "5fs_br:compact_deepslate"
+  }
+}

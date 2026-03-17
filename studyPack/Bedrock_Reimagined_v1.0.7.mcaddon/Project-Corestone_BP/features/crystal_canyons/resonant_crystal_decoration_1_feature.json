@@ -1,0 +1,18 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:structure_template_feature": {
+        "description": {
+            "identifier": "5fs_br:crystal_canyons/resonant_crystal_decoration_1_feature"
+        },
+        "structure_name": "5fs_br:budSmall",
+        "adjustment_radius": 0,
+        "constraints": {
+            "grounded": {},
+      		"block_intersection": {
+        		"block_allowlist": [
+          			"minecraft:air"
+        		]
+      		}
+    	}
+    }
+}

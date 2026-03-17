@@ -1,0 +1,49 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "5fs_br:pedestal_entity",
+			"materials": {
+				"default": "pedestal_item"
+			},
+			"textures": {
+				"default": "textures/particles/pedestal_with_item"
+			},
+			"geometry": {
+				"default": "geometry.pedestal_item"
+			},
+			"animations": {
+				"equippable": "animation.pedestal_item.equippable",
+				"item": "animation.pedestal_item.item",
+				"iris_of_the_end": "animation.pedestal_item.iris_of_the_end",
+				"boss": "animation.pedestal_item.boss"
+			},
+			"scripts": {
+				"animate": [
+					{
+						"item": "query.mark_variant == 0"
+					},
+					{
+						"equippable": "query.mark_variant == 1"
+					},
+					{
+						"iris_of_the_end": "query.mark_variant == 2 && query.property('5fs_br:boss') == 'iris_of_the_end'"
+					},
+					{
+						"boss": "query.mark_variant == 2 && query.property('5fs_br:boss') != 'iris_of_the_end'"
+					}
+				]
+			},
+			"render_controllers": [
+				"controller.render.pedestal"
+			],
+			"enable_attachables": true,
+			"sound_effects": {
+				"boss": "mob.wither.spawn"
+			},
+			"particle_effects": {
+				"pedestal_eye_of_iris": "5fs_br:pedestal_eye_of_iris"
+			}
+		}
+	}
+}

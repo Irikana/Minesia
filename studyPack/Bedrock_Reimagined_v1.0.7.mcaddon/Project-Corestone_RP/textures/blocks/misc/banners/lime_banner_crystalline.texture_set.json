@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "lime_banner_crystalline",
+		"metalness_emissive_roughness": "lime_banner_crystalline_mer"
+	}
+}

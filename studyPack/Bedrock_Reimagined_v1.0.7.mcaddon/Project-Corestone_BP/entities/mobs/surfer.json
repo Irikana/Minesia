@@ -1,0 +1,459 @@
+{
+    "format_version": "1.21.70",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "5fs_br:surfer",
+            "is_spawnable": true,
+            "is_summonable": true,
+            "properties": {
+                "5fs_br:sleeping": {
+                  "type": "bool",
+                  "default": false,
+                  "client_sync": true
+                }
+            }
+        },
+        "component_groups": {
+            "5fs_br:surfer_wild": {
+                "minecraft:despawn": {
+                    "despawn_from_distance": {}
+                },
+                "minecraft:tameable": {
+                   "probability": 0.15,
+                   "tame_items": "5fs_br:raw_shark_fin",
+                   "tame_event": {
+                      "event": "5fs_br:on_tame",
+                      "target": "self"
+                    }
+                },
+                "minecraft:flocking": {
+                    "in_water": false,
+                    "match_variants": false,
+                    "use_center_of_mass": false,
+                    "low_flock_limit": 4,
+                    "high_flock_limit": 8,
+                    "goal_weight": 2,
+                    "loner_chance": 0.1,
+                    "influence_radius": 6,
+                    "breach_influence": 0,
+                    "separation_weight": 1.75,
+                    "separation_threshold": 3,
+                    "cohesion_weight": 1.85,
+                    "cohesion_threshold": 6.5,
+                    "innner_cohesion_threshold": 3.5,
+                    "min_height": 4,
+                    "max_height": 4,
+                    "block_distance": 1,
+                    "block_weight": 0
+                }         
+            },
+            "5fs_br:surfer_tamed": {
+                "minecraft:healable": {
+                   "items": [
+                       {
+                           "item": "5fs_br:cooked_shark_fin",
+                          "heal_amount": 2
+                        }
+                    ]
+                },
+                "minecraft:rideable": {
+                   "seat_count": 1,
+                   "crouching_skip_interact": true,
+                   "interact_text": "action.interact.ride.surfer",
+                   "family_types": ["player"],
+                   "seats": [
+                       { "position": [0, 0.5, 0] }
+                    ]
+                },
+                "minecraft:is_tamed": {},
+                "minecraft:horse.jump_strength": {
+                    "value": {
+                        "range_min": 0.4,
+                        "range_max": 1
+                    }
+                },
+                "minecraft:is_saddled": {},
+                "minecraft:input_ground_controlled": {},
+                "minecraft:can_power_jump": {},
+                "minecraft:behavior.player_ride_tamed": {},
+                "minecraft:behavior.follow_owner": {
+                    "start_distance": 6,
+                    "stop_distance": 2,
+                    "priority": 1,
+                    "speed_multiplier": 0.4,
+                    "can_teleport": true
+                }
+            },
+            "5fs_br:standing": {
+                "minecraft:behavior.avoid_mob_type": {
+                    "max_dist": 16,
+                    "max_flee": 16,
+                    "walk_speed_multiplier": 0.85,
+                    "sprint_speed_multiplier": 0.85,
+                    "priority": 3,
+                    "entity_types": {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "is_family",
+                                    "subject": "other",
+                                    "value": "player"
+                                },
+                                {
+                                    "test": "is_sneaking",
+                                    "subject": "other",
+                                    "value": false
+                                }
+                            ]
+                        }
+                    }
+                },
+                
+                "minecraft:navigation.generic": {
+                   "is_amphibious": true,
+                   "can_path_over_water": true,
+                   "can_swim": true,
+                   "can_walk": true,
+                   "can_sink": false,
+                   "avoid_damage_blocks": true
+                },
+                "minecraft:jump.static": {},
+                "minecraft:can_climb": {},
+                 "minecraft:movement.amphibious": {
+                    "max_turn": 5
+                 },
+                "minecraft:movement": {
+                    "value": 0.225
+                },
+                "minecraft:underwater_movement": {
+                    "value": 0.225
+                },
+                "minecraft:behavior.tempt": {
+                   "priority": 2,
+                   "speed_multiplier": 1.1,
+                   "can_tempt_vertically": true,
+                   "items": [
+                       "5fs_br:raw_shark_fin"
+                    ]
+                },
+                "minecraft:behavior.move_to_water": {
+                   "priority": 6,
+                   "search_range": 16,
+                   "search_height": 5,
+                    "search_count": 1,
+                    "goal_radius": 0.1
+                },
+               "minecraft:behavior.swim_idle": {
+                    "priority": 7,
+                   "idle_time": 5.0,
+                   "success_rate": 0.05
+                },
+                "minecraft:behavior.random_swim": {
+                   "priority": 8,
+                  "interval": 0,
+                  "xz_dist": 30,
+                  "y_dist": 15
+                },
+                "minecraft:behavior.random_stroll": {
+                    "priority": 5,
+                    "speed_multiplier": 0.35
+                },
+                "minecraft:pushable": {
+                    "is_pushable": true,
+                    "is_pushable_by_piston": true
+                },
+                "minecraft:behavior.look_at_player": {
+                    "priority": 7,
+                    "look_distance": 6,
+                    "probability": 0.02
+                },
+                "minecraft:behavior.random_look_around": {
+                    "priority": 9
+                }           
+            },
+            "5fs_br:sleeping": {
+                "minecraft:pushable": {
+                    "is_pushable": false,
+                    "is_pushable_by_piston": false
+                },
+                 "minecraft:environment_sensor": {
+                    "triggers": [
+                       {
+                          "event": "5fs_br:sleep",
+                          "target": "self",
+                          "filters": {
+                               "test": "is_daytime",
+                               "value": false
+                            }
+                        },
+                        {
+                            "event": "5fs_br:stand",
+                             "target": "self",
+                            "filters": {
+                                "test": "is_daytime",
+                                 "value": true
+                            }
+                        }
+                    ]
+                },
+                "minecraft:movement": {
+                    "value": 0
+                }
+            }
+        },
+        "components": {
+            "minecraft:is_hidden_when_invisible": {},
+            "minecraft:type_family": {
+                "family": [ "aquatic", "surfer", "mob", "neutral" ]
+            },
+            "minecraft:jump.static": {},
+            "minecraft:can_climb": {},
+            "minecraft:environment_sensor": {
+                "triggers": [
+                   {
+                       "event": "5fs_br:sleep",
+                       "target": "self",
+                       "filters": {
+                          "test": "is_daytime",
+                          "value": false
+                        }
+                    }
+                ]
+            },
+            "minecraft:behavior.nap": {
+                "priority": 3,
+                "cooldown_min": 2,
+                "cooldown_max": 7,
+                "mob_detect_dist": 12,
+                "mob_detect_height": 6,
+                "can_nap_filters": {
+                    "all_of": [
+                        {
+                            "test": "hourly_clock_time",
+                            "operator": ">",
+                            "value": 13000
+                        },
+                        {
+                            "test": "hourly_clock_time",
+                            "operator": "<",
+                            "value": 24000
+                        },
+                        {
+                            "test": "in_block",
+                            "operator": "!=",
+                            "value": "water"
+                        }
+                    ]
+                },
+                "wake_mob_exceptions": {
+                    "any_of": [
+                        {
+                           "test": "trusts",
+                           "subject": "other",
+                           "value": true
+                        },
+                        {
+                           "test": "is_sneaking",
+                           "subject": "other",
+                           "value": true
+                        }
+                    ]
+                }
+            },
+            "minecraft:nameable": {},
+            "minecraft:hurt_on_condition": {
+                "damage_conditions": [
+                    {
+                        "filters": {
+                            "test": "in_lava",
+                            "subject": "self",
+                            "operator": "==",
+                            "value": true
+                        },
+                        "cause": "lava",
+                        "damage_per_tick": 4
+                    }
+                ]
+            },
+            "minecraft:behavior.hurt_by_target": {
+                "alert_same_type": false,
+                "hurt_owner": false,
+                "entity_types": {
+                    "filters": {
+                        "all_of": [
+                            {
+                                "test": "is_family",
+                                "subject": "other",
+                                "operator": "!=",
+                                "value": "creeper"
+                            },
+                            {
+                                "test": "has_component",
+                                "operator": "!=",
+                                "value": "minecraft:is_baby"
+                            }
+                        ]
+                    }
+                }
+            },
+            "minecraft:behavior.nearest_attackable_target": {
+                "priority": 1,
+                "attack_interval": 15,
+                "must_see": false,
+                "entity_types": {
+                    "filters": {
+                        "test": "is_target",
+                        "subject": "other",
+                        "value": true
+                    },
+                    "max_dist": 16
+                }
+            },
+            "minecraft:behavior.delayed_attack": {
+                "attack_duration": 1,
+                "hit_delay_pct": 0.5,
+                "attack_once": false,
+                "priority": 0,
+                "speed_multiplier": 1.5,
+                "on_attack": {
+                    "event": "5fs_br:become_calm"
+                }
+            },
+            "minecraft:custom_hit_test": {
+	            "hitboxes": [
+	            	{
+	             		"width": 2.5,
+	            		"height": 1.95,
+	            		"pivot": [0, 0.975, 0]
+	             	}
+	            ]
+            },
+            "minecraft:follow_range": {
+                 "value": 30
+            },
+            "minecraft:attack": {
+                "damage": 6
+            },
+            "minecraft:health": {
+                "value": 18
+            },      
+            "minecraft:behavior.avoid_mob_type": {
+                "priority": 2,
+                "max_dist": 16,
+                "max_flee": 20,
+                "entity_types": [
+                   {
+                      "filters": {
+                            "test": "is_family",
+                            "operator": "==",
+                            "subject": "other",
+                            "value": "ocean_mine"
+                        },
+                        "max_dist": 20,
+                        "sprint_speed_multiplier": 1
+                    }
+                ]
+            },   
+            "minecraft:collision_box": {
+                "width": 1.9,
+                "height": 1.5
+            },
+             "minecraft:pushable": {
+                "is_pushable": true,
+                "is_pushable_by_piston": true
+            },
+            "minecraft:can_power_jump": {},
+           "minecraft:breathable": {
+              "total_supply": 150,
+             "suffocate_time": 0,
+              "breathes_water": true,
+              "breathes_air": true,
+              "generates_bubbles": false
+            },
+            "minecraft:experience_reward": {
+                    "on_death": "query.last_hit_by_player ? 15 : 0"
+                },
+                "minecraft:loot": {
+                    "table": "loot_tables/entities/surfer.json"
+                },
+            "minecraft:leashable": {
+                "soft_distance": 4,
+                "hard_distance": 6,
+                "max_distance": 10
+            },
+            "minecraft:balloonable": {},
+            "minecraft:physics": {},
+            "minecraft:conditional_bandwidth_optimization": {}
+        },
+        "events": {
+            "minecraft:entity_spawned": {
+               "sequence": [
+                    {
+                       "add": {
+                            "component_groups": [
+                                "5fs_br:surfer_wild",
+                                "5fs_br:standing"
+                            ]
+                        },
+                        "set_property": {
+                            "5fs_br:sleeping": false         
+                        }
+                    }        
+                ]
+            },
+             "5fs_br:on_tame": {
+                "add": {
+                    "component_groups": [
+                        "5fs_br:surfer_tamed"
+                    ]
+                },
+                "remove": {
+                     "component_groups": [
+                        "5fs_br:surfer_wild"
+                    ]
+                }
+            },
+            "minecraft:spawn_wild": {
+                "add": {
+                    "component_groups": [
+                        "5fs_br:standing",
+                        "5fs_br:surfer_wild"
+                    ]
+                }
+            },
+            "5fs_br:stand": {
+                "add": {
+                    "component_groups": [
+                        "5fs_br:standing"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                         "5fs_br:sleeping"
+                    ]
+                },
+                "set_property": {
+                     "5fs_br:sleeping": false         
+                }
+            },
+            "5fs_br:sleep": {
+                "add": {
+                    "component_groups": [
+                       "5fs_br:sleeping"
+                    ]
+                },
+                "set_property": {
+                     "5fs_br:sleeping": true 
+                },  
+                "remove": {
+                    "component_groups": [
+                         "5fs_br:standing"
+                    ]
+                }  
+            },
+            "5fs_br:become_calm": {
+                "reset_target": {}
+            }
+        }
+    }
+}

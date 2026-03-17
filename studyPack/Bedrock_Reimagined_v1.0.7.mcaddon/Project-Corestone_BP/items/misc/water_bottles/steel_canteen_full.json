@@ -1,0 +1,38 @@
+{
+    "format_version": "1.26.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "5fs_br:steel_canteen_full",
+            "menu_category": {
+                "category": "none",
+                "is_hidden_in_commands": true
+            }
+        },
+        "components": {
+            "minecraft:food": {
+                "can_always_eat": true,
+                "nutrition": 0,
+                "saturation_modifier": 0
+            },
+            "minecraft:use_animation": {
+                "value": "drink"
+            },
+            "minecraft:durability": {
+				"damage_chance": {
+					"min": 100,
+					"max": 100
+				},
+				"max_durability": 24
+			},
+            "minecraft:liquid_clipped": true,
+            "5fs_br:thirst": {},
+            "5fs_br:canteens": {},
+            "minecraft:icon": "5fs_br:steel_canteen_full",
+            "minecraft:max_stack_size": 1,
+            "minecraft:use_modifiers": {
+                "movement_modifier": 0.5,
+                "use_duration": 1.0
+            }
+        }
+    }
+}

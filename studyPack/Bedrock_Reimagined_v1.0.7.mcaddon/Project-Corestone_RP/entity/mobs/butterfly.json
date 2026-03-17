@@ -1,0 +1,37 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "5fs_br:butterfly",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "light_blue": "textures/entity/mobs/butterfly/butterfly_light_blue",
+        "lime": "textures/entity/mobs/butterfly/butterfly_lime",
+        "yellow": "textures/entity/mobs/butterfly/butterfly_yellow",
+        "red": "textures/entity/mobs/butterfly/butterfly_red",
+        "orange": "textures/entity/mobs/butterfly/butterfly_orange"
+      },
+      "geometry": {
+        "default": "geometry.butterfly"
+      },
+      "animations": {
+        "flying": "animation.butterfly.flying",
+        "static_flying": "animation.butterfly.fluttering_wings",
+        "landing": "animation.butterfly.landing_on_block",
+        "on_ground": "animation.butterfly.on_ground",
+        "death": "animation.butterfly.death"
+      },
+      "animation_controllers": [
+        { "move": "controller.animation.butterfly" }
+      ],
+      "render_controllers": [
+        "controller.render.butterfly"
+      ],
+      "spawn_egg": {
+        "texture": "5fs_br:butterfly"
+      }
+    }
+  }
+}

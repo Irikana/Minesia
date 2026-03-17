@@ -1,0 +1,217 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "item", "name": "5fs_br:ocean_waves_flag",    "weight": 2 },
+        { "type": "item", "name": "5fs_br:coral_crown",         "weight": 1 },
+        { "type": "item", "name": "5fs_br:cracked_ring_of_thirst", "weight": 2 },
+        { "type": "item", "name": "5fs_br:rusted_ring_of_thirst",  "weight": 3 },
+        { "type": "empty", "weight": 92 }
+      ]
+    },
+    {
+      "rolls": { "min": 2, "max": 4 },
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:prismarine_shard",
+          "weight": 6,
+          "functions": [ { "function": "set_count", "count": { "min": 4, "max": 12 } } ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:prismarine_crystals",
+          "weight": 5,
+          "functions": [ { "function": "set_count", "count": { "min": 2, "max": 8 } } ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:prismarine",
+          "weight": 3,
+          "functions": [ { "function": "set_count", "count": { "min": 2, "max": 6 } } ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:prismarine_bricks",
+          "weight": 2,
+          "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:dark_prismarine",
+          "weight": 2,
+          "functions": [ { "function": "set_count", "count": { "min": 1, "max": 3 } } ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:sea_lantern",
+          "weight": 1,
+          "functions": [ { "function": "set_count", "count": { "min": 1, "max": 2 } } ]
+        }
+      ]
+    },
+    {
+      "rolls": { "min": 5, "max": 9 },
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:sand",
+          "weight": 6,
+          "functions": [ { "function": "set_count", "count": { "min": 8, "max": 32 } } ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:gravel",
+          "weight": 6,
+          "functions": [ { "function": "set_count", "count": { "min": 8, "max": 32 } } ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:kelp",
+          "weight": 5,
+          "functions": [ { "function": "set_count", "count": { "min": 8, "max": 32 } } ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:seagrass",
+          "weight": 4,
+          "functions": [ { "function": "set_count", "count": { "min": 4, "max": 12 } } ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:clay_ball",
+          "weight": 4,
+          "functions": [ { "function": "set_count", "count": { "min": 6, "max": 18 } } ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:nautilus_shell",
+          "weight": 1,
+          "functions": [ { "function": "set_count", "count": { "min": 1, "max": 2 } } ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:dried_kelp",
+          "weight": 3,
+          "functions": [ { "function": "set_count", "count": { "min": 4, "max": 16 } } ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:cod",
+          "weight": 3,
+          "functions": [ { "function": "set_count", "count": { "min": 2, "max": 6 } } ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:salmon",
+          "weight": 2,
+          "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ]
+        }
+      ]
+    },
+    {
+      "rolls": { "min": 2, "max": 5 },
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:paper",
+          "weight": 6,
+          "functions": [ { "function": "set_count", "count": { "min": 3, "max": 12 } } ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:book",
+          "weight": 3,
+          "functions": [ { "function": "set_count", "count": { "min": 1, "max": 3 } } ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:string",
+          "weight": 5,
+          "functions": [ { "function": "set_count", "count": { "min": 3, "max": 12 } } ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:coal",
+          "weight": 4,
+          "functions": [ { "function": "set_count", "count": { "min": 3, "max": 10 } } ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:iron_nugget",
+          "weight": 5,
+          "functions": [ { "function": "set_count", "count": { "min": 5, "max": 15 } } ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:iron_ingot",
+          "weight": 3,
+          "functions": [ { "function": "set_count", "count": { "min": 1, "max": 5 } } ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:gold_ingot",
+          "weight": 2,
+          "functions": [ { "function": "set_count", "count": { "min": 1, "max": 5 } } ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:emerald",
+          "weight": 1,
+          "functions": [ { "function": "set_count", "count": { "min": 1, "max": 3 } } ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:wheat",
+          "weight": 3,
+          "functions": [ { "function": "set_count", "count": { "min": 3, "max": 9 } } ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:carrot",
+          "weight": 2,
+          "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:potato",
+          "weight": 2,
+          "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "empty", "weight": 70 },
+        { "type": "item", "name": "5fs_br:stone_wand", "weight": 8, "functions": [ { "function": "set_damage", "damage": { "min": 0.20, "max": 0.70 } } ] },
+        { "type": "item", "name": "5fs_br:copper_wand", "weight": 5, "functions": [ { "function": "set_damage", "damage": { "min": 0.20, "max": 0.70 } } ] },
+        { "type": "item", "name": "5fs_br:iron_wand", "weight": 3, "functions": [ { "function": "set_damage", "damage": { "min": 0.20, "max": 0.70 } } ] },
+        { "type": "item", "name": "5fs_br:torch_wand", "weight": 1, "functions": [ { "function": "set_damage", "damage": { "min": 0.20, "max": 0.70 } } ] },
+        { "type": "item", "name": "5fs_br:basic_scroll", "weight": 5 },
+        { "type": "item", "name": "5fs_br:enchanted_scroll", "weight": 2 }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "empty", "weight": 94 },
+        { "type": "item", "name": "5fs_br:rune_of_blades", "weight": 1 },
+        { "type": "item", "name": "5fs_br:rune_of_beasts", "weight": 1 },
+        { "type": "item", "name": "5fs_br:rune_of_decay", "weight": 1 },
+        { "type": "item", "name": "5fs_br:rune_of_earth", "weight": 1 },
+        { "type": "item", "name": "5fs_br:rune_of_flame", "weight": 1 },
+        { "type": "item", "name": "5fs_br:rune_of_frost", "weight": 1 }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "item", "name": "5fs_br:sky_star_fragment", "weight": 4 },
+        { "type": "item", "name": "5fs_br:mana_bottle", "weight": 6, "functions": [ { "function": "set_count", "count": { "min": 1, "max": 3 } } ] },
+        { "type": "empty", "weight": 90 }
+      ]
+    }
+  ]
+}

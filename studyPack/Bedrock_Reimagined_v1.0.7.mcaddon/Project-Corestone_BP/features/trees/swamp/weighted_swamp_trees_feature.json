@@ -1,0 +1,38 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "5fs_br:trees/swamp/weighted_swamp_trees_feature"
+    },
+    "features": [
+      [
+        "5fs_br:trees/swamp/scatter_swamp_tree_0_feature",
+        1
+      ],
+      [
+        "5fs_br:trees/swamp/scatter_swamp_tree_1_feature",
+        1
+      ],
+      [
+        "5fs_br:trees/swamp/scatter_swamp_tree_2_feature",
+        1
+      ],
+      [
+        "5fs_br:trees/swamp/scatter_swamp_tree_3_feature",
+        1
+      ],
+      [
+        "5fs_br:trees/swamp/scatter_swamp_tree_4_feature",
+        1
+      ],
+      [
+        "5fs_br:trees/swamp/scatter_swamp_tree_5_feature",
+        1
+      ],
+      [
+        "5fs_br:trees/swamp/scatter_swamp_tree_6_feature",
+        1
+      ]
+    ]
+  }
+}

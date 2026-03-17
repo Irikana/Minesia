@@ -1,0 +1,123 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.giant_eagle.root": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "animations": [
+                        "general_controller",
+                        "with_item_controller"
+                    ],
+                    "transitions": [
+                        {
+                            "death": "!q.is_alive"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "death": {
+                    "animations": [
+                        "death"
+                    ]
+                }
+            }
+        },
+        "controller.animation.giant_eagle.general": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "animations": [
+                        "idle"
+                    ],
+                    "transitions": [
+                        {
+                            "walking": "q.modified_move_speed >= 0.05"
+                        },
+                        {
+                            "flying": "!q.is_sheared"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "walking": {
+                    "animations": [
+                        "walking"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "q.modified_move_speed <= 0.05"
+                        },
+                        {
+                            "flying": "!q.is_sheared"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "flying": {
+                    "animations": [
+                        "flying", "rotation"
+                    ],
+                    "transitions": [
+                        {
+                            "perching": "q.timer_flag_2"
+                        },
+                        {
+                            "planning": "!q.is_on_ground && v.flying_type == 'planning'"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "planning": {
+                    "animations": [
+                        "planning", "rotation"
+                    ],
+                    "transitions": [
+                        {
+                            "perching": "q.timer_flag_2"
+                        },
+                        {
+                            "flying": "!q.is_on_ground && v.flying_type == 'flying'"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "perching": {
+                    "animations": [
+                        "perching"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "q.is_sheared && !q.timer_flag_2"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                }
+            }
+        },
+        "controller.animation.giant_eagle.with_item": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "with_item": "query.is_item_equipped"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "with_item": {
+                    "animations": [
+                        "with_item"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!query.is_item_equipped"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                }
+            }
+        }
+    }
+}

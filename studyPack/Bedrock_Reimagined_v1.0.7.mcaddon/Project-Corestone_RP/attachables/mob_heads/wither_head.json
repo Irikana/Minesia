@@ -1,0 +1,23 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:attachable": {
+        "description": {
+            "identifier": "5fs_br:wither_head",
+            "materials": {
+                "default": "wither_boss"
+            },
+            "textures": {
+                "default": "textures/entity/wither_boss/wither"
+            },
+            "geometry": {
+                "default": "geometry.wither_head_attachable"
+            },
+            "scripts": {
+                "parent_setup": "variable.head_layer_visible = 0.0;"
+            },
+            "render_controllers": [
+                "controller.render.default"
+            ]
+        }
+    }
+}

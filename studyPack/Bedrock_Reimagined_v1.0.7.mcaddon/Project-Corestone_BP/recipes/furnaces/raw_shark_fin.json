@@ -1,0 +1,18 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "5fs_br:raw_shark_fin"
+    },
+    "unlock": [
+      {
+        "item": "5fs_br:raw_shark_fin"
+      }
+    ],
+    "tags": [
+      "furnace"
+    ],
+    "input": "5fs_br:raw_shark_fin",
+    "output": "5fs_br:cooked_shark_fin"
+  }
+}

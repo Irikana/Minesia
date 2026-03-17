@@ -1,0 +1,33 @@
+{
+	"format_version": "1.8.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "5fs_br:glimmering_moth",
+			"materials": {
+				"default": "entity_emissive_alpha"
+			},
+			"textures": {
+                "default": "textures/entity/mobs/glimmering_moth_glow"
+            },
+			"geometry": {
+				"default": "geometry.glimmering_moth"
+			},
+			"spawn_egg": {
+        		"texture": "5fs_br:glimmering_moth"
+			},
+			"animations": {
+				"flying": "animation.glimmering_moth.flying",
+                "static_flying": "animation.glimmering_moth.fluttering_wings",
+                "landing": "animation.glimmering_moth.landing_on_block",
+                "on_ground": "animation.glimmering_moth.on_ground",
+                "death": "animation.glimmering_moth.death"
+			},
+			"animation_controllers": [
+                { "move": "controller.animation.glimmering_moth" }
+            ],
+			"render_controllers": [
+				"controller.render.default"
+			]
+		}
+	}
+}

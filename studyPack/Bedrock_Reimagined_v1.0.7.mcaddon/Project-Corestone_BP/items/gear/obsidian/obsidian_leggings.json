@@ -1,0 +1,46 @@
+{
+    "format_version": "1.26.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "5fs_br:obsidian_leggings",
+            "menu_category": {
+                "category": "equipment"
+            }
+        },
+        "components": {
+            "minecraft:icon": "5fs_br:obsidian_leggings",
+            "minecraft:wearable": {
+                "protection": 7,
+                "slot": "slot.armor.legs"
+            },
+            "minecraft:enchantable": {
+                "value": 10,
+                "slot": "armor_legs"
+            },
+            "minecraft:tags": {
+               "tags": [
+                   "minecraft:trimmable_armors"
+                ]
+            },    
+            "minecraft:durability": {
+                "max_durability": 534
+            },
+            "minecraft:repairable": {
+                "repair_items": [
+                    {
+                        "items": [ "5fs_br:obsidian_ingot" ],
+                        "repair_amount": "q.max_durability * 0.25"
+                    },
+                    {
+                        "items": [ "5fs_br:obsidian_leggings" ],
+                        "repair_amount": "c.other->q.remaining_durability + (0.12 * c.other->q.max_durability)"
+                    }
+                ]
+            },
+
+            "minecraft:max_stack_size": 1,
+            "minecraft:fire_resistant": {},
+            "5fs_br:equipment_durability": {}
+        }
+    }
+}

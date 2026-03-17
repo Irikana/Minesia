@@ -1,0 +1,26 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:attachable": {
+        "description": {
+            "identifier": "5fs_br:trader_llama_head",
+            "materials": {
+                "default": "armor"
+            },
+            "textures": {
+                "default": "textures/entity/llama/llama",
+                "decor": "textures/entity/llama/decor/trader_llama_decor"
+            },
+            "geometry": {
+                "default": "geometry.llama_head_attachable",
+                "decor": "geometry.llama_decor_head_attachable"
+            },
+            "scripts": {
+                "parent_setup": "variable.head_layer_visible = 0.0;"
+            },
+            "render_controllers": [
+                "controller.render.default",
+                "controller.render.trader_llama_head"
+            ]
+        }
+    }
+}

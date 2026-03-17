@@ -1,0 +1,2639 @@
+{
+    "format_version": "1.21.60",
+    "minecraft:crafting_items_catalog": {
+        "categories": [
+            {
+                "category_name": "construction",
+                "groups": [
+                    {
+                        "group_identifier": {
+                            "icon": "minecraft:oak_planks",
+                            "name": "minecraft:itemGroup.name.planks"
+                        },
+                        "items": [
+                            "5fs_br:maple_planks",
+                            "5fs_br:petrified_planks",
+                            "5fs_br:redwood_planks",
+                            "5fs_br:palm_planks"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "minecraft:oak_planks",
+                            "name": "minecraft:itemGroup.name.fence"
+                        },
+                        "items": [
+                            "5fs_br:maple_fence",
+                            "5fs_br:redwood_fence",
+                            "5fs_br:palm_fence"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "minecraft:oak_planks",
+                            "name": "minecraft:itemGroup.name.fenceGate"
+                        },
+                        "items": [
+                            "5fs_br:maple_fence_gate",
+                            "5fs_br:redwood_fence_gate",
+                            "5fs_br:palm_fence_gate"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.stoneBrick"
+                        },
+                        "items": [
+                            "5fs_br:limestone_tiles",
+                            "5fs_br:cracked_limestone_tiles",
+                            "5fs_br:limestone_bricks",
+                            "5fs_br:mossy_limestone_bricks",
+                            "5fs_br:cracked_limestone_bricks",
+                            "5fs_br:chiseled_limestone"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.slab"
+                        },
+                        "items": [
+                            "5fs_br:maple_slab",
+                            "5fs_br:maple_log_slab",
+                            "5fs_br:petrified_slab",
+                            "5fs_br:steel_slab",
+                            "5fs_br:polished_steel_slab",
+                            "5fs_br:steel_brick_slab",
+                            "5fs_br:smooth_steel_slab",
+                            "5fs_br:steel_caution_block_slab",
+                            "5fs_br:rose_quartz_block_slab",
+                            "5fs_br:polished_rose_quartz_slab",
+                            "5fs_br:polished_rose_quartz_brick_slab",
+                            "5fs_br:rose_quartz_brick_slab",
+                            "5fs_br:smooth_rose_quartz_slab",
+                            "5fs_br:chiseled_rose_quartz_slab",
+                            "5fs_br:obsidian_brick_slab",
+                            "5fs_br:chiseled_obsidian_slab",
+                            "5fs_br:brimstone_slab",
+                            "5fs_br:cobbled_brimstone_slab",
+                            "5fs_br:polished_brimstone_slab",
+                            "5fs_br:brimstone_brick_slab",
+                            "5fs_br:brimstone_tile_slab",
+                            "5fs_br:cloud_slab",
+                            "5fs_br:cloud_brick_slab",
+                            "5fs_br:redwood_slab",
+                            "5fs_br:redwood_log_slab",
+                            "5fs_br:ash_slab",
+                            "5fs_br:ash_brick_slab",
+                            "5fs_br:limestone_slab",
+                            "5fs_br:polished_limestone_slab",
+                            "5fs_br:smooth_limestone_slab",
+                            "5fs_br:limestone_tile_slab",
+                            "5fs_br:limestone_brick_slab",
+                            "5fs_br:mossy_limestone_brick_slab",
+                            "5fs_br:palm_slab",
+                            "5fs_br:palm_log_slab"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.stairs"
+                        },
+                        "items": [
+                            "5fs_br:maple_stairs",
+                            "5fs_br:maple_log_stairs",
+                            "5fs_br:petrified_stairs",
+                            "5fs_br:steel_stairs",
+                            "5fs_br:polished_steel_stairs",
+                            "5fs_br:smooth_steel_stairs",
+                            "5fs_br:steel_brick_stairs",
+                            "5fs_br:steel_caution_block_stairs",
+                            "5fs_br:smooth_rose_quartz_stairs",
+                            "5fs_br:chiseled_rose_quartz_stairs",
+                            "5fs_br:rose_quartz_block_stairs",
+                            "5fs_br:polished_rose_quartz_stairs",
+                            "5fs_br:rose_quartz_brick_stairs",
+                            "5fs_br:polished_rose_quartz_brick_stairs",
+                            "5fs_br:obsidian_brick_stairs",
+                            "5fs_br:chiseled_obsidian_stairs",
+                            "5fs_br:copper_stairs",
+                            "5fs_br:exposed_copper_stairs",
+                            "5fs_br:weathered_copper_stairs",
+                            "5fs_br:oxidized_copper_stairs",
+                            "5fs_br:waxed_copper_stairs",
+                            "5fs_br:waxed_exposed_copper_stairs",
+                            "5fs_br:waxed_weathered_copper_stairs",
+                            "5fs_br:waxed_oxidized_copper_stairs",
+                            "5fs_br:brimstone_stairs",
+                            "5fs_br:cobbled_brimstone_stairs",
+                            "5fs_br:polished_brimstone_stairs",
+                            "5fs_br:brimstone_brick_stairs",
+                            "5fs_br:brimstone_tile_stairs",
+                            "5fs_br:cloud_stairs",
+                            "5fs_br:cloud_brick_stairs",
+                            "5fs_br:redwood_stairs",
+                            "5fs_br:redwood_log_stairs",
+                            "5fs_br:ash_stairs",
+                            "5fs_br:ash_brick_stairs",
+                            "5fs_br:limestone_stairs",
+                            "5fs_br:polished_limestone_stairs",
+                            "5fs_br:smooth_limestone_stairs",
+                            "5fs_br:limestone_tile_stairs",
+                            "5fs_br:limestone_brick_stairs",
+                            "5fs_br:mossy_limestone_brick_stairs",
+                            "5fs_br:palm_stairs",
+                            "5fs_br:palm_log_stairs"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.door"
+                        },
+                        "items": [
+                            "5fs_br:maple_door",
+                            "5fs_br:redwood_door",
+                            "5fs_br:palm_door",
+                            "5fs_br:gold_door",
+                            "5fs_br:netherite_door"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.trapdoor"
+                        },
+                        "items": [
+                            "5fs_br:maple_trapdoor",
+                            "5fs_br:redwood_trapdoor",
+                            "5fs_br:palm_trapdoor",
+                            "5fs_br:gold_trapdoor",
+                            "5fs_br:netherite_trapdoor"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.walls"
+                        },
+                        "items": [
+                            "5fs_br:petrified_wall",
+                            "5fs_br:steel_wall",
+                            "5fs_br:polished_steel_wall",
+                            "5fs_br:smooth_steel_wall",
+                            "5fs_br:steel_brick_wall",
+                            "5fs_br:copper_wall",
+                            "5fs_br:exposed_copper_wall",
+                            "5fs_br:weathered_copper_wall",
+                            "5fs_br:oxidized_copper_wall",
+                            "5fs_br:waxed_copper_wall",
+                            "5fs_br:waxed_exposed_copper_wall",
+                            "5fs_br:waxed_weathered_copper_wall",
+                            "5fs_br:waxed_oxidized_copper_wall",
+                            "5fs_br:brimstone_wall",
+                            "5fs_br:cobbled_brimstone_wall",
+                            "5fs_br:polished_brimstone_wall",
+                            "5fs_br:brimstone_brick_wall",
+                            "5fs_br:brimstone_tile_wall",
+                            "5fs_br:cloud_wall",
+                            "5fs_br:cloud_brick_wall",
+                            "5fs_br:ash_wall",
+                            "5fs_br:ash_brick_wall",
+                            "5fs_br:limestone_wall",
+                            "5fs_br:polished_limestone_wall",
+                            "5fs_br:smooth_limestone_wall",
+                            "5fs_br:limestone_tile_wall",
+                            "5fs_br:limestone_brick_wall",
+                            "5fs_br:mossy_limestone_brick_wall"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:copper_ladder",
+                            "name": "5fs_br:itemGroup.name.ladders"
+                        },
+                        "items": [
+                            "5fs_br:copper_ladder",
+                            "5fs_br:exposed_copper_ladder",
+                            "5fs_br:weathered_copper_ladder",
+                            "5fs_br:oxidized_copper_ladder",
+                            "5fs_br:waxed_copper_ladder",
+                            "5fs_br:waxed_exposed_copper_ladder",
+                            "5fs_br:waxed_weathered_copper_ladder",
+                            "5fs_br:waxed_oxidized_copper_ladder",
+                            "5fs_br:spruce_ladder",
+                            "5fs_br:birch_ladder",
+                            "5fs_br:pale_oak_ladder",
+                            "5fs_br:dark_oak_ladder",
+                            "5fs_br:jungle_ladder",
+                            "5fs_br:acacia_ladder",
+                            "5fs_br:mangrove_ladder",
+                            "5fs_br:cherry_ladder",
+                            "5fs_br:bamboo_ladder",
+                            "5fs_br:crimson_ladder",
+                            "5fs_br:warped_ladder",
+                            "5fs_br:maple_ladder",
+                            "5fs_br:petrified_ladder",
+                            "5fs_br:redwood_ladder",
+                            "5fs_br:palm_ladder"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:obsidian_pillar",
+                            "name": "5fs_br:itemGroup.name.obsidianBlocks"
+                        },
+                        "items": [
+                            "5fs_br:obsidian_bricks",
+                            "5fs_br:obsidian_pillar",
+                            "5fs_br:chiseled_obsidian"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:black_checkered_tiles",
+                            "name": "5fs_br:itemGroup.name.checkeredTiles"
+                        },
+                        "items": [
+                            "5fs_br:checkered_block",
+                            "5fs_br:black_checkered_tiles",
+                            "5fs_br:gray_checkered_tiles",
+                            "5fs_br:light_gray_checkered_tiles",
+                            "5fs_br:white_checkered_tiles",
+                            "5fs_br:brown_checkered_tiles",
+                            "5fs_br:orange_checkered_tiles",
+                            "5fs_br:yellow_checkered_tiles",
+                            "5fs_br:lime_checkered_tiles",
+                            "5fs_br:green_checkered_tiles",
+                            "5fs_br:cyan_checkered_tiles",
+                            "5fs_br:light_blue_checkered_tiles",
+                            "5fs_br:blue_checkered_tiles",
+                            "5fs_br:purple_checkered_tiles",
+                            "5fs_br:magenta_checkered_tiles",
+                            "5fs_br:pink_checkered_tiles",
+                            "5fs_br:red_checkered_tiles"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.sandstone"
+                        },
+                        "items": [
+                            "5fs_br:cracked_smooth_sandstone",
+                            "5fs_br:crumbling_sandstone",
+                            "5fs_br:sandstone_pillar",
+                            "5fs_br:happy_sandstone_face",
+                            "5fs_br:frown_sandstone_face",
+                            "5fs_br:gilded_chiseled_sandstone",
+                            "5fs_br:cracked_smooth_red_sandstone",
+                            "5fs_br:crumbling_red_sandstone",
+                            "5fs_br:red_sandstone_pillar"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:steel_pillar",
+                            "name": "5fs_br:itemGroup.name.steelBlocks"
+                        },
+                        "items": [
+                            "5fs_br:steel_block",
+                            "5fs_br:steel_bricks",
+                            "5fs_br:cracked_steel_bricks",
+                            "5fs_br:mossy_steel_bricks",
+                            "5fs_br:chiseled_steel",
+                            "5fs_br:steel_pillar",
+                            "5fs_br:polished_steel",
+                            "5fs_br:smooth_steel",
+                            "5fs_br:cracked_smooth_steel",
+                            "5fs_br:steel_counter",
+                            "5fs_br:steel_caution_block"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:iron_pillar",
+                            "name": "5fs_br:itemGroup.name.ironBlocks"
+                        },
+                        "items": [
+                            "5fs_br:iron_pillar",
+                            "5fs_br:iron_tiles",
+                            "5fs_br:iron_bricks",
+                            "5fs_br:cut_iron",
+                            "5fs_br:iron_grate"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:gold_pillar",
+                            "name": "5fs_br:itemGroup.name.goldBlocks"
+                        },
+                        "items": [
+                            "5fs_br:gold_pillar",
+                            "5fs_br:gold_tiles",
+                            "5fs_br:gold_bricks",
+                            "5fs_br:cut_gold",
+                            "5fs_br:gold_grate"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.bars"
+                        },
+                        "items": [
+                            "5fs_br:gold_bars",
+                            "5fs_br:copper_grate_bars",
+                            "5fs_br:exposed_copper_grate_bars",
+                            "5fs_br:weathered_copper_grate_bars",
+                            "5fs_br:oxidized_copper_grate_bars",
+                            "5fs_br:waxed_copper_grate_bars",
+                            "5fs_br:waxed_exposed_copper_grate_bars",
+                            "5fs_br:waxed_weathered_copper_grate_bars",
+                            "5fs_br:waxed_oxidized_copper_grate_bars"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.copper"
+                        },
+                        "items": [
+                            "5fs_br:copper_pillar",
+                            "5fs_br:exposed_copper_pillar",
+                            "5fs_br:weathered_copper_pillar",
+                            "5fs_br:oxidized_copper_pillar",
+                            "5fs_br:waxed_copper_pillar",
+                            "5fs_br:waxed_exposed_copper_pillar",
+                            "5fs_br:waxed_weathered_copper_pillar",
+                            "5fs_br:waxed_oxidized_copper_pillar"
+                        ]
+                    },
+                    {
+                        "items": [
+                            "5fs_br:sulfur_block",
+                            "5fs_br:crystalline_block",
+                            "5fs_br:dragonite_block",
+                            "5fs_br:meteorite_block",
+                            "5fs_br:raw_sulfur_block",
+                            "5fs_br:raw_crystalline_block",
+                            "5fs_br:raw_dragonite_block",
+                            "5fs_br:meteor",
+                            "5fs_br:dried_dead_kelp_block"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:rose_quartz_block",
+                            "name": "5fs_br:itemGroup.name.roseQuartzBlocks"
+                        },
+                        "items": [
+                            "5fs_br:rose_quartz_bricks",
+                            "5fs_br:rose_quartz_block",
+                            "5fs_br:polished_rose_quartz_bricks",
+                            "5fs_br:polished_rose_quartz",
+                            "5fs_br:smooth_rose_quartz",
+                            "5fs_br:chiseled_rose_quartz",
+                            "5fs_br:rose_quartz_pillar"
+                        ]
+                    },
+                    {
+                        "items": [
+                            "5fs_br:crystallized_slime_block"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:brimstone",
+                            "name": "5fs_br:itemGroup.name.brimstoneBlocks"
+                        },
+                        "items": [
+                            "5fs_br:brimstone",
+                            "5fs_br:cobbled_brimstone",
+                            "5fs_br:polished_brimstone",
+                            "5fs_br:brimstone_bricks",
+                            "5fs_br:cracked_brimstone_bricks",
+                            "5fs_br:brimstone_bricks_with_magma",
+                            "5fs_br:brimstone_tiles",
+                            "5fs_br:cracked_brimstone_tiles",
+                            "5fs_br:brimstone_tiles_with_magma",
+                            "5fs_br:chiseled_brimstone",
+                            "5fs_br:magma_brimstone",
+                            "5fs_br:brimstone_pillar"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:ash_block",
+                            "name": "5fs_br:itemGroup.name.ashBlocks"
+                        },
+                        "items": [
+                            "5fs_br:ash",
+                            "5fs_br:ash_block",
+                            "5fs_br:ash_bricks",
+                            "5fs_br:chiseled_ash"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:glintrock",
+                            "name": "5fs_br:itemGroup.name.glintrock"
+                        },
+                        "items": [
+                            "5fs_br:glintrock",
+                            "5fs_br:white_glintrock",
+                            "5fs_br:light_gray_glintrock",
+                            "5fs_br:gray_glintrock",
+                            "5fs_br:black_glintrock",
+                            "5fs_br:brown_glintrock",
+                            "5fs_br:red_glintrock",
+                            "5fs_br:orange_glintrock",
+                            "5fs_br:yellow_glintrock",
+                            "5fs_br:lime_glintrock",
+                            "5fs_br:green_glintrock",
+                            "5fs_br:cyan_glintrock",
+                            "5fs_br:light_blue_glintrock",
+                            "5fs_br:blue_glintrock",
+                            "5fs_br:purple_glintrock",
+                            "5fs_br:magenta_glintrock",
+                            "5fs_br:pink_glintrock",
+                            "5fs_br:glow_glintrock"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:compact_dirt",
+                            "name": "5fs_br:itemGroup.name.compactBlocks"
+                        },
+                        "items": [
+                            "5fs_br:compact_basalt",
+                            "5fs_br:compact_blackstone",
+                            "5fs_br:compact_calcite",
+                            "5fs_br:compact_coal_block",
+                            "5fs_br:compact_cobbled_deepslate",
+                            "5fs_br:compact_cobblestone",
+                            "5fs_br:compact_deepslate",
+                            "5fs_br:compact_dirt",
+                            "5fs_br:compact_end_stone",
+                            "5fs_br:compact_gravel",
+                            "5fs_br:compact_lapis_block",
+                            "5fs_br:compact_netherrack",
+                            "5fs_br:compact_raw_copper_block",
+                            "5fs_br:compact_raw_crystalline_block",
+                            "5fs_br:compact_raw_gold_block",
+                            "5fs_br:compact_raw_iron_block",
+                            "5fs_br:compact_raw_sulfur_block",
+                            "5fs_br:compact_resonant_crystal_block",
+                            "5fs_br:compact_sand",
+                            "5fs_br:compact_sandstone",
+                            "5fs_br:compact_smooth_basalt",
+                            "5fs_br:compact_stone",
+                            "5fs_br:compact_tuff"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:white_crystalline_glazed_terracotta",
+                            "name": "5fs_br:itemGroup.name.crystallineGlazedTerracotta"
+                        },
+                        "items": [
+                            "5fs_br:white_crystalline_glazed_terracotta",
+                            "5fs_br:light_gray_crystalline_glazed_terracotta",
+                            "5fs_br:gray_crystalline_glazed_terracotta",
+                            "5fs_br:black_crystalline_glazed_terracotta",
+                            "5fs_br:brown_crystalline_glazed_terracotta",
+                            "5fs_br:red_crystalline_glazed_terracotta",
+                            "5fs_br:orange_crystalline_glazed_terracotta",
+                            "5fs_br:yellow_crystalline_glazed_terracotta",
+                            "5fs_br:lime_crystalline_glazed_terracotta",
+                            "5fs_br:green_crystalline_glazed_terracotta",
+                            "5fs_br:cyan_crystalline_glazed_terracotta",
+                            "5fs_br:light_blue_crystalline_glazed_terracotta",
+                            "5fs_br:blue_crystalline_glazed_terracotta",
+                            "5fs_br:purple_crystalline_glazed_terracotta",
+                            "5fs_br:magenta_crystalline_glazed_terracotta",
+                            "5fs_br:pink_crystalline_glazed_terracotta"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:cloud_block",
+                            "name": "5fs_br:itemGroup.name.cloudBlocks"
+                        },
+                        "items": [
+                            "5fs_br:cloud_block",
+                            "5fs_br:cloud_bricks",
+                            "5fs_br:chiseled_cloud",
+                            "5fs_br:cloud_pillar",
+                            "5fs_br:angel_cloud_block"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:runestone_of_light",
+                            "name": "5fs_br:itemGroup.name.runestones"
+                        },
+                        "items": [
+                            "5fs_br:runestone_of_light",
+                            "5fs_br:runestone_of_souls",
+                            "5fs_br:runestone_of_growth",
+                            "5fs_br:runestone_of_decay",
+                            "5fs_br:runestone_of_knowledge",
+                            "5fs_br:runestone_of_venom",
+                            "5fs_br:runestone_of_shadows",
+                            "5fs_br:runestone_of_beasts",
+                            "5fs_br:runestone_of_shields",
+                            "5fs_br:runestone_of_void",
+                            "5fs_br:runestone_of_eternity",
+                            "5fs_br:runestone_of_tides",
+                            "5fs_br:runestone_of_frost",
+                            "5fs_br:runestone_of_blades",
+                            "5fs_br:runestone_of_earth",
+                            "5fs_br:runestone_of_storms",
+                            "5fs_br:runestone_of_flame"
+                        ]
+                    }
+                ]
+            },
+            {
+                "category_name": "equipment",
+                "groups": [
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.helmet"
+                        },
+                        "items": [
+                            "5fs_br:obsidian_helmet",
+                            "5fs_br:crystalline_helmet",
+                            "5fs_br:meteorite_helmet",
+                            "5fs_br:dragonite_helmet"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.chestplate"
+                        },
+                        "items": [
+                            "5fs_br:obsidian_chestplate",
+                            "5fs_br:crystalline_chestplate",
+                            "5fs_br:meteorite_chestplate",
+                            "5fs_br:dragonite_chestplate"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.leggings"
+                        },
+                        "items": [
+                            "5fs_br:obsidian_leggings",
+                            "5fs_br:crystalline_leggings",
+                            "5fs_br:meteorite_leggings",
+                            "5fs_br:dragonite_leggings"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.boots"
+                        },
+                        "items": [
+                            "5fs_br:obsidian_boots",
+                            "5fs_br:crystalline_boots",
+                            "5fs_br:meteorite_boots",
+                            "5fs_br:dragonite_boots"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.sword"
+                        },
+                        "items": [
+                            "5fs_br:emerald_sword",
+                            "5fs_br:steel_sword",
+                            "5fs_br:obsidian_sword",
+                            "5fs_br:crystalline_sword",
+                            "5fs_br:meteorite_sword",
+                            "5fs_br:cobalt_sword",
+                            "5fs_br:dragonite_sword"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.axe"
+                        },
+                        "items": [
+                            "5fs_br:emerald_axe",
+                            "5fs_br:steel_axe",
+                            "5fs_br:obsidian_axe",
+                            "5fs_br:crystalline_axe",
+                            "5fs_br:meteorite_axe",
+                            "5fs_br:cobalt_axe",
+                            "5fs_br:dragonite_axe"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.pickaxe"
+                        },
+                        "items": [
+                            "5fs_br:emerald_pickaxe",
+                            "5fs_br:steel_pickaxe",
+                            "5fs_br:obsidian_pickaxe",
+                            "5fs_br:crystalline_pickaxe",
+                            "5fs_br:meteorite_pickaxe",
+                            "5fs_br:cobalt_pickaxe",
+                            "5fs_br:dragonite_pickaxe"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.shovel"
+                        },
+                        "items": [
+                            "5fs_br:emerald_shovel",
+                            "5fs_br:steel_shovel",
+                            "5fs_br:obsidian_shovel",
+                            "5fs_br:crystalline_shovel",
+                            "5fs_br:meteorite_shovel",
+                            "5fs_br:cobalt_shovel",
+                            "5fs_br:dragonite_shovel"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.hoe"
+                        },
+                        "items": [
+                            "5fs_br:emerald_hoe",
+                            "5fs_br:steel_hoe",
+                            "5fs_br:obsidian_hoe",
+                            "5fs_br:crystalline_hoe",
+                            "5fs_br:meteorite_hoe",
+                            "5fs_br:cobalt_hoe",
+                            "5fs_br:dragonite_hoe"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.arrow"
+                        },
+                        "items": [
+                            "5fs_br:arrow_of_jelly",
+                            "5fs_br:zeus_arrow",
+                            "5fs_br:explosive_arrow",
+                            "5fs_br:sharp_arrows"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.cookedFood"
+                        },
+                        "items": [
+                            "5fs_br:cooked_venison",
+                            "5fs_br:cooked_shark_fin",
+                            "5fs_br:cooked_beaver_tail"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.miscFood"
+                        },
+                        "items": [
+                            "5fs_br:gelatin_nibbles",
+                            "5fs_br:gelatin",
+                            "5fs_br:giant_mushroom_stew",
+                            "5fs_br:giant_rabbit_stew",
+                            "5fs_br:giant_shark_fin_soup",
+                            "5fs_br:shark_fin_soup",
+                            "5fs_br:giant_pumpkin_pie",
+                            "5fs_br:dried_dead_kelp"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "minecraft:potion",
+                            "name": "minecraft:itemGroup.name.potion"
+                        },
+                        "items": [
+                            "5fs_br:potion_of_conduit_power",
+                            "5fs_br:potion_of_decay",
+                            "5fs_br:potion_of_blindness",
+                            "5fs_br:potion_of_gigantify",
+                            "5fs_br:potion_of_shrinkify",
+                            "5fs_br:bottle_of_jelly",
+                            "5fs_br:illumination_potion",
+                            "5fs_br:illumination_potion_redstone",
+                            "5fs_br:illumination_potion_glowstone_lvl1",
+                            "5fs_br:illumination_potion_glowstone_lvl2",
+                            "5fs_br:illumination_potion_glowstone_lvl3"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "minecraft:splash_potion",
+                            "name": "minecraft:itemGroup.name.splashPotion"
+                        },
+                        "items": [
+                            "5fs_br:splash_potion_of_conduit_power",
+                            "5fs_br:splash_potion_of_decay",
+                            "5fs_br:splash_potion_of_blindness",
+                            "5fs_br:splash_potion_of_gigantify",
+                            "5fs_br:splash_potion_of_shrinkify",
+                            "5fs_br:splash_bottle_of_jelly",
+                            "5fs_br:splash_illumination_potion",
+                            "5fs_br:splash_illumination_potion_redstone",
+                            "5fs_br:splash_illumination_potion_glowstone_lvl1",
+                            "5fs_br:splash_illumination_potion_glowstone_lvl2",
+                            "5fs_br:splash_illumination_potion_glowstone_lvl3"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "minecraft:lingering_potion",
+                            "name": "minecraft:itemGroup.name.lingeringPotion"
+                        },
+                        "items": [
+                            "5fs_br:lingering_potion_of_conduit_power",
+                            "5fs_br:lingering_potion_of_decay",
+                            "5fs_br:lingering_potion_of_blindness",
+                            "5fs_br:lingering_potion_of_gigantify",
+                            "5fs_br:lingering_potion_of_shrinkify",
+                            "5fs_br:lingering_bottle_of_jelly",
+                            "5fs_br:lingering_illumination_potion",
+                            "5fs_br:lingering_illumination_potion_redstone",
+                            "5fs_br:lingering_illumination_potion_glowstone_lvl1",
+                            "5fs_br:lingering_illumination_potion_glowstone_lvl2",
+                            "5fs_br:lingering_illumination_potion_glowstone_lvl3"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.horseArmor"
+                        },
+                        "items": [
+                            "5fs_br:crystalline_horse_armor",
+                            "5fs_br:dragonite_horse_armor"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.spear"
+                        },
+                        "items": [
+                            "5fs_br:crystalline_spear",
+                            "5fs_br:steel_spear",
+                            "5fs_br:obsidian_spear",
+                            "5fs_br:meteorite_spear",
+                            "5fs_br:cobalt_spear",
+                            "5fs_br:dragonite_spear"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:steel_hammer",
+                            "name": "5fs_br:itemGroup.name.hammers"
+                        },
+                        "items": [
+                            "5fs_br:wooden_hammer",
+                            "5fs_br:stone_hammer",
+                            "5fs_br:copper_hammer",
+                            "5fs_br:iron_hammer",
+                            "5fs_br:steel_hammer",
+                            "5fs_br:golden_hammer",
+                            "5fs_br:emerald_hammer",
+                            "5fs_br:diamond_hammer",
+                            "5fs_br:netherite_hammer",
+                            "5fs_br:obsidian_hammer",
+                            "5fs_br:crystalline_hammer",
+                            "5fs_br:meteorite_hammer",
+                            "5fs_br:cobalt_hammer",
+                            "5fs_br:dragonite_hammer",
+                            "5fs_br:mummified_hammer"
+                        ]
+                    },
+                    {
+                        "items": [
+                            "5fs_br:crystalline_mace",
+                            "5fs_br:meteorite_trident",
+                            "5fs_br:dragonite_trident",
+                            "5fs_br:crystalline_shield",
+                            "5fs_br:crystalline_shears",
+                            "5fs_br:crystal_compass"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:deep_bundle",
+                            "name": "5fs_br:itemGroup.name.deepBundles"
+                        },
+                        "items": [
+                            "5fs_br:deep_bundle",
+                            "5fs_br:white_deep_bundle",
+                            "5fs_br:light_gray_deep_bundle",
+                            "5fs_br:gray_deep_bundle",
+                            "5fs_br:black_deep_bundle",
+                            "5fs_br:brown_deep_bundle",
+                            "5fs_br:red_deep_bundle",
+                            "5fs_br:orange_deep_bundle",
+                            "5fs_br:yellow_deep_bundle",
+                            "5fs_br:lime_deep_bundle",
+                            "5fs_br:green_deep_bundle",
+                            "5fs_br:cyan_deep_bundle",
+                            "5fs_br:light_blue_deep_bundle",
+                            "5fs_br:blue_deep_bundle",
+                            "5fs_br:purple_deep_bundle",
+                            "5fs_br:magenta_deep_bundle",
+                            "5fs_br:pink_deep_bundle"
+                        ]
+                    },
+                    {
+                        "items": [
+                            "5fs_br:ender_void_off",
+                            "5fs_br:crystalline_wolf_armor",
+                            "5fs_br:dragonite_wolf_armor",
+                            "5fs_br:void_totem",
+                            "5fs_br:mana_bottle",
+                            "5fs_br:bottled_sand"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:wizard_hat",
+                            "name": "5fs_br:itemGroup.name.hats"
+                        },
+                        "items": [
+                            "5fs_br:chef_hat",
+                            "5fs_br:witch_hat",
+                            "5fs_br:wizard_hat",
+                            "5fs_br:miners_hat",
+                            "5fs_br:crystal_geode_hat",
+                            "5fs_br:eye_of_the_beholder",
+                            "5fs_br:coral_crown",
+                            "5fs_br:frostbitten_crown",
+                            "5fs_br:baby_dragon_hat",
+                            "5fs_br:dragon_hat",
+                            "5fs_br:captain_pirate_hat",
+                            "5fs_br:mushroom_cap",
+                            "5fs_br:canopy_cap",
+                            "5fs_br:scorched_cap",
+                            "5fs_br:tree_sap_tap_cap",
+                            "5fs_br:moose_antlers_hat",
+                            "5fs_br:mask_of_the_wild"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:cape_of_amethyst",
+                            "name": "5fs_br:itemGroup.name.capes"
+                        },
+                        "items": [
+                            "5fs_br:cape_of_enderman",
+                            "5fs_br:cape_of_night_sky",
+                            "5fs_br:cape_of_panda",
+                            "5fs_br:cape_of_coral_cove",
+                            "5fs_br:cape_of_deep_ocean",
+                            "5fs_br:cape_of_ocean_waves",
+                            "5fs_br:cape_of_barrel",
+                            "5fs_br:cape_of_cow",
+                            "5fs_br:cape_of_bear",
+                            "5fs_br:cape_of_quarry",
+                            "5fs_br:cape_of_crystal_canyons",
+                            "5fs_br:cape_of_ores",
+                            "5fs_br:cape_of_ice_spikes",
+                            "5fs_br:cape_of_glimmerite",
+                            "5fs_br:cape_of_frozen",
+                            "5fs_br:cape_of_tree",
+                            "5fs_br:cape_of_cactus",
+                            "5fs_br:cape_of_creeper",
+                            "5fs_br:cape_of_wither",
+                            "5fs_br:cape_of_furnace",
+                            "5fs_br:cape_of_meteor",
+                            "5fs_br:cape_of_warden",
+                            "5fs_br:cape_of_prismarine",
+                            "5fs_br:cape_of_beach",
+                            "5fs_br:cape_of_crystalline_berserker",
+                            "5fs_br:cape_of_potion",
+                            "5fs_br:cape_of_turtle",
+                            "5fs_br:cape_of_dragonite",
+                            "5fs_br:cape_of_shulker",
+                            "5fs_br:cape_of_witch",
+                            "5fs_br:cape_of_blaze",
+                            "5fs_br:cape_of_pumpkin",
+                            "5fs_br:cape_of_fox",
+                            "5fs_br:cape_of_flower",
+                            "5fs_br:cape_of_cherry",
+                            "5fs_br:cape_of_pig",
+                            "5fs_br:cape_of_amethyst",
+                            "5fs_br:cape_of_breeze",
+                            "5fs_br:cape_of_dragon",
+                            "5fs_br:cape_of_lumberjack",
+                            "5fs_br:cape_of_maple",
+                            "5fs_br:cape_of_redstone",
+                            "5fs_br:cape_of_ghast",
+                            "5fs_br:cape_of_sheep",
+                            "5fs_br:cape_of_snowy",
+                            "5fs_br:cape_of_honeycomb",
+                            "5fs_br:cape_of_bee",
+                            "5fs_br:cape_of_glowstone",
+                            "5fs_br:cape_of_enchanting_table",
+                            "5fs_br:cape_of_yellow_magic",
+                            "5fs_br:cape_of_purple_magic"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:diamond_wand",
+                            "name": "5fs_br:itemGroup.name.wands"
+                        },
+                        "items": [
+                            "5fs_br:torch_wand",
+                            "5fs_br:wooden_wand",
+                            "5fs_br:stone_wand",
+                            "5fs_br:copper_wand",
+                            "5fs_br:iron_wand",
+                            "5fs_br:steel_wand",
+                            "5fs_br:sea_witch_wand",
+                            "5fs_br:obsidian_wand",
+                            "5fs_br:golden_wand",
+                            "5fs_br:diamond_wand",
+                            "5fs_br:netherite_wand",
+                            "5fs_br:crystalline_wand",
+                            "5fs_br:cobalt_wand",
+                            "5fs_br:dragonite_wand"
+                        ]
+                    },
+                    {
+                        "items": [
+                            "5fs_br:crystalline_chisel",
+                            "5fs_br:mob_net",
+                            "5fs_br:spawner_wrench"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:common_accessory_bag",
+                            "name": "5fs_br:itemGroup.name.accessoryBags"
+                        },
+                        "items": [
+                            "5fs_br:common_accessory_bag",
+                            "5fs_br:uncommon_accessory_bag",
+                            "5fs_br:rare_accessory_bag",
+                            "5fs_br:epic_accessory_bag",
+                            "5fs_br:mythical_accessory_bag",
+                            "5fs_br:legendary_accessory_bag"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:iron_canteen_full",
+                            "name": "5fs_br:itemGroup.name.waterBottles"
+                        },
+                        "items": [
+                            "5fs_br:waterskin_empty",
+                            "5fs_br:iron_canteen_empty",
+                            "5fs_br:steel_canteen_empty",
+                            "5fs_br:crystalline_chalice",
+                            "5fs_br:ender_chalice"
+                        ]
+                    },
+                    {
+                        "items": [
+                            "5fs_br:torch_offhand",
+                            "5fs_br:rope",
+                            "5fs_br:arcane_rift"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:pristine_ring_of_health",
+                            "name": "5fs_br:itemGroup.name.rings"
+                        },
+                        "items": [
+                            "5fs_br:rusted_ring_of_health",
+                            "5fs_br:cracked_ring_of_health",
+                            "5fs_br:worn_ring_of_health",
+                            "5fs_br:chipped_ring_of_health",
+                            "5fs_br:pristine_ring_of_health",
+                            "5fs_br:rusted_ring_of_greed",
+                            "5fs_br:cracked_ring_of_greed",
+                            "5fs_br:worn_ring_of_greed",
+                            "5fs_br:chipped_ring_of_greed",
+                            "5fs_br:pristine_ring_of_greed",
+                            "5fs_br:rusted_ring_of_excavation",
+                            "5fs_br:cracked_ring_of_excavation",
+                            "5fs_br:worn_ring_of_excavation",
+                            "5fs_br:chipped_ring_of_excavation",
+                            "5fs_br:pristine_ring_of_excavation",
+                            "5fs_br:rusted_ring_of_experience",
+                            "5fs_br:cracked_ring_of_experience",
+                            "5fs_br:worn_ring_of_experience",
+                            "5fs_br:chipped_ring_of_experience",
+                            "5fs_br:pristine_ring_of_experience",
+                            "5fs_br:rusted_ring_of_magnetism",
+                            "5fs_br:cracked_ring_of_magnetism",
+                            "5fs_br:worn_ring_of_magnetism",
+                            "5fs_br:chipped_ring_of_magnetism",
+                            "5fs_br:pristine_ring_of_magnetism",
+                            "5fs_br:rusted_ring_of_thirst",
+                            "5fs_br:cracked_ring_of_thirst",
+                            "5fs_br:worn_ring_of_thirst",
+                            "5fs_br:chipped_ring_of_thirst",
+                            "5fs_br:pristine_ring_of_thirst",
+                            "5fs_br:rusted_ring_of_gluttony",
+                            "5fs_br:cracked_ring_of_gluttony",
+                            "5fs_br:worn_ring_of_gluttony",
+                            "5fs_br:chipped_ring_of_gluttony",
+                            "5fs_br:pristine_ring_of_gluttony",
+                            "5fs_br:rusted_ring_of_mana",
+                            "5fs_br:cracked_ring_of_mana",
+                            "5fs_br:worn_ring_of_mana",
+                            "5fs_br:chipped_ring_of_mana",
+                            "5fs_br:pristine_ring_of_mana",
+                            "5fs_br:rusted_ring_of_pharaohs_curse",
+                            "5fs_br:cracked_ring_of_pharaohs_curse",
+                            "5fs_br:worn_ring_of_pharaohs_curse",
+                            "5fs_br:chipped_ring_of_pharaohs_curse",
+                            "5fs_br:pristine_ring_of_pharaohs_curse",
+                            "5fs_br:ring_band"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:belt_of_spawning",
+                            "name": "5fs_br:itemGroup.name.belts"
+                        },
+                        "items": [
+                            "5fs_br:belt_of_spawning",
+                            "5fs_br:belt_of_despawning"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:talisman_of_healing",
+                            "name": "5fs_br:itemGroup.name.talismans"
+                        },
+                        "items": [
+                            "5fs_br:talisman_of_healing",
+                            "5fs_br:talisman_of_deception",
+                            "5fs_br:talisman_of_location",
+                            "5fs_br:talisman_of_moonlight",
+                            "5fs_br:talisman_of_the_fallen",
+                            "5fs_br:talisman_of_harvesting",
+                            "5fs_br:talisman_of_rejuvination"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:large_backpack",
+                            "name": "5fs_br:itemGroup.name.backpacks"
+                        },
+                        "items": [
+                            "5fs_br:small_backpack",
+                            "5fs_br:medium_backpack",
+                            "5fs_br:large_backpack"
+                        ]
+                    }
+                ]
+            },
+            {
+                "category_name": "items",
+                "groups": [
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.bed"
+                        },
+                        "items": [
+                            "5fs_br:snowy_bed",
+                            "5fs_br:sheep_bed",
+                            "5fs_br:ghast_bed",
+                            "5fs_br:furnace_bed",
+                            "5fs_br:crystal_canyon_bed",
+                            "5fs_br:ores_bed",
+                            "5fs_br:wither_bed",
+                            "5fs_br:quarry_bed",
+                            "5fs_br:crystalline_berserker_bed",
+                            "5fs_br:panda_bed",
+                            "5fs_br:enderman_bed",
+                            "5fs_br:purple_magic_bed",
+                            "5fs_br:yellow_magic_bed",
+                            "5fs_br:night_sky_bed",
+                            "5fs_br:meteor_bed",
+                            "5fs_br:enchanting_table_bed",
+                            "5fs_br:cow_bed",
+                            "5fs_br:bear_bed",
+                            "5fs_br:barrel_bed",
+                            "5fs_br:lumberjack_bed",
+                            "5fs_br:redstone_bed",
+                            "5fs_br:maple_bed",
+                            "5fs_br:fox_bed",
+                            "5fs_br:blaze_bed",
+                            "5fs_br:pumpkin_bed",
+                            "5fs_br:bee_bed",
+                            "5fs_br:honeycomb_bed",
+                            "5fs_br:beach_bed",
+                            "5fs_br:glowstone_bed",
+                            "5fs_br:turtle_bed",
+                            "5fs_br:potion_bed",
+                            "5fs_br:cactus_bed",
+                            "5fs_br:tree_bed",
+                            "5fs_br:creeper_bed",
+                            "5fs_br:glimmerite_bed",
+                            "5fs_br:frozen_bed",
+                            "5fs_br:ice_spikes_bed",
+                            "5fs_br:prismarine_bed",
+                            "5fs_br:ocean_waves_bed",
+                            "5fs_br:coral_cove_bed",
+                            "5fs_br:deep_ocean_bed",
+                            "5fs_br:warden_bed",
+                            "5fs_br:dragon_bed",
+                            "5fs_br:breeze_bed",
+                            "5fs_br:amethyst_bed",
+                            "5fs_br:witch_bed",
+                            "5fs_br:shulker_bed",
+                            "5fs_br:dragonite_bed",
+                            "5fs_br:pig_bed",
+                            "5fs_br:flower_bed",
+                            "5fs_br:cherry_bed"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.record"
+                        },
+                        "items": [
+                            "5fs_br:music_disc_sands_of_fury",
+                            "5fs_br:music_disc_roots_and_rainforests"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.chains"
+                        },
+                        "items": [
+                            "5fs_br:gold_chain"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.skull"
+                        },
+                        "items": [
+                            "5fs_br:silverfish_head",
+                            "5fs_br:endermite_head",
+                            "5fs_br:stray_head",
+                            "5fs_br:bogged_head",
+                            "5fs_br:husk_head",
+                            "5fs_br:drowned_head",
+                            "5fs_br:zombie_villager_head",
+                            "5fs_br:spider_head",
+                            "5fs_br:cave_spider_head",
+                            "5fs_br:slime_head",
+                            "5fs_br:enderman_head",
+                            "5fs_br:shulker_head",
+                            "5fs_br:phantom_head",
+                            "5fs_br:warden_head",
+                            "5fs_br:breeze_head",
+                            "5fs_br:armadillo_head",
+                            "5fs_br:axolotl_head",
+                            "5fs_br:bat_head",
+                            "5fs_br:bee_head",
+                            "5fs_br:cat_head",
+                            "5fs_br:ocelot_head",
+                            "5fs_br:parrot_head",
+                            "5fs_br:pig_head",
+                            "5fs_br:cold_pig_head",
+                            "5fs_br:warm_pig_head",
+                            "5fs_br:cow_head",
+                            "5fs_br:cold_cow_head",
+                            "5fs_br:warm_cow_head",
+                            "5fs_br:mooshroom_head",
+                            "5fs_br:chicken_head",
+                            "5fs_br:cold_chicken_head",
+                            "5fs_br:warm_chicken_head",
+                            "5fs_br:sheep_head",
+                            "5fs_br:polar_bear_head",
+                            "5fs_br:goat_head",
+                            "5fs_br:wolf_head",
+                            "5fs_br:fox_head",
+                            "5fs_br:rabbit_head",
+                            "5fs_br:horse_head",
+                            "5fs_br:skeleton_horse_head",
+                            "5fs_br:zombie_horse_head",
+                            "5fs_br:donkey_head",
+                            "5fs_br:mule_head",
+                            "5fs_br:llama_head",
+                            "5fs_br:trader_llama_head",
+                            "5fs_br:camel_head",
+                            "5fs_br:panda_head",
+                            "5fs_br:cod_head",
+                            "5fs_br:salmon_head",
+                            "5fs_br:tropical_fish_head",
+                            "5fs_br:pufferfish_head",
+                            "5fs_br:dolphin_head",
+                            "5fs_br:turtle_head",
+                            "5fs_br:squid_head",
+                            "5fs_br:glow_squid_head",
+                            "5fs_br:guardian_head",
+                            "5fs_br:elder_guardian_head",
+                            "5fs_br:tadpole_head",
+                            "5fs_br:frog_head",
+                            "5fs_br:sniffer_head",
+                            "5fs_br:snow_golem_head",
+                            "5fs_br:villager_head",
+                            "5fs_br:wandering_trader_head",
+                            "5fs_br:vindicator_head",
+                            "5fs_br:evoker_head",
+                            "5fs_br:pillager_head",
+                            "5fs_br:witch_head",
+                            "5fs_br:ravager_head",
+                            "5fs_br:vex_head",
+                            "5fs_br:allay_head",
+                            "5fs_br:iron_golem_head",
+                            "5fs_br:creaking_head",
+                            "5fs_br:ghast_head",
+                            "5fs_br:happy_ghast_head",
+                            "5fs_br:strider_head",
+                            "5fs_br:magma_cube_head",
+                            "5fs_br:blaze_head",
+                            "5fs_br:zombified_piglin_head",
+                            "5fs_br:piglin_brute_head",
+                            "5fs_br:hoglin_head",
+                            "5fs_br:zoglin_head",
+                            "5fs_br:wither_head"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.lanterns"
+                        },
+                        "items": [
+                            "5fs_br:glimmerite_lantern",
+                            "5fs_br:gold_lantern",
+                            "5fs_br:copper_soul_lantern",
+                            "5fs_br:exposed_copper_soul_lantern",
+                            "5fs_br:weathered_copper_soul_lantern",
+                            "5fs_br:oxidized_copper_soul_lantern",
+                            "5fs_br:waxed_copper_soul_lantern",
+                            "5fs_br:waxed_exposed_copper_soul_lantern",
+                            "5fs_br:waxed_weathered_copper_soul_lantern",
+                            "5fs_br:waxed_oxidized_copper_soul_lantern",
+                            "5fs_br:copper_glimmerite_lantern",
+                            "5fs_br:exposed_copper_glimmerite_lantern",
+                            "5fs_br:weathered_copper_glimmerite_lantern",
+                            "5fs_br:oxidized_copper_glimmerite_lantern",
+                            "5fs_br:waxed_copper_glimmerite_lantern",
+                            "5fs_br:waxed_exposed_copper_glimmerite_lantern",
+                            "5fs_br:waxed_weathered_copper_glimmerite_lantern",
+                            "5fs_br:waxed_oxidized_copper_glimmerite_lantern"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.boat"
+                        },
+                        "items": [
+                            "5fs_br:maple_boat",
+                            "5fs_br:redwood_giant_boat",
+                            "5fs_br:palm_boat"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.chestboat"
+                        },
+                        "items": [
+                            "5fs_br:maple_chest_boat",
+                            "5fs_br:redwood_giant_chest_boat",
+                            "5fs_br:palm_chest_boat"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.chest"
+                        },
+                        "items": [
+                            "5fs_br:maple_chest",
+                            "5fs_br:petrified_chest",
+                            "5fs_br:jungle_chest",
+                            "5fs_br:cherry_chest",
+                            "5fs_br:acacia_chest",
+                            "5fs_br:mangrove_chest",
+                            "5fs_br:crimson_chest",
+                            "5fs_br:warped_chest",
+                            "5fs_br:birch_chest",
+                            "5fs_br:spruce_chest",
+                            "5fs_br:dark_oak_chest",
+                            "5fs_br:pale_oak_chest",
+                            "5fs_br:bamboo_chest",
+                            "5fs_br:redwood_chest",
+                            "5fs_br:palm_chest"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.smithing_templates"
+                        },
+                        "items": [
+                            "5fs_br:meteorite_upgrade"
+                        ]
+                    },
+                    {
+                        "items": [
+                            "5fs_br:redwood_stick"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:black_sleeping_bag",
+                            "name": "5fs_br:itemGroup.name.sleepingBags"
+                        },
+                        "items": [
+                            "5fs_br:black_sleeping_bag",
+                            "5fs_br:blue_sleeping_bag",
+                            "5fs_br:brown_sleeping_bag",
+                            "5fs_br:cyan_sleeping_bag",
+                            "5fs_br:gray_sleeping_bag",
+                            "5fs_br:green_sleeping_bag",
+                            "5fs_br:light_blue_sleeping_bag",
+                            "5fs_br:light_gray_sleeping_bag",
+                            "5fs_br:lime_sleeping_bag",
+                            "5fs_br:magenta_sleeping_bag",
+                            "5fs_br:orange_sleeping_bag",
+                            "5fs_br:pink_sleeping_bag",
+                            "5fs_br:purple_sleeping_bag",
+                            "5fs_br:red_sleeping_bag",
+                            "5fs_br:white_sleeping_bag",
+                            "5fs_br:yellow_sleeping_bag"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:maple_crafting_table",
+                            "name": "5fs_br:itemGroup.name.craftingTables"
+                        },
+                        "items": [
+                            "5fs_br:maple_crafting_table",
+                            "5fs_br:spruce_crafting_table",
+                            "5fs_br:birch_crafting_table",
+                            "5fs_br:petrified_crafting_table",
+                            "5fs_br:jungle_crafting_table",
+                            "5fs_br:pale_oak_crafting_table",
+                            "5fs_br:acacia_crafting_table",
+                            "5fs_br:dark_oak_crafting_table",
+                            "5fs_br:mangrove_crafting_table",
+                            "5fs_br:cherry_crafting_table",
+                            "5fs_br:bamboo_crafting_table",
+                            "5fs_br:crimson_crafting_table",
+                            "5fs_br:warped_crafting_table",
+                            "5fs_br:redwood_crafting_table",
+                            "5fs_br:palm_crafting_table",
+                            "5fs_br:statue_crafting_table"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:decorative_spruce_crafting_table",
+                            "name": "5fs_br:itemGroup.name.decorativeCraftingTables"
+                        },
+                        "items": [
+                            "5fs_br:decorative_oak_crafting_table",
+                            "5fs_br:decorative_maple_crafting_table",
+                            "5fs_br:decorative_spruce_crafting_table",
+                            "5fs_br:decorative_birch_crafting_table",
+                            "5fs_br:decorative_petrified_crafting_table",
+                            "5fs_br:decorative_jungle_crafting_table",
+                            "5fs_br:decorative_pale_oak_crafting_table",
+                            "5fs_br:decorative_acacia_crafting_table",
+                            "5fs_br:decorative_dark_oak_crafting_table",
+                            "5fs_br:decorative_mangrove_crafting_table",
+                            "5fs_br:decorative_cherry_crafting_table",
+                            "5fs_br:decorative_bamboo_crafting_table",
+                            "5fs_br:decorative_crimson_crafting_table",
+                            "5fs_br:decorative_warped_crafting_table",
+                            "5fs_br:decorative_redwood_crafting_table",
+                            "5fs_br:decorative_palm_crafting_table"
+                        ]
+                    },
+                    {
+                        "items": [
+                            "5fs_br:advanced_smithing_table"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:charm_beacon",
+                            "name": "5fs_br:itemGroup.name.magicalWorkstations"
+                        },
+                        "items": [
+                            "5fs_br:charm_beacon",
+                            "5fs_br:magical_anvil",
+                            "5fs_br:jeweling_station",
+                            "5fs_br:rune_table"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:copper_furnace",
+                            "name": "5fs_br:itemGroup.name.furnaces"
+                        },
+                        "items": [
+                            "5fs_br:crystalline_furnace",
+                            "5fs_br:dragonite_furnace",
+                            "5fs_br:copper_furnace",
+                            "5fs_br:exposed_copper_furnace",
+                            "5fs_br:weathered_copper_furnace",
+                            "5fs_br:oxidized_copper_furnace",
+                            "5fs_br:waxed_copper_furnace",
+                            "5fs_br:waxed_exposed_copper_furnace",
+                            "5fs_br:waxed_weathered_copper_furnace",
+                            "5fs_br:waxed_oxidized_copper_furnace"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:copper_blast_furnace",
+                            "name": "5fs_br:itemGroup.name.blastFurnaces"
+                        },
+                        "items": [
+                            "5fs_br:crystalline_blast_furnace",
+                            "5fs_br:dragonite_blast_furnace",
+                            "5fs_br:copper_blast_furnace",
+                            "5fs_br:exposed_copper_blast_furnace",
+                            "5fs_br:weathered_copper_blast_furnace",
+                            "5fs_br:oxidized_copper_blast_furnace",
+                            "5fs_br:waxed_copper_blast_furnace",
+                            "5fs_br:waxed_exposed_copper_blast_furnace",
+                            "5fs_br:waxed_weathered_copper_blast_furnace",
+                            "5fs_br:waxed_oxidized_copper_blast_furnace"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:copper_smoker",
+                            "name": "5fs_br:itemGroup.name.smokers"
+                        },
+                        "items": [
+                            "5fs_br:crystalline_smoker",
+                            "5fs_br:dragonite_smoker",
+                            "5fs_br:copper_smoker",
+                            "5fs_br:exposed_copper_smoker",
+                            "5fs_br:weathered_copper_smoker",
+                            "5fs_br:oxidized_copper_smoker",
+                            "5fs_br:waxed_copper_smoker",
+                            "5fs_br:waxed_exposed_copper_smoker",
+                            "5fs_br:waxed_weathered_copper_smoker",
+                            "5fs_br:waxed_oxidized_copper_smoker"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:acacia_bookshelf",
+                            "name": "5fs_br:itemGroup.name.bookshelves"
+                        },
+                        "items": [
+                            "5fs_br:maple_bookshelf",
+                            "5fs_br:acacia_bookshelf",
+                            "5fs_br:birch_bookshelf",
+                            "5fs_br:dark_oak_bookshelf",
+                            "5fs_br:jungle_bookshelf",
+                            "5fs_br:pale_oak_bookshelf",
+                            "5fs_br:spruce_bookshelf",
+                            "5fs_br:mangrove_bookshelf",
+                            "5fs_br:cherry_bookshelf",
+                            "5fs_br:bamboo_bookshelf",
+                            "5fs_br:crimson_bookshelf",
+                            "5fs_br:warped_bookshelf",
+                            "5fs_br:petrified_bookshelf",
+                            "5fs_br:redwood_bookshelf",
+                            "5fs_br:palm_bookshelf"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:acacia_chiseled_bookshelf",
+                            "name": "5fs_br:itemGroup.name.chiseledBookshelves"
+                        },
+                        "items": [
+                            "5fs_br:maple_chiseled_bookshelf",
+                            "5fs_br:acacia_chiseled_bookshelf",
+                            "5fs_br:birch_chiseled_bookshelf",
+                            "5fs_br:dark_oak_chiseled_bookshelf",
+                            "5fs_br:jungle_chiseled_bookshelf",
+                            "5fs_br:pale_oak_chiseled_bookshelf",
+                            "5fs_br:spruce_chiseled_bookshelf",
+                            "5fs_br:mangrove_chiseled_bookshelf",
+                            "5fs_br:cherry_chiseled_bookshelf",
+                            "5fs_br:bamboo_chiseled_bookshelf",
+                            "5fs_br:crimson_chiseled_bookshelf",
+                            "5fs_br:warped_chiseled_bookshelf",
+                            "5fs_br:petrified_chiseled_bookshelf",
+                            "5fs_br:redwood_chiseled_bookshelf",
+                            "5fs_br:palm_chiseled_bookshelf"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:maple_barrel",
+                            "name": "5fs_br:itemGroup.name.barrels"
+                        },
+                        "items": [
+                            "5fs_br:maple_barrel",
+                            "5fs_br:petrified_barrel",
+                            "5fs_br:oak_barrel",
+                            "5fs_br:birch_barrel",
+                            "5fs_br:jungle_barrel",
+                            "5fs_br:pale_oak_barrel",
+                            "5fs_br:acacia_barrel",
+                            "5fs_br:dark_oak_barrel",
+                            "5fs_br:mangrove_barrel",
+                            "5fs_br:cherry_barrel",
+                            "5fs_br:bamboo_barrel",
+                            "5fs_br:crimson_barrel",
+                            "5fs_br:warped_barrel",
+                            "5fs_br:redwood_barrel",
+                            "5fs_br:palm_barrel"
+                        ]
+                    },
+                    {
+                        "items": [
+                            "5fs_br:netherite_safe"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:small_stone_statue",
+                            "name": "5fs_br:itemGroup.name.statues"
+                        },
+                        "items": [
+                            "5fs_br:small_stone_statue",
+                            "5fs_br:small_sandstone_statue",
+                            "5fs_br:small_red_sandstone_statue",
+                            "5fs_br:big_stone_statue",
+                            "5fs_br:big_sandstone_statue",
+                            "5fs_br:big_red_sandstone_statue"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:crystalline_berserker_statue",
+                            "name": "5fs_br:itemGroup.name.miniStatues"
+                        },
+                        "items": [
+                            "5fs_br:parrot_statue",
+                            "5fs_br:dolphin_statue",
+                            "5fs_br:villager_statue",
+                            "5fs_br:creeper_statue",
+                            "5fs_br:guardian_statue",
+                            "5fs_br:ghast_statue",
+                            "5fs_br:wither_statue",
+                            "5fs_br:pirate_captain_statue",
+                            "5fs_br:crystalline_berserker_statue",
+                            "5fs_br:iris_of_the_end_statue",
+                            "5fs_br:redwood_sentinel_statue",
+                            "5fs_br:mana_star_statue",
+                            "5fs_br:pumpkin_statue",
+                            "5fs_br:pickaxe_statue",
+                            "5fs_br:ombari_statue",
+                            "5fs_br:mummified_pharaoh_statue"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:moose_antlers",
+                            "name": "5fs_br:itemGroup.name.decorBlocks"
+                        },
+                        "items": [
+                            "5fs_br:moose_antlers",
+                            "5fs_br:pedestal",
+                            "5fs_br:fountain",
+                            "5fs_br:cloud_fountain",
+                            "5fs_br:wall_torch",
+                            "5fs_br:lantern_holder",
+                            "5fs_br:pole",
+                            "5fs_br:coffin",
+                            "5fs_br:decorative_tombstone",
+                            "5fs_br:bird_feeder"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:creeper_plushie",
+                            "name": "5fs_br:itemGroup.name.plushies"
+                        },
+                        "items": [
+                            "5fs_br:creeper_plushie",
+                            "5fs_br:enderman_plushie",
+                            "5fs_br:wither_plushie",
+                            "5fs_br:skeleton_plushie",
+                            "5fs_br:maple_leaflet_plushie",
+                            "5fs_br:pig_plushie",
+                            "5fs_br:fox_plushie",
+                            "5fs_br:cow_plushie",
+                            "5fs_br:mooshroom_plushie",
+                            "5fs_br:polar_bear_plushie",
+                            "5fs_br:panda_plushie",
+                            "5fs_br:booger_panda_plushie",
+                            "5fs_br:maple_villager_plushie",
+                            "5fs_br:phoenix_plushie",
+                            "5fs_br:thunderbird_plushie",
+                            "5fs_br:eagle_plushie",
+                            "5fs_br:simurgh_plushie",
+                            "5fs_br:moose_plushie",
+                            "5fs_br:baby_skeleton_plushie",
+                            "5fs_br:baby_skeleton_bomber_plushie",
+                            "5fs_br:crystalline_berserker_plushie",
+                            "5fs_br:mummified_pharoah_plushie",
+                            "5fs_br:ombari_the_jungle_king_plushie",
+                            "5fs_br:llama_plushie",
+                            "5fs_br:llama_plushie_red",
+                            "5fs_br:llama_plushie_blue",
+                            "5fs_br:llama_plushie_yellow",
+                            "5fs_br:llama_plushie_white",
+                            "5fs_br:llama_plushie_light_gray",
+                            "5fs_br:llama_plushie_purple",
+                            "5fs_br:llama_plushie_pink",
+                            "5fs_br:llama_plushie_orange",
+                            "5fs_br:llama_plushie_magenta",
+                            "5fs_br:llama_plushie_lime",
+                            "5fs_br:llama_plushie_light_blue",
+                            "5fs_br:llama_plushie_green",
+                            "5fs_br:llama_plushie_cyan",
+                            "5fs_br:llama_plushie_gray",
+                            "5fs_br:llama_plushie_brown",
+                            "5fs_br:llama_plushie_black",
+                            "5fs_br:sheep_plushie",
+                            "5fs_br:red_sheep_plushie",
+                            "5fs_br:orange_sheep_plushie",
+                            "5fs_br:yellow_sheep_plushie",
+                            "5fs_br:lime_sheep_plushie",
+                            "5fs_br:green_sheep_plushie",
+                            "5fs_br:cyan_sheep_plushie",
+                            "5fs_br:light_blue_sheep_plushie",
+                            "5fs_br:blue_sheep_plushie",
+                            "5fs_br:purple_sheep_plushie",
+                            "5fs_br:magenta_sheep_plushie",
+                            "5fs_br:pink_sheep_plushie",
+                            "5fs_br:brown_sheep_plushie",
+                            "5fs_br:black_sheep_plushie",
+                            "5fs_br:gray_sheep_plushie",
+                            "5fs_br:light_gray_sheep_plushie",
+                            "5fs_br:rainbow_sheep_plushie"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:raw_sulfur_dust",
+                            "name": "5fs_br:itemGroup.name.dusts"
+                        },
+                        "items": [
+                            "5fs_br:raw_sulfur_dust",
+                            "5fs_br:raw_copper_dust",
+                            "5fs_br:raw_iron_dust",
+                            "5fs_br:raw_gold_dust",
+                            "5fs_br:raw_meteorite_dust",
+                            "5fs_br:raw_dragonite_dust",
+                            "5fs_br:raw_quartz_dust",
+                            "5fs_br:rose_quartz_dust",
+                            "5fs_br:raw_resonant_crystal_dust",
+                            "5fs_br:raw_cobalt_dust",
+                            "5fs_br:glimmerite_dust"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:steel_lamp",
+                            "name": "5fs_br:itemGroup.name.lamps"
+                        },
+                        "items": [
+                            "5fs_br:glimmerite_lamp",
+                            "5fs_br:sandstone_lamp",
+                            "5fs_br:steel_lamp",
+                            "5fs_br:rose_quartz_lamp",
+                            "5fs_br:cloud_lamp",
+                            "5fs_br:crystalline_bulb",
+                            "5fs_br:chorus_lamp"
+                        ]
+                    },
+                    {
+                        "items": [
+                            "5fs_br:maple_syrup"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:mossy_cobblestone_flower_pot",
+                            "name": "5fs_br:itemGroup.name.flowerPots"
+                        },
+                        "items": [
+                            "5fs_br:mossy_cobblestone_flower_pot",
+                            "5fs_br:mossy_stone_brick_flower_pot",
+                            "5fs_br:sandstone_flower_pot"
+                        ]
+                    },
+                    {
+                        "items": [
+                            "5fs_br:giant_redwood_bowl"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:sap_bucket_250ml",
+                            "name": "5fs_br:itemGroup.name.sapBuckets"
+                        },
+                        "items": [
+                            "5fs_br:sap_bucket_250ml",
+                            "5fs_br:sap_bucket_500ml",
+                            "5fs_br:sap_bucket_750ml",
+                            "5fs_br:sap_bucket_1000ml"
+                        ]
+                    },
+                    {
+                        "items": [
+                            "5fs_br:meteorite_lava_bucket",
+                            "5fs_br:bucket_of_squirrel"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:empty_jar",
+                            "name": "5fs_br:itemGroup.name.jars"
+                        },
+                        "items": [
+                            "5fs_br:empty_jar",
+                            "5fs_br:sap_jar_250ml",
+                            "5fs_br:sap_jar_500ml"
+                        ]
+                    },
+                    {
+                        "items": [
+                            "5fs_br:emerald_nugget",
+                            "5fs_br:meteorite_nugget",
+                            "5fs_br:dragonite_nugget"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:raw_crystalline",
+                            "name": "5fs_br:itemGroup.name.rawOres"
+                        },
+                        "items": [
+                            "5fs_br:raw_crystalline",
+                            "5fs_br:raw_crystalline_shard",
+                            "5fs_br:raw_sulfur",
+                            "5fs_br:raw_cobalt",
+                            "5fs_br:raw_dragonite"
+                        ]
+                    },
+                    {
+                        "items": [
+                            "5fs_br:meteorite_scrap"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:crystalline_ingot",
+                            "name": "5fs_br:itemGroup.name.ingots"
+                        },
+                        "items": [
+                            "5fs_br:crystalline_ingot",
+                            "5fs_br:sulfur_ingot",
+                            "5fs_br:meteorite_ingot",
+                            "5fs_br:dragonite_ingot",
+                            "5fs_br:steel_ingot",
+                            "5fs_br:obsidian_ingot",
+                            "5fs_br:cobalt_ingot"
+                        ]
+                    },
+                    {
+                        "items": [
+                            "5fs_br:rose_quartz",
+                            "5fs_br:resonant_crystal_shard",
+                            "5fs_br:dragon_scales",
+                            "5fs_br:goblin_bile",
+                            "5fs_br:shark_tooth",
+                            "5fs_br:giant_shark_tooth",
+                            "5fs_br:moose_antler",
+                            "5fs_br:giant_eagle_feather",
+                            "5fs_br:phoenix_feather",
+                            "5fs_br:thunderbird_feather",
+                            "5fs_br:moose_hide",
+                            "5fs_br:shark_hide",
+                            "5fs_br:steel_rod"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:charm_of_blaze",
+                            "name": "5fs_br:itemGroup.name.charms"
+                        },
+                        "items": [
+                            "5fs_br:charm_of_zombie",
+                            "5fs_br:charm_of_creeper",
+                            "5fs_br:charm_of_skeleton",
+                            "5fs_br:charm_of_spider",
+                            "5fs_br:charm_of_enderman",
+                            "5fs_br:charm_of_witch",
+                            "5fs_br:charm_of_cow",
+                            "5fs_br:charm_of_sheep",
+                            "5fs_br:charm_of_pig",
+                            "5fs_br:charm_of_chicken",
+                            "5fs_br:charm_of_wolf",
+                            "5fs_br:charm_of_axolotl",
+                            "5fs_br:charm_of_stray",
+                            "5fs_br:charm_of_slime",
+                            "5fs_br:charm_of_slime_magma",
+                            "5fs_br:charm_of_wither_skeleton",
+                            "5fs_br:charm_of_silverfish",
+                            "5fs_br:charm_of_shulker",
+                            "5fs_br:charm_of_pillager",
+                            "5fs_br:charm_of_husk",
+                            "5fs_br:charm_of_hoglin",
+                            "5fs_br:charm_of_guardian",
+                            "5fs_br:charm_of_ghast",
+                            "5fs_br:charm_of_endermite",
+                            "5fs_br:charm_of_bogged",
+                            "5fs_br:charm_of_blaze",
+                            "5fs_br:charm_of_squid",
+                            "5fs_br:charm_of_piglin",
+                            "5fs_br:charm_of_drowned",
+                            "5fs_br:charm_of_zombie_chicken",
+                            "5fs_br:charm_of_thunderbird",
+                            "5fs_br:charm_of_sulfur_fish",
+                            "5fs_br:charm_of_squirrel",
+                            "5fs_br:charm_of_vex",
+                            "5fs_br:charm_of_skeleton_bomber",
+                            "5fs_br:charm_of_shroud",
+                            "5fs_br:charm_of_phoenix",
+                            "5fs_br:charm_of_moose",
+                            "5fs_br:charm_of_goblin",
+                            "5fs_br:charm_of_glimmering_moth",
+                            "5fs_br:charm_of_giant_eagle",
+                            "5fs_br:charm_of_baby_skeleton",
+                            "5fs_br:charm_of_beaver",
+                            "5fs_br:charm_of_butterfly",
+                            "5fs_br:charm_of_crystal_golem",
+                            //"5fs_br:charm_of_crystal_wraith",
+                            "5fs_br:charm_of_crystalline_slime",
+                            "5fs_br:charm_of_dart_goblin",
+                            "5fs_br:charm_of_deer",
+                            "5fs_br:charm_of_duck",
+                            "5fs_br:charm_of_meteor"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:rune_of_light",
+                            "name": "5fs_br:itemGroup.name.runes"
+                        },
+                        "items": [
+                            "5fs_br:rune_of_light",
+                            "5fs_br:rune_of_souls",
+                            "5fs_br:rune_of_growth",
+                            "5fs_br:rune_of_decay",
+                            "5fs_br:rune_of_knowledge",
+                            "5fs_br:rune_of_venom",
+                            "5fs_br:rune_of_shadows",
+                            "5fs_br:rune_of_beasts",
+                            "5fs_br:rune_of_shields",
+                            "5fs_br:rune_of_void",
+                            "5fs_br:rune_of_eternity",
+                            "5fs_br:rune_of_tides",
+                            "5fs_br:rune_of_frost",
+                            "5fs_br:rune_of_blades",
+                            "5fs_br:rune_of_earth",
+                            "5fs_br:rune_of_storms",
+                            "5fs_br:rune_of_flame"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:basic_scroll",
+                            "name": "5fs_br:itemGroup.name.scrolls"
+                        },
+                        "items": [
+                            "5fs_br:basic_scroll",
+                            "5fs_br:enchanted_scroll",
+                            "5fs_br:greater_scroll",
+                            "5fs_br:ancient_scroll",
+                            "5fs_br:mythic_scroll"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:spell_of_bunkering",
+                            "name": "5fs_br:itemGroup.name.spells"
+                        },
+                        "items": [
+                            "5fs_br:spell_of_transformation",
+                            "5fs_br:spell_of_sight",
+                            "5fs_br:spell_of_exhaustion",
+                            "5fs_br:spell_of_repositioning",
+                            "5fs_br:spell_of_bladeworks",
+                            "5fs_br:spell_of_voidwalking",
+                            "5fs_br:spell_of_hailstorm",
+                            "5fs_br:spell_of_blazing_inferno",
+                            "5fs_br:spell_of_raging_fury_+",
+                            "5fs_br:spell_of_raging_fury_-",
+                            "5fs_br:spell_of_trickery",
+                            "5fs_br:spell_of_bunkering",
+                            "5fs_br:spell_of_chain_lightning",
+                            "5fs_br:spell_of_destruction",
+                            "5fs_br:spell_of_ghastly_shackles",
+                            "5fs_br:spell_of_mysteries"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "5fs_br:itemGroup.name.cores",
+                            "icon": "5fs_br:redwood_sentinel_core"
+                        },
+                        "items": [
+                            "5fs_br:redwood_sentinel_core",
+                            "5fs_br:ombari_core",
+                            "5fs_br:crystalline_berserker_core",
+                            "5fs_br:mummified_pharoah_core",
+                            "5fs_br:pirate_captain_core"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:skull_and_bones",
+                            "name": "5fs_br:itemGroup.name.bones"
+                        },
+                        "items": [
+                            "5fs_br:bones",
+                            "5fs_br:skull",
+                            "5fs_br:skull_and_bones"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:compact_coal",
+                            "name": "5fs_br:itemGroup.name.compactItems"
+                        },
+                        "items": [
+                            "5fs_br:compact_coal",
+                            "5fs_br:compact_diamond",
+                            "5fs_br:compact_emerald",
+                            "5fs_br:compact_lapis",
+                            "5fs_br:compact_raw_copper",
+                            "5fs_br:compact_raw_crystalline",
+                            "5fs_br:compact_raw_gold",
+                            "5fs_br:compact_raw_iron",
+                            "5fs_br:compact_raw_sulfur",
+                            "5fs_br:compact_raw_dragonite",
+                            "5fs_br:compact_redstone_dust",
+                            "5fs_br:compact_resonant_crystal_shard",
+                            "5fs_br:compact_iron_ingot",
+                            "5fs_br:compact_gold_ingot",
+                            "5fs_br:compact_copper_ingot",
+                            "5fs_br:compact_crystalline_ingot",
+                            "5fs_br:compact_meteorite_ingot",
+                            "5fs_br:compact_dragonite_ingot",
+                            "5fs_br:compact_obsidian_ingot",
+                            "5fs_br:compact_steel_ingot",
+                            "5fs_br:compact_sulfur_ingot",
+                            "5fs_br:compact_meteorite_scrap",
+                            "5fs_br:compact_netherite_scrap",
+                            "5fs_br:compact_raw_quartz_dust",
+                            "5fs_br:compact_raw_copper_dust",
+                            "5fs_br:compact_raw_gold_dust",
+                            "5fs_br:compact_raw_iron_dust",
+                            "5fs_br:compact_raw_sulfur_dust",
+                            "5fs_br:compact_raw_resonant_crystal_dust",
+                            "5fs_br:compact_raw_meteorite_dust",
+                            "5fs_br:compact_raw_dragonite_dust",
+                            "5fs_br:compact_rose_quartz_dust",
+                            "5fs_br:compact_dragonite_nugget",
+                            "5fs_br:compact_raw_cobalt",
+                            "5fs_br:compact_raw_cobalt_dust",
+                            "5fs_br:compact_cobalt_ingot",
+                            "5fs_br:compact_netherite_ingot"
+                        ]
+                    },
+                    {
+                        "items": [
+                            "5fs_br:crystalline_slime_ball",
+                            "5fs_br:glimmering_pearl",
+                            "5fs_br:eye_of_iris",
+                            "5fs_br:eye_of_the_dragon"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:red_aura",
+                            "name": "5fs_br:itemGroup.name.auras"
+                        },
+                        "items": [
+                            "5fs_br:red_aura",
+                            "5fs_br:blue_aura",
+                            "5fs_br:light_blue_aura",
+                            "5fs_br:gray_aura",
+                            "5fs_br:light_gray_aura",
+                            "5fs_br:lime_aura",
+                            "5fs_br:purple_aura",
+                            "5fs_br:orange_aura",
+                            "5fs_br:green_aura",
+                            "5fs_br:black_aura",
+                            "5fs_br:white_aura",
+                            "5fs_br:brown_aura",
+                            "5fs_br:pink_aura",
+                            "5fs_br:cyan_aura",
+                            "5fs_br:yellow_aura",
+                            "5fs_br:magenta_aura"
+                        ]
+                    },
+                    {
+                        "items": [
+                            "5fs_br:sandstone_dropper",
+                            "5fs_br:sandstone_dispenser"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:ore_grinder",
+                            "name": "5fs_br:itemGroup.name.machines"
+                        },
+                        "items": [
+                            "5fs_br:chunk_loader",
+                            "5fs_br:ore_grinder",
+                            "5fs_br:forge"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:quarry",
+                            "name": "5fs_br:itemGroup.name.quarries"
+                        },
+                        "items": [
+                            "5fs_br:quarry",
+                            "5fs_br:quarry_diamond",
+                            "5fs_br:quarry_crystalline",
+                            "5fs_br:quarry_netherite",
+                            "5fs_br:quarry_dragonite"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:item_node",
+                            "name": "5fs_br:itemGroup.name.nodes"
+                        },
+                        "items": [
+                            "5fs_br:item_node",
+                            "5fs_br:copper_item_node",
+                            "5fs_br:waxed_copper_item_node",
+                            "5fs_br:exposed_copper_item_node",
+                            "5fs_br:waxed_exposed_copper_item_node",
+                            "5fs_br:weathered_copper_item_node",
+                            "5fs_br:waxed_weathered_copper_item_node",
+                            "5fs_br:oxidized_copper_item_node",
+                            "5fs_br:waxed_oxidized_copper_item_node",
+                            "5fs_br:pipe",
+                            "5fs_br:pipe_joint",
+                            "5fs_br:copper_pipe",
+                            "5fs_br:copper_pipe_joint",
+                            "5fs_br:exposed_copper_pipe",
+                            "5fs_br:exposed_copper_pipe_joint",
+                            "5fs_br:weathered_copper_pipe",
+                            "5fs_br:weathered_copper_pipe_joint",
+                            "5fs_br:oxidized_copper_pipe",
+                            "5fs_br:oxidized_copper_pipe_joint",
+                            "5fs_br:waxed_copper_pipe",
+                            "5fs_br:waxed_copper_pipe_joint",
+                            "5fs_br:waxed_exposed_copper_pipe",
+                            "5fs_br:waxed_exposed_copper_pipe_joint",
+                            "5fs_br:waxed_weathered_copper_pipe",
+                            "5fs_br:waxed_weathered_copper_pipe_joint",
+                            "5fs_br:waxed_oxidized_copper_pipe",
+                            "5fs_br:waxed_oxidized_copper_pipe_joint"
+                        ]
+                    },
+                    {
+                        "items": [
+                            "5fs_br:crystalline_tnt"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:panda_flag",
+                            "name": "5fs_br:itemGroup.name.flags"
+                        },
+                        "items": [
+                            "5fs_br:enderman_flag",
+                            "5fs_br:night_sky_flag",
+                            "5fs_br:panda_flag",
+                            "5fs_br:coral_cove_flag",
+                            "5fs_br:deep_ocean_flag",
+                            "5fs_br:ocean_waves_flag",
+                            "5fs_br:cow_flag",
+                            "5fs_br:bear_flag",
+                            "5fs_br:barrel_flag",
+                            "5fs_br:beach_flag",
+                            "5fs_br:prismarine_flag",
+                            "5fs_br:warden_flag",
+                            "5fs_br:furnace_flag",
+                            "5fs_br:meteor_flag",
+                            "5fs_br:wither_flag",
+                            "5fs_br:cactus_flag",
+                            "5fs_br:creeper_flag",
+                            "5fs_br:tree_flag",
+                            "5fs_br:frozen_flag",
+                            "5fs_br:glimmerite_flag",
+                            "5fs_br:ice_spikes_flag",
+                            "5fs_br:ores_flag",
+                            "5fs_br:crystal_canyon_flag",
+                            "5fs_br:quarry_flag",
+                            "5fs_br:crystalline_berserker_flag",
+                            "5fs_br:potion_flag",
+                            "5fs_br:turtle_flag",
+                            "5fs_br:dragonite_flag",
+                            "5fs_br:shulker_flag",
+                            "5fs_br:witch_flag",
+                            "5fs_br:blaze_flag",
+                            "5fs_br:pumpkin_flag",
+                            "5fs_br:fox_flag",
+                            "5fs_br:flower_flag",
+                            "5fs_br:cherry_flag",
+                            "5fs_br:pig_flag",
+                            "5fs_br:amethyst_flag",
+                            "5fs_br:dragon_flag",
+                            "5fs_br:breeze_flag",
+                            "5fs_br:lumberjack_flag",
+                            "5fs_br:maple_flag",
+                            "5fs_br:redstone_flag",
+                            "5fs_br:ghast_flag",
+                            "5fs_br:sheep_flag",
+                            "5fs_br:snowy_flag",
+                            "5fs_br:bee_flag",
+                            "5fs_br:glowstone_flag",
+                            "5fs_br:honeycomb_flag",
+                            "5fs_br:purple_magic_flag",
+                            "5fs_br:yellow_magic_flag",
+                            "5fs_br:enchanting_table_flag"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:deep_ocean_banner",
+                            "name": "5fs_br:itemGroup.name.hangingBanners"
+                        },
+                        "items": [
+                            "5fs_br:enderman_banner",
+                            "5fs_br:night_sky_banner",
+                            "5fs_br:panda_banner",
+                            "5fs_br:coral_cove_banner",
+                            "5fs_br:deep_ocean_banner",
+                            "5fs_br:ocean_waves_banner",
+                            "5fs_br:cow_banner",
+                            "5fs_br:bear_banner",
+                            "5fs_br:barrel_banner",
+                            "5fs_br:beach_banner",
+                            "5fs_br:prismarine_banner",
+                            "5fs_br:warden_banner",
+                            "5fs_br:furnace_banner",
+                            "5fs_br:meteor_banner",
+                            "5fs_br:wither_banner",
+                            "5fs_br:cactus_banner",
+                            "5fs_br:creeper_banner",
+                            "5fs_br:tree_banner",
+                            "5fs_br:frozen_banner",
+                            "5fs_br:glimmerite_banner",
+                            "5fs_br:ice_spikes_banner",
+                            "5fs_br:ores_banner",
+                            "5fs_br:crystal_canyon_banner",
+                            "5fs_br:quarry_banner",
+                            "5fs_br:crystalline_berserker_banner",
+                            "5fs_br:potion_banner",
+                            "5fs_br:turtle_banner",
+                            "5fs_br:dragonite_banner",
+                            "5fs_br:shulker_banner",
+                            "5fs_br:witch_banner",
+                            "5fs_br:blaze_banner",
+                            "5fs_br:pumpkin_banner",
+                            "5fs_br:fox_banner",
+                            "5fs_br:flower_banner",
+                            "5fs_br:cherry_banner",
+                            "5fs_br:pig_banner",
+                            "5fs_br:amethyst_banner",
+                            "5fs_br:dragon_banner",
+                            "5fs_br:breeze_banner",
+                            "5fs_br:lumberjack_banner",
+                            "5fs_br:maple_banner",
+                            "5fs_br:redstone_banner",
+                            "5fs_br:ghast_banner",
+                            "5fs_br:sheep_banner",
+                            "5fs_br:snowy_banner",
+                            "5fs_br:bee_banner",
+                            "5fs_br:glowstone_banner",
+                            "5fs_br:honeycomb_banner",
+                            "5fs_br:purple_magic_banner",
+                            "5fs_br:yellow_magic_banner",
+                            "5fs_br:enchanting_table_banner"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:mythical_bag_upgrade",
+                            "name": "5fs_br:itemGroup.name.bagsUpgrades"
+                        },
+                        "items": [
+                            "5fs_br:common_bag_upgrade",
+                            "5fs_br:uncommon_bag_upgrade",
+                            "5fs_br:rare_bag_upgrade",
+                            "5fs_br:epic_bag_upgrade",
+                            "5fs_br:mythical_bag_upgrade"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:large_ocean_mine",
+                            "name": "5fs_br:itemGroup.name.oceanMines"
+                        },
+                        "items": [
+                            "5fs_br:small_ocean_mine",
+                            "5fs_br:medium_ocean_mine",
+                            "5fs_br:large_ocean_mine"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:bamboo_spikes",
+                            "name": "5fs_br:itemGroup.name.bambooSpikes"
+                        },
+                        "items": [
+                            "5fs_br:bamboo_spikes",
+                            "5fs_br:poison_i_bamboo_spikes",
+                            "5fs_br:poison_ii_bamboo_spikes",
+                            "5fs_br:weakness_i_bamboo_spikes",
+                            "5fs_br:slowness_i_bamboo_spikes",
+                            "5fs_br:slowness_iv_bamboo_spikes",
+                            "5fs_br:harming_i_bamboo_spikes",
+                            "5fs_br:harming_ii_bamboo_spikes",
+                            "5fs_br:decay_ii_bamboo_spikes"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:mossy_cobblestone_decorated_pot",
+                            "name": "5fs_br:itemGroup.name.decoratedPots"
+                        },
+                        "items": [
+                            "5fs_br:mossy_cobblestone_decorated_pot",
+                            "5fs_br:mossy_stone_brick_decorated_pot",
+                            "5fs_br:sandstone_decorated_pot",
+                            "5fs_br:mossy_cobblestone_trap_decorated_pot",
+                            "5fs_br:mossy_stone_brick_trap_decorated_pot",
+                            "5fs_br:sandstone_trap_decorated_pot"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:sandstone_key",
+                            "name": "5fs_br:itemGroup.name.keys"
+                        },
+                        "items": [
+                            "5fs_br:sandstone_key",
+                            "5fs_br:tuff_key",
+                            "5fs_br:desert_trial_key",
+                            "5fs_br:jungle_trial_key",
+                            "5fs_br:crystal_trial_key"
+                        ]
+                    },
+                    {
+                        "items": [
+                            "5fs_br:sandstone_lock",
+                            "5fs_br:tuff_lock",
+                            "5fs_br:key",
+                            "5fs_br:electrical_circuit_board",
+                            "5fs_br:ancient_bark",
+                            "5fs_br:maple_tree_tap",
+                            "5fs_br:crystal_bulb",
+                            "5fs_br:sky_star_fragment",
+                            "5fs_br:sky_star",
+                            "5fs_br:ender_essence",
+                            "5fs_br:bedrock_reimagined_book"
+                        ]
+                    }
+                ]
+            },
+            {
+                "category_name": "nature",
+                "groups": [
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.stone"
+                        },
+                        "items": [
+                            "5fs_br:limestone",
+                            "5fs_br:polished_limestone",
+                            "5fs_br:smooth_limestone"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.ore"
+                        },
+                        "items": [
+                            "5fs_br:crystalline_ore",
+                            "5fs_br:deepslate_crystalline_ore",
+                            "5fs_br:sulfur_ore",
+                            "5fs_br:deepslate_sulfur_ore",
+                            "5fs_br:glintrock_emerald_ore",
+                            "5fs_br:meteorite_debris",
+                            "5fs_br:rose_quartz_ore",
+                            "5fs_br:dragonite_ore",
+                            "5fs_br:deepslate_rose_quartz_ore",
+                            "5fs_br:nether_rose_quartz_ore",
+                            "5fs_br:brimstone_rose_quartz_ore",
+                            "5fs_br:brimstone_quartz_ore",
+                            "5fs_br:brimstone_cobalt_ore",
+                            "5fs_br:brimstone_gold_ore"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.leaves"
+                        },
+                        "items": [
+                            "5fs_br:maple_leaves",
+                            "5fs_br:bushy_maple_leaves",
+                            "5fs_br:redwood_leaves",
+                            "5fs_br:bushy_redwood_leaves",
+                            "5fs_br:palm_leaves"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.seed"
+                        },
+                        "items": [
+                            "5fs_br:giant_pumpkin_seed"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.crop"
+                        },
+                        "items": [
+                            "5fs_br:crystalline_apple",
+                            "5fs_br:acorn",
+                            "5fs_br:lucky_acorn",
+                            "5fs_br:giant_pumpkin"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.sapling"
+                        },
+                        "items": [
+                            "5fs_br:maple_sapling",
+                            "5fs_br:redwood_sapling",
+                            "5fs_br:palm_sapling"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.flower"
+                        },
+                        "items": [
+                            "5fs_br:rose",
+                            "5fs_br:blue_rose",
+                            "5fs_br:buttercup",
+                            "5fs_br:maple_flower",
+                            "5fs_br:tall_maple_flower",
+                            "5fs_br:redwood_flower",
+                            "5fs_br:tall_redwood_flower",
+                            "5fs_br:rafflesia",
+                            "5fs_br:yellow_petals"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.rawFood"
+                        },
+                        "items": [
+                            "5fs_br:raw_venison",
+                            "5fs_br:raw_shark_fin",
+                            "5fs_br:beaver_tail"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.grass"
+                        },
+                        "items": [
+                            "5fs_br:short_autumn_grass",
+                            "5fs_br:tall_autumn_grass",
+                            "5fs_br:autumn_bush",
+                            "5fs_br:autumn_sprouts",
+                            "5fs_br:maple_bush",
+                            "5fs_br:redwood_fern",
+                            "5fs_br:large_redwood_fern",
+                            "5fs_br:redwood_grass",
+                            "5fs_br:tall_redwood_grass",
+                            "5fs_br:redwood_bush_1",
+                            "5fs_br:redwood_bush_2",
+                            "5fs_br:redwood_bush_3",
+                            "5fs_br:redwood_sprouts",
+                            "5fs_br:cattail"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.mushroom"
+                        },
+                        "items": [
+                            "5fs_br:brown_polypore",
+                            "5fs_br:red_polypore",
+                            "5fs_br:redwood_yellow_polypore",
+                            "5fs_br:red_mushroom",
+                            "5fs_br:poisonous_green_mushroom",
+                            "5fs_br:poisonous_purple_mushroom",
+                            "5fs_br:redwood_brown_mushroom",
+                            "5fs_br:redwood_yellow_mushroom",
+                            "5fs_br:redwood_yellow_mushroom_block"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.log"
+                        },
+                        "items": [
+                            "5fs_br:maple_log",
+                            "5fs_br:stripped_maple_log",
+                            "5fs_br:dripping_maple_log",
+                            "5fs_br:stripped_dripping_maple_log",
+                            "5fs_br:petrified_log",
+                            "5fs_br:cracked_petrified_log",
+                            "5fs_br:stripped_petrified_log",
+                            "5fs_br:stripped_cracked_petrified_log",
+                            "5fs_br:redwood_log",
+                            "5fs_br:stripped_redwood_log",
+                            "5fs_br:palm_log",
+                            "5fs_br:stripped_palm_log"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.wood"
+                        },
+                        "items": [
+                            "5fs_br:maple_wood",
+                            "5fs_br:stripped_maple_wood",
+                            "5fs_br:stripped_petrified_wood",
+                            "5fs_br:stripped_cracked_petrified_wood",
+                            "5fs_br:redwood_wood",
+                            "5fs_br:stripped_redwood_wood",
+                            "5fs_br:palm_wood",
+                            "5fs_br:stripped_palm_wood"
+                        ]
+                    },
+                    {
+                        "items": [
+                            "5fs_br:autumn_grass",
+                            "5fs_br:quicksand"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:small_cactus",
+                            "name": "5fs_br:itemGroup.name.cacti"
+                        },
+                        "items": [
+                            "5fs_br:small_cactus",
+                            "5fs_br:medium_cactus",
+                            "5fs_br:large_cactus"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "5fs_br:itemGroup.name.hollowLogs",
+                            "icon": "5fs_br:oak_hollow_log"
+                        },
+                        "items": [
+                            "5fs_br:oak_hollow_log",
+                            "5fs_br:stripped_oak_hollow_log",
+                            "5fs_br:spruce_hollow_log",
+                            "5fs_br:stripped_spruce_hollow_log",
+                            "5fs_br:birch_hollow_log",
+                            "5fs_br:stripped_birch_hollow_log",
+                            "5fs_br:maple_hollow_log",
+                            "5fs_br:stripped_maple_hollow_log",
+                            "5fs_br:jungle_hollow_log",
+                            "5fs_br:stripped_jungle_hollow_log",
+                            "5fs_br:redwood_hollow_log",
+                            "5fs_br:stripped_redwood_hollow_log",
+                            "5fs_br:acacia_hollow_log",
+                            "5fs_br:stripped_acacia_hollow_log",
+                            "5fs_br:dark_oak_hollow_log",
+                            "5fs_br:stripped_dark_oak_hollow_log",
+                            "5fs_br:mangrove_hollow_log",
+                            "5fs_br:stripped_mangrove_hollow_log",
+                            "5fs_br:cherry_hollow_log",
+                            "5fs_br:stripped_cherry_hollow_log",
+                            "5fs_br:crimson_hollow_log",
+                            "5fs_br:stripped_crimson_hollow_log",
+                            "5fs_br:warped_hollow_log",
+                            "5fs_br:stripped_warped_hollow_log",
+                            "5fs_br:pale_oak_hollow_log",
+                            "5fs_br:stripped_pale_oak_hollow_log",
+                            "5fs_br:palm_hollow_log",
+                            "5fs_br:stripped_palm_hollow_log",
+                            "5fs_br:petrified_hollow_log",
+                            "5fs_br:stripped_petrified_hollow_log"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "5fs_br:itemGroup.name.smallLogs",
+                            "icon": "5fs_br:small_oak_log"
+                        },
+                        "items": [
+                            "5fs_br:small_maple_log",
+                            "5fs_br:wild_small_maple_log",
+                            "5fs_br:small_oak_log",
+                            "5fs_br:small_birch_log",
+                            "5fs_br:small_spruce_log",
+                            "5fs_br:small_jungle_log",
+                            "5fs_br:small_acacia_log",
+                            "5fs_br:small_dark_oak_log",
+                            "5fs_br:small_mangrove_log",
+                            "5fs_br:small_cherry_log",
+                            "5fs_br:small_crimson_log",
+                            "5fs_br:small_warped_log",
+                            "5fs_br:small_pale_oak_log",
+                            "5fs_br:small_palm_log"
+                        ]
+                    },
+                    {
+                        "items": [
+                            "5fs_br:sap",
+                            "5fs_br:golden_sap",
+                            "5fs_br:coconut",
+                            "5fs_br:coconut_half",
+                            "5fs_br:infused_bonemeal",
+                            "5fs_br:liana",
+                            "5fs_br:yellow_flowered_lilypad",
+                            "5fs_br:pink_flowered_lilypad",
+                            "5fs_br:magenta_flowered_lilypad",
+                            "5fs_br:water_moss_algae",
+                            "5fs_br:dead_seagrass",
+                            "5fs_br:dead_kelp",
+                            "5fs_br:tall_dead_bush",
+                            "5fs_br:tumbleweed",
+                            "5fs_br:waxed_tumbleweed",
+                            "5fs_br:small_rocks",
+                            "5fs_br:pointed_sandstone",
+                            "5fs_br:pointed_sandstone_block",
+                            "5fs_br:pointed_red_sandstone",
+                            "5fs_br:pointed_red_sandstone_block",
+                            "5fs_br:maple_leaf_litter",
+                            "5fs_br:redwood_leaf_litter",
+                            "5fs_br:mossy_glow_lichen_carpet",
+                            "5fs_br:mossy_glow_lichen_block",
+                            "5fs_br:crystal_blossom",
+                            "5fs_br:crystal_bloom",
+                            "5fs_br:pointed_crystal",
+                            "5fs_br:glimmerite_block",
+                            "5fs_br:resonant_crystal_block",
+                            "5fs_br:budding_resonant_crystal_block",
+                            "5fs_br:resonant_cluster",
+                            "5fs_br:medium_resonant_bud",
+                            "5fs_br:small_resonant_bud"
+                        ]
+                    },
+                    {
+                        "items": [
+                            "5fs_br:duck_egg",
+                            "5fs_br:mummified_bones",
+                            "5fs_br:super_sponge",
+                            "5fs_br:super_sponge_wet",
+                            "5fs_br:lava_sponge",
+                            "5fs_br:molten_lava_sponge"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "5fs_br:large_crystalline_geode",
+                            "name": "5fs_br:itemGroup.name.geodes"
+                        },
+                        "items": [
+                            "5fs_br:large_crystalline_geode",
+                            "5fs_br:medium_crystalline_geode",
+                            "5fs_br:small_crystalline_geode",
+                            "5fs_br:large_quartz_geode",
+                            "5fs_br:medium_quartz_geode",
+                            "5fs_br:small_quartz_geode",
+                            "5fs_br:large_rose_quartz_geode",
+                            "5fs_br:medium_rose_quartz_geode",
+                            "5fs_br:small_rose_quartz_geode"
+                        ]
+                    },
+                    {
+                        "items": [
+                            "5fs_br:reinforced_sandstone",
+                            "5fs_br:reinforced_tuff",
+                            "5fs_br:maple_trunk",
+                            "5fs_br:small_maple_trunk",
+                            "5fs_br:maple_wood_chunk",
+                            "5fs_br:dam",
+                            "5fs_br:maple_leaf_pile"
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

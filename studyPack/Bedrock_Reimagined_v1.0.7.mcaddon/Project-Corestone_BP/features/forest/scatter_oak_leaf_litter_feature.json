@@ -1,0 +1,22 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:scatter_feature": {
+    "description": {
+      "identifier": "5fs_br:forest/scatter_oak_leaf_litter_feature"
+    },
+    "iterations": 200,
+    "x": {
+      "distribution": "gaussian",
+      "extent": [ -8, 8 ]
+    },
+    "y": {
+      "distribution": "gaussian",
+      "extent": [ -4, 4 ]
+    },
+    "z": {
+      "distribution": "gaussian",
+      "extent": [ -8, 8 ]
+    },
+    "places_feature": "5fs_br:vegetation/leaf_litter_feature"
+  }
+}

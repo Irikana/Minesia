@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "steel_pillar_top_left_corner",
+		"metalness_emissive_roughness": "steel_pillar_top_left_corner_mer"
+	}
+}

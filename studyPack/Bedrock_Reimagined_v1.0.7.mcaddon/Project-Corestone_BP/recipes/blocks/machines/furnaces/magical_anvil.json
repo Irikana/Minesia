@@ -1,0 +1,42 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "5fs_br:magical_anvil"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "#M#",
+      "BLB",
+      "#I#"
+    ],
+    "key": {
+      "#": {
+        "item": "5fs_br:dragonite_nugget"
+      },
+      "L": {
+        "item": "minecraft:anvil"
+      },
+      "B": {
+        "item": "5fs_br:dragon_scales"
+      },
+      "M": {
+        "item": "5fs_br:meteorite_ingot"
+      },
+      "I": {
+        "item": "5fs_br:mana_bottle"
+      }
+    },
+    "unlock": [
+      {
+        "item": "5fs_br:sulfur_ingot"
+      }
+    ],
+    "result": {
+      "item": "5fs_br:magical_anvil",
+      "count": 1
+    }
+  }
+}

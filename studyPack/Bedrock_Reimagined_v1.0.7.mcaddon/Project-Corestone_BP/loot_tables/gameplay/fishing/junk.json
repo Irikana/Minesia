@@ -1,0 +1,202 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:leather_boots",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0,
+                "max": 0.90
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:waterlily",
+          "weight": 17
+        },
+        {
+          "type": "item",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 10.0
+            }
+          ],
+          "name": "minecraft:ink_sac"
+        },
+        {
+          "type": "item",
+          "name": "minecraft:leather",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "minecraft:bone",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "minecraft:potion",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "minecraft:string",
+          "weight": 5
+        },
+        {
+          "type": "item",
+          "name": "minecraft:fishing_rod",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0,
+                "max": 0.90
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:bowl",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "minecraft:stick",
+          "weight": 5
+        },
+        {
+          "type": "item",
+          "name": "minecraft:dye",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "set_data",
+              "data": 0
+            },
+            {
+              "function": "set_count",
+              "count": 10
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:tripwire_hook",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "minecraft:rotten_flesh",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "5fs_br:shark_tooth",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "5fs_br:shark_hide",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "5fs_br:raw_shark_fin",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "5fs_br:magenta_flowered_lilypad",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "5fs_br:yellow_flowered_lilypad",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "5fs_br:pink_flowered_lilypad",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "5fs_br:bones",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "5fs_br:moose_hide",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "minecraft:glow_ink_sac",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "5fs_br:waterskin_empty",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "minecraft:resin_clump",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "minecraft:oxidised_copper_golem_statue",
+          "weight": 5
+        },
+        {
+          "type": "item",
+          "name": "minecraft:dried_kelp",
+          "weight": 12
+        },
+        {
+          "type": "item",
+          "name": "5fs_br:dead_kelp",
+          "weight": 12
+        },
+        {
+          "type": "item",
+          "name": "5fs_br:dead_seagrass",
+          "weight": 12
+        },
+        {
+          "type": "item",
+          "name": "5fs_br:dried_dead_kelp",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "minecraft:kelp",
+          "weight": 15
+        },
+        {
+          "type": "item",
+          "name": "5fs_br:giant_shark_tooth",
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "5fs_br:goblin_bile",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

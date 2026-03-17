@@ -1,0 +1,21 @@
+{
+    "format_version": "1.26.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "5fs_br:redwood_ladder",
+            "menu_category": {
+                "category": "construction"
+            }
+        },
+        "components": {
+            "minecraft:block_placer": {
+                "block": "5fs_br:redwood_ladder",
+                "replace_block_item": true
+            },
+            "minecraft:fuel": {
+                "duration": 15.0
+            },
+            "minecraft:icon": "5fs_br:redwood_ladder"
+        }
+    }
+}

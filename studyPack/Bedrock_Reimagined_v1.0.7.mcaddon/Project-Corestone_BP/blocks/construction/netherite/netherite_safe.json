@@ -1,0 +1,59 @@
+{
+  "format_version": "1.26.0",
+	"minecraft:block": {
+    "description": {
+      "identifier": "5fs_br:netherite_safe",
+      "traits": {
+        "minecraft:placement_direction": {
+          "enabled_states": ["minecraft:cardinal_direction"]
+        }
+      }
+    },
+    "components": {
+      "minecraft:geometry": "geometry.netherite_safe",
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "empty_texture",
+          "render_method": "alpha_test"
+        }
+      },
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 166.66667,
+        "item_specific_speeds": [
+          {
+            "item": {
+              "tags": "query.all_tags('minecraft:is_pickaxe') && !query.any_tag('minecraft:wooden_tier', 'minecraft:stone_tier', 'minecraft:copper_tier', 'minecraft:iron_tier', 'minecraft:gold_tier')"
+            },
+            "destroy_speed": 50
+          }
+        ]
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 1200
+      },
+      "minecraft:destruction_particles": {
+        "texture": "netherite_safe_bottom"
+      },
+      "minecraft:movable": {
+        "movement_type": "immovable"
+      },
+      "minecraft:liquid_detection": {
+        "detection_rules": [
+          {
+            "can_contain_liquid": true,
+            "liquid_type": "water"
+          }
+        ]
+      },
+      "minecraft:map_color": "#3A3A3A",
+			"minecraft:precipitation_interactions": {
+				"precipitation_behavior": "obstruct_rain"
+			},
+      "minecraft:connection_rule": {
+        "accepts_connections_from": "none"
+      },
+      "5fs_br:chest": {},
+      "tag:minecraft:is_pickaxe_item_destructible": {}
+    }
+  }
+}

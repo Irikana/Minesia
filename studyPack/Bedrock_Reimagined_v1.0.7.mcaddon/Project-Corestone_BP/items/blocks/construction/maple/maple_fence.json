@@ -1,0 +1,21 @@
+{
+    "format_version": "1.26.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "5fs_br:maple_fence",
+            "menu_category": {
+                "category": "construction",
+                "group": "minecraft:itemGroup.name.fence"
+            }
+        },
+        "components": {
+            "minecraft:block_placer": {
+                "block": "5fs_br:maple_fence",
+                "replace_block_item": true
+            },
+            "minecraft:fuel": {
+                "duration": 15
+            }
+        }
+    }
+}

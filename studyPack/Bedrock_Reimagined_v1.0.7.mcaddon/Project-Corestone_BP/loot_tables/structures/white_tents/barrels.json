@@ -1,0 +1,63 @@
+{
+  "pools": [
+    {
+      "rolls": { "min": 1, "max": 2 },
+      "entries": [
+        { "type": "item", "name": "minecraft:bread", "weight": 4, "functions": [ { "function": "set_count", "count": { "min": 1, "max": 3 } } ] },
+        { "type": "item", "name": "minecraft:cooked_mutton", "weight": 3, "functions": [ { "function": "set_count", "count": { "min": 1, "max": 3 } } ] },
+        { "type": "item", "name": "minecraft:torch", "weight": 4, "functions": [ { "function": "set_count", "count": { "min": 3, "max": 8 } } ] },
+        { "type": "item", "name": "minecraft:stick", "weight": 5, "functions": [ { "function": "set_count", "count": { "min": 2, "max": 6 } } ] },
+        { "type": "item", "name": "minecraft:arrow", "weight": 3, "functions": [ { "function": "set_count", "count": { "min": 4, "max": 10 } } ] },
+        { "type": "item", "name": "minecraft:coal", "weight": 3, "functions": [ { "function": "set_count", "count": { "min": 2, "max": 6 } } ] }
+      ]
+    },
+    {
+      "rolls": { "min": 0, "max": 1 },
+      "entries": [
+        { "type": "item", "name": "5fs_br:rope", "weight": 3, "functions": [ { "function": "set_count", "count": { "min": 4, "max": 10 } } ] },
+        { "type": "item", "name": "minecraft:leather", "weight": 2, "functions": [ { "function": "set_count", "count": { "min": 1, "max": 3 } } ] },
+        { "type": "item", "name": "minecraft:string", "weight": 2, "functions": [ { "function": "set_count", "count": { "min": 2, "max": 6 } } ] }
+      ]
+    },
+    {
+      "rolls": { "min": 0, "max": 1 },
+      "entries": [
+        { "type": "item", "name": "minecraft:iron_ingot", "weight": 2, "functions": [ { "function": "set_count", "count": { "min": 1, "max": 3 } } ] },
+        { "type": "item", "name": "minecraft:emerald", "weight": 1, "functions": [ { "function": "set_count", "count": { "min": 1, "max": 2 } } ] }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "empty", "weight": 78 },
+        { "type": "item", "name": "5fs_br:ring_band", "weight": 8 },
+        { "type": "item", "name": "5fs_br:jeweling_station", "weight": 8 },
+        { "type": "item", "name": "5fs_br:rune_table", "weight": 4 },
+        {
+          "type": "item",
+          "name": "5fs_br:steel_ingot",
+          "weight": 10,
+          "functions": [ { "function": "set_count", "count": { "min": 1, "max": 2 } } ]
+        },
+        { "type": "item", "name": "5fs_br:common_bag_upgrade", "weight": 2 }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "empty", "weight": 90 },
+        { "type": "item", "name": "5fs_br:mossy_cobblestone_flower_pot", "weight": 4 },
+        { "type": "item", "name": "5fs_br:mossy_stone_brick_flower_pot", "weight": 3 },
+        { "type": "item", "name": "5fs_br:sandstone_flower_pot", "weight": 3 }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "item", "name": "5fs_br:sky_star_fragment", "weight": 4 },
+        { "type": "item", "name": "5fs_br:mana_bottle", "weight": 6, "functions": [ { "function": "set_count", "count": { "min": 1, "max": 3 } } ] },
+        { "type": "empty", "weight": 90 }
+      ]
+    }
+  ]
+}

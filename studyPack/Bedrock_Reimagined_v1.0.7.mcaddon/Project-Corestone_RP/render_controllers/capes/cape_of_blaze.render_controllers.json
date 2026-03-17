@@ -1,0 +1,47 @@
+{
+  "format_version": "1.20.0",
+  "render_controllers": {
+    "controller.render.cape_of_blaze": {
+      "geometry": "geometry.default",
+      "arrays": {
+        "textures": {
+          "array.textures": [
+            "Texture.blaze0",
+            "Texture.blaze1",
+            "Texture.blaze2",
+            "Texture.blaze3",
+            "Texture.blaze4",
+            "Texture.blaze5",
+            "Texture.blaze6",
+            "Texture.blaze7",
+            "Texture.blaze8",
+            "Texture.blaze9",
+            "Texture.blaze10",
+            "Texture.blaze11",
+            "Texture.blaze12",
+            "Texture.blaze13",
+            "Texture.blaze14",
+            "Texture.blaze15",
+            "Texture.blaze16",
+            "Texture.blaze17",
+            "Texture.blaze18",
+            "Texture.blaze19",
+            "Texture.blaze20",
+            "Texture.blaze21",
+            "Texture.blaze22",
+            "Texture.blaze23"
+          ]
+        }
+      },
+      "materials": [
+        {
+          "*": "variable.is_enchanted?material.enchanted:material.default"
+        }
+      ],
+      "textures": [
+        "temp.life_time=query.life_time*8;return array.textures[temp.life_time];",
+        "texture.enchanted"
+      ]
+    }
+  }
+}

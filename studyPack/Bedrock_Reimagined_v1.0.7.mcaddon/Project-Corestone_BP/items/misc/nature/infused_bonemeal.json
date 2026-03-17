@@ -1,0 +1,15 @@
+{
+    "format_version": "1.26.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "5fs_br:infused_bonemeal",
+            "menu_category": {
+                "category": "nature"
+            }
+        },
+        "components": {
+            "minecraft:icon": "5fs_br:infused_bonemeal",
+            "5fs_br:infused_bonemeal": {}
+        }
+    }
+}

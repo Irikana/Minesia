@@ -1,0 +1,41 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "5fs_br:epic_accessory_bag"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " U ",
+      "YZJ",
+      " G "
+    ],
+    "key": {
+      "Z": {
+        "item": "5fs_br:rare_bag_upgrade"
+      },
+      "G": {
+        "item": "minecraft:diamond_block"
+      },
+      "Y": {
+        "item": "5fs_br:meteorite_ingot"
+      },
+      "J": {
+        "item": "minecraft:netherite_ingot"
+      },
+      "U": {
+        "item": "5fs_br:crystalline_ingot"
+      }
+    },
+    "result": {
+      "item": "5fs_br:epic_bag_upgrade"
+    },
+    "unlock": [
+      {
+        "item": "minecraft:diamond"
+      }
+    ]
+  }
+}

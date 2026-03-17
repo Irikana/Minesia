@@ -1,0 +1,25 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "5fs_br:compact_netherite_scrap_to_netherite_scrap"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "5fs_br:compact_netherite_scrap"
+      }
+    ],
+    "result": {
+      "item": "minecraft:netherite_scrap",
+      "count": 4
+    },
+    "unlock": [
+      {
+        "item": "minecraft:netherite_scrap"
+      }
+    ]
+  }
+}

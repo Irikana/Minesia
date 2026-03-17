@@ -1,0 +1,51 @@
+{
+    "format_version": "1.26.0",
+	"minecraft:block": {
+        "description": {
+            "identifier": "5fs_br:magma_brimstone",
+            "menu_category": {
+                "category": "Construction"
+            }
+        },
+        "components": {
+            "minecraft:geometry": "minecraft:geometry.full_block",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "magma_brimstone"
+                }
+            },
+            "minecraft:light_emission": 2,
+            "minecraft:redstone_conductivity": {
+                "redstone_conductor": true
+            },
+            "minecraft:tick": {
+                "looping": true,
+                "interval_range": [
+                    3,
+                    3
+                ]
+            },
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 10,
+				"item_specific_speeds": [
+					{
+						"item": {
+							"tags": "query.all_tags('minecraft:is_pickaxe')"
+						},
+						"destroy_speed": 3
+					}
+				]
+			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 6
+			},
+            "minecraft:map_color": "#2B1C1E",
+			"minecraft:precipitation_interactions": {
+				"precipitation_behavior": "obstruct_rain"
+			},
+            "5fs_br:magmaBrimstone": {},
+            "tag:minecraft:is_pickaxe_item_destructible": {},
+            "tag:5fs_br:magma_brimstone": {}
+        }
+    }
+}

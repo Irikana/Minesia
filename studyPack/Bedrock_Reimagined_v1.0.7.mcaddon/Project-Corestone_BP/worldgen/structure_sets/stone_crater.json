@@ -1,0 +1,21 @@
+{
+  "format_version": "1.21.20",
+  "minecraft:structure_set": {
+    "description": {
+      "identifier": "5fs_br:stone_crater"
+    },
+    "placement": {
+      "type": "minecraft:random_spread",
+      "salt": 88539924,
+      "separation": 30,
+      "spacing": 75,
+      "spread_type": "linear"
+    },
+    "structures": [
+      {
+        "structure": "5fs_br:stone_crater",
+        "weight": 1
+      }
+    ]
+  }
+}

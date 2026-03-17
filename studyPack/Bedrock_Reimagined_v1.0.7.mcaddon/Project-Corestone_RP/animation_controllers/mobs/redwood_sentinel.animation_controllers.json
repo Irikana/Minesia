@@ -1,0 +1,103 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+        "controller.animation.redwood_sentinel.root": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "animations": [
+                        "general_controller"
+                    ],
+                    "transitions": [
+                        {
+                            "death": "!q.is_alive"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "death": {
+                    "animations": [
+                        "death"
+                    ]
+                }
+            }
+        },
+        "controller.animation.redwood_sentinel.general": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "animations": [
+                        "idle"
+                    ],
+                    "transitions": [
+                        {
+                            "walk": "q.modified_move_speed > 0.025"
+                        },
+                        {
+                            "attack": "q.is_delayed_attacking"
+                        },
+                        {
+                            "slam_attack": "q.is_roaring"
+                        }
+                    ],
+                    "blend_transition": 0.2,
+                    "blend_via_shortest_path": true
+                },
+                "walk": {
+                    "animations": [
+                        "walk"
+                    ],
+                    "transitions": [
+						{
+							"default": "q.modified_move_speed <= 0.025"
+						},
+                        {
+                            "attack": "q.is_delayed_attacking"
+                        },
+                        {
+                            "slam_attack": "q.is_roaring"
+                        }
+                    ],
+                    "blend_transition": 0.2,
+                    "blend_via_shortest_path": true
+                },
+                "attack": {
+                    "animations": [
+                        "attack"
+                    ],
+                    "transitions": [
+						{
+							"default": "q.modified_move_speed <= 0.025 && !q.is_delayed_attacking"
+						},
+						{
+							"walk": "q.modified_move_speed > 0.025 && !q.is_delayed_attacking"
+						},
+                        {
+                            "slam_attack": "q.is_roaring"
+                        }
+                    ],
+                    "blend_transition": 0.2,
+                    "blend_via_shortest_path": true
+                },
+                "slam_attack": {
+                    "animations": [
+                        "slam_attack"
+                    ],
+                    "transitions": [
+						{
+							"default": "q.modified_move_speed <= 0.025 && !q.is_roaring"
+						},
+						{
+							"walk": "q.modified_move_speed > 0.025 && !q.is_roaring"
+						},
+                        {
+                            "attack": "q.is_delayed_attacking"
+                        }
+                    ],
+                    "blend_transition": 0.2,
+                    "blend_via_shortest_path": true
+                }
+            }
+        }
+	}
+}

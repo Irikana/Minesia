@@ -1,0 +1,23 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.obsidian_shovel.1fp": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": [-243.79739, -60.14198, 81.12912],
+					"position": [0, 11, 5]
+				}
+			}
+		},
+		"animation.obsidian_shovel.3pp": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": [90, 0, 0],
+					"position": [0, 14, 0]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,48 @@
+{
+    "format_version": "1.20.80",
+    "minecraft:recipe_shapeless": {
+        "description": {
+            "identifier": "5fs_br:eye_of_iris"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "ingredients": [
+            {
+                "item": "minecraft:ender_pearl"
+            },
+            {
+                "item": "5fs_br:thunderbird_feather"
+            },
+            {
+                "item": "5fs_br:phoenix_feather"
+            },
+            {
+                "item": "minecraft:blaze_powder"
+            },
+            {
+                "item": "5fs_br:redwood_sentinel_core"
+            },
+            {
+                "item": "5fs_br:crystalline_berserker_core"
+            },
+            {
+                "item": "5fs_br:pirate_captain_core"
+            },
+            {
+                "item": "5fs_br:mummified_pharoah_core"
+            },
+            {
+                "item": "5fs_br:ombari_core"
+            }
+        ],
+        "result": {
+            "item": "5fs_br:eye_of_iris"
+        },
+        "unlock": [
+            {
+                "item": "minecraft:ender_pearl"
+            }
+        ]
+    }
+}

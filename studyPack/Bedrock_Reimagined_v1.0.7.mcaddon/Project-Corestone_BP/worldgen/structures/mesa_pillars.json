@@ -1,0 +1,24 @@
+{
+  "format_version": "1.21.20",
+  "minecraft:jigsaw": {
+    "description": {
+      "identifier": "5fs_br:mesa_pillars"
+    },
+    "biome_filters": [
+      {
+        "test": "has_biome_tag",
+        "operator": "==",
+        "value": "mesa"
+      }
+    ],
+    "step": "surface_structures", 
+    "terrain_adaptation": "beard_thin", 
+    "start_pool": "5fs_br:mesa_pillars", 
+    "max_depth": 2, 
+    "start_height": {
+        "type": "constant",
+        "value": { "absolute": 1 } 
+    },
+    "heightmap_projection": "world_surface"
+  }
+}

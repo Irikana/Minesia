@@ -1,0 +1,40 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:feature_rules": {
+        "description": {
+            "identifier": "5fs_br:dead_fan_feature",
+            "places_feature": "5fs_br:deadly_sea/dead_fan_snap_to_surface_feature"
+        },
+        "conditions": {
+            "placement_pass": "first_pass",
+            "minecraft:biome_filter": [
+                {
+                    "any_of": [
+                        {
+                            "test": "has_biome_tag",
+                            "operator": "==",
+                            "value": "deadly_sea"
+                        }
+                    ]
+                }
+            ]
+        },
+        "distribution": {
+            "iterations": 45,
+      "coordinate_eval_order": "yxz",
+      "x": {
+        "distribution": "uniform",
+        "extent": [ 0, 16 ]
+      },
+      "y": {
+        "distribution": "uniform",
+        "extent": [ -20, 55 ]
+      },
+      "z": {
+        "distribution": "uniform",
+        "extent": [ 0, 16 ]
+      }
+    
+        }
+    }
+}

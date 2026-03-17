@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "brimstone_pillar_left_middle",
+		"metalness_emissive_roughness": "brimstone_pillar_left_middle_mer"
+	}
+}

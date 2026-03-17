@@ -1,0 +1,154 @@
+{
+    "format_version": "1.21.60",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "5fs_br:coffin",
+            "is_summonable": true,
+            "properties": {
+                "5fs_br:rotation": {
+                    "client_sync": true,
+                    "type": "enum",
+                    "default": "north",
+                    "values": [
+                        "north",
+                        "south",
+                        "west",
+                        "east"
+                    ]
+                },
+                "5fs_br:is_opened": {
+                    "client_sync": true,
+                    "type": "bool",
+                    "default": false
+                }
+            },
+            "animations": {
+                "teleport": "animation.tile_entity.teleport"
+            },
+            "scripts": {
+                "animate": [
+                    "teleport"
+                ]
+            }
+        },
+        "component_groups": {
+            "5fs_br:health": {
+                "minecraft:health": {
+                    "value": 1,
+                    "min": 0
+                }
+            },
+            "5fs_br:instant_despawn": {
+                "minecraft:instant_despawn": {}
+            }
+        },
+        "components": {
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "cause": "all",
+                    "deals_damage": "no"
+                }
+            },
+            "minecraft:type_family": {
+                "family": [
+                    "coffin",
+                    "inanimate", 
+                    "nolife"
+                ]
+            },
+            "minecraft:movement.basic": {
+                "max_turn": 0
+            },
+            "minecraft:body_rotation_blocked": {},
+            "minecraft:nameable": {
+                "allow_name_tag_renaming": false,
+                "always_show": false
+            },
+            "minecraft:collision_box": {
+                "width": 1,
+                "height": 0.7
+            },
+            "minecraft:health": {
+                "value": 1,
+                "min": 1
+            },
+            "minecraft:knockback_resistance": {
+                "value": 100,
+                "max": 100
+            },
+            "minecraft:pushable": {
+                "is_pushable": false,
+                "is_pushable_by_piston": false
+            },
+            "minecraft:physics": {
+                "has_gravity": false,
+                "has_collision": false
+            },
+            "minecraft:inside_block_notifier": {
+                "block_list": [
+                    {
+                        "block": {
+                            "name": "5fs_br:coffin"
+                        },
+                        "exited_block_event": {
+                            "event": "5fs_br:despawn"
+                        }
+                    }
+                ]
+            },
+            "minecraft:interact": {
+                "interactions": [
+                    {
+                        "on_interact": {
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "subject": "other",
+                                        "value": "player"
+                                    }
+                                ]
+                            },
+                            "event": "5fs_br:open"
+                        },
+                        "interact_text": "action.open"
+                    }
+                ]
+            },
+            "minecraft:on_death": {
+                "event": "5fs_br:instant_despawn"
+            }
+        },
+        "events": {
+            "5fs_br:despawn": {
+                "add": {
+                    "component_groups": [
+                        "5fs_br:health"
+                    ]
+                },
+                "queue_command": {
+                    "command": [
+                        "kill @s"
+                    ]
+                }
+            },
+            "5fs_br:instant_despawn": {
+                "add": {
+                    "component_groups": [
+                        "5fs_br:instant_despawn"
+                    ]
+                }
+            },
+            "5fs_br:open": {
+                "set_property": {
+                    "5fs_br:is_opened": true
+                }
+            },
+            "5fs_br:close": {
+                "set_property": {
+                    "5fs_br:is_opened": false
+                }
+            }
+        }
+    }
+}

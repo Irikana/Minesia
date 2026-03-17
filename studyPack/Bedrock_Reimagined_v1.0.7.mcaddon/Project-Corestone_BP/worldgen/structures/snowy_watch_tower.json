@@ -1,0 +1,37 @@
+{
+  "format_version": "1.21.20",
+  "minecraft:jigsaw": {
+    "description": {
+      "identifier": "5fs_br:snowy_watch_tower"
+    },
+    "biome_filters": [
+      {
+        "all_of": [
+          {
+            "any_of": [
+              {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "snowy_slopes"
+              },
+              {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "ice_plains"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "step": "surface_structures", 
+    "terrain_adaptation": "beard_thin", 
+    "start_pool": "5fs_br:snowy_watch_tower", 
+    "max_depth": 2, 
+    "start_height": {
+        "type": "constant",
+        "value": { "absolute": 1 } 
+    },
+    "heightmap_projection": "world_surface"
+  }
+}

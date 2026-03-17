@@ -1,0 +1,28 @@
+{
+	"format_version": "1.26.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "5fs_br:explosive_arrow",
+            "menu_category": {
+                "category": "equipment"
+            }
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "item.5fs_br:explosive_arrow"
+			},
+			"minecraft:icon": "5fs_br:explosive_arrow",
+			"minecraft:max_stack_size": 64,
+			"minecraft:hand_equipped": true,
+			"minecraft:allow_off_hand": true,
+			"minecraft:tags": {
+				"tags": [
+					"minecraft:arrow"
+				]
+			},
+			"5fs_br:item_categories": [
+				"5fs_br:custom_arrow"
+			]
+		}
+	}
+}

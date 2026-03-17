@@ -1,0 +1,13 @@
+{
+    "format_version": "1.21.60",
+    "minecraft:aggregate_feature": {
+        "description": {
+            "identifier": "5fs_br:palm_tree_feature"
+        },
+        "features": [
+            "5fs_br:trees/palm/scatter_palm_tree_feature",
+            "5fs_br:warm/desert/scatter_coconut_feature"
+        ],
+        "early_out": "first_failure"
+    }
+}

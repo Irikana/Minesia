@@ -1,0 +1,26 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:weighted_random_feature": {
+        "description": {
+            "identifier": "5fs_br:warm/pointed_sandstone/weighted_pointed_sandstone_floor"
+        },
+        "features": [
+            [
+                "5fs_br:warm/pointed_sandstone/pointed_sandstone_1_floor_feature",
+                2
+            ],
+            [
+                "5fs_br:warm/pointed_sandstone/pointed_sandstone_2_floor_feature",
+                3
+            ],
+            [
+                "5fs_br:warm/pointed_sandstone/pointed_sandstone_3_floor_feature",
+                3
+            ],
+            [
+                "5fs_br:warm/pointed_sandstone/pointed_sandstone_4_floor_feature",
+                3
+            ]
+        ]
+    }
+}

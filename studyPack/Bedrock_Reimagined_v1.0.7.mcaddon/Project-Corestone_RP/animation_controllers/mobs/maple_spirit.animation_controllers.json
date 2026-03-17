@@ -1,0 +1,43 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.maple_spirit.root": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "animations": [
+                        "idle"
+                    ],
+                    "transitions": [
+                        {
+                            "walking": "query.is_alive && query.modified_move_speed > 0.01"
+                        },
+                        {
+                            "death": "!query.is_alive"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "walking": {
+                    "animations": [
+                        "walking"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "query.is_alive && query.modified_move_speed <= 0.01"
+                        },
+                        {
+                            "death": "!query.is_alive"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "death": {
+                    "animations": [
+                        "death"
+                    ]
+                }
+            }
+        }
+    }
+}

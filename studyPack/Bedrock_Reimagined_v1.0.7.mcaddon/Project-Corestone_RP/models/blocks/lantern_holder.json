@@ -1,0 +1,109 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.lantern_holder",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "body",
+					"pivot": [0, 4, 3],
+					"rotation": [0, 90, 0],
+					"cubes": [
+						{
+							"origin": [-5.1, 8.2, 2.5],
+							"size": [7, 2, 1],
+							"pivot": [-1.6, 9.7, 3],
+							"rotation": [0, 0, -45],
+							"uv": {
+								"north": {"uv": [16, 14], "uv_size": [-7, 2]},
+								"east": {"uv": [15, 14], "uv_size": [1, 2]},
+								"south": {"uv": [9, 14], "uv_size": [7, 2]},
+								"west": {"uv": [22, 25], "uv_size": [1, 2]},
+								"up": {"uv": [9, 12], "uv_size": [7, 1]},
+								"down": {"uv": [8, 14], "uv_size": [7, -1]}
+							}
+						},
+						{
+							"origin": [-5, 5, 1],
+							"size": [2, 9, 4],
+							"uv": {
+								"north": {"uv": [6, 7], "uv_size": [2, 9]},
+								"east": {"uv": [4, 7], "uv_size": [4, 9]},
+								"south": {"uv": [6, 7], "uv_size": [2, 9]},
+								"west": {"uv": [0, 7], "uv_size": [4, 9]},
+								"up": {"uv": [3, 7], "uv_size": [2, 4]},
+								"down": {"uv": [1, 16], "uv_size": [2, -4]}
+							}
+						},
+						{
+							"origin": [-3, 11, 1.9],
+							"size": [12, 2, 2.2],
+							"uv": {
+								"north": {"uv": [0, 4], "uv_size": [12, 2]},
+								"south": {"uv": [12, 4], "uv_size": [-12, 2]},
+								"west": {"uv": [10, 4], "uv_size": [2, 2]},
+								"up": {"uv": [0, 0], "uv_size": [12, 2]},
+								"down": {"uv": [0, 4], "uv_size": [12, -2]}
+							}
+						}
+					]
+				},
+				{
+					"name": "lantern",
+					"parent": "body",
+					"pivot": [0, 4, 3],
+					"cubes": [
+						{
+							"origin": [3, 0, 0],
+							"size": [6, 7, 6],
+							"uv": {
+								"north": {"uv": [0, 2], "uv_size": [6, 7], "material_instance": "lantern"},
+								"east": {"uv": [0, 2], "uv_size": [6, 7], "material_instance": "lantern"},
+								"south": {"uv": [0, 2], "uv_size": [6, 7], "material_instance": "lantern"},
+								"west": {"uv": [0, 2], "uv_size": [6, 7], "material_instance": "lantern"},
+								"up": {"uv": [0, 9], "uv_size": [6, 6], "material_instance": "lantern"},
+								"down": {"uv": [0, 15], "uv_size": [6, -6], "material_instance": "lantern"}
+							}
+						},
+						{
+							"origin": [4, 7, 1],
+							"size": [4, 2, 4],
+							"uv": {
+								"north": {"uv": [1, 0], "uv_size": [4, 2], "material_instance": "lantern"},
+								"east": {"uv": [1, 0], "uv_size": [4, 2], "material_instance": "lantern"},
+								"south": {"uv": [1, 0], "uv_size": [4, 2], "material_instance": "lantern"},
+								"west": {"uv": [1, 0], "uv_size": [4, 2], "material_instance": "lantern"},
+								"up": {"uv": [1, 10], "uv_size": [4, 4], "material_instance": "lantern"}
+							}
+						},
+						{
+							"origin": [4.5, 9, 3],
+							"size": [3, 2, 0],
+							"pivot": [6, 8, 3],
+							"rotation": [0, -45, 0],
+							"uv": {
+								"north": {"uv": [14, 1], "uv_size": [-3, 2], "material_instance": "lantern"}
+							}
+						},
+						{
+							"origin": [6, 9, 1.5],
+							"size": [0, 2, 3],
+							"pivot": [6, 8, 3],
+							"rotation": [0, -45, 0],
+							"uv": {
+								"east": {"uv": [14, 10], "uv_size": [-3, 2], "material_instance": "lantern"}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

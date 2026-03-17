@@ -1,0 +1,42 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "5fs_br:redwood_sentinel",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/redwood_sentinel"
+            },
+            "geometry": {
+                "default": "geometry.redwood_sentinel"
+            },
+            "animations": {
+                "idle": "animation.redwood_sentinel.idle",
+                "walk": "animation.redwood_sentinel.walk",
+                "attack": "animation.redwood_sentinel.attack",
+                "slam_attack": "animation.redwood_sentinel.slam_attack",
+                "death": "animation.redwood_sentinel.death",
+                "root_controller": "controller.animation.redwood_sentinel.root",
+                "general_controller": "controller.animation.redwood_sentinel.general"
+            },
+            "scripts": {
+                "animate": [
+                    "root_controller"
+                ]
+            },
+            "render_controllers": [
+                "controller.render.boss"
+            ],
+            "sound_effects": {
+                "idle": "mob.redwood_sentinel.idle",
+                "attack": "mob.redwood_sentinel.attack",
+                "slam": "mob.redwood_sentinel.slam"
+            },
+            "spawn_egg": {
+                "texture": "5fs_br:redwood_sentinel_spawn_egg"
+            }
+        }
+    }
+}

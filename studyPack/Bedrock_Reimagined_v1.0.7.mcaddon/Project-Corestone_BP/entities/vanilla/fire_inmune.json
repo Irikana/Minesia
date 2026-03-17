@@ -1,0 +1,67 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "minecraft:item",
+      "is_spawnable": false,
+      "is_summonable": false,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "5fs_br:name_visible": {
+        "minecraft:nameable": {
+          "always_show": true,
+          "allow_name_tag_renaming": true
+        }
+      },
+      "5fs_br:name_hidden": {
+        "minecraft:nameable": {
+          "always_show": false,
+          "allow_name_tag_renaming": true
+        }
+      }
+    },
+    "components": {
+      "minecraft:tick_world": {},
+      "minecraft:hurt_on_condition": {
+        "damage_conditions": [
+          {
+            "filters": {
+              "test": "in_lava",
+              "subject": "self",
+              "operator": "==",
+              "value": true
+            },
+            "cause": "lava",
+            "damage_per_tick": 4
+          }
+        ]
+      },
+      "minecraft:persistent": {},
+      "minecraft:physics": {},
+      "minecraft:is_hidden_when_invisible": {},
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": true
+      }
+    },
+    "events": {
+      "5fs_br:show_name": {
+        "add": {
+          "component_groups": ["5fs_br:name_visible"]
+        },
+        "remove": {
+          "component_groups": ["5fs_br:name_hidden"]
+        }
+      },
+      "5fs_br:hide_name": {
+        "add": {
+          "component_groups": ["5fs_br:name_hidden"]
+        },
+        "remove": {
+          "component_groups": ["5fs_br:name_visible"]
+        }
+      }
+    }
+  }
+}

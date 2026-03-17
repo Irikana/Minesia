@@ -1,0 +1,32 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "5fs_br:tumbleweed",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/blocks/plants/tumbleweed"
+			},
+			"geometry": {
+				"default": "geometry.tumbleweed_entity"
+			},
+			"animations": {
+				"move": "animation.tumbleweed.move"
+			},
+			"scripts": {
+				"animate": [
+					"move"
+				]
+			},
+			"render_controllers": [
+				"controller.render.no_hurt"
+			],
+			"particle_effects": {
+				"tumbleweed_dust": "5fs_br:tumbleweed_dust"
+			},
+			"enable_attachables": true
+		}
+	}
+}

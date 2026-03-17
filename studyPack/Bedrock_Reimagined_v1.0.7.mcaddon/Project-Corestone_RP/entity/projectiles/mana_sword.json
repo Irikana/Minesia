@@ -1,0 +1,20 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "5fs_br:mana_sword",
+            "materials": {
+                "default": "entity_alphatest_change_color"
+            },
+            "textures": {
+                "default": "textures/entity/misc/mana_sword"
+            },
+            "geometry": {
+                "default": "geometry.mana_sword"
+            },
+            "render_controllers": [
+                "controller.render.default"
+            ]
+        }
+    }
+}

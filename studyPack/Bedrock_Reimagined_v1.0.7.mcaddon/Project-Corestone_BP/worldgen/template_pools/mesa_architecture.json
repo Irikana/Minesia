@@ -1,0 +1,58 @@
+{
+    "format_version": "1.21.20",
+    "minecraft:template_pool": {
+        "description": {
+            "identifier": "5fs_br:mesa_architecture"
+        },
+        "elements": [
+            {
+                "element": {
+                    "element_type": "minecraft:single_pool_element",
+                    "location": "warm_pillars/mesa_tower_0",
+                    "processors": "5fs:mesa_architecture"
+                },
+                "weight": 1
+            },
+            {
+                "element": {
+                    "element_type": "minecraft:single_pool_element",
+                    "location": "warm_pillars/mesa_tower_1",
+                    "processors": "5fs:mesa_architecture"
+                },
+                "weight": 1
+            },
+            {
+                "element": {
+                    "element_type": "minecraft:single_pool_element",
+                    "location": "warm_pillars/mesa_tower_2",
+                    "processors": "5fs:mesa_architecture"
+                },
+                "weight": 1
+            },
+            {
+                "element": {
+                    "element_type": "minecraft:single_pool_element",
+                    "location": "warm_pillars/mesa_tower_3",
+                    "processors": "5fs:mesa_architecture"
+                },
+                "weight": 1
+            },
+            {
+                "element": {
+                    "element_type": "minecraft:single_pool_element",
+                    "location": "warm_arches/mesa_arch_build_0",
+                    "processors": "5fs:mesa_architecture_arch"
+                },
+                "weight": 1
+            },
+            {
+                "element": {
+                    "element_type": "minecraft:single_pool_element",
+                    "location": "warm_arches/mesa_arch_build_1",
+                    "processors": "5fs:mesa_architecture_arch"
+                },
+                "weight": 1
+            }
+        ]
+    }
+}

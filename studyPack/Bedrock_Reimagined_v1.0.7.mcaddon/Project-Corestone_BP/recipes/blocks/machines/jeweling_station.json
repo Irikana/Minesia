@@ -1,0 +1,32 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "5fs_br:jeweling_station"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"A": {
+				"item": "minecraft:emerald"
+			},
+			"G": {
+				"item": "minecraft:gold_ingot"
+			}
+		},
+		"pattern": [
+			"AA",
+			"GG",
+			"GG"
+		],
+		"result": {
+			"item": "5fs_br:jeweling_station"
+		},
+		"unlock": [
+			{
+				"item": "5fs_br:jeweling_station"
+			}
+		]
+	}
+}

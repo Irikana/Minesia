@@ -1,0 +1,23 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.dragonite_shovel.1fp": {
+			"loop": true,
+			"bones": {
+				"bone": {
+					"rotation": [35.6699, 36.46361, -121.6405],
+					"position": [0, 16, 3]
+				}
+			}
+		},
+		"animation.dragonite_shovel.3pp": {
+			"loop": true,
+			"bones": {
+				"bone": {
+					"rotation": [90, 0, 0],
+					"position": [0, 16, -1]
+				}
+			}
+		}
+	}
+}

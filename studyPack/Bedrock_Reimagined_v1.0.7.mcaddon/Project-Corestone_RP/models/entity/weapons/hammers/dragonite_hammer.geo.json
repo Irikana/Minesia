@@ -1,0 +1,32 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.dragonite_hammer",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "bone",
+					"pivot": [0, 10.42789, -0.28907],
+					"binding": "q.item_slot_to_bone_name(c.item_slot)",
+					"cubes": [
+						{"origin": [-1, -1, -1], "size": [2, 23, 2], "uv": [27, 21]},
+						{"origin": [-1.5, -4, -2], "size": [3, 4, 4], "pivot": [0, -2, 0], "rotation": [-135, 0, 0], "uv": [36, 21]},
+						{"origin": [-1.5, 22, -2.5], "size": [3, 5, 5], "inflate": 0.025, "uv": [0, 35]},
+						{"origin": [-5.5, 19, -11.5], "size": [11, 11, 9], "inflate": 0.025, "pivot": [0, 24.5, -5], "rotation": [0, 0, 45], "uv": [0, 0]},
+						{"origin": [-3.5, 21, 2.5], "size": [7, 7, 6], "inflate": 0.025, "pivot": [0, 24.5, 11], "rotation": [0, 0, 45], "uv": [0, 21]},
+						{"origin": [-1, 4, -1], "size": [2, 13, 2], "inflate": 0.25, "uv": [17, 35]},
+						{"origin": [0, -6.91421, -0.87868], "size": [0, 3, 2], "pivot": [0, -6.91421, 2.12132], "rotation": [-45, 0, 0], "uv": [38, 32]},
+						{"origin": [0, -6.91421, -5.12868], "size": [0, 3, 2], "pivot": [0, -6.91421, -2.12868], "rotation": [135, 0, 180], "uv": [38, 32]}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,32 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "5fs_br:frame_from_shark_hide"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"S": {
+				"item": "minecraft:stick"
+			},
+			"D": {
+				"item": "5fs_br:shark_hide"
+			}
+		},
+		"pattern": [
+			"DDD",
+			"DSD",
+			"DDD"
+		],
+		"result": {
+			"item": "minecraft:frame"
+		},
+		"unlock": [
+			{
+				"item": "minecraft:stick"
+			}
+		]
+	}
+}

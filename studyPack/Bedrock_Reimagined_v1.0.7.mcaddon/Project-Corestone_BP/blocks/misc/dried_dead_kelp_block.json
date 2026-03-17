@@ -1,0 +1,35 @@
+{
+    "format_version": "1.26.0",
+	"minecraft:block": {
+        "description": {
+            "identifier": "5fs_br:dried_dead_kelp_block",
+            "menu_category": {
+               "category": "Construction"
+            }
+        },
+        "components": {
+            "minecraft:geometry": "minecraft:geometry.full_block",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "dried_dead_kelp_side"
+                },
+                "up": {
+                    "texture": "dried_dead_kelp_top"
+                },
+                "down": {
+                    "texture": "dried_dead_kelp_top"
+                }
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0.5
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 2.5
+            },
+            "minecraft:map_color": "#4C4C4C",
+            "minecraft:flammable": true,
+            "minecraft:light_dampening": 15,
+            "tag:minecraft:is_hoe_item_destructible": {}
+        }
+    }
+}

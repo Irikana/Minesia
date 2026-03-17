@@ -1,0 +1,86 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.surfer": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "animations": ["idle"],
+          "transitions": [
+            { "idle_on_land": "!query.is_in_water && query.modified_move_speed <= 0.05 && query.is_alive" },
+            { "walking": "!query.is_in_water && query.modified_move_speed > 0.05 && query.is_alive" },
+            { "swimming": "query.is_in_water && query.modified_move_speed > 0.05" },
+            { "riding": "query.is_riding" },
+            { "attack": "query.is_delayed_attacking" },
+            { "death": "!query.is_alive" },
+            { "sleeping": "query.property('5fs_br:sleeping')" }
+          ],
+          "blend_transition": 0.2
+        },
+        "idle_on_land": {
+          "animations": ["idle_on_land"],
+          "transitions": [
+            { "walking": "!query.is_in_water && query.modified_move_speed > 0.05 && query.is_alive" },
+            { "swimming": "query.is_in_water && query.modified_move_speed > 0.05" },
+            { "default": "query.is_in_water" },
+            { "attack": "query.is_delayed_attacking" },
+            { "death": "!query.is_alive" },
+            { "sleeping": "query.property('5fs_br:sleeping')" }
+          ],
+          "blend_transition": 0.2
+        },
+        "walking": {
+          "animations": ["walking"],
+          "transitions": [
+            { "idle_on_land": "!query.is_in_water && query.modified_move_speed <= 0.05 && query.is_alive" },
+            { "default": "query.is_in_water" },
+            { "swimming": "query.is_in_water && query.modified_move_speed > 0.05" },
+            { "attack": "query.is_delayed_attacking" },
+            { "death": "!query.is_alive" },
+            { "sleeping": "query.property('5fs_br:sleeping')" }
+          ],
+          "blend_transition": 0.2
+        },
+        "swimming": {
+          "animations": ["swimming"],
+          "transitions": [
+            { "default": "query.modified_move_speed <= 0.05 && query.is_in_water" },
+            { "walking": "!query.is_in_water && query.modified_move_speed > 0.05" },
+            { "idle_on_land": "!query.is_in_water && query.modified_move_speed <= 0.05 && query.is_alive" },
+            { "attack": "query.is_delayed_attacking" },
+            { "death": "!query.is_alive" },
+            { "sleeping": "query.property('5fs_br:sleeping')" }
+          ],
+          "blend_transition": 0.2
+        },
+        "riding": {
+          "animations": ["riding"],
+          "transitions": [
+            { "default": "!query.is_riding" },
+            { "death": "!query.is_alive" }
+          ],
+          "blend_transition": 0.2
+        },
+        "attack": {
+          "animations": ["attack"],
+          "transitions": [
+            { "default": "!query.is_delayed_attacking" },
+            { "death": "!query.is_alive" }
+          ],
+          "blend_transition": 0.1
+        },
+        "sleeping": {
+          "animations": ["sleeping"],
+          "transitions": [
+            { "death": "!query.is_alive" },
+            { "default": "!query.property('5fs_br:sleeping')" }
+          ],
+          "blend_transition": 0.3
+        },
+        "death": {
+          "animations": ["death"]
+        }
+      }
+    }
+  }
+}

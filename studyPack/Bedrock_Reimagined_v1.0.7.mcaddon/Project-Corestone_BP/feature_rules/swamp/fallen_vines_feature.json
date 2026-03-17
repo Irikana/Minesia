@@ -1,0 +1,52 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:feature_rules": {
+        "description": {
+            "identifier": "5fs_br:fallen_vines_feature",
+            "places_feature": "5fs_br:swamp/fallen_vines_ceiling_feature"
+        },
+        "conditions": {
+            "placement_pass": "after_surface_pass",
+            "minecraft:biome_filter": [
+                {
+                    "any_of": [
+                        {
+                            "test": "has_biome_tag",
+                            "operator": "==",
+                            "value": "swamp"
+                        },
+                        {
+                            "test": "has_biome_tag",
+                            "operator": "==",
+                            "value": "mangrove_swamp"
+                        }
+                    ]
+                }
+            ]
+        },
+        "distribution": {
+            "iterations": 110,
+            "x": {
+                "distribution": "uniform",
+                "extent": [
+                    1,
+                    15
+                ]
+            },
+            "y": {
+                "distribution": "triangle",
+                "extent": [
+                    -64,
+                    50
+                ]
+            },
+            "z": {
+                "distribution": "uniform",
+                "extent": [
+                    1,
+                    15
+                ]
+            }
+        }
+    }
+}

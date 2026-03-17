@@ -1,0 +1,24 @@
+{
+    "format_version": "1.10.0",
+    "render_controllers": {
+        "controller.render.moose": {
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "textures": [
+                "Texture.default"
+            ],
+            "geometry": "Geometry.default",
+            "part_visibility": [
+                {
+                    "antler_left": "v.has_antlers == true"
+                },
+                {
+                    "antler_right": "v.has_antlers == true"
+                }
+            ]
+        }
+    }
+}

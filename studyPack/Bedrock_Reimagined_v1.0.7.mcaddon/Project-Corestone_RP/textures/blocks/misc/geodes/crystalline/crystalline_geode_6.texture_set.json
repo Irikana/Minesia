@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "crystalline_geode_6",
+		"metalness_emissive_roughness": "crystalline_geode_6_mer"
+	}
+}

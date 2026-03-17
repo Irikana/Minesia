@@ -1,0 +1,21 @@
+{
+  "format_version": "1.21.20",
+  "minecraft:structure_set": {
+    "description": {
+      "identifier": "5fs_br:copper_square"
+    },
+    "placement": {
+      "type": "minecraft:random_spread",
+      "salt": 83487667,
+      "separation": 27,
+      "spacing": 73,
+      "spread_type": "linear"
+    },
+    "structures": [
+      {
+        "structure": "5fs_br:copper_square",
+        "weight": 1
+      }
+    ]
+  }
+}

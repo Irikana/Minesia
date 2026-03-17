@@ -1,0 +1,58 @@
+{
+	"format_version": "1.10.0",
+	"particle_effect": {
+		"description": {
+			"identifier": "5fs_br:sandstone_lock_break",
+			"basic_render_parameters": {
+				"material": "particles_alpha",
+				"texture": "textures/particle/pixel"
+			}
+		},
+		"events": {
+			"event": {
+				"particle_effect": {
+					"effect": "5fs_br:crackling_resin",
+					"type": "emitter"
+				}
+			}
+		},
+		"components": {
+			"minecraft:emitter_rate_instant": {
+				"num_particles": "math.random(300,325)"
+			},
+			"minecraft:emitter_lifetime_once": {
+				"active_time": 1
+			},
+			"minecraft:emitter_shape_point": {
+				"offset": ["math.random(-v.dir_x,v.dir_x)", "math.random(-1,1)", "math.random(-v.dir_z,v.dir_z)"],
+				"direction": ["math.random(-5,5)", "math.random(-5,10)", "math.random(-5,5)"]
+			},
+			"minecraft:particle_lifetime_expression": {
+				"max_lifetime": "Math.random(3,3.75)"
+			},
+			"minecraft:particle_initial_speed": "Math.random(3, 5)",
+			"minecraft:particle_motion_dynamic": {
+				"linear_acceleration": [0, -12, 0],
+				"linear_drag_coefficient": 1.5
+			},
+			"minecraft:particle_appearance_billboard": {
+				"size": [0.05, 0.05],
+				"facing_camera_mode": "lookat_xyz",
+				"uv": {
+					"texture_width": 2,
+					"texture_height": 2,
+					"uv": [0, 0],
+					"uv_size": [2, 2]
+				}
+			},
+			"minecraft:particle_motion_collision": {
+				"collision_drag": 5,
+				"collision_radius": 0.01
+			},
+			"minecraft:particle_appearance_lighting": {},
+			"minecraft:particle_appearance_tinting": {
+				"color": [0.85882, 0.82745, 0.62745, 1]
+			}
+		}
+	}
+}

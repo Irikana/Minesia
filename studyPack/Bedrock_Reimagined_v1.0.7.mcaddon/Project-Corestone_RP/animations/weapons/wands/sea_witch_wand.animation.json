@@ -1,0 +1,23 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.sea_witch_wand.1fp": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": [99.34073, 66.92076, -52.51305],
+					"position": [7, 10, 12]
+				}
+			}
+		},
+		"animation.sea_witch_wand.3pp": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": [87.5, 0, 0],
+					"position": [3, -4, 9]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,21 @@
+{
+    "format_version": "1.26.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "5fs_br:iron_canteen_empty",
+            "menu_category": {
+                "category": "equipment"
+            }
+        },
+        "components": {
+            "minecraft:liquid_clipped": true,
+            "5fs_br:canteens": {},
+            "minecraft:icon": "5fs_br:iron_canteen_empty",
+            "minecraft:max_stack_size": 1,
+            "minecraft:use_modifiers": {
+                "movement_modifier": 0.5,
+                "use_duration": 1.0
+            }
+        }
+    }
+}

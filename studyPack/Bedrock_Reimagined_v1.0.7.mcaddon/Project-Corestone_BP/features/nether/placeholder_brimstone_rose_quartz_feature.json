@@ -1,0 +1,20 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:ore_feature": {
+    "description": {
+      "identifier": "5fs_br:nether/placeholder_brimstone_rose_quartz_feature"
+    },
+    "count": 12,
+    "replace_rules": [
+      {
+        "places_block": "5fs_br:brimstone_rose_quartz_ore",
+        "may_replace": [
+          "5fs_br:brimstone",
+          "minecraft:netherrack",
+          "minecraft:blackstone",
+          "minecraft:gravel"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+    "format_version": "1.21.80",
+    "minecraft:block_culling_rules": {
+        "description": {
+            "identifier": "5fs_br:culling.maple_bush"
+        },
+        "rules": [
+            {
+                "direction": "down",
+                "geometry_part": {
+                    "bone": "bone",
+                    "cube": 4,
+                    "face": "down"
+                }
+            }
+        ]
+    }
+}

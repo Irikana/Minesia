@@ -1,0 +1,16 @@
+{
+	"format_version": "1.26.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "5fs_br:torch_offhand",
+			"menu_category": {
+				"category": "equipment"
+			}
+		},
+		"components": {
+			"minecraft:icon": "5fs_br:torch_offhand",
+			"minecraft:hand_equipped": true,
+            "minecraft:allow_off_hand": true
+		}
+	}
+}

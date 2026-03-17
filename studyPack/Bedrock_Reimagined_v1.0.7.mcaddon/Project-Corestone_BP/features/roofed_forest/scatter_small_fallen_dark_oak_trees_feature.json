@@ -1,0 +1,23 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:scatter_feature": {
+      "description": {
+        "identifier": "5fs_br:roofed_forest/scatter_small_fallen_dark_oak_trees_feature"
+      },
+      "coordinate_eval_order": "xzy",
+      "iterations": 1,
+      "places_feature": "5fs_br:roofed_forest/small_fallen_dark_oak_trees_snap_to_surface_feature",
+        "x": {
+          "distribution": "gaussian",
+          "extent": [-10, 10]
+        },
+        "z": {
+          "distribution": "gaussian",
+          "extent": [-10, 10]
+        },
+        "y": {
+          "distribution": "gaussian",
+          "extent": [-4, 4]
+      }
+    }
+  }

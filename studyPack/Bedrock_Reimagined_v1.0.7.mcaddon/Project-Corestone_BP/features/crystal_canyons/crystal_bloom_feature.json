@@ -1,0 +1,18 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:structure_template_feature": {
+    "description": {
+      "identifier": "5fs_br:crystal_canyons/crystal_bloom_feature"
+    },
+    "structure_name": "5fs_br:crystal_bloom",
+    "adjustment_radius": 0,
+    "facing_direction": "random",
+    "constraints": {
+      "block_intersection": {
+        "block_allowlist": [
+          "minecraft:air"
+        ]
+      }
+    }
+  }
+}

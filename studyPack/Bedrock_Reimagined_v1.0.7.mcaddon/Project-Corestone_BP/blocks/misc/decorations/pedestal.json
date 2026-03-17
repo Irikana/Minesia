@@ -1,0 +1,137 @@
+{
+    "format_version": "1.26.0",
+	"minecraft:block": {
+        "description": {
+            "identifier": "5fs_br:pedestal",
+            "menu_category": {
+                 "category": "items"
+            },
+            "states": {
+                "5fs_br:active": [
+                    false,
+                    true
+                ]
+            },
+            "traits": {
+                "minecraft:placement_direction": {
+                    "enabled_states": [
+                        "minecraft:cardinal_direction"
+                    ]
+                }
+            }
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'north' ",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            180,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'south' ",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            0,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'east' ",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            90,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'west' ",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            270,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:active')",
+                "components": {
+                    "minecraft:light_emission": 6
+                }
+            }
+        ],
+        "components": {
+            "minecraft:geometry": "geometry.pedestal",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "pedestal_bottom"
+                },
+                "pedestal_leg": {
+                    "texture": "pedestal_leg"
+                },
+                "pedestal_side": {
+                    "texture": "pedestal_side"
+                },
+                "pedestal_top_down": {
+                    "texture": "pedestal_top_down"
+                },
+                "pedestal_top_up": {
+                    "texture": "pedestal_top_up"
+                }
+            },
+            "minecraft:light_dampening": 0,
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 5,
+                "item_specific_speeds": [
+                    {
+                        "item": {
+                            "tags": "query.all_tags('minecraft:is_pickaxe')"
+                        },
+                        "destroy_speed": 1.5
+                    }
+                ]
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 6
+            },
+            "minecraft:liquid_detection": {
+                "detection_rules": [
+                    {
+                        "can_contain_liquid": true,
+                        "liquid_type": "water",
+                        "on_liquid_touches": "blocking"
+                    }
+                ]
+            },
+            "minecraft:movable": {
+                "movement_type": "immovable"
+            },
+            "minecraft:map_color": "#FFFFFF",
+			"minecraft:precipitation_interactions": {
+				"precipitation_behavior": "obstruct_rain"
+			},
+            "minecraft:loot": "loot_tables/blocks/misc/pedestal.json",
+			"minecraft:connection_rule": {
+				"accepts_connections_from": "none"
+			},
+            "5fs_br:pedestal": {},
+            "tag:minecraft:is_pickaxe_item_destructible": {}
+        }
+    }
+}

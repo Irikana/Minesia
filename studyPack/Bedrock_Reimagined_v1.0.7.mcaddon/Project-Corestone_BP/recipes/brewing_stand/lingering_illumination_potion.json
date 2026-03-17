@@ -1,0 +1,22 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_brewing_mix": {
+    "description": {
+      "identifier": "5fs_br:lingering_illumination_potion"
+    },
+    "tags": [
+      "brewing_stand"
+    ],
+    "input": "5fs_br:splash_illumination_potion",
+    "reagent": "minecraft:dragon_breath",
+    "output": "5fs_br:lingering_illumination_potion",
+    "unlock": [
+      {
+        "item": "5fs_br:splash_illumination_potion"
+      },
+      {
+        "item": "minecraft:dragon_breath"
+      }
+    ]
+  }
+}

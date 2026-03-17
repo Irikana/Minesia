@@ -1,0 +1,17 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:snap_to_surface_feature": {
+        "description": {
+            "identifier": "5fs_br:river/beaver_lair_snap_to_surface_feature"
+        },
+        "feature_to_snap": "5fs_br:beaver_lair/weighted_beaver_lair",
+        "surface": "floor",
+        "allow_air_placement": true,
+        "allow_underwater_placement": false,
+        "vertical_search_range": 128,
+        "allowed_surface_blocks": [
+            "minecraft:grass_block",
+            "minecraft:sand"
+        ]
+    }
+}

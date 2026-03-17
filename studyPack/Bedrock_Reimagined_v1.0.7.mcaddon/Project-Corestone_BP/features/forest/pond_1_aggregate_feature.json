@@ -1,0 +1,13 @@
+{
+    "format_version": "1.21.60",
+    "minecraft:aggregate_feature": {
+        "description": {
+            "identifier": "5fs_br:forest/pond_1_aggregate_feature"
+        },
+        "features": [
+            "5fs_br:forest/forest_pond_1_feature",
+            "5fs_br:forest/scatter_red_tulip_feature"
+        ],
+        "early_out": "first_failure"
+    }
+}

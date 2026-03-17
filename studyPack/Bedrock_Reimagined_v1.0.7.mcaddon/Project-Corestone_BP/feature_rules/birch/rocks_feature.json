@@ -1,0 +1,30 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:feature_rules": {
+    "description": {
+      "identifier": "5fs_br:rocks_feature",
+      "places_feature": "5fs_br:overworld/rocks_aggregate_feature"
+    },
+    "conditions": {
+      "placement_pass": "surface_pass",
+      "minecraft:biome_filter": [
+        {
+          "test": "has_biome_tag",
+          "operator": "==",
+          "value": "birch"
+        }
+      ]
+    },
+    "distribution": {
+      "iterations": 3,
+      "scatter_chance": {
+				"numerator": 2,
+				"denominator": 10
+			},
+      "coordinate_eval_order": "zxy",
+      "x": 8,
+      "y": "query.heightmap(variable.worldx, variable.worldz)",
+      "z": 8
+    }
+  }
+}

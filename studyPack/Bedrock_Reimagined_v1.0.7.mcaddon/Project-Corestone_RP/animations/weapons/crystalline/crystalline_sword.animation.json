@@ -1,0 +1,23 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.crystalline_sword.3pp": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": [92.5, 0, 0],
+					"position": [0, 23, 0]
+				}
+			}
+		},
+        "animation.crystalline_sword.1fp": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": [102.31427, -64.07963, 106.98441],
+					"position": [0, 26, 4]
+				}
+			}
+		}
+	}
+}

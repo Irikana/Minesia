@@ -1,0 +1,51 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "5fs_br:giant_eagle",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/mobs/giant_eagle"
+            },
+            "geometry": {
+                "default": "geometry.giant_eagle"
+            },
+            "animations": {
+                "idle": "animation.giant_eagle.idle",
+                "flying": "animation.giant_eagle.flying",
+                "death": "animation.giant_eagle.death",
+                "planning": "animation.giant_eagle.planning",
+                "walking": "animation.giant_eagle.walking",
+                "with_item": "animation.giant_eagle.with_item",
+                "rotation": "animation.giant_eagle.rotation",
+                "perching": "animation.giant_eagle.perching",
+                "root": "controller.animation.giant_eagle.root",
+                "general_controller": "controller.animation.giant_eagle.general",
+                "with_item_controller": "controller.animation.giant_eagle.with_item"
+            },
+            "scripts": {
+                "pre_animation": [
+                    "v.flying_type = q.property('5fs_br:flying_type');"
+                ],
+                "animate": [
+                    "root"
+                ]
+            },
+            "enable_attachables": true,
+            "render_controllers": [
+                "controller.render.default"
+            ],
+            "spawn_egg": {
+                "texture": "5fs_br:giant_eagle"
+            },
+            "sound_effects": {
+                "flying": "mob.giant_eagle.flying",
+                "idle": "mob.giant_eagle.idle",
+                "pearch": "mob.giant_eagle.pearch",
+                "planning": "mob.giant_eagle.planning"
+            }
+        }
+    }
+}

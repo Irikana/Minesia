@@ -1,0 +1,22 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.custom_horse": {
+      "part_visibility": [
+        { "Saddle": "query.has_rider" },
+        { "Bit*": "query.has_rider" },
+        { "Bridle": "query.has_rider" },
+        { "Reins*" : "query.has_rider" },
+        { "Bag*" : false },
+        { "MuleEar*" : false}
+      ],
+      "textures": [
+          "Texture.default"
+      ],
+      "geometry": "Geometry.default",
+      "materials": [
+        { "*": "Material.default" }
+      ]
+    }
+  }
+}

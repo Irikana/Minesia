@@ -1,0 +1,45 @@
+{
+    "format_version": "1.26.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "5fs_br:torch_wand",
+            "menu_category": {
+                "category": "equipment"
+            }
+        },
+        "components": {
+            "minecraft:icon": "5fs_br:torch_wand",
+            "minecraft:durability": {
+                "damage_chance": {
+                    "min": 100,
+                    "max": 100
+                },
+                "max_durability": 80
+            },
+            "minecraft:use_modifiers": {
+                "movement_modifier": 0.5,
+                "use_duration": 200
+            },
+            "minecraft:damage": 1,
+            "minecraft:max_stack_size": 1,
+            "minecraft:hand_equipped": true,
+            "5fs_br:torch_wand": {},
+            "minecraft:repairable": {
+                "repair_items": [
+                    {
+                        "items": [
+                            "minecraft:torch"
+                        ],
+                        "repair_amount": "math.floor(q.max_durability * 0.10)"
+                    },
+                    {
+                        "items": [
+                            "5fs_br:torch_wand"
+                        ],
+                        "repair_amount": "c.other->q.remaining_durability + (0.12 * c.other->q.max_durability)"
+                    }
+                ]
+            }
+        }
+    }
+}

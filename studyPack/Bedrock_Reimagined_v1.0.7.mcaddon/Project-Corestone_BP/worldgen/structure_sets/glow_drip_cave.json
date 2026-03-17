@@ -1,0 +1,21 @@
+{
+  "format_version": "1.21.20",
+  "minecraft:structure_set": {
+    "description": {
+      "identifier": "5fs_br:glow_drip_cave"
+    },
+    "placement": {
+      "type": "minecraft:random_spread",
+      "salt": 39851139,
+      "separation": 14,
+      "spacing": 30,
+      "spread_type": "linear"
+    },
+    "structures": [
+      {
+        "structure": "5fs_br:glow_drip_cave",
+        "weight": 1
+      }
+    ]
+  }
+}

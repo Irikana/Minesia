@@ -1,0 +1,32 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "minecraft:diamond_shovel"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "C",
+      "S",
+      "S"
+    ],
+    "key": {
+      "C": {
+        "item": "minecraft:diamond"
+      },
+      "S": {
+        "item": "5fs_br:steel_rod"
+      }
+    },
+    "result": {
+      "item": "minecraft:diamond_shovel"
+    },
+    "unlock": [
+      {
+        "item": "minecraft:diamond"
+      }
+    ]
+  }
+}

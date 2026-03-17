@@ -1,0 +1,28 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "5fs_br:sky_star_entity",
+			"materials": {
+				"default": "entity_beam_additive"
+			},
+			"textures": {
+				"default": "textures/entity/misc/sky_star"
+			},
+			"animations": {
+				"idle": "animation.sky_star.idle"
+			},
+			"scripts": {
+                 "animate": [
+                     "idle"
+                ]
+            },
+			"geometry": {
+				"default": "geometry.sky_star"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			]
+		}
+	}
+}

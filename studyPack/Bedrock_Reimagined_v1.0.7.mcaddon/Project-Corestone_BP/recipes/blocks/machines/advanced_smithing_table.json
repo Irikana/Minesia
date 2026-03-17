@@ -1,0 +1,35 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "5fs_br:advanced_smithing_table"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "INI",
+      "NCN",
+      "INI"
+    ],
+    "key": {
+      "N": {
+        "item": "5fs_br:cobalt_ingot"
+      },
+      "I": {
+        "item": "5fs_br:obsidian_ingot"
+      },
+      "C": {
+        "item": "minecraft:smithing_table"
+      }
+    },
+    "unlock": [
+      {
+        "item": "5fs_br:obsidian_ingot"
+      }
+    ],
+    "result": {
+      "item": "5fs_br:advanced_smithing_table"
+    }
+  }
+}

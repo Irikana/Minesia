@@ -1,0 +1,35 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "5fs_br:tiger_shark",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "grey": "textures/entity/mobs/sharks/tiger_shark",
+        "black": "textures/entity/mobs/sharks/black_tiger_shark",
+        "brown": "textures/entity/mobs/sharks/brown_tiger_shark"
+      },
+      "geometry": {
+        "default": "geometry.tiger_shark"
+      },
+      "animations": {
+        "idle": "animation.tiger_shark.idle",
+        "bite": "animation.tiger_shark.bite",
+        "eating": "animation.tiger_shark.eating",
+        "swimming": "animation.tiger_shark.swimming",
+        "thrash": "animation.tiger_shark.thrash",
+        "death": "animation.tiger_shark.death"
+      },
+      "animation_controllers": [
+        { "move": "controller.animation.shark" }
+      ],
+      "enable_attachables": true,
+      "render_controllers": [ "controller.render.tiger_shark" ],
+      "spawn_egg": {
+        "texture": "5fs_br:tiger_shark"
+      }
+    }
+  }
+}

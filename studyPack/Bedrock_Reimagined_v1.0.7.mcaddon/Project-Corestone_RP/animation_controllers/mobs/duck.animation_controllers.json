@@ -1,0 +1,239 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.duck.root": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "animations": [
+                        "general_controller", "look_at_target", "shake_controller",
+                        {
+                            "drink_controller": "q.is_in_water"
+                        },
+                        {
+                            "baby_swimming_controller": "q.is_baby"
+                        }
+                    ],
+                    "transitions": [
+                        {
+                            "death": "!q.is_alive"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "death": {
+                    "animations": [
+                        "death"
+                    ]
+                }
+            }
+        },
+        "controller.animation.duck.general": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "animations": [
+                        "idle"
+                    ],
+                    "transitions": [
+                        {
+                            "walk": "!q.is_in_water && q.modified_move_speed >= 0.05 && q.is_on_ground"
+                        },
+                        {
+                            "fly": "(!q.is_on_ground && !q.is_in_water) || q.is_jumping"
+                        },
+                        {
+                            "swimming": "q.is_in_water && q.is_moving"
+                        },
+                        {
+                            "idle_swimming": "q.is_in_water && !q.is_moving"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "walk": {
+                    "animations": [
+                        "walk"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!q.is_in_water && q.modified_move_speed < 0.05 && q.is_on_ground"
+                        },
+                        {
+                            "fly": "(!q.is_on_ground && !q.is_in_water) || q.is_jumping"
+                        },
+                        {
+                            "swimming": "q.is_in_water && q.is_moving"
+                        },
+                        {
+                            "idle_swimming": "q.is_in_water && !q.is_moving"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "fly": {
+                    "animations": [
+                        "fly"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!q.is_in_water && q.modified_move_speed < 0.05 && q.is_on_ground"
+                        },
+                        {
+                            "walk": "!q.is_in_water && q.modified_move_speed >= 0.05 && q.is_on_ground"
+                        },
+                        {
+                            "swimming": "q.is_in_water && q.is_moving"
+                        },
+                        {
+                            "idle_swimming": "q.is_in_water && !q.is_moving"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "swimming": {
+                    "animations": [
+                        "swimming"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!q.is_in_water && q.modified_move_speed < 0.05 && q.is_on_ground"
+                        },
+                        {
+                            "walk": "!q.is_in_water && q.modified_move_speed >= 0.05 && q.is_on_ground"
+                        },
+                        {
+                            "fly": "(!q.is_on_ground && !q.is_in_water) || q.is_jumping"
+                        },
+                        {
+                            "idle_swimming": "q.is_in_water && !q.is_moving"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "idle_swimming": {
+                    "animations": [
+                        "idle_swimming"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!q.is_in_water && q.modified_move_speed < 0.05 && q.is_on_ground"
+                        },
+                        {
+                            "walk": "!q.is_in_water && q.modified_move_speed >= 0.05 && q.is_on_ground"
+                        },
+                        {
+                            "fly": "(!q.is_on_ground && !q.is_in_water) || q.is_jumping"
+                        },
+                        {
+                            "swimming": "q.is_in_water && q.is_moving"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                }
+            }
+        },
+		"controller.animation.duck.drink": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"drink_transitioner"
+					],
+					"transitions": [
+						{
+							"drink_transitioner": "q.any_animation_finished"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"drink_transitioner": {
+					"on_entry": [
+						"v.r_idle = math.random_integer(0,10);"
+					],
+					"animations": [
+						{
+							"drink_transitioner": "v.r_idle < 10"
+						},
+						{
+							"drink": "v.r_idle == 10"
+						}
+					],
+					"transitions": [
+						{
+							"drink": "q.any_animation_finished"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"drink": {
+					"on_entry": [
+						"v.r_idle = math.random_integer(0,10);"
+					],
+					"animations": [
+						{
+							"drink_transitioner": "v.r_idle < 10"
+						},
+						{
+							"drink": "v.r_idle == 10"
+						}
+					],
+					"transitions": [
+						{
+							"drink_transitioner": "q.any_animation_finished"
+						}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		},
+		"controller.animation.duck.baby_swimming": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"baby_swimming": "q.is_in_water"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"baby_swimming": {
+					"animations": [
+						"baby_swimming"
+					],
+					"transitions": [
+						{
+							"default": "!q.is_in_water"
+						}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		},
+		"controller.animation.duck.shake": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"shake": "q.is_shaking_wetness"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"shake": {
+					"animations": [
+						"shake"
+					],
+					"transitions": [
+						{
+							"default": "!q.is_shaking_wetness"
+						}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		}
+    }
+}

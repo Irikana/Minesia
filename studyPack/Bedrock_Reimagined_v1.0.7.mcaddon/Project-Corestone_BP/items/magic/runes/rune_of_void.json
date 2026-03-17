@@ -1,0 +1,19 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:item": {
+    "description": {
+      "identifier": "5fs_br:rune_of_void",
+      "menu_category": {
+        "category": "items"
+      }
+    },
+    "components": {
+      "minecraft:glint": true,
+      "minecraft:icon": {
+        "textures": {
+          "default": "5fs_br:rune_of_void"
+        }
+      }
+    }
+  }
+}

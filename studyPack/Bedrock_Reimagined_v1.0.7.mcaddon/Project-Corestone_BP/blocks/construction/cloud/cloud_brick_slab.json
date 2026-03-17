@@ -1,0 +1,166 @@
+{
+	"format_version": "1.26.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "5fs_br:cloud_brick_slab",
+            "menu_category": {
+                "category": "Construction"
+            },
+			"traits": {
+				"minecraft:placement_position": {
+					"enabled_states": [
+						"minecraft:vertical_half"
+					]
+				}
+			},
+			"states": {
+				"5fs_br:double": [
+					false,
+					true
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "q.block_state('minecraft:vertical_half') == 'bottom' && !q.block_state('5fs_br:double')",
+				"components": {
+					"minecraft:collision_box": {
+						"origin": [
+							-8,
+							0,
+							-8
+						],
+						"size": [
+							16,
+							8,
+							16
+						]
+					},
+					"minecraft:selection_box": {
+						"origin": [
+							-8,
+							0,
+							-8
+						],
+						"size": [
+							16,
+							8,
+							16
+						]
+					},
+					"minecraft:liquid_detection": {
+						"detection_rules": [
+							{
+								"can_contain_liquid": true,
+								"liquid_type": "water",
+								"on_liquid_touches": "blocking"
+							}
+						]
+					},
+					"minecraft:connection_rule": {
+						"accepts_connections_from": "none"
+					},
+					"5fs_br:slab": {
+						"sound": "step.powder_snow"
+					},
+                    "tag:5fs_corestone:cloud_effects": {}
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:vertical_half') == 'top' && !q.block_state('5fs_br:double')",
+				"components": {
+					"minecraft:collision_box": {
+						"origin": [
+							-8,
+							8,
+							-8
+						],
+						"size": [
+							16,
+							8,
+							16
+						]
+					},
+					"minecraft:selection_box": {
+						"origin": [
+							-8,
+							8,
+							-8
+						],
+						"size": [
+							16,
+							8,
+							16
+						]
+					},
+					"minecraft:liquid_detection": {
+						"detection_rules": [
+							{
+								"can_contain_liquid": true,
+								"liquid_type": "water",
+								"on_liquid_touches": "blocking"
+							}
+						]
+					},
+					"minecraft:connection_rule": {
+						"accepts_connections_from": "none"
+					},
+					"5fs_br:slab": {
+						"sound": "step.powder_snow"
+					},
+                    "tag:5fs_corestone:cloud_effects": {}
+				}
+			},
+			{
+				"condition": "q.block_state('5fs_br:double')",
+				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.glass",
+						"culling": "5fs_br:culling.glass"
+					},
+					"minecraft:loot": "loot_tables/blocks/slabs/cloud/cloud_brick_slab.json",
+                    "minecraft:tick": {
+                        "interval_range": [
+                            2,
+                            4
+                        ]
+                    },
+					"5fs_br:double_slab": {},
+                    "tag:5fs_corestone:cloud_effects": {}
+				}
+			}
+		],
+		"components": {
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 0
+			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 0
+			},
+			"minecraft:geometry": {
+				"identifier": "geometry.slab",
+				"culling": "5fs_br:culling.glass_slab",
+				"bone_visibility": {
+					"bottom_slab": "query.block_state('minecraft:vertical_half') == 'bottom' && !query.block_state('5fs_br:double')",
+					"top_slab": "query.block_state('minecraft:vertical_half') == 'top' && !query.block_state('5fs_br:double')"
+				}
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "cloud_bricks",
+					"render_method": "blend",
+					"ambient_occlusion": false,
+					"face_dimming": false
+				}
+			},
+			"minecraft:movable": {
+				"movement_type": "popped"
+			},
+			"minecraft:light_dampening": 0,
+			"minecraft:map_color": "#F2F4F4",
+			"minecraft:precipitation_interactions": {
+				"precipitation_behavior": "obstruct_rain"
+			}
+		}
+	}
+}

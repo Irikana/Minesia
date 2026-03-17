@@ -1,0 +1,26 @@
+{
+	"format_version": "1.26.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "5fs_br:water_moss_algae",
+			"menu_category": {
+				"category": "nature"
+			}
+		},
+		"components": {
+			"minecraft:icon": "5fs_br:water_moss_algae",
+			"minecraft:block_placer": {
+				"block": "5fs_br:water_moss_algae",
+				"replace_block_item": true,
+				"use_on": [
+					"minecraft:structure_void"
+				]
+			},
+			"minecraft:compostable": {
+				"composting_chance": 65
+			},
+			"minecraft:liquid_clipped": true,
+			"5fs_br:water_placeable": {}
+		}
+	}
+}

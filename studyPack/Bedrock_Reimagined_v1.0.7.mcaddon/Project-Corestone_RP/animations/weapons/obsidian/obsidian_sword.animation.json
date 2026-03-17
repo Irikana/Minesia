@@ -1,0 +1,23 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.obsidian_sword.1fp": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": [-246.73916, -58.46479, 89.71768],
+					"position": [0, 17, 4]
+				}
+			}
+		},
+		"animation.obsidian_sword.3pp": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": [87.5, 0, 0],
+					"position": [0, 20, -3]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,17 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:ore_feature": {
+    "description": {
+      "identifier": "5fs_br:crystal_canyons/cyan_glintrock_feature"
+    },
+    "count": 128,
+    "replace_rules": [
+      {
+        "places_block": "5fs_br:cyan_glintrock",
+        "may_replace": [
+          "minecraft:yellow_terracotta"
+        ]
+      }
+    ]
+  }
+}

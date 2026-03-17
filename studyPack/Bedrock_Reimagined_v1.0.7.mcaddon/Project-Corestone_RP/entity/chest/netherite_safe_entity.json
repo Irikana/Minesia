@@ -1,0 +1,54 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "5fs_br:netherite_safe_entity",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/blocks/construction/netherite_safe"
+            },
+            "animations": {
+                "open": "animation.netherite_safe.opening",
+                "close": "animation.netherite_safe.closing",
+                "north": "animation.5fs_br.tile_entity.north",
+                "south": "animation.5fs_br.tile_entity.south",
+                "west": "animation.5fs_br.tile_entity.west",
+                "east": "animation.5fs_br.tile_entity.east",
+                "general_controller": "controller.animation.chest"
+            },
+            "scripts": {
+				"pre_animation": [
+                    "v.is_opened = query.property('5fs_br:is_opened');",
+					"v.timer = q.life_time + 0.75;"
+				],
+                "animate": [
+                    "general_controller",
+                    {
+                        "north": "query.property('5fs_br:rotation') == 'north'"
+                    },
+                    {
+                        "south": "query.property('5fs_br:rotation') == 'south'"
+                    },
+                    {
+                        "west": "query.property('5fs_br:rotation') == 'west'"
+                    },
+                    {
+                        "east": "query.property('5fs_br:rotation') == 'east'"
+                    }
+                ]
+            },
+            "geometry": {
+                "default": "geometry.netherite_safe"
+            },
+            "render_controllers": [
+                "controller.render.default"
+            ],
+            "sound_effects": {
+                "chest_open": "open_door.copper",
+                "chest_close": "close_door.copper"
+            }
+        }
+    }
+}

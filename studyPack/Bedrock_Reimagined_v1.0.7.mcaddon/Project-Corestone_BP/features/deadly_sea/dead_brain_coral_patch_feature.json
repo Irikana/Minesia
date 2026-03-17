@@ -1,0 +1,23 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:ore_feature": {
+    "description": {
+      "identifier": "5fs_br:deadly_sea/dead_brain_coral_patch_feature"
+    },
+    "count": 50,
+    "replace_rules": [
+      {
+        "places_block": "minecraft:dead_brain_coral_block",
+        "may_replace": [
+          "minecraft:sand",
+          "minecraft:dirt",
+          "minecraft:diorite",
+          "minecraft:granite",
+          "minecraft:clay",
+          "minecraft:stone",
+          "minecraft:gravel"
+        ]
+      }
+    ]
+  }
+}

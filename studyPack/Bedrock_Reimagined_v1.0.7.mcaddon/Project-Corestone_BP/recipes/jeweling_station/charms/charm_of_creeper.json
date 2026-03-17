@@ -1,0 +1,30 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "5fs_br:charm_of_creeper"
+		},
+		"tags": [
+			"jeweling_station"
+		],
+		"key": {
+			"D": {
+                "item": "minecraft:diamond"
+            },
+            "G": {
+                "item": "minecraft:gunpowder"
+            }
+		},
+		"pattern": [
+			"DGD",
+			"GGG",
+			"DGD"
+		],
+		"result": {
+			"item": "5fs_br:charm_of_creeper"
+		},
+		"unlock": {
+			"context": "AlwaysUnlocked"
+		}
+	}
+}

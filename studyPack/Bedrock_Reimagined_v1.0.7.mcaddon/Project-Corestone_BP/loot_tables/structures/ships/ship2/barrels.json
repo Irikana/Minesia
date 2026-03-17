@@ -1,0 +1,151 @@
+{
+  "pools": [
+    {
+      "rolls": { "min": 3, "max": 5 },
+      "entries": [
+        { "type": "item", "name": "minecraft:bone", "weight": 6, "functions": [ { "function": "set_count", "count": { "min": 4, "max": 10 } } ] },
+        { "type": "item", "name": "minecraft:web", "weight": 5, "functions": [ { "function": "set_count", "count": { "min": 1, "max": 5 } } ] },
+        { "type": "item", "name": "minecraft:string", "weight": 5, "functions": [ { "function": "set_count", "count": { "min": 4, "max": 10 } } ] },
+        { "type": "item", "name": "minecraft:paper", "weight": 4, "functions": [ { "function": "set_count", "count": { "min": 3, "max": 7 } } ] },
+        { "type": "item", "name": "minecraft:coal", "weight": 4, "functions": [ { "function": "set_count", "count": { "min": 6, "max": 14 } } ] },
+        { "type": "item", "name": "minecraft:torch", "weight": 4, "functions": [ { "function": "set_count", "count": { "min": 5, "max": 12 } } ] },
+        { "type": "item", "name": "minecraft:bread", "weight": 3, "functions": [ { "function": "set_count", "count": { "min": 1, "max": 3 } } ] },
+        { "type": "item", "name": "minecraft:dried_kelp_block", "weight": 3, "functions": [ { "function": "set_count", "count": { "min": 1, "max": 2 } } ] },
+        { "type": "item", "name": "minecraft:gunpowder", "weight": 2, "functions": [ { "function": "set_count", "count": { "min": 2, "max": 6 } } ] }
+      ]
+    },
+    {
+      "rolls": { "min": 0, "max": 2 },
+      "entries": [
+        { "type": "item", "name": "minecraft:stone_sword", "weight": 4, "functions": [ { "function": "set_damage", "damage": { "min": 0.30, "max": 0.85 } } ] },
+        { "type": "item", "name": "minecraft:stone_axe", "weight": 4, "functions": [ { "function": "set_damage", "damage": { "min": 0.30, "max": 0.85 } } ] },
+        { "type": "item", "name": "minecraft:stone_pickaxe", "weight": 3, "functions": [ { "function": "set_damage", "damage": { "min": 0.30, "max": 0.85 } } ] },
+        { "type": "item", "name": "minecraft:copper_sword", "weight": 2, "functions": [ { "function": "set_damage", "damage": { "min": 0.30, "max": 0.80 } } ] },
+        { "type": "item", "name": "minecraft:copper_axe", "weight": 2, "functions": [ { "function": "set_damage", "damage": { "min": 0.30, "max": 0.80 } } ] },
+        { "type": "item", "name": "minecraft:copper_pickaxe", "weight": 2, "functions": [ { "function": "set_damage", "damage": { "min": 0.30, "max": 0.80 } } ] },
+        { "type": "item", "name": "minecraft:iron_sword", "weight": 1, "functions": [ { "function": "set_damage", "damage": { "min": 0.40, "max": 0.90 } } ] }
+      ]
+    },
+    {
+      "rolls": { "min": 0, "max": 2 },
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:leather_chestplate",
+          "weight": 3,
+          "functions": [
+            { "function": "set_damage", "damage": { "min": 0.20, "max": 0.70 } },
+            { "function": "enchant_with_levels", "levels": { "min": 4, "max": 9 }, "treasure": false }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:leather_boots",
+          "weight": 3,
+          "functions": [
+            { "function": "set_damage", "damage": { "min": 0.20, "max": 0.70 } },
+            { "function": "enchant_with_levels", "levels": { "min": 4, "max": 9 }, "treasure": false }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:chainmail_helmet",
+          "weight": 2,
+          "functions": [
+            { "function": "set_damage", "damage": { "min": 0.15, "max": 0.65 } },
+            { "function": "enchant_with_levels", "levels": { "min": 6, "max": 13 }, "treasure": false }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:chainmail_boots",
+          "weight": 2,
+          "functions": [
+            { "function": "set_damage", "damage": { "min": 0.15, "max": 0.65 } },
+            { "function": "enchant_with_levels", "levels": { "min": 6, "max": 13 }, "treasure": false }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:copper_helmet",
+          "weight": 3,
+          "functions": [
+            { "function": "set_damage", "damage": { "min": 0.20, "max": 0.70 } },
+            { "function": "enchant_with_levels", "levels": { "min": 6, "max": 13 }, "treasure": false }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:copper_chestplate",
+          "weight": 3,
+          "functions": [
+            { "function": "set_damage", "damage": { "min": 0.20, "max": 0.70 } },
+            { "function": "enchant_with_levels", "levels": { "min": 6, "max": 13 }, "treasure": false }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:copper_leggings",
+          "weight": 3,
+          "functions": [
+            { "function": "set_damage", "damage": { "min": 0.20, "max": 0.70 } },
+            { "function": "enchant_with_levels", "levels": { "min": 6, "max": 13 }, "treasure": false }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:copper_boots",
+          "weight": 3,
+          "functions": [
+            { "function": "set_damage", "damage": { "min": 0.20, "max": 0.70 } },
+            { "function": "enchant_with_levels", "levels": { "min": 6, "max": 13 }, "treasure": false }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": { "min": 0, "max": 1 },
+      "entries": [
+        { "type": "item", "name": "5fs_br:rope", "weight": 6, "functions": [ { "function": "set_count", "count": { "min": 4, "max": 10 } } ] },
+        { "type": "item", "name": "minecraft:fishing_rod", "weight": 3, "functions": [ { "function": "set_damage", "damage": { "min": 0.40, "max": 0.90 } } ] },
+        { "type": "item", "name": "minecraft:bucket", "weight": 2 }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "empty", "weight": 40 },
+        { "type": "item", "name": "5fs_br:diamond_wand", "weight": 4, "functions": [ { "function": "set_damage", "damage": { "min": 0.10, "max": 0.40 } } ] },
+        { "type": "item", "name": "5fs_br:torch_wand", "weight": 1, "functions": [ { "function": "set_damage", "damage": { "min": 0.20, "max": 0.70 } } ] },
+        { "type": "item", "name": "5fs_br:enchanted_scroll", "weight": 13 }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "empty", "weight": 60 },
+        { "type": "item", "name": "5fs_br:rune_of_blades", "weight": 3 },
+        { "type": "item", "name": "5fs_br:rune_of_beasts", "weight": 3 },
+        { "type": "item", "name": "5fs_br:rune_of_decay", "weight": 4 },
+        { "type": "item", "name": "5fs_br:rune_of_earth", "weight": 3 },
+        { "type": "item", "name": "5fs_br:rune_of_eternity", "weight": 4 },
+        { "type": "item", "name": "5fs_br:rune_of_flame", "weight": 3 },
+        { "type": "item", "name": "5fs_br:rune_of_frost", "weight": 3 },
+        { "type": "item", "name": "5fs_br:rune_of_growth", "weight": 4 },
+        { "type": "item", "name": "5fs_br:rune_of_knowledge", "weight": 4 },
+        { "type": "item", "name": "5fs_br:rune_of_light", "weight": 3 },
+        { "type": "item", "name": "5fs_br:rune_of_shadows", "weight": 4 },
+        { "type": "item", "name": "5fs_br:rune_of_shields", "weight": 3 },
+        { "type": "item", "name": "5fs_br:rune_of_storms", "weight": 3 }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "item", "name": "5fs_br:sky_star_fragment", "weight": 4 },
+        { "type": "item", "name": "5fs_br:mana_bottle", "weight": 6, "functions": [ { "function": "set_count", "count": { "min": 1, "max": 3 } } ] },
+        { "type": "empty", "weight": 90 }
+      ]
+    }
+  ]
+}

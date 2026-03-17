@@ -1,0 +1,30 @@
+{
+    "format_version": "1.26.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "5fs_br:splash_illumination_potion_glowstone_lvl3",
+            "menu_category": {
+                "category": "equipment"
+            }
+        },
+        "components": {
+            "minecraft:icon": "5fs_br:splash_illumination_potion",
+            "minecraft:max_stack_size": 1,
+            "5fs_br:splash_potion": {
+                "spawn_event": "5fs_br:illumination",
+                "duration": 1800, //90s * 20ticks/s
+                "amplifier": 3
+            },
+            "minecraft:projectile": {
+                "projectile_entity": "5fs_br:despawn"
+            },
+            "minecraft:throwable": {
+                "do_swing_animation": true
+            },
+            "minecraft:use_modifiers": {
+                "use_duration": 0.01,
+                "movement_modifier": 1
+            }
+        }
+    }
+}

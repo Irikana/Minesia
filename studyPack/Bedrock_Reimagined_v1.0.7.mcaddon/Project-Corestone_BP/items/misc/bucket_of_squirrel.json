@@ -1,0 +1,20 @@
+{
+	"format_version": "1.26.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "5fs_br:bucket_of_squirrel",
+            "menu_category": {
+                "category": "items"
+            }
+		},
+		"components": {
+			"minecraft:icon": "5fs_br:bucket_squirrel",
+			"minecraft:max_stack_size": 1,
+			"5fs_br:mob_bucket": {
+				"sound": "bucket.empty_fish",
+				"mob": "5fs_br:squirrel",
+				"places_water": false
+			}
+		}
+	}
+}

@@ -1,0 +1,132 @@
+pack.name=Mutant Morph
+pack.description=Explore Mutant Morph by 5 Frame Studios today!
+
+##Entity Name
+entity.5fs:warden_trophy.name=Warden Trophy
+entity.5fs:electric_boss.name=Electric Boss
+entity.5fs:lava_golem.name=Lava Golem
+entity.5fs:panel.name=Panel
+
+##Entity Spawn Egg
+item.spawn_egg.entity.5fs:warden_trophy.name=Warden Trophy
+item.spawn_egg.entity.5fs:electric_boss.name=Electric Boss
+item.spawn_egg.entity.5fs:lava_golem.name=Lava Golem
+item.spawn_egg.entity.5fs:panel.name=Spawn Panel
+
+##Items
+item.5fs:guidebook=Guidebook
+item.5fs:structure_locator=Structure Locator
+item.5fs:attack_gear_1=Attack Gear 1
+item.5fs:attack_gear_2=Attack Gear 2
+item.5fs:attack_gear_3=Attack Gear 3
+item.5fs:attack_gear_4=Attack Gear 4
+item.5fs:morph=Morph
+item.5fs:scuba_diving_mask=Scuba Diving Mask
+item.5fs:water_key=Water Key
+item.5fs:earth_key=Earth Key
+item.5fs:lava_key=Lava Key
+item.5fs:electric_key=Electric Key
+
+##Blocks
+tile.5fs:electric_ball_block.name=Energy Orb
+tile.5fs:earth_boss_heart.name=Earth Boss Heart
+
+##Loading Messages
+5fs.loading.message.1=Subscribe to Fozo on YouTube!
+5fs.loading.message.2=Need support? Contact us at office@5framestudios.com
+5fs.loading.message.3=Use the Structure Locator to find new structures.
+5fs.loading.message.4=Use the Morph item to manage your morph settings.
+5fs.loading.message.5=Mutant Morph by 5 Frame Studios
+5fs.loading.message.6=Use all four Elemental Keys to summon the Mutant Warden Boss.
+5fs.loading.message.7=The Earth Boss is a friendly pet when tamed.
+5fs.loading.message.8=Craft an Electric Orb to summon the Electric Boss.
+5fs.loading.message.9=The Water Boss shoots Hyper Aqua Beams!
+5fs.loading.message.10=Morphing...
+
+##NPC Text
+name.player.ui=Player
+name.lava.ui=Lava Boss
+name.warden.ui=Warden Boss
+name.electric.ui=Electric Boss
+name.earth.ui=Earth Boss
+name.water.ui=Water Boss
+
+##Earth boss
+entity.5fs:earth_boss_heart.name=Earth Boss Heart
+entity.5fs:earth_boss_missing.name=Earth Boss Heart Missing
+item.spawn_egg.entity.5fs:earth_boss_heart.name=Earth Boss Heart
+item.spawn_egg.entity.5fs:earth_boss_missing.name=Earth Boss Heart Missing
+
+## Warden boss
+entity.5fs:warden_boss.name=Warden Boss
+entity.5fs:warden_boss_1.name=Warden Boss 1
+entity.5fs:warden_boss_2.name=Warden Boss 2
+entity.5fs:warden_boss_3.name=Warden Boss 3
+item.spawn_egg.entity.5fs:warden_boss.name=Warden Boss
+item.spawn_egg.entity.5fs:warden_boss_1.name=Warden Boss 1
+item.spawn_egg.entity.5fs:warden_boss_2.name=Warden Boss 2
+item.spawn_egg.entity.5fs:warden_boss_3.name=Warden Boss 3
+ 
+## Water boss
+entity.5fs:water_boss.name=Water Boss
+entity.5fs:water_boss_1.name=Water Boss 1
+entity.5fs:water_boss_2.name=Water Boss 2
+item.spawn_egg.entity.5fs:water_boss.name=Water Boss
+item.spawn_egg.entity.5fs:water_boss_1.name=Water Boss 1
+item.spawn_egg.entity.5fs:water_boss_2.name=Water Boss 2
+ 
+## Projectiles
+item.spawn_egg.entity.5fs:lava_golem_projectile_1.name=Lava Golem Projectile 1
+entity.5fs:lava_golem_projectile_1.name=Lava Golem Projectile 1
+item.spawn_egg.entity.5fs:lava_golem_projectile_2.name=Lava Golem Projectile 2
+entity.5fs:lava_golem_projectile_2.name=Lava Golem Projectile 2
+item.spawn_egg.entity.5fs:lava_golem_projectile_3.name=Lava Golem Projectile 3
+entity.5fs:lava_golem_projectile_3.name=Lava Golem Projectile 3
+item.spawn_egg.entity.5fs:lava_golem_projectile_4.name=Lava Golem Projectile 4
+entity.5fs:lava_golem_projectile_4.name=Lava Golem Projectile 4
+
+###interact
+action.interact.despawn=Despawn
+action.interact.upgrade=Upgrade
+
+earth.boss.sit=§7[§l§e!§r§7] §r§cThe Earth Boss is sitting.§r
+earth.boss.stand=§7[§l§e!§r§7] §r§aThe Earth Boss will be actively defending you.§r
+
+##%1=newline, %2=structureName
+structure.locating=Locating %2...%1Please try again later
+
+##%1=newline, %2=structureName, %3=xCoordinate, %4=zCoordinate
+structure.located=§7[§l§e!§r§7] §r§c%2§r is located at%1x=§a%3§r y=? z=§a%4§r
+
+##Morph Information
+morph.player.description=Morph back into the %1default Minecraft player.
+morph.lava.description=Morph into the Lava Boss %1to throw Flaming Blast Balls, %1increase health, and more!
+morph.water.description=Morph into the Water Boss %1to use Hyper Aqua Lasers and more!
+morph.electric.description=Morphing into the Electric Boss %1gives you the ability to summon %1lightning on enemies.
+morph.warden.description=Morphing into the Warden Boss %1gives you access to a ranged %1sonic blast attack!
+morph.earth.description=The Earth Boss morph lets %1you poison your enemies with %1the Lingering Soil effect.
+morph.locked=§7[§l§e!§r§7] §r§c%2 morph is locked! Check the Guidebook on how to unlock it.§r
+
+##Fozo Script
+fozo.script.0=Hey §6%2§r, I'm §3Fozo§r! Welcome to Mutant Morph! I've been working hard to get all these crazy mutant mobs into the Marketplace for you to play with, and I finally did it!%1Anyways, I hear you want to learn how to morph into these mobs? You've come to the right place!
+fozo.script.1=You can see that I've given you a Morph Item in your inventory. Hold it and interact to open the morph menu. Once there you can use the arrows to cycle through all the different morphs.%1Right now, they're all locked. But... with a little battling here, and a little crafting there, you can morph into all these mobs in no time!
+fozo.script.2=The Guidebook has all the information on how to summon the new Mutants and how to craft the new items related to them. %1Here's a special tool I've been working on: a Structure Locator! You can use it to find all the different Mutant Structures. %1Once you get to these locations, you can craft the items needed to spawn the new Mutants!
+fozo.script.3=Alright! Off you go on your adventure. I'll be here if you need another guidebook. Good luck with everything!
+fozo.script.4=You're back! Is there anything I can help you with?
+
+##Fozo Tips
+fozo.tip.name=§7[ §l§eFozo§r§7 ] §r
+fozo.tip.0=Nice work! You found the Earthcore Sanctuary. Now just craft the Earth Boss Heart and interact with the Earth Boss to summon it.
+fozo.tip.1=Woah! You unlocked the Earth Boss! You can now morph into it, and have your personal Earth Boss pet!
+fozo.tip.2=Looks like you just got an Elemental Key! Make sure to keep all of them safe because you'll gonna need these keys to summon the Mutant Warden.
+fozo.tip.3=Sweet! You unlocked your first morph! Interact with the attack gear items to execute some crazy attacks on your enemies!
+fozo.tip.4=The Tidal Sanctum, home of the Water Boss! Defeat the beast roaming in this waters so you can unlock the ability to morph and get the Elemental Water Key. Just watch out for those pesky Water Minions!
+fozo.tip.5=Awesome! You defeated the Water Boss! The ability to morph into it is now unlocked in the Morph Menu.
+fozo.tip.6=It's scary around here! You found the Mutant Warden's Hollow. Place all four Elemental Keys right on to the pedestals to summon the Mutant Warden!
+fozo.tip.7=You rock! You defeated all 5 bosses! As a reward, you have received a Warden Trophy! Congrats because only the bravest of players receive it!
+fozo.tip.8=Hey Thanks for playing Mutant Morph! Make sure to stick around for more content soon on the Marketplace!
+fozo.tip.9=Jeez! That Lava Boss is scary! That thing is throwing flaming lava balls!
+fozo.tip.10=Pheew that was a challenge! Make sure to get that Elemental Lava Key. Oh and now you can morph into that crazy thing!
+fozo.tip.11=Be careful with that Energy Orb! It holds one million volts of electricity! I heard if you place it down and surround it with four Lightning Rods, it will summon the Electric Boss.
+fozo.tip.12=I forgot to mention, the Electric Boss actually blasts one million volts of electricity, Sorry about that
+fozo.tip.13=Boom! Piece of cake... Right? You can now have the Electric Key and access to the Electric Boss Morph!

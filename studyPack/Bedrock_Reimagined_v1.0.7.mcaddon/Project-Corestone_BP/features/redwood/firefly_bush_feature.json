@@ -1,0 +1,31 @@
+{
+    "format_version": "1.21.60",
+    "minecraft:single_block_feature": {
+        "description": {
+            "identifier": "5fs_br:redwood/firefly_bush_feature"
+        },
+        "places_block": "minecraft:firefly_bush",
+        "enforce_placement_rules": false,
+        "enforce_survivability_rules": false,
+        "may_replace": [
+            "minecraft:air"
+        ],
+        "may_attach_to": {
+            "min_sides_must_attach": 1,
+            "bottom": [
+                {
+                    "tags": "query.any_tag('dirt')"
+                },
+                "minecraft:grass_block",
+                "minecraft:dirt",
+                "minecraft:moss_block",
+                "minecraft:pale_moss_block",
+                "minecraft:mycelium",
+                "minecraft:coarse_dirt",
+                "minecraft:dirt_with_roots",
+                "minecraft:muddy_mangrove_roots",
+                "minecraft:farmland"
+            ]
+        }
+    }
+}

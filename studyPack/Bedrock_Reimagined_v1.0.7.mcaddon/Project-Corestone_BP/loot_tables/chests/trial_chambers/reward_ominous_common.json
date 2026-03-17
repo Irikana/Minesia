@@ -1,0 +1,229 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:emerald",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 4,
+                "max": 10
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:wind_charge",
+          "weight": 4,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 8,
+                "max": 12
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:arrow",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 4,
+                "max": 12
+              }
+            },
+            {
+              "function": "set_potion",
+              "id": "strong_slowness"
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:diamond",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 2,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:ominous_bottle",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1.0
+            },
+            {
+              "function": "set_ominous_bottle_amplifier",
+              "amplifier": {
+                "min": 2,
+                "max": 4
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "5fs_br:explosive_arrow",
+          "weight": 4,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 6
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "5fs_br:zeus_arrow",
+          "weight": 4,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 6
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "5fs_br:raw_crystalline",
+          "weight": 4,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "5fs_br:arcane_rift",
+          "weight": 4
+        },
+        {
+          "type": "item",
+          "name": "5fs_br:giant_mushroom_stew",
+          "weight": 4
+        },
+        {
+          "type": "item",
+          "name": "5fs_br:crystalline_apple",
+          "weight": 4
+        },
+        {
+          "type": "item",
+          "name": "5fs_br:deep_bundle",
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "5fs_br:deep_black_bundle",
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "5fs_br:deep_blue_bundle",
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "5fs_br:deep_brown_bundle",
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "5fs_br:deep_cyan_bundle",
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "5fs_br:deep_gray_bundle",
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "5fs_br:deep_green_bundle",
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "5fs_br:deep_light_blue_bundle",
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "5fs_br:deep_light_gray_bundle",
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "5fs_br:deep_lime_bundle",
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "5fs_br:deep_magenta_bundle",
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "5fs_br:deep_orange_bundle",
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "5fs_br:deep_pink_bundle",
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "5fs_br:deep_purple_bundle",
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "5fs_br:deep_red_bundle",
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "5fs_br:deep_white_bundle",
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "5fs_br:deep_yellow_bundle",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

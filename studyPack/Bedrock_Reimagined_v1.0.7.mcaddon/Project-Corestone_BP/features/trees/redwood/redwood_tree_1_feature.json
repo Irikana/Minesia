@@ -1,0 +1,46 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:structure_template_feature": {
+    "description": {
+      "identifier": "5fs_br:trees/redwood/redwood_tree_1_feature"
+    },
+    "structure_name": "redwood:redwoodTree2",
+    "adjustment_radius": 0,
+    "facing_direction": "south",
+    "constraints": {
+      "grounded": {},
+      "block_intersection": {
+        "block_allowlist": [
+          "minecraft:air",
+          "minecraft:bush",
+          "5fs_br:redwood_leaves",
+          "minecraft:podzol",
+          "minecraft:coarse_dirt",
+          "minecraft:grass_block",
+          "minecraft:gravel",
+          "minecraft:tall_grass",
+          "minecraft:short_grass",
+          "minecraft:fern",
+          "minecraft:large_fern",
+          "minecraft:dandelion",
+          "minecraft:poppy",
+          "minecraft:blue_orchid",
+          "minecraft:allium",
+          "minecraft:azure_bluet",
+          "minecraft:red_tulip",
+          "minecraft:orange_tulip",
+          "minecraft:white_tulip",
+          "minecraft:pink_tulip",
+          "minecraft:oxeye_daisy",
+          "minecraft:cornflower",
+          "minecraft:lily_of_the_valley",
+          "minecraft:sunflower",
+          "minecraft:rose_bush",
+          "minecraft:peony",
+          "minecraft:lilac",
+          "5fs_br:redwood_sapling"
+        ]
+      }
+    }
+  }
+}

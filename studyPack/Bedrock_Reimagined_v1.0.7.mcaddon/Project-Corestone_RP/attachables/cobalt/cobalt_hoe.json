@@ -1,0 +1,34 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:attachable": {
+        "description": {
+            "identifier": "5fs_br:cobalt_hoe",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/gears/cobalt_hoe"
+            },
+            "geometry": {
+                "default": "geometry.cobalt_hoe"
+            },
+            "render_controllers": [
+                "controller.render.default"
+            ],
+            "animations": {
+                "hold_first_person": "animation.cobalt_hoe.1fp",
+                "hold_third_person": "animation.cobalt_hoe.3pp"
+            },
+            "scripts": {
+                "animate": [
+                    {
+                        "hold_first_person": "c.is_first_person"
+                    },
+                    {
+                        "hold_third_person": "!c.is_first_person"
+                    }
+                ]
+            }
+        }
+    }
+}

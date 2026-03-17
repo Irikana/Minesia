@@ -1,0 +1,13 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:scatter_feature": {
+        "description": {
+            "identifier": "5fs_br:trees/redwood/scatter_redwood_tree_3_feature"
+        },
+        "places_feature": "5fs_br:trees/redwood/redwood_tree_3_feature",
+        "iterations": 1,
+        "x": -15,
+        "y": 0,
+        "z": -12
+    }
+}

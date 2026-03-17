@@ -1,0 +1,182 @@
+{
+    "format_version": "1.26.0",
+	"minecraft:block": {
+        "description": {
+            "identifier": "5fs_br:wild_small_maple_log",
+            "states": {
+                "5fs_br:state": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ]
+            },
+            "traits": {
+                "minecraft:placement_position": {
+                    "enabled_states": [
+                        "minecraft:block_face"
+                    ]
+                }
+            }
+        },
+        "components": {
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 2
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 2
+            },
+            "minecraft:destruction_particles": {
+                "texture": "maple_log_side"
+            },
+            "minecraft:geometry": {
+                "identifier": "geometry.wild_small_maple_log",
+                "bone_visibility": {
+                    "0": "query.block_state('5fs_br:state') == 0",
+                    "1": "query.block_state('5fs_br:state') == 1",
+                    "2": "query.block_state('5fs_br:state') == 2",
+                    "3": "query.block_state('5fs_br:state') == 3",
+                    "4": "query.block_state('5fs_br:state') == 4",
+                    "5": "query.block_state('5fs_br:state') == 5"
+                }
+            },
+            "minecraft:collision_box": {
+                "origin": [
+                    -8,
+                    0,
+                    -5
+                ],
+                "size": [
+                    16,
+                    10,
+                    10
+                ]
+            },
+            "minecraft:selection_box": {
+                "origin": [
+                    -8,
+                    0,
+                    -5
+                ],
+                "size": [
+                    16,
+                    10,
+                    10
+                ]
+            },
+            "minecraft:map_color": "#DAAE75",
+            "minecraft:flammable": true,
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "maple_log_side",
+                    "render_method": "alpha_test_to_opaque"
+                },
+                "up": {
+                    "texture": "small_maple_log",
+                    "render_method": "alpha_test_to_opaque"
+                },
+                "down": {
+                    "texture": "small_maple_log",
+                    "render_method": "alpha_test_to_opaque"
+                },
+                "wild_small_maple_log_0": {
+                    "texture": "wild_small_maple_log_0",
+                    "render_method": "alpha_test_to_opaque"
+                },
+                "wild_small_maple_log_1": {
+                    "texture": "wild_small_maple_log_1",
+                    "render_method": "alpha_test_to_opaque"
+                },
+                "wild_small_maple_log_2": {
+                    "texture": "wild_small_maple_log_2",
+                    "render_method": "alpha_test_to_opaque"
+                }
+            },
+            "minecraft:liquid_detection": {
+                "detection_rules": [
+                    {
+                        "can_contain_liquid": true,
+                        "liquid_type": "water",
+                        "on_liquid_touches": "blocking"
+                    }
+                ]
+            },
+			"minecraft:precipitation_interactions": {
+				"precipitation_behavior": "obstruct_rain"
+			},
+			"minecraft:connection_rule": {
+				"accepts_connections_from": "none"
+			},
+            "5fs_br:wild_small_maple_log": {},
+            "tag:minecraft:is_axe_item_destructible": {}
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('minecraft:block_face') == 'up' || q.block_state('minecraft:block_face') == 'down'",
+                "components": {
+                    "minecraft:geometry": {
+                        "identifier": "geometry.wild_small_maple_log_up",
+                        "bone_visibility": {
+                            "0": "query.block_state('5fs_br:state') == 0",
+                            "1": "query.block_state('5fs_br:state') == 1",
+                            "2": "query.block_state('5fs_br:state') == 2",
+                            "3": "query.block_state('5fs_br:state') == 3",
+                            "4": "query.block_state('5fs_br:state') == 4",
+                            "5": "query.block_state('5fs_br:state') == 5"
+                        }
+                    },
+                    "minecraft:collision_box": {
+                        "origin": [
+                            -5,
+                            0,
+                            -5
+                        ],
+                        "size": [
+                            10,
+                            16,
+                            10
+                        ]
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -5,
+                            0,
+                            -5
+                        ],
+                        "size": [
+                            10,
+                            16,
+                            10
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:block_face') == 'east' || q.block_state('minecraft:block_face') == 'west'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            0,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:block_face') == 'north' || q.block_state('minecraft:block_face') == 'south'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            90,
+                            0
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

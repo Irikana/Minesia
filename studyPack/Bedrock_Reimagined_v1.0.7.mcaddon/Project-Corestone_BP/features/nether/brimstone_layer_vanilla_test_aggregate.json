@@ -1,0 +1,17 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:aggregate_feature": {
+    "description": {
+      "identifier": "5fs_br:nether/brimstone_layer_vanilla_test_aggregate"
+    },
+    "features": [
+      "5fs_br:nether/scatter_stone_brimstone_layer_feature",
+      "5fs_br:nether/scatter_magma_to_gold_feature",
+      "5fs_br:nether/scatter_placeholder_brimstone_nether_gold_feature",
+      "5fs_br:nether/scatter_placeholder_brimstone_quartz_feature",
+      "5fs_br:nether/scatter_placeholder_brimstone_rose_quartz_feature",
+      "5fs_br:nether/scatter_placeholder_cobalt_weird_feature",
+      "5fs_br:nether/scatter_brimstone_ancient_debris"
+    ]
+  }
+}

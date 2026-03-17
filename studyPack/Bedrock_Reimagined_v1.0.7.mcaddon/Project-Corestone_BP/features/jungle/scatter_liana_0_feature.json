@@ -1,0 +1,13 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "5fs_br:jungle/scatter_liana_0_feature"
+		},
+		"iterations": 100,
+		"places_feature": "5fs_br:jungle/liana_0_feature",
+		"x": 0,
+		"y": -9,
+		"z": 0
+	}
+}

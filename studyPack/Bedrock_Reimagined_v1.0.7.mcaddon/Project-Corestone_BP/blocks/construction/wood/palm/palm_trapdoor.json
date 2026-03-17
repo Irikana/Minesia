@@ -1,0 +1,358 @@
+{
+    "format_version": "1.26.0",
+	"minecraft:block": {
+        "description": {
+            "identifier": "5fs_br:palm_trapdoor",
+            "traits": {
+                "minecraft:placement_position": {
+                    "enabled_states": [
+                        "minecraft:vertical_half"
+                    ]
+                },
+                "minecraft:placement_direction": {
+                    "enabled_states": [
+                        "minecraft:cardinal_direction"
+                    ]
+                }
+            },
+            "states": {
+                "5fs_br:open": [
+                    false,
+                    true
+                ],
+				"5fs_br:was_powered": [
+					false,
+					true
+				]
+            }
+        },
+		"permutations": [
+			{
+				"condition": "q.block_state('minecraft:vertical_half') == 'top' && q.block_state('minecraft:cardinal_direction') == 'north' && !q.block_state('5fs_br:open')",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							0,
+							180
+						]
+					},
+                    "minecraft:connection_rule": {
+                        "accepts_connections_from": "none"
+                    }
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:vertical_half') == 'top' && q.block_state('minecraft:cardinal_direction') == 'south' && !q.block_state('5fs_br:open')",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							180,
+							0,
+							0
+						]
+					},
+                    "minecraft:connection_rule": {
+                        "accepts_connections_from": "none"
+                    }
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:vertical_half') == 'top' && q.block_state('minecraft:cardinal_direction') == 'east' && !q.block_state('5fs_br:open')",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							180,
+							-270,
+							0
+						]
+					},
+                    "minecraft:connection_rule": {
+                        "accepts_connections_from": "none"
+                    }
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:vertical_half') == 'top' && q.block_state('minecraft:cardinal_direction') == 'west' && !q.block_state('5fs_br:open')",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							180,
+							270,
+							0
+						]
+					},
+                    "minecraft:connection_rule": {
+                        "accepts_connections_from": "none"
+                    }
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:vertical_half') == 'top' && q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('5fs_br:open')",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							-270,
+							0,
+							0
+						]
+					},
+                    "minecraft:connection_rule": {
+                        "accepts_connections_from": "all",
+						"enabled_directions": [
+							"north"
+						]
+                    }
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:vertical_half') == 'top' && q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('5fs_br:open')",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							270,
+							0,
+							-180
+						]
+					},
+                    "minecraft:connection_rule": {
+                        "accepts_connections_from": "all",
+						"enabled_directions": [
+							"south"
+						]
+                    }
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:vertical_half') == 'top' && q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('5fs_br:open')",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							270,
+							90
+						]
+					},
+                    "minecraft:connection_rule": {
+                        "accepts_connections_from": "all",
+						"enabled_directions": [
+							"east"
+						]
+                    }
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:vertical_half') == 'top' && q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('5fs_br:open')",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							180,
+							-270,
+							-270
+						]
+					},
+                    "minecraft:connection_rule": {
+                        "accepts_connections_from": "all",
+						"enabled_directions": [
+							"west"
+						]
+                    }
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'north' && !q.block_state('5fs_br:open')",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							0,
+							0
+						]
+					},
+                    "minecraft:connection_rule": {
+                        "accepts_connections_from": "none"
+                    }
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'south' && !q.block_state('5fs_br:open')",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							180,
+							0
+						]
+					},
+                    "minecraft:connection_rule": {
+                        "accepts_connections_from": "none"
+                    }
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'east' && !q.block_state('5fs_br:open')",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							270,
+							0
+						]
+					},
+                    "minecraft:connection_rule": {
+                        "accepts_connections_from": "none"
+                    }
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'west' && !q.block_state('5fs_br:open')",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							-270,
+							0
+						]
+					},
+                    "minecraft:connection_rule": {
+                        "accepts_connections_from": "none"
+                    }
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('5fs_br:open')",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							90,
+							0,
+							180
+						]
+					},
+                    "minecraft:connection_rule": {
+                        "accepts_connections_from": "all",
+						"enabled_directions": [
+							"north"
+						]
+                    }
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('5fs_br:open')",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							270,
+							0,
+							0
+						]
+					},
+                    "minecraft:connection_rule": {
+                        "accepts_connections_from": "all",
+						"enabled_directions": [
+							"south"
+						]
+                    }
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('5fs_br:open')",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							-270,
+							90
+						]
+					},
+                    "minecraft:connection_rule": {
+                        "accepts_connections_from": "all",
+						"enabled_directions": [
+							"east"
+						]
+                    }
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('5fs_br:open')",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							180,
+							270,
+							-270
+						]
+					},
+                    "minecraft:connection_rule": {
+                        "accepts_connections_from": "all",
+						"enabled_directions": [
+							"west"
+						]
+                    }
+				}
+			}
+		],
+        "components": {
+            "minecraft:collision_box": {
+                "origin": [
+                    -8,
+                    0,
+                    -8
+                ],
+                "size": [
+                    16,
+                    3,
+                    16
+                ]
+            },
+            "minecraft:selection_box": {
+                "origin": [
+                    -8,
+                    0,
+                    -8
+                ],
+                "size": [
+                    16,
+                    3,
+                    16
+                ]
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 2
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 2
+            },
+            "minecraft:geometry": "geometry.trapdoor",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "palm_trapdoor",
+                    "render_method": "alpha_test_single_sided"
+                }
+            },
+            "minecraft:map_color": "#E2F990",
+            "minecraft:liquid_detection": {
+                "detection_rules": [
+                    {
+                        "can_contain_liquid": true,
+                        "liquid_type": "water",
+                        "on_liquid_touches": "blocking"
+                    }
+                ]
+            },
+            "minecraft:light_dampening": 0,
+			"minecraft:precipitation_interactions": {
+				"precipitation_behavior": "obstruct_rain"
+			},
+			"minecraft:redstone_consumer": {
+				"min_power": 0
+			},
+            "5fs_br:trapdoor": {
+                "close_sound": "close.wooden_trapdoor",
+                "open_sound": "open.wooden_trapdoor"
+            },
+            "tag:minecraft:is_axe_item_destructible": {},
+			"tag:one_way_collidable": {}
+        }
+    }
+}

@@ -1,0 +1,50 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.tadpole_head_attachable",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 5,
+				"visible_bounds_offset": [0, 2.5, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "waist",
+					"parent": "root",
+					"pivot": [0, 12, 0]
+				},
+				{
+					"name": "body",
+					"parent": "waist",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "head",
+					"parent": "body",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{"origin": [-1.5, 32.5, -1.5], "size": [3, 2, 3], "uv": [0, 0]},
+						{
+							"origin": [0, 32.5, 0.5],
+							"size": [0, 2, 7],
+							"uv": {
+								"north": {"uv": [7, 7], "uv_size": [0, 2]},
+								"east": {"uv": [0, 7], "uv_size": [7, 2]},
+								"south": {"uv": [14, 7], "uv_size": [0, 2]},
+								"up": {"uv": [7, 0], "uv_size": [0, 7]},
+								"down": {"uv": [7, 7], "uv_size": [0, -7]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

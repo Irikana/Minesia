@@ -1,0 +1,1716 @@
+{
+    "format_version": "1.26.0",
+	"minecraft:block": {
+        "description": {
+            "identifier": "5fs_br:mossy_cobblestone_flower_pot",
+            "menu_category": {
+               "category": "items"
+            },
+            "states": {
+                "5fs_br:e0": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9
+                ],
+                "5fs_br:e1": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            }
+        },
+        "components": {
+            "minecraft:collision_box": {
+                "origin": [
+                    -4,
+                    0,
+                    -4
+                ],
+                "size": [
+                    8,
+                    8,
+                    8
+                ]
+            },
+            "minecraft:selection_box": {
+                "origin": [
+                    -3,
+                    0,
+                    -3
+                ],
+                "size": [
+                    6,
+                    6,
+                    6
+                ]
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 0
+            },
+            "minecraft:geometry": {
+                "identifier": "geometry.flower_pot",
+                "bone_visibility": {
+                    "pot": true,
+                    "cross_plant": false,
+                    "cactus": false,
+                    "bamboo": false,
+                    "azalea": false
+                }
+            },
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "mossy_cobblestone_flower_pot",
+                    "render_method": "alpha_test",
+                    "face_dimming": true,
+                    "ambient_occlusion": true
+                }
+            },
+			"minecraft:precipitation_interactions": {
+				"precipitation_behavior": "obstruct_rain"
+			},
+            "minecraft:connection_rule": {
+                "accepts_connections_from": "none"
+            },
+            "5fs_br:flower_pot": {}
+        },
+        "permutations": [
+            {
+                "condition": "query.block_state('5fs_br:e1') == 0 && query.block_state('5fs_br:e0') == 0",
+                "components": {
+                    "minecraft:material_instances": {
+                        "dirt": {
+                            "texture": "dirt",
+                            "render_method": "alpha_test"
+                        },
+                        "*": {
+                            "texture": "mossy_cobblestone_flower_pot",
+                            "render_method": "alpha_test",
+                            "face_dimming": true,
+                            "ambient_occlusion": true
+                        },
+                        "cross_plant": {
+                            "texture": "empty_texture",
+                            "render_method": "alpha_test",
+                            "face_dimming": false,
+                            "ambient_occlusion": false
+                        }
+                    },
+                    "tag:5fs_br:up": {}
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:e1') == 0 && query.block_state('5fs_br:e0') == 1",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "mossy_cobblestone_flower_pot",
+                            "render_method": "alpha_test",
+                            "face_dimming": true,
+                            "ambient_occlusion": true
+                        },
+                        "dirt": {
+                            "texture": "dirt",
+                            "render_method": "alpha_test"
+                        },
+                        "cross_plant": {
+                            "texture": "allium",
+                            "render_method": "alpha_test",
+                            "face_dimming": false,
+                            "ambient_occlusion": false
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/flower_pots/mossy_cobblestone/allium.json",
+                    "tag:minecraft:allium": {},
+                    "tag:5fs_br:up": {},
+                    "minecraft:geometry": {
+                        "identifier": "geometry.flower_pot",
+                        "bone_visibility": {
+                            "pot": true,
+                            "cross_plant": true,
+                            "cactus": false,
+                            "bamboo": false,
+                            "azalea": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:e1') == 0 && query.block_state('5fs_br:e0') == 2",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "mossy_cobblestone_flower_pot",
+                            "render_method": "alpha_test",
+                            "face_dimming": true,
+                            "ambient_occlusion": true
+                        },
+                        "dirt": {
+                            "texture": "dirt",
+                            "render_method": "alpha_test"
+                        },
+                        "azalea_plant": {
+                            "texture": "potted_azalea_bush_plant",
+                            "render_method": "alpha_test"
+                        },
+                        "azalea_side": {
+                            "texture": "potted_azalea_bush_side",
+                            "render_method": "alpha_test"
+                        },
+                        "azalea_top": {
+                            "texture": "potted_azalea_bush_top",
+                            "render_method": "alpha_test"
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/flower_pots/mossy_cobblestone/azalea.json",
+                    "tag:minecraft:azalea": {},
+                    "tag:5fs_br:up": {},
+                    "minecraft:geometry": {
+                        "identifier": "geometry.flower_pot",
+                        "bone_visibility": {
+                            "pot": true,
+                            "cross_plant": false,
+                            "cactus": false,
+                            "bamboo": false,
+                            "azalea": true
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:e1') == 1 && query.block_state('5fs_br:e0') == 3",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "mossy_cobblestone_flower_pot",
+                            "render_method": "alpha_test",
+                            "face_dimming": true,
+                            "ambient_occlusion": true
+                        },
+                        "dirt": {
+                            "texture": "dirt",
+                            "render_method": "alpha_test"
+                        },
+                        "azalea_plant": {
+                            "texture": "potted_flowering_azalea_bush_plant",
+                            "render_method": "alpha_test"
+                        },
+                        "azalea_side": {
+                            "texture": "potted_flowering_azalea_bush_side",
+                            "render_method": "alpha_test"
+                        },
+                        "azalea_top": {
+                            "texture": "potted_flowering_azalea_bush_top",
+                            "render_method": "alpha_test"
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/flower_pots/mossy_cobblestone/flowering_azalea.json",
+                    "tag:minecraft:flowering_azalea": {},
+                    "tag:5fs_br:up": {},
+                    "minecraft:geometry": {
+                        "identifier": "geometry.flower_pot",
+                        "bone_visibility": {
+                            "pot": true,
+                            "cross_plant": false,
+                            "cactus": false,
+                            "bamboo": false,
+                            "azalea": true
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:e1') == 0 && query.block_state('5fs_br:e0') == 6",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "mossy_cobblestone_flower_pot",
+                            "render_method": "alpha_test",
+                            "face_dimming": true,
+                            "ambient_occlusion": true
+                        },
+                        "dirt": {
+                            "texture": "dirt",
+                            "render_method": "alpha_test"
+                        },
+                        "cactus_side": {
+                            "texture": "cactus_side",
+                            "render_method": "alpha_test"
+                        },
+                        "cactus_top": {
+                            "texture": "cactus_top",
+                            "render_method": "alpha_test"
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/flower_pots/mossy_cobblestone/cactus.json",
+                    "tag:minecraft:cactus": {},
+                    "tag:5fs_br:up": {},
+                    "minecraft:geometry": {
+                        "identifier": "geometry.flower_pot",
+                        "bone_visibility": {
+                            "pot": true,
+                            "cross_plant": false,
+                            "cactus": true,
+                            "bamboo": false,
+                            "azalea": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:e1') == 0 && query.block_state('5fs_br:e0') == 3",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "mossy_cobblestone_flower_pot",
+                            "render_method": "alpha_test",
+                            "face_dimming": true,
+                            "ambient_occlusion": true
+                        },
+                        "dirt": {
+                            "texture": "dirt",
+                            "render_method": "alpha_test"
+                        },
+                        "bamboo_stem": {
+                            "texture": "bamboo_stem",
+                            "render_method": "alpha_test"
+                        },
+                        "bamboo_singleleaf": {
+                            "texture": "bamboo_singleleaf",
+                            "render_method": "alpha_test"
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/flower_pots/mossy_cobblestone/bamboo.json",
+                    "tag:minecraft:bamboo": {},
+                    "tag:5fs_br:up": {},
+                    "minecraft:geometry": {
+                        "identifier": "geometry.flower_pot",
+                        "bone_visibility": {
+                            "pot": true,
+                            "cross_plant": false,
+                            "cactus": false,
+                            "bamboo": true,
+                            "azalea": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:e1') == 0 && query.block_state('5fs_br:e0') == 4",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "mossy_cobblestone_flower_pot",
+                            "render_method": "alpha_test",
+                            "face_dimming": true,
+                            "ambient_occlusion": true
+                        },
+                        "dirt": {
+                            "texture": "dirt",
+                            "render_method": "alpha_test"
+                        },
+                        "cross_plant": {
+                            "texture": "blue_orchid",
+                            "render_method": "alpha_test",
+                            "face_dimming": false,
+                            "ambient_occlusion": false
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/flower_pots/mossy_cobblestone/blue_orchid.json",
+                    "tag:minecraft:orchid": {},
+                    "tag:5fs_br:up": {},
+                    "minecraft:geometry": {
+                        "identifier": "geometry.flower_pot",
+                        "bone_visibility": {
+                            "pot": true,
+                            "cross_plant": true,
+                            "cactus": false,
+                            "bamboo": false,
+                            "azalea": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:e1') == 0 && query.block_state('5fs_br:e0') == 5",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "mossy_cobblestone_flower_pot",
+                            "render_method": "alpha_test",
+                            "face_dimming": true,
+                            "ambient_occlusion": true
+                        },
+                        "dirt": {
+                            "texture": "dirt",
+                            "render_method": "alpha_test"
+                        },
+                        "cross_plant": {
+                            "texture": "mushroom_brown",
+                            "render_method": "alpha_test",
+                            "face_dimming": false,
+                            "ambient_occlusion": false
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/flower_pots/mossy_cobblestone/brown_mushroom.json",
+                    "tag:minecraft:brown_mushroom": {},
+                    "tag:5fs_br:up": {},
+                    "minecraft:geometry": {
+                        "identifier": "geometry.flower_pot",
+                        "bone_visibility": {
+                            "pot": true,
+                            "cross_plant": true,
+                            "cactus": false,
+                            "bamboo": false,
+                            "azalea": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:e1') == 0 && query.block_state('5fs_br:e0') == 7",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "mossy_cobblestone_flower_pot",
+                            "render_method": "alpha_test",
+                            "face_dimming": true,
+                            "ambient_occlusion": true
+                        },
+                        "dirt": {
+                            "texture": "dirt",
+                            "render_method": "alpha_test"
+                        },
+                        "cross_plant": {
+                            "texture": "cornflower",
+                            "render_method": "alpha_test",
+                            "face_dimming": false,
+                            "ambient_occlusion": false
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/flower_pots/mossy_cobblestone/cornflower.json",
+                    "tag:minecraft:cornflower": {},
+                    "tag:5fs_br:up": {},
+                    "minecraft:geometry": {
+                        "identifier": "geometry.flower_pot",
+                        "bone_visibility": {
+                            "pot": true,
+                            "cross_plant": true,
+                            "cactus": false,
+                            "bamboo": false,
+                            "azalea": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:e1') == 0 && query.block_state('5fs_br:e0') == 8",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "mossy_cobblestone_flower_pot",
+                            "render_method": "alpha_test",
+                            "face_dimming": true,
+                            "ambient_occlusion": true
+                        },
+                        "dirt": {
+                            "texture": "dirt",
+                            "render_method": "alpha_test"
+                        },
+                        "cross_plant": {
+                            "texture": "nether_shroom_red",
+                            "render_method": "alpha_test",
+                            "face_dimming": false,
+                            "ambient_occlusion": false
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/flower_pots/mossy_cobblestone/crimson_fungus.json",
+                    "tag:minecraft:crimson_fungus": {},
+                    "tag:5fs_br:up": {},
+                    "minecraft:geometry": {
+                        "identifier": "geometry.flower_pot",
+                        "bone_visibility": {
+                            "pot": true,
+                            "cross_plant": true,
+                            "cactus": false,
+                            "bamboo": false,
+                            "azalea": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:e1') == 0 && query.block_state('5fs_br:e0') == 9",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "mossy_cobblestone_flower_pot",
+                            "render_method": "alpha_test",
+                            "face_dimming": true,
+                            "ambient_occlusion": true
+                        },
+                        "dirt": {
+                            "texture": "dirt",
+                            "render_method": "alpha_test"
+                        },
+                        "cross_plant": {
+                            "texture": "crimson_roots_pot",
+                            "render_method": "alpha_test",
+                            "face_dimming": false,
+                            "ambient_occlusion": false
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/flower_pots/mossy_cobblestone/crimson_roots.json",
+                    "tag:minecraft:crimson_roots": {},
+                    "tag:5fs_br:up": {},
+                    "minecraft:geometry": {
+                        "identifier": "geometry.flower_pot",
+                        "bone_visibility": {
+                            "pot": true,
+                            "cross_plant": true,
+                            "cactus": false,
+                            "bamboo": false,
+                            "azalea": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:e1') == 1 && query.block_state('5fs_br:e0') == 0",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "mossy_cobblestone_flower_pot",
+                            "render_method": "alpha_test",
+                            "face_dimming": true,
+                            "ambient_occlusion": true
+                        },
+                        "dirt": {
+                            "texture": "dirt",
+                            "render_method": "alpha_test"
+                        },
+                        "cross_plant": {
+                            "texture": "dandelion",
+                            "render_method": "alpha_test",
+                            "face_dimming": false,
+                            "ambient_occlusion": false
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/flower_pots/mossy_cobblestone/dandelion.json",
+                    "tag:minecraft:dandelion": {},
+                    "tag:5fs_br:up": {},
+                    "minecraft:geometry": {
+                        "identifier": "geometry.flower_pot",
+                        "bone_visibility": {
+                            "pot": true,
+                            "cross_plant": true,
+                            "cactus": false,
+                            "bamboo": false,
+                            "azalea": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:e1') == 1 && query.block_state('5fs_br:e0') == 1",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "mossy_cobblestone_flower_pot",
+                            "render_method": "alpha_test",
+                            "face_dimming": true,
+                            "ambient_occlusion": true
+                        },
+                        "dirt": {
+                            "texture": "dirt",
+                            "render_method": "alpha_test"
+                        },
+                        "cross_plant": {
+                            "texture": "deadbush",
+                            "render_method": "alpha_test",
+                            "face_dimming": false,
+                            "ambient_occlusion": false
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/flower_pots/mossy_cobblestone/deadbush.json",
+                    "tag:minecraft:deadbush": {},
+                    "tag:5fs_br:up": {},
+                    "minecraft:geometry": {
+                        "identifier": "geometry.flower_pot",
+                        "bone_visibility": {
+                            "pot": true,
+                            "cross_plant": true,
+                            "cactus": false,
+                            "bamboo": false,
+                            "azalea": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:e1') == 1 && query.block_state('5fs_br:e0') == 2",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "mossy_cobblestone_flower_pot",
+                            "render_method": "alpha_test",
+                            "face_dimming": true,
+                            "ambient_occlusion": true
+                        },
+                        "dirt": {
+                            "texture": "dirt",
+                            "render_method": "alpha_test"
+                        },
+                        "cross_plant": {
+                            "texture": "fern",
+                            "tint_method": "default_foliage",
+                            "render_method": "alpha_test",
+                            "face_dimming": false,
+                            "ambient_occlusion": false
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/flower_pots/mossy_cobblestone/fern.json",
+                    "tag:minecraft:fern": {},
+                    "tag:5fs_br:up": {},
+                    "minecraft:geometry": {
+                        "identifier": "geometry.flower_pot",
+                        "bone_visibility": {
+                            "pot": true,
+                            "cross_plant": true,
+                            "cactus": false,
+                            "bamboo": false,
+                            "azalea": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:e1') == 1 && query.block_state('5fs_br:e0') == 4",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "mossy_cobblestone_flower_pot",
+                            "render_method": "alpha_test",
+                            "face_dimming": true,
+                            "ambient_occlusion": true
+                        },
+                        "dirt": {
+                            "texture": "dirt",
+                            "render_method": "alpha_test"
+                        },
+                        "cross_plant": {
+                            "texture": "lily_of_the_valley",
+                            "render_method": "alpha_test",
+                            "face_dimming": false,
+                            "ambient_occlusion": false
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/flower_pots/mossy_cobblestone/lily_of_the_valley.json",
+                    "tag:minecraft:lily_of_the_valley": {},
+                    "tag:5fs_br:up": {},
+                    "minecraft:geometry": {
+                        "identifier": "geometry.flower_pot",
+                        "bone_visibility": {
+                            "pot": true,
+                            "cross_plant": true,
+                            "cactus": false,
+                            "bamboo": false,
+                            "azalea": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:e1') == 1 && query.block_state('5fs_br:e0') == 5",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "mossy_cobblestone_flower_pot",
+                            "render_method": "alpha_test",
+                            "face_dimming": true,
+                            "ambient_occlusion": true
+                        },
+                        "dirt": {
+                            "texture": "dirt",
+                            "render_method": "alpha_test"
+                        },
+                        "cross_plant": {
+                            "texture": "mangrove_propagule",
+                            "render_method": "alpha_test",
+                            "face_dimming": false,
+                            "ambient_occlusion": false
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/flower_pots/mossy_cobblestone/mangrove_propagule.json",
+                    "tag:minecraft:mangrove_propagule": {},
+                    "tag:5fs_br:up": {},
+                    "minecraft:geometry": {
+                        "identifier": "geometry.flower_pot",
+                        "bone_visibility": {
+                            "pot": true,
+                            "cross_plant": true,
+                            "cactus": false,
+                            "bamboo": false,
+                            "azalea": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:e1') == 1 && query.block_state('5fs_br:e0') == 6",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "mossy_cobblestone_flower_pot",
+                            "render_method": "alpha_test",
+                            "face_dimming": true,
+                            "ambient_occlusion": true
+                        },
+                        "dirt": {
+                            "texture": "dirt",
+                            "render_method": "alpha_test"
+                        },
+                        "cross_plant": {
+                            "texture": "oxeye_daisy",
+                            "render_method": "alpha_test",
+                            "face_dimming": false,
+                            "ambient_occlusion": false
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/flower_pots/mossy_cobblestone/oxeye_daisy.json",
+                    "tag:minecraft:oxeye_daisy": {},
+                    "tag:5fs_br:up": {},
+                    "minecraft:geometry": {
+                        "identifier": "geometry.flower_pot",
+                        "bone_visibility": {
+                            "pot": true,
+                            "cross_plant": true,
+                            "cactus": false,
+                            "bamboo": false,
+                            "azalea": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:e1') == 1 && query.block_state('5fs_br:e0') == 7",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "mossy_cobblestone_flower_pot",
+                            "render_method": "alpha_test",
+                            "face_dimming": true,
+                            "ambient_occlusion": true
+                        },
+                        "dirt": {
+                            "texture": "dirt",
+                            "render_method": "alpha_test"
+                        },
+                        "cross_plant": {
+                            "texture": "mushroom_red",
+                            "render_method": "alpha_test",
+                            "face_dimming": false,
+                            "ambient_occlusion": false
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/flower_pots/mossy_cobblestone/red_mushroom.json",
+                    "tag:minecraft:red_mushroom": {},
+                    "tag:5fs_br:up": {},
+                    "minecraft:geometry": {
+                        "identifier": "geometry.flower_pot",
+                        "bone_visibility": {
+                            "pot": true,
+                            "cross_plant": true,
+                            "cactus": false,
+                            "bamboo": false,
+                            "azalea": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:e1') == 1 && query.block_state('5fs_br:e0') == 8",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "mossy_cobblestone_flower_pot",
+                            "render_method": "alpha_test",
+                            "face_dimming": true,
+                            "ambient_occlusion": true
+                        },
+                        "dirt": {
+                            "texture": "dirt",
+                            "render_method": "alpha_test"
+                        },
+                        "cross_plant": {
+                            "texture": "rose",
+                            "render_method": "alpha_test",
+                            "face_dimming": false,
+                            "ambient_occlusion": false
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/flower_pots/mossy_cobblestone/rose.json",
+                    "tag:5fs_br:rose": {},
+                    "tag:5fs_br:up": {},
+                    "minecraft:geometry": {
+                        "identifier": "geometry.flower_pot",
+                        "bone_visibility": {
+                            "pot": true,
+                            "cross_plant": true,
+                            "cactus": false,
+                            "bamboo": false,
+                            "azalea": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:e1') == 1 && query.block_state('5fs_br:e0') == 9",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "mossy_cobblestone_flower_pot",
+                            "render_method": "alpha_test",
+                            "face_dimming": true,
+                            "ambient_occlusion": true
+                        },
+                        "dirt": {
+                            "texture": "dirt",
+                            "render_method": "alpha_test"
+                        },
+                        "cross_plant": {
+                            "texture": "acacia_sapling",
+                            "render_method": "alpha_test",
+                            "face_dimming": false,
+                            "ambient_occlusion": false
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/flower_pots/mossy_cobblestone/acacia_sapling.json",
+                    "tag:minecraft:acacia_sapling": {},
+                    "tag:5fs_br:up": {},
+                    "minecraft:geometry": {
+                        "identifier": "geometry.flower_pot",
+                        "bone_visibility": {
+                            "pot": true,
+                            "cross_plant": true,
+                            "cactus": false,
+                            "bamboo": false,
+                            "azalea": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:e1') == 2 && query.block_state('5fs_br:e0') == 0",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "mossy_cobblestone_flower_pot",
+                            "render_method": "alpha_test",
+                            "face_dimming": true,
+                            "ambient_occlusion": true
+                        },
+                        "dirt": {
+                            "texture": "dirt",
+                            "render_method": "alpha_test"
+                        },
+                        "cross_plant": {
+                            "texture": "birch_sapling",
+                            "render_method": "alpha_test",
+                            "face_dimming": false,
+                            "ambient_occlusion": false
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/flower_pots/mossy_cobblestone/birch_sapling.json",
+                    "tag:minecraft:birch_sapling": {},
+                    "tag:5fs_br:up": {},
+                    "minecraft:geometry": {
+                        "identifier": "geometry.flower_pot",
+                        "bone_visibility": {
+                            "pot": true,
+                            "cross_plant": true,
+                            "cactus": false,
+                            "bamboo": false,
+                            "azalea": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:e1') == 2 && query.block_state('5fs_br:e0') == 1",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "mossy_cobblestone_flower_pot",
+                            "render_method": "alpha_test",
+                            "face_dimming": true,
+                            "ambient_occlusion": true
+                        },
+                        "dirt": {
+                            "texture": "dirt",
+                            "render_method": "alpha_test"
+                        },
+                        "cross_plant": {
+                            "texture": "cherry_sapling",
+                            "render_method": "alpha_test",
+                            "face_dimming": false,
+                            "ambient_occlusion": false
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/flower_pots/mossy_cobblestone/cherry_sapling.json",
+                    "tag:minecraft:cherry_sapling": {},
+                    "tag:5fs_br:up": {},
+                    "minecraft:geometry": {
+                        "identifier": "geometry.flower_pot",
+                        "bone_visibility": {
+                            "pot": true,
+                            "cross_plant": true,
+                            "cactus": false,
+                            "bamboo": false,
+                            "azalea": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:e1') == 2 && query.block_state('5fs_br:e0') == 2",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "mossy_cobblestone_flower_pot",
+                            "render_method": "alpha_test",
+                            "face_dimming": true,
+                            "ambient_occlusion": true
+                        },
+                        "dirt": {
+                            "texture": "dirt",
+                            "render_method": "alpha_test"
+                        },
+                        "cross_plant": {
+                            "texture": "jungle_sapling",
+                            "render_method": "alpha_test",
+                            "face_dimming": false,
+                            "ambient_occlusion": false
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/flower_pots/mossy_cobblestone/jungle_sapling.json",
+                    "tag:minecraft:jungle_sapling": {},
+                    "tag:5fs_br:up": {},
+                    "minecraft:geometry": {
+                        "identifier": "geometry.flower_pot",
+                        "bone_visibility": {
+                            "pot": true,
+                            "cross_plant": true,
+                            "cactus": false,
+                            "bamboo": false,
+                            "azalea": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:e1') == 2 && query.block_state('5fs_br:e0') == 3",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "mossy_cobblestone_flower_pot",
+                            "render_method": "alpha_test",
+                            "face_dimming": true,
+                            "ambient_occlusion": true
+                        },
+                        "dirt": {
+                            "texture": "dirt",
+                            "render_method": "alpha_test"
+                        },
+                        "cross_plant": {
+                            "texture": "maple_sapling",
+                            "render_method": "alpha_test",
+                            "face_dimming": false,
+                            "ambient_occlusion": false
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/flower_pots/mossy_cobblestone/maple_sapling.json",
+                    "tag:5fs_br:maple_sapling": {},
+                    "tag:5fs_br:up": {},
+                    "minecraft:geometry": {
+                        "identifier": "geometry.flower_pot",
+                        "bone_visibility": {
+                            "pot": true,
+                            "cross_plant": true,
+                            "cactus": false,
+                            "bamboo": false,
+                            "azalea": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:e1') == 2 && query.block_state('5fs_br:e0') == 4",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "mossy_cobblestone_flower_pot",
+                            "render_method": "alpha_test",
+                            "face_dimming": true,
+                            "ambient_occlusion": true
+                        },
+                        "dirt": {
+                            "texture": "dirt",
+                            "render_method": "alpha_test"
+                        },
+                        "cross_plant": {
+                            "texture": "oak_sapling",
+                            "render_method": "alpha_test",
+                            "face_dimming": false,
+                            "ambient_occlusion": false
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/flower_pots/mossy_cobblestone/oak_sapling.json",
+                    "tag:minecraft:oak_sapling": {},
+                    "tag:5fs_br:up": {},
+                    "minecraft:geometry": {
+                        "identifier": "geometry.flower_pot",
+                        "bone_visibility": {
+                            "pot": true,
+                            "cross_plant": true,
+                            "cactus": false,
+                            "bamboo": false,
+                            "azalea": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:e1') == 2 && query.block_state('5fs_br:e0') == 5",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "mossy_cobblestone_flower_pot",
+                            "render_method": "alpha_test",
+                            "face_dimming": true,
+                            "ambient_occlusion": true
+                        },
+                        "dirt": {
+                            "texture": "dirt",
+                            "render_method": "alpha_test"
+                        },
+                        "cross_plant": {
+                            "texture": "pale_oak_sapling",
+                            "render_method": "alpha_test",
+                            "face_dimming": false,
+                            "ambient_occlusion": false
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/flower_pots/mossy_cobblestone/pale_oak_sapling.json",
+                    "tag:minecraft:pale_oak_sapling": {},
+                    "tag:5fs_br:up": {},
+                    "minecraft:geometry": {
+                        "identifier": "geometry.flower_pot",
+                        "bone_visibility": {
+                            "pot": true,
+                            "cross_plant": true,
+                            "cactus": false,
+                            "bamboo": false,
+                            "azalea": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:e1') == 2 && query.block_state('5fs_br:e0') == 6",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "mossy_cobblestone_flower_pot",
+                            "render_method": "alpha_test",
+                            "face_dimming": true,
+                            "ambient_occlusion": true
+                        },
+                        "dirt": {
+                            "texture": "dirt",
+                            "render_method": "alpha_test"
+                        },
+                        "cross_plant": {
+                            "texture": "dark_oak_sapling",
+                            "render_method": "alpha_test",
+                            "face_dimming": false,
+                            "ambient_occlusion": false
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/flower_pots/mossy_cobblestone/dark_oak_sapling.json",
+                    "tag:minecraft:dark_oak_sapling": {},
+                    "tag:5fs_br:up": {},
+                    "minecraft:geometry": {
+                        "identifier": "geometry.flower_pot",
+                        "bone_visibility": {
+                            "pot": true,
+                            "cross_plant": true,
+                            "cactus": false,
+                            "bamboo": false,
+                            "azalea": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:e1') == 2 && query.block_state('5fs_br:e0') == 7",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "mossy_cobblestone_flower_pot",
+                            "render_method": "alpha_test",
+                            "face_dimming": true,
+                            "ambient_occlusion": true
+                        },
+                        "dirt": {
+                            "texture": "dirt",
+                            "render_method": "alpha_test"
+                        },
+                        "cross_plant": {
+                            "texture": "spruce_sapling",
+                            "render_method": "alpha_test",
+                            "face_dimming": false,
+                            "ambient_occlusion": false
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/flower_pots/mossy_cobblestone/spruce_sapling.json",
+                    "tag:minecraft:spruce_sapling": {},
+                    "tag:5fs_br:up": {},
+                    "minecraft:geometry": {
+                        "identifier": "geometry.flower_pot",
+                        "bone_visibility": {
+                            "pot": true,
+                            "cross_plant": true,
+                            "cactus": false,
+                            "bamboo": false,
+                            "azalea": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:e1') == 2 && query.block_state('5fs_br:e0') == 8",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "mossy_cobblestone_flower_pot",
+                            "render_method": "alpha_test",
+                            "face_dimming": true,
+                            "ambient_occlusion": true
+                        },
+                        "dirt": {
+                            "texture": "dirt",
+                            "render_method": "alpha_test"
+                        },
+                        "cross_plant": {
+                            "texture": "torchflower",
+                            "render_method": "alpha_test",
+                            "face_dimming": false,
+                            "ambient_occlusion": false
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/flower_pots/mossy_cobblestone/torchflower.json",
+                    "tag:minecraft:torchflower": {},
+                    "tag:5fs_br:up": {},
+                    "minecraft:geometry": {
+                        "identifier": "geometry.flower_pot",
+                        "bone_visibility": {
+                            "pot": true,
+                            "cross_plant": true,
+                            "cactus": false,
+                            "bamboo": false,
+                            "azalea": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:e1') == 2 && query.block_state('5fs_br:e0') == 9",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "mossy_cobblestone_flower_pot",
+                            "render_method": "alpha_test",
+                            "face_dimming": true,
+                            "ambient_occlusion": true
+                        },
+                        "dirt": {
+                            "texture": "dirt",
+                            "render_method": "alpha_test"
+                        },
+                        "cross_plant": {
+                            "texture": "orange_tulip",
+                            "render_method": "alpha_test",
+                            "face_dimming": false,
+                            "ambient_occlusion": false
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/flower_pots/mossy_cobblestone/orange_tulip.json",
+                    "tag:minecraft:orange_tulip": {},
+                    "tag:5fs_br:up": {},
+                    "minecraft:geometry": {
+                        "identifier": "geometry.flower_pot",
+                        "bone_visibility": {
+                            "pot": true,
+                            "cross_plant": true,
+                            "cactus": false,
+                            "bamboo": false,
+                            "azalea": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:e1') == 3 && query.block_state('5fs_br:e0') == 0",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "mossy_cobblestone_flower_pot",
+                            "render_method": "alpha_test",
+                            "face_dimming": true,
+                            "ambient_occlusion": true
+                        },
+                        "dirt": {
+                            "texture": "dirt",
+                            "render_method": "alpha_test"
+                        },
+                        "cross_plant": {
+                            "texture": "pink_tulip",
+                            "render_method": "alpha_test",
+                            "face_dimming": false,
+                            "ambient_occlusion": false
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/flower_pots/mossy_cobblestone/pink_tulip.json",
+                    "tag:minecraft:pink_tulip": {},
+                    "tag:5fs_br:up": {},
+                    "minecraft:geometry": {
+                        "identifier": "geometry.flower_pot",
+                        "bone_visibility": {
+                            "pot": true,
+                            "cross_plant": true,
+                            "cactus": false,
+                            "bamboo": false,
+                            "azalea": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:e1') == 3 && query.block_state('5fs_br:e0') == 1",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "mossy_cobblestone_flower_pot",
+                            "render_method": "alpha_test",
+                            "face_dimming": true,
+                            "ambient_occlusion": true
+                        },
+                        "dirt": {
+                            "texture": "dirt",
+                            "render_method": "alpha_test"
+                        },
+                        "cross_plant": {
+                            "texture": "red_tulip",
+                            "render_method": "alpha_test",
+                            "face_dimming": false,
+                            "ambient_occlusion": false
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/flower_pots/mossy_cobblestone/red_tulip.json",
+                    "tag:minecraft:red_tulip": {},
+                    "tag:5fs_br:up": {},
+                    "minecraft:geometry": {
+                        "identifier": "geometry.flower_pot",
+                        "bone_visibility": {
+                            "pot": true,
+                            "cross_plant": true,
+                            "cactus": false,
+                            "bamboo": false,
+                            "azalea": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:e1') == 3 && query.block_state('5fs_br:e0') == 2",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "mossy_cobblestone_flower_pot",
+                            "render_method": "alpha_test",
+                            "face_dimming": true,
+                            "ambient_occlusion": true
+                        },
+                        "dirt": {
+                            "texture": "dirt",
+                            "render_method": "alpha_test"
+                        },
+                        "cross_plant": {
+                            "texture": "white_tulip",
+                            "render_method": "alpha_test",
+                            "face_dimming": false,
+                            "ambient_occlusion": false
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/flower_pots/mossy_cobblestone/white_tulip.json",
+                    "tag:minecraft:white_tulip": {},
+                    "tag:5fs_br:up": {},
+                    "minecraft:geometry": {
+                        "identifier": "geometry.flower_pot",
+                        "bone_visibility": {
+                            "pot": true,
+                            "cross_plant": true,
+                            "cactus": false,
+                            "bamboo": false,
+                            "azalea": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:e1') == 3 && query.block_state('5fs_br:e0') == 3",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "mossy_cobblestone_flower_pot",
+                            "render_method": "alpha_test",
+                            "face_dimming": true,
+                            "ambient_occlusion": true
+                        },
+                        "dirt": {
+                            "texture": "dirt",
+                            "render_method": "alpha_test"
+                        },
+                        "cross_plant": {
+                            "texture": "nether_shroom_blue",
+                            "render_method": "alpha_test",
+                            "face_dimming": false,
+                            "ambient_occlusion": false
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/flower_pots/mossy_cobblestone/warped_fungus.json",
+                    "tag:minecraft:warped_fungus": {},
+                    "tag:5fs_br:up": {},
+                    "minecraft:geometry": {
+                        "identifier": "geometry.flower_pot",
+                        "bone_visibility": {
+                            "pot": true,
+                            "cross_plant": true,
+                            "cactus": false,
+                            "bamboo": false,
+                            "azalea": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:e1') == 3 && query.block_state('5fs_br:e0') == 4",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "mossy_cobblestone_flower_pot",
+                            "render_method": "alpha_test",
+                            "face_dimming": true,
+                            "ambient_occlusion": true
+                        },
+                        "dirt": {
+                            "texture": "dirt",
+                            "render_method": "alpha_test"
+                        },
+                        "cross_plant": {
+                            "texture": "warped_roots_pot",
+                            "render_method": "alpha_test",
+                            "face_dimming": false,
+                            "ambient_occlusion": false
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/flower_pots/mossy_cobblestone/warped_roots.json",
+                    "tag:minecraft:warped_roots": {},
+                    "tag:5fs_br:up": {},
+                    "minecraft:geometry": {
+                        "identifier": "geometry.flower_pot",
+                        "bone_visibility": {
+                            "pot": true,
+                            "cross_plant": true,
+                            "cactus": false,
+                            "bamboo": false,
+                            "azalea": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:e1') == 3 && query.block_state('5fs_br:e0') == 5",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "mossy_cobblestone_flower_pot",
+                            "render_method": "alpha_test",
+                            "face_dimming": true,
+                            "ambient_occlusion": true
+                        },
+                        "dirt": {
+                            "texture": "dirt",
+                            "render_method": "alpha_test"
+                        },
+                        "cross_plant": {
+                            "texture": "wither_rose",
+                            "render_method": "alpha_test",
+                            "face_dimming": false,
+                            "ambient_occlusion": false
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/flower_pots/mossy_cobblestone/wither_rose.json",
+                    "tag:minecraft:wither_rose": {},
+                    "tag:5fs_br:up": {},
+                    "minecraft:geometry": {
+                        "identifier": "geometry.flower_pot",
+                        "bone_visibility": {
+                            "pot": true,
+                            "cross_plant": true,
+                            "cactus": false,
+                            "bamboo": false,
+                            "azalea": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:e1') == 3 && query.block_state('5fs_br:e0') == 6",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "mossy_cobblestone_flower_pot",
+                            "render_method": "alpha_test",
+                            "face_dimming": true,
+                            "ambient_occlusion": true
+                        },
+                        "dirt": {
+                            "texture": "dirt",
+                            "render_method": "alpha_test"
+                        },
+                        "cross_plant": {
+                            "texture": "azure_bluet",
+                            "render_method": "alpha_test",
+                            "face_dimming": false,
+                            "ambient_occlusion": false
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/flower_pots/mossy_cobblestone/azure_bluet.json",
+                    "tag:minecraft:azure_bluet": {},
+                    "tag:5fs_br:up": {},
+                    "minecraft:geometry": {
+                        "identifier": "geometry.flower_pot",
+                        "bone_visibility": {
+                            "pot": true,
+                            "cross_plant": true,
+                            "cactus": false,
+                            "bamboo": false,
+                            "azalea": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:e1') == 3 && query.block_state('5fs_br:e0') == 7",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "mossy_cobblestone_flower_pot",
+                            "render_method": "alpha_test",
+                            "face_dimming": true,
+                            "ambient_occlusion": true
+                        },
+                        "dirt": {
+                            "texture": "dirt",
+                            "render_method": "alpha_test"
+                        },
+                        "cross_plant": {
+                            "texture": "blue_rose",
+                            "render_method": "alpha_test",
+                            "face_dimming": false,
+                            "ambient_occlusion": false
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/flower_pots/mossy_cobblestone/blue_rose.json",
+                    "tag:5fs_br:blue_rose": {},
+                    "tag:5fs_br:up": {},
+                    "minecraft:geometry": {
+                        "identifier": "geometry.flower_pot",
+                        "bone_visibility": {
+                            "pot": true,
+                            "cross_plant": true,
+                            "cactus": false,
+                            "bamboo": false,
+                            "azalea": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:e1') == 3 && query.block_state('5fs_br:e0') == 8",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "mossy_cobblestone_flower_pot",
+                            "render_method": "alpha_test",
+                            "face_dimming": true,
+                            "ambient_occlusion": true
+                        },
+                        "dirt": {
+                            "texture": "dirt",
+                            "render_method": "alpha_test"
+                        },
+                        "cross_plant": {
+                            "texture": "maple_flower",
+                            "render_method": "alpha_test",
+                            "face_dimming": false,
+                            "ambient_occlusion": false
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/flower_pots/mossy_cobblestone/maple_flower.json",
+                    "tag:5fs_br:maple_flower": {},
+                    "tag:5fs_br:up": {},
+                    "minecraft:geometry": {
+                        "identifier": "geometry.flower_pot",
+                        "bone_visibility": {
+                            "pot": true,
+                            "cross_plant": true,
+                            "cactus": false,
+                            "bamboo": false,
+                            "azalea": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:e1') == 3 && query.block_state('5fs_br:e0') == 9",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "mossy_cobblestone_flower_pot",
+                            "render_method": "alpha_test",
+                            "face_dimming": true,
+                            "ambient_occlusion": true
+                        },
+                        "dirt": {
+                            "texture": "dirt",
+                            "render_method": "alpha_test"
+                        },
+                        "cross_plant": {
+                            "texture": "closed_eyeblossom",
+                            "render_method": "alpha_test",
+                            "face_dimming": false,
+                            "ambient_occlusion": false
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/flower_pots/mossy_cobblestone/closed_eyeblossom.json",
+                    "tag:minecraft:closed_eyeblossom": {},
+                    "tag:5fs_br:up": {},
+                    "minecraft:geometry": {
+                        "identifier": "geometry.flower_pot",
+                        "bone_visibility": {
+                            "pot": true,
+                            "cross_plant": true,
+                            "cactus": false,
+                            "bamboo": false,
+                            "azalea": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:e1') == 4 && query.block_state('5fs_br:e0') == 0",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "mossy_cobblestone_flower_pot",
+                            "render_method": "alpha_test",
+                            "face_dimming": true,
+                            "ambient_occlusion": true
+                        },
+                        "dirt": {
+                            "texture": "dirt",
+                            "render_method": "alpha_test"
+                        },
+                        "cross_plant": {
+                            "texture": "open_eyeblossom_carried",
+                            "render_method": "alpha_test",
+                            "face_dimming": false,
+                            "ambient_occlusion": false
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/flower_pots/mossy_cobblestone/open_eyeblossom.json",
+                    "tag:minecraft:open_eyeblossom": {},
+                    "tag:5fs_br:up": {},
+                    "minecraft:geometry": {
+                        "identifier": "geometry.flower_pot",
+                        "bone_visibility": {
+                            "pot": true,
+                            "cross_plant": true,
+                            "cactus": false,
+                            "bamboo": false,
+                            "azalea": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:e1') == 4 && query.block_state('5fs_br:e0') == 1",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "mossy_cobblestone_flower_pot",
+                            "render_method": "alpha_test",
+                            "face_dimming": true,
+                            "ambient_occlusion": true
+                        },
+                        "dirt": {
+                            "texture": "dirt",
+                            "render_method": "alpha_test"
+                        },
+                        "cross_plant": {
+                            "texture": "redwood_fern",
+                            "render_method": "alpha_test",
+                            "face_dimming": false,
+                            "ambient_occlusion": false
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/flower_pots/mossy_cobblestone/redwood_fern.json",
+                    "tag:5fs_br:redwood_fern": {},
+                    "tag:5fs_br:up": {},
+                    "minecraft:geometry": {
+                        "identifier": "geometry.flower_pot",
+                        "bone_visibility": {
+                            "pot": true,
+                            "cross_plant": true,
+                            "cactus": false,
+                            "bamboo": false,
+                            "azalea": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:e1') == 4 && query.block_state('5fs_br:e0') == 2",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "mossy_cobblestone_flower_pot",
+                            "render_method": "alpha_test",
+                            "face_dimming": true,
+                            "ambient_occlusion": true
+                        },
+                        "dirt": {
+                            "texture": "dirt",
+                            "render_method": "alpha_test"
+                        },
+                        "cross_plant": {
+                            "texture": "buttercup",
+                            "render_method": "alpha_test",
+                            "face_dimming": false,
+                            "ambient_occlusion": false
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/flower_pots/mossy_cobblestone/buttercup.json",
+                    "tag:5fs_br:buttercup": {},
+                    "tag:5fs_br:up": {},
+                    "minecraft:geometry": {
+                        "identifier": "geometry.flower_pot",
+                        "bone_visibility": {
+                            "pot": true,
+                            "cross_plant": true,
+                            "cactus": false,
+                            "bamboo": false,
+                            "azalea": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:e1') == 4 && query.block_state('5fs_br:e0') == 3",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "mossy_cobblestone_flower_pot",
+                            "render_method": "alpha_test",
+                            "face_dimming": true,
+                            "ambient_occlusion": true
+                        },
+                        "dirt": {
+                            "texture": "dirt",
+                            "render_method": "alpha_test"
+                        },
+                        "cross_plant": {
+                            "texture": "redwood_flower",
+                            "render_method": "alpha_test",
+                            "face_dimming": false,
+                            "ambient_occlusion": false
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/flower_pots/mossy_cobblestone/redwood_flower.json",
+                    "tag:5fs_br:redwood_flower": {},
+                    "tag:5fs_br:up": {},
+                    "minecraft:geometry": {
+                        "identifier": "geometry.flower_pot",
+                        "bone_visibility": {
+                            "pot": true,
+                            "cross_plant": true,
+                            "cactus": false,
+                            "bamboo": false,
+                            "azalea": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:e1') == 4 && query.block_state('5fs_br:e0') == 4",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "mossy_cobblestone_flower_pot",
+                            "render_method": "alpha_test",
+                            "face_dimming": true,
+                            "ambient_occlusion": true
+                        },
+                        "dirt": {
+                            "texture": "dirt",
+                            "render_method": "alpha_test"
+                        },
+                        "cross_plant": {
+                            "texture": "redwood_sapling",
+                            "render_method": "alpha_test",
+                            "face_dimming": false,
+                            "ambient_occlusion": false
+                        }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/flower_pots/mossy_cobblestone/redwood_sapling.json",
+                    "tag:5fs_br:redwood_sapling": {},
+                    "tag:5fs_br:up": {},
+                    "minecraft:geometry": {
+                        "identifier": "geometry.flower_pot",
+                        "bone_visibility": {
+                            "pot": true,
+                            "cross_plant": true,
+                            "cactus": false,
+                            "bamboo": false,
+                            "azalea": false
+                        }
+                    }
+                }
+            }
+        ]
+    }
+}

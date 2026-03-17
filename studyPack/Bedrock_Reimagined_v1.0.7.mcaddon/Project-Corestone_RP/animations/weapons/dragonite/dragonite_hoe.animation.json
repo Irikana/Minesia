@@ -1,0 +1,23 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.dragonite_hoe.1fp": {
+			"loop": true,
+			"bones": {
+				"bone": {
+					"rotation": [109.52609, 64.56677, -30.48196],
+					"position": [0, 13, 5]
+				}
+			}
+		},
+		"animation.dragonite_hoe.3pp": {
+			"loop": true,
+			"bones": {
+				"bone": {
+					"rotation": [90, 0, 0],
+					"position": [0, 16, 0]
+				}
+			}
+		}
+	}
+}

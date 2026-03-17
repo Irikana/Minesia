@@ -1,0 +1,34 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:weighted_random_feature": {
+        "description": {
+            "identifier": "5fs_br:birch/weighted_small_birch_log"
+        },
+        "features": [
+            [
+                "5fs_br:birch/scatter_small_birch_log_ns_0",
+                1
+            ],
+            [
+                "5fs_br:birch/scatter_small_birch_log_ns_1",
+                1
+            ],
+            [
+                "5fs_br:birch/scatter_small_birch_log_we_0",
+                1
+            ],
+            [
+                "5fs_br:birch/scatter_small_birch_log_we_1",
+                1
+            ],
+            [
+                "5fs_br:birch/birch_hollow_log_2_feature", 
+                1
+            ],
+            [
+                "5fs_br:birch/birch_hollow_log_1_feature", 
+                1
+            ]
+        ]
+    }
+}

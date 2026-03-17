@@ -1,0 +1,22 @@
+{
+    "format_version": "1.26.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "5fs_br:waxed_weathered_copper_furnace",
+            "menu_category": {
+                "category": "items"
+            }
+        },
+        "components": {
+            "minecraft:block_placer": {
+                "block": "5fs_br:waxed_weathered_copper_furnace",
+                "replace_block_item": true
+            },
+            "minecraft:tags": {
+                "tags": [
+                    "5fs_br:is_furnace"
+                ]
+            }
+        }
+    }
+}

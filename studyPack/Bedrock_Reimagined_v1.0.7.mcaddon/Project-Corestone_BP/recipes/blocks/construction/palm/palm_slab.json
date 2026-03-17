@@ -1,0 +1,28 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "5fs_br:palm_slab"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "PPP"
+    ],
+    "key": {
+      "P": {
+        "item": "5fs_br:palm_planks"
+      }
+    },
+    "result": {
+      "item": "5fs_br:palm_slab",
+      "count": 6
+    },
+    "unlock": [
+      {
+        "item": "5fs_br:palm_planks"
+      }
+    ]
+  }
+}

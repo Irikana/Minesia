@@ -1,0 +1,34 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.sea_witch_wand",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 3,
+				"visible_bounds_offset": [0, 1.5, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [3, 13, -15],
+					"rotation": [-90, 0, 0],
+					"binding": "q.item_slot_to_bone_name(c.item_slot)",
+					"cubes": [
+						{"origin": [-4, 27.82843, -36.41421], "size": [1, 1, 3], "uv": [90, 0]},
+						{"origin": [-4.5, 24.32843, -35.91421], "size": [2, 2, 2], "pivot": [-3.5, 25.32843, -34.91421], "rotation": [45, 0, 0], "uv": [90, 5]},
+						{"origin": [-4, 22.5, -38.62132], "size": [1, 1, 3], "pivot": [-3.5, 23, -37.12132], "rotation": [135, 0, 0], "uv": [0, 90]},
+						{"origin": [-4, 24.70711, -39.53553], "size": [1, 1, 3], "pivot": [-3.5, 25.20711, -38.03553], "rotation": [90, 0, 0], "uv": [88, 89]},
+						{"origin": [-4, 26.91421, -38.62132], "size": [1, 1, 3], "pivot": [-3.5, 27.41421, -37.12132], "rotation": [45, 0, 0], "uv": [79, 89]},
+						{"origin": [-4, 32.36396, -32.36396], "size": [1, 1, 3], "pivot": [-3, 32.36396, -38.36396], "rotation": [-45, 0, 0], "uv": [51, 83]},
+						{"origin": [-4, 26, -5], "size": [1, 1, 5], "inflate": 0.25, "uv": [51, 88]},
+						{"origin": [-4, 26, -30], "size": [1, 1, 7], "inflate": 0.25, "uv": [79, 71]},
+						{"origin": [-4, 26, -32], "size": [1, 1, 31], "uv": [0, 0]}
+					]
+				}
+			]
+		}
+	]
+}

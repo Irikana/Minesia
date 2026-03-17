@@ -1,0 +1,59 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:salmon",
+          "functions": [
+            { "function": "set_count", "count": { "min": 2, "max": 5 } },
+            { "function": "looting_enchant", "count": { "min": 0, "max": 1 } }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:cod",
+          "functions": [
+            { "function": "set_count", "count": { "min": 1, "max": 3 } },
+            { "function": "looting_enchant", "count": { "min": 0, "max": 1 } }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:bone",
+          "functions": [
+            { "function": "set_count", "count": { "min": 2, "max": 5 } },
+            { "function": "looting_enchant", "count": { "min": 0, "max": 1 } }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "5fs_br:shark_tooth",
+          "weight": 80,
+          "functions": [
+            { "function": "set_count", "count": { "min": 1, "max": 3 } },
+            { "function": "looting_enchant", "count": { "min": 0, "max": 1 } }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "5fs_br:giant_shark_tooth",
+          "weight": 5,
+          "functions": [
+            { "function": "looting_enchant", "count": { "min": 0, "max": 1 } }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "5fs_br:rune_of_beasts",
+          "weight": 10
+        },
+        {
+          "type": "empty",
+          "weight": 5
+        }
+      ]
+    }
+  ]
+}

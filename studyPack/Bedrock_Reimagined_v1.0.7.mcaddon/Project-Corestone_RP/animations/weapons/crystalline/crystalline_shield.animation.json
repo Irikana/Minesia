@@ -1,0 +1,32 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.crystalline_shield.first_person": {
+			"loop": true,
+			"bones": {
+				"bb_main": {
+					"rotation": [-92.36391, -61.26036, -218.42579],
+					"position": [-9, 7, -2]
+				}
+			}
+		},
+		"animation.crystalline_shield.third_person": {
+			"loop": true,
+			"bones": {
+				"bb_main": {
+					"rotation": [17.5, 0, 0],
+					"position": [0, 8, 0]
+				}
+			}
+		},
+		"animation.crystalline_shield.first_person_left": {
+			"loop": true,
+			"bones": {
+				"bb_main": {
+					"rotation": [-46.59537, -48.60365, -272.70214],
+					"position": [-4, 20, -28]
+				}
+			}
+		}
+	}
+}

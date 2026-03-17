@@ -1,0 +1,148 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+        "controller.animation.mummified_husk.root": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "animations": [
+                        "general_controller", "attack_controller", "emerging_controller"
+                    ],
+                    "transitions": [
+                        {
+                            "death": "!q.is_alive"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "death": {
+                    "animations": [
+                        "death"
+                    ]
+                }
+            }
+        },
+        "controller.animation.mummified_husk.general": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "animations": [
+                        "idle"
+                    ],
+                    "transitions": [
+						{
+							"idle": "q.any_animation_finished"
+						},
+                        {
+                            "walk": "q.modified_move_speed > 0.025"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+				"idle": {
+                    "on_entry": [
+                        "v.random_idle = math.random_integer(0,3);"
+                    ],
+					"animations": [
+						{
+							"idle": "v.random_idle <= 2"
+						},
+						{
+							"idle_1": "v.random_idle == 3"
+						}
+					],
+					"transitions": [
+						{
+							"idle_1": "q.modified_move_speed <= 0.025 && q.any_animation_finished"
+						},
+                        {
+                            "walk": "q.modified_move_speed > 0.025"
+                        }
+					],
+					"blend_transition": 0.2
+				},
+				"idle_1": {
+                    "on_entry": [
+                        "v.random_idle = math.random_integer(0,3);"
+                    ],
+					"animations": [
+						{
+							"idle": "v.random_idle <= 2"
+						},
+						{
+							"idle_1": "v.random_idle == 3"
+						}
+					],
+					"transitions": [
+						{
+							"idle": "q.modified_move_speed <= 0.025 && q.any_animation_finished"
+						},
+                        {
+                            "walk": "q.modified_move_speed > 0.025"
+                        }
+					],
+					"blend_transition": 0.2
+				},
+                "walk": {
+                    "animations": [
+                        "walk"
+                    ],
+                    "transitions": [
+						{
+							"idle": "q.modified_move_speed <= 0.025"
+						}
+                    ],
+                    "blend_transition": 0.2
+                }
+            }
+        },
+        "controller.animation.mummified_husk.attack": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "attack": "v.attack_time > 0.0"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "attack": {
+                    "animations": [
+                        "attack"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "q.all_animations_finished"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                }
+            }
+        },
+        "controller.animation.mummified_husk.emerging": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "spawn": "q.is_emerging"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "spawn": {
+                    "animations": [
+                        "spawn"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!q.is_emerging"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                }
+            }
+        }
+	}
+}

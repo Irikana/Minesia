@@ -1,0 +1,17 @@
+{
+    "format_version": "1.20.80",
+    "minecraft:feature_rules": {
+        "description": {
+            "identifier": "5fs_br:maple_flower_bonemeal_registry",
+            "places_feature": "5fs_br:bonemeal/scatter_maple_flower_bonemeal_feature"
+        },
+		"conditions": {
+			"placement_pass": "surface_pass",
+			"minecraft:biome_filter": {
+                "test": "has_biome_tag",
+				"operator": "==",
+				"value": "overworld"
+			}
+		}
+	}
+}

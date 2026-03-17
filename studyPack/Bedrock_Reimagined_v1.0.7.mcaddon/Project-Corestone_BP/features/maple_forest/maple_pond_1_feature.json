@@ -1,0 +1,42 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:structure_template_feature": {
+    "description": {
+      "identifier": "5fs_br:maple_forest/maple_pond_1_feature"
+    },
+    "structure_name": "5fs_br:pondMapleJ",
+    "adjustment_radius": 8,
+    "facing_direction": "random",
+    "constraints": {
+      "grounded": {},
+      "block_intersection": {
+        "block_allowlist": [
+          "minecraft:bush",
+          "minecraft:dirt",
+          "5fs_br:autumn_grass",
+          "5fs_br:tall_autumn_grass",
+          "5fs_br:autumn_sprouts",
+          "5fs_br:short_autumn_grass",
+          "minecraft:fern",
+          "minecraft:large_fern",
+          "minecraft:dandelion",
+          "minecraft:poppy",
+          "minecraft:blue_orchid",
+          "minecraft:allium",
+          "minecraft:azure_bluet",
+          "minecraft:red_tulip",
+          "minecraft:orange_tulip",
+          "minecraft:white_tulip",
+          "minecraft:pink_tulip",
+          "minecraft:oxeye_daisy",
+          "minecraft:cornflower",
+          "minecraft:lily_of_the_valley",
+          "minecraft:sunflower",
+          "minecraft:rose_bush",
+          "minecraft:peony",
+          "minecraft:lilac"
+        ]
+      }
+    }
+  }
+}

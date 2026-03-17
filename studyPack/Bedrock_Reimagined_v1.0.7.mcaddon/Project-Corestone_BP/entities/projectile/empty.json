@@ -1,0 +1,27 @@
+{
+	"format_version": "1.21.60",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "5fs_br:empty",
+			"is_spawnable": false,
+			"is_summonable": false,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"5fs_br:despawn": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"components": {
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+                "add": {
+                    "component_groups": [
+                        "5fs_br:despawn"
+                    ]
+                }
+            }
+		}
+	}
+}

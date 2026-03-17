@@ -1,0 +1,32 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "5fs_br:mossy_cobblestone_flower_pot"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:brick"
+			},
+            "G": {
+				"item": "minecraft:mossy_cobblestone"
+			}
+		},
+		"pattern": [
+			"   ",
+			"# #",
+			"G#G"
+		],
+		"result": {
+			"item": "5fs_br:mossy_cobblestone_flower_pot"
+		},
+		"unlock": [
+			{
+				"item": "minecraft:brick"
+			}
+		]
+	}
+}

@@ -1,0 +1,50 @@
+{
+    "format_version": "1.21.20",
+    "minecraft:template_pool": {
+        "description": {
+            "identifier": "5fs_br:crystal_mineshaft/crystal_mineshaft_entrance"
+        },
+        "elements": [
+            {
+                "element": {
+                    "element_type": "minecraft:single_pool_element",
+                    "location": "5fs_br/crystal_canyon_mineshaft/mineshaftEntrance1",
+                    "processors": "5fs:smooth_steel_replacement"
+                },
+                "weight": 1
+            },
+            {
+                "element": {
+                    "element_type": "minecraft:single_pool_element",
+                    "location": "5fs_br/crystal_canyon_mineshaft/mineshaftEntrance2",
+                    "processors": "5fs:smooth_steel_replacement"
+                },
+                "weight": 1
+            },
+            {
+                "element": {
+                    "element_type": "minecraft:single_pool_element",
+                    "location": "5fs_br/crystal_canyon_mineshaft/mineshaftEntrance3",
+                    "processors": "5fs:smooth_steel_replacement"
+                },
+                "weight": 1
+            },
+            {
+                "element": {
+                    "element_type": "minecraft:single_pool_element",
+                    "location": "5fs_br/crystal_canyon_mineshaft/mineshaftEntrance4",
+                    "processors": "5fs:smooth_steel_replacement"
+                },
+                "weight": 1
+            },
+            {
+                "element": {
+                    "element_type": "minecraft:single_pool_element",
+                    "location": "5fs_br/crystal_canyon_mineshaft/mineshaftEntrance5",
+                    "processors": "5fs:smooth_steel_replacement"
+                },
+                "weight": 1
+            }
+        ]
+    }
+}

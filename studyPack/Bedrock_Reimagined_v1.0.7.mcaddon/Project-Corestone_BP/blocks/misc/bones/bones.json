@@ -1,0 +1,232 @@
+{
+    "format_version": "1.26.0",
+	"minecraft:block": {
+        "description": {
+            "identifier": "5fs_br:bones",
+            "menu_category": {
+                "category": "items"
+            },
+            "states": {
+                "5fs_br:count": [
+                    0,
+                    1,
+                    2
+                ]
+            },
+            "traits": {
+                "minecraft:placement_direction": {
+                    "enabled_states": [
+                        "minecraft:cardinal_direction"
+                    ]
+                }
+            }
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('5fs_br:count') == 0",
+                "components": {
+                    "minecraft:collision_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            -2
+                        ],
+                        "size": [
+                            16,
+                            3,
+                            4
+                        ]
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            -2
+                        ],
+                        "size": [
+                            16,
+                            3,
+                            4
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:count') == 1",
+                "components": {
+                    "minecraft:collision_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            -5
+                        ],
+                        "size": [
+                            16,
+                            7,
+                            10
+                        ]
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            -5
+                        ],
+                        "size": [
+                            16,
+                            7,
+                            10
+                        ]
+                    },
+                    "minecraft:loot": "loot_tables/blocks/misc/bones/bone_0.json"
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:count') == 2",
+                "components": {
+                    "minecraft:collision_box": {
+                        "origin": [
+                            -6,
+                            0,
+                            -4
+                        ],
+                        "size": [
+                            12,
+                            5,
+                            8
+                        ]
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -6,
+                            0,
+                            -4
+                        ],
+                        "size": [
+                            12,
+                            5,
+                            8
+                        ]
+                    },
+                    "minecraft:loot": "loot_tables/blocks/misc/bones/bone_1.json"
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'north' ",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            180,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'south' ",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            0,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'east' ",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            90,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'west' ",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            270,
+                            0
+                        ]
+                    }
+                }
+            }
+        ],
+        "components": {
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 1
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 1
+            },
+            "minecraft:geometry": {
+                "identifier": "geometry.bones",
+                "bone_visibility": {
+                    "bone0": "query.block_state('5fs_br:count') <= 1",
+                    "bone1": "query.block_state('5fs_br:count') == 1",
+                    "bone2": "query.block_state('5fs_br:count') == 2"
+                }
+            },
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "bone",
+                    "render_method": "alpha_test_to_opaque"
+                },
+                "mini_fossil_0": {
+                    "texture": "mini_fossil_0",
+                    "render_method": "alpha_test_to_opaque"
+                },
+                "mini_fossil_1": {
+                    "texture": "mini_fossil_1",
+                    "render_method": "alpha_test_to_opaque"
+                }
+            },
+            "minecraft:item_visual": {
+                "geometry": "geometry.bones_inventory",
+                "material_instances": {
+                    "*": {
+                        "texture": "bone"
+                    }
+                }
+            },
+            "minecraft:map_color": "#F0EAD6",
+            "minecraft:liquid_detection": {
+                "detection_rules": [
+                    {
+                        "can_contain_liquid": true,
+                        "liquid_type": "water",
+                        "on_liquid_touches": "no_reaction"
+                    }
+                ]
+            },
+            "minecraft:light_dampening": 0,
+            "minecraft:movable": {
+                "movement_type": "popped"
+            },
+			"minecraft:precipitation_interactions": {
+				"precipitation_behavior": "obstruct_rain"
+			},
+			"minecraft:connection_rule": {
+				"accepts_connections_from": "none"
+			},
+            "5fs_br:stackable_block": {
+                "state": {
+                    "name": "5fs_br:count",
+                    "min": 0,
+                    "max": 2
+                },
+                "sound": "hit.bone_block"
+            },
+            "tag:5fs_br:up": {},
+            "tag:minecraft:is_pickaxe_item_destructible": {}
+        }
+    }
+}

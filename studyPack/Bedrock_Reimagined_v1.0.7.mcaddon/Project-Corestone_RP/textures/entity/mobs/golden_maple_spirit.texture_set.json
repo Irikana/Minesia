@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "golden_maple_spirit",
+		"metalness_emissive_roughness": "golden_maple_spirit_mer"
+	}
+}

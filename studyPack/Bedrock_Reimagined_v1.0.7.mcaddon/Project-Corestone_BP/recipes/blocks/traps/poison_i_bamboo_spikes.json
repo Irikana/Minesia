@@ -1,0 +1,36 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "5fs_br:pison_i_bamboo_spikes"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " P ",
+      "PFP",
+      "FBF"
+    ],
+    "key": {
+      "P": {
+        "item": "minecraft:arrow:26"
+      },   
+      "F": {
+        "item": "minecraft:bamboo"
+      },
+      "B": {
+        "item": "minecraft:bamboo_block"
+      }
+    },
+    "result": {
+      "item": "5fs_br:poison_i_bamboo_spikes",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:bamboo"
+      }
+    ]
+  }
+}

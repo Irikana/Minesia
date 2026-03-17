@@ -1,0 +1,39 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "5fs_br:cape_of_crystalline_boss",
+      "materials": {
+        "default": "armor",
+        "enchanted": "armor_enchanted"
+      },
+      "textures": {
+        "crystalline0": "textures/entity/gears/capes/crystalline/crystalline0",
+        "crystalline1": "textures/entity/gears/capes/crystalline/crystalline1",
+        "crystalline2": "textures/entity/gears/capes/crystalline/crystalline2",
+        "crystalline3": "textures/entity/gears/capes/crystalline/crystalline3",
+        "crystalline4": "textures/entity/gears/capes/crystalline/crystalline4",
+        "crystalline5": "textures/entity/gears/capes/crystalline/crystalline5",
+        "crystalline6": "textures/entity/gears/capes/crystalline/crystalline6",
+        "crystalline7": "textures/entity/gears/capes/crystalline/crystalline7",
+        "crystalline8": "textures/entity/gears/capes/crystalline/crystalline8",
+        "enchanted": "textures/misc/enchanted_actor_glint"
+      },
+      "geometry": {
+        "default": "geometry.custom_cape"
+      },
+      "animations": {
+        "cape": "animation.custom_cape"
+      },
+      "scripts": {
+        "parent_setup": "variable.chest_layer_visible = 0.0;",
+        "animate": [
+          "cape"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.cape_of_crystalline"
+      ]
+    }
+  }
+}

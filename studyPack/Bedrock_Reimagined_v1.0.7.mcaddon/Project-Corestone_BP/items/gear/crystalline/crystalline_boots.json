@@ -1,0 +1,48 @@
+{
+    "format_version": "1.26.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "5fs_br:crystalline_boots",
+            "menu_category": {
+                "category": "equipment"
+            }
+        },
+        "components": {
+            "minecraft:icon": "5fs_br:crystalline_boots",
+            "minecraft:wearable": {
+                "protection": 3,
+                "slot": "slot.armor.feet"
+            },
+            "minecraft:tags": {
+                "tags": [
+                    "minecraft:trimmable_armors"
+                ]
+            },
+            "minecraft:enchantable": {
+                "value": 10,
+                "slot": "armor_feet"
+            },
+            "minecraft:durability": {
+                "max_durability": 429
+            },
+            "minecraft:repairable": {
+                "repair_items": [
+                    {
+                        "items": [
+                            "5fs_br:crystalline_ingot"
+                        ],
+                        "repair_amount": "q.max_durability * 0.25"
+                    },
+                    {
+                        "items": [
+                            "5fs_br:crystalline_boots"
+                        ],
+                        "repair_amount": "c.other->q.remaining_durability + (0.12 * c.other->q.max_durability)"
+                    }
+                ]
+            },
+            "minecraft:max_stack_size": 1,
+            "5fs_br:equipment_durability": {}
+        }
+    }
+}

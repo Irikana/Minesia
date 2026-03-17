@@ -1,0 +1,36 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "5fs_br:worn_ring_of_mana"
+		},
+		"tags": [
+			"jeweling_station"
+		],
+		"key": {
+			"A": {
+				"item": "5fs_br:compact_diamond"
+			},
+			"B": {
+				"item": "5fs_br:sky_star_fragment"
+			},
+			"C": {
+				"item": "5fs_br:crystalline_ingot"
+			},
+			"D": {
+				"item": "5fs_br:cracked_ring_of_mana"
+			}
+		},
+		"pattern": [
+			"ABA",
+			"CDC",
+			"ACA"
+		],
+		"result": {
+			"item": "5fs_br:worn_ring_of_mana"
+		},
+		"unlock": {
+			"context": "AlwaysUnlocked"
+		}
+	}
+}

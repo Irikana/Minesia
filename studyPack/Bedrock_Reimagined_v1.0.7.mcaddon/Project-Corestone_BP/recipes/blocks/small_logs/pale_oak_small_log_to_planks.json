@@ -1,0 +1,25 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "5fs_br:pale_oak_small_log_to_planks"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "5fs_br:small_pale_oak_log"
+      }
+    ],
+    "result": {
+      "item": "minecraft:pale_oak_planks",
+      "count": 2
+    },
+    "unlock": [
+      {
+        "item": "5fs_br:small_pale_oak_log"
+      }
+    ]
+  }
+}

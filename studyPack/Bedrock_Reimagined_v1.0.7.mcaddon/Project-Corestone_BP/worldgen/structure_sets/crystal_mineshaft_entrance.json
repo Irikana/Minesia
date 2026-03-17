@@ -1,0 +1,21 @@
+{
+  "format_version": "1.21.20",
+  "minecraft:structure_set": {
+    "description": {
+      "identifier": "5fs_br:crystal_mineshaft_entrance"
+    },
+    "placement": {
+      "type": "minecraft:random_spread",
+      "salt": 83469867,
+      "separation": 4,
+      "spacing": 10,
+      "spread_type": "linear"
+    },
+    "structures": [
+      {
+        "structure": "5fs_br:crystal_mineshaft_entrance",
+        "weight": 1
+      }
+    ]
+  }
+}

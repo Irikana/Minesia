@@ -1,0 +1,55 @@
+{
+    "format_version": "1.20.80",
+    "minecraft:feature_rules": {
+        "description": {
+            "identifier": "5fs_br:forest_brown_polypore",
+            "places_feature": "5fs_br:polypores/scatter_brown_polypore_feature"
+        },
+        "conditions": {
+            "placement_pass": "first_pass",
+            "minecraft:biome_filter": {
+                "all_of": [
+                    {
+                        "test": "has_biome_tag",
+                        "operator": "==",
+                        "value": "forest"
+                    },
+                    {
+                        "test": "has_biome_tag",
+                        "operator": "==",
+                        "value": "swamp"
+                    },
+                    {
+                        "test": "has_biome_tag",
+                        "operator": "!=",
+                        "value": "taiga"
+                    }
+                ]
+            }
+        },
+        "distribution": {
+            "iterations": 120,
+            "x": {
+                "distribution": "uniform",
+                "extent": [
+                    0,
+                    16
+                ]
+            },
+            "y": {
+                "distribution": "uniform",
+                "extent": [
+                    63,
+                    256
+                ]
+            },
+            "z": {
+                "distribution": "uniform",
+                "extent": [
+                    0,
+                    16
+                ]
+            }
+        }
+    }
+}

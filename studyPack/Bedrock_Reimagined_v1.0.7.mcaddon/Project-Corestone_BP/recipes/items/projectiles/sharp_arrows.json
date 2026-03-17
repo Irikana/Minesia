@@ -1,0 +1,35 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "5fs_br:sharp_arrows"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " X ",
+      " Z",
+      " G "
+    ],
+    "key": {
+      "X": {
+        "item": "5fs_br:shark_tooth"
+      },
+      "Z": {
+        "item": "minecraft:stick"
+      },
+      "G": {
+        "item": "minecraft:feather"
+      }
+    },
+    "result": {
+      "item": "5fs_br:sharp_arrows"
+    },
+    "unlock": [
+      {
+        "item": "5fs_br:shark_tooth"
+      }
+    ]
+  }
+}

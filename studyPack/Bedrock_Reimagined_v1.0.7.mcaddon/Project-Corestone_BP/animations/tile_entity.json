@@ -1,0 +1,14 @@
+{
+    "format_version": "1.20.60",
+    "animations": {
+        "animation.tile_entity.teleport": {
+            "animation_length": 0.0001,
+            "loop": true,
+            "timeline": {
+                "0.0": [
+                    "/scriptevent 5fs_br:tile_entity_teleport"
+                ]
+            }
+        }
+    }
+}

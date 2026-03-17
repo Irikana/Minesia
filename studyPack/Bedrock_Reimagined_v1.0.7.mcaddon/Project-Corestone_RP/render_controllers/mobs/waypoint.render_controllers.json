@@ -1,0 +1,26 @@
+{
+    "format_version": "1.10.0",
+    "render_controllers": {
+        "controller.render.waypoint": {
+            "geometry": "Geometry.default",
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "textures": [
+                "Array.skins[query.variant]"
+            ],
+            "arrays": {
+                "textures": {
+                    "Array.skins": [
+                        "Texture.chest",
+                        "Texture.friendly",
+                        "Texture.neutral",
+                        "Texture.warning"
+                    ]
+                }
+            }
+        }
+    }
+}

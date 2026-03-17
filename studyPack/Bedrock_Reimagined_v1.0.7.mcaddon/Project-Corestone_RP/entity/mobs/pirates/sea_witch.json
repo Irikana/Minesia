@@ -1,0 +1,44 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "5fs_br:sea_witch",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/mobs/pirates/sea_witch"
+            },
+            "geometry": {
+                "default": "geometry.sea_witch"
+            },
+            "animations": {
+                "look_at_target": "animation.common.look_at_target",
+                "idle": "animation.sea_witch.idle",
+                "cast": "animation.sea_witch.cast",
+                "walk": "animation.sea_witch.walk",
+                "death": "animation.sea_witch.death",
+                "general_controller": "controller.animation.sea_witch.general",
+                "root_controller": "controller.animation.sea_witch.root"
+            },
+            "scripts": {
+                "animate": [
+                    "root_controller"
+                ]
+            },
+            "render_controllers": [
+                "controller.render.default"
+            ],
+            "particle_effects": {
+                "sea_witch_spell": "5fs_br:sea_witch_spell"
+            },
+            "sound_effects": {
+                "spell": "mob.pirate.sea_witch.cast",
+                "idle": "mob.pirate.sea_witch.idle"
+            },
+            "spawn_egg": {
+                "texture": "5fs_br:sea_witch"
+            }
+        }
+    }
+}

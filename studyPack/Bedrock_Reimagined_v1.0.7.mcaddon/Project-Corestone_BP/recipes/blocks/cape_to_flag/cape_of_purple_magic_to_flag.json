@@ -1,0 +1,33 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "5fs_br:cape_of_purple_magic_to_flag"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "ZGS"
+    ],
+    "key": {
+      "Z": {
+        "item": "5fs_br:moose_hide"
+      },
+      "G": {
+        "item": "5fs_br:cape_of_purple_magic"
+      },
+      "S": {
+        "item": "5fs_br:redwood_stick"
+      }
+    },
+    "result": {
+      "item": "5fs_br:purple_magic_flag"
+    },
+    "unlock": [
+      {
+        "item": "5fs_br:moose_hide"
+      }
+    ]
+  }
+} 

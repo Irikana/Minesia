@@ -1,0 +1,25 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "5fs_br:overworld/weighted_rocks_feature"
+    },
+    "features": [
+      ["5fs_br:overworld/rock_1_feature", 1],
+      ["5fs_br:overworld/rock_2_feature", 1],
+      ["5fs_br:overworld/rock_3_feature", 1],
+      ["5fs_br:overworld/rock_4_feature", 1],
+      ["5fs_br:overworld/rock_5_feature", 1],
+      ["5fs_br:overworld/rock_6_feature", 1],
+      ["5fs_br:overworld/rock_7_feature", 1],
+      ["5fs_br:overworld/rock_8_feature", 1],
+      ["5fs_br:overworld/rock_9_feature", 1],
+      ["5fs_br:overworld/rock_10_feature", 1],
+      ["5fs_br:overworld/rock_11_feature", 1],
+      ["5fs_br:overworld/rock_12_feature", 1],
+      ["5fs_br:overworld/rock_13_feature", 1],
+      ["5fs_br:overworld/rock_14_feature", 1],
+      ["5fs_br:overworld/rock_15_feature", 1]
+    ]
+  }
+}

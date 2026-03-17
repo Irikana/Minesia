@@ -1,0 +1,22 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:scatter_feature": {
+    "description": {
+      "identifier": "5fs_br:crystal_canyons/crystalline_geode_ceiling_scatter_feature"
+    },
+    "places_feature": "5fs_br:crystal_canyons/crystalline_geode_ceiling_random_feature",
+    "iterations": "Math.Random(3, 6)",
+    "x": {
+      "distribution": "gaussian",
+      "extent": [ -4, 4 ]
+    },
+    "y": {
+      "distribution": "gaussian",
+      "extent": [ -1, 1 ]
+    },
+    "z": {
+      "distribution": "gaussian",
+      "extent": [ -4, 4 ]
+    }
+  }
+}

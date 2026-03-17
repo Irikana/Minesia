@@ -1,0 +1,43 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "5fs_br:meteorite_golem",
+      "materials": { "default": "iron_golem" },
+      "textures": {
+        "default": "textures/entity/mobs/meteorite_golem"
+      },
+      "animations": {
+        "look_at_target": "animation.common.look_at_target",
+        "idle_0": "animation.meteorite_golem.idle_0",
+        "idle_1": "animation.meteorite_golem.idle_1",
+        "idle_2": "animation.meteorite_golem.idle_2",
+        "walk": "animation.meteorite_golem.walk",
+        "double_arm_slam": "animation.meteorite_golem.double_arm_slam",
+        "spin": "animation.meteorite_golem.spin",
+        "death": "animation.meteorite_golem.death",
+        "general_controller": "controller.animation.meteorite_golem.general"
+      },
+      "geometry": {
+        "default": "geometry.meteorite_golem"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.modified_tcos0 = Math.clamp(((Math.cos(query.modified_distance_moved * 13.5) * Math.min(query.modified_move_speed, 0.6) / variable.gliding_speed_value) * 25.0), -12.5, 12.5);"
+        ],
+        "animate": [
+          "general_controller",
+          {  
+            "look_at_target": "!query.timer_flag_3"
+          }
+        ]
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ],
+      "spawn_egg": {
+        "texture": "5fs_br:meteorite_golem"
+      }
+    }
+  }
+}

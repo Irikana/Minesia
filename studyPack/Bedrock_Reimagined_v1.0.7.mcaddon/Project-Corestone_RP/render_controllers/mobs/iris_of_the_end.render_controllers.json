@@ -1,0 +1,17 @@
+{
+    "format_version": "1.10.0",
+    "render_controllers": {
+        "controller.render.iris": {
+            "geometry": "geometry.outline",
+            "textures": [
+                "texture.outline"
+            ],
+            "ignore_lighting": true,
+            "materials": [
+                {
+                    "*": "material.outline"
+                }
+            ]
+        }
+    }
+}

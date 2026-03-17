@@ -1,0 +1,15 @@
+{
+    "format_version": "1.21.80",
+    "minecraft:scatter_feature": {
+        "description": {
+            "identifier": "5fs_br:trees/mangrove/scatter_mangrove_tree_8_feature"
+        },
+        "places_feature": "5fs_br:trees/mangrove/mangrove_tree_8_feature",
+        "distribution": {
+            "iterations": 1,
+            "x": -15,
+            "y": 0,
+            "z": -16
+        }
+    }
+}

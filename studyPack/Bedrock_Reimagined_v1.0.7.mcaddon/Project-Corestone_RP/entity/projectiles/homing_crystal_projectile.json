@@ -1,0 +1,17 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "5fs_br:homing_crystal_projectile",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/mobs/crystal_golem_projectile"
+			},
+			"geometry": {
+				"default": "geometry.crystal_wraith_projectile"
+			}
+		}
+	}
+}

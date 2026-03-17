@@ -1,0 +1,35 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "5fs_br:maple_barrel"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "SWS",
+      "S S",
+      "SWS"
+    ],
+    "key": {
+      "S": {
+        "item": "5fs_br:maple_planks"
+      },
+      "W": {
+        "item": "5fs_br:maple_slab"
+      }
+    },
+    "result": {
+      "item": "5fs_br:maple_barrel"
+    },
+    "unlock": [
+      {
+        "item": "5fs_br:maple_planks"
+      },
+      {
+        "item": "5fs_br:maple_slab"
+      }
+    ]
+  }
+}

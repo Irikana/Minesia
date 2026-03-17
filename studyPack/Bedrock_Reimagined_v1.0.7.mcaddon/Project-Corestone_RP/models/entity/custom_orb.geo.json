@@ -1,0 +1,29 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.custom_orb",
+				"texture_width": 4,
+				"texture_height": 4,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 1.5,
+				"visible_bounds_offset": [0, 0.25, 0]
+			},
+			"bones": [
+				{
+					"name": "bone",
+					"pivot": [0, 0.85, 0],
+					"cubes": [
+						{"origin": [-0.5, 0.35, -0.5], "size": [1, 1, 1], "uv": [0, 0]},
+						{"origin": [-0.5, 0.35, -0.5], "size": [1, 1, 1], "inflate": 0.3, "uv": [0, 2]}
+					],
+					"locators": {
+						"exp": [0, 0.85, 0],
+						"exp2": [0, -2.15, 0]
+					}
+				}
+			]
+		}
+	]
+}

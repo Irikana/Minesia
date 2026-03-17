@@ -1,0 +1,24 @@
+{
+  "materials": {
+    "version": "1.0.0",
+    "5fs_br_xray": {
+      "vertexShader": "shaders/color_uv.vertex",
+      "fragmentShader": "shaders/color_texture.fragment",
+      "vertexFields": [
+        { "field": "Position" },
+        { "field": "Color" },
+        { "field": "UV0" }
+      ],
+      "+samplerStates": [
+        { "samplerIndex": 0, "textureFilter": "Point" }
+      ],
+      "+states": [
+        "Blending",
+        "DisableCulling",
+        "DisableDepthWrite"
+      ],
+      "depthFunc": "Always",
+      "msaaSupport": "Both"
+    }
+  }
+}

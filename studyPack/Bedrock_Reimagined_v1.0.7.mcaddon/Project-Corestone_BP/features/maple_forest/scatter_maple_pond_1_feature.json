@@ -1,0 +1,15 @@
+{
+    "format_version": "1.21.80",
+    "minecraft:scatter_feature": {
+        "description": {
+            "identifier": "5fs_br:maple_forest/scatter_maple_pond_1_feature"
+        },
+        "places_feature": "5fs_br:maple_forest/maple_pond_1_feature",
+        "distribution": {
+            "iterations": 1,
+            "x": -3,
+            "y": -2,
+            "z": -5
+        }
+    }
+}

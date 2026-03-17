@@ -1,0 +1,32 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "5fs_br:sandstone_decorated_pot"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:brick"
+			},
+            "G": {
+				"item": "minecraft:sandstone"
+			}
+		},
+		"pattern": [
+			"G#G",
+			"# #",
+			"G#G"
+		],
+		"result": {
+			"item": "5fs_br:sandstone_decorated_pot"
+		},
+		"unlock": [
+			{
+				"item": "minecraft:brick"
+			}
+		]
+	}
+}

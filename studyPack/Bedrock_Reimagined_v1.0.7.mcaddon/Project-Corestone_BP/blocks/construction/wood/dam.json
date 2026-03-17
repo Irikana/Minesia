@@ -1,0 +1,90 @@
+{
+    "format_version": "1.26.0",
+	"minecraft:block": {
+        "description": {
+            "identifier": "5fs_br:dam",
+            "menu_category": {
+                "category": "nature"
+            },
+            "traits": {
+                "minecraft:placement_direction": {
+                    "enabled_states": [
+                        "minecraft:cardinal_direction"
+                    ]
+                }
+            },
+            "states": {
+                "5fs_br:connect_north": [
+                    false,
+                    true
+                ],
+                "5fs_br:connect_south": [
+                    false,
+                    true
+                ],
+                "5fs_br:connect_east": [
+                    false,
+                    true
+                ],
+                "5fs_br:connect_west": [
+                    false,
+                    true
+                ]
+            }
+        },
+        "components": {
+            "minecraft:loot": "loot_tables/blocks/misc/dam.json",
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 2
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 2
+            },
+            "minecraft:geometry": {
+                "identifier": "geometry.dam",
+                "bone_visibility": {
+                    "north": "q.block_state('5fs_br:connect_north')",
+                    "south": "q.block_state('5fs_br:connect_south')",
+                    "east": "q.block_state('5fs_br:connect_east')",
+                    "west": "q.block_state('5fs_br:connect_west')"
+                }
+            },
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "dam"
+                }
+            },
+            "minecraft:item_visual": {
+                "geometry": "geometry.dam_inventory",
+                "material_instances": {
+                    "*": {
+                        "texture": "dam"
+                    }
+                }
+            },
+            "minecraft:map_color": "#A07C53",
+            "minecraft:liquid_detection": {
+                "detection_rules": [
+                    {
+                        "can_contain_liquid": true,
+                        "liquid_type": "water",
+                        "on_liquid_touches": "blocking"
+                    }
+                ]
+            },
+            "minecraft:movable": {
+                "movement_type": "popped"
+            },
+            "minecraft:light_dampening": 0,
+            "minecraft:flammable": true,
+            "minecraft:precipitation_interactions": {
+                "precipitation_behavior": "obstruct_rain"
+            },
+			"minecraft:connection_rule": {
+				"accepts_connections_from": "none"
+			},
+            "5fs_br:dam": {},
+            "tag:minecraft:is_axe_item_destructible": {}
+        }
+    }
+}

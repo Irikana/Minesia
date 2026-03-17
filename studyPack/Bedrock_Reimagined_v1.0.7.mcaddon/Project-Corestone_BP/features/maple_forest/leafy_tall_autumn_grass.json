@@ -1,0 +1,43 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:growing_plant_feature": {
+      "description": {
+        "identifier": "5fs_br:maple_forest/leafy_tall_autumn_grass"
+      },
+      "height_distribution": [
+        [
+          {
+            "range_min": 2,
+            "range_max": 2 
+          }, 
+          100
+        ]
+      ],
+      "growth_direction": "UP",
+      "body_blocks": [
+        [
+            {
+              "name": "5fs_br:tall_autumn_grass",
+              "states": {
+                "5fs_br:double": "lower_bit",
+                "5fs_br:state": true
+              }
+            },
+            1
+          ]
+      ],
+      "head_blocks": [
+        [
+          {
+            "name": "5fs_br:tall_autumn_grass",
+              "states": {
+                "5fs_br:double": "upper_bit",
+                "5fs_br:state": true
+              }
+          },
+          1
+        ]
+      ],
+      "allow_water": false
+    }
+  }  

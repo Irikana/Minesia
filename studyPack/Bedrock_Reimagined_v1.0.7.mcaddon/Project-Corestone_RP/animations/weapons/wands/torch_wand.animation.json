@@ -1,0 +1,23 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.torch_wand.1fp": {
+			"loop": true,
+			"bones": {
+				"wand": {
+					"rotation": [25, 0, -147.5],
+					"position": [0, 20, 4]
+				}
+			}
+		},
+		"animation.torch_wand.3pp": {
+			"loop": true,
+			"bones": {
+				"wand": {
+					"rotation": [87.5, 0, 0],
+					"position": [0, 19, 0]
+				}
+			}
+		}
+	}
+}

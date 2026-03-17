@@ -1,0 +1,80 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "5fs_br:mummified_pharaoh",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/mummified_boss"
+            },
+            "geometry": {
+                "default": "geometry.mummified_pharaoh"
+            },
+            "scripts": {
+                "animate": [
+                    {
+                        "emerging": "q.is_emerging"
+                    },
+                    {
+                        "root_controller": "!q.is_emerging"
+                    }
+                ]
+            },
+            "animations": {
+                "emerging": "animation.mummified_pharaoh.emerging",
+                "hammer_idle": "animation.mummified_pharaoh.hammer_idle",
+                "hammer_swimming": "animation.mummified_pharaoh.hammer_swimming",
+                "hammer_walking": "animation.mummified_pharaoh.hammer_walking",
+                "hammer_slam": "animation.mummified_pharaoh.hammer_slam",
+                "hammer_swing": "animation.mummified_pharaoh.hammer_swing",
+                "throw_hammer": "animation.mummified_pharaoh.throw_hammer",
+                "summon_hammer": "animation.mummified_pharaoh.summon_hammer",
+                "drop_hammer": "animation.mummified_pharaoh.drop_hammer",
+                "melee_idle": "animation.mummified_pharaoh.melee_idle",
+                "melee_swimming": "animation.mummified_pharaoh.melee_swimming",
+                "melee_walking": "animation.mummified_pharaoh.melee_walking",
+                "punch_left": "animation.mummified_pharaoh.punch_left",
+                "punch_right": "animation.mummified_pharaoh.punch_right",
+                "melee_summon": "animation.mummified_pharaoh.melee_summon",
+                "death": "animation.mummified_pharaoh.death",
+                "death_rotation": "animation.mummified_pharaoh.death_rotation",
+                "root_controller": "controller.animation.mummified_pharaoh.root",
+                "phases_controller": "controller.animation.mummified_pharaoh.phases",
+                "hammer_phase_controller": "controller.animation.mummified_pharaoh.hammer_phase",
+                "melee_phase_controller": "controller.animation.mummified_pharaoh.melee_phase"
+            },
+            "render_controllers": [
+                "controller.render.boss"
+            ],
+            "sound_effects": {
+                "drop_hammer": "mob.mummified_pharaoh.drop_hammer",
+                "hammer_hurt": "mob.mummified_pharaoh.hammer_hurt",
+                "hammer_idle": "mob.mummified_pharaoh.hammer_idle",
+                "hammer_slam": "mob.mummified_pharaoh.hammer_slam",
+                "hammer_summon": "mob.mummified_pharaoh.hammer_summon",
+                "hammer_swim": "mob.mummified_pharaoh.hammer_swim",
+                "hammer_swing": "mob.mummified_pharaoh.hammer_swing",
+                "hammer_throw": "mob.mummified_pharaoh.hammer_throw",
+                "hammer_walk": "mob.mummified_pharaoh.hammer_walk",
+                "punch_left": "mob.mummified_pharaoh.left_hand_punch",
+                "melee_hurt": "mob.mummified_pharaoh.melee_hurt",
+                "melee_idle": "mob.mummified_pharaoh.melee_idle",
+                "melee_summon": "mob.mummified_pharaoh.melee_summon",
+                "melee_swim": "mob.mummified_pharaoh.melee_swim",
+                "melee_walk": "mob.mummified_pharaoh.melee_walk",
+                "punch_right": "mob.mummified_pharaoh.right_hand_punch",
+                "spawn": "mob.mummified_pharaoh.spawn",
+                "death": "mob.mummified_pharaoh.death"
+            },
+            "particle_effects": {
+                "mummified_pharaoh_slam": "5fs_br:mummified_pharaoh_slam",
+                "mummified_pharaoh_emerging": "5fs_br:mummified_pharaoh_emerging"
+            },
+            "spawn_egg": {
+                "texture": "5fs_br:mummy_boss"
+            }
+        }
+    }
+}

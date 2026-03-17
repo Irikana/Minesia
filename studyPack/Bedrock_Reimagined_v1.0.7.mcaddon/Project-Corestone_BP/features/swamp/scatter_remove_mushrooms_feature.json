@@ -1,0 +1,23 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:scatter_feature": {
+    "description": {
+      "identifier": "5fs_br:swamp/scatter_remove_mushrooms_feature"
+    },
+    "coordinate_eval_order": "xzy",
+    "iterations": "math.random(6,8)",
+    "places_feature": "5fs_br:swamp/remove_mushrooms_feature",
+    "x": {
+      "distribution": "gaussian",
+      "extent": [-16, 16]
+    },
+    "z": {
+      "distribution": "gaussian",
+      "extent": [-16, 16]
+    },
+    "y": {
+      "distribution": "gaussian",
+      "extent": [-1, 1]
+    }
+  }
+}

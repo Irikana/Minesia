@@ -1,0 +1,235 @@
+{
+    "format_version": "1.26.0",
+	"minecraft:block": {
+        "description": {
+            "identifier": "5fs_br:tall_autumn_grass",
+            "states": {
+                "5fs_br:double": [
+                    "lower_bit",
+                    "upper_bit"
+                ],
+                "5fs_br:state": [
+                    false,
+                    true
+                ]
+            }
+        },
+        "components": {
+            "5fs_br:crystallineShears": {},
+            "minecraft:loot": "loot_tables/empty.json",
+            "minecraft:geometry": "geometry.double_plant_bottom",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "tall_autumn_grass",
+                    "render_method": "alpha_test_single_sided",
+                    "ambient_occlusion": false,
+                    "face_dimming": false
+                }
+            },
+            "minecraft:transformation": {
+                "translation": [
+                    0,
+                    0.25,
+                    0
+                ],
+                "scale": [
+                    1,
+                    1.5,
+                    1
+                ]
+            },
+            "minecraft:collision_box": false,
+            "minecraft:selection_box": {
+                "origin": [
+                    -3,
+                    0,
+                    -3
+                ],
+                "size": [
+                    6,
+                    16,
+                    6
+                ]
+            },
+            "minecraft:light_dampening": 0,
+            "minecraft:placement_filter": {
+                "conditions": [
+                    {
+                        "block_filter": [
+                            {
+                                "tags": "query.any_tag('dirt')"
+                            },
+                            "minecraft:grass_block",
+                            "minecraft:dirt",
+                            "minecraft:moss_block",
+                            "minecraft:pale_moss_block",
+                            "minecraft:mycelium",
+                            "minecraft:coarse_dirt",
+                            "minecraft:dirt_with_roots",
+                            "minecraft:muddy_mangrove_roots",
+                            "minecraft:farmland"
+                        ],
+                        "allowed_faces": [
+                            "up"
+                        ]
+                    }
+                ]
+            },
+            "minecraft:liquid_detection": {
+                "detection_rules": [
+                    {
+                        "on_liquid_touches": "popped"
+                    }
+                ]
+            },
+            "minecraft:movable": {
+                "movement_type": "popped"
+            },
+            "minecraft:precipitation_interactions": {
+                "precipitation_behavior": "none"
+            },
+            "minecraft:connection_rule": {
+                "accepts_connections_from": "none"
+            },
+            "minecraft:replaceable": {}
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('5fs_br:double') == 'lower_bit' && q.block_state('5fs_br:state') == false",
+                "components": {
+                    "5fs_br:double_block": {},
+                    "5fs_br:no_loot_on_silk_touch": {}
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:double') == 'lower_bit' && q.block_state('5fs_br:state') == true",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "leafy_tall_autumn_grass",
+                            "render_method": "alpha_test_single_sided",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        }
+                    },
+                    "5fs_br:double_block": {},
+                    "5fs_br:no_loot_on_silk_touch": {}
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:double') == 'upper_bit' && q.block_state('5fs_br:state') == false",
+                "components": {
+                    "minecraft:geometry": "geometry.double_plant_top",
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "short_autumn_grass",
+                            "render_method": "alpha_test_single_sided",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        }
+                    },
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            0,
+                            180
+                        ],
+                        "translation": [
+                            0,
+                            -0.75,
+                            0
+                        ],
+                        "scale": [
+                            1,
+                            1.5,
+                            1
+                        ]
+                    },
+                    "minecraft:placement_filter": {
+                        "conditions": [
+                            {
+                                "allowed_faces": [
+                                    "up"
+                                ],
+                                "block_filter": [
+                                    {
+                                        "name": "5fs_br:tall_autumn_grass",
+                                        "states": {
+                                            "5fs_br:double": "lower_bit"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "5fs_br:crystallineShears": {},
+                    "5fs_br:break_block_below": {
+                        "name": "5fs_br:tall_autumn_grass",
+                        "state": "5fs_br:double",
+                        "values": [
+                            "lower_bit",
+                            "upper_bit"
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:double') == 'upper_bit' && q.block_state('5fs_br:state') == true",
+                "components": {
+                    "minecraft:geometry": "geometry.double_plant_top",
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "leafy_short_autumn_grass",
+                            "render_method": "alpha_test_single_sided",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        }
+                    },
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            0,
+                            180
+                        ],
+                        "translation": [
+                            0,
+                            -0.75,
+                            0
+                        ],
+                        "scale": [
+                            1,
+                            1.5,
+                            1
+                        ]
+                    },
+                    "minecraft:placement_filter": {
+                        "conditions": [
+                            {
+                                "allowed_faces": [
+                                    "up"
+                                ],
+                                "block_filter": [
+                                    {
+                                        "name": "5fs_br:tall_autumn_grass",
+                                        "states": {
+                                            "5fs_br:double": "lower_bit"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "5fs_br:crystallineShears": {},
+                    "5fs_br:break_block_below": {
+                        "name": "5fs_br:tall_autumn_grass",
+                        "state": "5fs_br:double",
+                        "values": [
+                            "lower_bit",
+                            "upper_bit"
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

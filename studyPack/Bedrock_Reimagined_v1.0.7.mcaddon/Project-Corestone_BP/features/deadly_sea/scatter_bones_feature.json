@@ -1,0 +1,20 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:scatter_feature": {
+    "description": {
+      "identifier": "5fs_br:deadly_sea/scatter_bones_feature"
+    },
+    "iterations": 4,
+    "x": {
+      "distribution": "gaussian",
+      "extent": [ -2, 2 ]
+    },
+    "y": "query.heightmap(variable.worldx, variable.worldz)",
+    "z": {
+      "distribution": "gaussian",
+      "extent": [ -2, 2 ]
+    },
+    "coordinate_eval_order": "zxy",
+    "places_feature": "5fs_br:deadly_sea/bones_feature"
+  }
+}

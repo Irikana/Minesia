@@ -1,0 +1,25 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.mummified_hammer.3pp": {
+			"loop": true,
+			"bones": {
+				"hammer": {
+					"rotation": [0, 0, 92.5],
+					"position": [-12, -25, 12],
+					"scale": 0.4
+				}
+			}
+		},
+		"animation.mummified_hammer.1fp": {
+			"loop": true,
+			"bones": {
+				"hammer": {
+					"rotation": [64.48779, -0.57719, 33.54875],
+					"position": [8, -25, 17],
+					"scale": 0.4
+				}
+			}
+		}
+	}
+}

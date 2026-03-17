@@ -1,0 +1,72 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "5fs_br:eclipsion_core",
+          "weight": 100
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "5fs_br:eclipse_shard",
+          "weight": 100,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": { "min": 2, "max": 6 }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "5fs_br:ender_essence",
+          "weight": 100,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": { "min": 2, "max": 6 }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:ender_pearl",
+          "weight": 100,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": { "min": 4, "max": 12 }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "5fs_br:void_totem",
+          "weight": 100
+        }
+      ]
+    }
+  ]
+}

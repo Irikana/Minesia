@@ -1,0 +1,23 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.dragonite_hammer.1fp": {
+			"loop": true,
+			"bones": {
+				"bone": {
+					"rotation": [90, 70, -67.5],
+					"position": [0, 7, 5]
+				}
+			}
+		},
+		"animation.dragonite_hammer.3pp": {
+			"loop": true,
+			"bones": {
+				"bone": {
+					"rotation": [87.5, 0, 0],
+					"position": [0, 12, -2]
+				}
+			}
+		}
+	}
+}

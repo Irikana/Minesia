@@ -1,0 +1,110 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.iris_of_the_end.root": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "animations": [
+                        {
+                            "watcher_particles": "q.mark_variant == 0"
+                        },
+                        {
+                            "judging_eye_particles": "q.mark_variant == 1"
+                        },
+                        {
+                            "final_arbiter_particles": "q.mark_variant == 2"
+                        },
+                        {
+                            "general_controller": "!q.is_emerging"
+                        }
+                    ],
+                    "transitions": [
+                        {
+                            "death": "!q.is_alive"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "death": {
+                    "animations": [
+                        "death"
+                    ]
+                }
+            }
+        },
+        "controller.animation.iris_of_the_end.general": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "animations": [
+                        "idle"
+                    ],
+                    "transitions": [
+                        {
+                            "spawn_minions": "q.timer_flag_2"
+                        },
+                        {
+                            "shoot": "q.is_charged"
+                        },
+                        {
+                            "pulse": "q.is_sheared"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "spawn_minions": {
+                    "animations": [
+                        "spawn_minions"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!q.timer_flag_2"
+                        },
+                        {
+                            "shoot": "q.is_charged && !q.timer_flag_2"
+                        },
+                        {
+                            "pulse": "q.is_sheared"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "shoot": {
+                    "animations": [
+                        "shoot"
+                    ],
+                    "transitions": [
+                        {
+                            "spawn_minions": "q.timer_flag_2"
+                        },
+                        {
+                            "default": "q.all_animations_finished"
+                        },
+                        {
+                            "pulse": "q.is_sheared && !q.is_charged"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "pulse": {
+                    "animations": [
+                        "pulse"
+                    ],
+                    "transitions": [
+                        {
+                            "spawn_minions": "q.timer_flag_2 && !q.is_sheared"
+                        },
+                        {
+                            "shoot": "q.is_charged"
+                        },
+                        {
+                            "default": "!q.is_sheared"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                }
+            }
+        }
+    }
+}

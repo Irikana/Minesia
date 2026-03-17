@@ -1,0 +1,36 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "5fs_br:dragonite_axe"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "##",
+      "#B",
+      " B"
+    ],
+    "key": {
+      "#": {
+        "item": "5fs_br:dragonite_ingot"
+      },
+      "B": {
+        "item": "5fs_br:redwood_stick"
+      }
+    },
+    "result": {
+      "item": "5fs_br:dragonite_axe",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "5fs_br:dragonite_ingot"
+      },
+      {
+        "item": "5fs_br:redwood_stick"
+      }
+    ]
+  }
+}

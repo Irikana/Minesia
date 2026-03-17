@@ -1,0 +1,20 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:structure_template_feature": {
+        "description": {
+            "identifier": "5fs_br:jungle/small_jungle_log_ns_1"
+        },
+        "structure_name": "trees:smallJungleFallenTree2",
+        "adjustment_radius": 16,
+        "facing_direction": "north",
+        "constraints": {
+            "grounded": {},
+            "block_intersection": {
+                "block_allowlist": [
+                    "minecraft:air",
+                    "minecraft:short_grass"
+                ]
+            }
+        }
+    }
+}

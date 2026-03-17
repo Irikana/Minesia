@@ -1,0 +1,28 @@
+{
+    "format_version": "1.26.0",
+	"minecraft:block": {
+        "description": {
+            "identifier": "5fs_br:redwood_yellow_mushroom_block",
+            "menu_category": {
+                "category": "Nature"
+            }
+        },
+        "components": {
+            "minecraft:geometry": "minecraft:geometry.full_block",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "redwood_yellow_mushroom_block"
+                }
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 1
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 1
+            },
+            "minecraft:map_color": "#FFFF55",
+            "minecraft:flammable": true,
+            "tag:minecraft:is_axe_item_destructible": {}
+        }
+    }
+}

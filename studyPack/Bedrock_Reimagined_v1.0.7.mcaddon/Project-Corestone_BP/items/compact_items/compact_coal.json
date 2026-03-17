@@ -1,0 +1,17 @@
+{
+    "format_version": "1.26.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "5fs_br:compact_coal",
+            "menu_category": {
+                "category": "items"
+            }
+        },
+        "components": {
+            "minecraft:icon": "5fs_br:compact_coal",
+            "minecraft:fuel": {
+                "duration": 320.0
+            }
+        }
+    }
+}

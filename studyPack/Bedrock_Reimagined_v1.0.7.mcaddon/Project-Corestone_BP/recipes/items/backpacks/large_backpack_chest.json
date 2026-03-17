@@ -1,0 +1,42 @@
+{
+    "format_version": "1.20.80",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "5fs_br:large_backpack_chest"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "key": {
+            "M": {
+                "item": "5fs_br:moose_hide"
+            },
+            "D": {
+                "item": "5fs_br:shark_hide"
+            },
+            "C": {
+                "tag": "5fs_br:chest"
+            },
+            "R": {
+                "item": "minecraft:rabbit_hide"
+            },
+            "F": {
+                "item": "5fs_br:giant_eagle_feather"
+            }
+        },
+        "pattern": [
+            "MDR",
+            "FCF",
+            "RDM"
+        ],
+        "result": {
+            "item": "5fs_br:large_backpack",
+            "count": 1
+        },
+        "unlock": [
+            {
+                "item": "minecraft:chest"
+            }
+        ]
+    }
+}

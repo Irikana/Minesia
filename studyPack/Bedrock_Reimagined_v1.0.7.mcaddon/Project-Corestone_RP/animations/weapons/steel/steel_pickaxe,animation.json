@@ -1,0 +1,23 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.steel_pickaxe.1fp": {
+			"loop": true,
+			"bones": {
+				"bone": {
+					"rotation": [95.30769, 55.96888, -49.78512],
+					"position": [0, 18, 4]
+				}
+			}
+		},
+		"animation.steel_pickaxe.3pp": {
+			"loop": true,
+			"bones": {
+				"bone": {
+					"rotation": [90, 0, 0],
+					"position": [0, 21, 3]
+				}
+			}
+		}
+	}
+}

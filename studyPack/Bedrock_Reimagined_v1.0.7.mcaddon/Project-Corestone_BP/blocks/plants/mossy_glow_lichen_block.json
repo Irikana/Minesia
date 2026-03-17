@@ -1,0 +1,37 @@
+{
+	"format_version": "1.26.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "5fs_br:mossy_glow_lichen_block",
+			"menu_category": {
+				"category": "nature"
+			}
+		},
+		"components": {
+			"minecraft:geometry": "minecraft:geometry.full_block",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "mossy_glow_lichen_block",
+					"alpha_masked_tint": true,
+					"tint_method": "grass"
+				}
+			},
+			"minecraft:map_color": "#6E7E78",
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 0.1
+			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 0.1
+			},
+			"minecraft:light_emission": 12,
+			"minecraft:movable": {
+				"movement_type": "popped"
+			},
+			"5fs_br:moss_block": {
+				"feature_to_place": "5fs_br:vegetation/mossy_glow_lichen_patch_feature"
+			},
+			"tag:minecraft:is_hoe_item_destructible": {},
+			"tag:dirt": {}
+		}
+	}
+}

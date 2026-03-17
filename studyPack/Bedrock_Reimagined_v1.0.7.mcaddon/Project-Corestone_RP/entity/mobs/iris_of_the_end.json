@@ -1,0 +1,62 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "5fs_br:iris_of_the_end",
+            "materials": {
+                "default": "iris_base",
+                "outline": "iris",
+				"bioluminescent_layer": "warden_bioluminescent_layer"
+            },
+            "textures": {
+                "default": "textures/entity/mobs/iris/iris_of_the_end",
+                "outline": "textures/entity/mobs/iris/iris_outline",
+                "bioluminescent_layer": "textures/entity/mobs/iris/iris_of_the_end_eye"
+            },
+            "geometry": {
+                "default": "geometry.iris_of_the_end",
+                "outline": "geometry.iris_of_the_end_outline"
+            },
+            "animations": {
+                "spawn": "animation.iris_of_the_end.spawn",
+                "idle": "animation.iris_of_the_end.idle",
+                "spawn_minions": "animation.iris_of_the_end.spawn_minions",
+                "shoot": "animation.iris_of_the_end.shoot",
+                "pulse": "animation.iris_of_the_end.pulse",
+                "death": "animation.iris_of_the_end.death",
+                "watcher_particles": "animation.iris_of_the_end.watcher_particles",
+                "judging_eye_particles": "animation.iris_of_the_end.judging_eye_particles",
+                "final_arbiter_particles": "animation.iris_of_the_end.final_arbiter_particles",
+                "general_controller": "controller.animation.iris_of_the_end.general",
+                "root_controller": "controller.animation.iris_of_the_end.root"
+            },
+            "scripts": {
+                "animate": [
+                    "root_controller",
+                    {
+                        "spawn": "q.is_emerging"
+                    }
+                ]
+            },
+            "render_controllers": [
+                "controller.render.default",
+                "controller.render.iris",
+                "controller.render.bioluminescent"
+            ],
+            "particle_effects": {
+                "iris": "5fs_br:iris",
+                "death": "5fs_br:iris_of_the_end_death_explosion"
+            },
+            "sound_effects": {
+                "idle": "mob.iris_of_the_end.idle",
+                "spawn": "mob.iris_of_the_end.spawn",
+                "spawn_minion": "mob.iris_of_the_end.spawn_minion",
+                "shoot": "mob.iris_of_the_end.shoot",
+                "pulse": "mob.iris_of_the_end.pulse"
+            },
+            "spawn_egg": {
+                "texture": "5fs_br:iris_of_the_end_spawn_egg"
+            }
+        }
+    }
+}

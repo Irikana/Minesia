@@ -1,0 +1,23 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.crystalline_projectile": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"start": "1"
+						}
+					]
+				},
+				"start": {
+					"particle_effects": [
+						{
+							"effect": "projectile"
+						}
+					]
+				}
+			}
+		}
+	}
+}

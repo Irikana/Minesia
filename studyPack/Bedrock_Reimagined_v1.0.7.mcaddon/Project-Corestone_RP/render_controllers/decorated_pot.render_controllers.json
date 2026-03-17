@@ -1,0 +1,41 @@
+{
+    "format_version": "1.8.0",
+    "render_controllers": {
+        "controller.render.decorated_pot": {
+            "arrays": {
+                "textures": {
+                    "Array.skins": [
+                        "Texture.default",
+                        "Texture.mossy_cobblestone",
+                        "Texture.mossy_stone_brick",
+                        "Texture.sandstone",
+                        "Texture.mossy_cobblestone_trap",
+                        "Texture.mossy_stone_brick_trap",
+                        "Texture.sandstone_trap"
+                    ]
+                }
+            },
+            "materials": [
+                {
+                    "*": "material.default"
+                }
+            ],
+            "geometry": "geometry.default",
+            "textures": [
+                "Array.skins[v.index]"
+            ],
+            "is_hurt_color": {
+                "a": 0,
+                "b": 0,
+                "g": 0,
+                "r": 0
+            },
+            "on_fire_color": {
+                "a": 0,
+                "b": 0,
+                "g": 0,
+                "r": 0
+            }
+        }
+    }
+}

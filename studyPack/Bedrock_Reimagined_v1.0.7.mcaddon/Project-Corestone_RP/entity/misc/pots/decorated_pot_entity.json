@@ -1,0 +1,40 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "5fs_br:decorated_pot_entity",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/empty",
+                "mossy_cobblestone": "textures/blocks/misc/pots/mossy_cobblestone_decorated_pot",
+                "mossy_stone_brick": "textures/blocks/misc/pots/mossy_stone_brick_decorated_pot",
+                "sandstone": "textures/blocks/misc/pots/sandstone_decorated_pot",
+                "mossy_cobblestone_trap": "textures/blocks/misc/pots/mossy_cobblestone_trap_decorated_pot",
+                "mossy_stone_brick_trap": "textures/blocks/misc/pots/mossy_stone_brick_trap_decorated_pot",
+                "sandstone_trap": "textures/blocks/misc/pots/sandstone_trap_decorated_pot"
+            },
+            "animations": {
+                "death": "animation.death.cancel"
+            },
+            "scripts": {
+                "pre_animation": [
+                    "t.decorated_pot_type_0 = query.property('5fs_br:decorated_pot_type_0');",
+                    "v.index = t.decorated_pot_type_0 == 'none' ? 0 : t.decorated_pot_type_0 == 'mossy_cobblestone' ? 1 : t.decorated_pot_type_0 == 'mossy_stone_brick' ? 2 : t.decorated_pot_type_0 == 'sandstone' ? 3 : t.decorated_pot_type_0 == 'mossy_cobblestone_trap' ? 4 : t.decorated_pot_type_0 == 'mossy_stone_brick_trap' ? 5 : t.decorated_pot_type_0 == 'sandstone_trap' ? 6 : 0;"
+                ],
+                "animate": [
+                    {
+                        "death": "!q.is_alive"
+                    }
+                ]
+            },
+            "geometry": {
+                "default": "geometry.decorated_pot"
+            },
+            "render_controllers": [
+                "controller.render.decorated_pot"
+            ]
+        }
+    }
+}

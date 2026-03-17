@@ -1,0 +1,22 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_brewing_mix": {
+    "description": {
+      "identifier": "5fs_br:splash_potion_of_shrinkify"
+    },
+    "tags": [
+      "brewing_stand"
+    ],
+    "input": "5fs_br:potion_of_shrinkify",
+    "reagent": "minecraft:gunpowder",
+    "output": "5fs_br:splash_potion_of_shrinkify",
+    "unlock": [
+      {
+        "item": "5fs_br:potion_of_shrinkify"
+      },
+      {
+        "item": "minecraft:gunpowder"
+      }
+    ]
+  }
+}

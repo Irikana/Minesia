@@ -1,0 +1,550 @@
+{
+  "tiers": [
+    {
+      "total_exp_required": 0,
+      "trades": [
+        {
+          "wants": [
+            {
+              "item": "minecraft:clay_ball",
+              "quantity": 10,
+              "price_multiplier": 0.05
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 1
+            }
+          ],
+          "trader_exp": 2,
+          "max_uses": 16,
+          "reward_exp": true
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 1,
+              "price_multiplier": 0.05
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:brick",
+              "quantity": 10
+            }
+          ],
+          "trader_exp": 1,
+          "max_uses": 16,
+          "reward_exp": true
+        }
+      ]
+    },
+    {
+      "total_exp_required": 10,
+      "trades": [
+        {
+          "wants": [
+            {
+              "item": "minecraft:stone",
+              "quantity": 20,
+              "price_multiplier": 0.05
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 1
+            }
+          ],
+          "trader_exp": 10,
+          "max_uses": 16,
+          "reward_exp": true
+        },
+        {
+          "wants": [
+            {
+              "item": "5fs_br:ash",
+              "quantity": 4,
+              "price_multiplier": 0.05
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 1
+            }
+          ],
+          "trader_exp": 10,
+          "max_uses": 16,
+          "reward_exp": true
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 1,
+              "price_multiplier": 0.05
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:chiseled_stone_bricks",
+              "quantity": 4
+            }
+          ],
+          "trader_exp": 5,
+          "max_uses": 16,
+          "reward_exp": true
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 2,
+              "price_multiplier": 0.05
+            }
+          ],
+          "gives": [
+            {
+              "choice": [
+                {"item": "5fs_br:mossy_stone_brick_flower_pot"},
+                {"item": "5fs_br:mossy_cobblestone_flower_pot"},
+                {"item": "5fs_br:sandstone_flower_pot"}
+              ]
+            }
+          ],
+          "trader_exp": 5,
+          "max_uses": 12,
+          "reward_exp": true
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 2,
+              "price_multiplier": 0.05
+            }
+          ],
+          "gives": [
+            {
+              "choice": [
+                {"item": "5fs_br:mossy_cobblestone_decorated_pot"},
+                {"item": "5fs_br:mossy_stone_brick_decorated_pot"},
+                {"item": "5fs_br:mossy_cobblestone_trap_decorated_pot"},
+                {"item": "5fs_br:mossy_stone_brick_trap_decorated_pot"},
+                {"item": "5fs_br:sandstone_decorated_pot"},
+                {"item": "5fs_br:sandstone_trap_decorated_pot"}
+              ]
+            }
+          ],
+          "trader_exp": 5,
+          "max_uses": 12,
+          "reward_exp": true
+        }
+      ]
+    },    
+    {
+      "total_exp_required": 70,
+      "trades": [
+        {
+          "wants": [
+            {
+              "choice": [
+                {
+                  "item": "minecraft:granite",
+                  "quantity": 16,
+                  "price_multiplier": 0.05
+                },
+                {
+                  "item": "minecraft:diorite",
+                  "quantity": 16,
+                  "price_multiplier": 0.05
+                },
+                {
+                  "item": "minecraft:andesite",
+                  "quantity": 16,
+                  "price_multiplier": 0.05
+                }
+              ]
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 1
+            }
+          ],
+          "trader_exp": 20,
+          "max_uses": 16,
+          "reward_exp": true
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 1,
+              "price_multiplier": 0.05
+            }
+          ],
+          "gives": [
+            {
+              "choice": [
+                {
+                  "item": "minecraft:polished_granite",
+                  "quantity": 4
+                },
+                {
+                  "item": "minecraft:polished_diorite",
+                  "quantity": 4
+                },
+                {
+                  "item": "minecraft:polished_andesite",
+                  "quantity": 4
+                },
+                {
+                  "item": "minecraft:dripstone_block",
+                  "quantity": 4
+                }
+              ]
+            }
+          ],
+          "trader_exp": 10,
+          "max_uses": 16,
+          "reward_exp": true
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 2,
+              "price_multiplier": 0.05
+            }
+          ],
+          "gives": [
+            {
+              "choice": [
+                {"item": "5fs_br:black_checkered_tiles", "quantity": 4},
+                {"item": "5fs_br:blue_checkered_tiles", "quantity": 4},
+                {"item": "5fs_br:brown_checkered_tiles", "quantity": 4},
+                {"item": "5fs_br:cyan_checkered_tiles", "quantity": 4},
+                {"item": "5fs_br:gray_checkered_tiles", "quantity": 4},
+                {"item": "5fs_br:green_checkered_tiles", "quantity": 4},
+                {"item": "5fs_br:light_blue_checkered_tiles", "quantity": 4},
+                {"item": "5fs_br:light_gray_checkered_tiles", "quantity": 4},
+                {"item": "5fs_br:lime_checkered_tiles", "quantity": 4},
+                {"item": "5fs_br:magenta_checkered_tiles", "quantity": 4},
+                {"item": "5fs_br:orange_checkered_tiles", "quantity": 4},
+                {"item": "5fs_br:pink_checkered_tiles", "quantity": 4},
+                {"item": "5fs_br:purple_checkered_tiles", "quantity": 4},
+                {"item": "5fs_br:red_checkered_tiles", "quantity": 4},
+                {"item": "5fs_br:white_checkered_tiles", "quantity": 4},
+                {"item": "5fs_br:yellow_checkered_tiles", "quantity": 4}
+              ]
+            }
+          ],
+          "trader_exp": 20,
+          "max_uses": 12,
+          "reward_exp": true
+        },
+        {
+          "wants": [
+            {
+              "item": "5fs_br:brimstone",
+              "quantity": 12,
+              "price_multiplier": 0.05
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 2
+            }
+          ],
+          "trader_exp": 20,
+          "max_uses": 16,
+          "reward_exp": true
+        }
+      ]
+    },
+    {
+      "total_exp_required": 150,
+      "trades": [
+        {
+          "wants": [
+            {
+              "item": "minecraft:quartz",
+              "quantity": 12,
+              "price_multiplier": 0.05
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 1
+            }
+          ],
+          "trader_exp": 30,
+          "max_uses": 12,
+          "reward_exp": true
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 1,
+              "price_multiplier": 0.05
+            }
+          ],
+          "gives": [
+            {
+              "choice": [
+                {
+                  "item": "minecraft:white_terracotta"
+                },
+                {
+                  "item": "minecraft:orange_terracotta"
+                },
+                {
+                  "item": "minecraft:magenta_terracotta"
+                },
+                {
+                  "item": "minecraft:light_blue_terracotta"
+                },
+                {
+                  "item": "minecraft:yellow_terracotta"
+                },
+                {
+                  "item": "minecraft:lime_terracotta"
+                },
+                {
+                  "item": "minecraft:pink_terracotta"
+                },
+                {
+                  "item": "minecraft:gray_terracotta"
+                },
+                {
+                  "item": "minecraft:light_gray_terracotta"
+                },
+                {
+                  "item": "minecraft:cyan_terracotta"
+                },
+                {
+                  "item": "minecraft:purple_terracotta"
+                },
+                {
+                  "item": "minecraft:blue_terracotta"
+                },
+                {
+                  "item": "minecraft:brown_terracotta"
+                },
+                {
+                  "item": "minecraft:green_terracotta"
+                },
+                {
+                  "item": "minecraft:red_terracotta"
+                },
+                {
+                  "item": "minecraft:black_terracotta"
+                },
+                {
+                  "item": "minecraft:black_glazed_terracotta"
+                },
+                {
+                  "item": "minecraft:blue_glazed_terracotta"
+                },
+                {
+                  "item": "minecraft:brown_glazed_terracotta"
+                },
+                {
+                  "item": "minecraft:cyan_glazed_terracotta"
+                },
+                {
+                  "item": "minecraft:gray_glazed_terracotta"
+                },
+                {
+                  "item": "minecraft:green_glazed_terracotta"
+                },
+                {
+                  "item": "minecraft:light_blue_glazed_terracotta"
+                },
+                {
+                  "item": "minecraft:lime_glazed_terracotta"
+                },
+                {
+                  "item": "minecraft:magenta_glazed_terracotta"
+                },
+                {
+                  "item": "minecraft:orange_glazed_terracotta"
+                },
+                {
+                  "item": "minecraft:pink_glazed_terracotta"
+                },
+                {
+                  "item": "minecraft:purple_glazed_terracotta"
+                },
+                {
+                  "item": "minecraft:red_glazed_terracotta"
+                },
+                {
+                  "item": "minecraft:silver_glazed_terracotta"
+                },
+                {
+                  "item": "minecraft:white_glazed_terracotta"
+                },
+                {
+                  "item": "minecraft:yellow_glazed_terracotta"
+                }
+              ]
+            }
+          ],
+          "trader_exp": 15,
+          "max_uses": 12,
+          "reward_exp": true
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 1,
+              "price_multiplier": 0.05
+            }
+          ],
+          "gives": [
+            {
+              "item": "5fs_br:meteor",
+              "quantity": 3
+            }
+          ],
+          "trader_exp": 30,
+          "max_uses": 16,
+          "reward_exp": true
+        },
+        {
+          "wants": [
+            {
+              "item": "5fs_br:glintrock",
+              "quantity": 8,
+              "price_multiplier": 0.05
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 1
+            }
+          ],
+          "trader_exp": 30,
+          "max_uses": 16,
+          "reward_exp": true
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 3,
+              "price_multiplier": 0.05
+            }
+          ],
+          "gives": [
+            {
+              "choice": [
+                {"item": "5fs_br:black_crystalline_glazed_terracotta"},
+                {"item": "5fs_br:blue_crystalline_glazed_terracotta"},
+                {"item": "5fs_br:brown_crystalline_glazed_terracotta"},
+                {"item": "5fs_br:cyan_crystalline_glazed_terracotta"},
+                {"item": "5fs_br:gray_crystalline_glazed_terracotta"},
+                {"item": "5fs_br:green_crystalline_glazed_terracotta"},
+                {"item": "5fs_br:light_blue_crystalline_glazed_terracotta"},
+                {"item": "5fs_br:light_gray_crystalline_glazed_terracotta"},
+                {"item": "5fs_br:lime_crystalline_glazed_terracotta"},
+                {"item": "5fs_br:magenta_crystalline_glazed_terracotta"},
+                {"item": "5fs_br:orange_crystalline_glazed_terracotta"},
+                {"item": "5fs_br:pink_crystalline_glazed_terracotta"},
+                {"item": "5fs_br:purple_crystalline_glazed_terracotta"},
+                {"item": "5fs_br:red_crystalline_glazed_terracotta"},
+                {"item": "5fs_br:white_crystalline_glazed_terracotta"},
+                {"item": "5fs_br:yellow_crystalline_glazed_terracotta"}
+              ]
+            }
+          ],
+          "trader_exp": 30,
+          "max_uses": 12,
+          "reward_exp": true
+        }
+      ]
+    },
+    {
+      "total_exp_required": 250,
+      "trades": [
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 1,
+              "price_multiplier": 0.05
+            }
+          ],
+          "gives": [
+            {
+              "choice": [
+                {
+                  "item": "minecraft:quartz_block"
+                },
+                {
+                  "item": "minecraft:quartz_pillar"
+                }
+              ]
+            }
+          ],
+          "trader_exp": 30,
+          "max_uses": 12,
+          "reward_exp": true
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 8,
+              "price_multiplier": 0.05
+            }
+          ],
+          "gives": [
+            {
+              "choice": [
+                {"item": "5fs_br:big_stone_statue"},
+                {"item": "5fs_br:big_sandstone_statue"},
+                {"item": "5fs_br:big_red_sandstone_statue"},
+                {"item": "5fs_br:small_stone_statue"},
+                {"item": "5fs_br:small_sandstone_statue"},
+                {"item": "5fs_br:small_red_sandstone_statue"}
+              ]
+            }
+          ],
+          "trader_exp": 30,
+          "max_uses": 12,
+          "reward_exp": true
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 1,
+              "price_multiplier": 0.05
+            }
+          ],
+          "gives": [
+            {
+              "item": "5fs_br:rose_quartz_block",
+              "quantity": 1
+            }
+          ],
+          "trader_exp": 30,
+          "max_uses": 16,
+          "reward_exp": true
+        }
+      ]
+    }
+  ]
+}

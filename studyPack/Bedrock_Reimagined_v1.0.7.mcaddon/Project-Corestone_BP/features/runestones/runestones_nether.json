@@ -1,0 +1,30 @@
+{
+    "format_version": "1.21.60",
+    "minecraft:single_block_feature": {
+        "description": {
+            "identifier": "5fs_br:runestones/runestones_nether"
+        },
+        "places_block": [
+            {
+                "block": {
+                    "name": "5fs_br:runestone_of_decay"
+                    
+                },
+                "weight": 50
+            },
+            {
+                "block": {
+                    "name": "5fs_br:runestone_of_flame"
+                    
+                },
+                "weight": 50
+            }
+        ],
+        "enforce_placement_rules": false,
+        "enforce_survivability_rules": false,
+        "may_replace": [
+            "minecraft:netherrack",
+            "5fs_br:brimstone"
+        ]
+    }
+}

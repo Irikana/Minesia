@@ -1,0 +1,32 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "5fs_br:rune_table"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"O": {
+                "item": "minecraft:obsidian"
+            },
+			"S": {
+                "item": "minecraft:amethyst_shard"
+            }
+		},
+		"pattern": [
+			" S ",
+			"SOS",
+			"OOO"
+		],
+		"result": {
+			"item": "5fs_br:rune_table"
+		},
+		"unlock": [
+			{
+				"item": "minecraft:amethyst_shard"
+			}
+		]
+	}
+}

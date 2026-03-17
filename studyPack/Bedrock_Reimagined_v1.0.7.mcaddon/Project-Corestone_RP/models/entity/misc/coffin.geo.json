@@ -1,0 +1,112 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.coffin",
+				"texture_width": 256,
+				"texture_height": 256,
+				"visible_bounds_width": 5,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "bone",
+					"pivot": [0, 0, 0],
+					"rotation": [0, 90, 0],
+					"cubes": [
+						{"origin": [-12, 0, -23], "size": [24, 4, 46], "uv": [0, 0]},
+						{"origin": [-4.65615, 10.34244, -18], "size": [16, 0, 16], "pivot": [3.34385, 10.34244, -10], "rotation": [0, 0, -45], "uv": [97, 1], "mirror": true},
+						{"origin": [-9.12171, 6.60983, 3], "size": [16, 0, 16], "pivot": [-1.12171, 6.60983, 11], "rotation": [0, 0, 10], "uv": [97, 1], "mirror": true},
+						{"origin": [7, 4, -22], "size": [4, 11, 4], "uv": [170, 166]},
+						{"origin": [-11, 4, -22], "size": [4, 11, 4], "uv": [170, 166], "mirror": true},
+						{"origin": [7, 4, 18], "size": [4, 11, 4], "uv": [170, 166]},
+						{"origin": [-11, 4, 18], "size": [4, 11, 4], "uv": [170, 166], "mirror": true},
+						{"origin": [9, 4, -21], "size": [0, 10, 42], "uv": [0, 146]},
+						{"origin": [-9, 4, -20], "size": [18, 10, 0], "uv": [141, 89]},
+						{"origin": [-9, 4, 20], "size": [18, 10, 0], "uv": [141, 89]},
+						{"origin": [-9, 4, -21], "size": [0, 10, 42], "uv": [85, 149]},
+						{"origin": [-9, 14, -23], "size": [18, 2, 3], "pivot": [0, 15, -21.5], "rotation": [0, 180, 0], "uv": [141, 83]},
+						{"origin": [-12, 14, -23], "size": [3, 2, 46], "uv": [141, 0]},
+						{"origin": [9, 14, -23], "size": [3, 2, 46], "uv": [125, 100]},
+						{"origin": [-9, 14, 20], "size": [18, 2, 3], "uv": [141, 83]}
+					]
+				},
+				{
+					"name": "skeleton",
+					"parent": "bone",
+					"pivot": [0, 3, -17],
+					"rotation": [-90, 0, 0]
+				},
+				{
+					"name": "right_leg",
+					"parent": "skeleton",
+					"pivot": [-2, 15.5, -20.15],
+					"rotation": [20, 0, 7.5],
+					"cubes": [
+						{"origin": [-3, 4.86808, -25.00877], "size": [2, 12, 2], "uv": [174, 49]}
+					]
+				},
+				{
+					"name": "left_leg",
+					"parent": "skeleton",
+					"pivot": [2, 15, -16.9],
+					"rotation": [0, 0, -5],
+					"mirror": true,
+					"cubes": [
+						{"origin": [1, 3, -22], "size": [2, 12, 2], "uv": [174, 49]}
+					]
+				},
+				{
+					"name": "right_arm",
+					"parent": "skeleton",
+					"pivot": [-5, 25, -17],
+					"rotation": [0, 0, 7.5],
+					"cubes": [
+						{"origin": [-6, 15, -22], "size": [2, 12, 2], "uv": [174, 64]}
+					]
+				},
+				{
+					"name": "left_arm",
+					"parent": "skeleton",
+					"pivot": [5, 25, -19],
+					"rotation": [12.5, 0, -7.5],
+					"mirror": true,
+					"cubes": [
+						{"origin": [4, 15.86576, -23.90518], "size": [2, 12, 2], "uv": [174, 64]}
+					]
+				},
+				{
+					"name": "body",
+					"parent": "skeleton",
+					"pivot": [0, 27, -18],
+					"rotation": [2.5, 0, 0],
+					"cubes": [
+						{"origin": [-4, 15.17448, -23.99619], "size": [8, 12, 4], "uv": [170, 149]},
+						{"origin": [-1, 26.17448, -22.99619], "size": [2, 4, 2], "uv": [178, 89]}
+					]
+				},
+				{
+					"name": "Head",
+					"parent": "skeleton",
+					"pivot": [0, 27, -18],
+					"rotation": [25, 0, 0],
+					"cubes": [
+						{"origin": [-4, 28.69047, -25.62523], "size": [8, 8, 8], "uv": [141, 49]},
+						{"origin": [-4, 28.69047, -25.62523], "size": [8, 8, 8], "inflate": 0.5, "uv": [141, 66]}
+					]
+				},
+				{
+					"name": "lid",
+					"parent": "bone",
+					"pivot": [-24, 0, 0],
+					"cubes": [
+						{"origin": [-10, 18, -21], "size": [20, 3, 42], "uv": [0, 100]},
+						{"origin": [-12, 16, -23], "size": [24, 2, 46], "uv": [0, 51]}
+					]
+				}
+			]
+		}
+	]
+}

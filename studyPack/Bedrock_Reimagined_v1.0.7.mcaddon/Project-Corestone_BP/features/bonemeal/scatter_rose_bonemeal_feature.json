@@ -1,0 +1,23 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:scatter_feature": {
+    "description": {
+      "identifier": "5fs_br:bonemeal/scatter_rose_bonemeal_feature"
+    },
+    "iterations": 15,
+    "x": {
+      "distribution": "triangle",
+      "extent": [ -2, 2 ]
+    },
+    "y": {
+      "distribution": "triangle",
+      "extent": [ -2, 2 ]
+    },
+    "z": {
+      "distribution": "triangle",
+      "extent": [ -2, 2 ]
+    },
+    "coordinate_eval_order": "xyz",
+    "places_feature": "5fs_br:bonemeal/rose_bonemeal"
+  }
+}

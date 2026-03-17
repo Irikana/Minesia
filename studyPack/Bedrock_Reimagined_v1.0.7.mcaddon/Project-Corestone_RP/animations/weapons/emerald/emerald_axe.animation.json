@@ -1,0 +1,23 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.emerald_axe.3pp": {
+			"loop": true,
+			"bones": {
+				"bone": {
+					"rotation": [82.5, 0, 0],
+					"position": [0, 21, 3]
+				}
+			}
+		},
+		"animation.emerald_axe.1fp": {
+			"loop": true,
+			"bones": {
+				"bone": {
+					"rotation": [73.13804, 58.02895, -82.70579],
+					"position": [0, 21, 4]
+				}
+			}
+		}
+	}
+}

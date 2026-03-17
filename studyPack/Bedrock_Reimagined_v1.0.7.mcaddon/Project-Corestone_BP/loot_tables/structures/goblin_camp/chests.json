@@ -1,0 +1,115 @@
+{
+  "pools": [
+    {
+      "rolls": { "min": 4, "max": 7 },
+      "entries": [
+        { "type": "item", "name": "minecraft:bread", "weight": 3, "functions": [ { "function": "set_count", "count": { "min": 2, "max": 4 } } ] },
+        { "type": "item", "name": "minecraft:cooked_beef", "weight": 2, "functions": [ { "function": "set_count", "count": { "min": 1, "max": 3 } } ] },
+        { "type": "item", "name": "minecraft:arrow", "weight": 3, "functions": [ { "function": "set_count", "count": { "min": 6, "max": 12 } } ] },
+        { "type": "item", "name": "minecraft:torch", "weight": 3, "functions": [ { "function": "set_count", "count": { "min": 6, "max": 12 } } ] },
+        { "type": "item", "name": "minecraft:coal", "weight": 3, "functions": [ { "function": "set_count", "count": { "min": 3, "max": 8 } } ] },
+        { "type": "item", "name": "minecraft:paper", "weight": 2, "functions": [ { "function": "set_count", "count": { "min": 2, "max": 6 } } ] },
+        { "type": "item", "name": "minecraft:string", "weight": 2, "functions": [ { "function": "set_count", "count": { "min": 2, "max": 6 } } ] }
+      ]
+    },
+    {
+      "rolls": { "min": 1, "max": 2 },
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:bow",
+          "weight": 2,
+          "functions": [
+            { "function": "set_damage", "damage": { "min": 0.20, "max": 0.60 } },
+            { "function": "enchant_with_levels", "levels": { "min": 5, "max": 15 }, "treasure": false }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:stone_sword",
+          "weight": 2,
+          "functions": [
+            { "function": "set_damage", "damage": { "min": 0.15, "max": 0.60 } }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:chainmail_boots",
+          "weight": 1,
+          "functions": [
+            { "function": "set_damage", "damage": { "min": 0.00, "max": 0.40 } },
+            { "function": "enchant_with_levels", "levels": { "min": 5, "max": 12 }, "treasure": false }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": { "min": 1, "max": 2 },
+      "entries": [
+        { "type": "item", "name": "minecraft:emerald", "weight": 2, "functions": [ { "function": "set_count", "count": { "min": 1, "max": 3 } } ] },
+        { "type": "item", "name": "minecraft:iron_ingot", "weight": 3, "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ] },
+        { "type": "item", "name": "minecraft:map", "weight": 1 },
+        { "type": "item", "name": "minecraft:compass", "weight": 1 }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "empty", "weight": 74 },
+        { "type": "item", "name": "5fs_br:ring_band", "weight": 4 },
+        { "type": "item", "name": "5fs_br:jeweling_station", "weight": 4 },
+        { "type": "item", "name": "5fs_br:rune_table", "weight": 2 },
+        {
+          "type": "item",
+          "name": "5fs_br:compact_copper_ingot",
+          "weight": 14,
+          "functions": [ { "function": "set_count", "count": { "min": 1, "max": 3 } } ]
+        },
+        { "type": "item", "name": "5fs_br:common_bag_upgrade", "weight": 2 }
+      ]
+    },
+    {
+      "rolls": 1,
+      "conditions": [ { "condition": "random_chance", "chance": 0.01 } ],
+      "entries": [
+        { "type": "item", "name": "5fs_br:charm_of_wolf", "weight": 1 },
+        { "type": "item", "name": "5fs_br:charm_of_pillager", "weight": 1 },
+        { "type": "item", "name": "5fs_br:charm_of_zombie", "weight": 1 },
+        { "type": "item", "name": "5fs_br:charm_of_spider", "weight": 1 }
+      ]
+    },
+    {
+      "rolls": 1,
+      "conditions": [ { "condition": "random_chance", "chance": 0.10 } ],
+      "entries": [
+        { "type": "item", "name": "minecraft:enchanted_book", "weight": 1, "functions": [ { "function": "enchant_randomly" } ] }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "empty", "weight": 95 },
+        { "type": "item", "name": "minecraft:golden_apple", "weight": 5 }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "empty", "weight": 75 },
+        { "type": "item", "name": "5fs_br:wooden_wand", "weight": 10, "functions": [ { "function": "set_damage", "damage": { "min": 0.20, "max": 0.70 } } ] },
+        { "type": "item", "name": "5fs_br:stone_wand", "weight": 6, "functions": [ { "function": "set_damage", "damage": { "min": 0.20, "max": 0.70 } } ] },
+        { "type": "item", "name": "5fs_br:copper_wand", "weight": 4, "functions": [ { "function": "set_damage", "damage": { "min": 0.20, "max": 0.70 } } ] },
+        { "type": "item", "name": "5fs_br:torch_wand", "weight": 1, "functions": [ { "function": "set_damage", "damage": { "min": 0.20, "max": 0.70 } } ] },
+        { "type": "item", "name": "5fs_br:basic_scroll", "weight": 4 }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "item", "name": "5fs_br:sky_star_fragment", "weight": 4 },
+        { "type": "item", "name": "5fs_br:mana_bottle", "weight": 6, "functions": [ { "function": "set_count", "count": { "min": 1, "max": 3 } } ] },
+        { "type": "empty", "weight": 90 }
+      ]
+    }
+  ]
+}

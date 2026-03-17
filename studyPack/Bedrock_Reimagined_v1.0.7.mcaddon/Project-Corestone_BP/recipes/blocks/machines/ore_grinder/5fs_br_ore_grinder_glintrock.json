@@ -1,0 +1,40 @@
+
+    {
+        "format_version": "1.20.80",
+        "minecraft:recipe_shaped": {
+            "description": {
+                "identifier": "5fs_br:ore_grinder_glintrock"
+            },
+            "tags": [
+                "crafting_table"
+            ],
+            "key": {
+                "C": {
+                    "item": "5fs_br:crystalline_ingot"
+                },
+                "S": {
+                    "item": "minecraft:stonecutter_block"
+                },
+                "T": {
+                    "item": "5fs_br:glintrock"
+                },
+                "R": {
+                    "item": "5fs_br:resonant_cluster"
+                }
+            },
+            "pattern": [
+                "CCC",
+                "RSR",
+                "TTT"
+            ],
+            "result": {
+                "item": "5fs_br:ore_grinder"
+            },
+            "unlock": [
+                {
+                    "item": "5fs_br:steel_ingot"
+                }
+            ]
+        }
+    }
+    

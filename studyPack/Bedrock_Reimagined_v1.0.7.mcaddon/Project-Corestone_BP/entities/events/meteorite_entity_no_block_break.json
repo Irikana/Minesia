@@ -1,0 +1,136 @@
+{
+  "format_version": "1.21.40",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "5fs_br:meteorite_entity_no_block_break",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "runtime_identifier": "minecraft:ender_pearl",
+      "properties": {
+        "5fs_br:rotation": {
+          "client_sync": true,
+          "type": "enum",
+          "default": "north",
+          "values": [
+            "north",
+            "south",
+            "west",
+            "east",
+            "north_falling",
+            "south_falling",
+            "west_falling",
+            "east_falling",
+            "explode"
+          ]
+        }
+      }
+    },
+    "component_groups": {
+      "scale_small": {
+        "minecraft:scale": {
+          "value": 0.5
+        }
+      },
+      "scale_normal": {
+        "minecraft:scale": {
+          "value": 0.8
+        }
+      },
+      "scale_large": {
+        "minecraft:scale": {
+          "value": 1.1
+        }
+      },
+      "5fs_br:explosion": {
+        "minecraft:explode": {
+          "fuse_length": 0.1,
+          "fuse_lit": true,
+          "power": 5,
+          "damage_scaling": 1,
+          "causes_fire": true,
+          "destroy_affected_by_griefing": false,
+          "breaks_blocks": false
+        }
+      },
+      "5fs_br:despawn": {
+        "minecraft:instant_despawn": {}
+      }
+    },
+    "components": {
+      "minecraft:collision_box": {
+        "width": 0.25,
+        "height": 0.25
+      },
+      "minecraft:physics": {},
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
+      "minecraft:conditional_bandwidth_optimization": {},
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "cause": "all",
+            "deals_damage": "no"
+          }
+        ]
+      },
+      "minecraft:type_family": {
+        "family": [
+          "nolife"
+        ]
+      },
+      "minecraft:ageable": {
+        "duration": 20,
+        "grow_up": {
+          "event": "5fs_br:despawn",
+          "target": "self"
+        }
+      }
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "randomize": [
+          {
+            "weight": 20,
+            "add": {
+              "component_groups": [
+                "scale_small"
+              ]
+            }
+          },
+          {
+            "weight": 30,
+            "add": {
+              "component_groups": [
+                "scale_normal"
+              ]
+            }
+          },
+          {
+            "weight": 40,
+            "add": {
+              "component_groups": [
+                "scale_large"
+              ]
+            }
+          }
+        ]
+      },
+      "5fs_br:despawn": {
+        "add": {
+          "component_groups": [
+            "5fs_br:despawn"
+          ]
+        }
+      },
+      "5fs_br:explode": {
+        "add": {
+          "component_groups": [
+            "5fs_br:explosion"
+          ]
+        }
+      }
+    }
+  }
+}

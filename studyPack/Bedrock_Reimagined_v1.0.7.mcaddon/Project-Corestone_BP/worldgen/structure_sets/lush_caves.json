@@ -1,0 +1,21 @@
+{
+  "format_version": "1.21.20",
+  "minecraft:structure_set": {
+    "description": {
+      "identifier": "5fs_br:lush_caves"
+    },
+    "placement": {
+      "type": "minecraft:random_spread",
+      "salt": 39281521,
+      "separation": 12,
+      "spacing": 30,
+      "spread_type": "linear"
+    },
+    "structures": [
+      {
+        "structure": "5fs_br:lush_caves",
+        "weight": 1
+      }
+    ]
+  }
+}

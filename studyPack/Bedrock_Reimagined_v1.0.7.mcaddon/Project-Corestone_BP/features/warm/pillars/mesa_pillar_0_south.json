@@ -1,0 +1,32 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "5fs_br:warm/pillars/mesa_pillar_0_south"
+		},
+		"structure_name": "warm_pillars:mesa_pillar_0",
+		"adjustment_radius": 0,
+		"facing_direction": "south",
+		"constraints": {
+			"grounded": {},
+			"block_intersection": {
+				"block_allowlist": [
+					"minecraft:air",
+					"minecraft:orange_terracotta",
+					"minecraft:sand",
+					"minecraft:red_sand",
+					"minecraft:coarse_dirt",
+					"minecraft:deadbush",
+					"minecraft:short_grass",
+					"minecraft:short_dry_grass",
+					"minecraft:tall_dry_grass",
+					"5fs_br:tumbleweed",
+					"5fs_br:tall_dead_bush",
+					"5fs_br:bones",
+					"5fs_br:skull",
+					"5fs_br:skull_and_bones"
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,18 @@
+{
+  "format_version": "1.21.20",
+  "minecraft:template_pool": {
+    "description": {
+      "identifier": "5fs_br:desert_pyramid"
+    },
+    "elements": [
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "desert/pyramid_D",
+          "processors": "mike:stone_brick_replacement"
+        },
+        "weight": 1
+      }
+    ]
+  }
+}

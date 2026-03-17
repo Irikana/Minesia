@@ -1,0 +1,71 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.mummified_pharaoh.general": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "hammer_slam": "q.is_powered && q.is_delayed_attacking"
+                        },
+                        {
+                            "hammer_swing": "q.is_chested && q.is_delayed_attacking"
+                        }
+                    ]
+                },
+                "hammer_slam": {
+                    "animations": [
+                        "hammer_slam"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "q.all_animations_finished"
+                        }
+                    ],
+                    "on_exit": [
+                        "/event entity @s 5fs_br:attacked"
+                    ]
+                },
+                "hammer_swing": {
+                    "animations": [
+                        "hammer_swing"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "q.all_animations_finished"
+                        }
+                    ],
+                    "on_exit": [
+                        "/event entity @s 5fs_br:attacked"
+                    ]
+                }
+            }
+        },
+        "controller.animation.mummified_pharaoh.melee_attack": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "melee_attack": "q.is_ignited && q.is_delayed_attacking"
+                        }
+                    ]
+                },
+                "melee_attack": {
+                    "animations": [
+                        "melee_attack"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "q.all_animations_finished"
+                        }
+                    ],
+                    "on_exit": [
+                        "/event entity @s 5fs_br:melee_attacked"
+                    ]
+                }
+            }
+        }
+    }
+}

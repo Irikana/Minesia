@@ -1,0 +1,20 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:ore_feature": {
+        "description": {
+            "identifier": "5fs_br:nether/brimstone_ancient_debris"
+        },
+        "count": 3,
+        "replace_rules": [
+            {
+                "places_block": "minecraft:ancient_debris",
+                "may_replace": [
+                    "5fs_br:brimstone",
+                    "minecraft:netherrack",
+                    "minecraft:blackstone",
+                    "minecraft:gravel"
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "format_version": "1.21.60",
+    "minecraft:scatter_feature": {
+        "description": {
+            "identifier": "5fs_br:maple_trunk/scatter_maple_log_0"
+        },
+        "places_feature": "5fs_br:maple_trunk/wild_small_maple_log_ns",
+        "distribution": {
+            "iterations": 5,
+            "x": {
+                "distribution": "gaussian",
+                "extent": [
+                    1,
+                    5
+                ]
+            },
+            "y": 0,
+            "z": 0
+        }
+    }
+}

@@ -1,0 +1,109 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "5fs_br:tuff_key"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "5fs_br:mask_of_the_wild",
+          "weight": 50
+        },
+        {
+          "type": "empty",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "5fs_br:ancient_bark",
+          "weight": 100,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": { "min": 1, "max": 1 }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "5fs_br:ancient_bark",
+          "weight": 20,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": { "min": 1, "max": 1 }
+            }
+          ]
+        },
+        {
+          "type": "empty",
+          "weight": 80
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "5fs_br:compact_emerald",
+          "weight": 100,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": { "min": 3, "max": 12 }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:moss_block",
+          "weight": 80,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": { "min": 16, "max": 64 }
+            }
+          ]
+        },
+        {
+          "type": "empty",
+          "weight": 20
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "5fs_br:ombari_core",
+          "weight": 100
+        }
+      ]
+    }
+  ]
+}

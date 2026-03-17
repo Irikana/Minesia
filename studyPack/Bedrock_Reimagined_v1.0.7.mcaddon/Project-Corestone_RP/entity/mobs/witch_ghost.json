@@ -1,0 +1,37 @@
+{
+	"format_version": "1.8.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "5fs_br:witch_ghost",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+                "default": "textures/entity/mobs/witch_ghost"
+            },
+			"geometry": {
+				"default": "geometry.witch_ghost"
+			},
+			"spawn_egg": {
+        		"texture": "5fs_br:witch_ghost"
+			},
+			"animations": {
+				"idle": "animation.witch_ghost.idle",
+				"attack": "animation.witch_ghost.attack",
+				"death": "animation.witch_ghost.death",
+				"fly": "animation.witch_ghost.fly"
+			},
+			"animation_controllers": [
+				{
+					"general": "controller.animation.witch_ghost"
+				}
+			],
+			"sound_effects": {
+				"idle": "mob.witch_ghost.idle"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			]
+		}
+	}
+}

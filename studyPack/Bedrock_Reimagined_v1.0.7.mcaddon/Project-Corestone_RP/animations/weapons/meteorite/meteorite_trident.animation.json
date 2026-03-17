@@ -1,0 +1,33 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.meteorite_trident.1fp": {
+			"loop": true,
+			"bones": {
+				"trident": {
+					"rotation": [40.57069, 34.2942, -126.14088],
+					"position": [18, 19, 22]
+				}
+			}
+		},
+		"animation.meteorite_trident.3pp": {
+			"loop": true,
+			"bones": {
+				"trident": {
+					"rotation": [90, 0, 0],
+					"position": [0, 23, 11]
+				}
+			}
+		},
+		"animation.meteorite_trident.shoot": {
+			"loop": true,
+			"animation_length": 1,
+			"bones": {
+				"trident": {
+					"rotation": [90, 0, -90],
+					"position": [0, 10, 16]
+				}
+			}
+		}
+	}
+}

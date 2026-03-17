@@ -1,0 +1,140 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.bear": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "animations": ["idle"],
+          "transitions": [
+            { "roaring": "query.property('5fs_br:anim') == 'roar'" },
+            { "sit": "query.property('5fs_br:anim') == 'sit'" },
+            { "standing": "query.property('5fs_br:anim') == 'stand_on_legs'" },
+            { "sleeping": "query.property('5fs_br:anim') == 'sleep'" },
+            { "bite": "v.attack_time > 0" },
+            { "eat": "query.is_eating == 1 && query.all_animations_finished == 1" },
+            { "walking": "query.is_alive && query.modified_move_speed > 0.05" },
+            { "swimming": "query.is_alive && query.is_in_water" },
+            { "attacking": "query.is_alive && query.is_delayed_attacking" },
+            { "death": "!query.is_alive" }
+          ],
+          "blend_transition": 0.2
+        },
+
+        "walking": {
+          "animations": ["walk"],
+          "transitions": [
+            { "roaring": "query.property('5fs_br:anim') == 'roar'" },
+            { "sit": "query.property('5fs_br:anim') == 'sit'" },
+            { "standing": "query.property('5fs_br:anim') == 'stand_on_legs'" },
+            { "sleeping": "query.property('5fs_br:anim') == 'sleep'" },
+            { "bite": "v.attack_time > 0" },
+            { "eat": "query.is_eating == 1 && query.all_animations_finished == 1" },
+            { "default": "query.modified_move_speed <= 0.05 && query.property('5fs_br:anim') == 'none'" },
+            { "swimming": "query.is_in_water && query.modified_move_speed > 0.05" },
+            { "attacking": "query.is_delayed_attacking" },
+            { "death": "!query.is_alive" }
+          ],
+          "blend_transition": 0.2
+        },
+
+        "swimming": {
+          "animations": ["swimming"],
+          "transitions": [
+            { "roaring": "query.property('5fs_br:anim') == 'roar'" },
+            { "sit": "query.property('5fs_br:anim') == 'sit'" },
+            { "standing": "query.property('5fs_br:anim') == 'stand_on_legs'" },
+            { "sleeping": "query.property('5fs_br:anim') == 'sleep'" },
+            { "bite": "v.attack_time > 0" },
+            { "eat": "query.is_eating == 1 && query.all_animations_finished == 1" },
+            { "default": "!query.is_in_water && query.property('5fs_br:anim') == 'none'" },
+            { "attacking": "query.is_delayed_attacking" },
+            { "death": "!query.is_alive" }
+          ],
+          "blend_transition": 0.2
+        },
+
+        "attacking": {
+          "animations": ["attacking"],
+          "transitions": [
+            { "roaring": "query.property('5fs_br:anim') == 'roar'" },
+            { "sit": "query.property('5fs_br:anim') == 'sit'" },
+            { "standing": "query.property('5fs_br:anim') == 'stand_on_legs'" },
+            { "bite": "v.attack_time > 0" },
+            { "default": "!query.is_delayed_attacking && v.attack_time <= 0 && query.property('5fs_br:anim') == 'none'" },
+            { "death": "!query.is_alive" }
+          ],
+          "blend_transition": 0.1
+        },
+
+        "bite": {
+          "animations": ["bite"],
+          "transitions": [
+            { "roaring": "query.property('5fs_br:anim') == 'roar'" },
+            { "sit": "query.property('5fs_br:anim') == 'sit'" },
+            { "standing": "query.property('5fs_br:anim') == 'stand_on_legs'" },
+            { "eat": "query.is_eating == 1 && query.all_animations_finished == 1" },
+            { "default": "v.attack_time <= 0 && !query.is_delayed_attacking && query.property('5fs_br:anim') == 'none'" },
+            { "attacking": "query.is_delayed_attacking && v.attack_time <= 0" },
+            { "death": "!query.is_alive" }
+          ],
+          "blend_transition": 0.1
+        },
+
+        "eat": {
+          "animations": ["eat"],
+          "transitions": [
+            { "roaring": "query.property('5fs_br:anim') == 'roar'" },
+            { "sit": "query.property('5fs_br:anim') == 'sit'" },
+            { "standing": "query.property('5fs_br:anim') == 'stand_on_legs'" },
+            { "bite": "v.attack_time > 0" },
+            { "default": "query.is_eating == 0 || query.all_animations_finished == 1.5" },
+            { "attacking": "query.is_delayed_attacking && v.attack_time <= 0" },
+            { "death": "!query.is_alive" }
+          ],
+          "blend_transition": 0.2
+        },
+
+        "roaring": {
+          "animations": ["roar"],
+          "transitions": [
+            { "default": "query.all_animations_finished || query.property('5fs_br:anim') == 'none'" },
+            { "death": "!query.is_alive" }
+          ],
+          "blend_transition": 0.2
+        },
+
+        "sit": {
+          "animations": ["sit"],
+          "transitions": [
+            { "default": "query.all_animations_finished || query.property('5fs_br:anim') == 'none'" },
+            { "death": "!query.is_alive" }
+          ],
+          "blend_transition": 0.2
+        },
+
+        "standing": {
+          "animations": ["stand_on_legs"],
+          "transitions": [
+            { "default": "query.all_animations_finished || query.property('5fs_br:anim') == 'none'" },
+            { "death": "!query.is_alive" }
+          ],
+          "blend_transition": 0.2
+        },
+
+        "sleeping": {
+          "animations": ["sleep"],
+          "transitions": [
+            { "default": "query.property('5fs_br:anim') == 'none'" },
+            { "death": "!query.is_alive" }
+          ],
+          "blend_transition": 0.2
+        },
+
+        "death": {
+          "animations": ["death"]
+        }
+      }
+    }
+  }
+}

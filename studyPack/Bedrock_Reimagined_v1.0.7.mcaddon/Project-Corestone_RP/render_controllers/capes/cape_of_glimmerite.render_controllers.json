@@ -1,0 +1,47 @@
+{
+  "format_version": "1.20.0",
+  "render_controllers": {
+    "controller.render.cape_of_glimmerite": {
+      "geometry": "geometry.default",
+      "arrays": {
+        "textures": {
+          "array.textures": [
+            "Texture.glimmerite0",
+            "Texture.glimmerite1",
+            "Texture.glimmerite2",
+            "Texture.glimmerite3",
+            "Texture.glimmerite4",
+            "Texture.glimmerite5",
+            "Texture.glimmerite6",
+            "Texture.glimmerite7",
+            "Texture.glimmerite8",
+            "Texture.glimmerite9",
+            "Texture.glimmerite10",
+            "Texture.glimmerite11",
+            "Texture.glimmerite12",
+            "Texture.glimmerite13",
+            "Texture.glimmerite14",
+            "Texture.glimmerite15",
+            "Texture.glimmerite16",
+            "Texture.glimmerite17",
+            "Texture.glimmerite18",
+            "Texture.glimmerite19",
+            "Texture.glimmerite20",
+            "Texture.glimmerite21",
+            "Texture.glimmerite22",
+            "Texture.glimmerite23"
+          ]
+        }
+      },
+      "materials": [
+        {
+          "*": "variable.is_enchanted?material.enchanted:material.default"
+        }
+      ],
+      "textures": [
+        "temp.life_time=query.life_time*8;return array.textures[temp.life_time];",
+        "texture.enchanted"
+      ]
+    }
+  }
+}

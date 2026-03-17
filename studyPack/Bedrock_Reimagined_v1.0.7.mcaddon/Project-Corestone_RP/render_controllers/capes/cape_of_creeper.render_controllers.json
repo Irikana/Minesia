@@ -1,0 +1,35 @@
+{
+  "format_version": "1.20.0",
+  "render_controllers": {
+    "controller.render.cape_of_creeper": {
+      "geometry": "geometry.default",
+      "arrays": {
+        "textures": {
+          "array.textures": [
+            "Texture.creeper0",
+            "Texture.creeper1",
+            "Texture.creeper2",
+            "Texture.creeper3",
+            "Texture.creeper4",
+            "Texture.creeper5",
+            "Texture.creeper6",
+            "Texture.creeper7",
+            "Texture.creeper8",
+            "Texture.creeper9",
+            "Texture.creeper10",
+            "Texture.creeper11"
+          ]
+        }
+      },
+      "materials": [
+        {
+          "*": "variable.is_enchanted?material.enchanted:material.default"
+        }
+      ],
+      "textures": [
+        "temp.life_time=query.life_time*8;return array.textures[temp.life_time];",
+        "texture.enchanted"
+      ]
+    }
+  }
+}

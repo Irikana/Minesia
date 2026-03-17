@@ -1,0 +1,37 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:feature_rules": {
+    "description": {
+      "identifier": "5fs_br:resonant_crystal_formation_feature",
+      "places_feature": "5fs_br:crystal_canyons/resonant_crystal_formation_snap_to_surface"
+    },
+    "conditions": {
+      "placement_pass": "before_surface_pass",
+      "minecraft:biome_filter": [
+        { 
+          "test": "has_biome_tag", 
+          "operator": "==",
+          "value": "crystal_canyons"
+        }
+      ]
+    },
+    "distribution": {
+      "iterations": 6,
+      "x": {
+        "distribution": "uniform",
+        "extent": [ 0, 16 ]
+      },
+      "y": {
+        "distribution": "uniform",
+        "extent": [
+          -64,
+          256
+        ]
+      },
+      "z": {
+        "distribution": "uniform",
+        "extent": [ 0, 16 ]
+      }
+    }
+  }
+}

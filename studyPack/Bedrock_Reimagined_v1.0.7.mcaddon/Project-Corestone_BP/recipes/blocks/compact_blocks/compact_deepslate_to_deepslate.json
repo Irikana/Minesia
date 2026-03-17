@@ -1,0 +1,25 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "5fs_br:compact_deepslate_to_deepslate"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "5fs_br:compact_deepslate"
+      }
+    ],
+    "result": {
+      "item": "minecraft:deepslate",
+      "count": 4
+    },
+    "unlock": [
+      {
+        "item": "5fs_br:compact_deepslate"
+      }
+    ]
+  }
+}

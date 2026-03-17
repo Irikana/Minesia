@@ -1,0 +1,21 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "match_tool",
+                    "minecraft:match_tool_filter_any": [
+                        "minecraft:is_pickaxe"
+                    ]
+                }
+            ],
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "5fs_br:cracked_petrified_slab"
+                }
+            ]
+        }
+    ]
+}

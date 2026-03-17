@@ -1,0 +1,15 @@
+{
+    "format_version": "1.21.80",
+    "minecraft:scatter_feature": {
+        "description": {
+            "identifier": "5fs_br:trees/taiga/scatter_taiga_tree_2_feature"
+        },
+        "places_feature": "5fs_br:trees/taiga/taiga_tree_2_feature",
+        "distribution": {
+            "iterations": 1,
+            "x": -9,
+            "y": 0,
+            "z": -9
+        }
+    }
+}

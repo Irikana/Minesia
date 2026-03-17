@@ -1,0 +1,17 @@
+{
+    "format_version": "1.21.60",
+    "minecraft:ore_feature": {
+        "description": {
+            "identifier": "5fs_br:warm/desert/quicksand_feature"
+        },
+        "count": 40,
+        "replace_rules": [
+            {
+                "places_block": "5fs_br:quicksand",
+                "may_replace": [
+                    "minecraft:sand"
+                ]
+            }
+        ]
+    }
+}

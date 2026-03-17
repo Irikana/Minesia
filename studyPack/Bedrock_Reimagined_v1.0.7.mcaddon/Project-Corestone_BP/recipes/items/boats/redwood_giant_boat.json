@@ -1,0 +1,26 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "5fs_br:redwood_giant_boat"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "# #",
+      "###"
+    ],
+    "key": {
+      "#": {
+        "item": "5fs_br:redwood_planks"
+      }
+    },
+    "unlock": {
+      "context": "PlayerInWater"
+    },
+    "result": {
+      "item": "5fs_br:redwood_giant_boat"
+    }
+  }
+}

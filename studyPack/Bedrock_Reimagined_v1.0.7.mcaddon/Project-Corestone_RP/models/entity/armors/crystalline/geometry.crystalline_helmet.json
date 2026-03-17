@@ -1,0 +1,51 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.crystalline_helmet",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "root_item",
+					"pivot": [0, 2, 0]
+				},
+				{
+					"name": "helmet",
+					"parent": "root_item",
+					"pivot": [0, 2, 0],
+					"binding": "'head'",
+					"cubes": [
+						{"origin": [-4, 2, -4], "size": [8, 8, 8], "inflate": 0.3, "uv": [0, 0]},
+						{"origin": [-4, 2, -4], "size": [8, 8, 8], "inflate": 0.5, "uv": [0, 17]}
+					]
+				},
+				{
+					"name": "crystal_horn",
+					"parent": "helmet",
+					"pivot": [0.5, 9.6, -2.25],
+					"rotation": [-30, 0, 27.5],
+					"cubes": [
+						{"origin": [1, 9.5, -4.61603], "size": [3, 4, 3], "inflate": 0.5, "uv": [33, 0]},
+						{"origin": [3.56988, 8.76844, 3.27163], "size": [2, 4, 3], "pivot": [2.5, 12, 3.75], "rotation": [-69.05898, 8.42106, -20.94102], "uv": [33, 8]}
+					]
+				},
+				{
+					"name": "crystal_horn2",
+					"parent": "helmet",
+					"pivot": [-0.5, 9.6, -2.25],
+					"rotation": [-30, 0, -27.5],
+					"cubes": [
+						{"origin": [-4, 9.5, -4.61603], "size": [3, 4, 3], "inflate": 0.5, "uv": [33, 0], "mirror": true},
+						{"origin": [-5.56988, 8.76844, 3.27163], "size": [2, 4, 3], "pivot": [-2.5, 12, 3.75], "rotation": [-69.05898, -8.42106, 20.94102], "uv": [33, 8], "mirror": true}
+					]
+				}
+			]
+		}
+	]
+}

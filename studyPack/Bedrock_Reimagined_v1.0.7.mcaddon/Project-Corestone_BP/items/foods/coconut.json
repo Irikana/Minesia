@@ -1,0 +1,27 @@
+{
+    "format_version": "1.26.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "5fs_br:coconut",
+            "menu_category": {
+                "category": "nature"
+            }
+        },
+        "components": {
+            "minecraft:icon": "5fs_br:coconut",
+            "minecraft:block_placer": {
+                "block": "5fs_br:coconut",
+                "replace_block_item": true
+            },
+            "minecraft:display_name": {
+                "value": "tile.5fs_br:coconut.name"
+            },
+            "minecraft:throwable": {
+                "do_swing_animation": true
+            },
+            "minecraft:projectile": {
+                "projectile_entity": "5fs_br:coconut"
+            }
+        }
+    }
+}

@@ -1,0 +1,49 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "5fs_br:cape_of_maple",
+      "materials": {
+        "default": "armor",
+        "enchanted": "armor_enchanted"
+      },
+      "textures": {
+        "maple0":  "textures/entity/gears/capes/maple/maple0",
+        "maple1":  "textures/entity/gears/capes/maple/maple1",
+        "maple2":  "textures/entity/gears/capes/maple/maple2",
+        "maple3":  "textures/entity/gears/capes/maple/maple3",
+        "maple4":  "textures/entity/gears/capes/maple/maple4",
+        "maple5":  "textures/entity/gears/capes/maple/maple5",
+        "maple6":  "textures/entity/gears/capes/maple/maple6",
+        "maple7":  "textures/entity/gears/capes/maple/maple7",
+        "maple8":  "textures/entity/gears/capes/maple/maple8",
+        "maple9":  "textures/entity/gears/capes/maple/maple9",
+        "maple10": "textures/entity/gears/capes/maple/maple10",
+        "maple11": "textures/entity/gears/capes/maple/maple11",
+        "maple12": "textures/entity/gears/capes/maple/maple12",
+        "maple13": "textures/entity/gears/capes/maple/maple13",
+        "maple14": "textures/entity/gears/capes/maple/maple14",
+        "maple15": "textures/entity/gears/capes/maple/maple15",
+        "maple16": "textures/entity/gears/capes/maple/maple16",
+        "maple17": "textures/entity/gears/capes/maple/maple17",
+        "maple18": "textures/entity/gears/capes/maple/maple18",
+        "enchanted": "textures/misc/enchanted_actor_glint"
+      },
+      "geometry": {
+        "default": "geometry.custom_cape"
+      },
+      "animations": {
+        "cape": "animation.custom_cape"
+      },
+      "scripts": {
+        "parent_setup": "variable.chest_layer_visible = 0.0;",
+        "animate": [
+          "cape"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.cape_of_maple"
+      ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+	"format_version": "1.26.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "5fs_br:gold_chain",
+			"menu_category": {
+				"category": "items"
+			}
+		},
+		"components": {
+			"minecraft:icon": "5fs_br:gold_chain",
+			"minecraft:block_placer": {
+				"block": "5fs_br:gold_chain",
+				"replace_block_item": true
+			}
+		}
+	}
+}

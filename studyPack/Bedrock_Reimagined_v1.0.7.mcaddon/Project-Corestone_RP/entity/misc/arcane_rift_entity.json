@@ -1,0 +1,31 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "5fs_br:arcane_rift_entity",
+			"materials": {
+				"default": "entity_emissive_alpha"
+			},
+			"textures": {
+				"default": "textures/entity/misc/arcane_rift"
+			},
+			"animations": {
+				"idle": "animation.arcane_rift.idle"
+			},
+			"scripts": {
+                 "animate": [
+                     "idle"
+                ]
+            },
+			"geometry": {
+				"default": "geometry.arcane_rift"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			],
+			"sound_effects": {
+                "riftVortex": "mob.entity.riftVortex"
+            }
+		}
+	}
+}

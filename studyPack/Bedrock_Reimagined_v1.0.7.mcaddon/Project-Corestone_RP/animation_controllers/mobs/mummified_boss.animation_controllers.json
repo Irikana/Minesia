@@ -1,0 +1,361 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.mummified_pharaoh.root": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"phases_controller"
+					],
+					"transitions": [
+						{
+							"death": "q.is_tamed"
+						}
+					]
+				},
+				"death": {
+					"animations": [
+						"death",
+						{
+                            "death_rotation": "q.is_stackable"
+                        }
+					]
+				}
+			}
+		},
+		"controller.animation.mummified_pharaoh.phases": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"hammer_phase_controller"
+					],
+					"transitions": [
+						{
+							"drop_hammer": "q.timer_flag_3 && q.mark_variant == 1"
+						},
+						{
+							"melee_phase": "q.property('5fs_br:phase') == 'melee'"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"drop_hammer": {
+					"animations": [
+						"drop_hammer"
+					],
+					"transitions": [
+						{
+							"melee_phase": "q.property('5fs_br:phase') == 'melee'"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"melee_phase": {
+					"animations": [
+						"melee_phase_controller"
+					]
+				}
+			}
+		},
+		"controller.animation.mummified_pharaoh.hammer_phase": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"hammer_idle"
+					],
+					"transitions": [
+                        {
+                            "walking": "q.modified_move_speed > 0.01 && !q.is_in_water"
+                        },
+                        {
+                            "swimming": "q.modified_move_speed > 0.01 && q.is_in_water"
+                        },
+						{
+							"hammer_slam": "q.is_delayed_attacking && q.is_powered"
+						},
+						{
+							"hammer_swing": "q.is_delayed_attacking && q.is_chested"
+						},
+						{
+							"throw_hammer": "q.timer_flag_1"
+						},
+						{
+							"summon_hammer": "q.is_pregnant"
+						}
+					],
+					"blend_transition": 0.2,
+					"blend_via_shortest_path": true
+				},
+				"walking": {
+					"animations": [
+						"hammer_walking"
+					],
+					"transitions": [
+                        {
+                            "default": "q.modified_move_speed <= 0.01"
+                        },
+                        {
+                            "swimming": "q.modified_move_speed > 0.01 && q.is_in_water"
+                        },
+						{
+							"hammer_slam": "q.is_delayed_attacking && q.is_powered"
+						},
+						{
+							"hammer_swing": "q.is_delayed_attacking && q.is_chested"
+						},
+						{
+							"throw_hammer": "q.timer_flag_1"
+						},
+						{
+							"summon_hammer": "q.is_pregnant"
+						}
+					],
+					"blend_transition": 0.2,
+					"blend_via_shortest_path": true
+				},
+                "swimming": {
+                    "animations": [
+                        "hammer_swimming"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "q.modified_move_speed <= 0.01"
+                        },
+                        {
+                            "walking": "q.modified_move_speed > 0.01 && !q.is_in_water"
+                        },
+						{
+							"hammer_slam": "q.is_delayed_attacking && q.is_powered"
+						},
+						{
+							"hammer_swing": "q.is_delayed_attacking && q.is_chested"
+						},
+						{
+							"throw_hammer": "q.timer_flag_1"
+						},
+						{
+							"summon_hammer": "q.is_pregnant"
+						}
+                    ],
+                    "blend_transition": 0.2
+                },
+				"hammer_slam": {
+					"animations": [
+						"hammer_slam"
+					],
+					"transitions": [
+						{
+							"default": "!q.is_delayed_attacking && q.modified_move_speed <= 0.01"
+						},
+						{
+							"walking": "!q.is_delayed_attacking && q.modified_move_speed > 0.01 && !q.is_in_water"
+						},
+                        {
+                            "swimming": "!q.is_delayed_attacking && q.modified_move_speed > 0.01 && q.is_in_water"
+                        },
+						{
+							"throw_hammer": "q.timer_flag_1"
+						},
+						{
+							"summon_hammer": "q.is_pregnant"
+						}
+					],
+					"blend_transition": 0.2,
+					"blend_via_shortest_path": true
+				},
+				"hammer_swing": {
+					"animations": [
+						"hammer_swing"
+					],
+					"transitions": [
+						{
+							"default": "!q.is_delayed_attacking && q.modified_move_speed <= 0.01"
+						},
+						{
+							"walking": "!q.is_delayed_attacking && q.modified_move_speed > 0.01 && !q.is_in_water"
+						},
+                        {
+                            "swimming": "!q.is_delayed_attacking && q.modified_move_speed > 0.01 && q.is_in_water"
+                        },
+						{
+							"summon_hammer": "q.is_pregnant"
+						}
+					],
+					"blend_transition": 0.2,
+					"blend_via_shortest_path": true
+				},
+				"throw_hammer": {
+					"animations": [
+						"throw_hammer"
+					],
+					"transitions": [
+						{
+							"default": "q.all_animations_finished && q.modified_move_speed <= 0.01"
+						},
+						{
+							"walking": "q.all_animations_finished && q.modified_move_speed > 0.01 && !q.is_in_water"
+						},
+                        {
+                            "swimming": "q.all_animations_finished && q.modified_move_speed > 0.01 && q.is_in_water"
+                        },
+						{
+							"hammer_slam": "q.is_delayed_attacking && q.is_powered"
+						},
+						{
+							"hammer_swing": "q.is_delayed_attacking && q.is_chested"
+						},
+						{
+							"summon_hammer": "q.is_pregnant"
+						}
+					],
+					"blend_transition": 0.2,
+					"blend_via_shortest_path": true
+				},
+				"summon_hammer": {
+					"animations": [
+						"summon_hammer"
+					],
+					"transitions": [
+						{
+							"default": "!q.is_pregnant && q.modified_move_speed <= 0.01"
+						},
+						{
+							"walking": "!q.is_pregnant && q.modified_move_speed > 0.01 && !q.is_in_water"
+						},
+                        {
+                            "swimming": "!q.is_pregnant && q.modified_move_speed > 0.01 && q.is_in_water"
+                        },
+						{
+							"hammer_slam": "q.is_delayed_attacking && q.is_powered"
+						},
+						{
+							"hammer_swing": "q.is_delayed_attacking && q.is_chested"
+						}
+					],
+					"blend_transition": 0.2,
+					"blend_via_shortest_path": true
+				}
+			}
+		},
+		"controller.animation.mummified_pharaoh.melee_phase": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"melee_idle"
+					],
+					"transitions": [
+                        {
+                            "walking": "q.modified_move_speed > 0.01 && !q.is_in_water"
+                        },
+                        {
+                            "swimming": "q.modified_move_speed > 0.01 && q.is_in_water"
+                        },
+						{
+							"melee_attack": "q.is_delayed_attacking && q.is_ignited"
+						},
+						{
+							"melee_summon": "q.is_sheared"
+						}
+					],
+					"blend_transition": 0.2,
+					"blend_via_shortest_path": true
+				},
+				"walking": {
+					"animations": [
+						"melee_walking"
+					],
+					"transitions": [
+                        {
+                            "default": "q.modified_move_speed <= 0.01"
+                        },
+                        {
+                            "swimming": "q.modified_move_speed > 0.01 && q.is_in_water"
+                        },
+						{
+							"melee_attack": "q.is_delayed_attacking && q.is_ignited"
+						},
+						{
+							"melee_summon": "q.is_sheared"
+						}
+					],
+					"blend_transition": 0.2,
+					"blend_via_shortest_path": true
+				},
+                "swimming": {
+                    "animations": [
+                        "hammer_swimming"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "q.modified_move_speed <= 0.01"
+                        },
+                        {
+                            "walking": "q.modified_move_speed > 0.01 && !q.is_in_water"
+                        },
+						{
+							"melee_attack": "q.is_delayed_attacking && q.is_ignited"
+						},
+						{
+							"melee_summon": "q.is_sheared"
+						}
+                    ],
+                    "blend_transition": 0.2
+                },
+				"melee_attack": {
+                    "on_entry": [
+                        "v.random_idle = math.random_integer(0,1);"
+                    ],
+					"animations": [
+						{
+							"punch_left": "v.random_idle == 0"
+						},
+						{
+							"punch_right": "v.random_idle == 1"
+						}
+					],
+					"transitions": [
+						{
+							"default": "!q.is_delayed_attacking && q.modified_move_speed <= 0.01"
+						},
+						{
+							"walking": "!q.is_delayed_attacking && q.modified_move_speed > 0.01 && !q.is_in_water"
+						},
+                        {
+                            "swimming": "!q.is_delayed_attacking && q.modified_move_speed > 0.01 && q.is_in_water"
+                        },
+						{
+							"melee_summon": "q.is_sheared"
+						}
+					],
+					"blend_transition": 0.2,
+					"blend_via_shortest_path": true
+				},
+				"melee_summon": {
+					"animations": [
+						"melee_summon"
+					],
+					"transitions": [
+						{
+							"default": "!q.is_sheared && q.modified_move_speed <= 0.01"
+						},
+						{
+							"walking": "!q.is_sheared && q.modified_move_speed > 0.01 && !q.is_in_water"
+						},
+                        {
+                            "swimming": "!q.is_sheared && q.modified_move_speed > 0.01 && q.is_in_water"
+                        },
+						{
+							"melee_attack": "q.is_delayed_attacking && q.is_ignited"
+						}
+					],
+					"blend_transition": 0.2,
+					"blend_via_shortest_path": true
+				}
+			}
+		}
+	}
+}

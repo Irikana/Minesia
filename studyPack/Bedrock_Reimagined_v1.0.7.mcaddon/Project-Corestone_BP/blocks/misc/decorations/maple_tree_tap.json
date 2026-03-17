@@ -1,0 +1,187 @@
+{
+    "format_version": "1.26.0",
+	"minecraft:block": {
+        "description": {
+            "identifier": "5fs_br:maple_tree_tap",
+            "menu_category": {
+                 "category": "Items"
+            },
+            "states": {
+                "5fs_br:sap": [
+                    0,
+                    1,
+                    2
+                ],
+                "5fs_br:jar": [
+                    false,
+                    true
+                ]
+            },
+            "traits": {
+                "minecraft:placement_position": {
+                    "enabled_states": [
+                        "minecraft:block_face"
+                    ]
+                }
+            }
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('minecraft:block_face') == 'north'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            0,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:block_face') == 'south'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            180,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:block_face') == 'east'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            -90,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:block_face') == 'west'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            90,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:jar') == true && q.block_state('5fs_br:sap') != 2",
+                "components": {
+                    "minecraft:tick": {
+                        "interval_range": [
+                            10,
+                            40
+                        ]
+                    },
+                    "5fs_br:maple_tree_tap": {},
+                    "5fs_br:maple_tree_tap_particle": {}
+                }
+            }
+        ],
+        "components": {
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 2
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 2
+            },
+            "minecraft:placement_filter": {
+                "conditions": [
+                    {
+                        "allowed_faces": [
+                            "side"
+                        ],
+                        "block_filter": [
+                            {
+                                "name": "5fs_br:stripped_dripping_maple_log"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "minecraft:geometry": {
+                "identifier": "geometry.maple_tree_tap",
+                "bone_visibility": {
+                    "jar": "q.block_state('5fs_br:jar') == true",
+                    "sap_250ml": "q.block_state('5fs_br:sap') == 1",
+                    "sap_500ml": "q.block_state('5fs_br:sap') == 2"
+                }
+            },
+            "minecraft:selection_box": {
+                "origin": [
+                    -5,
+                    0,
+                    -1
+                ],
+                "size": [
+                    10,
+                    16,
+                    9
+                ]
+            },
+            "minecraft:collision_box": {
+                "origin": [
+                    -5,
+                    0,
+                    -1
+                ],
+                "size": [
+                    10,
+                    16,
+                    9
+                ]
+            },
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "maple_tree_tap_0",
+                    "render_method": "alpha_test_to_opaque"
+                },
+                "maple_tree_tap_1": {
+                    "texture": "maple_tree_tap_1",
+                    "render_method": "alpha_test_to_opaque"
+                },
+                "maple_tree_tap_2": {
+                    "texture": "maple_tree_tap_2",
+                    "render_method": "alpha_test_to_opaque"
+                },
+                "jar": {
+                    "texture": "jar",
+                    "render_method": "alpha_test_to_opaque"
+                },
+                "sap": {
+                    "texture": "jar_sap",
+                    "render_method": "alpha_test_to_opaque"
+                }
+            },
+            "minecraft:liquid_detection": {
+                "detection_rules": [
+                    {
+                        "can_contain_liquid": true,
+                        "liquid_type": "water",
+                        "on_liquid_touches": "no_reaction"
+                    }
+                ]
+            },
+            "minecraft:movable": {
+                "movement_type": "popped"
+            },
+			"minecraft:precipitation_interactions": {
+				"precipitation_behavior": "obstruct_rain"
+			},
+			"minecraft:connection_rule": {
+				"accepts_connections_from": "none"
+			},
+            "5fs_br:maple_tree_tap": {}
+        }
+    }
+}

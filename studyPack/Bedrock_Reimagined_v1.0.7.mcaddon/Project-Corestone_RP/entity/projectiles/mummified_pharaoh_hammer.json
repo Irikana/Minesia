@@ -1,0 +1,28 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "5fs_br:mummified_pharaoh_hammer",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/mummified_boss"
+			},
+			"geometry": {
+				"default": "geometry.mummified_pharaoh_hammer"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			],
+			"animations": {
+				"rotate": "animation.mummified_pharaoh_hammer.rotate"
+			},
+			"scripts": {
+				"animate": [
+					"rotate"
+				]
+			}
+		}
+	}
+}

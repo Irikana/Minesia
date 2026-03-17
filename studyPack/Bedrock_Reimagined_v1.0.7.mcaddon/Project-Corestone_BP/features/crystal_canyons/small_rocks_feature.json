@@ -1,0 +1,72 @@
+
+{	"format_version": "1.21.40",
+	"minecraft:single_block_feature": {
+		"description": {
+			"identifier": "5fs_br:crystal_canyons/small_rocks_feature"
+		},
+		"places_block": [
+			{
+                "block": {
+                    "name": "5fs_br:small_rocks",
+                    "states": {
+                        "5fs_br:count": 0
+                    }
+                },
+                "weight": 1
+            },
+			{
+                "block": {
+                    "name": "5fs_br:small_rocks",
+                    "states": {
+                        "5fs_br:count": 1
+                    }
+                },
+                "weight": 1
+            },
+			{
+                "block": {
+                    "name": "5fs_br:small_rocks",
+                    "states": {
+                        "5fs_br:count": 2
+                    }
+                },
+                "weight": 1
+            },
+			{
+                "block": {
+                    "name": "5fs_br:small_rocks",
+                    "states": {
+                        "5fs_br:count": 3
+                    }
+                },
+                "weight": 1
+            },
+			{
+                "block": {
+                    "name": "5fs_br:small_rocks",
+                    "states": {
+                        "5fs_br:count": 4
+                    }
+                },
+                "weight": 1
+            }
+		],
+		"enforce_survivability_rules": true,
+		"enforce_placement_rules": true,
+		"may_replace": [
+			"minecraft:air"
+		],
+		"randomize_rotation": true,
+	    "may_attach_to": {
+		    "min_sides_must_attach": 1,
+		    "bottom": [
+		        "5fs_br:glintrock",
+		        "5fs_br:white_glintrock",
+		        "5fs_br:gray_glintrock",
+		        "5fs_br:light_gray_glintrock",
+		        "minecraft:stone",
+		        "minecraft:dirt"
+		    ]
+	    }
+	}
+}

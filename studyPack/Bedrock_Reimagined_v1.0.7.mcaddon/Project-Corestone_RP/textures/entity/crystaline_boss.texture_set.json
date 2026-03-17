@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "crystaline_boss",
+		"metalness_emissive_roughness": "crystaline_boss_mer"
+	}
+}

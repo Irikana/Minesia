@@ -1,0 +1,45 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:structure_template_feature": {
+    "description": {
+      "identifier": "5fs_br:overworld/rock_10_feature"
+    },
+    "structure_name": "rocks:rock10",
+    "adjustment_radius": 8,
+    "facing_direction": "random",
+    "constraints": {
+      "grounded": {},
+      "unburied": {},
+      "block_intersection": {
+        "block_allowlist": [
+          "minecraft:air",
+          "minecraft:bush",
+          "minecraft:grass",
+          "minecraft:tall_grass",
+          "minecraft:short_grass",
+          "minecraft:fern",
+          "minecraft:large_fern",
+          "minecraft:dandelion",
+          "minecraft:poppy",
+          "minecraft:blue_orchid",
+          "minecraft:allium",
+          "minecraft:azure_bluet",
+          "minecraft:orange_tulip",
+          "minecraft:white_tulip",
+          "minecraft:pink_tulip",
+          "minecraft:oxeye_daisy",
+          "minecraft:cornflower",
+          "minecraft:lily_of_the_valley",
+          "minecraft:sunflower",
+          "minecraft:peony",
+          "minecraft:lilac",
+          "5fs_br:small_rocks",
+          "5fs_br:autumn_bush",
+          "5fs_br:autumn_sprouts",
+          "5fs_br:tall_autumn_grass",
+          "5fs_br:short_autumn_grass"
+        ]
+      }
+    }
+  }
+}

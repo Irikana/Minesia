@@ -1,0 +1,41 @@
+{
+    "format_version": "1.20.30",
+    "minecraft:feature_rules": {
+        "description": {
+            "identifier": "5fs_br:giant_pumpkin_feature",
+            "places_feature": "5fs_br:redwood/scatter_giant_pumpkin_feature"
+        },
+        "conditions": {
+            "placement_pass": "surface_pass",
+            "minecraft:biome_filter": [
+               {
+                    "test": "has_biome_tag",
+                    "operator": "==",
+                    "value": "redwood_forest"
+               }
+            ]
+        },
+        "distribution": {
+            "iterations": 1,
+            "scatter_chance": {
+				"numerator": 2,
+				"denominator": 15
+			},
+            "x": {
+                "distribution": "uniform",
+                "extent": [
+                    1,
+                    15
+                ]
+            },
+            "y": "query.heightmap(variable.worldx, variable.worldz)",
+            "z": {
+                "distribution": "uniform",
+                "extent": [
+                    1,
+                    15
+                ]
+            }
+        }
+    }
+}

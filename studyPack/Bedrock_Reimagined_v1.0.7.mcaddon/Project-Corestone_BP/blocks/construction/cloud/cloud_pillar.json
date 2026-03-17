@@ -1,0 +1,2876 @@
+{
+    "format_version": "1.26.0",
+	"minecraft:block": {
+        "description": {
+            "identifier": "5fs_br:cloud_pillar",
+            "menu_category": {
+                "category": "Construction"
+            },
+            "states": {
+                "5fs_br:connect_north": [
+                    false,
+                    true
+                ],
+                "5fs_br:connect_south": [
+                    false,
+                    true
+                ],
+                "5fs_br:connect_east": [
+                    false,
+                    true
+                ],
+                "5fs_br:connect_west": [
+                    false,
+                    true
+                ],
+                "5fs_br:connect_up": [
+                    false,
+                    true
+                ],
+                "5fs_br:connect_down": [
+                    false,
+                    true
+                ]
+            }
+        },
+        "permutations": [
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_none",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_none",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_down_up",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_down_up",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_down_up",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_down_up",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_down_up",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_down_up",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_bottom_right_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_bottom_left_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_bottom_left_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_bottom_right_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_top_right_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_top_left_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_top_left_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_top_right_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_top_middle_down",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_top_middle_down",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_down_middle_top",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_down_middle_top",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_left_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_right_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_right_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_left_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "north": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "south": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "west": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "east": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_none",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_none",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "north": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "south": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "west": {
+                            "texture": "cloud_pillar_bottom_right_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "east": {
+                            "texture": "cloud_pillar_bottom_left_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_down_up",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_down_up",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "north": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "south": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "west": {
+                            "texture": "cloud_pillar_bottom_left_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "east": {
+                            "texture": "cloud_pillar_bottom_right_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_down_up",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_down_up",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "north": {
+                            "texture": "cloud_pillar_bottom_left_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "south": {
+                            "texture": "cloud_pillar_bottom_right_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "west": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "east": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "north": {
+                            "texture": "cloud_pillar_bottom_right_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "south": {
+                            "texture": "cloud_pillar_bottom_left_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "west": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "east": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "north": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "south": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "west": {
+                            "texture": "cloud_pillar_down_middle_top",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "east": {
+                            "texture": "cloud_pillar_down_middle_top",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_down_up",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_down_up",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "north": {
+                            "texture": "cloud_pillar_down_middle_top",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "south": {
+                            "texture": "cloud_pillar_down_middle_top",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "west": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "east": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "north": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "south": {
+                            "texture": "cloud_pillar_bottom_right_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "west": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "east": {
+                            "texture": "cloud_pillar_bottom_left_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_bottom_right_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_bottom_left_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "north": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "south": {
+                            "texture": "cloud_pillar_bottom_left_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "west": {
+                            "texture": "cloud_pillar_bottom_right_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "east": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_bottom_left_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_bottom_right_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "north": {
+                            "texture": "cloud_pillar_bottom_left_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "south": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "west": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "east": {
+                            "texture": "cloud_pillar_bottom_right_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_top_right_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_top_left_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "north": {
+                            "texture": "cloud_pillar_bottom_right_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "south": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "west": {
+                            "texture": "cloud_pillar_bottom_left_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "east": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_top_left_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_top_right_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "north": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "south": {
+                            "texture": "cloud_pillar_down_middle_top",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "west": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "east": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_down_middle_top",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_down_middle_top",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "north": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "south": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "west": {
+                            "texture": "cloud_pillar_down_middle_top",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "east": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_left_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_right_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "north": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "south": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "west": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "east": {
+                            "texture": "cloud_pillar_down_middle_top",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_right_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_left_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "north": {
+                            "texture": "cloud_pillar_down_middle_top",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "south": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "west": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "east": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_top_middle_down",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_top_middle_down",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "north": {
+                            "texture": "cloud_pillar_down_middle_top",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "south": {
+                            "texture": "cloud_pillar_down_middle_top",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "west": {
+                            "texture": "cloud_pillar_down_middle_top",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "east": {
+                            "texture": "cloud_pillar_down_middle_top",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "north": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "south": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "west": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "east": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_none",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_none",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "north": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "south": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "west": {
+                            "texture": "cloud_pillar_top_right_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "east": {
+                            "texture": "cloud_pillar_top_left_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_down_up",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_down_up",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "north": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "south": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "west": {
+                            "texture": "cloud_pillar_top_left_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "east": {
+                            "texture": "cloud_pillar_top_right_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_down_up",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_down_up",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "north": {
+                            "texture": "cloud_pillar_top_left_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "south": {
+                            "texture": "cloud_pillar_top_right_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "west": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "east": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "north": {
+                            "texture": "cloud_pillar_top_right_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "south": {
+                            "texture": "cloud_pillar_top_left_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "west": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "east": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "north": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "south": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "west": {
+                            "texture": "cloud_pillar_top_middle_down",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "east": {
+                            "texture": "cloud_pillar_top_middle_down",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_down_up",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_down_up",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "north": {
+                            "texture": "cloud_pillar_top_middle_down",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "south": {
+                            "texture": "cloud_pillar_top_middle_down",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "west": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "east": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "north": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "south": {
+                            "texture": "cloud_pillar_top_right_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "west": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "east": {
+                            "texture": "cloud_pillar_top_left_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_bottom_right_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_bottom_left_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "north": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "south": {
+                            "texture": "cloud_pillar_top_left_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "west": {
+                            "texture": "cloud_pillar_top_right_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "east": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_bottom_left_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_bottom_right_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "north": {
+                            "texture": "cloud_pillar_top_left_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "south": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "west": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "east": {
+                            "texture": "cloud_pillar_top_right_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_top_right_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_top_left_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "north": {
+                            "texture": "cloud_pillar_top_right_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "south": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "west": {
+                            "texture": "cloud_pillar_top_left_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "east": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_top_left_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_top_right_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "north": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "south": {
+                            "texture": "cloud_pillar_top_middle_down",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "west": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "east": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_down_middle_top",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_down_middle_top",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "north": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "south": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "west": {
+                            "texture": "cloud_pillar_top_middle_down",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "east": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_left_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_right_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "north": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "south": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "west": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "east": {
+                            "texture": "cloud_pillar_top_middle_down",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_right_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_left_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "north": {
+                            "texture": "cloud_pillar_top_middle_down",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "south": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "west": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "east": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_top_middle_down",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_top_middle_down",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "north": {
+                            "texture": "cloud_pillar_top_middle_down",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "south": {
+                            "texture": "cloud_pillar_top_middle_down",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "west": {
+                            "texture": "cloud_pillar_top_middle_down",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "east": {
+                            "texture": "cloud_pillar_top_middle_down",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "north": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "south": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "west": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "east": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_none",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_none",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "north": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "south": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "west": {
+                            "texture": "cloud_pillar_right_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "east": {
+                            "texture": "cloud_pillar_left_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_down_up",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_down_up",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "north": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "south": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "west": {
+                            "texture": "cloud_pillar_left_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "east": {
+                            "texture": "cloud_pillar_right_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_down_up",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_down_up",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "north": {
+                            "texture": "cloud_pillar_left_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "south": {
+                            "texture": "cloud_pillar_right_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "west": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "east": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "north": {
+                            "texture": "cloud_pillar_right_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "south": {
+                            "texture": "cloud_pillar_left_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "west": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "east": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "north": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "south": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "west": {
+                            "texture": "cloud_pillar_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "east": {
+                            "texture": "cloud_pillar_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_down_up",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_down_up",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "north": {
+                            "texture": "cloud_pillar_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "south": {
+                            "texture": "cloud_pillar_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "west": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "east": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "north": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "south": {
+                            "texture": "cloud_pillar_right_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "west": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "east": {
+                            "texture": "cloud_pillar_left_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_bottom_right_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_bottom_left_corner"
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "north": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "south": {
+                            "texture": "cloud_pillar_left_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "west": {
+                            "texture": "cloud_pillar_right_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "east": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_bottom_left_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_bottom_right_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "north": {
+                            "texture": "cloud_pillar_left_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "south": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "west": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "east": {
+                            "texture": "cloud_pillar_right_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_top_right_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_top_left_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "north": {
+                            "texture": "cloud_pillar_right_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "south": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "west": {
+                            "texture": "cloud_pillar_left_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "east": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_top_left_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_top_right_corner",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "north": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "south": {
+                            "texture": "cloud_pillar_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "west": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "east": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_down_middle_top",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_down_middle_top",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "north": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "south": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "west": {
+                            "texture": "cloud_pillar_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "east": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_left_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_right_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "north": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "south": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "west": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "east": {
+                            "texture": "cloud_pillar_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_right_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_left_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "north": {
+                            "texture": "cloud_pillar_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "south": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "west": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "east": {
+                            "texture": "cloud_pillar_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_top_middle_down",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_top_middle_down",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "cloud_pillar_left_right",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "north": {
+                            "texture": "cloud_pillar_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "south": {
+                            "texture": "cloud_pillar_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "west": {
+                            "texture": "cloud_pillar_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "east": {
+                            "texture": "cloud_pillar_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "up": {
+                            "texture": "cloud_pillar_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "down": {
+                            "texture": "cloud_pillar_middle",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "render_method": "blend"
+                    }
+                }
+            }
+        ],
+        "components": {
+            "minecraft:geometry": {
+                "identifier": "geometry.glass",
+                "culling": "5fs_br:culling.glass"
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 0
+            },
+            "minecraft:light_dampening": 0,
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "cloud_pillar_middle",
+                    "render_method": "blend",
+                    "ambient_occlusion": false,
+                    "face_dimming": false
+                }
+            },
+            "minecraft:map_color": "#F2F4F4",
+            "minecraft:destruction_particles": {
+                "texture": "cloud_pillar_none"
+            },
+            "minecraft:movable": {
+                "movement_type": "popped"
+            },
+            "tag:5fs_corestone:cloud_effects": {}
+        }
+    }
+}

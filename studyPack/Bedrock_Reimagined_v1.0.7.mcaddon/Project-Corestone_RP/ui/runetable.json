@@ -1,0 +1,142 @@
+{
+  "namespace": "chest",
+
+  "rune_table_background": {
+    "type": "image",
+    "texture": "textures/gui/rune_table_ui",
+    "size": [256, 268],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [20, 25],
+    "layer": 0
+  },
+
+  "rune_table_label": {
+    "type": "label",
+    "offset": [80, 35],
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "text": "$container_title",
+    "size": ["70%", "default"],
+    "color": "$title_text_color",
+    "layer": 2
+  },
+
+  "chest_grid_item@common.container_item": {
+    "$item_collection_name": "container_items"
+  },
+
+  "slot_2": {
+    "type": "stack_panel",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "orientation": "horizontal",
+    "collection_name": "container_items",
+    "controls": [
+      { "test@chest.chest_grid_item": { "collection_index": 7 } }
+    ]
+  },
+  "slot_4": {
+    "type": "stack_panel",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "orientation": "horizontal",
+    "collection_name": "container_items",
+    "controls": [
+      { "test@chest.chest_grid_item": { "collection_index": 9 } }
+    ]
+  },
+  "slot_5": {
+    "type": "stack_panel",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "orientation": "horizontal",
+    "collection_name": "container_items",
+    "controls": [
+      { "test@chest.chest_grid_item": { "collection_index": 10 } }
+    ]
+  },
+  "slot_6": {
+    "type": "stack_panel",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "orientation": "horizontal",
+    "collection_name": "container_items",
+    "controls": [
+      { "test@chest.chest_grid_item": { "collection_index": 11 } }
+    ]
+  },
+  "slot_8": {
+    "type": "stack_panel",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "orientation": "horizontal",
+    "collection_name": "container_items",
+    "controls": [
+      { "test@chest.chest_grid_item": { "collection_index": 13 } }
+    ]
+  },
+
+  "rune_table_panel": {
+    "type": "panel",
+    "$background_image_control_name": "bg",
+    "$background_images": "furnace.empty",
+    "$chest_image": "textures/gui/inventory/oregrinder_image",
+    "$size": [
+      "150%",
+      "150%"
+    ],
+    "$offset": [
+      "5%",
+      "10%"
+    ],
+    "$title_text_color": [
+      1,
+      1,
+      1
+    ],
+    "controls": [
+      {
+        "image_background": {
+          "type": "image",
+          "size": "$size",
+          "offset": "$offset",
+          "texture": "$chest_image"
+        }
+      },
+      // { "rune_table_background@chest.rune_table_background": {} },
+      { "rune_table_label@chest.rune_table_label": {} },
+
+      { "close@common.close_button": { "layer": 3, "offset": [-253, 42] } },
+
+      { "slot_2@chest.slot_2": { "offset": [-20, 55] } },
+      { "slot_4@chest.slot_4": { "offset": [-40, 75] } },
+      { "slot_5@chest.slot_5": { "offset": [-20, 75] } },
+      { "slot_6@chest.slot_6": { "offset": [0, 75] } },
+      { "slot_8@chest.slot_8": { "offset": [-20, 95] } },
+
+      { "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": { "offset": [-20, -122] } },
+      { "hotbar_grid@common.hotbar_grid_template": { "offset": [-20, -127] } },
+      { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": { "offset": [-20, -120] } }
+    ]
+  },
+
+  "final_panel": {
+    "type": "panel",
+    "controls": [
+      { "rtp@chest.rune_table_panel": {} }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#crafting_label_text",
+        "binding_name_override": "#runetable",
+        "binding_type": "global"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#runetable = 'runetable')",
+        "target_property_name": "#visible"
+      }
+    ]
+  }
+}

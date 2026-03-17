@@ -1,0 +1,15 @@
+{
+    "format_version": "1.21.80",
+    "minecraft:scatter_feature": {
+        "description": {
+            "identifier": "5fs_br:trees/swamp/scatter_swamp_tree_6_feature"
+        },
+        "places_feature": "5fs_br:trees/swamp/swamp_tree_6_feature",
+        "distribution": {
+            "iterations": 1,
+            "x": -14,
+            "y": 0,
+            "z": -14
+        }
+    }
+}

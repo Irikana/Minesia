@@ -1,0 +1,71 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:spawn_rules": {
+    "description": {
+      "identifier": "5fs_br:ocean_mine_3",
+      "population_control": "water_animal"
+    },
+    "conditions": [
+      {
+        "minecraft:spawns_on_surface": {},
+        "minecraft:spawns_underwater": {},
+        "minecraft:distance_filter": {
+          "min": 8,
+          "max": 32
+        },
+        "minecraft:weight": {
+          "default": 1000
+        },
+        "minecraft:density_limit": {
+          "surface": 1100
+        },
+        "minecraft:height_filter": {
+          "min": 0,
+          "max": 45
+        },
+        "minecraft:herd": {
+          "min_size": 1,
+          "max_size": 1,
+          "event": "5fs_br:spawn_large"
+        },
+        "minecraft:biome_filter": [
+          {
+            "test": "has_biome_tag",
+            "operator": "==",
+            "value": "deadly_sea"
+          }
+        ]
+      },
+      {
+        "minecraft:spawns_on_surface": {},
+        "minecraft:spawns_underwater": {},
+        "minecraft:distance_filter": {
+          "min": 8,
+          "max": 32
+        },
+        "minecraft:weight": {
+          "default": 1000
+        },
+        "minecraft:density_limit": {
+          "surface": 1100
+        },
+        "minecraft:height_filter": {
+          "min": 0,
+          "max": 50
+        },
+        "minecraft:herd": {
+          "min_size": 1,
+          "max_size": 1,
+          "event": "5fs_br:spawn_small"
+        },
+        "minecraft:biome_filter": [
+          {
+            "test": "has_biome_tag",
+            "operator": "==",
+            "value": "deadly_sea"
+          }
+        ]
+      }
+    ]
+  }
+}

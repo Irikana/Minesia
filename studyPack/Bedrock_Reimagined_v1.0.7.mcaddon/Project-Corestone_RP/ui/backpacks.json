@@ -1,0 +1,429 @@
+{
+    "namespace": "backpacks",
+    "backpack_panel_slots_9": {
+        "type": "panel",
+        "$background_image_control_name": "bg",
+        "$background_images": "accessory_common.accessories_item_bg",
+        "$chest_image": "textures/gui/inventory/backpacks/backpack_9s",
+        "$size": [
+            "150%",
+            "150%"
+        ],
+        "$offset": [
+            "5%",
+            0
+        ],
+        "$title_text_color": [
+            1,
+            1,
+            1
+        ],
+        "controls": [
+            {
+                "container_gamepad_helpers@common.container_gamepad_helpers": {}
+            },
+            {
+                "selected_item_details_factory@common.selected_item_details_factory": {
+                    "control_name": "@chest.selected_item_details"
+                }
+            },
+            {
+                "item_lock_notification_factory@common.item_lock_notification_factory": {
+                    "control_name": "@common.item_lock_notification"
+                }
+            },
+            {
+                "root_panel@common.root_panel": {
+                    "size": [
+                        176,
+                        183
+                    ],
+                    "layer": 1,
+                    "controls": [
+                        {
+                            "image_background": {
+                                "type": "image",
+                                "texture": "$chest_image",
+                                "size": "$size",
+                                "offset": "$offset"
+                            }
+                        },
+                        {
+                            "chest_panel": {
+                                "type": "panel",
+                                "layer": 5,
+                                "controls": [
+                                    {
+                                        "backpack_top_half_slots_9@backpacks.backpack_top_half_slots_9": {
+                                            "offset": [
+                                                4,
+                                                31
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {
+                                            "offset": [
+                                                0,
+                                                -25
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "hotbar_grid@common.hotbar_grid_template": {
+                                            "offset": [
+                                                0,
+                                                -30
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {}
+                                    },
+                                    {
+                                        "flying_item_renderer@common.flying_item_renderer": {
+                                            "layer": 15
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "inventory_selected_icon_button@common.inventory_selected_icon_button": {}
+                        },
+                        {
+                            "gamepad_cursor@common.gamepad_cursor_button": {}
+                        },
+                        {
+                            "close@common.close_button": {
+                                "layer": 4,
+                                "offset": [
+                                    0,
+                                    0
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "backpack_panel_slots_18": {
+        "type": "panel",
+        "$background_image_control_name": "bg",
+        "$background_images": "accessory_common.accessories_item_bg",
+        "$chest_image": "textures/gui/inventory/backpacks/backpack_18s",
+        "$size": [
+            "150%",
+            "150%"
+        ],
+        "$offset": [
+            "5%",
+            0
+        ],
+        "$title_text_color": [
+            1,
+            1,
+            1
+        ],
+        "controls": [
+            {
+                "container_gamepad_helpers@common.container_gamepad_helpers": {}
+            },
+            {
+                "selected_item_details_factory@common.selected_item_details_factory": {
+                    "control_name": "@chest.selected_item_details"
+                }
+            },
+            {
+                "item_lock_notification_factory@common.item_lock_notification_factory": {
+                    "control_name": "@common.item_lock_notification"
+                }
+            },
+            {
+                "root_panel@common.root_panel": {
+                    "size": [
+                        176,
+                        183
+                    ],
+                    "layer": 1,
+                    "controls": [
+                        {
+                            "image_background": {
+                                "type": "image",
+                                "texture": "$chest_image",
+                                "size": "$size",
+                                "offset": "$offset"
+                            }
+                        },
+                        {
+                            "chest_panel": {
+                                "type": "panel",
+                                "layer": 5,
+                                "controls": [
+                                    {
+                                        "backpack_top_half_slots_18@backpacks.backpack_top_half_slots_18": {
+                                            "offset": [
+                                                4,
+                                                23
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {
+                                            "offset": [
+                                                0,
+                                                -25
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "hotbar_grid@common.hotbar_grid_template": {
+                                            "offset": [
+                                                0,
+                                                -30
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {}
+                                    },
+                                    {
+                                        "flying_item_renderer@common.flying_item_renderer": {
+                                            "layer": 15
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "inventory_selected_icon_button@common.inventory_selected_icon_button": {}
+                        },
+                        {
+                            "gamepad_cursor@common.gamepad_cursor_button": {}
+                        },
+                        {
+                            "close@common.close_button": {
+                                "layer": 4,
+                                "offset": [
+                                    0,
+                                    0
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "backpack_panel_slots_27": {
+        "type": "panel",
+        "$background_image_control_name": "bg",
+        "$background_images": "accessory_common.accessories_item_bg",
+        "$chest_image": "textures/gui/inventory/backpacks/backpack_27s",
+        "$size": [
+            "150%",
+            "150%"
+        ],
+        "$offset": [
+            "5%",
+            0
+        ],
+        "$title_text_color": [
+            1,
+            1,
+            1
+        ],
+        "controls": [
+            {
+                "container_gamepad_helpers@common.container_gamepad_helpers": {}
+            },
+            {
+                "selected_item_details_factory@common.selected_item_details_factory": {
+                    "control_name": "@chest.selected_item_details"
+                }
+            },
+            {
+                "item_lock_notification_factory@common.item_lock_notification_factory": {
+                    "control_name": "@common.item_lock_notification"
+                }
+            },
+            {
+                "root_panel@common.root_panel": {
+                    "size": [
+                        176,
+                        183
+                    ],
+                    "layer": 1,
+                    "controls": [
+                        {
+                            "image_background": {
+                                "type": "image",
+                                "texture": "$chest_image",
+                                "size": "$size",
+                                "offset": "$offset"
+                            }
+                        },
+                        {
+                            "chest_panel": {
+                                "type": "panel",
+                                "layer": 5,
+                                "controls": [
+                                    {
+                                        "backpack_top_half_slots_27@backpacks.backpack_top_half_slots_27": {
+                                            "offset": [
+                                                4,
+                                                10
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {
+                                            "offset": [
+                                                0,
+                                                -25
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "hotbar_grid@common.hotbar_grid_template": {
+                                            "offset": [
+                                                0,
+                                                -30
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {}
+                                    },
+                                    {
+                                        "flying_item_renderer@common.flying_item_renderer": {
+                                            "layer": 15
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "inventory_selected_icon_button@common.inventory_selected_icon_button": {}
+                        },
+                        {
+                            "gamepad_cursor@common.gamepad_cursor_button": {}
+                        },
+                        {
+                            "close@common.close_button": {
+                                "layer": 4,
+                                "offset": [
+                                    12,
+                                    0
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "backpack_top_half_slots_9": {
+        "type": "panel",
+        "size": [
+            "100%",
+            132
+        ],
+        "anchor_to": "top_left",
+        "anchor_from": "top_left",
+        "controls": [
+            {
+                "backpack_grid@backpacks.backpack_grid_slots_9": {
+                    "offset": [
+                        3,
+                        -2
+                    ]
+                }
+            }
+        ]
+    },
+    "backpack_top_half_slots_18": {
+        "type": "panel",
+        "size": [
+            "100%",
+            132
+        ],
+        "anchor_to": "top_left",
+        "anchor_from": "top_left",
+        "controls": [
+            {
+                "backpack_grid@backpacks.backpack_grid_slots_18": {
+                    "offset": [
+                        3,
+                        -2
+                    ]
+                }
+            }
+        ]
+    },
+    "backpack_top_half_slots_27": {
+        "type": "panel",
+        "size": [
+            "100%",
+            132
+        ],
+        "anchor_to": "top_left",
+        "anchor_from": "top_left",
+        "controls": [
+            {
+                "backpack_grid@backpacks.backpack_grid_slots_27": {
+                    "offset": [
+                        3,
+                        -2
+                    ]
+                }
+            }
+        ]
+    },
+    "backpack_grid_slots_9": {
+        "type": "grid",
+        "size": [
+            162,
+            18
+        ],
+        "anchor_from": "top_left",
+        "anchor_to": "top_left",
+        "grid_dimensions": [
+            9,
+            1
+        ],
+        "grid_item_template": "chest.chest_grid_item",
+        "collection_name": "container_items"
+    },
+    "backpack_grid_slots_18": {
+        "type": "grid",
+        "size": [
+            162,
+            36
+        ],
+        "anchor_from": "top_left",
+        "anchor_to": "top_left",
+        "grid_dimensions": [
+            9,
+            2
+        ],
+        "grid_item_template": "chest.chest_grid_item",
+        "collection_name": "container_items"
+    },
+    "backpack_grid_slots_27": {
+        "type": "grid",
+        "size": [
+            162,
+            54
+        ],
+        "anchor_from": "top_left",
+        "anchor_to": "top_left",
+        "grid_dimensions": [
+            9,
+            3
+        ],
+        "grid_item_template": "chest.chest_grid_item",
+        "collection_name": "container_items"
+    }
+}

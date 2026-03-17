@@ -1,0 +1,23 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:snap_to_surface_feature": {
+        "description": {
+            "identifier": "5fs_br:redwood/redwood_fern_snap_to_surface"
+        },
+        "feature_to_snap": "5fs_br:redwood/weighted_redwood_fern",
+        "vertical_search_range": 128,
+        "surface": "floor",
+        "allowed_surface_blocks": [
+            "5fs_br:autumn_grass",
+            "minecraft:grass_block",
+            "minecraft:dirt",
+            "minecraft:moss_block",
+            "minecraft:pale_moss_block",
+            "minecraft:mycelium",
+            "minecraft:coarse_dirt",
+            "minecraft:dirt_with_roots",
+            "minecraft:muddy_mangrove_roots",
+            "minecraft:farmland"
+        ]
+    }
+}

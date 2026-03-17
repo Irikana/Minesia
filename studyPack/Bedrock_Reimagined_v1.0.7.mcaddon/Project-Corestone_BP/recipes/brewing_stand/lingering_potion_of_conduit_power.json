@@ -1,0 +1,22 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_brewing_mix": {
+    "description": {
+      "identifier": "5fs_br:lingering_potion_of_conduit_power"
+    },
+    "tags": [
+      "brewing_stand"
+    ],
+    "input": "5fs_br:splash_potion_of_conduit_power",
+    "reagent": "minecraft:dragon_breath",
+    "output": "5fs_br:lingering_potion_of_conduit_power",
+    "unlock": [
+      {
+        "item": "5fs_br:splash_potion_of_conduit_power"
+      },
+      {
+        "item": "minecraft:dragon_breath"
+      }
+    ]
+  }
+}

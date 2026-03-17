@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "cracked_smooth_steel",
+		"metalness_emissive_roughness": "cracked_smooth_steel_mer"
+	}
+}

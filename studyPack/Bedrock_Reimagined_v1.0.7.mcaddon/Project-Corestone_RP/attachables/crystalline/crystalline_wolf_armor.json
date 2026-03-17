@@ -1,0 +1,33 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "5fs_br:wolf_armor_crystalline",
+      "item": {
+        "5fs_br:crystalline_wolf_armor": "query.is_owner_identifier_any('minecraft:wolf')"
+      },
+      "materials": {
+        "default": "wolf_armor"
+      },
+      "textures": {
+        "default": "textures/entity/wolf/wolf_armor_crystalline",
+        "cracked_none": "textures/entity/wolf/wolf_armor_cracked_none",
+        "cracked_low": "textures/entity/wolf/wolf_armor_cracked_low",
+        "cracked_medium": "textures/entity/wolf/wolf_armor_cracked_medium",
+        "cracked_high": "textures/entity/wolf/wolf_armor_cracked_high"
+      },
+      "geometry": {
+        "default": "geometry.wolf.armor"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.damage = query.armor_damage_slot(4);",
+          "variable.cracks_index = variable.damage < 4 ? 0 : (variable.damage < 20 ? 1 : (variable.damage < 44 ? 2 : 3));"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.crystalline_wolf_armor"
+      ]
+    }
+  }
+}

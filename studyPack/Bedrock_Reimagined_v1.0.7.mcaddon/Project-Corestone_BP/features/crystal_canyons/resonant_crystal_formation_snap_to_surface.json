@@ -1,0 +1,18 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:snap_to_surface_feature": {
+    "description": {
+      "identifier": "5fs_br:crystal_canyons/resonant_crystal_formation_snap_to_surface"
+    },
+    "feature_to_snap": "5fs_br:crystal_canyons/weighted_resonant_crystal_formation_feature",
+    "vertical_search_range": 256,
+    "surface": "floor",
+    "allow_air_placement": true,
+    "allowed_surface_blocks": [
+      "minecraft:stone",
+      "minecraft:deepslate",
+      "5fs_br:glimmerite_block",
+      "5fs_br:resonant_crystal_block"
+    ]
+  }
+}

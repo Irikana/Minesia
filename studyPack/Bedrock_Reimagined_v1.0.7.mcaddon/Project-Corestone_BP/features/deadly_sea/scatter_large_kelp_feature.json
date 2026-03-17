@@ -1,0 +1,23 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:scatter_feature": {
+    "description": {
+      "identifier": "5fs_br:deadly_sea/scatter_large_kelp_feature"
+    },
+    "iterations": 30,
+    "x": {
+      "distribution": "gaussian",
+      "extent": [ -8, 8 ]
+    },
+    "y": {
+      "distribution": "gaussian",
+      "extent": [-1, 1]
+    },
+    "z": {
+      "distribution": "gaussian",
+      "extent": [ -8, 8 ]
+    },
+    "coordinate_eval_order": "zxy",
+    "places_feature": "5fs_br:deadly_sea/dead_large_kelp_snap_to_surface_feature"
+  }
+}

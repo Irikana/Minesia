@@ -1,0 +1,20 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "5fs_br:crystalline_tnt",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/misc/crystalline_tnt_entity"
+			},
+			"geometry": {
+				"default": "geometry.crystalline_tnt_entity"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			]
+		}
+	}
+}

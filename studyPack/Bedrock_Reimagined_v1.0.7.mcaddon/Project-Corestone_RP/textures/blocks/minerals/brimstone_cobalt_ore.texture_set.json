@@ -1,0 +1,7 @@
+{
+    "format_version": "1.21.30",
+    "minecraft:texture_set": {
+        "color": "brimstone_cobalt_ore",
+        "metalness_emissive_roughness": "brimstone_cobalt_ore_mer"
+    }
+}

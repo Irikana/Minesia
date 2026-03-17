@@ -1,0 +1,36 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "5fs_br:crystal_pointed_entity",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "components": {
+      "minecraft:collision_box": {
+        "width": 0.25,
+        "height": 0.25
+      },
+      "minecraft:projectile": {
+        "on_hit": {
+          "damage": {
+            "amount": 4,
+            "effect": "minecraft:instant_damage"
+          },
+          "douse_fire": {},
+          "thrown_potion_effect": {},
+          "remove_on_hit": {}
+        },
+        "power": 0.5,
+        "gravity": 0.05,
+        "angle_offset": -20.0
+      },
+      "minecraft:physics": {},
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      }
+    }
+  }
+}

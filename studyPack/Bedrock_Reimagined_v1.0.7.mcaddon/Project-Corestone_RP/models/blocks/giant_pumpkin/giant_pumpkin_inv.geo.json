@@ -1,0 +1,50 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.giant_pumpkin_inv",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "pumpkin4",
+					"pivot": [-8, 0, 6],
+					"cubes": [
+						{
+							"origin": [-8, 0, -8],
+							"size": [16, 16, 16],
+							"uv": {
+								"north": {"uv": [0, 48], "uv_size": [48, 24]},
+								"east": {"uv": [0, 48], "uv_size": [48, 24]},
+								"south": {"uv": [0, 48], "uv_size": [48, 24]},
+								"west": {"uv": [0, 48], "uv_size": [48, 24]},
+								"up": {"uv": [0, 0], "uv_size": [48, 48]},
+								"down": {"uv": [0, 48], "uv_size": [48, -48]}
+							}
+						}
+					]
+				},
+				{
+					"name": "stem",
+					"parent": "pumpkin4",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [0, 16, -4],
+							"size": [0, 10, 9],
+							"uv": {
+								"east": {"uv": [71, 0], "uv_size": [-23, 25]},
+								"west": {"uv": [48, 0], "uv_size": [23, 25]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

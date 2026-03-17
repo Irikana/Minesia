@@ -1,0 +1,57 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "5fs_br:dark_shroud",
+            "materials": {
+                "default": "entity_alphatest",
+                "eyes": "creaking_eyes"
+            },
+            "textures": {
+                "default": "textures/entity/mobs/shrouds/dark_shroud",
+                "eyes": "textures/entity/mobs/shrouds/dark_shroud_eyes"
+            },
+            "geometry": {
+                "default": "geometry.sand_shroud"
+            },
+            "animations": {
+                "look_at_target": "animation.common.look_at_target",
+                "idle": "animation.sand_shroud.idle",
+                "walk": "animation.sand_shroud.walk",
+                "spawn": "animation.sand_shroud.spawn",
+                "death": "animation.sand_shroud.death",
+                "attack": "animation.sand_shroud.attack",
+                "sit_down": "animation.sand_shroud.sit_down",
+                "sit": "animation.sand_shroud.sit",
+                "stand_up": "animation.sand_shroud.stand_up",
+                "general_controller": "controller.animation.sand_shroud.general",
+                "attack_controller": "controller.animation.sand_shroud.attack",
+                "spawn_controller": "controller.animation.sand_shroud.emerging",
+                "root_controller": "controller.animation.sand_shroud.root"
+            },
+            "scripts": {
+                "animate": [
+                    "root_controller"
+                ]
+            },
+            "render_controllers": [
+                "controller.render.sand_shroud",
+                "controller.render.sand_shroud_eyes"
+            ],
+            "particle_effects": {
+                "sand_shroud_emerge": "5fs_br:sand_shroud_emerge"
+            },
+            "sound_effects": {
+                "idle": "mob.shroud.idle",
+                "spawn": "mob.shroud.spawn",
+                "attack": "mob.shroud.attack",
+                "sit_down": "mob.shroud.sitstart",
+                "sit": "mob.shroud.sitloop",
+                "stand_up": "mob.shroud.sitend"
+            },
+            "spawn_egg": {
+                "texture": "5fs_br:dark_shroud_spawn_egg"
+            }
+        }
+    }
+}

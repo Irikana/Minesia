@@ -1,0 +1,369 @@
+{
+    "namespace": "bars_commons_fake",
+    "bar_hunger": {
+        "type": "panel",
+        "anchor_from": "top_left",
+        "anchor_to": "top_left",
+        "size": ["100%","100%"],
+        "layer": 20,
+        "$image_texture_white":"textures/gui/hud/status_bar_hunger_full_white",
+        "controls": [
+            {
+                "hungry_bar": {
+                    "$image_texture": "textures/gui/hud/status_bar_hunger_full",
+                    "anchor_from": "top_left",
+                    "anchor_to": "top_left",
+                    "$source_control_name": "hunger_bar_control",
+                    "$selection": 1,
+                    "type": "panel",
+                    "size": [
+                        "100%",
+                        "100%"
+                    ],
+                    "controls": [
+                        {
+                            "container_image": {
+                                "type": "panel",
+                                // "clips_children": false,
+                                "anchor_from": "center",
+                                "anchor_to": "center",
+                                "size": [
+                                    "100%",
+                                    "100%"
+                                ],
+                                "$multiplier": 0.01,
+                                "$min": 1.0,
+                                "$direction|default": 0,
+                                "$direction_1|default": "left_middle",
+                                "$direction_2|default": "left_middle",
+                                "$can_change_texture|default": false,
+                                "variables": [
+                                    {
+                                        "requires": "($direction = 1)",
+                                        "$direction_1": "right_middle",
+                                        "$direction_2": "right_middle"
+                                    }
+                                ],
+                                "controls": [
+                                    {
+                                        "image_bar": {
+                                            "type": "image",
+                                            "texture": "$image_texture",
+                                            "$image_texture|default": "textures/gui/hud/status_bar_hunger_full",
+                                            "size": [
+                                                "100%",
+                                                "100%"
+                                            ],
+                                            "anchor_from": "$direction_1",
+                                            "anchor_to": "$direction_2",
+                                            // "size": "$size_anim",
+                                            "layer": 30
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "bar_drink": {
+        "type": "panel",
+        "anchor_from": "top_left",
+        "anchor_to": "top_left",
+        "layer": 20,
+        "$image_texture_white":"textures/gui/hud/status_bar_thirst_full_white",
+        "controls": [
+            {
+                "drink_bar": {
+                    "$image_texture": "textures/gui/hud/status_bar_thirst_full",
+                    "anchor_from": "top_left",
+                    "anchor_to": "top_left",
+                    "$source_control_name": "hunger_bar_control",
+                    "$selection": 2,
+                    "type": "panel",
+                    "size": [
+                        "100%",
+                        "100%"
+                    ],
+                    "controls": [
+                        {
+                            "container_image": {
+                                "type": "panel",
+                                "anchor_from": "top_left",
+                                "anchor_to": "top_left",
+                                "$multiplier": 0.01,
+                                "$min": 1.0,
+                                "$direction|default": 0,
+                                "$direction_1|default": "top_left",
+                                "$direction_2|default": "top_left",
+                                "$can_change_texture|default": false,
+                                "variables": [
+                                    {
+                                        "requires": "($direction = 1)",
+                                        "$direction_1": "right_middle",
+                                        "$direction_2": "right_middle"
+                                    }
+                                ],
+                                // "size": ],
+                                "controls": [
+                                    {
+                                        "image_bar": {
+                                            "type": "image",
+                                            "texture": "$image_texture",
+                                            "$image_texture|default": "textures/gui/hud/status_bar_health_full",
+                                            "size": [
+                                                "100%",
+                                                "100%"
+                                            ],
+                                            "anchor_from": "$direction_1",
+                                            "anchor_to": "$direction_2",
+                                            // "size": "$size_anim",
+                                            "layer": 30
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "bar_life": {
+        "type": "panel",
+        "anchor_from": "top_right",
+        "anchor_to": "top_right",
+        "size": ["100%","100%"],
+        "layer": 20,
+        "$direction": 1,
+        "$image_texture_white":"textures/gui/hud/status_bar_health_full_white",
+        "$image_texture": "textures/gui/hud/status_bar_health_full",
+        "controls": [
+            {
+                "life_bar": {
+                    "anchor_from": "top_right",
+                    "anchor_to": "top_right",
+                    "$selection": 3,
+                    "type": "panel",
+                    "size": [
+                        "100%",
+                        "100%"
+                    ],
+                    "$can_change_texture": false,
+                    "controls": [
+                        {
+                            "container_image": {
+                                "type": "panel",
+                                // "clips_children": false,
+                                "anchor_from": "center",
+                                "anchor_to": "center",
+                                "size": [
+                                    "100%",
+                                    "100%"
+                                ],
+                                "$multiplier": 0.01,
+                                "$min": 1.0,
+                                "$direction|default": 0,
+                                "$direction_1|default": "left_middle",
+                                "$direction_2|default": "left_middle",
+                                "$can_change_texture|default": true,
+                                "variables": [
+                                    {
+                                        "requires": "($direction = 1)",
+                                        "$direction_1": "top_right",
+                                        "$direction_2": "top_right"
+                                    }
+                                ],
+                                // "size": ],
+                                "controls": [
+                                    {
+                                        "image_bar": {
+                                            "type": "image",
+                                            "texture": "$image_texture",
+                                            "force_texture_reload": true,
+                                            "$image_texture": "textures/gui/hud/status_bar_health_full",
+                                            "size": [
+                                                "100%",
+                                                "100%"
+                                            ],
+                                            "anchor_from": "$direction_1",
+                                            "anchor_to": "$direction_2",
+                                            // "size": "$size_anim",
+                                            "layer": 30
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "bar_mana": {
+        "type": "panel",
+        "anchor_from": "top_right",
+        "anchor_to": "top_right",
+        "layer": 20,
+        "$image_texture_white":"textures/gui/hud/status_mana_full_white",
+        "controls": [
+            {
+                "mana_bar": {
+                    "$image_texture": "textures/gui/hud/status_bar_thirst_full",
+                    "anchor_from": "top_right",
+                    "anchor_to": "top_right",
+                    "$selection": 4,
+                    "type": "panel",
+                    "size": [
+                        "100%",
+                        "100%"
+                    ],
+                    "$direction": 1,
+                    "controls": [
+                        {
+                            "container_image": {
+                                "type": "panel",
+                                // "clips_children": false,
+                                "anchor_from": "center",
+                                "anchor_to": "center",
+                                "size": [
+                                    "100%",
+                                    "100%"
+                                ],
+                                "$multiplier": 0.01,
+                                "$min": 1.0,
+                                "$direction|default": 0,
+                                "$direction_1|default": "left_middle",
+                                "$direction_2|default": "left_middle",
+                                "$can_change_texture|default": false,
+                                "variables": [
+                                    {
+                                        "requires": "($direction = 1)",
+                                        "$direction_1": "top_right",
+                                        "$direction_2": "top_right"
+                                    }
+                                ],
+                                // "size": ],
+                                "controls": [
+                                    {
+                                        "image_bar": {
+                                            "type": "image",
+                                            "texture": "$image_texture",
+                                            "$image_texture|default": "textures/gui/hud/status_bar_health_full",
+                                            "size": [
+                                                "100%",
+                                                "100%"
+                                            ],
+                                            "anchor_from": "$direction_1",
+                                            "anchor_to": "$direction_2",
+                                            // "size": "$size_anim",
+                                            "layer": 30
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    
+    "image_template": {
+        "type": "image",
+        "texture": "$image_texture",
+        "$image_texture|default": "textures/gui/hud/bar_food_and_drink_empty"
+    },
+    "hunger_and_drink_image@image_template": {
+        "$image_texture": "textures/gui/hud/bar_food_and_drink_empty",
+        "anchor_from": "left_middle",
+        "anchor_to": "left_middle",
+        "keep_ratio":false,
+        "size": [
+            "25%",
+            "100%"
+        ]
+    },
+    "mana_and_life_image@image_template": {
+        "$image_texture": "textures/gui/hud/bar_health_and_mana_empty",
+        "anchor_from": "right_middle",
+        "anchor_to": "right_middle",
+        "keep_ratio":false,
+        "size": [
+            "25%",
+            "100%"
+        ]
+    },
+    "hunger_and_drink_panel": {
+        "type": "panel",
+        "anchor_from": "bottom_left",
+        "anchor_to": "bottom_left",
+        "size": ["25%","30.77%x"],
+        "controls": [
+            {
+                "image_one@bars_commons_fake.hunger_and_drink_image": {
+                    "size": ["100%","100%"],
+                    "controls": [
+                        {
+                            "hunger_bar@bars_commons_fake.bar_hunger": {
+                                "size": [
+                                    "66.82%",
+                                    "12.5%"
+                                ],
+                                "offset": ["24.639423076926%","34.375%"],
+                                "layer": 100
+                            }
+                        },
+                        {
+                            "drink_bar@bars_commons_fake.bar_drink": {
+                                "size": [
+                                    "66.82%",
+                                    "12.5%"
+                                ],
+                                "offset": ["31.25%","57.8125%"],
+                                "layer": 100
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "mana_and_life_panel": {
+        "type": "panel",
+        "anchor_from": "bottom_right",
+        "anchor_to": "bottom_right",
+        "size": ["25%","30.77%x"],
+        "controls": [
+            {
+                "image_one@bars_commons_fake.mana_and_life_image": {
+                    "size": ["100%","100%"],
+                    "controls": [
+                        {
+                            "bar_life@bars_commons_fake.bar_life": {
+                                "size": [
+                                    "66.82%",
+                                    "12.5%"
+                                ],
+                                "offset": ["-24.39903846%","34.375%"],
+                                "layer": 100
+                            }
+                        },
+                        {
+                            "bar_mana@bars_commons_fake.bar_mana": {
+                                "size": [
+                                    "66.82%",
+                                    "12.5%"
+                                ],
+                                "offset": ["-31.25%","57.8125%"],
+                                "layer": 100
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

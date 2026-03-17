@@ -1,0 +1,238 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.beaver.root": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "animations": [
+                        "general_controller", "eat_food_controller"
+                    ],
+                    "transitions": [
+                        {
+                            "death": "!q.is_alive"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "death": {
+                    "animations": [
+                        "death"
+                    ]
+                }
+            }
+        },
+        "controller.animation.beaver.general": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "animations": [
+                        "idle"
+                    ],
+                    "transitions": [
+                        {
+                            "idle_land": "q.modified_move_speed <= 0.025 && !q.is_in_water && !q.timer_flag_1 && !q.timer_flag_2"
+                        },
+                        {
+                            "walk": "q.modified_move_speed > 0.025 && !q.is_in_water && !q.timer_flag_1 && !q.timer_flag_2"
+                        },
+                        {
+                            "swimming": "q.is_moving && q.is_in_water && !q.timer_flag_1 && !q.timer_flag_2"
+                        },
+                        {
+                            "eat_tree": "q.timer_flag_1"
+                        },
+                        {
+                            "build_dam": "q.timer_flag_2"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "idle_land": {
+                    "on_entry": [
+                        "v.random_idle = math.random_integer(0, 3);"
+                    ],
+                    "animations": [
+                        {
+                            "idle": "v.random_idle < 3"
+                        },
+                        {
+                            "swing_tail": "v.random_idle == 3"
+                        }
+                    ],
+                    "transitions": [
+                        {
+                            "swing_tail": "q.any_animation_finished && q.modified_move_speed <= 0.025 && !q.is_in_water && !q.timer_flag_1 && !q.timer_flag_2"
+                        },
+                        {
+                            "default": "!q.is_moving && q.is_in_water && !q.timer_flag_1 && !q.timer_flag_2"
+                        },
+                        {
+                            "walk": "q.modified_move_speed > 0.025 && !q.is_in_water && !q.timer_flag_1 && !q.timer_flag_2"
+                        },
+                        {
+                            "swimming": "q.is_moving && q.is_in_water && !q.timer_flag_1 && !q.timer_flag_2"
+                        },
+                        {
+                            "eat_tree": "q.timer_flag_1"
+                        },
+                        {
+                            "build_dam": "q.timer_flag_2"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "swing_tail": {
+                    "on_entry": [
+                        "v.random_idle = math.random_integer(0, 3);"
+                    ],
+                    "animations": [
+                        {
+                            "idle": "v.random_idle < 3"
+                        },
+                        {
+                            "swing_tail": "v.random_idle == 3"
+                        }
+                    ],
+                    "transitions": [
+                        {
+                            "idle_land": "q.any_animation_finished && q.modified_move_speed <= 0.025 && !q.is_in_water && !q.timer_flag_1 && !q.timer_flag_2"
+                        },
+                        {
+                            "default": "!q.is_moving && q.is_in_water && !q.timer_flag_1 && !q.timer_flag_2"
+                        },
+                        {
+                            "walk": "q.modified_move_speed > 0.025 && !q.is_in_water && !q.timer_flag_1 && !q.timer_flag_2"
+                        },
+                        {
+                            "swimming": "q.is_moving && q.is_in_water && !q.timer_flag_1 && !q.timer_flag_2"
+                        },
+                        {
+                            "eat_tree": "q.timer_flag_1"
+                        },
+                        {
+                            "build_dam": "q.timer_flag_2"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "walk": {
+                    "animations": [
+                        "walk"
+                    ],
+                    "transitions": [
+                        {
+                            "idle_land": "q.modified_move_speed <= 0.025 && !q.is_in_water && !q.timer_flag_1 && !q.timer_flag_2"
+                        },
+                        {
+                            "default": "!q.is_moving && q.is_in_water && !q.timer_flag_1 && !q.timer_flag_2"
+                        },
+                        {
+                            "swimming": "q.is_moving && q.is_in_water && !q.timer_flag_1 && !q.timer_flag_2"
+                        },
+                        {
+                            "eat_tree": "q.timer_flag_1"
+                        },
+                        {
+                            "build_dam": "q.timer_flag_2"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "swimming": {
+                    "animations": [
+                        "swimming"
+                    ],
+                    "transitions": [
+                        {
+                            "idle_land": "q.modified_move_speed <= 0.025 && !q.is_in_water && !q.timer_flag_1 && !q.timer_flag_2"
+                        },
+                        {
+                            "default": "!q.is_moving && q.is_in_water && !q.timer_flag_1 && !q.timer_flag_2"
+                        },
+                        {
+                            "walk": "q.modified_move_speed > 0.025 && !q.is_in_water"
+                        },
+                        {
+                            "eat_tree": "q.timer_flag_1"
+                        },
+                        {
+                            "build_dam": "q.timer_flag_2"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "eat_tree": {
+                    "animations": [
+                        "eat_tree"
+                    ],
+                    "transitions": [
+                        {
+                            "idle_land": "q.modified_move_speed <= 0.025 && !q.is_in_water && !q.timer_flag_1 && !q.timer_flag_2"
+                        },
+                        {
+                            "default": "!q.is_moving && q.is_in_water && !q.timer_flag_1 && !q.timer_flag_2"
+                        },
+                        {
+                            "walk": "q.modified_move_speed > 0.025 && !q.is_in_water && !q.timer_flag_1"
+                        },
+                        {
+                            "swimming": "q.is_moving && q.is_in_water && !q.timer_flag_1 && !q.timer_flag_2"
+                        },
+                        {
+                            "build_dam": "q.timer_flag_2"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "build_dam": {
+                    "animations": [
+                        "build_dam"
+                    ],
+                    "transitions": [
+                        {
+                            "idle_land": "q.modified_move_speed <= 0.025 && !q.is_in_water && !q.timer_flag_1 && !q.timer_flag_2"
+                        },
+                        {
+                            "default": "!q.is_moving && q.is_in_water && !q.timer_flag_1 && !q.timer_flag_2"
+                        },
+                        {
+                            "walk": "q.modified_move_speed > 0.025 && !q.is_in_water && !q.timer_flag_2"
+                        },
+                        {
+                            "swimming": "q.is_moving && q.is_in_water && !q.timer_flag_1 && !q.timer_flag_2"
+                        },
+                        {
+                            "eat_tree": "q.timer_flag_1"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                }
+            }
+        },
+        "controller.animation.beaver.eat_food": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "eat_food": "q.is_eating"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "eat_food": {
+                    "animations": [
+                        "eat_food"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!q.is_eating"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                }
+            }
+        }
+    }
+}

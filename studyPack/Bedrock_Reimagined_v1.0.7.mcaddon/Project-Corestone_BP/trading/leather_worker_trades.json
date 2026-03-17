@@ -1,0 +1,192 @@
+{
+  "tiers": [
+    {
+      "trades": [
+        {
+          "wants": [
+            {
+              "item": "minecraft:leather",
+              "quantity": {
+                "min": 9,
+                "max": 12
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:emerald"
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": {
+                "min": 2,
+                "max": 4
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:leather_leggings"
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 3
+            }
+          ],
+          "gives": [
+            {
+              "item": "5fs_br:waterskin_empty"
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 3
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:saddle"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trades": [
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": {
+                "min": 7,
+                "max": 12
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:leather_chestplate",
+              "functions": [
+                {
+                  "function": "enchant_with_levels",
+                  "treasure": false,
+                  "levels": {
+                    "min": 5,
+                    "max": 19
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trades": [
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 8
+            }
+          ],
+          "gives": [
+            {
+              "item": "5fs_br:iron_canteen_empty"
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 8
+            }
+          ],
+          "gives": [
+            {
+              "choice": [
+                {"item": "minecraft:black_harness"},
+                {"item": "minecraft:blue_harness"},
+                {"item": "minecraft:brown_harness"},
+                {"item": "minecraft:cyan_harness"},
+                {"item": "minecraft:gray_harness"},
+                {"item": "minecraft:green_harness"},
+                {"item": "minecraft:light_blue_harness"},
+                {"item": "minecraft:light_gray_harness"},
+                {"item": "minecraft:lime_harness"},
+                {"item": "minecraft:magenta_harness"},
+                {"item": "minecraft:orange_harness"},
+                {"item": "minecraft:pink_harness"},
+                {"item": "minecraft:purple_harness"},
+                {"item": "minecraft:red_harness"},
+                {"item": "minecraft:white_harness"},
+                {"item": "minecraft:yellow_harness"}
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trades": [
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 16
+            }
+          ],
+          "gives": [
+            {
+              "item": "5fs_br:steel_canteen_empty"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trades": [
+        {
+          "wants": [
+            {
+              "item": "5fs_br:crystalline_horse_armor",
+              "quantity": 1
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 12
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "5fs_br:crystalline_wolf_armor",
+              "quantity": 1
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 12
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

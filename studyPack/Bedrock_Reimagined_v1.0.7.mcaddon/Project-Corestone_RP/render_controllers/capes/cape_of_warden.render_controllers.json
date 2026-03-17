@@ -1,0 +1,37 @@
+{
+  "format_version": "1.20.0",
+  "render_controllers": {
+    "controller.render.cape_of_warden": {
+      "geometry": "geometry.default",
+      "arrays": {
+        "textures": {
+          "array.textures": [
+            "Texture.warden0",
+            "Texture.warden1",
+            "Texture.warden2",
+            "Texture.warden3",
+            "Texture.warden4",
+            "Texture.warden5",
+            "Texture.warden6",
+            "Texture.warden7",
+            "Texture.warden8",
+            "Texture.warden9",
+            "Texture.warden10",
+            "Texture.warden11",
+            "Texture.warden12",
+            "Texture.warden13"
+          ]
+        }
+      },
+      "materials": [
+        {
+          "*": "variable.is_enchanted?material.enchanted:material.default"
+        }
+      ],
+      "textures": [
+        "temp.life_time=query.life_time*8;return array.textures[temp.life_time];",
+        "texture.enchanted"
+      ]
+    }
+  }
+}

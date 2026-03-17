@@ -1,0 +1,23 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:scatter_feature": {
+      "description": {
+        "identifier": "5fs_br:overworld/scatter_rocks_feature"
+      },
+      "coordinate_eval_order": "xzy",
+      "iterations": 1,
+      "places_feature": "5fs_br:overworld/small_rocks_feature",
+        "x": {
+          "distribution": "gaussian",
+          "extent": [-20, 20]
+        },
+        "z": {
+          "distribution": "gaussian",
+          "extent": [-20, 20]
+        },
+        "y": {
+          "distribution": "gaussian",
+          "extent": [-4, 4]
+      }
+    }
+  }

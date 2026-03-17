@@ -1,0 +1,31 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.iron_wand.1fp": {
+			"loop": true,
+			"bones": {
+				"bone10": {
+					"rotation": [101.55952, 58.34689, -39.43142],
+					"position": [0, 10, 7]
+				},
+				"iron_wand": {
+					"rotation": [78.12705, 55.54732, -62.93269],
+					"position": [0, 16, 4]
+				}
+			}
+		},
+		"animation.iron_wand.3pp": {
+			"loop": true,
+			"bones": {
+				"bone10": {
+					"rotation": [87.5, 0, 0],
+					"position": [0, 16, 0]
+				},
+				"iron_wand": {
+					"rotation": [90, 0, 0],
+					"position": [0, 15, 0]
+				}
+			}
+		}
+	}
+}

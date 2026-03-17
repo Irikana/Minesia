@@ -1,0 +1,19 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:structure_template_feature": {
+    "description": {
+      "identifier": "5fs_br:swamp/vine_4_feature"
+    },
+    "structure_name": "5fs_br:vine4",
+    "adjustment_radius": 0,
+    "facing_direction": "random",
+    "constraints": {
+      "block_intersection": {
+        "block_allowlist": [
+          "minecraft:air",
+          "minecraft:vine"
+        ]
+      }
+    }
+  }
+}

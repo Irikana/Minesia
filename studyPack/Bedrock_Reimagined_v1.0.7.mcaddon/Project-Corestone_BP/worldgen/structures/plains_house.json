@@ -1,0 +1,27 @@
+{
+  "format_version": "1.21.20",
+  "minecraft:jigsaw": {
+    "description": {
+      "identifier": "5fs_br:plains_house"
+    },
+    "biome_filters": [ 
+      { 
+        "any_of": [ 
+          {
+            "test": "has_biome_tag", 
+            "value": "plains" 
+          }
+        ]
+      } 
+    ], 
+    "step": "surface_structures", 
+    "terrain_adaptation": "beard_thin", 
+    "start_pool": "5fs_br:plains_house", 
+    "max_depth": 2, 
+    "start_height": {
+        "type": "constant",
+        "value": { "absolute": 1 } 
+    },
+    "heightmap_projection": "world_surface"
+  }
+}

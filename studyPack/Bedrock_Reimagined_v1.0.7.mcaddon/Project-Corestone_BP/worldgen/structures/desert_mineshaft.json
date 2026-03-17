@@ -1,0 +1,39 @@
+{
+  "format_version": "1.21.20",
+  "minecraft:jigsaw": {
+    "description": {
+      "identifier": "5fs_br:desert_mineshaft"
+    },
+    "step": "underground_structures",
+    "terrain_adaptation": "bury",
+    "start_pool": "5fs:desert_ns5x5",
+    "max_depth": 7,
+    "biome_filters": [
+      {
+        "all_of": [
+          {
+            "any_of": [
+              {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "mesa"
+              },
+              {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "desert"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "start_height": {
+      "type": "constant",
+      "value": {
+        "absolute": -64
+      }
+    },
+    "heightmap_projection": "world_surface"
+  }
+}

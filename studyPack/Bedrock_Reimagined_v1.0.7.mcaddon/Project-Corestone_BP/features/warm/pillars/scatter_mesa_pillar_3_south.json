@@ -1,0 +1,13 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:scatter_feature": {
+        "description": {
+            "identifier": "5fs_br:warm/pillars/scatter_mesa_pillar_3_south"
+        },
+        "places_feature": "5fs_br:warm/pillars/mesa_pillar_3_south",
+        "iterations": 1,
+        "x": -4,
+        "y": -1,
+        "z": -5
+    }
+}

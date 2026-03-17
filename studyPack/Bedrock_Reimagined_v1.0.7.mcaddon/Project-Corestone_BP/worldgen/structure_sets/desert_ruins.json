@@ -1,0 +1,21 @@
+{
+  "format_version": "1.21.20",
+  "minecraft:structure_set": {
+    "description": {
+      "identifier": "5fs_br:desert_ruins"
+    },
+    "placement": {
+      "type": "minecraft:random_spread",
+      "salt": 54869867,
+      "separation": 22,
+      "spacing": 58,
+      "spread_type": "linear"
+    },
+    "structures": [
+      {
+        "structure": "5fs_br:desert_ruins",
+        "weight": 1
+      }
+    ]
+  }
+}

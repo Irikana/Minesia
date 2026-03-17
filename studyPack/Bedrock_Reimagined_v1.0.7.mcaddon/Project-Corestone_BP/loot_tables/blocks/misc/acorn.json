@@ -1,0 +1,18 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "5fs_br:acorn",
+          "weight": 1
+        },
+        {
+          "type": "empty",
+          "weight": 4
+        }
+      ]
+    }
+  ]
+}

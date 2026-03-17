@@ -1,0 +1,43 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.bee_head_attachable",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 5,
+				"visible_bounds_offset": [0, 2.5, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "waist",
+					"parent": "root",
+					"pivot": [0, 12, 0]
+				},
+				{
+					"name": "body",
+					"parent": "waist",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "head",
+					"parent": "body",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{"origin": [-3.4, 32.4, -5], "size": [7, 7, 10], "uv": [0, 0]},
+						{"origin": [1.6, 37.4, -8], "size": [1, 2, 3], "uv": [2, 0]},
+						{"origin": [-2.4, 37.4, -8], "size": [1, 2, 3], "uv": [2, 3]},
+						{"origin": [-11.78696, 40.48312, -0.69214], "size": [9, 0, 6], "pivot": [-1.78696, 31.48312, 2.30786], "rotation": [15, -15, 0], "uv": [0, 18]},
+						{"origin": [3.02103, 40.48312, -0.43332], "size": [9, 0, 6], "pivot": [1.02103, 31.48312, 2.56668], "rotation": [15, 15, 0], "uv": [9, 24]}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,30 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.steel_wand",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "wand",
+					"pivot": [0, 2.25, 0],
+					"binding": "q.item_slot_to_bone_name(c.item_slot)",
+					"cubes": [
+						{"origin": [-1, -5, -1], "size": [2, 24, 2], "uv": [0, 0]},
+						{"origin": [-1.5, 14, -1.5], "size": [3, 3, 3], "uv": [28, 0]},
+						{"origin": [-0.5, 18, -4], "size": [1, 8, 8], "pivot": [0, 22, 0], "rotation": [-45, 0, 0], "uv": [9, 0]},
+						{"origin": [-1.5, 19, -3], "size": [3, 6, 6], "pivot": [0, 22, 0], "rotation": [-45, 0, 0], "uv": [9, 17]},
+						{"origin": [-0.5, 11.5, 2], "size": [1, 4, 4], "pivot": [0, 15.5, 6], "rotation": [-45, 0, 0], "uv": [28, 7]},
+						{"origin": [-0.5, 11.5, -6], "size": [1, 4, 4], "pivot": [0, 15.5, -6], "rotation": [45, 0, 0], "uv": [28, 7]}
+					]
+				}
+			]
+		}
+	]
+}

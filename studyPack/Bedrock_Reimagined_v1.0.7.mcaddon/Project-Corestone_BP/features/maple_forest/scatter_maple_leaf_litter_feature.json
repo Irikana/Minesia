@@ -1,0 +1,23 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:scatter_feature": {
+    "description": {
+      "identifier": "5fs_br:maple_forest/scatter_maple_leaf_litter_feature"
+    },
+    "iterations": 96,
+    "x": {
+      "distribution": "gaussian",
+      "extent": [ -6, 6 ]
+    },
+    "y": {
+      "distribution": "gaussian",
+      "extent": [ -2, 2 ]
+    },
+    "z": {
+      "distribution": "gaussian",
+      "extent": [ -6, 6 ]
+    },
+    "coordinate_eval_order": "zxy",
+    "places_feature": "5fs_br:maple_forest/maple_leaf_litter"
+  }
+}

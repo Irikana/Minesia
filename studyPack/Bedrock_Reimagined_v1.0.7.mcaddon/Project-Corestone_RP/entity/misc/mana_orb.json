@@ -1,0 +1,37 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "5fs_br:mana_orb",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/mana_orb"
+      },
+      "geometry": {
+        "default": "geometry.custom_orb"
+      },
+      "animations": {
+        "face_player": "animation.actor.billboard",
+        "particle_effects": "animation.mana_orb.particles"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.u = Math.mod(query.texture_frame_index, 4) * 16.0 / 64.0;",
+          "variable.v = math.round(query.texture_frame_index / 4) * 16.0 / 64.0;"
+        ],
+        "animate": [
+          "face_player",
+          {"particle_effects": "query.is_alive"}
+        ]
+      },
+      "render_controllers": [
+        "controller.render.mana_orb"
+      ],
+      "particle_effects": {
+        "mana_orb_halo": "5fs_br:mana_orb_halo"
+      }
+    }
+  }
+}

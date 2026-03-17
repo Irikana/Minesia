@@ -1,0 +1,395 @@
+{
+    "format_version": "1.21.40",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "5fs_br:jay_bird",
+            "spawn_category": "creature",
+            "is_spawnable": true,
+            "is_summonable": true,
+            "properties": {
+                "5fs_br:variant": {
+                    "client_sync": true,
+                    "type": "int",
+                    "default": 0,
+                    "range": [
+                        0,
+                        2
+                    ]
+                }
+            }
+        },
+        "component_groups": {
+            "5fs_br:redwood_variant": {
+                "minecraft:scale": {
+                    "value": 2
+                },
+                "minecraft:health": {
+                    "value": 12,
+                    "max": 12
+                },
+                "minecraft:flying_speed": {
+                    "value": 0.2
+                }
+            },
+            "5fs_br:fly": {
+                "minecraft:behavior.move_to_block": {
+                    "priority": 1,
+                    "tick_interval": 200,
+                    "start_chance": 0.5,
+                    "search_range": 16,
+                    "search_height": 8,
+                    "goal_radius": 1,
+                    "stay_duration": 3,
+                    "target_selection_method": "random",
+                    "target_offset": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "target_block_filters": {
+                        "test": "is_waterlogged",
+                        "subject": "block",
+                        "operator": "==",
+                        "value": false
+                    },
+                    "target_blocks": [
+                        "5fs_br:full_bird_feeder"
+                    ],
+                    "on_stay_completed": {
+                        "event": "5fs_br:eat_from_bird_feeder"
+                    }
+                },
+                "minecraft:physics": {
+                    "has_gravity": false
+                },
+                "minecraft:movement": {
+                    "value": 0.3
+                },
+                "minecraft:navigation.hover": {
+                    "can_path_over_water": true,
+                    "can_sink": false,
+                    "can_pass_doors": false,
+                    "can_path_from_air": true,
+                    "avoid_water": true,
+                    "avoid_damage_blocks": true,
+                    "avoid_sun": false
+                },
+                "minecraft:behavior.float": {
+                    "priority": 0
+                },
+                "minecraft:movement.hover": {},
+                "minecraft:can_fly": {},
+                "minecraft:behavior.random_hover": {
+                    "priority": 1,
+                    "xz_dist": 3,
+                    "y_dist": 1,
+                    "y_offset": -1,
+                    "interval": 4,
+                    "hover_height": [
+                        4,
+                        6
+                    ]
+                },
+                "minecraft:timer": {
+                    "time": [
+                        15,
+                        30
+                    ],
+                    "looping": true,
+                    "time_down_event": {
+                        "event": "5fs_br:stop_flying",
+                        "target": "self"
+                    }
+                }
+            },
+            "5fs_br:cooldown_before_no_fly": {
+                "minecraft:physics": {
+                    "has_gravity": true
+                },
+                "minecraft:movement.basic": {},
+                "minecraft:behavior.float": {
+                    "priority": 0
+                },
+                "minecraft:movement": {
+                    "value": 0
+                },
+                "minecraft:timer": {
+                    "time": 3,
+                    "looping": true,
+                    "time_down_event": {
+                        "event": "5fs_br:cooldown_before_no_fly",
+                        "target": "self"
+                    }
+                }
+            },
+            "5fs_br:no_fly": {
+                "minecraft:physics": {
+                    "has_gravity": true
+                },
+                "minecraft:movement": {
+                    "value": 0.15
+                },
+                "minecraft:navigation.generic": {
+                    "can_path_over_water": true,
+                    "can_sink": false,
+                    "can_pass_doors": false,
+                    "can_path_from_air": true,
+                    "avoid_water": true,
+                    "avoid_damage_blocks": true,
+                    "avoid_sun": false
+                },
+                "minecraft:behavior.float": {
+                    "priority": 0
+                },
+                "minecraft:movement.generic": {},
+                "minecraft:jump.static": {},
+                "minecraft:behavior.random_stroll": {
+                    "priority": 1,
+                    "xz_dist": 6,
+                    "y_dist": 1,
+                    "speed_multiplier": 1
+                },
+                "minecraft:timer": {
+                    "time": [
+                        8,
+                        20
+                    ],
+                    "looping": true,
+                    "time_down_event": {
+                        "event": "5fs_br:start_flying",
+                        "target": "self"
+                    }
+                }
+            }
+        },
+        "components": {
+            "minecraft:experience_reward": {
+                "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
+            },
+            "minecraft:loot": {
+                "table": "loot_tables/entities/parrot.json"
+            },
+            "minecraft:is_hidden_when_invisible": {},
+            "minecraft:breathable": {
+                "total_supply": 15,
+                "suffocate_time": 0
+            },
+            "minecraft:nameable": {},
+            "minecraft:health": {
+                "value": 6,
+                "max": 6
+            },
+            "minecraft:behavior.look_at_player": {
+                "priority": 7,
+                "look_distance": 6,
+                "probability": 0.02
+            },
+            "minecraft:behavior.random_look_around": {
+                "priority": 5
+            },
+            "minecraft:hurt_on_condition": {
+                "damage_conditions": [
+                    {
+                        "filters": {
+                            "test": "in_lava",
+                            "subject": "self",
+                            "operator": "==",
+                            "value": true
+                        },
+                        "cause": "lava",
+                        "damage_per_tick": 4
+                    }
+                ]
+            },
+            "minecraft:behavior.float": {
+                "priority": 0
+            },
+            "minecraft:flying_speed": {
+                "value": 0.15
+            },
+            "minecraft:collision_box": {
+                "height": 0.45,
+                "width": 0.3
+            },
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "cause": "fall",
+                    "deals_damage": "no"
+                }
+            },
+            "minecraft:pushable": {
+                "is_pushable": true,
+                "is_pushable_by_piston": true
+            },
+            "minecraft:despawn": {
+                "despawn_from_distance": {}
+            },
+            "minecraft:conditional_bandwidth_optimization": {},
+            "minecraft:game_event_movement_tracking": {
+                "emit_flap": true
+            },
+            "minecraft:leashable": {
+                "soft_distance": 4,
+                "hard_distance": 6,
+                "max_distance": 10
+            },
+            "minecraft:balloonable": {},
+            "minecraft:type_family": {
+                "family": [
+                    "bird",
+                    "mob"
+                ]
+            },
+            "minecraft:behavior.panic": {
+                "priority": 1,
+                "speed_multiplier": 1.25
+            },
+            "minecraft:environment_sensor": {
+                "triggers": [
+                    {
+                        "event": "5fs_br:fly",
+                        "target": "self",
+                        "filters": {
+                            "test": "on_ground",
+                            "value": false
+                        }
+                    }
+                ]
+            },
+            "minecraft:behavior.rise_to_liquid_level": {
+                "liquid_y_offset": 0,
+                "rise_delta": 0,
+                "sink_delta": 0
+            }
+        },
+        "events": {
+            "minecraft:entity_spawned": {
+                "randomize": [
+                    {
+                        "set_property": {
+                            "5fs_br:variant": 0
+                        },
+                        "add": {
+                            "component_groups": [
+                                "5fs_br:no_fly"
+                            ]
+                        },
+                        "trigger": "5fs_br:redwood_variant",
+                        "weight": 1
+                    },
+                    {
+                        "set_property": {
+                            "5fs_br:variant": 1
+                        },
+                        "add": {
+                            "component_groups": [
+                                "5fs_br:no_fly"
+                            ]
+                        },
+                        "trigger": "5fs_br:redwood_variant",
+                        "weight": 1
+                    },
+                    {
+                        "set_property": {
+                            "5fs_br:variant": 2
+                        },
+                        "add": {
+                            "component_groups": [
+                                "5fs_br:no_fly"
+                            ]
+                        },
+                        "trigger": "5fs_br:redwood_variant",
+                        "weight": 1
+                    }
+                ]
+            },
+            "5fs_br:redwood_variant": {
+                "filters": {
+                    "test": "has_biome_tag",
+                    "value": "redwood_forest"
+                },
+                "add": {
+                    "component_groups": [
+                        "5fs_br:redwood_variant"
+                    ]
+                }
+            },
+            "5fs_br:fly": {
+                "queue_command": {
+                    "command": [
+                        "effect @s slow_falling 1 1 true"
+                    ]
+                }
+            },
+            "5fs_br:stop_flying": {
+                "remove": {
+                    "component_groups": [
+                        "5fs_br:fly"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "5fs_br:cooldown_before_no_fly"
+                    ]
+                }
+            },
+            "5fs_br:start_flying": {
+                "add": {
+                    "component_groups": [
+                        "5fs_br:fly"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "5fs_br:no_fly"
+                    ]
+                }
+            },
+            "5fs_br:cooldown_before_no_fly": {
+                "sequence": [
+                    {
+                        "filters": {
+                            "test": "on_ground",
+                            "value": true
+                        },
+                        "add": {
+                            "component_groups": [
+                                "5fs_br:no_fly"
+                            ]
+                        },
+                        "remove": {
+                            "component_groups": [
+                                "5fs_br:fly",
+                                "5fs_br:cooldown_before_no_fly"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "test": "in_water",
+                            "value": true
+                        },
+                        "add": {
+                            "component_groups": [
+                                "5fs_br:fly"
+                            ]
+                        },
+                        "remove": {
+                            "component_groups": [
+                                "5fs_br:no_fly",
+                                "5fs_br:cooldown_before_no_fly"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "5fs_br:eat_from_bird_feeder": {
+                "queue_command": {
+                    "command": [
+                        "scriptevent 5fs_br:bird_eat_from_bird_feeder"
+                    ]
+                }
+            }
+        }
+    }
+}

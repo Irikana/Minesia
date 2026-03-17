@@ -1,0 +1,77 @@
+{
+	"format_version": "1.10.0",
+	"particle_effect": {
+		"description": {
+			"identifier": "5fs_br:spell_of_blazing_inferno_1",
+			"basic_render_parameters": {
+				"material": "particles_add",
+				"texture": "textures/particles/magic_particles/daoguang_1"
+			}
+		},
+		"curves": {
+			"variable.size1": {
+				"type": "linear",
+				"input": "v.particle_age",
+				"horizontal_range": "v.particle_lifetime",
+				"nodes": [
+					0,
+					0.69,
+					1
+				]
+			}
+		},
+		"components": {
+			"minecraft:emitter_rate_steady": {
+				"spawn_rate": 15,
+				"max_particles": 20
+			},
+			"minecraft:emitter_lifetime_once": {
+				"active_time": 0.5
+			},
+			"minecraft:emitter_shape_point": {
+				"offset": [
+					0,
+					"math.random(0,5)",
+					0
+				]
+			},
+			"minecraft:particle_lifetime_expression": {
+				"max_lifetime": "math.random(0.3,0.5)"
+			},
+			"minecraft:particle_initial_spin": {
+				"rotation": "math.random(0,360)",
+				"rotation_rate": "math.random(-600,-1200)"
+			},
+			"minecraft:particle_initial_speed": 0,
+			"minecraft:particle_motion_dynamic": {},
+			"minecraft:particle_appearance_billboard": {
+				"size": [
+					"2+4*variable.particle_random_1*variable.size1",
+					"2+4*variable.particle_random_1*variable.size1"
+				],
+				"facing_camera_mode": "emitter_transform_xz",
+				"uv": {
+					"texture_width": 16,
+					"texture_height": 16,
+					"uv": [
+						0,
+						0
+					],
+					"uv_size": [
+						16,
+						16
+					]
+				}
+			},
+			"minecraft:particle_appearance_tinting": {
+				"color": {
+					"interpolant": "v.particle_age / v.particle_lifetime",
+					"gradient": {
+						"0.0": "#FFFBA33C",
+						"1.0": "#FFFF6600"
+					}
+				}
+			}
+		}
+	}
+}

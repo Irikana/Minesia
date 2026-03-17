@@ -1,0 +1,129 @@
+{
+    "format_version": "1.26.0",
+	"minecraft:block": {
+        "description": {
+            "identifier": "5fs_br:liana",
+            "menu_category": {
+                "category": "nature"
+            },
+            "states": {
+                "5fs_br:hanging_bit": [
+                    "head",
+                    "body"
+                ],
+                "5fs_br:plant_age": {
+                    "values": {
+                        "min": 0,
+                        "max": 15
+                    }
+                }
+            }
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('5fs_br:hanging_bit') == 'head'",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "liana_end",
+                            "render_method": "alpha_test_single_sided",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        }
+                    },
+                    "tag:5fs_br:head": {}
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:hanging_bit') == 'body'",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "liana_inner",
+                            "render_method": "alpha_test_single_sided",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        }
+                    },
+                    "tag:5fs_br:body": {}
+                }
+            }
+        ],
+        "components": {
+            "minecraft:geometry": "minecraft:geometry.cross",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "liana_end",
+                    "render_method": "alpha_test_single_sided",
+                    "ambient_occlusion": false,
+                    "face_dimming": false
+                }
+            },
+            "minecraft:liquid_detection": {
+                "detection_rules": [
+                    {
+                        "on_liquid_touches": "popped"
+                    }
+                ]
+            },
+            "5fs_br:crystallineShears": {},
+            "minecraft:loot": "loot_tables/empty.json",
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 0
+            },
+            "minecraft:collision_box": false,
+			"minecraft:selection_box": {
+				"origin": [
+					-6.5,
+					0,
+					-6.5
+				],
+				"size": [
+					13,
+					16,
+					13
+				]
+			},
+            "minecraft:placement_filter": {
+                "conditions": [
+                    {
+                        "block_filter": [
+                            "5fs_br:liana",
+                            "minecraft:stone",
+                            "minecraft:dirt",
+                            "minecraft:grass_block",
+                            "minecraft:deepslate",
+                            "minecraft:wood",
+                            "minecraft:log",
+                            "minecraft:leaves",
+                            "minecraft:mangrove_roots",
+                            "minecraft:moss_block",
+                            "minecraft:scaffolding",
+                            {
+                                "tags": "query.any_tag('wood', 'leaves', 'stone')"
+                            }
+                        ],
+                        "allowed_faces": [
+                            "down"
+                        ]
+                    }
+                ]
+            },
+            "minecraft:movable": {
+                "movement_type": "popped"
+            },
+            "minecraft:precipitation_interactions": {
+                "precipitation_behavior": "none"
+            },
+            "minecraft:connection_rule": {
+                "accepts_connections_from": "none"
+            },
+            "minecraft:light_dampening": 0,
+            "tag:5fs_br:down": {},
+            "5fs_br:hanging_block": {}
+        }
+    }
+}

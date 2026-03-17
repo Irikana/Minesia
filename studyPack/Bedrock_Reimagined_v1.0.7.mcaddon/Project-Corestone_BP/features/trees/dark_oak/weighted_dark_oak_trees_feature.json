@@ -1,0 +1,16 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "5fs_br:trees/dark_oak/weighted_dark_oak_trees_feature"
+    },
+    "features": [
+      ["5fs_br:trees/dark_oak/scatter_dark_oak_tree_0_feature", 1],
+      ["5fs_br:trees/dark_oak/scatter_dark_oak_tree_1_feature", 1],
+      ["5fs_br:trees/dark_oak/scatter_dark_oak_tree_2_feature", 1],
+      ["5fs_br:trees/dark_oak/scatter_dark_oak_tree_3_feature", 1],
+      ["5fs_br:trees/dark_oak/scatter_dark_oak_tree_4_feature", 1],
+      ["5fs_br:trees/dark_oak/scatter_dark_oak_tree_5_feature", 1]
+    ]
+  }
+}

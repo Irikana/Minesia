@@ -1,0 +1,36 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.meteorite_helmet",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "root_item",
+					"pivot": [0, 2, 0]
+				},
+				{
+					"name": "helmet",
+					"parent": "root_item",
+					"pivot": [0, 2, 0],
+					"binding": "'head'",
+					"cubes": [
+						{"origin": [-4, 2, -4], "size": [8, 8, 8], "inflate": 0.525, "uv": [0, 0]},
+						{"origin": [-4, 2, -4], "size": [8, 8, 8], "inflate": 0.725, "uv": [0, 17]},
+						{"origin": [1.64784, 1.275, -5.33709], "size": [3, 3, 1], "pivot": [3.14784, 2.775, -4.83709], "rotation": [0, -22.5, 0], "uv": [33, 15]},
+						{"origin": [-4.64784, 1.275, -5.33709], "size": [3, 3, 1], "pivot": [-3.14784, 2.775, -4.83709], "rotation": [0, 22.5, 0], "uv": [33, 15], "mirror": true},
+						{"origin": [-4.64784, 6.725, -5.33709], "size": [3, 6, 2], "pivot": [-3.14784, 9.225, -4.83709], "rotation": [0, 22.5, 0], "uv": [33, 0], "mirror": true},
+						{"origin": [1.64784, 6.725, -5.33709], "size": [3, 6, 2], "pivot": [3.14784, 9.225, -4.83709], "rotation": [0, -22.5, 0], "uv": [33, 0]},
+						{"origin": [-1.95336, 6.725, -5.87305], "size": [3.90672, 4, 1], "inflate": 0.1, "uv": [33, 9]}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,19 @@
+{
+    "format_version": "1.21.60",
+    "minecraft:structure_template_feature": {
+        "description": {
+            "identifier": "5fs_br:trees/palm/palm_tree_1"
+        },
+        "structure_name": "5fs_br:palm_tree/palm_tree_1",
+        "adjustment_radius": 0,
+        "facing_direction": "south",
+        "constraints": {
+            "block_intersection": {
+                "block_allowlist": [
+                    "minecraft:air",
+                    "5fs_br:palm_sapling"
+                ]
+            }
+        }
+    }
+}

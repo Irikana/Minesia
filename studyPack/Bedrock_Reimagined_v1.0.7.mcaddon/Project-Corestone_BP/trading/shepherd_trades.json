@@ -1,0 +1,461 @@
+{
+  "tiers": [
+    {
+      "trades": [
+        {
+          "wants": [
+            {
+              "item": "minecraft:wool",
+              "quantity": {
+                "min": 16,
+                "max": 22
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:emerald"
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": {
+                "min": 3,
+                "max": 4
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:shears"
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 3
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:bundle"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trades": [
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": {
+                "min": 1,
+                "max": 2
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:wool:0",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": {
+                "min": 1,
+                "max": 2
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:wool:1",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": {
+                "min": 1,
+                "max": 2
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:wool:2",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": {
+                "min": 1,
+                "max": 2
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:wool:3",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": {
+                "min": 1,
+                "max": 2
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:wool:4",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": {
+                "min": 1,
+                "max": 2
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:wool:5",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": {
+                "min": 1,
+                "max": 2
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:wool:6",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": {
+                "min": 1,
+                "max": 2
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:wool:7",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": {
+                "min": 1,
+                "max": 2
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:wool:8",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": {
+                "min": 1,
+                "max": 2
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:wool:9",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": {
+                "min": 1,
+                "max": 2
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:wool:10",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": {
+                "min": 1,
+                "max": 2
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:wool:11",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": {
+                "min": 1,
+                "max": 2
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:wool:12",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": {
+                "min": 1,
+                "max": 2
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:wool:13",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": {
+                "min": 1,
+                "max": 2
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:wool:14",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": {
+                "min": 1,
+                "max": 2
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:wool:15",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 3
+            }
+          ],
+          "gives": [
+            {
+              "choice": [
+                { "item": "5fs_br:black_sleeping_bag" },
+                { "item": "5fs_br:blue_sleeping_bag" },
+                { "item": "5fs_br:brown_sleeping_bag" },
+                { "item": "5fs_br:cyan_sleeping_bag" },
+                { "item": "5fs_br:gray_sleeping_bag" },
+                { "item": "5fs_br:green_sleeping_bag" },
+                { "item": "5fs_br:light_blue_sleeping_bag" },
+                { "item": "5fs_br:light_gray_sleeping_bag" },
+                { "item": "5fs_br:lime_sleeping_bag" },
+                { "item": "5fs_br:magenta_sleeping_bag" },
+                { "item": "5fs_br:orange_sleeping_bag" },
+                { "item": "5fs_br:pink_sleeping_bag" },
+                { "item": "5fs_br:purple_sleeping_bag" },
+                { "item": "5fs_br:red_sleeping_bag" },
+                { "item": "5fs_br:white_sleeping_bag" },
+                { "item": "5fs_br:yellow_sleeping_bag" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trades": [
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 12
+            }
+          ],
+          "gives": [
+            {
+              "choice": [
+                { "item": "5fs_br:black_deep_bundle" },
+                { "item": "5fs_br:blue_deep_bundle" },
+                { "item": "5fs_br:brown_deep_bundle" },
+                { "item": "5fs_br:deep_bundle" },
+                { "item": "5fs_br:cyan_deep_bundle" },
+                { "item": "5fs_br:gray_deep_bundle" },
+                { "item": "5fs_br:green_deep_bundle" },
+                { "item": "5fs_br:light_blue_deep_bundle" },
+                { "item": "5fs_br:light_gray_deep_bundle" },
+                { "item": "5fs_br:lime_deep_bundle" },
+                { "item": "5fs_br:magenta_deep_bundle" },
+                { "item": "5fs_br:orange_deep_bundle" },
+                { "item": "5fs_br:pink_deep_bundle" },
+                { "item": "5fs_br:purple_deep_bundle" },
+                { "item": "5fs_br:red_deep_bundle" },
+                { "item": "5fs_br:white_deep_bundle" },
+                { "item": "5fs_br:yellow_deep_bundle" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trades": [
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 32
+            }
+          ],
+          "gives": [
+            {
+              "item": "5fs_br:crystalline_shears"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trades": [
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 12
+            }
+          ],
+          "gives": [
+            {
+              "choice": [
+                { "item": "5fs_br:cape_of_amethyst" },
+                { "item": "5fs_br:cape_of_barrel" },
+                { "item": "5fs_br:cape_of_bear" },
+                { "item": "5fs_br:cape_of_bee" },
+                { "item": "5fs_br:cape_of_cactus" },
+                { "item": "5fs_br:cape_of_cherry" },
+                { "item": "5fs_br:cape_of_coral_cove" },
+                { "item": "5fs_br:cape_of_cow" },
+                { "item": "5fs_br:cape_of_enchanting_table" },
+                { "item": "5fs_br:cape_of_enderman" },
+                { "item": "5fs_br:cape_of_fox" },
+                { "item": "5fs_br:cape_of_frozen" },
+                { "item": "5fs_br:cape_of_furnace" },
+                { "item": "5fs_br:cape_of_glimmerite" },
+                { "item": "5fs_br:cape_of_glowstone" },
+                { "item": "5fs_br:cape_of_honeycomb" },
+                { "item": "5fs_br:cape_of_ice_spikes" },
+                { "item": "5fs_br:cape_of_lumberjack" },
+                { "item": "5fs_br:cape_of_night_sky" },
+                { "item": "5fs_br:cape_of_pig" },
+                { "item": "5fs_br:cape_of_potion" },
+                { "item": "5fs_br:cape_of_prismarine" },
+                { "item": "5fs_br:cape_of_pumpkin" },
+                { "item": "5fs_br:cape_of_purple_magic" },
+                { "item": "5fs_br:cape_of_redstone" },
+                { "item": "5fs_br:cape_of_shulker" },
+                { "item": "5fs_br:cape_of_snowy" },
+                { "item": "5fs_br:cape_of_turtle" },
+                { "item": "5fs_br:cape_of_warden" },
+                { "item": "5fs_br:cape_of_witch" },
+                { "item": "5fs_br:cape_of_wither" },
+                { "item": "5fs_br:cape_of_yellow_magic" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

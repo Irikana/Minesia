@@ -1,0 +1,103 @@
+{
+	"format_version": "1.21.130",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "5fs_br:mummified_pharaoh_hammer",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"5fs_br:instant_despawn": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"components": {
+			"minecraft:health": {
+				"min": 1,
+				"value": 1
+			},
+			"minecraft:collision_box": {
+				"width": 0.5,
+				"height": 0.5
+			},
+			"minecraft:projectile": {
+				"on_hit": {
+					"impact_damage": {
+						"damage": 5,
+						"knockback": true
+					}
+				},
+				"power": 2.5,
+				"inertia": 1,
+				"liquid_inertia": 1,
+				"gravity": 0,
+				"uncertainty_base": 0,
+				"uncertainty_multiplier": 0,
+				"offset": [
+					0,
+					1,
+					0
+				],
+				"reflect_on_hurt": true
+			},
+			"minecraft:area_attack": {
+				"damage_per_tick": 5,
+				"damage_range": 5,
+				"damage_cooldown": 0,
+				"cause": "entity_attack",
+				"entity_filter": {
+					"all_of": [
+						{
+							"test": "is_family",
+							"subject": "other",
+							"operator": "!=",
+							"value": "inanimate"
+						},
+						{
+							"test": "is_family",
+							"subject": "other",
+							"operator": "!=",
+							"value": "boss"
+						}
+					]
+				}
+			},
+			"minecraft:timer": {
+				"time": 1.62,
+				"looping": true,
+				"time_down_event": {
+					"event": "5fs_br:despawn",
+					"target": "self"
+				}
+			},
+			"minecraft:physics": {
+				"has_gravity": false
+			},
+			"minecraft:pushable": {
+				"is_pushable": true,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "all",
+					"deals_damage": "no"
+				}
+			},
+			"minecraft:type_family": {
+				"family": [
+					"inanimate"
+				]
+			}
+		},
+		"events": {
+			"5fs_br:despawn": {
+				"add": {
+					"component_groups": [
+						"5fs_br:instant_despawn"
+					]
+				}
+			}
+		}
+	}
+}

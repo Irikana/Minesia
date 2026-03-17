@@ -1,0 +1,1186 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "minecraft:player",
+      "spawn_category": "creature",
+      "is_spawnable": false,
+      "is_summonable": false
+    },
+    "component_groups": {
+      "5fs_br:sandstorm": {
+        "minecraft:behavior.timer_flag_1": {
+          "cooldown_range": 0,
+          "duration_range": 30,
+          "on_end": {
+            "event": "5fs_br:sandstorm_end",
+            "target": "self"
+          }
+        }
+      },
+      "5fs_br:no_fall_damage_jelly": {
+        "minecraft:damage_sensor": {
+          "triggers": {
+            "cause": "fall",
+            "deals_damage": false
+          }
+        }
+      },
+      "5fs_br:shrinkify": {
+        "minecraft:movement": {
+          "value": 0.2
+        },
+        "minecraft:health": {
+          "max": 10
+        },
+        "minecraft:scale": {
+          "value": 0.25
+        }
+      },
+      "5fs_br:gigantify": {
+        "minecraft:movement": {
+          "value": 0.08
+        },
+        "minecraft:health": {
+          "max": 40
+        },
+        "minecraft:scale": {
+          "value": 2
+        }
+      },
+      "5fs_br:normal_scale": {
+        "minecraft:movement": {
+          "value": 0.1
+        },
+        "minecraft:health": {
+          "max": 20
+        },
+        "minecraft:scale": {
+          "value": 1
+        }
+      },
+      "minecraft:add_raid_omen": {
+        "minecraft:spell_effects": {
+          "add_effects": [
+            {
+              "effect": "raid_omen",
+              "duration": 30,
+              "display_on_screen_animation": true
+            }
+          ],
+          "remove_effects": "bad_omen"
+        },
+        "minecraft:timer": {
+          "time": [
+            0,
+            0
+          ],
+          "looping": false,
+          "time_down_event": {
+            "event": "minecraft:clear_add_raid_omen",
+            "target": "self"
+          }
+        }
+      },
+      "minecraft:clear_raid_omen_spell_effect": {
+        "minecraft:spell_effects": {}
+      },
+      "minecraft:raid_trigger": {
+        "minecraft:raid_trigger": {
+          "triggered_event": {
+            "event": "minecraft:remove_raid_trigger",
+            "target": "self"
+          }
+        }
+      },
+      "5fs_br:hp_10": {
+        "minecraft:health": {
+          "max": 10
+        }
+      },
+      "5fs_br:hp_11": {
+        "minecraft:health": {
+          "max": 11
+        }
+      },
+      "5fs_br:hp_12": {
+        "minecraft:health": {
+          "max": 12
+        }
+      },
+      "5fs_br:hp_13": {
+        "minecraft:health": {
+          "max": 13
+        }
+      },
+      "5fs_br:hp_14": {
+        "minecraft:health": {
+          "max": 14
+        }
+      },
+      "5fs_br:hp_15": {
+        "minecraft:health": {
+          "max": 15
+        }
+      },
+      "5fs_br:hp_16": {
+        "minecraft:health": {
+          "max": 16
+        }
+      },
+      "5fs_br:hp_17": {
+        "minecraft:health": {
+          "max": 17
+        }
+      },
+      "5fs_br:hp_18": {
+        "minecraft:health": {
+          "max": 18
+        }
+      },
+      "5fs_br:hp_19": {
+        "minecraft:health": {
+          "max": 19
+        }
+      },
+      "5fs_br:hp_20": {
+        "minecraft:health": {
+          "max": 20
+        }
+      },
+      "5fs_br:hp_21": {
+        "minecraft:health": {
+          "max": 21
+        }
+      },
+      "5fs_br:hp_22": {
+        "minecraft:health": {
+          "max": 22
+        }
+      },
+      "5fs_br:hp_23": {
+        "minecraft:health": {
+          "max": 23
+        }
+      },
+      "5fs_br:hp_24": {
+        "minecraft:health": {
+          "max": 24
+        }
+      },
+      "5fs_br:hp_25": {
+        "minecraft:health": {
+          "max": 25
+        }
+      },
+      "5fs_br:hp_26": {
+        "minecraft:health": {
+          "max": 26
+        }
+      },
+      "5fs_br:hp_27": {
+        "minecraft:health": {
+          "max": 27
+        }
+      },
+      "5fs_br:hp_28": {
+        "minecraft:health": {
+          "max": 28
+        }
+      },
+      "5fs_br:hp_29": {
+        "minecraft:health": {
+          "max": 29
+        }
+      },
+      "5fs_br:hp_30": {
+        "minecraft:health": {
+          "max": 30
+        }
+      },
+      "5fs_br:hp_31": {
+        "minecraft:health": {
+          "max": 31
+        }
+      },
+      "5fs_br:hp_32": {
+        "minecraft:health": {
+          "max": 32
+        }
+      },
+      "5fs_br:hp_33": {
+        "minecraft:health": {
+          "max": 33
+        }
+      },
+      "5fs_br:hp_34": {
+        "minecraft:health": {
+          "max": 34
+        }
+      },
+      "5fs_br:hp_35": {
+        "minecraft:health": {
+          "max": 35
+        }
+      },
+      "5fs_br:hp_36": {
+        "minecraft:health": {
+          "max": 36
+        }
+      },
+      "5fs_br:hp_37": {
+        "minecraft:health": {
+          "max": 37
+        }
+      },
+      "5fs_br:hp_38": {
+        "minecraft:health": {
+          "max": 38
+        }
+      },
+      "5fs_br:hp_39": {
+        "minecraft:health": {
+          "max": 39
+        }
+      },
+      "5fs_br:hp_40": {
+        "minecraft:health": {
+          "max": 40
+        }
+      },
+      "5fs_br:hp_41": {
+        "minecraft:health": {
+          "max": 41
+        }
+      },
+      "5fs_br:hp_42": {
+        "minecraft:health": {
+          "max": 42
+        }
+      },
+      "5fs_br:hp_43": {
+        "minecraft:health": {
+          "max": 43
+        }
+      },
+      "5fs_br:hp_44": {
+        "minecraft:health": {
+          "max": 44
+        }
+      },
+      "5fs_br:hp_45": {
+        "minecraft:health": {
+          "max": 45
+        }
+      },
+      "5fs_br:hp_46": {
+        "minecraft:health": {
+          "max": 46
+        }
+      },
+      "5fs_br:hp_47": {
+        "minecraft:health": {
+          "max": 47
+        }
+      },
+      "5fs_br:hp_48": {
+        "minecraft:health": {
+          "max": 48
+        }
+      },
+      "5fs_br:hp_49": {
+        "minecraft:health": {
+          "max": 49
+        }
+      },
+      "5fs_br:hp_50": {
+        "minecraft:health": {
+          "max": 50
+        }
+      },
+      "5fs_br:hp_51": {
+        "minecraft:health": {
+          "max": 51
+        }
+      },
+      "5fs_br:hp_52": {
+        "minecraft:health": {
+          "max": 52
+        }
+      },
+      "5fs_br:hp_53": {
+        "minecraft:health": {
+          "max": 53
+        }
+      },
+      "5fs_br:hp_54": {
+        "minecraft:health": {
+          "max": 54
+        }
+      },
+      "5fs_br:hp_55": {
+        "minecraft:health": {
+          "max": 55
+        }
+      },
+      "5fs_br:hp_56": {
+        "minecraft:health": {
+          "max": 56
+        }
+      },
+      "5fs_br:hp_57": {
+        "minecraft:health": {
+          "max": 57
+        }
+      },
+      "5fs_br:hp_58": {
+        "minecraft:health": {
+          "max": 58
+        }
+      },
+      "5fs_br:hp_59": {
+        "minecraft:health": {
+          "max": 59
+        }
+      },
+      "5fs_br:hp_60": {
+        "minecraft:health": {
+          "max": 60
+        }
+      },
+      "5fs_br:exhaustion_0": {
+        "minecraft:exhaustion_values": {
+          "heal": 6,
+          "jump": 0.05,
+          "sprint_jump": 0.2,
+          "mine": 0.005,
+          "attack": 0.1,
+          "damage": 0.1,
+          "walk": 0,
+          "sprint": 0.1,
+          "swim": 0.01,
+          "lunge": 4
+        }
+      },
+      "5fs_br:exhaustion_1": {
+        "minecraft:exhaustion_values": {
+          "heal": 5.7,
+          "jump": 0.0475,
+          "sprint_jump": 0.19,
+          "mine": 0.00475,
+          "attack": 0.095,
+          "damage": 0.095,
+          "walk": 0,
+          "sprint": 0.095,
+          "swim": 0.0095,
+          "lunge": 3.8
+        }
+      },
+      "5fs_br:exhaustion_2": {
+        "minecraft:exhaustion_values": {
+          "heal": 5.4,
+          "jump": 0.045,
+          "sprint_jump": 0.18,
+          "mine": 0.0045,
+          "attack": 0.09,
+          "damage": 0.09,
+          "walk": 0,
+          "sprint": 0.09,
+          "swim": 0.009,
+          "lunge": 3.6
+        }
+      },
+      "5fs_br:exhaustion_3": {
+        "minecraft:exhaustion_values": {
+          "heal": 5.1,
+          "jump": 0.0425,
+          "sprint_jump": 0.17,
+          "mine": 0.00425,
+          "attack": 0.085,
+          "damage": 0.085,
+          "walk": 0,
+          "sprint": 0.085,
+          "swim": 0.0085,
+          "lunge": 3.4
+        }
+      },
+      "5fs_br:exhaustion_4": {
+        "minecraft:exhaustion_values": {
+          "heal": 4.8,
+          "jump": 0.04,
+          "sprint_jump": 0.16,
+          "mine": 0.004,
+          "attack": 0.08,
+          "damage": 0.08,
+          "walk": 0,
+          "sprint": 0.08,
+          "swim": 0.008,
+          "lunge": 3.2
+        }
+      },
+      "5fs_br:exhaustion_5": {
+        "minecraft:exhaustion_values": {
+          "heal": 4.5,
+          "jump": 0.0375,
+          "sprint_jump": 0.15,
+          "mine": 0.00375,
+          "attack": 0.075,
+          "damage": 0.075,
+          "walk": 0,
+          "sprint": 0.075,
+          "swim": 0.0075,
+          "lunge": 3
+        }
+      },
+      "5fs_br:exhaustion_6": {
+        "minecraft:exhaustion_values": {
+          "heal": 4.2,
+          "jump": 0.035,
+          "sprint_jump": 0.14,
+          "mine": 0.0035,
+          "attack": 0.07,
+          "damage": 0.07,
+          "walk": 0,
+          "sprint": 0.07,
+          "swim": 0.007,
+          "lunge": 2.8
+        }
+      },
+      "5fs_br:exhaustion_7": {
+        "minecraft:exhaustion_values": {
+          "heal": 3.9,
+          "jump": 0.0325,
+          "sprint_jump": 0.13,
+          "mine": 0.00325,
+          "attack": 0.065,
+          "damage": 0.065,
+          "walk": 0,
+          "sprint": 0.065,
+          "swim": 0.0065,
+          "lunge": 2.6
+        }
+      },
+      "5fs_br:exhaustion_8": {
+        "minecraft:exhaustion_values": {
+          "heal": 3.6,
+          "jump": 0.03,
+          "sprint_jump": 0.12,
+          "mine": 0.003,
+          "attack": 0.06,
+          "damage": 0.06,
+          "walk": 0,
+          "sprint": 0.06,
+          "swim": 0.006,
+          "lunge": 2.4
+        }
+      },
+      "5fs_br:exhaustion_9": {
+        "minecraft:exhaustion_values": {
+          "heal": 3.3,
+          "jump": 0.0275,
+          "sprint_jump": 0.11,
+          "mine": 0.00275,
+          "attack": 0.055,
+          "damage": 0.055,
+          "walk": 0,
+          "sprint": 0.055,
+          "swim": 0.0055,
+          "lunge": 2.2
+        }
+      },
+      "5fs_br:exhaustion_10": {
+        "minecraft:exhaustion_values": {
+          "heal": 3,
+          "jump": 0.025,
+          "sprint_jump": 0.1,
+          "mine": 0.0025,
+          "attack": 0.05,
+          "damage": 0.05,
+          "walk": 0,
+          "sprint": 0.05,
+          "swim": 0.005,
+          "lunge": 2
+        }
+      }
+    },
+    "components": {
+      "minecraft:experience_reward": {
+        "on_death": "Math.Min(query.player_level * 7, 100)"
+      },
+      "minecraft:type_family": {
+        "family": [
+          "player"
+        ]
+      },
+      "minecraft:is_hidden_when_invisible": {},
+      "minecraft:loot": {
+        "table": "loot_tables/empty.json"
+      },
+      "minecraft:collision_box": {
+        "width": 0.6,
+        "height": 1.8
+      },
+      "minecraft:can_climb": {},
+      "minecraft:movement": {
+        "value": 0.1
+      },
+      "minecraft:hurt_on_condition": {
+        "damage_conditions": [
+          {
+            "filters": {
+              "test": "in_lava",
+              "subject": "self",
+              "operator": "==",
+              "value": true
+            },
+            "cause": "lava",
+            "damage_per_tick": 4
+          }
+        ]
+      },
+      "minecraft:attack": {
+        "damage": 1
+      },
+      "minecraft:exhaustion_values": {
+        "heal": 6,
+        "jump": 0.05,
+        "sprint_jump": 0.2,
+        "mine": 0.005,
+        "attack": 0.1,
+        "damage": 0.1,
+        "walk": 0,
+        "sprint": 0.1,
+        "swim": 0.01,
+        "lunge": 4
+      },
+      "minecraft:player.saturation": {
+        "value": 5,
+        "max": 20
+      },
+      "minecraft:player.exhaustion": {
+        "value": 0,
+        "max": 20
+      },
+      "minecraft:player.level": {
+        "value": 0,
+        "max": 24791
+      },
+      "minecraft:player.experience": {
+        "value": 0,
+        "max": 1
+      },
+      "minecraft:breathable": {
+        "total_supply": 15,
+        "suffocate_time": -1,
+        "inhale_time": 3.75,
+        "generates_bubbles": false
+      },
+      "minecraft:nameable": {
+        "always_show": true,
+        "allow_name_tag_renaming": false
+      },
+      "minecraft:physics": {
+        "push_towards_closest_space": true
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:insomnia": {
+        "days_until_insomnia": 3
+      },
+      "minecraft:rideable": {
+        "seat_count": 2,
+        "family_types": [
+          "parrot_tame"
+        ],
+        "pull_in_entities": true,
+        "seats": [
+          {
+            "position": [
+              0.4,
+              -0.2,
+              -0.1
+            ],
+            "min_rider_count": 0,
+            "max_rider_count": 0,
+            "lock_rider_rotation": 0
+          },
+          {
+            "position": [
+              -0.4,
+              -0.2,
+              -0.1
+            ],
+            "min_rider_count": 1,
+            "max_rider_count": 2,
+            "lock_rider_rotation": 0
+          }
+        ]
+      },
+      "minecraft:conditional_bandwidth_optimization": {},
+      "minecraft:block_climber": {},
+      "minecraft:environment_sensor": {
+        "triggers": {
+          "filters": {
+            "all_of": [
+              {
+                "test": "has_mob_effect",
+                "subject": "self",
+                "value": "bad_omen"
+              },
+              {
+                "test": "is_in_village",
+                "subject": "self",
+                "value": true
+              }
+            ]
+          },
+          "event": "minecraft:gain_raid_omen"
+        }
+      }
+    },
+    "events": {
+      "5fs_br:sandstorm": {
+        "add": {
+          "component_groups": [
+            "5fs_br:sandstorm"
+          ]
+        }
+      },
+      "5fs_br:sandstorm_end": {
+        "queue_command": {
+          "command": [
+            "tag @s remove 5fs_br:pharaoh_sandstorm",
+            "weather clear"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "5fs_br:sandstorm"
+          ]
+        }
+      },
+      "5fs_br:no_fall_damage_jelly": {
+        "add": {
+          "component_groups": [
+            "5fs_br:no_fall_damage_jelly"
+          ]
+        }
+      },
+      "5fs_br:fall_damage_jelly": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:no_fall_damage_jelly"
+          ]
+        }
+      },
+      "5fs_br:normal_scale": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:shrinkify",
+            "5fs_br:gigantify"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:normal_scale"
+          ]
+        }
+      },
+      "5fs_br:gigantify": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:shrinkify",
+            "5fs_br:normal_scale"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:gigantify"
+          ]
+        }
+      },
+      "5fs_br:shrinkify": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:gigantify",
+            "5fs_br:normal_scale"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:shrinkify"
+          ]
+        }
+      },
+      "minecraft:gain_raid_omen": {
+        "add": {
+          "component_groups": [
+            "minecraft:add_raid_omen"
+          ]
+        }
+      },
+      "minecraft:clear_add_raid_omen": {
+        "remove": {
+          "component_groups": [
+            "minecraft:add_raid_omen"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "minecraft:clear_raid_omen_spell_effect"
+          ]
+        }
+      },
+      "minecraft:trigger_raid": {
+        "add": {
+          "component_groups": [
+            "minecraft:raid_trigger"
+          ]
+        }
+      },
+      "minecraft:remove_raid_trigger": {
+        "remove": {
+          "component_groups": [
+            "minecraft:raid_trigger"
+          ]
+        }
+      },
+      "5fs_br:set_hp_10": {
+        "add": {
+          "component_groups": [
+            "5fs_br:hp_10"
+          ]
+        }
+      },
+      "5fs_br:set_hp_11": {
+        "add": {
+          "component_groups": [
+            "5fs_br:hp_11"
+          ]
+        }
+      },
+      "5fs_br:set_hp_12": {
+        "add": {
+          "component_groups": [
+            "5fs_br:hp_12"
+          ]
+        }
+      },
+      "5fs_br:set_hp_13": {
+        "add": {
+          "component_groups": [
+            "5fs_br:hp_13"
+          ]
+        }
+      },
+      "5fs_br:set_hp_14": {
+        "add": {
+          "component_groups": [
+            "5fs_br:hp_14"
+          ]
+        }
+      },
+      "5fs_br:set_hp_15": {
+        "add": {
+          "component_groups": [
+            "5fs_br:hp_15"
+          ]
+        }
+      },
+      "5fs_br:set_hp_16": {
+        "add": {
+          "component_groups": [
+            "5fs_br:hp_16"
+          ]
+        }
+      },
+      "5fs_br:set_hp_17": {
+        "add": {
+          "component_groups": [
+            "5fs_br:hp_17"
+          ]
+        }
+      },
+      "5fs_br:set_hp_18": {
+        "add": {
+          "component_groups": [
+            "5fs_br:hp_18"
+          ]
+        }
+      },
+      "5fs_br:set_hp_19": {
+        "add": {
+          "component_groups": [
+            "5fs_br:hp_19"
+          ]
+        }
+      },
+      "5fs_br:set_hp_20": {
+        "add": {
+          "component_groups": [
+            "5fs_br:hp_20"
+          ]
+        }
+      },
+      "5fs_br:set_hp_21": {
+        "add": {
+          "component_groups": [
+            "5fs_br:hp_21"
+          ]
+        }
+      },
+      "5fs_br:set_hp_22": {
+        "add": {
+          "component_groups": [
+            "5fs_br:hp_22"
+          ]
+        }
+      },
+      "5fs_br:set_hp_23": {
+        "add": {
+          "component_groups": [
+            "5fs_br:hp_23"
+          ]
+        }
+      },
+      "5fs_br:set_hp_24": {
+        "add": {
+          "component_groups": [
+            "5fs_br:hp_24"
+          ]
+        }
+      },
+      "5fs_br:set_hp_25": {
+        "add": {
+          "component_groups": [
+            "5fs_br:hp_25"
+          ]
+        }
+      },
+      "5fs_br:set_hp_26": {
+        "add": {
+          "component_groups": [
+            "5fs_br:hp_26"
+          ]
+        }
+      },
+      "5fs_br:set_hp_27": {
+        "add": {
+          "component_groups": [
+            "5fs_br:hp_27"
+          ]
+        }
+      },
+      "5fs_br:set_hp_28": {
+        "add": {
+          "component_groups": [
+            "5fs_br:hp_28"
+          ]
+        }
+      },
+      "5fs_br:set_hp_29": {
+        "add": {
+          "component_groups": [
+            "5fs_br:hp_29"
+          ]
+        }
+      },
+      "5fs_br:set_hp_30": {
+        "add": {
+          "component_groups": [
+            "5fs_br:hp_30"
+          ]
+        }
+      },
+      "5fs_br:set_hp_31": {
+        "add": {
+          "component_groups": [
+            "5fs_br:hp_31"
+          ]
+        }
+      },
+      "5fs_br:set_hp_32": {
+        "add": {
+          "component_groups": [
+            "5fs_br:hp_32"
+          ]
+        }
+      },
+      "5fs_br:set_hp_33": {
+        "add": {
+          "component_groups": [
+            "5fs_br:hp_33"
+          ]
+        }
+      },
+      "5fs_br:set_hp_34": {
+        "add": {
+          "component_groups": [
+            "5fs_br:hp_34"
+          ]
+        }
+      },
+      "5fs_br:set_hp_35": {
+        "add": {
+          "component_groups": [
+            "5fs_br:hp_35"
+          ]
+        }
+      },
+      "5fs_br:set_hp_36": {
+        "add": {
+          "component_groups": [
+            "5fs_br:hp_36"
+          ]
+        }
+      },
+      "5fs_br:set_hp_37": {
+        "add": {
+          "component_groups": [
+            "5fs_br:hp_37"
+          ]
+        }
+      },
+      "5fs_br:set_hp_38": {
+        "add": {
+          "component_groups": [
+            "5fs_br:hp_38"
+          ]
+        }
+      },
+      "5fs_br:set_hp_39": {
+        "add": {
+          "component_groups": [
+            "5fs_br:hp_39"
+          ]
+        }
+      },
+      "5fs_br:set_hp_40": {
+        "add": {
+          "component_groups": [
+            "5fs_br:hp_40"
+          ]
+        }
+      },
+      "5fs_br:set_hp_41": {
+        "add": {
+          "component_groups": [
+            "5fs_br:hp_41"
+          ]
+        }
+      },
+      "5fs_br:set_hp_42": {
+        "add": {
+          "component_groups": [
+            "5fs_br:hp_42"
+          ]
+        }
+      },
+      "5fs_br:set_hp_43": {
+        "add": {
+          "component_groups": [
+            "5fs_br:hp_43"
+          ]
+        }
+      },
+      "5fs_br:set_hp_44": {
+        "add": {
+          "component_groups": [
+            "5fs_br:hp_44"
+          ]
+        }
+      },
+      "5fs_br:set_hp_45": {
+        "add": {
+          "component_groups": [
+            "5fs_br:hp_45"
+          ]
+        }
+      },
+      "5fs_br:set_hp_46": {
+        "add": {
+          "component_groups": [
+            "5fs_br:hp_46"
+          ]
+        }
+      },
+      "5fs_br:set_hp_47": {
+        "add": {
+          "component_groups": [
+            "5fs_br:hp_47"
+          ]
+        }
+      },
+      "5fs_br:set_hp_48": {
+        "add": {
+          "component_groups": [
+            "5fs_br:hp_48"
+          ]
+        }
+      },
+      "5fs_br:set_hp_49": {
+        "add": {
+          "component_groups": [
+            "5fs_br:hp_49"
+          ]
+        }
+      },
+      "5fs_br:set_hp_50": {
+        "add": {
+          "component_groups": [
+            "5fs_br:hp_50"
+          ]
+        }
+      },
+      "5fs_br:set_hp_51": {
+        "add": {
+          "component_groups": [
+            "5fs_br:hp_51"
+          ]
+        }
+      },
+      "5fs_br:set_hp_52": {
+        "add": {
+          "component_groups": [
+            "5fs_br:hp_52"
+          ]
+        }
+      },
+      "5fs_br:set_hp_53": {
+        "add": {
+          "component_groups": [
+            "5fs_br:hp_53"
+          ]
+        }
+      },
+      "5fs_br:set_hp_54": {
+        "add": {
+          "component_groups": [
+            "5fs_br:hp_54"
+          ]
+        }
+      },
+      "5fs_br:set_hp_55": {
+        "add": {
+          "component_groups": [
+            "5fs_br:hp_55"
+          ]
+        }
+      },
+      "5fs_br:set_hp_56": {
+        "add": {
+          "component_groups": [
+            "5fs_br:hp_56"
+          ]
+        }
+      },
+      "5fs_br:set_hp_57": {
+        "add": {
+          "component_groups": [
+            "5fs_br:hp_57"
+          ]
+        }
+      },
+      "5fs_br:set_hp_58": {
+        "add": {
+          "component_groups": [
+            "5fs_br:hp_58"
+          ]
+        }
+      },
+      "5fs_br:set_hp_59": {
+        "add": {
+          "component_groups": [
+            "5fs_br:hp_59"
+          ]
+        }
+      },
+      "5fs_br:set_hp_60": {
+        "add": {
+          "component_groups": [
+            "5fs_br:hp_60"
+          ]
+        }
+      },
+      "5fs_br:set_exhaustion_0": {
+        "add": {
+          "component_groups": [
+            "5fs_br:exhaustion_0"
+          ]
+        }
+      },
+      "5fs_br:set_exhaustion_1": {
+        "add": {
+          "component_groups": [
+            "5fs_br:exhaustion_1"
+          ]
+        }
+      },
+      "5fs_br:set_exhaustion_2": {
+        "add": {
+          "component_groups": [
+            "5fs_br:exhaustion_2"
+          ]
+        }
+      },
+      "5fs_br:set_exhaustion_3": {
+        "add": {
+          "component_groups": [
+            "5fs_br:exhaustion_3"
+          ]
+        }
+      },
+      "5fs_br:set_exhaustion_4": {
+        "add": {
+          "component_groups": [
+            "5fs_br:exhaustion_4"
+          ]
+        }
+      },
+      "5fs_br:set_exhaustion_5": {
+        "add": {
+          "component_groups": [
+            "5fs_br:exhaustion_5"
+          ]
+        }
+      },
+      "5fs_br:set_exhaustion_6": {
+        "add": {
+          "component_groups": [
+            "5fs_br:exhaustion_6"
+          ]
+        }
+      },
+      "5fs_br:set_exhaustion_7": {
+        "add": {
+          "component_groups": [
+            "5fs_br:exhaustion_7"
+          ]
+        }
+      },
+      "5fs_br:set_exhaustion_8": {
+        "add": {
+          "component_groups": [
+            "5fs_br:exhaustion_8"
+          ]
+        }
+      },
+      "5fs_br:set_exhaustion_9": {
+        "add": {
+          "component_groups": [
+            "5fs_br:exhaustion_9"
+          ]
+        }
+      },
+      "5fs_br:set_exhaustion_10": {
+        "add": {
+          "component_groups": [
+            "5fs_br:exhaustion_10"
+          ]
+        }
+      }
+    }
+  }
+}

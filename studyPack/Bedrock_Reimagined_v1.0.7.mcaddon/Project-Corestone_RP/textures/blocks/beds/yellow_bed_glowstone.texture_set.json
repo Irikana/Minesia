@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "yellow_bed_glowstone",
+		"metalness_emissive_roughness": "yellow_bed_glowstone_mer"
+	}
+}

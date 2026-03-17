@@ -1,0 +1,28 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "5fs_br:red_mushroom_to_polypore"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "minecraft:red_mushroom"
+			},
+			{
+				"item": "minecraft:red_mushroom"
+			}
+		],
+		"result": {
+			"item": "5fs_br:red_polypore",
+			"count": 2
+		},
+		"unlock": [
+            {
+                "item": "minecraft:red_mushroom"
+            }
+        ]
+	}
+}

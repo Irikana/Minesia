@@ -1,0 +1,33 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "5fs_br:zombie_chicken",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/mobs/zombie_chicken"
+      },
+      "geometry": {
+        "default": "geometry.zombie_chicken"
+      },
+      "animations": {
+        "death":   "animation.zombie_chicken.death",
+        "flying":  "animation.zombie_chicken.flying",
+        "attack":  "animation.zombie_chicken.attack",
+        "idle":    "animation.zombie_chicken.idle",
+        "walking": "animation.zombie_chicken.walking"
+      },
+      "animation_controllers": [
+        { "move": "controller.animation.zombie_chicken" }
+      ],
+      "render_controllers": [
+        "controller.render.default"
+      ],
+      "spawn_egg": {
+        "texture": "5fs_br:zombie_chicken"
+      }
+    }
+  }
+}

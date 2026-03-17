@@ -1,0 +1,23 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.cobalt_wand.1fp": {
+			"loop": true,
+			"bones": {
+				"bone16": {
+					"rotation": [47.05782, 46.91981, -99.37366],
+					"position": [0, 0, 6]
+				}
+			}
+		},
+		"animation.cobalt_wand.3pp": {
+			"loop": true,
+			"bones": {
+				"bone16": {
+					"rotation": [90, 0, 0],
+					"position": [0, 10, -1]
+				}
+			}
+		}
+	}
+}

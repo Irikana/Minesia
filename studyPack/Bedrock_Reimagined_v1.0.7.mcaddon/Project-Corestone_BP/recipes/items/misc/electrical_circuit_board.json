@@ -1,0 +1,38 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "5fs_br:electrical_circuit_board"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"D": {
+				"item": "5fs_br:compact_diamond"
+			},
+     "E": {
+				"item": "5fs_br:compact_emerald"
+			},
+     "P": {
+				"item": "5fs_br:compact_copper_ingot"
+			},
+     "R": {
+				"item": "minecraft:redstone_block"
+			}
+		},
+		"pattern": [
+			"PPP",
+			"EPP",
+			"DRR"
+		],
+		"result": {
+			"item": "5fs_br:electrical_circuit_board"
+		},
+		"unlock": [
+			{
+				"item": "5fs_br:compact_copper_ingot"
+			}
+		]
+	}
+}

@@ -1,0 +1,38 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:attachable": {
+        "description": {
+            "identifier": "5fs_br:dragonite_trident",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/gears/dragonite_trident"
+            },
+            "geometry": {
+                "default": "geometry.dragonite_tridentv2"
+            },
+            "animations": {
+                "controller": "controller.animation.trident_general_5fs",
+                "fpp_idle": "animation.trident.fpp_idle_5fs",
+                "tpp_hold": "animation.trident.tpp_hold_5fs",
+                "fpp_ability": "animation.trident.fpp_spear_being_thrown_5fs",
+                "tpp_ability": "animation.trident.tpp_throw"
+            },
+            "render_controllers": [
+                        "controller.render.default"
+            ],
+            "scripts": {
+                "animate": [
+                "controller",
+                {
+                    "tpp_hold": "!c.is_first_person"
+                },
+                {
+                    "tpp_ability": "!c.is_first_person && q.cooldown_time_remaining('slot.weapon.mainhand') > 0"
+                }
+                ]
+            }
+        }
+    }
+}

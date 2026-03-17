@@ -1,0 +1,23 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:attachable": {
+        "description": {
+            "identifier": "5fs_br:rabbit_head",
+            "materials": {
+                "default": "entity"
+            },
+            "textures": {
+                "default": "textures/entity/rabbit/gold"
+            },
+            "geometry": {
+                "default": "geometry.rabbit_head_attachable"
+            },
+            "scripts": {
+                "parent_setup": "variable.head_layer_visible = 0.0;"
+            },
+            "render_controllers": [
+                "controller.render.default"
+            ]
+        }
+    }
+}

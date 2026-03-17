@@ -1,0 +1,23 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.cobalt_pickaxe.1fp": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": [77.0879, 55.46004, -59.69006],
+					"position": [0, 10, 5]
+				}
+			}
+		},
+		"animation.cobalt_pickaxe.3pp": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": [92.5, 0, 0],
+					"position": [0, 16, -1]
+				}
+			}
+		}
+	}
+}

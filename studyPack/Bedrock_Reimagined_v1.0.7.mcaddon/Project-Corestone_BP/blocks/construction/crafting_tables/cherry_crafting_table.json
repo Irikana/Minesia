@@ -1,0 +1,43 @@
+{
+  "format_version": "1.26.0",
+	"minecraft:block": {
+    "description": {
+      "identifier": "5fs_br:cherry_crafting_table",
+      "menu_category": {
+        "category": "Items"
+      }
+    },
+    "components": {
+      "minecraft:geometry": "minecraft:geometry.full_block",
+      "minecraft:material_instances": {
+        "up": {
+          "texture": "cherry_crafting_table_top"
+        },
+        "down": {
+          "texture": "cherry_planks"
+        },
+        "north": {
+          "texture": "cherry_crafting_table_front"
+        },
+        "south": {
+          "texture": "cherry_crafting_table_front"
+        },
+        "*": {
+          "texture": "cherry_crafting_table_side"
+        }
+      },
+      "minecraft:crafting_table": {
+        "crafting_tags": ["crafting_table"],
+        "table_name": "%hudScreen.tooltip.crafting"
+      },
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 2
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 2
+      },
+      "minecraft:map_color": "#E55C3D",
+      "tag:minecraft:is_axe_item_destructible": {}
+    }
+  }
+}

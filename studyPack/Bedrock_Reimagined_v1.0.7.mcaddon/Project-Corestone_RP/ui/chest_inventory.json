@@ -1,0 +1,79 @@
+{
+  "namespace": "chest",
+
+  "chest_grid_item@common.container_item": {
+    "$item_collection_name": "container_items"
+  },
+
+  "chest_grid": {
+    "type": "grid",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [7, 10],
+    "size": [162, 54],               
+    "collection_name": "container_items",
+    "grid_dimensions": [9, 3],     
+    "grid_item_template": "chest.chest_grid_item"
+  },
+
+  "chest_panel_top_half": {
+    "type": "panel",
+    "size": ["100%", 78],           
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
+    "offset": [10, 11],
+    "controls": [
+      { "chest_label": {
+        "type":"panel",
+        "controls":[]
+      } },
+      { "chest_grid@chest.chest_grid": {} }
+    ]
+  },
+
+  "chest_background_panel": {
+    "type": "panel",
+    "size": ["100%", "100%"],
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
+    "offset": [0, 0],
+    "layer": 0,
+    "controls": [
+      { "background@common.screen_background": {} }
+    ]
+  },
+
+  "chest_panel": {
+    "type": "panel",
+    "controls": [
+      { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
+      { "flying_item_renderer@common.flying_item_renderer": { "layer": 14 } },
+      { "selected_item_details_factory@common.selected_item_details_factory": {} },
+      { "item_lock_notification_factory@common.item_lock_notification_factory": {} },
+      {
+        "root_panel@common.root_panel": {
+          "size": [176, 176],      
+          "layer": 1,
+          "controls": [
+            { "common_panel@common.common_panel": {} },
+            {
+              "chest_panel": {
+                "type": "panel",
+                "layer": 5,
+                "controls": [
+                  { "chest_background_panel@chest.chest_background_panel": {} },
+                  { "chest_panel_top_half@chest.chest_panel_top_half": {} },
+                  { "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {} },
+                  { "hotbar_grid@common.hotbar_grid_template": {} },
+                  { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} }
+                ]
+              }
+            },
+            { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
+            { "gamepad_cursor@common.gamepad_cursor_button": {} }
+          ]
+        }
+      }
+    ]
+  }
+}

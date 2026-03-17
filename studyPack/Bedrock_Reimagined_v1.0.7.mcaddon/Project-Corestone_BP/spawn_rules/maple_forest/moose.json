@@ -1,0 +1,52 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:spawn_rules": {
+    "description": {
+      "identifier": "5fs_br:moose",
+      "population_control": "animal"
+    },
+    "conditions": [
+      {
+        "minecraft:spawns_on_surface": {},
+        "minecraft:spawns_on_block_filter": [
+          "5fs_br:autumn_grass",
+          "minecraft:grass"
+        ],
+        "minecraft:spawns_on_block_prevented_filter": [
+          "5fs_br:redwood_leaves",
+          "5fs_br:redwood_log",
+          "5fs_br:maple_leaves"
+        ],
+        "minecraft:brightness_filter": {
+          "min": 7,
+          "max": 15,
+          "adjust_for_weather": true
+        },
+        "minecraft:weight": {
+          "default": 1
+        },
+        "minecraft:herd": {
+          "min_size": 2,
+          "max_size": 4
+        },
+        "minecraft:biome_filter": [
+          {
+            "test": "has_biome_tag",
+            "operator": "==",
+            "value": "maple_forest"
+          },
+          {
+            "test": "has_biome_tag",
+            "operator": "==",
+            "value": "redwood_forest"
+          },
+          {
+            "test": "has_biome_tag",
+            "operator": "==",
+            "value": "taiga"
+          }
+        ]
+      }
+    ]
+  }
+}

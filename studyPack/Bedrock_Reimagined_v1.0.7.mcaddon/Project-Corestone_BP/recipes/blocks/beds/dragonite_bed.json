@@ -1,0 +1,28 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "5fs_br:dragonite_bed"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "5fs_br:cape_of_dragonite"
+      },
+      {
+        "item": "minecraft:bed"
+      }
+    ],
+    "result": {
+      "item": "5fs_br:dragonite_bed",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "5fs_br:cape_of_dragonite"
+      }
+    ]
+  }
+}

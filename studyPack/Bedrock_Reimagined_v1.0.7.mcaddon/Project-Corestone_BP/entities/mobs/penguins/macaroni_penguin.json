@@ -1,0 +1,648 @@
+{
+  "format_version": "1.21.90",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "5fs_br:macaroni_penguin",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "properties": {
+        "5fs_br:slip_anim": {
+          "client_sync": true,
+          "type": "enum",
+          "values": [
+            "none",
+            "fall",
+            "dance",
+            "slide"
+          ],
+          "default": "none"
+        }
+      }
+    },
+    "component_groups": {
+      "5fs_br:despawn": {
+        "minecraft:instant_despawn": {}
+      },
+      "5fs_br:adult": {
+        "minecraft:rideable": {
+          "seat_count": 1,
+          "family_types": [ "5fs_br:macaroni_penguin" ],
+          "seats": [
+            {
+              "position": [0.0, 0.0, 0.4],
+              "lock_rider_rotation": 0
+            }
+          ]
+        },
+        "minecraft:behavior.breed": {
+          "priority": 3,
+          "speed_multiplier": 1
+        },
+        "minecraft:experience_reward": {
+          "on_bred": "math.random(1,7)",
+          "on_death": "query.last_hit_by_player ? 3 :0"
+        },
+        "minecraft:breedable": {
+          "require_tame": false,
+          "breeds_with": {
+            "mate_type": "5fs_br:macaroni_penguin",
+            "baby_type": "5fs_br:macaroni_penguin",
+            "breed_event": {
+              "event": "minecraft:entity_born",
+              "target": "baby"
+            }
+          },
+          "breed_items": [
+            "minecraft:cod",
+            "minecraft:salmon"
+          ]
+        },
+        "minecraft:loot": {
+          "table": "loot_tables/entities/penguins/macaroni_penguin.json"
+        }
+      },
+      "5fs_br:walking": {
+        "minecraft:behavior.panic": {
+          "priority": 1,
+          "speed_multiplier": 1
+        },
+        "minecraft:movement.amphibious": {
+          "max_turn": 5.0
+        },
+        "minecraft:movement": {
+          "value": 0.15
+        },
+        "minecraft:underwater_movement": {
+          "value": 0.3
+        },
+        "minecraft:navigation.generic": {
+          "is_amphibious": true,
+          "can_path_over_water": true,
+          "can_break_doors": false,
+          "can_swim": true,
+          "can_breach": true,
+          "can_walk": true,
+          "avoid_sun": false,
+          "can_path_from_air": false,
+          "avoid_damage_blocks": true,
+          "can_sink": false
+        },
+        "minecraft:jump.static": {},
+        "minecraft:can_climb": {},
+        "minecraft:behavior.random_stroll": {
+          "priority": 1,
+          "speed_multiplier": 0.8
+        },
+        "minecraft:behavior.look_at_player": {
+          "priority": 12,
+          "look_distance": 6,
+          "probability": 0.02
+        },
+        "minecraft:behavior.move_to_block": {
+          "priority": 6,
+          "start_chance": 3,
+          "search_range": 24,
+          "goal_radius": 0.85,
+          "search_height": 5,
+          "tick_interval": 30,
+          "target_selection_method": "random",
+          "target_blocks": [
+            "minecraft:ice",
+            "minecraft:blue_ice",
+            "minecraft:frosted_ice",
+            "minecraft:packed_ice",
+            "minecraft:snow",
+            "minecraft:snow_layer"
+          ],
+          "on_reach": {
+            "event": "5fs_br:anim_random",
+            "target": "self"
+          }
+        },
+        "minecraft:timer": {
+          "looping": true,
+          "time": 30,
+          "time_down_event": {
+            "event": "5fs_br:penguin_out_of_water",
+            "target": "self"
+          }
+        },
+        "minecraft:behavior.random_look_around": {
+          "priority": 13
+        }
+      },
+      "5fs_br:swimming": {
+        "minecraft:underwater_movement": {
+          "value": 0.25
+        },    
+        "minecraft:navigation.generic": {
+          "is_amphibious": true,
+          "can_path_over_water": true,
+          "can_swim": true,
+          "can_walk": true,
+          "can_breach": true,
+          "can_sink": false,
+          "avoid_damage_blocks": true
+        },
+        "minecraft:attack": {
+          "damage": 3
+        },
+        "minecraft:behavior.random_breach": {
+          "priority": 8,
+          "interval": 50,
+          "xz_dist": 8,
+          "cooldown_time": 20
+        },
+        "minecraft:timer": {
+          "looping": true,
+          "time": 30,
+          "time_down_event": {
+            "event": "5fs_br:penguin_in_water",
+            "target": "self"
+          }
+        },
+        "minecraft:behavior.move_to_land": {
+          "priority": 2,
+          "search_range": 30,
+          "search_height": 28,
+          "search_count": 20,
+          "goal_radius": 0.5
+        },
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 1,
+          "attack_interval": 15,
+          "reselect_targets": true,
+          "must_see": true,
+          "within_radius": 20,
+          "must_see_forget_duration": 10,
+          "entity_types": [
+            {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "in_water",
+                    "subject": "other"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "operator": "==",
+                    "value": "fish"
+                  }
+                ]
+              },
+              "max_dist": 10
+            }
+          ]
+        },
+        "minecraft:behavior.delayed_attack": {
+          "priority": 1,
+          "attack_once": false,
+          "track_target": true,
+          "require_complete_path": false,
+          "random_stop_interval": 0,
+          "reach_multiplier": 1.9,
+          "speed_multiplier": 0.25,
+          "attack_duration": 0.7,
+          "hit_delay_pct": 0.25
+        },
+        "minecraft:behavior.random_swim": {
+          "priority": 8,
+          "speed_multiplier": 0.8,
+          "xz_dist": 16,
+          "y_dist": 10,
+          "avoid_surface": false,
+          "interval": 0
+        },
+        "minecraft:behavior.swim_wander": {
+          "priority": 9,
+          "interval": 0.5,
+          "look_ahead": 2.0,
+          "speed_multiplier": 0.8,
+          "wander_time": 5.0
+        }
+      },
+      "5fs_br:baby": {
+        "minecraft:behavior.find_mount": { 
+          "priority": 0, 
+          "within_radius": 16,    
+          "start_delay": 1, 
+          "max_failed_attempts": 20,
+          "mount_distance": 2.0
+        },
+        "minecraft:is_baby": {},
+        "minecraft:scale": {
+          "value": 0.5
+        },
+        "minecraft:ageable": {
+          "duration": 6000,
+          "feed_items": [
+            "minecraft:cod",
+            "minecraft:salmon"
+          ],
+          "grow_up": {
+            "event": "5fs_br:adult",
+            "target": "self"
+          }
+        },
+        "minecraft:behavior.follow_parent": {
+          "priority": 3,
+          "speed_multiplier": 1.1
+        }
+      },     
+      "5fs_br:dance": {
+        "minecraft:movement": {
+          "value": 0
+        },
+        "minecraft:timer": {
+          "looping": false,
+          "time": 2,
+          "time_down_event": {
+            "event": "5fs_br:reset_anim",
+            "target": "self"
+          }
+        }
+      },
+      "5fs_br:fall": {
+        "minecraft:movement": {
+          "value": 0
+        },
+        "minecraft:timer": {
+          "looping": false,
+          "time": 2.5,
+          "time_down_event": {
+            "event": "5fs_br:reset_anim",
+            "target": "self"
+          }
+        }
+      },
+      "5fs_br:slide": {
+        "minecraft:timer": {
+          "looping": false,
+          "time": 0.5,
+          "time_down_event": {
+            "event": "5fs_br:reset_anim",
+            "target": "self"
+          }
+        }
+      }
+    },
+    "components": {
+      "minecraft:is_hidden_when_invisible": {},
+      "minecraft:healable": {
+        "items": [
+          {
+            "item": "minecraft:cooked_cod",
+            "heal_amount": 2
+          },
+          {
+            "item": "minecraft:cooked_salmon",
+            "heal_amount": 2
+          }
+        ]
+      },
+      
+       "minecraft:type_family": {
+        "family": [
+          "5fs_br:macaroni_penguin",
+          "penguin",
+          "mob"
+        ]
+      },
+      "minecraft:behavior.follow_mob": {
+        "priority": 2,
+        "search_range": 20,
+        "stop_distance": 2,
+        "speed_multiplier": 0.5,
+        "preferred_actor_type": "player",
+        "filters": {
+          "any_of": [
+            {
+              "test": "is_family",
+              "subject": "other",
+              "value": "5fs_br:macaroni_penguin"
+            }
+          ]           
+        }
+      },
+      "minecraft:collision_box": {
+        "width": 0.8,
+        "height": 1
+      },
+      "minecraft:behavior.avoid_mob_type": {
+        "priority": 2,
+        "max_dist": 16,
+        "max_flee": 20,
+        "entity_types": [
+         {
+           "filters": {
+              "test": "is_family",
+              "operator": "==",
+              "subject": "other",
+              "value": "polarbear"
+            },
+            "max_dist": 20,
+            "sprint_speed_multiplier": 1
+          },
+          {
+           "filters": {
+              "test": "is_family",
+              "operator": "==",
+              "subject": "other",
+              "value": "ocean_mine"
+            },
+            "max_dist": 20,
+            "sprint_speed_multiplier": 1
+          }
+        ]
+      },
+      "minecraft:nameable": {},
+      "minecraft:health": {
+        "value": 15,
+        "max": 15
+      },
+      "minecraft:hurt_on_condition": {
+        "damage_conditions": [
+          {
+            "filters": {
+              "test": "in_lava",
+              "subject": "self",
+              "operator": "==",
+              "value": true
+            },
+            "cause": "lava",
+            "damage_per_tick": 4
+          }
+        ]
+      },
+      "minecraft:behavior.look_at_player": {
+        "priority": 12,
+        "look_distance": 6,
+        "probability": 0.02
+      },
+      "minecraft:behavior.panic": {
+        "priority": 1,
+        "speed_multiplier": 1
+      },
+      "minecraft:behavior.tempt": {
+        "priority": 4,
+        "speed_multiplier": 1,
+        "items": [
+          "minecraft:cod",
+          "minecraft:salmon"
+        ]
+      },
+      "minecraft:timer": {
+        "looping": true,
+        "time": 120,
+        "time_down_event": {
+          "event": "5fs_br:penguin_out_of_water",
+            "target": "self"
+        }
+      },
+      "minecraft:flocking": {
+        "in_water": false,
+        "match_variants": false,
+        "use_center_of_mass": true,
+        "low_flock_limit": 2,
+        "high_flock_limit": 8,
+        "goal_weight": 2,
+        "loner_chance": 0.1,
+        "influence_radius": 30,
+        "breach_influence": 0,
+        "separation_weight": 1.75,
+        "separation_threshold": 3,
+        "cohesion_weight": 1.85,
+        "cohesion_threshold": 6.5,
+        "innner_cohesion_threshold": 3.5,
+        "min_height": 4,
+        "max_height": 4,
+        "block_distance": 1,
+        "block_weight": 0
+      },
+      "minecraft:shareables": {
+        "singular_pickup": true,
+        "all_items": false,
+        "items": [
+          {
+            "item": "minecraft:is_food",
+            "priority": 0,
+            "max_amount": 20
+          },
+          {
+            "item": "minecraft:bone",
+            "priority": 0,
+            "max_amount": 20
+          }
+        ]
+      },
+      "minecraft:inventory": { "inventory_size": 3, "can_be_siphoned_from": false, "restrict_to_owner": true },
+      "minecraft:equip_item": {},    
+      "minecraft:behavior.equip_item": { "priority": 1 },
+      "minecraft:behavior.pickup_items": {
+        "priority": 1,
+        "max_dist": 30,
+        "goal_radius": 2,
+        "speed_multiplier": 1
+      },
+      "minecraft:behavior.eat_carried_item": {
+        "priority": 1,
+        "delay_before_eating": 2
+      },
+      "minecraft:behavior.hurt_by_target": {
+          "priority": 0
+        },
+      "minecraft:breathable": {
+        "total_supply": 15,
+        "suffocate_time": 0,
+        "breathes_air": true,
+        "breathes_water": true
+      },
+      "minecraft:despawn": {
+        "despawn_from_distance": {}
+      },
+      "minecraft:environment_sensor": {
+        "triggers": [
+          {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "in_water",
+                  "value": true
+                }
+              ]
+            },
+            "event": "5fs_br:penguin_in_water"
+          },
+          {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "in_water",
+                  "value": false
+                },
+                {
+                  "test": "on_ground",
+                  "value": true
+                },
+                {
+                  "test": "has_component",
+                  "value": "minecraft:behavior.swim_wander"
+                }
+              ]
+            },
+            "event": "5fs_br:penguin_out_of_water"
+          }
+        ]
+      },
+      "minecraft:physics": {},
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:conditional_bandwidth_optimization": {}
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "sequence": [
+          {
+           "randomize": [
+              {
+                "weight": 85,
+                  "add": {
+                    "component_groups": ["5fs_br:adult", "5fs_br:walking"]
+                  }
+              },
+              {
+                "weight": 15,
+                "add": {
+                  "component_groups": ["5fs_br:baby", "5fs_br:walking"]
+                }
+              }
+            ]
+          },
+         {
+           "queue_command": {
+              "command": ["scriptevent 5fs_br:penguin"]
+            }
+          }
+        ]
+      },
+      "5fs_br:despawn": {
+        "add": {
+          "component_groups": [
+            "5fs_br:despawn"
+          ]
+        }
+      },
+      "5fs_br:penguin_in_water": {
+        "remove": {
+          "component_groups": [ "5fs_br:walking" ]
+        },
+        "add": {
+          "component_groups": [ "5fs_br:swimming" ]
+        }
+      },
+      "5fs_br:penguin_out_of_water": {
+        "remove": {
+          "component_groups": [ "5fs_br:swimming" ]
+        },
+        "add": {
+          "component_groups": [ "5fs_br:walking" ]
+        }
+      },
+      "5fs_br:adult": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:baby"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:adult"
+          ]
+        },
+        "queue_command": {
+          "command": "ride @s stop_riding"
+        }
+      },
+      "minecraft:entity_born": {
+        "add": {
+          "component_groups": [
+            "5fs_br:baby",
+            "5fs_br:walking"
+          ]
+        },
+        "queue_command": {
+          "command": ["scriptevent 5fs_br:penguin"]
+        }          
+      },
+      "5fs_br:anim_random":{
+        "randomize": [
+          {
+            "weight": 50,
+            "trigger": "5fs_br:fall"
+          },
+          {
+            "weight": 50,
+            "trigger": "5fs_br:slide"
+          }
+        ]
+      },
+      "5fs_br:baby": {
+        "add": {
+          "component_groups": [
+            "5fs_br:baby"
+          ]
+        }
+      },
+      "5fs_br:fall": {
+        "set_property": {
+          "5fs_br:slip_anim": "fall"
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:fall"
+          ]
+        }
+      },
+      "5fs_br:slide": {
+        "set_property": {
+          "5fs_br:slip_anim": "slide"
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:slide"
+          ]
+        }
+      },
+      "5fs_br:dance": {
+        "set_property": {
+          "5fs_br:slip_anim": "dance"
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:dance"
+          ]
+        }
+      },
+      "5fs_br:reset_anim": {
+        "set_property": {
+          "5fs_br:slip_anim": "none"
+        },
+        "remove": {
+          "component_groups": [
+            "5fs_br:fall",
+            "5fs_br:dance",
+            "5fs_br:slide"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:walking"
+          ]
+        }
+      }
+    }
+  }
+}

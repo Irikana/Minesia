@@ -1,0 +1,21 @@
+{
+  "format_version": "1.21.20",
+  "minecraft:structure_set": {
+    "description": {
+      "identifier": "5fs_br:castle_monster_tower"
+    },
+    "placement": {
+      "type": "minecraft:random_spread",
+      "salt": 75634285,
+      "separation": 40,
+      "spacing": 82,
+      "spread_type": "linear"
+    },
+    "structures": [
+      {
+        "structure": "5fs_br:castle_monster_tower",
+        "weight": 1
+      }
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "format_version": "1.21.80",
+  "minecraft:block_culling_rules": {
+    "description": { "identifier": "5fs_br:culling.glass_pane" },
+    "rules": [
+      {
+        "direction": "north",
+        "condition": "same_block",
+        "geometry_part": { "bone": "north", "cube": 0, "face": "south" }
+      },
+      {
+        "direction": "south",
+        "condition": "same_block",
+        "geometry_part": { "bone": "south", "cube": 0, "face": "north" }
+      },
+      {
+        "direction": "east",
+        "condition": "same_block",
+        "geometry_part": { "bone": "east", "cube": 0, "face": "west" }
+      },
+
+      {
+        "direction": "west",
+        "condition": "same_block",
+        "geometry_part": { "bone": "west", "cube": 0, "face": "east" }
+      }
+    ]
+  }
+}

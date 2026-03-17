@@ -1,0 +1,98 @@
+{
+    "format_version": "1.26.0",
+	"minecraft:block": {
+        "description": {
+            "identifier": "5fs_br:crystal_bloom",
+            "states": {
+                "5fs_br:open": [
+                    false,
+                    true
+                ]
+            }
+        },
+        "components": {
+            "minecraft:light_dampening": 0,
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 0
+            },
+            "minecraft:collision_box": false,
+            "minecraft:selection_box": {
+                "origin": [
+                    -4,
+                    0,
+                    -4
+                ],
+                "size": [
+                    8,
+                    16,
+                    8
+                ]
+            },
+            "minecraft:geometry": "geometry.5fs_br.crystal_bloom_closed",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "crystal_bloom_closed",
+                    "render_method": "alpha_test"
+                }
+            },
+            "minecraft:placement_filter": {
+                "conditions": [
+                    {
+                        "allowed_faces": [
+                            "up"
+                        ]
+                    }
+                ]
+            },
+            "minecraft:tick": {
+                "interval_range": [
+                    10,
+                    20
+                ]
+            },
+            "minecraft:connection_rule": {
+                "accepts_connections_from": "none"
+            },
+            "5fs_br:crystal_bloom": {},
+            "5fs_br:crystallineShears": {},
+            "minecraft:precipitation_interactions": {
+                "precipitation_behavior": "none"
+            }
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('5fs_br:open')",
+                "components": {
+                    "minecraft:geometry": {
+                        "identifier": "geometry.5fs_br.crystal_bloom_open"
+                    },
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "crystal_bloom_open",
+                            "render_method": "alpha_test"
+                        }
+                    },
+                    "minecraft:light_emission": 15
+                }
+            },
+            {
+                "condition": "!q.block_state('5fs_br:open')",
+                "components": {
+                    "minecraft:geometry": {
+                        "identifier": "geometry.5fs_br.crystal_bloom_closed"
+                    },
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "crystal_bloom_closed",
+                            "render_method": "alpha_test"
+                        }
+                    },
+                    "minecraft:light_emission": 0
+                }
+            }
+        ]
+    }
+}

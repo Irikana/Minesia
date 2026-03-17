@@ -1,0 +1,20 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.dragonfly": {
+      "arrays": {
+        "textures": {
+          "Array.skins": [
+            "Texture.blue_dragonfly",
+            "Texture.green_dragonfly",
+            "Texture.orange_dragonfly",
+            "Texture.red_dragonfly"
+          ]
+        }
+      },
+      "geometry": "Geometry.default",
+      "materials": [{ "*": "Material.default" }],
+      "textures": ["Array.skins[query.variant]"]
+    }
+  }
+}

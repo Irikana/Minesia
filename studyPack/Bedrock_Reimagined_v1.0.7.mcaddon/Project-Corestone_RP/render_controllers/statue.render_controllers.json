@@ -1,0 +1,48 @@
+{
+    "format_version": "1.10.0",
+    "render_controllers": {
+        "controller.render.statue": {
+            "arrays": {
+                "textures": {
+                    "Array.textures": [
+                        "Texture.stone_statue",
+                        "Texture.sandstone_statue",
+                        "Texture.red_sandstone_statue"
+                    ]
+                }
+            },
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "geometry": "Geometry.default",
+            "textures": [
+                "Array.textures[v.type]"
+            ],
+            "part_visibility": [
+                {
+                    "statue_0": "v.variant == 0"
+                },
+                {
+                    "statue_1": "v.variant == 1"
+                },
+                {
+                    "statue_2": "v.variant == 2"
+                }
+            ],
+            "is_hurt_color": {
+                "a": 0,
+                "b": 0,
+                "g": 0,
+                "r": 0
+            },
+            "on_fire_color": {
+                "a": 0,
+                "b": 0,
+                "g": 0,
+                "r": 0
+            }
+        }
+    }
+}

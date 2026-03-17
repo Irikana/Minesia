@@ -1,0 +1,37 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "5fs_br:redwood_mushroom_soup"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "YR",
+      "Z"
+    ],
+    "key": {
+      "Y": {
+        "item": "5fs_br:redwood_yellow_mushroom"
+      },
+      "R": {
+        "item": "5fs_br:redwood_brown_mushroom"
+      },
+      "Z": {
+        "item": "5fs_br:giant_redwood_bowl"
+      }
+    },
+    "result": {
+      "item": "5fs_br:giant_mushroom_stew"
+    },
+    "unlock": [
+      {
+        "item": "5fs_br:redwood_yellow_mushroom"
+      },
+      {
+        "item": "5fs_br:redwood_brown_mushroom"
+      }
+    ]
+  }
+}

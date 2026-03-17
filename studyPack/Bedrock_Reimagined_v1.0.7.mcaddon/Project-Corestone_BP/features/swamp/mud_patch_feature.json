@@ -1,0 +1,17 @@
+{
+    "format_version": "1.21.60",
+    "minecraft:ore_feature": {
+        "description": {
+            "identifier": "5fs_br:swamp/mud_patch_feature"
+        },
+        "count": 50,
+        "replace_rules": [
+            {
+                "may_replace": [
+                    "minecraft:grass_block"
+                ],
+                "places_block": "minecraft:mud"
+            }
+        ]
+    }
+}

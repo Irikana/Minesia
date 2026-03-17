@@ -1,0 +1,28 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "5fs_br:iris_of_the_end_projectile",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/projectiles/iris_projectile"
+            },
+            "geometry": {
+                "default": "geometry.iris_projectile"
+            },
+            "render_controllers": [
+                "controller.render.default"
+            ],
+			"animations": {
+				"move": "animation.projectile.move"
+			},
+			"scripts": {
+				"animate": [
+					"move"
+				]
+            }
+        }
+    }
+}

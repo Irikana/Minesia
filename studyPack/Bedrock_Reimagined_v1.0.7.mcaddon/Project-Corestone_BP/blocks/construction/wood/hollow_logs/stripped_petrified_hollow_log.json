@@ -1,0 +1,129 @@
+{
+    "format_version": "1.26.0",
+	"minecraft:block": {
+        "description": {
+            "identifier": "5fs_br:stripped_petrified_hollow_log",
+            "menu_category": {
+                "category": "none"
+            },
+            "traits": {
+                "minecraft:placement_position": {
+                    "enabled_states": [
+                        "minecraft:block_face"
+                    ]
+                }
+            }
+        },
+        "components": {
+            "minecraft:geometry": "geometry.hollow_log",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "stripped_petrified_log"
+                },
+                "up": {
+                    "texture": "stripped_petrified_log_top"
+                },
+                "down": {
+                    "texture": "stripped_petrified_log_top"
+                }
+            },
+            "minecraft:collision_box": [
+                {
+                    "origin": [
+                        6,
+                        0,
+                        -8
+                    ],
+                    "size": [
+                        2,
+                        16,
+                        16
+                    ]
+                },
+                {
+                    "origin": [
+                        -8,
+                        0,
+                        -8
+                    ],
+                    "size": [
+                        2,
+                        16,
+                        16
+                    ]
+                },
+                {
+                    "origin": [
+                        -6,
+                        0,
+                        6
+                    ],
+                    "size": [
+                        12,
+                        16,
+                        2
+                    ]
+                },
+                {
+                    "origin": [
+                        -6,
+                        0,
+                        -8
+                    ],
+                    "size": [
+                        12,
+                        16,
+                        2
+                    ]
+                }
+            ],
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 2
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 2
+            },
+            "minecraft:map_color": "#8B7D6B",
+            "minecraft:flammable": true,
+            "tag:minecraft:is_pickaxe_item_destructible": {}
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('minecraft:block_face') == 'west' || q.block_state('minecraft:block_face') == 'east'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            0,
+                            90
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:block_face') == 'down' || q.block_state('minecraft:block_face') == 'up'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            0,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:block_face') == 'north' || q.block_state('minecraft:block_face') == 'south'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            90,
+                            0,
+                            0
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

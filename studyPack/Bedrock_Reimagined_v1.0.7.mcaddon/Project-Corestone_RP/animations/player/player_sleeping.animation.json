@@ -1,0 +1,114 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.player.sleeping_east": {
+			"loop": true,
+			"override_previous_animation": true,
+			"bones": {
+				"head": {
+					"rotation": ["30.0 - this", "-this", "-this"]
+				},
+				"root": {
+					"rotation": [-90, "270.0 - query.sleep_rotation - query.body_y_rotation", 0],
+					"position": [
+						"24.0 * math.cos(query.body_y_rotation) * math.cos(query.sleep_rotation) - 24.0 * math.sin(query.body_y_rotation) * math.sin(query.sleep_rotation)",
+						0,
+						"24.0 * math.cos(query.body_y_rotation) * math.sin(query.sleep_rotation) + 24.0 * math.sin(query.body_y_rotation) * math.cos(query.sleep_rotation)"
+					]
+				}
+			}
+		},
+		"animation.player.sleeping_north": {
+			"loop": true,
+			"override_previous_animation": true,
+			"bones": {
+				"head": {
+					"rotation": ["30.0 - this", "-this", "-this"]
+				},
+				"root": {
+					"rotation": [-90, "360 - query.sleep_rotation - query.body_y_rotation", 0],
+					"position": [
+						"-24+24.0 * math.cos(query.body_y_rotation) * math.cos(query.sleep_rotation) - 24.0 * math.sin(query.body_y_rotation) * math.sin(query.sleep_rotation)",
+						0,
+						"-24+24.0 * math.cos(query.body_y_rotation) * math.sin(query.sleep_rotation) + 24.0 * math.sin(query.body_y_rotation) * math.cos(query.sleep_rotation)"
+					]
+				}
+			}
+		},
+		"animation.player.sleeping_west": {
+			"loop": true,
+			"override_previous_animation": true,
+			"bones": {
+				"head": {
+					"rotation": ["30.0 - this", "-this", "-this"]
+				},
+				"root": {
+					"rotation": [0, "450 - query.sleep_rotation - query.body_y_rotation", 90],
+					"position": [
+						"-48+24.0 * math.cos(query.body_y_rotation) * math.cos(query.sleep_rotation) - 24.0 * math.sin(query.body_y_rotation) * math.sin(query.sleep_rotation)",
+						0,
+						"24.0 * math.cos(query.body_y_rotation) * math.sin(query.sleep_rotation) + 24.0 * math.sin(query.body_y_rotation) * math.cos(query.sleep_rotation)"
+					]
+				}
+			}
+		},
+		"animation.player.sleeping_south": {
+			"loop": true,
+			"override_previous_animation": true,
+			"bones": {
+				"head": {
+					"rotation": ["30.0 - this", "-this", "-this"]
+				},
+				"root": {
+					"rotation": [90, "360 - query.sleep_rotation - query.body_y_rotation", 180],
+					"position": [
+						"-24+24.0 * math.cos(query.body_y_rotation) * math.cos(query.sleep_rotation) - 24.0 * math.sin(query.body_y_rotation) * math.sin(query.sleep_rotation)",
+						0,
+						"24+24.0 * math.cos(query.body_y_rotation) * math.sin(query.sleep_rotation) + 24.0 * math.sin(query.body_y_rotation) * math.cos(query.sleep_rotation)"
+					]
+				}
+			}
+		},
+		"animation.player.sleeping_custom": {
+			"loop": true,
+			"override_previous_animation": true,
+			"bones": {
+				"head": {
+					"rotation": ["30.0 - this", "-this", "-this"]
+				},
+				"waist": {
+					"position": [
+						"24.0 * math.cos(query.body_y_rotation) * math.cos(query.sleep_rotation) - 24.0 * math.sin(query.body_y_rotation) * math.sin(query.sleep_rotation)",
+						0,
+						"24.0 * math.cos(query.body_y_rotation) * math.sin(query.sleep_rotation) + 24.0 * math.sin(query.body_y_rotation) * math.cos(query.sleep_rotation)"
+					],
+					"rotation": [-90, "270.0 - query.sleep_rotation - query.body_y_rotation", 0]
+				}
+			}
+		},
+		"animation.player.sleeping_custom_5fs": {
+			"loop": true,
+			"animation_length": 3,
+			"bones": {
+				"body": {
+					"rotation": {
+						"0.0": [-90, 0, 0],
+						"1.0": [-90, 0, 0]
+					},
+					"position": {
+						"0.0": [0, -21, 0],
+						"1.0": [0, -21, 0]
+					}
+				},
+				"rightLeg": {
+					"rotation": [-90, 0, 0],
+					"position": [0, -9, -12]
+				},
+				"leftLeg": {
+					"rotation": [-90, 0, 0],
+					"position": [0, -9, -12]
+				}
+			}
+		}
+	}
+}

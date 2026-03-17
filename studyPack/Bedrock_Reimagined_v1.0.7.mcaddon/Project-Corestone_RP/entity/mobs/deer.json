@@ -1,0 +1,47 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "5fs_br:deer",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/mobs/deer",
+                "baby": "textures/entity/mobs/fawn"
+            },
+            "geometry": {
+                "default": "geometry.deer",
+                "baby": "geometry.fawn"
+            },
+            "animations": {
+                "idle_0": "animation.deer.idle_0",
+                "idle_1": "animation.deer.idle_1",
+                "walk": "animation.deer.walk",
+                "run": "animation.deer.run",
+                "attack": "animation.deer.attack",
+                "sleep": "animation.deer.sleep",
+                "death": "animation.deer.death",
+                "general_controller": "controller.animation.deer.general",
+                "look_around_controller": "controller.animation.deer.look_around_controller",
+                "attack_controller": "controller.animation.deer.attack_controller"
+            },
+            "scripts": {
+                "pre_animation": [
+                    "v.baby = query.is_baby ? 1 : 0;"
+                ],
+                "animate": [
+                  "general_controller",
+                  "look_around_controller",
+                  "attack_controller"
+                ]
+            },
+            "render_controllers": [
+                "controller.render.deer"
+            ],
+            "spawn_egg": {
+                "texture": "5fs_br:deer"
+            }
+        }
+    }
+}

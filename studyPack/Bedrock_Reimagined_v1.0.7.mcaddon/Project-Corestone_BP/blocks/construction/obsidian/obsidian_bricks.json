@@ -1,0 +1,38 @@
+{
+  "format_version": "1.26.0",
+	"minecraft:block": {
+    "description": {
+      "identifier": "5fs_br:obsidian_bricks",
+      "menu_category": {
+        "category": "Construction"
+      }
+    },
+    "components": {
+      "minecraft:geometry": "minecraft:geometry.full_block",
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "obsidian_bricks"
+        }
+      },
+      "minecraft:map_color": "#000000",
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 166.6,
+				"item_specific_speeds": [
+					{
+						"item": {
+							"tags": "query.all_tags('minecraft:is_pickaxe') && !query.any_tag('minecraft:wooden_tier', 'minecraft:stone_tier', 'minecraft:copper_tier', 'minecraft:iron_tier', 'minecraft:gold_tier')"
+						},
+						"destroy_speed": 50
+					}
+				]
+			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 1200
+			},
+      "minecraft:movable": {
+        "movement_type": "immovable"
+      },
+      "tag:minecraft:is_pickaxe_item_destructible": {}
+    }
+  }
+}

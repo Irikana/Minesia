@@ -1,0 +1,133 @@
+{
+	"format_version": "1.26.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "5fs_br:gold_chain",
+			"traits": {
+				"minecraft:placement_position": {
+					"enabled_states": [
+						"minecraft:block_face"
+					]
+				}
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_state('minecraft:block_face') == 'north'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							-90,
+							0,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('minecraft:block_face') == 'south'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							-90,
+							0,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('minecraft:block_face') == 'east'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							90,
+							-90
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('minecraft:block_face') == 'west'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							90,
+							-90
+						]
+					}
+				}
+			}
+		],
+		"components": {
+			"minecraft:geometry": "geometry.chain",
+			"minecraft:map_color": "#FAEE4D",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "gold_chain",
+					"render_method": "alpha_test",
+					"ambient_occlusion": false,
+					"face_dimming": false
+				}
+			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 6
+			},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 3,
+				"item_specific_speeds": [
+					{
+						"item": {
+							"tags": "query.all_tags('minecraft:is_pickaxe') && !query.any_tag('minecraft:wooden_tier', 'minecraft:stone_tier')"
+						},
+						"destroy_speed": 3
+					}
+				]
+			},
+			"minecraft:collision_box": {
+				"size": [
+					3,
+					16,
+					3
+				],
+				"origin": [
+					-1.5,
+					0,
+					-1.5
+				]
+			},
+			"minecraft:selection_box": {
+				"size": [
+					3,
+					16,
+					3
+				],
+				"origin": [
+					-1.5,
+					0,
+					-1.5
+				]
+			},
+			"minecraft:light_dampening": 0,
+			"minecraft:liquid_detection": {
+				"detection_rules": [
+					{
+						"can_contain_liquid": true,
+						"liquid_type": "water",
+						"on_liquid_touches": "blocking"
+					}
+				]
+			},
+			"minecraft:precipitation_interactions": {
+				"precipitation_behavior": "obstruct_rain"
+			},
+            "minecraft:connection_rule": {
+                "accepts_connections_from": "none"
+            },
+			"tag:minecraft:is_pickaxe_item_destructible": {},
+			"tag:stone": {}
+		}
+	}
+}

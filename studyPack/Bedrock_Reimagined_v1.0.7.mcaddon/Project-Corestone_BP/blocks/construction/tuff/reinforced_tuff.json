@@ -1,0 +1,43 @@
+{
+	"format_version": "1.26.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "5fs_br:reinforced_tuff",
+            "menu_category": {
+                "category": "nature"
+            }
+		},
+		"components": {
+            "minecraft:geometry": "minecraft:geometry.full_block",
+			"minecraft:material_instances": {
+				"up": {
+					"texture": "reinforced_tuff_top"
+				},
+				"down": {
+					"texture": "reinforced_tuff_top"
+				},
+				"*": {
+					"texture": "reinforced_tuff_side"
+				}
+			},
+            "minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 166.6,
+				"item_specific_speeds": [
+					{
+						"item": {
+							"tags": "query.all_tags('minecraft:is_pickaxe')"
+						},
+						"destroy_speed": 55
+					}
+				]
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 1200
+            },
+            "minecraft:map_color": "#392923",
+			"minecraft:movable": {
+				"movement_type": "immovable"
+			}
+		}
+	}
+}

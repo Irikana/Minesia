@@ -1,0 +1,25 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:client_biome": {
+    "description": {
+      "identifier": "5fs_br:crystal_canyons"
+    },
+    "components": {
+      "minecraft:fog_appearance": {
+        "fog_identifier": "5fs_br:crystal_canyons"
+      },
+      "minecraft:sky_color": {
+        "sky_color": "#b9b9b9"
+      },
+      "minecraft:water_appearance": {
+        "surface_color": "#00FFFF"
+      },
+      "minecraft:foliage_appearance": {
+        "color": "#878d76"
+      },
+      "minecraft:grass_appearance": {
+        "color": "#778272"
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "light_gray_bed_cave",
+		"metalness_emissive_roughness": "light_gray_bed_cave_mer"
+	}
+}

@@ -1,0 +1,23 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.cobalt_sword.1fp": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": [72.30983, 52.12916, -75.5892],
+					"position": [11, 9, 12]
+				}
+			}
+		},
+		"animation.cobalt_sword.3pp": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": [90, 0, 0],
+					"position": [0, 19, -2]
+				}
+			}
+		}
+	}
+}

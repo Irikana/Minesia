@@ -1,0 +1,10 @@
+{ 
+  "$ender_boss_string": "§3§3§4§5§4§r",
+  "$wither_boss_string": "§2§2§5§4§3§r",
+  "$crystalline_boss_string": "§a§a§2§2§a§r",   
+  "$mummy_boss_string": "§e§e§6§6§e§r",
+  "$giant_jungle_boss_string": "§2§2§2§2§2§r",
+  "$iris_boss_string": "§a§a§a§a§a§r",
+  "$pirate_captain_boss_string": "§e§e§2§2§e§r",
+  "$redwood_sentinel_boss_string": "§2§2§2§2§1§r"
+}

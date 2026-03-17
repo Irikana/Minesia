@@ -1,0 +1,21 @@
+{
+  "format_version": "1.21.20",
+  "minecraft:structure_set": {
+    "description": {
+      "identifier": "5fs_br:jungle_temple"
+    },
+    "placement": {
+      "type": "minecraft:random_spread",
+      "salt": 86414724,
+      "separation": 20,
+      "spacing": 48,
+      "spread_type": "linear"
+    },
+    "structures": [
+      {
+        "structure": "5fs_br:jungle_temple",
+        "weight": 1
+      }
+    ]
+  }
+}

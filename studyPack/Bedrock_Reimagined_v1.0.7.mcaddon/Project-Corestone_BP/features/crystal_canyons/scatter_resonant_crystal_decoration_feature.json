@@ -1,0 +1,32 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:scatter_feature": {
+        "description": {
+            "identifier": "5fs_br:crystal_canyons/scatter_resonant_crystal_decoration_feature"
+        },
+        "iterations": 15,
+        "x": {
+            "distribution": "uniform",
+            "extent": [
+                -2,
+                2
+            ]
+        },
+        "y": {
+            "distribution": "uniform",
+            "extent": [
+                1,
+                2
+            ]
+        },
+        "z": {
+            "distribution": "uniform",
+            "extent": [
+                -2,
+                2
+            ]
+        },
+        "coordinate_eval_order": "xyz",
+        "places_feature": "5fs_br:crystal_canyons/weighted_resonant_crystal_decoration_feature"
+    }
+}

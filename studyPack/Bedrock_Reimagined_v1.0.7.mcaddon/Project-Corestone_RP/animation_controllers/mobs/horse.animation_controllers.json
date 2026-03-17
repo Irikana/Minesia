@@ -1,0 +1,49 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.horse": {
+      "initial_state": "idle",
+      "states": {
+        "idle": {
+          "animations": ["idle"],
+          "transitions": [
+            { "walking": "q.is_alive && q.modified_move_speed > 0.05 && q.modified_move_speed <= 0.25" },
+            { "running": "q.is_alive && q.modified_move_speed > 0.25" },
+            { "attack": "v.attack_time != 0.0" },
+            { "death": "!q.is_alive" }
+          ]
+        },
+        "walking": {
+          "animations": ["walking"],
+          "transitions": [
+            { "idle": "q.is_alive && q.modified_move_speed <= 0.05" },
+            { "running": "q.is_alive && q.modified_move_speed > 0.25" },
+            { "attack": "v.attack_time != 0.0" },
+            { "death": "!q.is_alive" }
+          ]
+        },
+        "running": {
+          "animations": ["running"],
+          "transitions": [
+            { "walking": "q.is_alive && q.modified_move_speed > 0.05 && q.modified_move_speed <= 0.25" },
+            { "idle": "q.is_alive && q.modified_move_speed <= 0.05" },
+            { "attack": "v.attack_time != 0.0" },
+            { "death": "!q.is_alive" }
+          ]
+        },
+         "attack": {
+          "animations": ["attack"],
+          "transitions": [
+            { "walking": "q.is_alive && q.modified_move_speed > 0.05 && q.modified_move_speed <= 0.25" },
+            { "idle": "q.is_alive && q.modified_move_speed <= 0.05" },
+            { "death": "!q.is_alive" }
+          ],
+          "blend_transition": 0.1
+        },
+        "death": {
+          "animations": ["death"]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "5fs_br:crystal_golem",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/mobs/crystal_golem"
+			},
+			"geometry": {
+				"default": "geometry.crystal_golem"
+			},
+			"spawn_egg": {
+				"texture": "5fs_br:crystal_golem"
+			},
+			"animations": {
+				"look_at_target": "animation.common.look_at_target",
+				"idle": "animation.crystal_golem.idle",
+				"special_idle": "animation.crystal_golem.special_idle",
+				"walk": "animation.crystal_golem.walk",
+				"melee_attack": "animation.crystal_golem.melee_attack",
+				"slam_attack": "animation.crystal_golem.slam_attack",
+				"throw_attack": "animation.crystal_golem.throw_ranged_attack",
+				"death": "animation.crystal_golem.death",
+				"root_controller": "controller.animation.crystal_golem.root",
+				"general_controller": "controller.animation.crystal_golem.general"
+			},
+			"scripts": {
+				"animate": [
+					"root_controller"
+				]
+			},
+			"sound_effects": {
+				"idle": "mob.crystal_golem.idle",
+				"special_idle": "mob.crystal_golem.special_idle",
+				"melee_attack": "mob.crystal_golem.melee_attack",
+				"slam_attack": "mob.crystal_golem.slam_attack",
+				"throw_attack": "mob.crystal_golem.throw_ranged_attack"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			]
+		}
+	}
+}

@@ -1,0 +1,32 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "5fs_br:decorative_tombstone"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:stone"
+			},
+            "G": {
+				"item": "minecraft:lodestone"
+			}
+		},
+		"pattern": [
+			" # ",
+			"#G#",
+			"###"
+		],
+		"result": {
+			"item": "5fs_br:decorative_tombstone"
+		},
+		"unlock": [
+			{
+				"item": "minecraft:stone"
+			}
+		]
+	}
+}

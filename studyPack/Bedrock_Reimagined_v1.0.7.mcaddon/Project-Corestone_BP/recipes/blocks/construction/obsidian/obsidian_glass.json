@@ -1,0 +1,33 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "5fs_br:obsidian_glass"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "PPP",
+      "POP",
+      "PPP"
+    ],
+    "key": {
+      "P": {
+        "item": "minecraft:glass"
+      },
+      "O": {
+        "item": "5fs_br:obsidian_glass"
+      }
+    },
+    "result": {
+      "item": "5fs_br:obsidian_glass",
+      "count": 8
+    },
+    "unlock": [
+      {
+        "item": "minecraft:glass"
+      }
+    ]
+  }
+}

@@ -1,0 +1,98 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.duck",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3,
+				"visible_bounds_offset": [0, 0.5, 0]
+			},
+			"bones": [
+				{
+					"name": "bone",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "body2",
+					"parent": "bone",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "body",
+					"parent": "body2",
+					"pivot": [0, 6, 0],
+					"rotation": [90, 0, 0],
+					"cubes": [
+						{"origin": [-3, 2, -3], "size": [6, 8, 6], "uv": [0, 13]},
+						{"origin": [0, -1, 0], "size": [0, 5, 5], "uv": [25, 25]}
+					]
+				},
+				{
+					"name": "duck_head",
+					"parent": "body",
+					"pivot": [0, 10, 1],
+					"cubes": [
+						{"origin": [-2.5, 7, -1], "size": [5, 5, 9], "uv": [1, 31]},
+						{"origin": [-1.5, 12, 4], "size": [3, 2, 2], "uv": [27, 4]}
+					],
+					"locators": {
+						"lead0": [0, 10, 1]
+					}
+				},
+				{
+					"name": "left_wing",
+					"parent": "body",
+					"pivot": [3, 6, 3],
+					"rotation": [-90, 0, 0],
+					"cubes": [
+						{"origin": [3, 1, 0], "size": [1, 5, 6], "uv": [25, 13]}
+					]
+				},
+				{
+					"name": "right_wing",
+					"parent": "body",
+					"pivot": [-3, 6, 3],
+					"rotation": [-90, 0, 0],
+					"cubes": [
+						{"origin": [-4, 1, 0], "size": [1, 5, 6], "uv": [25, 13], "mirror": true}
+					]
+				},
+				{
+					"name": "left_leg",
+					"parent": "body2",
+					"pivot": [1, 3, 1],
+					"cubes": [
+						{"origin": [1, 0, 1], "size": [1, 3, 0], "uv": [27, 9]}
+					]
+				},
+				{
+					"name": "lef_leg_2",
+					"parent": "left_leg",
+					"pivot": [1.5, 0, 1],
+					"cubes": [
+						{"origin": [0, 0, -2], "size": [3, 0, 3], "uv": [27, 0]}
+					]
+				},
+				{
+					"name": "right_leg",
+					"parent": "body2",
+					"pivot": [-1, 3, 1],
+					"cubes": [
+						{"origin": [-2, 0, 1], "size": [1, 3, 0], "uv": [27, 9], "mirror": true}
+					]
+				},
+				{
+					"name": "lef_leg_3",
+					"parent": "right_leg",
+					"pivot": [-1.5, 0, 1],
+					"cubes": [
+						{"origin": [-3, 0, -2], "size": [3, 0, 3], "uv": [27, 0], "mirror": true}
+					]
+				}
+			]
+		}
+	]
+}

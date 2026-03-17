@@ -1,0 +1,45 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "5fs_br:mummified_husk",
+            "materials": {
+                "default": "husk"
+            },
+            "textures": {
+                "default": "textures/entity/mummified_husk"
+            },
+            "geometry": {
+                "default": "geometry.mummified_husk"
+            },
+            "scripts": {
+                "animate": [
+                    "look_at_target",
+                    "root_controller"
+                ]
+            },
+            "animations": {
+                "look_at_target": "animation.common.look_at_target",
+                "walk": "animation.mummified_husk.walk",
+                "attack": "animation.mummified_husk.attack",
+                "idle": "animation.mummified_husk.idle",
+                "idle_1": "animation.mummified_husk.idle_1",
+                "death": "animation.mummified_husk.death",
+                "spawn": "animation.mummified_husk.emerging",
+                "root_controller": "controller.animation.mummified_husk.root",
+                "general_controller": "controller.animation.mummified_husk.general",
+                "attack_controller": "controller.animation.mummified_husk.attack",
+                "emerging_controller": "controller.animation.mummified_husk.emerging"
+            },
+            "sound_effects": {
+                "emerging": "mob.mummified_husk.emerging"
+            },
+            "render_controllers": [
+                "controller.render.default"
+            ],
+            "spawn_egg": {
+                "texture": "5fs_br:mummy_husk"
+            }
+        }
+    }
+}

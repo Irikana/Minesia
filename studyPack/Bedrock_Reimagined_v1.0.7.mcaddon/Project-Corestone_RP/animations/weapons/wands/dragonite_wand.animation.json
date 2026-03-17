@@ -1,0 +1,23 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.dragonite_wand.3pp": {
+			"loop": true,
+			"bones": {
+				"wand": {
+					"rotation": [-272.77249, -3.11869, 0.04786],
+					"position": [0, 12, -1]
+				}
+			}
+		},
+		"animation.dragonite_wand.1fp": {
+			"loop": true,
+			"bones": {
+				"wand": {
+					"rotation": [-281.46157, 68.91689, -70.06399],
+					"position": [9, 7, 8]
+				}
+			}
+		}
+	}
+}

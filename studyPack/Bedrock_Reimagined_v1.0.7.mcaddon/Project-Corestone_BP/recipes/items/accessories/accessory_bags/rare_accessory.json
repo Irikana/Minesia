@@ -1,0 +1,32 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "5fs_br:rare_accessory_bag"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " G ",
+      "GZG",
+      " G "
+    ],
+    "key": {
+      "Z": {
+        "item": "5fs_br:uncommon_bag_upgrade"
+      },
+      "G": {
+        "item": "minecraft:diamond"
+      }
+    },
+    "result": {
+      "item": "5fs_br:rare_bag_upgrade"
+    },
+    "unlock": [
+      {
+        "item": "minecraft:diamond"
+      }
+    ]
+  }
+}

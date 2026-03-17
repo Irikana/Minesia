@@ -1,0 +1,30 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "5fs_br:charm_of_shroud"
+		},
+		"tags": [
+			"jeweling_station"
+		],
+		"key": {
+			"O": {
+                "item": "5fs_br:obsidian_ingot"
+            },
+            "P": {
+                "item": "5fs_br:bottled_sand"
+            }
+		},
+		"pattern": [
+			"OPO",
+			"PPP",
+			"OPO"
+		],
+		"result": {
+			"item": "5fs_br:charm_of_shroud"
+		},
+		"unlock": {
+			"context": "AlwaysUnlocked"
+		}
+	}
+}

@@ -1,0 +1,44 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.skeleton_spider": {
+      "initial_state": "idle",
+      "states": {
+        "idle": {
+          "animations": ["idle"],
+          "transitions": [
+            { "walking": "q.modified_move_speed > 0.05 && q.is_alive" },
+            { "attack": "v.attack_time != 0.0 && q.is_alive" },
+            { "death": "!q.is_alive" }
+          ],
+          "blend_transition": 0.2
+        },
+
+        "walking": {
+          "animations": ["walking"],
+          "transitions": [
+            { "idle": "q.modified_move_speed <= 0.05 && q.is_alive" },
+            { "attack": "v.attack_time != 0.0 && q.is_alive" },
+            { "death": "!q.is_alive" }
+          ],
+          "blend_transition": 0.2
+        },
+
+        "attack": {
+          "animations": ["attack"],
+          "transitions": [
+            { "walking": "q.any_animation_finished && q.modified_move_speed > 0.05 && q.is_alive" },
+            { "idle": "q.any_animation_finished && q.modified_move_speed <= 0.05 && q.is_alive" },
+            { "death": "!q.is_alive" }
+          ],
+          "blend_transition": 0.1
+        },
+
+        "death": {
+          "animations": ["death"],
+          "blend_transition": 0.2
+        }
+      }
+    }
+  }
+}

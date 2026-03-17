@@ -1,0 +1,21 @@
+{
+  "format_version": "1.21.20",
+  "minecraft:structure_set": {
+    "description": {
+      "identifier": "5fs_br:crystal_canyon_mineshaft"
+    },
+    "placement": {
+      "type": "minecraft:random_spread",
+      "salt": 83469867,
+      "separation": 8,
+      "spacing": 30,
+      "spread_type": "linear"
+    },
+    "structures": [
+      {
+        "structure": "5fs_br:crystal_canyon_mineshaft",
+        "weight": 1
+      }
+    ]
+  }
+}

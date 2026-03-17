@@ -1,0 +1,18 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "5fs_br:mushroom_island/weighted_small_red_mushrooms_feature"
+    },
+    "features": [
+      ["5fs_br:mushroom_island/scatter_red_mushroom_small_1_feature", 1],
+      ["5fs_br:mushroom_island/scatter_red_mushroom_small_2_feature", 1],
+      ["5fs_br:mushroom_island/scatter_red_mushroom_small_3_feature", 1],
+      ["5fs_br:mushroom_island/scatter_red_mushroom_small_4_feature", 1],
+      ["5fs_br:mushroom_island/scatter_red_mushroom_small_5_feature", 1],
+      ["5fs_br:mushroom_island/scatter_red_mushroom_small_6_feature", 1],
+      ["5fs_br:mushroom_island/scatter_red_mushroom_small_7_feature", 1],
+      ["5fs_br:mushroom_island/scatter_red_mushroom_small_8_feature", 1]
+    ]
+  }
+}

@@ -1,0 +1,589 @@
+{
+    "namespace": "form_hud_custom",
+    "custom_slider_preset": {
+        "type": "panel",
+        "$slider_special_name|default": "slider_man",
+        "controls": [
+            {
+                "$slider_special_name@common.slider": {
+                    "size": [
+                        128,
+                        10
+                    ],
+                    // "collection_name": "custom_form",
+                    "$slider_steps": 101,
+                    "$option_label": "#custom_slider_step_text",
+                    "$slider_name": "custom_slider_step",
+                    "$slider_value_binding_name": "#custom_slider_step_value",
+                    "$slider_tts_text_value": "#custom_slider_step_text_value",
+                    "$slider_steps_binding_type": "collection",
+                    "$slider_steps_binding_name": "#custom_slider_steps",
+                    "$option_tooltip_binding_type": "collection",
+                    "$option_tooltip_collection_name": "custom_form",
+                    "$option_tooltip_text_binding_name": "#custom_tooltip_text",
+                    "$option_tooltip_area": "inside_header_panel",
+                    "$label_bindings": [
+                        {
+                            "binding_name": "#custom_slider_step_text",
+                            "binding_type": "collection",
+                            "binding_collection_name": "custom_form"
+                        }
+                    ],
+                    "bindings": [
+                        {
+                            "binding_name": "#custom_slider_step_value",
+                            "binding_type": "collection",
+                            "binding_collection_name": "custom_form"
+                        }
+                    ],
+                    "property_bag": {
+                        "#slider_steps": 101,
+                        "#slider_value": 0,
+                        "#custom_slider_step_value": 0
+                    }
+                }
+            }
+        ]
+    },
+    "sliders": {
+        "type": "panel",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "controls": [
+            {
+                "slider_size": {
+                    "type": "collection_panel",
+                    "collection_name": "custom_form",
+                    "anchor_from": "bottom_middle",
+                    "anchor_to": "bottom_middle",
+                    "controls": [
+                        {
+                            "slide@form_hud_custom.custom_slider_preset": {
+                                "size": [
+                                    128,
+                                    10
+                                ],
+                                "anchor_from": "center",
+                                "anchor_to": "center",
+                                "$slider_special_name": "size_slider",
+                                "collection_index": 0
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "elemtns": {
+        "type": "panel",
+        "controls": [
+            {
+                "sliders_elements": {
+                    "type": "panel",
+                    "controls": [
+                        {
+                            "sliders@sliders": {}
+                        },
+                        {
+                            "submit_button@common_buttons.light_text_button": {
+                                "offset": [
+                                    0,
+                                    40
+                                ],
+                                "$pressed_button_name": "button.submit_custom_form",
+                                "anchor_from": "center",
+                                "anchor_to": "center",
+                                "size": [
+                                    "10%",
+                                    32
+                                ],
+                                "$button_text": "#submit_text",
+                                "$button_text_binding_type": "global",
+                                "$button_binding_condition": "once",
+                                "bindings": [
+                                    {
+                                        "binding_name": "#submit_button_visible",
+                                        "binding_name_override": "#visible"
+                                    }
+                                ]
+                            }
+                        },
+                        // {
+                        //     "slider_image": {
+                        //         "type": "image",
+                        //         "texture": "textures/ui/White",
+                        //         // "offset": [],
+                        //         "anchor_from": "center",
+                        //         "anchor_to": "center",
+                        //         "size": [
+                        //             "100%",
+                        //             "100%"
+                        //         ],
+                        //         "layer": 0,
+                        //         "alpha": 0.5,
+                        //         "$multiplier": 0.01,
+                        //         "$min": 1.0,
+                        //         "use_anchored_offset": true,
+                        //         "property_bag": {
+                        //             "#size_binding_x": 0.0,
+                        //             "#multiplier": "$multiplier"
+                        //         },
+                        //         "controls": [
+                        //             // {
+                        //             //     "mana_and_life_panel@bars_commons_fake.mana_and_life_panel":{}
+                        //             // }
+                        //         ],
+                        //         "bindings": [
+                        //             {
+                        //                 "binding_type": "view",
+                        //                 "source_control_name": "size_slider",
+                        //                 "source_property_name": "#custom_slider_step_value",
+                        //                 "target_property_name": "#custom_slider_step_value",
+                        //                 "resolve_sibling_scope": true
+                        //             },
+                        //             {
+                        //                 "binding_type": "view",
+                        //                 "source_property_name": "(#custom_slider_step_value * #multiplier)",
+                        //                 "target_property_name": "#size_binding_x"
+                        //             }
+                        //         ]
+                        //     }
+                        // },
+                        {
+                            "image_right": {
+                                "type": "panel",
+                                // "offset": [],
+                                "anchor_from": "bottom_right",
+                                "anchor_to": "bottom_right",
+                                "size": [
+                                    "100%",
+                                    "100%"
+                                ],
+                                "layer": 0,
+                                "$multiplier|default": 0.01,
+                                "$multiplier_offset_x|default": 0.01,
+                                "$multiplier_offset_y|default": 0.01,
+                                "$multiplier_preset":0.01,
+                                "$min": 1.0,
+                                "use_anchored_offset": true,
+                                "property_bag": {
+                                    "#size_binding_x": 0.0,
+                                    "#size_binding_y": 0.0,
+                                    "#anchored_offset_value_x": 0.0,
+                                    "#anchored_offset_value_y": 0.0,
+                                    "#multiplier": "$multiplier",
+                                    "#multiplier_offset_x": "$multiplier_offset_x",
+                                    "#multiplier_offset_y": "$multiplier_offset_y",
+                                    "#multiplier_preset": "$multiplier_preset"
+                                },
+                                "controls": [
+                                    {
+                                        "mana_and_life_panel@bars_commons_fake.mana_and_life_panel": {}
+                                    }
+                                ],
+                                "$bindings_edit|default": [
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "size_slider",
+                                        "source_property_name": "#custom_slider_step_value",
+                                        "target_property_name": "#custom_slider_step_value",
+                                        "resolve_sibling_scope": true
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_property_name": "(#custom_slider_step_value * #multiplier)",
+                                        "target_property_name": "#size_binding_x"
+                                    }
+                                ],
+                                "propagate_alpha": true,
+                                "bindings": "$bindings_edit"
+                            }
+                        },
+                        {
+                            "image_left": {
+                                "type": "panel",
+                                // "offset": [],
+                                "anchor_from": "bottom_left",
+                                "anchor_to": "bottom_left",
+                                "size": [
+                                    "100%",
+                                    "100%"
+                                ],
+                                "layer": 0,
+                                "$multiplier|default": 0.01,
+                                "$multiplier_offset_x|default": 0.01,
+                                "$multiplier_offset_y|default": 0.01,
+                                "$multiplier_preset":0.01,
+                                "$min": 1.0,
+                                "use_anchored_offset": true,
+                                "property_bag": {
+                                    "#size_binding_x": 0.0,
+                                    "#size_binding_y": 0.0,
+                                    "#anchored_offset_value_x": 0.0,
+                                    "#anchored_offset_value_y": 0.0,
+                                    "#multiplier": "$multiplier",
+                                    "#multiplier_offset_x": "$multiplier_offset_x",
+                                    "#multiplier_offset_y": "$multiplier_offset_y",
+                                    "#multiplier_preset": "$multiplier_preset"
+                                },
+                                "controls": [
+                                    {
+                                        "hunger_and_drink_panel@bars_commons_fake.hunger_and_drink_panel": {}
+                                    }
+                                ],
+                                "$bindings_edit|default": [
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "size_slider",
+                                        "source_property_name": "#custom_slider_step_value",
+                                        "target_property_name": "#custom_slider_step_value",
+                                        "resolve_sibling_scope": true
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_property_name": "(#custom_slider_step_value * #multiplier)",
+                                        "target_property_name": "#size_binding_x"
+                                    }
+                                ],
+                                "propagate_alpha": true,
+                                "bindings": "$bindings_edit"
+                            }
+                        }
+                    ]
+                }
+            }
+        ],
+        "$detect_text|default": "slider_1",
+        "bindings": [
+            {
+                "binding_name": "#title_text",
+                "binding_name_override": "#text",
+                "binding_type": "global"
+            },
+            {
+                "binding_type": "view", // make this a viewing binding
+                "source_property_name": "(  not (( #text - $detect_text) = #text))", // detect when the title text string is not equal to "hello world"
+                "target_property_name": "#visible" // override the #visibility property depending on if "source_property_name" is true or false
+            }
+        ]
+    },
+    "root_panel_form_custom": {
+        "type": "panel",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "controls": [
+            {
+                "data_element": {
+                    "type": "panel",
+                    "$update_string": "slider_",
+                    "property_bag": {
+                        "#text_0":"",
+                        "#text_data_0": "",
+                        "#text_data_1": "",
+                        "#text_data_2": "",
+                        "#text_data_3": "",
+                        "#text_data_4": "",
+                        "#split_seperator": ","
+                    },
+                    "bindings": [
+                        {
+                            "binding_name": "#title_text"
+                            // "binding_name_override": "#text_0",
+                            // "binding_type": "global"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "( #title_text - $update_string)",
+                            "target_property_name": "#text_data_0"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "( #title_text - ($update_string + #text_data_0 + #split_seperator))",
+                            "target_property_name": "#text_data_1"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "( #title_text - ($update_string + #text_data_0 + #split_seperator + #text_data_1 + #split_seperator))",
+                            "target_property_name": "#text_data_2"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "( #title_text - ($update_string + #text_data_0 + #split_seperator + #text_data_1 + #split_seperator + #text_data_2 + #split_seperator))",
+                            "target_property_name": "#text_data_3"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "( #title_text - ($update_string + #text_data_0 + #split_seperator + #text_data_1 + #split_seperator + #text_data_2 + #split_seperator + #text_data_3 + #split_seperator))",
+                            "target_property_name": "#text_data_4"
+                        }
+                    ]
+                }
+            },
+            {
+                "size@form_hud_custom.elemtns": {
+                    "$detect_text": "slider_1",
+                    "$bindings_edit": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "size_slider",
+                            "source_property_name": "#custom_slider_step_value",
+                            "target_property_name": "#custom_slider_step_value",
+                            "resolve_sibling_scope": true
+                        },
+                        /// GET VALS
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "data_element",
+                            "source_property_name": "(#text_data_1)",
+                            "target_property_name": "#text_data_1"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "data_element",
+                            "source_property_name": "(#text_data_2)",
+                            "target_property_name": "#text_data_2"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "data_element",
+                            "source_property_name": "(#text_data_3)",
+                            "target_property_name": "#text_data_3"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "data_element",
+                            "source_property_name": "(#text_data_4)",
+                            "target_property_name": "#text_data_4"
+                        },
+                        // SET DATA DEFAULT
+
+
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(#text_data_2 * #multiplier_offset_y)",
+                            "target_property_name": "#anchored_offset_value_y"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(#text_data_3 * #multiplier_offset_x)",
+                            "target_property_name": "#anchored_offset_value_x"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(#text_data_4 * #multiplier_preset)",
+                            "target_property_name": "#alpha"
+                        },
+
+                        // SET VARIABLE DATA
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(#custom_slider_step_value * #multiplier)",
+                            "target_property_name": "#size_binding_x"
+                        }
+                    ]
+                }
+            },
+            {
+                "offset_y@form_hud_custom.elemtns": {
+                    "$detect_text": "slider_2",
+                    "$multiplier": 0.01,
+                    "$bindings_edit": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "size_slider",
+                            "source_property_name": "#custom_slider_step_value",
+                            "target_property_name": "#custom_slider_step_value",
+                            "resolve_sibling_scope": true
+                        },
+                        /// GET VALS
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "data_element",
+                            "source_property_name": "(#text_data_1)",
+                            "target_property_name": "#text_data_1"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "data_element",
+                            "source_property_name": "(#text_data_2)",
+                            "target_property_name": "#text_data_2"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "data_element",
+                            "source_property_name": "(#text_data_3)",
+                            "target_property_name": "#text_data_3"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "data_element",
+                            "source_property_name": "(#text_data_4)",
+                            "target_property_name": "#text_data_4"
+                        },
+                        // SET DATA DEFAULT
+
+
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(#text_data_1 * #multiplier_preset)",
+                            "target_property_name": "#size_binding_x"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(#text_data_3 * #multiplier_offset_x)",
+                            "target_property_name": "#anchored_offset_value_x"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(#text_data_4 * #multiplier_preset)",
+                            "target_property_name": "#alpha"
+                        },
+
+                        // SET VARIABLE DATA
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(#custom_slider_step_value * #multiplier)",
+                            "target_property_name": "#anchored_offset_value_y"
+                        }
+                    ]
+                }
+            },
+            {
+                "offset_x@form_hud_custom.elemtns": {
+                    "$detect_text": "slider_3",
+                    "$multiplier": 0.01,
+                    "$bindings_edit": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "size_slider",
+                            "source_property_name": "#custom_slider_step_value",
+                            "target_property_name": "#custom_slider_step_value",
+                            "resolve_sibling_scope": true
+                        },
+                        /// GET VALS
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "data_element",
+                            "source_property_name": "(#text_data_1)",
+                            "target_property_name": "#text_data_1"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "data_element",
+                            "source_property_name": "(#text_data_2)",
+                            "target_property_name": "#text_data_2"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "data_element",
+                            "source_property_name": "(#text_data_3)",
+                            "target_property_name": "#text_data_3"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "data_element",
+                            "source_property_name": "(#text_data_4)",
+                            "target_property_name": "#text_data_4"
+                        },
+                        // SET DATA DEFAULT
+
+
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(#text_data_2 * #multiplier_offset_y)",
+                            "target_property_name": "#anchored_offset_value_y"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(#text_data_1 * #multiplier_preset)",
+                            "target_property_name": "#size_binding_x"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(#text_data_4 * #multiplier_preset)",
+                            "target_property_name": "#alpha"
+                        },
+
+                        // SET VARIABLE DATA
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(#custom_slider_step_value * #multiplier)",
+                            "target_property_name": "#anchored_offset_value_x"
+                        }
+                    ]
+                }
+            },
+            {
+                "offset_x@form_hud_custom.elemtns": {
+                    "$detect_text": "slider_4",
+                    "$multiplier": 0.01,
+                    "$bindings_edit": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "size_slider",
+                            "source_property_name": "#custom_slider_step_value",
+                            "target_property_name": "#custom_slider_step_value",
+                            "resolve_sibling_scope": true
+                        },
+                        /// GET VALS
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "data_element",
+                            "source_property_name": "(#text_data_1)",
+                            "target_property_name": "#text_data_1"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "data_element",
+                            "source_property_name": "(#text_data_2)",
+                            "target_property_name": "#text_data_2"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "data_element",
+                            "source_property_name": "(#text_data_3)",
+                            "target_property_name": "#text_data_3"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "data_element",
+                            "source_property_name": "(#text_data_4)",
+                            "target_property_name": "#text_data_4"
+                        },
+                        // SET DATA DEFAULT
+
+
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(#text_data_2 * #multiplier_offset_y)",
+                            "target_property_name": "#anchored_offset_value_y"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(#text_data_3 * #multiplier_offset_x)",
+                            "target_property_name": "#anchored_offset_value_x"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(#text_data_1 * #multiplier_preset)",
+                            "target_property_name": "#size_binding_x"
+                        },
+
+                        // SET VARIABLE DATA
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(#custom_slider_step_value * #multiplier)",
+                            "target_property_name": "#alpha"
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

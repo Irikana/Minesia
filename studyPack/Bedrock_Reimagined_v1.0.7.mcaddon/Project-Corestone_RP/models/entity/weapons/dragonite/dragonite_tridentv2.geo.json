@@ -1,0 +1,61 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.dragonite_tridentv2",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 20,
+				"visible_bounds_height": 6,
+				"visible_bounds_offset": [0, 2, 0]
+			},
+			"bones": [
+				{
+					"name": "bone",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "rightArm",
+					"parent": "bone",
+					"pivot": [0, -2.6, 0]
+				},
+				{
+					"name": "rightitem",
+					"parent": "rightArm",
+					"pivot": [0, -2.6, 0]
+				},
+				{
+					"name": "bone1",
+					"parent": "rightitem",
+					"pivot": [3, 10.4, -5],
+					"cubes": [
+						{"origin": [2.5, 29.86593, -9.72775], "size": [1, 2, 1], "pivot": [3, 30.86593, -9.22775], "rotation": [-17.5, 0, 0], "uv": [35, 24]},
+						{"origin": [2.5, 26.55372, -12.69929], "size": [1, 2, 8], "pivot": [3, 27.55372, -8.69929], "rotation": [-162.5, 0, 180], "uv": [7, 22]},
+						{"origin": [2.5, 28.6, 1], "size": [1, 3, 2], "pivot": [3, 26.6, -1], "rotation": [17.5, 0, 0], "uv": [35, 18]},
+						{"origin": [3, 28, -14], "size": [0, 12, 4], "pivot": [3, 34, -12], "rotation": [-180, 0, 180], "uv": [26, 11]},
+						{"origin": [2.5, 29.34013, -11.80868], "size": [1, 3, 2], "pivot": [3, 30.84013, -10.80868], "rotation": [-162.5, 0, -180], "uv": [35, 18]},
+						{"origin": [3, 28, 0], "size": [0, 12, 4], "uv": [26, 11]},
+						{"origin": [3, 20.67157, -11.03553], "size": [0, 5, 5], "pivot": [3, 23.17157, -8.53553], "rotation": [135, 0, -180], "uv": [11, 33]},
+						{"origin": [2.5, 26.6, -5], "size": [1, 2, 8], "pivot": [3, 26.6, -1], "rotation": [17.5, 0, 0], "uv": [7, 22]},
+						{"origin": [2.5, 29.6, 0], "size": [1, 2, 1], "pivot": [3, 26.6, -1], "rotation": [17.5, 0, 0], "uv": [35, 24]},
+						{"origin": [2.5, 27, -7], "size": [1, 7, 4], "uv": [0, 33]},
+						{"origin": [2.5, -4, -6], "size": [1, 30, 2], "inflate": 0.25, "uv": [21, 38]},
+						{"origin": [3, 24, -3], "size": [0, 5, 5], "pivot": [3, 26, -5], "rotation": [-45, 0, 0], "uv": [11, 33]},
+						{"origin": [3, -7.91421, -10.12868], "size": [0, 4, 6], "pivot": [3, -5.91421, -7.12868], "rotation": [135, 0, 180], "uv": [26, 28]},
+						{"origin": [3, -7.91421, -5.87868], "size": [0, 4, 6], "pivot": [3, -5.91421, -2.87868], "rotation": [-45, 0, 0], "uv": [26, 28]},
+						{"origin": [2.5, -4, -6], "size": [1, 30, 2], "uv": [0, 0]},
+						{"origin": [2, -6, -6.5], "size": [2, 3, 3], "pivot": [3, -4.5, -5], "rotation": [-45, 0, 0], "uv": [35, 11]},
+						{"origin": [2, 24, -8], "size": [2, 5, 5], "pivot": [3, 26, -5], "rotation": [-45, 0, 0], "uv": [24, 0]},
+						{"origin": [3, 31, -9.5], "size": [0, 13, 9], "uv": [6, -1]}
+					]
+				},
+				{
+					"name": "leftArm",
+					"parent": "bone",
+					"pivot": [0, 0, 0]
+				}
+			]
+		}
+	]
+}

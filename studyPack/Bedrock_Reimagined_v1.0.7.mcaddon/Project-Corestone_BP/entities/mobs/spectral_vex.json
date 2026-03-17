@@ -1,0 +1,285 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "5fs_br:spectral_vex",
+      "spawn_category": "monster",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "minecraft:start_damage_timer": {
+        "minecraft:timer": {
+          "looping": false,
+          "randomInterval": true,
+          "time": [
+            30,
+            119
+          ],
+          "time_down_event": {
+            "event": "minecraft:add_periodic_damage"
+          }
+        }
+      },
+      "minecraft:periodic_damage": {
+        "minecraft:damage_over_time": {
+          "damage_per_hurt": 1,
+          "time_between_hurt": 1
+        }
+      },
+      "5fs_br:shrinkify": {
+        "minecraft:movement": {
+          "value": 0.6
+        },
+        "minecraft:health": {
+          "max": 7
+        },
+        "minecraft:scale": {
+          "value": 0.25
+        }
+      },
+      "5fs_br:gigantify": {
+        "minecraft:movement": {
+          "value": 0.24
+        },
+        "minecraft:health": {
+          "max": 28
+        },
+        "minecraft:scale": {
+          "value": 2
+        }
+      },
+      "5fs_br:normal_scale": {
+        "minecraft:movement": {
+          "value": 0.3
+        },
+        "minecraft:health": {
+          "max": 14
+        },
+        "minecraft:scale": {
+          "value": 1
+        }
+      },
+      "5fs_br:no_fall_damage_jelly": {
+        "minecraft:damage_sensor": {
+          "triggers": {
+            "cause": "fall",
+            "deals_damage": "no"
+          }
+        }
+      }
+    },
+    "components": {
+      "minecraft:is_hidden_when_invisible": {},
+      "minecraft:experience_reward": {
+        "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
+      },
+      "minecraft:nameable": {},
+      "minecraft:type_family": {
+        "family": [
+          "vex",
+          "monster",
+          "mob"
+        ]
+      },
+      "minecraft:equipment": {
+        "table": "loot_tables/entities/vex_gear.json"
+      },
+      "minecraft:health": {
+        "value": 14,
+        "max": 14
+      },
+      "minecraft:attack": {
+        "damage": 3
+      },
+      "minecraft:collision_box": {
+        "width": 0.4,
+        "height": 0.8
+      },
+      "minecraft:breathable": {
+        "breathes_air": true,
+        "breathes_solids": true,
+        "breathes_water": false
+      },
+      "minecraft:fire_immune": {},
+      "minecraft:persistent": {},
+      "minecraft:behavior.melee_attack": {
+        "speed_multiplier": 1.5,
+        "priority": 0
+      },
+      "minecraft:attack_cooldown": {
+        "attack_cooldown_time": 5
+      },
+      "minecraft:loot": {
+        "table": "loot_tables/entities/spectral_vex.json"
+      },
+      "minecraft:behavior.nearest_attackable_target": {
+        "priority": 3,
+        "attack_interval": {
+          "min": 5,
+          "max": 5
+        },
+        "entity_types": [
+          {
+            "filters": {
+              "test": "is_family",
+              "subject": "other",
+              "value": "player"
+            },
+            "max_dist": 70
+          }
+        ],
+        "must_see": false
+      },
+      "minecraft:behavior.look_at_player": {
+        "priority": 9,
+        "look_distance": 6,
+        "probability": 0.02
+      },
+      "minecraft:behavior.look_at_entity": {
+        "priority": 9,
+        "look_distance": 6,
+        "probability": 0.02,
+        "filters": {
+          "test": "is_family",
+          "subject": "other",
+          "value": "mob"
+        }
+      },
+      "minecraft:behavior.hurt_by_target": {
+        "priority": 4
+      },
+      "minecraft:physics": {
+        "has_gravity": false,
+        "has_collision": false
+      },
+      "minecraft:conditional_bandwidth_optimization": {},
+      "minecraft:game_event_movement_tracking": {
+        "emit_move": false,
+        "emit_swim": false
+      },
+      "minecraft:home": {
+        "restriction_radius": 128,
+        "home_block_list": [
+          "minecraft:bedrock"
+        ],
+        "restriction_type": "all_movement"
+      },
+      "minecraft:behavior.go_home": {
+        "goal_radius": 2,
+        "interval": 200,
+        "priority": 1
+      },
+      "minecraft:behavior.random_hover": {
+        "priority": 12,
+        "xz_dist": 8,
+        "y_dist": 24,
+        "y_offset": -8,
+        "interval": 1,
+        "hover_height": [
+          1,
+          78
+        ]
+      },
+      "minecraft:behavior.float": {
+        "priority": 19
+      },
+      "minecraft:movement": {
+        "value": 0.3
+      },
+      "minecraft:flying_speed": {
+        "value": 0.15
+      },
+      "minecraft:navigation.hover": {
+        "can_path_over_water": true,
+        "can_sink": false,
+        "can_pass_doors": false,
+        "can_path_from_air": true,
+        "avoid_water": true,
+        "avoid_damage_blocks": true,
+        "avoid_sun": false
+      },
+      "minecraft:movement.hover": {},
+      "minecraft:jump.static": {},
+      "minecraft:can_fly": {}
+    },
+    "events": {
+      "minecraft:add_damage_timer": {
+        "add": {
+          "component_groups": [
+            "minecraft:start_damage_timer"
+          ]
+        }
+      },
+      "minecraft:add_periodic_damage": {
+        "add": {
+          "component_groups": [
+            "minecraft:periodic_damage"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "minecraft:start_damage_timer"
+          ]
+        }
+      },
+      "5fs_br:set_home": {
+        "set_home_position": {}
+      },
+      "5fs_br:normal_scale": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:shrinkify",
+            "5fs_br:gigantify"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:normal_scale"
+          ]
+        }
+      },
+      "5fs_br:gigantify": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:shrinkify",
+            "5fs_br:normal_scale"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:gigantify"
+          ]
+        }
+      },
+      "5fs_br:shrinkify": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:gigantify",
+            "5fs_br:normal_scale"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:shrinkify"
+          ]
+        }
+      },
+      "5fs_br:no_fall_damage_jelly": {
+        "add": {
+          "component_groups": [
+            "5fs_br:no_fall_damage_jelly"
+          ]
+        }
+      },
+      "5fs_br:fall_damage_jelly": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:no_fall_damage_jelly"
+          ]
+        }
+      }
+    }
+  }
+}

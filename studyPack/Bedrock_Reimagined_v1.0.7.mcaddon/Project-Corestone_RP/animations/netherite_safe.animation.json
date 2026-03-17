@@ -1,0 +1,53 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.netherite_safe.opening": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 7200,
+			"bones": {
+				"door": {
+					"rotation": {
+						"0.4167": [0, 0, 0],
+						"0.75": [0, 90, 0]
+					}
+				},
+				"handle": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.0833": [0, 0, 15],
+						"0.375": [0, 0, -90]
+					}
+				}
+			},
+			"sound_effects": {
+				"0.6": {
+					"effect": "chest_open"
+				}
+			}
+		},
+		"animation.netherite_safe.closing": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.75,
+			"bones": {
+				"door": {
+					"rotation": {
+						"0.0": [0, 90, 0],
+						"0.375": [0, 0, 0]
+					}
+				},
+				"handle": {
+					"rotation": {
+						"0.0": [0, 0, -90],
+						"0.4583": [0, 0, -90],
+						"0.75": [0, 0, 0]
+					}
+				}
+			},
+			"sound_effects": {
+				"0.6": {
+					"effect": "chest_open"
+				}
+			}
+		}
+	}
+}

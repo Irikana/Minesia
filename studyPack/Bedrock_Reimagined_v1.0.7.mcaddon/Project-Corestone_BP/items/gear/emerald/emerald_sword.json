@@ -1,0 +1,69 @@
+{
+    "format_version": "1.26.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "5fs_br:emerald_sword",
+            "menu_category": {
+                "category": "equipment"
+            }
+        },
+        "components": {
+            "minecraft:icon": "5fs_br:emerald_sword",
+            "minecraft:digger": {
+                "use_efficiency": true,
+                "destroy_speeds": [
+                    {
+                        "block": "minecraft:web",
+                        "speed": 15
+                    },
+                    {
+                        "block": "minecraft:bamboo",
+                        "speed": 30
+                    },
+                    {
+                        "block": {
+                            "tags": "!q.any_tag('5fs_br:tag')"
+                        },
+                        "speed": 2
+                    }
+                ]
+            },
+            "minecraft:repairable": {
+                "repair_items": [
+                    {
+                        "items": [
+                            "minecraft:emerald"
+                        ],
+                        "repair_amount": "q.max_durability*0.25"
+                    },
+                    {
+                        "items": [
+                            "5fs_br:emerald_sword"
+                        ],
+                        "repair_amount": "c.other->q.remaining_durability+(0.12*c.other->q.max_durability)"
+                    }
+                ]
+            },
+            "minecraft:durability": {
+                "damage_chance": {
+                    "min": 100,
+                    "max": 100
+                },
+                "max_durability": 870
+            },
+            "minecraft:damage": {
+                "value": 7
+            },
+            "minecraft:hand_equipped": true,
+            "minecraft:max_stack_size": 1,
+            "minecraft:tags": {
+                "tags": [
+                    "minecraft:is_tool",
+                    "minecraft:is_sword",
+					"5fs_br:emerald_tier"
+                ]
+            },
+            "5fs_br:tool_durability": {}
+        }
+    }
+}

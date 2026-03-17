@@ -1,0 +1,22 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:fog_settings": {
+		"description": {
+			"identifier": "5fs_br:crystal_canyons"
+		},
+		"distance": {
+			"air": {
+				"fog_start": 100,
+				"fog_end": 180,
+				"fog_color": "#777777",
+				"render_distance_type": "fixed"
+			},
+     "weather": {
+			  "fog_start": 120,
+				"fog_end": 256,
+				"fog_color": "#444444",
+				"render_distance_type": "fixed"
+			}
+		}
+	}
+}

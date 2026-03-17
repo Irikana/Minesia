@@ -1,0 +1,21 @@
+{
+  "format_version": "1.21.20",
+  "minecraft:structure_set": {
+    "description": {
+      "identifier": "5fs_br:pumpkins"
+    },
+    "placement": {
+      "type": "minecraft:random_spread",
+      "salt": 54115625,
+      "separation": 3,
+      "spacing": 8,
+      "spread_type": "linear"
+    },
+    "structures": [
+      {
+        "structure": "5fs_br:pumpkins",
+        "weight": 1
+      }
+    ]
+  }
+}

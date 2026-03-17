@@ -1,0 +1,56 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:tree_feature": {
+    "description": {
+      "identifier": "5fs_br:maple_forest/bushy_maple_bush"
+    },
+    "trunk": {
+      "trunk_height": 1,
+      "trunk_block": {
+        "name": "5fs_br:maple_log"
+      }
+    },
+    "canopy": {
+      "canopy_offset": {
+        "min": -1,
+        "max": 1
+      },
+      "leaf_block": {
+        "name": "5fs_br:bushy_maple_leaves",
+				"states": {
+					"5fs_br:persistent_bit": false
+				}
+      },
+      "min_width": 0,
+      "canopy_slope": {
+        "rise": 1,
+        "run": 1
+      },
+      "variation_chance": {
+        "numerator": 1,
+        "denominator": 2
+      }
+    },
+    "may_grow_on": [
+      "5fs_br:autumn_grass"
+    ],
+    "base_block": [
+      "5fs_br:autumn_grass"
+    ],
+    "may_grow_through": [
+     "5fs_br:autumn_grass",
+      "minecraft:air",
+      "minecraft:orange_tulip",
+      "minecraft:wildflowers",
+      "minecraft:red_tulip",
+      "5fs_br:maple_leaf_litter"
+    ],
+    "may_replace": [
+      "minecraft:air",
+      "minecraft:orange_tulip",
+      "minecraft:wildflowers",
+      "minecraft:red_tulip",
+      "5fs_br:maple_leaf_litter"
+    ]
+  }
+}

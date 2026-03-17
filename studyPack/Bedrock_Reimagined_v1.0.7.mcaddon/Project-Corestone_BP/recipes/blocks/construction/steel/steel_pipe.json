@@ -1,0 +1,32 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "5fs_br:steel_pipe"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "###",
+      "   ",
+      "###"
+    ],
+    "key": {
+      "#": {
+        "item": "5fs_br:steel_ingot",
+        "data": 0
+      }
+    },
+    "unlock": [
+      {
+        "item": "5fs_br:steel_ingot",
+        "data": 0
+      }
+    ],
+    "result": {
+      "item": "5fs_br:pipe",
+      "count": 1
+    }
+  }
+}

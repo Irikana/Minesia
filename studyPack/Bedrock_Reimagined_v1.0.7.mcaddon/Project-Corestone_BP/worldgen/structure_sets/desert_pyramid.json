@@ -1,0 +1,21 @@
+{
+  "format_version": "1.21.20",
+  "minecraft:structure_set": {
+    "description": {
+      "identifier": "5fs_br:desert_pyramid"
+    },
+    "placement": {
+      "type": "minecraft:random_spread",
+      "salt": 83494724,
+      "separation": 20,
+      "spacing": 48,
+      "spread_type": "linear"
+    },
+    "structures": [
+      {
+        "structure": "5fs_br:desert_pyramid",
+        "weight": 1
+      }
+    ]
+  }
+}

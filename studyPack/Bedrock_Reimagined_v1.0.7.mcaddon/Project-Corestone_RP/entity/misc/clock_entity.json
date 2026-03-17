@@ -1,0 +1,46 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "5fs_br:clock_entity",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/misc/clock"
+            },
+            "geometry": {
+                "default": "geometry.clock"
+            },
+			"animations": {
+                "north": "animation.5fs_br.tile_entity.north",
+                "south": "animation.5fs_br.tile_entity.south",
+                "west": "animation.5fs_br.tile_entity.west",
+                "east": "animation.5fs_br.tile_entity.east"
+			},
+			"scripts": {
+                "pre_animation": [
+                    "v.legs = query.property('5fs_br:legs');",
+                    "v.bells = query.property('5fs_br:bells');"
+                ],
+				"animate": [
+					{
+                        "north": "query.property('5fs_br:rotation') == 'north'"
+                    },
+                    {
+                        "south": "query.property('5fs_br:rotation') == 'south'"
+                    },
+                    {
+                        "west": "query.property('5fs_br:rotation') == 'west'"
+                    },
+                    {
+                        "east": "query.property('5fs_br:rotation') == 'east'"
+                    }
+				]
+			},
+            "render_controllers": [
+                "controller.render.clock"
+            ]
+        }
+    }
+}

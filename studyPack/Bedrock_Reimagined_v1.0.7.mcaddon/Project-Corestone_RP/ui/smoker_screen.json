@@ -1,0 +1,7 @@
+{
+  "namespace": "smoker",
+
+  "smoker_screen@furnace.furnace_screen": {
+    "$texture": "textures/gui/inventory/furnace_backgrounds/smoker"
+  }
+}

@@ -1,0 +1,414 @@
+{
+  "format_version": "1.21.90",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "5fs_br:witch_ghost",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false,
+      "scripts": {
+        "animate": [
+          "general"
+        ]
+      },
+      "animations": {
+        "general": "controller.animation.witch_ghost.general"
+      }
+    },
+    "components": {
+      "minecraft:is_hidden_when_invisible": {},
+      "minecraft:type_family": {
+        "family": [
+          "mob",
+          "witch_ghost",
+          "monster",
+          "neutral"
+        ]
+      },
+      "minecraft:breathable": {
+        "total_supply": 15,
+        "suffocate_time": 0
+      },
+      "minecraft:collision_box": {
+        "width": 0.6,
+        "height": 0.9
+      },
+      "minecraft:nameable": {},
+      "minecraft:health": {
+        "value": 20,
+        "max": 20
+      },
+      "minecraft:hurt_on_condition": {
+        "damage_conditions": [
+          {
+            "filters": {
+              "test": "in_lava",
+              "subject": "self",
+              "value": true
+            },
+            "cause": "lava",
+            "damage_per_tick": 4
+          }
+        ]
+      },
+      "minecraft:navigation.hover": {
+        "can_path_over_water": true,
+        "can_sink": false,
+        "can_pass_doors": true,
+        "can_path_from_air": true,
+        "avoid_water": true,
+        "avoid_damage_blocks": true,
+        "avoid_sun": false,
+        "can_breach": true,
+        "can_jump": false
+      },
+      "minecraft:movement.hover": {
+        "max_turn": 30
+      },
+      "minecraft:jump.static": {},
+      "minecraft:can_fly": {},
+      "minecraft:flying_speed": {
+        "value": 0.25
+      },
+      "minecraft:movement": {
+        "value": 0.25
+      },
+      "minecraft:despawn": {
+        "despawn_from_distance": {}
+      },
+      "minecraft:behavior.float": {
+        "priority": 0
+      },
+      "minecraft:physics": {
+        "has_gravity": false,
+        "has_collision": true
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:conditional_bandwidth_optimization": {},
+      "minecraft:behavior.nearest_attackable_target": {
+        "priority": 1,
+        "attack_interval": 5,
+        "entity_types": {
+          "filters": {
+            "all_of": [
+              {
+                "test": "is_family",
+                "subject": "other",
+                "value": "player"
+              }
+            ]
+          },
+          "max_dist": 36
+        },
+        "must_see": false
+      },
+      "minecraft:behavior.melee_attack": {
+        "priority": 2,
+        "speed_multiplier": 1.8,
+        "track_target": true,
+        "reach_multiplier": 1.5
+      },
+      "minecraft:behavior.follow_owner": {
+        "priority": 4,
+        "speed_multiplier": 1.4,
+        "start_distance": 10,
+        "stop_distance": 4,
+        "can_teleport": false,
+        "max_distance": 25
+      },
+      "minecraft:behavior.random_hover": {
+        "priority": 6,
+        "xz_dist": 8,
+        "y_dist": 4,
+        "y_offset": 1,
+        "interval": 5,
+        "hover_height": [
+          2,
+          8
+        ],
+        "speed_multiplier": 1
+      },
+      "minecraft:behavior.look_at_player": {
+        "priority": 8,
+        "look_distance": 8,
+        "probability": 0.05
+      },
+      "minecraft:behavior.look_at_entity": {
+        "priority": 9,
+        "look_distance": 8,
+        "probability": 0.05,
+        "filters": {
+          "test": "is_family",
+          "subject": "other",
+          "value": "monster"
+        }
+      },
+      "minecraft:behavior.hurt_by_target": {
+        "priority": 3,
+        "entity_types": [
+          {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "is_family",
+                  "subject": "other",
+                  "value": "player",
+                  "operator": "!="
+                },
+                {
+                  "test": "is_family",
+                  "subject": "other",
+                  "value": "ally",
+                  "operator": "!="
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "minecraft:attack": {
+        "damage": 4,
+        "effect_name": "weakness",
+        "effect_duration": 3
+      }
+    },
+    "component_groups": {
+      "5fs_br:tamed": {
+        "minecraft:is_tamed": {},
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 1,
+          "attack_interval": 15,
+          "within_radius": 20,
+          "reselect_targets": true,
+          "scan_interval": 10,
+          "entity_types": [
+            {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "monster"
+                  }
+                ]
+              },
+              "max_dist": 20
+            },
+            {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "mob"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player",
+                    "operator": "!="
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "witch_ghost",
+                    "operator": "!="
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "inanimate",
+                    "operator": "!="
+                  }
+                ]
+              },
+              "max_dist": 20
+            }
+          ],
+          "must_see": true,
+          "must_see_forget_duration": 3
+        },
+        "minecraft:behavior.melee_attack": {
+          "priority": 2,
+          "speed_multiplier": 1.8,
+          "track_target": true,
+          "reach_multiplier": 1.5
+        },
+        "minecraft:behavior.follow_owner": {
+          "priority": 4,
+          "speed_multiplier": 1.4,
+          "start_distance": 10,
+          "stop_distance": 4,
+          "can_teleport": false,
+          "max_distance": 25
+        },
+        "minecraft:behavior.random_hover": {
+          "priority": 6,
+          "xz_dist": 8,
+          "y_dist": 4,
+          "y_offset": 1,
+          "interval": 5,
+          "hover_height": [
+            2,
+            8
+          ],
+          "speed_multiplier": 1
+        },
+        "minecraft:behavior.look_at_player": {
+          "priority": 8,
+          "look_distance": 8,
+          "probability": 0.05
+        },
+        "minecraft:behavior.look_at_entity": {
+          "priority": 9,
+          "look_distance": 8,
+          "probability": 0.05,
+          "filters": {
+            "test": "is_family",
+            "subject": "other",
+            "value": "monster"
+          }
+        },
+        "minecraft:behavior.hurt_by_target": {
+          "priority": 3,
+          "entity_types": [
+            {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player",
+                    "operator": "!="
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "ally",
+                    "operator": "!="
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "5fs_br:despawn": {
+        "minecraft:instant_despawn": {}
+      },
+      "5fs_br:shrinkify": {
+        "minecraft:movement": {
+          "value": 0.5
+        },
+        "minecraft:health": {
+          "max": 10
+        },
+        "minecraft:scale": {
+          "value": 0.25
+        }
+      },
+      "5fs_br:gigantify": {
+        "minecraft:movement": {
+          "value": 0.2
+        },
+        "minecraft:health": {
+          "max": 40
+        },
+        "minecraft:scale": {
+          "value": 2
+        }
+      },
+      "5fs_br:normal_scale": {
+        "minecraft:movement": {
+          "value": 0.25
+        },
+        "minecraft:health": {
+          "max": 20
+        },
+        "minecraft:scale": {
+          "value": 1
+        }
+      },
+      "5fs_br:no_fall_damage_jelly": {
+        "minecraft:damage_sensor": {
+          "triggers": {
+            "cause": "fall",
+            "deals_damage": "no"
+          }
+        }
+      }
+    },
+    "events": {
+      "5fs_br:tamed": {
+        "add": {
+          "component_groups": [
+            "5fs_br:tamed"
+          ]
+        }
+      },
+      "5fs_br:despawn": {
+        "add": {
+          "component_groups": [
+            "5fs_br:despawn"
+          ]
+        }
+      },
+      "5fs_br:normal_scale": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:shrinkify",
+            "5fs_br:gigantify"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:normal_scale"
+          ]
+        }
+      },
+      "5fs_br:gigantify": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:shrinkify",
+            "5fs_br:normal_scale"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:gigantify"
+          ]
+        }
+      },
+      "5fs_br:shrinkify": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:gigantify",
+            "5fs_br:normal_scale"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:shrinkify"
+          ]
+        }
+      },
+      "5fs_br:no_fall_damage_jelly": {
+        "add": {
+          "component_groups": [
+            "5fs_br:no_fall_damage_jelly"
+          ]
+        }
+      },
+      "5fs_br:fall_damage_jelly": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:no_fall_damage_jelly"
+          ]
+        }
+      }
+    }
+  }
+}

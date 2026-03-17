@@ -1,0 +1,51 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "5fs_br:beaver",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/mobs/beaver"
+            },
+            "geometry": {
+                "default": "geometry.beaver"
+            },
+            "animations": {
+                "look_at_target": "animation.common.look_at_target",
+                "idle": "animation.beaver.idle",
+                "death": "animation.beaver.death",
+                "swimming": "animation.beaver.swimming",
+                "walk": "animation.beaver.walk",
+                "eat_tree": "animation.beaver.eat_tree",
+                "swing_tail": "animation.beaver.swing_tail",
+                "build_dam": "animation.beaver.build_dam",
+                "eat_food": "animation.beaver.eat_food",
+                "root_controller": "controller.animation.beaver.root",
+                "general_controller": "controller.animation.beaver.general",
+                "eat_food_controller": "controller.animation.beaver.eat_food"
+            },
+            "scripts": {
+                "animate": [
+                    "look_at_target",
+                    "root_controller"
+                ]
+            },
+            "render_controllers": [
+                "controller.render.default"
+            ],
+            "spawn_egg": {
+                "texture": "5fs_br:beaver"
+            },
+            "sound_effects": {
+                "idle": "mob.beaver.idle",
+                "swing_tail": "mob.beaver.swing_tail",
+                "eat": "mob.beaver.eat",
+                "eat_log": "mob.beaver.eat_log",
+                "build_dam": "mob.beaver.build_dam"
+            },
+            "enable_attachables": true
+        }
+    }
+}

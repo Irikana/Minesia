@@ -1,0 +1,35 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "5fs_br:dark_oak_barrel"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "SWS",
+      "S S",
+      "SWS"
+    ],
+    "key": {
+      "S": {
+        "item": "minecraft:dark_oak_planks"
+      },
+      "W": {
+        "item": "minecraft:dark_oak_slab"
+      }
+    },
+    "result": {
+      "item": "5fs_br:dark_oak_barrel"
+    },
+    "unlock": [
+      {
+        "item": "minecraft:dark_oak_planks"
+      },
+      {
+        "item": "minecraft:dark_oak_slab"
+      }
+    ]
+  }
+}

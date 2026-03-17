@@ -1,0 +1,54 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "5fs_br:cape_of_glimmerite",
+      "materials": {
+        "default": "armor",
+        "enchanted": "armor_enchanted"
+      },
+      "textures": {
+        "glimmerite0":  "textures/entity/gears/capes/glimmerite/glimmerite0",
+        "glimmerite1":  "textures/entity/gears/capes/glimmerite/glimmerite1",
+        "glimmerite2":  "textures/entity/gears/capes/glimmerite/glimmerite2",
+        "glimmerite3":  "textures/entity/gears/capes/glimmerite/glimmerite3",
+        "glimmerite4":  "textures/entity/gears/capes/glimmerite/glimmerite4",
+        "glimmerite5":  "textures/entity/gears/capes/glimmerite/glimmerite5",
+        "glimmerite6":  "textures/entity/gears/capes/glimmerite/glimmerite6",
+        "glimmerite7":  "textures/entity/gears/capes/glimmerite/glimmerite7",
+        "glimmerite8":  "textures/entity/gears/capes/glimmerite/glimmerite8",
+        "glimmerite9":  "textures/entity/gears/capes/glimmerite/glimmerite9",
+        "glimmerite10": "textures/entity/gears/capes/glimmerite/glimmerite10",
+        "glimmerite11": "textures/entity/gears/capes/glimmerite/glimmerite11",
+        "glimmerite12": "textures/entity/gears/capes/glimmerite/glimmerite12",
+        "glimmerite13": "textures/entity/gears/capes/glimmerite/glimmerite13",
+        "glimmerite14": "textures/entity/gears/capes/glimmerite/glimmerite14",
+        "glimmerite15": "textures/entity/gears/capes/glimmerite/glimmerite15",
+        "glimmerite16": "textures/entity/gears/capes/glimmerite/glimmerite16",
+        "glimmerite17": "textures/entity/gears/capes/glimmerite/glimmerite17",
+        "glimmerite18": "textures/entity/gears/capes/glimmerite/glimmerite18",
+        "glimmerite19": "textures/entity/gears/capes/glimmerite/glimmerite19",
+        "glimmerite20": "textures/entity/gears/capes/glimmerite/glimmerite20",
+        "glimmerite21": "textures/entity/gears/capes/glimmerite/glimmerite21",
+        "glimmerite22": "textures/entity/gears/capes/glimmerite/glimmerite22",
+        "glimmerite23": "textures/entity/gears/capes/glimmerite/glimmerite23",
+        "enchanted":   "textures/misc/enchanted_actor_glint"
+      },
+      "geometry": {
+        "default": "geometry.custom_cape"
+      },
+      "animations": {
+        "cape": "animation.custom_cape"
+      },
+      "scripts": {
+        "parent_setup": "variable.chest_layer_visible = 0.0;",
+        "animate": [
+          "cape"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.cape_of_glimmerite"
+      ]
+    }
+  }
+}

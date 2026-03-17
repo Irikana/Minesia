@@ -1,0 +1,30 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.fish": {
+      "initial_state": "swimming",
+      "states": {
+        "swimming": {
+          "animations": ["swimming"],
+          "transitions": [
+            { "idle": "q.modified_move_speed <= 0.05 && q.is_alive" },
+            { "death": "!q.is_alive" }
+          ],
+          "blend_transition": 0.2
+        },
+        "idle": {
+          "animations": ["idle"],
+          "transitions": [
+            { "swimming": "q.modified_move_speed > 0.05 && q.is_alive" },
+            { "death": "!q.is_alive" }
+          ],
+          "blend_transition": 0.2
+        },
+        "death": {
+          "animations": ["death"],
+          "blend_transition": 0.2
+        }
+      }
+    }
+  }
+}

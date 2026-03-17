@@ -1,0 +1,18 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "5fs_br:nether_rose_quartz_ore"
+    },
+    "unlock": [
+      {
+        "item": "5fs_br:nether_rose_quartz_ore"
+      }
+    ],
+    "tags": [
+      "furnace"
+    ],
+    "input": "5fs_br:nether_rose_quartz_ore",
+    "output": "5fs_br:rose_quartz"
+  }
+}

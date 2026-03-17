@@ -1,0 +1,127 @@
+{
+    "format_version": "1.26.0",
+	"minecraft:block": {
+        "description": {
+            "identifier": "5fs_br:giant_pumpkin_top",
+            "states": {
+                "5fs_br:state": [
+                    false,
+                    true
+                ]
+            },
+            "menu_category": {
+                "category": "none",
+                "is_hidden_in_commands": true
+            },
+            "traits": {
+                "minecraft:placement_direction": {
+                    "enabled_states": [
+                        "minecraft:cardinal_direction"
+                    ]
+                }
+            }
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('5fs_br:state') == true"
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'north' ",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            180,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'south' ",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            0,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'east' ",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            90,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'west' ",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            270,
+                            0
+                        ]
+                    }
+                }
+            }
+        ],
+        
+        "components": {
+            "minecraft:geometry": {
+                "identifier": "geometry.pumpkin_top",
+                "bone_visibility": {
+                    "stem": "q.block_state('5fs_br:state') == true"
+                }
+            },
+            "minecraft:destruction_particles": {
+                "texture": "giant_pumpkin_destroy"
+            },
+            "minecraft:loot": "loot_tables/empty.json",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "giant_pumpkin_upper",
+                    "render_method": "alpha_test_single_sided"
+                }
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 1.5
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 1.5
+            },
+            "minecraft:map_color": "#C76E1F",
+            "tag:minecraft:is_axe_item_destructible": {},
+            "5fs_br:giantPumpkin": {},
+            "5fs_br:giantPumpkinTop": {},
+            "minecraft:collision_box": true,
+            "minecraft:placement_filter": {
+                "conditions": [
+                    {
+                        "block_filter": [
+                            "5fs_br:giant_pumpkin"
+                        ],
+                        "allowed_faces": [
+                            "up"
+                        ]
+                    }
+                ]
+            },
+            "minecraft:liquid_detection": {
+                "detection_rules": [
+                    {
+                        "on_liquid_touches": "no_reaction"
+                    }
+                ]
+            }
+        }
+    }
+}

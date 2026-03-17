@@ -1,0 +1,1722 @@
+{
+  "format_version": "1.26.0",
+	"minecraft:block": {
+    "description": {
+      "identifier": "5fs_br:sandstone_pillar",
+            "menu_category": {
+                "category": "Construction"
+            },
+      "states": {
+        "5fs_br:connect_north": [ false, true ],
+        "5fs_br:connect_south": [ false, true ],
+        "5fs_br:connect_east": [ false, true ],
+        "5fs_br:connect_west": [ false, true ],
+        "5fs_br:connect_up": [ false, true ],
+        "5fs_br:connect_down": [ false, true ]
+      }
+    },
+    "permutations": [
+      {
+        "condition": "!q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "up": {
+              "texture": "sandstone_pillar_none"
+            },
+            "down": {
+              "texture": "sandstone_pillar_none"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "up": {
+              "texture": "sandstone_pillar_down_up"
+            },
+            "down": {
+              "texture": "sandstone_pillar_down_up"
+            }
+          }
+        }
+      },
+      {
+        "condition": "!q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "up": {
+              "texture": "sandstone_pillar_down_up"
+            },
+            "down": {
+              "texture": "sandstone_pillar_down_up"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "up": {
+              "texture": "sandstone_pillar_down_up"
+            },
+            "down": {
+              "texture": "sandstone_pillar_down_up"
+            }
+          }
+        }
+      },
+      {
+        "condition": "!q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "up": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "down": {
+              "texture": "sandstone_pillar_left_right"
+            }
+          }
+        }
+      },
+      {
+        "condition": "!q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "up": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "down": {
+              "texture": "sandstone_pillar_left_right"
+            }
+          }
+        }
+      },
+      {
+        "condition": "!q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "up": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "down": {
+              "texture": "sandstone_pillar_left_right"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "up": {
+              "texture": "sandstone_pillar_middle"
+            },
+            "down": {
+              "texture": "sandstone_pillar_middle"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "up": {
+              "texture": "sandstone_pillar_bottom_right_corner"
+            },
+            "down": {
+              "texture": "sandstone_pillar_bottom_left_corner"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "up": {
+              "texture": "sandstone_pillar_bottom_left_corner"
+            },
+            "down": {
+              "texture": "sandstone_pillar_bottom_right_corner"
+            }
+          }
+        }
+      },
+      {
+        "condition": "!q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "up": {
+              "texture": "sandstone_pillar_top_right_corner"
+            },
+            "down": {
+              "texture": "sandstone_pillar_top_left_corner"
+            }
+          }
+        }
+      },
+      {
+        "condition": "!q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "up": {
+              "texture": "sandstone_pillar_top_left_corner"
+            },
+            "down": {
+              "texture": "sandstone_pillar_top_right_corner"
+            }
+          }
+        }
+      },
+      {
+        "condition": "!q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "up": {
+              "texture": "sandstone_pillar_top_middle_down"
+            },
+            "down": {
+              "texture": "sandstone_pillar_top_middle_down"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "up": {
+              "texture": "sandstone_pillar_down_middle_top"
+            },
+            "down": {
+              "texture": "sandstone_pillar_down_middle_top"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "up": {
+              "texture": "sandstone_pillar_left_middle"
+            },
+            "down": {
+              "texture": "sandstone_pillar_right_middle"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "up": {
+              "texture": "sandstone_pillar_right_middle"
+            },
+            "down": {
+              "texture": "sandstone_pillar_left_middle"
+            }
+          }
+        }
+      },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+      {
+        "condition": "!q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_side"
+            },
+            "north": {
+              "texture": "sandstone_pillar_side"
+            },
+            "south": {
+              "texture": "sandstone_pillar_side"
+            },
+            "west": {
+              "texture": "sandstone_pillar_side"
+            },
+            "east": {
+              "texture": "sandstone_pillar_side"
+            },
+            "up": {
+              "texture": "sandstone_pillar_none"
+            },
+            "down": {
+              "texture": "sandstone_pillar_none"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_side"
+            },
+            "north": {
+              "texture": "sandstone_pillar_side"
+            },
+            "south": {
+              "texture": "sandstone_pillar_side"
+            },
+            "west": {
+              "texture": "sandstone_pillar_bottom_right_corner"
+            },
+            "east": {
+              "texture": "sandstone_pillar_bottom_left_corner"
+            },
+            "up": {
+              "texture": "sandstone_pillar_down_up"
+            },
+            "down": {
+              "texture": "sandstone_pillar_down_up"
+            }
+          }
+        }
+      },
+      {
+        "condition": "!q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_side"
+            },
+            "north": {
+              "texture": "sandstone_pillar_side"
+            },
+            "south": {
+              "texture": "sandstone_pillar_side"
+            },
+            "west": {
+              "texture": "sandstone_pillar_bottom_left_corner"
+            },
+            "east": {
+              "texture": "sandstone_pillar_bottom_right_corner"
+            },
+            "up": {
+              "texture": "sandstone_pillar_down_up"
+            },
+            "down": {
+              "texture": "sandstone_pillar_down_up"
+            }
+          }
+        }
+      },
+      {
+        "condition": "!q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "north": {
+              "texture": "sandstone_pillar_bottom_left_corner"
+            },
+            "south": {
+              "texture": "sandstone_pillar_bottom_right_corner"
+            },
+            "west": {
+              "texture": "sandstone_pillar_side"
+            },
+            "east": {
+              "texture": "sandstone_pillar_side"
+            },
+            "up": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "down": {
+              "texture": "sandstone_pillar_left_right"
+            }
+          }
+        }
+      },
+      {
+        "condition": "!q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "north": {
+              "texture": "sandstone_pillar_bottom_right_corner"
+            },
+            "south": {
+              "texture": "sandstone_pillar_bottom_left_corner"
+            },
+            "west": {
+              "texture": "sandstone_pillar_side"
+            },
+            "east": {
+              "texture": "sandstone_pillar_side"
+            },
+            "up": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "down": {
+              "texture": "sandstone_pillar_left_right"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "north": {
+              "texture": "sandstone_pillar_side"
+            },
+            "south": {
+              "texture": "sandstone_pillar_side"
+            },
+            "west": {
+              "texture": "sandstone_pillar_down_middle_top"
+            },
+            "east": {
+              "texture": "sandstone_pillar_down_middle_top"
+            },
+            "up": {
+              "texture": "sandstone_pillar_down_up"
+            },
+            "down": {
+              "texture": "sandstone_pillar_down_up"
+            }
+          }
+        }
+      },
+      {
+        "condition": "!q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "north": {
+              "texture": "sandstone_pillar_down_middle_top"
+            },
+            "south": {
+              "texture": "sandstone_pillar_down_middle_top"
+            },
+            "west": {
+              "texture": "sandstone_pillar_side"
+            },
+            "east": {
+              "texture": "sandstone_pillar_side"
+            },
+            "up": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "down": {
+              "texture": "sandstone_pillar_left_right"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "north": {
+              "texture": "sandstone_pillar_side"
+            },
+            "south": {
+              "texture": "sandstone_pillar_bottom_right_corner"
+            },
+            "west": {
+              "texture": "sandstone_pillar_side"
+            },
+            "east": {
+              "texture": "sandstone_pillar_bottom_left_corner"
+            },
+            "up": {
+              "texture": "sandstone_pillar_bottom_right_corner"
+            },
+            "down": {
+              "texture": "sandstone_pillar_bottom_left_corner"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "north": {
+              "texture": "sandstone_pillar_side"
+            },
+            "south": {
+              "texture": "sandstone_pillar_bottom_left_corner"
+            },
+            "west": {
+              "texture": "sandstone_pillar_bottom_right_corner"
+            },
+            "east": {
+              "texture": "sandstone_pillar_side"
+            },
+            "up": {
+              "texture": "sandstone_pillar_bottom_left_corner"
+            },
+            "down": {
+              "texture": "sandstone_pillar_bottom_right_corner"
+            }
+          }
+        }
+      },
+      {
+        "condition": "!q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "north": {
+              "texture": "sandstone_pillar_bottom_left_corner"
+            },
+            "south": {
+              "texture": "sandstone_pillar_side"
+            },
+            "west": {
+              "texture": "sandstone_pillar_side"
+            },
+            "east": {
+              "texture": "sandstone_pillar_bottom_right_corner"
+            },
+            "up": {
+              "texture": "sandstone_pillar_top_right_corner"
+            },
+            "down": {
+              "texture": "sandstone_pillar_top_left_corner"
+            }
+          }
+        }
+      },
+      {
+        "condition": "!q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "north": {
+              "texture": "sandstone_pillar_bottom_right_corner"
+            },
+            "south": {
+              "texture": "sandstone_pillar_side"
+            },
+            "west": {
+              "texture": "sandstone_pillar_bottom_left_corner"
+            },
+            "east": {
+              "texture": "sandstone_pillar_side"
+            },
+            "up": {
+              "texture": "sandstone_pillar_top_left_corner"
+            },
+            "down": {
+              "texture": "sandstone_pillar_top_right_corner"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "north": {
+              "texture": "sandstone_pillar_side"
+            },
+            "south": {
+              "texture": "sandstone_pillar_down_middle_top"
+            },
+            "west": {
+              "texture": "sandstone_pillar_side"
+            },
+            "east": {
+              "texture": "sandstone_pillar_side"
+            },
+            "up": {
+              "texture": "sandstone_pillar_down_middle_top"
+            },
+            "down": {
+              "texture": "sandstone_pillar_down_middle_top"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "north": {
+              "texture": "sandstone_pillar_side"
+            },
+            "south": {
+              "texture": "sandstone_pillar_side"
+            },
+            "west": {
+              "texture": "sandstone_pillar_down_middle_top"
+            },
+            "east": {
+              "texture": "sandstone_pillar_side"
+            },
+            "up": {
+              "texture": "sandstone_pillar_left_middle"
+            },
+            "down": {
+              "texture": "sandstone_pillar_right_middle"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "north": {
+              "texture": "sandstone_pillar_side"
+            },
+            "south": {
+              "texture": "sandstone_pillar_side"
+            },
+            "west": {
+              "texture": "sandstone_pillar_side"
+            },
+            "east": {
+              "texture": "sandstone_pillar_down_middle_top"
+            },
+            "up": {
+              "texture": "sandstone_pillar_right_middle"
+            },
+            "down": {
+              "texture": "sandstone_pillar_left_middle"
+            }
+          }
+        }
+      },
+      {
+        "condition": "!q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "north": {
+              "texture": "sandstone_pillar_down_middle_top"
+            },
+            "south": {
+              "texture": "sandstone_pillar_side"
+            },
+            "west": {
+              "texture": "sandstone_pillar_side"
+            },
+            "east": {
+              "texture": "sandstone_pillar_side"
+            },
+            "up": {
+              "texture": "sandstone_pillar_top_middle_down"
+            },
+            "down": {
+              "texture": "sandstone_pillar_top_middle_down"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && !q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "north": {
+              "texture": "sandstone_pillar_down_middle_top"
+            },
+            "south": {
+              "texture": "sandstone_pillar_down_middle_top"
+            },
+            "west": {
+              "texture": "sandstone_pillar_down_middle_top"
+            },
+            "east": {
+              "texture": "sandstone_pillar_down_middle_top"
+            },
+            "up": {
+              "texture": "sandstone_pillar_middle"
+            },
+            "down": {
+              "texture": "sandstone_pillar_middle"
+            }
+          }
+        }
+      },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      {
+        "condition": "!q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_side"
+            },
+            "north": {
+              "texture": "sandstone_pillar_side"
+            },
+            "south": {
+              "texture": "sandstone_pillar_side"
+            },
+            "west": {
+              "texture": "sandstone_pillar_side"
+            },
+            "east": {
+              "texture": "sandstone_pillar_side"
+            },
+            "up": {
+              "texture": "sandstone_pillar_none"
+            },
+            "down": {
+              "texture": "sandstone_pillar_none"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_side"
+            },
+            "north": {
+              "texture": "sandstone_pillar_side"
+            },
+            "south": {
+              "texture": "sandstone_pillar_side"
+            },
+            "west": {
+              "texture": "sandstone_pillar_top_right_corner"
+            },
+            "east": {
+              "texture": "sandstone_pillar_top_left_corner"
+            },
+            "up": {
+              "texture": "sandstone_pillar_down_up"
+            },
+            "down": {
+              "texture": "sandstone_pillar_down_up"
+            }
+          }
+        }
+      },
+      {
+        "condition": "!q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_side"
+            },
+            "north": {
+              "texture": "sandstone_pillar_side"
+            },
+            "south": {
+              "texture": "sandstone_pillar_side"
+            },
+            "west": {
+              "texture": "sandstone_pillar_top_left_corner"
+            },
+            "east": {
+              "texture": "sandstone_pillar_top_right_corner"
+            },
+            "up": {
+              "texture": "sandstone_pillar_down_up"
+            },
+            "down": {
+              "texture": "sandstone_pillar_down_up"
+            }
+          }
+        }
+      },
+      {
+        "condition": "!q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "north": {
+              "texture": "sandstone_pillar_top_left_corner"
+            },
+            "south": {
+              "texture": "sandstone_pillar_top_right_corner"
+            },
+            "west": {
+              "texture": "sandstone_pillar_side"
+            },
+            "east": {
+              "texture": "sandstone_pillar_side"
+            },
+            "up": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "down": {
+              "texture": "sandstone_pillar_left_right"
+            }
+          }
+        }
+      },
+      {
+        "condition": "!q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "north": {
+              "texture": "sandstone_pillar_top_right_corner"
+            },
+            "south": {
+              "texture": "sandstone_pillar_top_left_corner"
+            },
+            "west": {
+              "texture": "sandstone_pillar_side"
+            },
+            "east": {
+              "texture": "sandstone_pillar_side"
+            },
+            "up": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "down": {
+              "texture": "sandstone_pillar_left_right"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "north": {
+              "texture": "sandstone_pillar_side"
+            },
+            "south": {
+              "texture": "sandstone_pillar_side"
+            },
+            "west": {
+              "texture": "sandstone_pillar_top_middle_down"
+            },
+            "east": {
+              "texture": "sandstone_pillar_top_middle_down"
+            },
+            "up": {
+              "texture": "sandstone_pillar_down_up"
+            },
+            "down": {
+              "texture": "sandstone_pillar_down_up"
+            }
+          }
+        }
+      },
+      {
+        "condition": "!q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "north": {
+              "texture": "sandstone_pillar_top_middle_down"
+            },
+            "south": {
+              "texture": "sandstone_pillar_top_middle_down"
+            },
+            "west": {
+              "texture": "sandstone_pillar_side"
+            },
+            "east": {
+              "texture": "sandstone_pillar_side"
+            },
+            "up": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "down": {
+              "texture": "sandstone_pillar_left_right"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "north": {
+              "texture": "sandstone_pillar_side"
+            },
+            "south": {
+              "texture": "sandstone_pillar_top_right_corner"
+            },
+            "west": {
+              "texture": "sandstone_pillar_side"
+            },
+            "east": {
+              "texture": "sandstone_pillar_top_left_corner"
+            },
+            "up": {
+              "texture": "sandstone_pillar_bottom_right_corner"
+            },
+            "down": {
+              "texture": "sandstone_pillar_bottom_left_corner"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "north": {
+              "texture": "sandstone_pillar_side"
+            },
+            "south": {
+              "texture": "sandstone_pillar_top_left_corner"
+            },
+            "west": {
+              "texture": "sandstone_pillar_top_right_corner"
+            },
+            "east": {
+              "texture": "sandstone_pillar_side"
+            },
+            "up": {
+              "texture": "sandstone_pillar_bottom_left_corner"
+            },
+            "down": {
+              "texture": "sandstone_pillar_bottom_right_corner"
+            }
+          }
+        }
+      },
+      {
+        "condition": "!q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "north": {
+              "texture": "sandstone_pillar_top_left_corner"
+            },
+            "south": {
+              "texture": "sandstone_pillar_side"
+            },
+            "west": {
+              "texture": "sandstone_pillar_side"
+            },
+            "east": {
+              "texture": "sandstone_pillar_top_right_corner"
+            },
+            "up": {
+              "texture": "sandstone_pillar_top_right_corner"
+            },
+            "down": {
+              "texture": "sandstone_pillar_top_left_corner"
+            }
+          }
+        }
+      },
+      {
+        "condition": "!q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "north": {
+              "texture": "sandstone_pillar_top_right_corner"
+            },
+            "south": {
+              "texture": "sandstone_pillar_side"
+            },
+            "west": {
+              "texture": "sandstone_pillar_top_left_corner"
+            },
+            "east": {
+              "texture": "sandstone_pillar_side"
+            },
+            "up": {
+              "texture": "sandstone_pillar_top_left_corner"
+            },
+            "down": {
+              "texture": "sandstone_pillar_top_right_corner"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "north": {
+              "texture": "sandstone_pillar_side"
+            },
+            "south": {
+              "texture": "sandstone_pillar_top_middle_down"
+            },
+            "west": {
+              "texture": "sandstone_pillar_side"
+            },
+            "east": {
+              "texture": "sandstone_pillar_side"
+            },
+            "up": {
+              "texture": "sandstone_pillar_down_middle_top"
+            },
+            "down": {
+              "texture": "sandstone_pillar_down_middle_top"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "north": {
+              "texture": "sandstone_pillar_side"
+            },
+            "south": {
+              "texture": "sandstone_pillar_side"
+            },
+            "west": {
+              "texture": "sandstone_pillar_top_middle_down"
+            },
+            "east": {
+              "texture": "sandstone_pillar_side"
+            },
+            "up": {
+              "texture": "sandstone_pillar_left_middle"
+            },
+            "down": {
+              "texture": "sandstone_pillar_right_middle"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "north": {
+              "texture": "sandstone_pillar_side"
+            },
+            "south": {
+              "texture": "sandstone_pillar_side"
+            },
+            "west": {
+              "texture": "sandstone_pillar_side"
+            },
+            "east": {
+              "texture": "sandstone_pillar_top_middle_down"
+            },
+            "up": {
+              "texture": "sandstone_pillar_right_middle"
+            },
+            "down": {
+              "texture": "sandstone_pillar_left_middle"
+            }
+          }
+        }
+      },
+      {
+        "condition": "!q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "north": {
+              "texture": "sandstone_pillar_top_middle_down"
+            },
+            "south": {
+              "texture": "sandstone_pillar_side"
+            },
+            "west": {
+              "texture": "sandstone_pillar_side"
+            },
+            "east": {
+              "texture": "sandstone_pillar_side"
+            },
+            "up": {
+              "texture": "sandstone_pillar_top_middle_down"
+            },
+            "down": {
+              "texture": "sandstone_pillar_top_middle_down"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && !q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "north": {
+              "texture": "sandstone_pillar_top_middle_down"
+            },
+            "south": {
+              "texture": "sandstone_pillar_top_middle_down"
+            },
+            "west": {
+              "texture": "sandstone_pillar_top_middle_down"
+            },
+            "east": {
+              "texture": "sandstone_pillar_top_middle_down"
+            },
+            "up": {
+              "texture": "sandstone_pillar_middle"
+            },
+            "down": {
+              "texture": "sandstone_pillar_middle"
+            }
+          }
+        }
+      },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      {
+        "condition": "!q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_side"
+            },
+            "north": {
+              "texture": "sandstone_pillar_side"
+            },
+            "south": {
+              "texture": "sandstone_pillar_side"
+            },
+            "west": {
+              "texture": "sandstone_pillar_side"
+            },
+            "east": {
+              "texture": "sandstone_pillar_side"
+            },
+            "up": {
+              "texture": "sandstone_pillar_none"
+            },
+            "down": {
+              "texture": "sandstone_pillar_none"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_side"
+            },
+            "north": {
+              "texture": "sandstone_pillar_side"
+            },
+            "south": {
+              "texture": "sandstone_pillar_side"
+            },
+            "west": {
+              "texture": "sandstone_pillar_right_middle"
+            },
+            "east": {
+              "texture": "sandstone_pillar_left_middle"
+            },
+            "up": {
+              "texture": "sandstone_pillar_down_up"
+            },
+            "down": {
+              "texture": "sandstone_pillar_down_up"
+            }
+          }
+        }
+      },
+      {
+        "condition": "!q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_side"
+            },
+            "north": {
+              "texture": "sandstone_pillar_side"
+            },
+            "south": {
+              "texture": "sandstone_pillar_side"
+            },
+            "west": {
+              "texture": "sandstone_pillar_left_middle"
+            },
+            "east": {
+              "texture": "sandstone_pillar_right_middle"
+            },
+            "up": {
+              "texture": "sandstone_pillar_down_up"
+            },
+            "down": {
+              "texture": "sandstone_pillar_down_up"
+            }
+          }
+        }
+      },
+      {
+        "condition": "!q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "north": {
+              "texture": "sandstone_pillar_left_middle"
+            },
+            "south": {
+              "texture": "sandstone_pillar_right_middle"
+            },
+            "west": {
+              "texture": "sandstone_pillar_side"
+            },
+            "east": {
+              "texture": "sandstone_pillar_side"
+            },
+            "up": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "down": {
+              "texture": "sandstone_pillar_left_right"
+            }
+          }
+        }
+      },
+      {
+        "condition": "!q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "north": {
+              "texture": "sandstone_pillar_right_middle"
+            },
+            "south": {
+              "texture": "sandstone_pillar_left_middle"
+            },
+            "west": {
+              "texture": "sandstone_pillar_side"
+            },
+            "east": {
+              "texture": "sandstone_pillar_side"
+            },
+            "up": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "down": {
+              "texture": "sandstone_pillar_left_right"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "north": {
+              "texture": "sandstone_pillar_side"
+            },
+            "south": {
+              "texture": "sandstone_pillar_side"
+            },
+            "west": {
+              "texture": "sandstone_pillar_middle"
+            },
+            "east": {
+              "texture": "sandstone_pillar_middle"
+            },
+            "up": {
+              "texture": "sandstone_pillar_down_up"
+            },
+            "down": {
+              "texture": "sandstone_pillar_down_up"
+            }
+          }
+        }
+      },
+      {
+        "condition": "!q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "north": {
+              "texture": "sandstone_pillar_middle"
+            },
+            "south": {
+              "texture": "sandstone_pillar_middle"
+            },
+            "west": {
+              "texture": "sandstone_pillar_side"
+            },
+            "east": {
+              "texture": "sandstone_pillar_side"
+            },
+            "up": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "down": {
+              "texture": "sandstone_pillar_left_right"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "north": {
+              "texture": "sandstone_pillar_side"
+            },
+            "south": {
+              "texture": "sandstone_pillar_right_middle"
+            },
+            "west": {
+              "texture": "sandstone_pillar_side"
+            },
+            "east": {
+              "texture": "sandstone_pillar_left_middle"
+            },
+            "up": {
+              "texture": "sandstone_pillar_bottom_right_corner"
+            },
+            "down": {
+              "texture": "sandstone_pillar_bottom_left_corner"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "north": {
+              "texture": "sandstone_pillar_side"
+            },
+            "south": {
+              "texture": "sandstone_pillar_left_middle"
+            },
+            "west": {
+              "texture": "sandstone_pillar_right_middle"
+            },
+            "east": {
+              "texture": "sandstone_pillar_side"
+            },
+            "up": {
+              "texture": "sandstone_pillar_bottom_left_corner"
+            },
+            "down": {
+              "texture": "sandstone_pillar_bottom_right_corner"
+            }
+          }
+        }
+      },
+      {
+        "condition": "!q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "north": {
+              "texture": "sandstone_pillar_left_middle"
+            },
+            "south": {
+              "texture": "sandstone_pillar_side"
+            },
+            "west": {
+              "texture": "sandstone_pillar_side"
+            },
+            "east": {
+              "texture": "sandstone_pillar_right_middle"
+            },
+            "up": {
+              "texture": "sandstone_pillar_top_right_corner"
+            },
+            "down": {
+              "texture": "sandstone_pillar_top_left_corner"
+            }
+          }
+        }
+      },
+      {
+        "condition": "!q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "north": {
+              "texture": "sandstone_pillar_right_middle"
+            },
+            "south": {
+              "texture": "sandstone_pillar_side"
+            },
+            "west": {
+              "texture": "sandstone_pillar_left_middle"
+            },
+            "east": {
+              "texture": "sandstone_pillar_side"
+            },
+            "up": {
+              "texture": "sandstone_pillar_top_left_corner"
+            },
+            "down": {
+              "texture": "sandstone_pillar_top_right_corner"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('5fs_br:connect_north') && !q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "north": {
+              "texture": "sandstone_pillar_side"
+            },
+            "south": {
+              "texture": "sandstone_pillar_middle"
+            },
+            "west": {
+              "texture": "sandstone_pillar_side"
+            },
+            "east": {
+              "texture": "sandstone_pillar_side"
+            },
+            "up": {
+              "texture": "sandstone_pillar_down_middle_top"
+            },
+            "down": {
+              "texture": "sandstone_pillar_down_middle_top"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && !q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "north": {
+              "texture": "sandstone_pillar_side"
+            },
+            "south": {
+              "texture": "sandstone_pillar_side"
+            },
+            "west": {
+              "texture": "sandstone_pillar_middle"
+            },
+            "east": {
+              "texture": "sandstone_pillar_side"
+            },
+            "up": {
+              "texture": "sandstone_pillar_left_middle"
+            },
+            "down": {
+              "texture": "sandstone_pillar_right_middle"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && !q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "north": {
+              "texture": "sandstone_pillar_side"
+            },
+            "south": {
+              "texture": "sandstone_pillar_side"
+            },
+            "west": {
+              "texture": "sandstone_pillar_side"
+            },
+            "east": {
+              "texture": "sandstone_pillar_middle"
+            },
+            "up": {
+              "texture": "sandstone_pillar_right_middle"
+            },
+            "down": {
+              "texture": "sandstone_pillar_left_middle"
+            }
+          }
+        }
+      },
+      {
+        "condition": "!q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "north": {
+              "texture": "sandstone_pillar_middle"
+            },
+            "south": {
+              "texture": "sandstone_pillar_side"
+            },
+            "west": {
+              "texture": "sandstone_pillar_side"
+            },
+            "east": {
+              "texture": "sandstone_pillar_side"
+            },
+            "up": {
+              "texture": "sandstone_pillar_top_middle_down"
+            },
+            "down": {
+              "texture": "sandstone_pillar_top_middle_down"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('5fs_br:connect_north') && q.block_state('5fs_br:connect_south') && q.block_state('5fs_br:connect_west') && q.block_state('5fs_br:connect_east') && q.block_state('5fs_br:connect_down') && q.block_state('5fs_br:connect_up')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "north": {
+              "texture": "sandstone_pillar_middle"
+            },
+            "south": {
+              "texture": "sandstone_pillar_middle"
+            },
+            "west": {
+              "texture": "sandstone_pillar_middle"
+            },
+            "east": {
+              "texture": "sandstone_pillar_middle"
+            },
+            "up": {
+              "texture": "sandstone_pillar_middle"
+            },
+            "down": {
+              "texture": "sandstone_pillar_middle"
+            }
+          }
+        }
+      }
+    ],
+    "components": {
+      "minecraft:collision_box": true,
+      "minecraft:redstone_conductivity": {
+        "redstone_conductor": true
+      },
+      "minecraft:light_dampening": 15,
+      "minecraft:map_color": "#d6b97b",
+      "minecraft:geometry": "minecraft:geometry.full_block",
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "sandstone_pillar_left_right"
+            },
+            "up": {
+              "texture": "sandstone_pillar_none"
+            },
+            "down": {
+              "texture": "sandstone_pillar_none"
+            }
+          },
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 3
+			},
+      "minecraft:destruction_particles": {
+        "texture": "sandstone_pillar_none"
+      },
+			"tag:minecraft:is_pickaxe_item_destructible": {}
+		}
+	}
+}

@@ -1,0 +1,68 @@
+{
+    "format_version": "1.12.0",
+    "minecraft:spawn_rules": {
+        "description": {
+            "identifier": "5fs_br:finch_bird",
+            "population_control": "animal"
+        },
+        "conditions": [
+            {
+                "minecraft:biome_filter": {
+                    "any_of": [
+                        {
+                            "test": "has_biome_tag",
+                            "operator": "==",
+                            "value": "birch"
+                        },
+                        {
+                            "test": "has_biome_tag",
+                            "operator": "==",
+                            "value": "meadow"
+                        },
+                        {
+                            "test": "has_biome_tag",
+                            "operator": "==",
+                            "value": "flower_forest"
+                        },
+                        {
+                            "all_of": [
+                                {
+                                    "test": "has_biome_tag",
+                                    "operator": "==",
+                                    "value": "forest"
+                                },
+                                {
+                                    "test": "has_biome_tag",
+                                    "operator": "!=",
+                                    "value": "taiga"
+                                },
+                                {
+                                    "test": "has_biome_tag",
+                                    "operator": "!=",
+                                    "value": "roofed"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "minecraft:herd": {
+                    "min_size": 1,
+                    "max_size": 2
+                },
+                "minecraft:difficulty_filter": {
+                    "min": "peaceful",
+                    "max": "hard"
+                },
+                "minecraft:spawns_on_surface": {},
+                "minecraft:weight": {
+                    "default": 70
+                },
+                "minecraft:brightness_filter": {
+                    "min": 7,
+                    "max": 15,
+                    "adjust_for_weather": true
+                }
+            }
+        ]
+    }
+}

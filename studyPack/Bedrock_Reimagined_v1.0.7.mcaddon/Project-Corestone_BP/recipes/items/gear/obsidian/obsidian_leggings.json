@@ -1,0 +1,29 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "5fs_br:obsidian_leggings"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"ccc",
+			"c c",
+			"c c"
+		],
+		"key": {
+			"c": {
+				"item": "5fs_br:obsidian_ingot"
+			}
+		},
+		"result": {
+			"item": "5fs_br:obsidian_leggings"
+		},
+		"unlock": [
+			{
+				"item": "5fs_br:obsidian_ingot"
+			}
+		]
+	}
+}

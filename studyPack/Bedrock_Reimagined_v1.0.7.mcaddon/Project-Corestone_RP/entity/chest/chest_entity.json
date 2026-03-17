@@ -1,0 +1,72 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "5fs_br:chest_entity",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/empty",
+                "acacia": "textures/blocks/construction/chest/acacia_chest",
+                "bamboo": "textures/blocks/construction/chest/bamboo_chest",
+                "birch": "textures/blocks/construction/chest/birch_chest",
+                "cherry": "textures/blocks/construction/chest/cherry_chest",
+                "crimson": "textures/blocks/construction/chest/crimson_chest",
+                "dark_oak": "textures/blocks/construction/chest/dark_oak_chest",
+                "jungle": "textures/blocks/construction/chest/jungle_chest",
+                "mangrove": "textures/blocks/construction/chest/mangrove_chest",
+                "pale_oak": "textures/blocks/construction/chest/pale_oak_chest",
+                "spruce": "textures/blocks/construction/chest/spruce_chest",
+                "warped": "textures/blocks/construction/chest/warped_chest",
+				"maple": "textures/blocks/construction/chest/maple_chest",
+                "petrified": "textures/blocks/construction/chest/petrified_chest",
+                "redwood": "textures/blocks/construction/chest/redwood_chest",
+                "palm": "textures/blocks/construction/chest/palm_chest"
+            },
+            "animations": {
+                "open": "animation.chest.opening",
+                "close": "animation.chest.closing",
+                "north": "animation.5fs_br.tile_entity.north",
+                "south": "animation.5fs_br.tile_entity.south",
+                "west": "animation.5fs_br.tile_entity.west",
+                "east": "animation.5fs_br.tile_entity.east",
+                "general_controller": "controller.animation.chest"
+            },
+            "scripts": {
+				"pre_animation": [
+					"t.chest_type_0 = query.property('5fs_br:chest_type_0');",
+					"t.chest_type_1 = query.property('5fs_br:chest_type_1');",
+                    "v.is_opened = query.property('5fs_br:is_opened');",
+					"v.timer = q.life_time + 0.6;",
+					"v.index = (t.chest_type_0 == 'none' && t.chest_type_1 == 'none') ? 0 : (t.chest_type_0 == 'spruce') ? 1 : (t.chest_type_0 == 'birch') ? 2 : (t.chest_type_0 == 'jungle') ? 3 : (t.chest_type_0 == 'acacia') ? 4 : (t.chest_type_0 == 'dark_oak') ? 5 : (t.chest_type_0 == 'mangrove') ? 6 : (t.chest_type_0 == 'cherry') ? 7 : (t.chest_type_0 == 'pale_oak') ? 8 : (t.chest_type_0 == 'bamboo') ? 9 : (t.chest_type_0 == 'crimson') ? 10 : (t.chest_type_0 == 'warped') ? 11 : (t.chest_type_1 == 'maple') ? 12 : (t.chest_type_1 == 'petrified') ? 13 : (t.chest_type_1 == 'redwood') ? 14 : (t.chest_type_1 == 'palm') ? 15 : 0;"
+				],
+                "animate": [
+                    "general_controller",
+                    {
+                        "north": "query.property('5fs_br:rotation') == 'north'"
+                    },
+                    {
+                        "south": "query.property('5fs_br:rotation') == 'south'"
+                    },
+                    {
+                        "west": "query.property('5fs_br:rotation') == 'west'"
+                    },
+                    {
+                        "east": "query.property('5fs_br:rotation') == 'east'"
+                    }
+                ]
+            },
+            "geometry": {
+                "default": "geometry.chest_entity"
+            },
+            "render_controllers": [
+                "controller.render.chest"
+            ],
+            "sound_effects": {
+                "chest_open": "random.chestopen",
+                "chest_close": "random.chestclosed"
+            }
+        }
+    }
+}

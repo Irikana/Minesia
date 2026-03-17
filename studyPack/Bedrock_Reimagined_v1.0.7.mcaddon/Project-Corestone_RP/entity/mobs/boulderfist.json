@@ -1,0 +1,27 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "5fs_br:boulderfist",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/mobs/boulderfist"
+      },
+      "geometry": {
+        "default": "geometry.boulderfist"
+      },
+      "animations": {
+        "move": "animation.boulderfist.move"
+      },
+      "animation_controllers": [
+        { "move": "controller.animation.boulderfist.move" }
+      ],
+      "render_controllers": [ "controller.render.default" ],
+      "spawn_egg": {
+        "texture": "5fs_br:boulderfist"
+      }
+    }
+  }
+}

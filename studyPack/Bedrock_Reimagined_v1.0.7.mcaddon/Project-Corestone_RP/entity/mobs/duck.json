@@ -1,0 +1,55 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "5fs_br:duck",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/mobs/ducks/duck",
+                "white": "textures/entity/mobs/ducks/white_duck",
+                "black": "textures/entity/mobs/ducks/black_duck",
+                "baby": "textures/entity/mobs/ducks/baby_duck"
+            },
+            "geometry": {
+                "default": "geometry.duck",
+                "baby": "geometry.baby_duck"
+            },
+            "animations": {
+                "look_at_target": "animation.duck.look_at_target",
+                "idle": "animation.duck.idle",
+                "fly": "animation.duck.fly",
+                "swimming": "animation.duck.swimming",
+                "walk": "animation.duck.walk",
+                "idle_swimming": "animation.duck.idle_swimming",
+                "drink": "animation.duck.drink",
+                "drink_transitioner": "animation.finch_bird.chirp_transitioner",
+                "baby_swimming": "animation.duck.baby_swimming",
+                "shake": "animation.duck.shake",
+                "death": "animation.duck.death",
+                "root_controller": "controller.animation.duck.root",
+                "general_controller": "controller.animation.duck.general",
+                "drink_controller": "controller.animation.duck.drink",
+                "shake_controller": "controller.animation.duck.shake",
+                "baby_swimming_controller": "controller.animation.duck.baby_swimming"
+            },
+            "scripts": {
+                "pre_animation": [
+                    "v.baby = query.is_baby ? 1 : 0;",
+                    "t.variant = q.property('5fs_br:variant');",
+                    "v.index = t.variant == 'default' ? 0 : t.variant == 'white' ? 1 : t.variant == 'black' ? 2 : 0;"
+                ],
+                "animate": [
+                    "root_controller"
+                ]
+            },
+            "render_controllers": [
+                "controller.render.duck"
+            ],
+            "spawn_egg": {
+                "texture": "5fs_br:duck"
+            }
+        }
+    }
+}

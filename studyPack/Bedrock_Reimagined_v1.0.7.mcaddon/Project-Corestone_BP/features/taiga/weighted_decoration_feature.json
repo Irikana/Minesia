@@ -1,0 +1,12 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "5fs_br:taiga/weighted_decoration_feature"
+    },
+    "features": [
+      ["5fs_br:taiga/taiga_hollow_log_2_feature", 1],
+      ["5fs_br:taiga/taiga_hollow_log_1_feature", 1]
+    ]
+  }
+}

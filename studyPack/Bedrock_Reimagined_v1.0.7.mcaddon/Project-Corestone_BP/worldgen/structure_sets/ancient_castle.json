@@ -1,0 +1,21 @@
+{
+  "format_version": "1.21.20",
+  "minecraft:structure_set": {
+    "description": {
+      "identifier": "5fs_br:ancient_castle"
+    },
+    "placement": {
+      "type": "minecraft:random_spread",
+      "salt": 83469865,
+      "separation": 49,
+      "spacing": 100,
+      "spread_type": "linear"
+    },
+    "structures": [
+      {
+        "structure": "5fs_br:ancient_castle",
+        "weight": 1
+      }
+    ]
+  }
+}

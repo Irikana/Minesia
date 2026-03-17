@@ -1,0 +1,17 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.mummified_pharaoh_hammer.rotate": {
+			"loop": true,
+			"bones": {
+				"hammer": {
+					"rotation": [
+						0,
+						"query.anim_time*720",
+						0
+					]
+				}
+			}
+		}
+	}
+}

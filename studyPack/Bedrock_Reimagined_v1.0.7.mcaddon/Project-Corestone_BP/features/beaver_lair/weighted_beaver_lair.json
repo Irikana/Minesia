@@ -1,0 +1,26 @@
+{
+    "format_version": "1.21.60",
+    "minecraft:weighted_random_feature": {
+        "description": {
+            "identifier": "5fs_br:beaver_lair/weighted_beaver_lair"
+        },
+        "features": [
+            [
+                "5fs_br:beaver_lair/scatter_beaver_lair_north",
+                1
+            ],
+            [
+                "5fs_br:beaver_lair/scatter_beaver_lair_south",
+                1
+            ],
+            [
+                "5fs_br:beaver_lair/scatter_beaver_lair_west",
+                1
+            ],
+            [
+                "5fs_br:beaver_lair/scatter_beaver_lair_east",
+                1
+            ]
+        ]
+    }
+}

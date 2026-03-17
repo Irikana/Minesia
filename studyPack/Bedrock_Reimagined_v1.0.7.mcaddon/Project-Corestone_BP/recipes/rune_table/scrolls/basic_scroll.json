@@ -1,0 +1,32 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "5fs_br:basic_scroll"
+		},
+		"tags": [
+			"runetable"
+		],
+		"key": {
+			"T": {
+				"item": "minecraft:ink_sac"
+			},"F": {
+				"item": "minecraft:feather"
+			},
+			"U": {
+				"item": "minecraft:paper"
+			}
+		},
+		"pattern": [
+			" U ",
+			"FUT",
+			" U "
+		],
+		"result": {
+			"item": "5fs_br:basic_scroll"
+		},
+		"unlock": {
+			"context": "AlwaysUnlocked"
+		}
+	}
+}

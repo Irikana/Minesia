@@ -1,0 +1,23 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.dragonite_sword.1fp": {
+			"loop": true,
+			"bones": {
+				"bone": {
+					"rotation": [35.56057, 26.82261, -124.74666],
+					"position": [6, 17, 12]
+				}
+			}
+		},
+		"animation.dragonite_sword.3pp": {
+			"loop": true,
+			"bones": {
+				"bone": {
+					"rotation": [91.46755, -1.94517, -180.89414],
+					"position": [0, 21, -1]
+				}
+			}
+		}
+	}
+}

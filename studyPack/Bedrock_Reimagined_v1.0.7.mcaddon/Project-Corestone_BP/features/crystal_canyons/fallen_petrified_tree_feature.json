@@ -1,0 +1,52 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:tree_feature": {
+    "description": {
+      "identifier": "5fs_br:crystal_canyons/fallen_petrified_tree_feature"
+    },
+    "fallen_trunk": {
+      "log_length": {
+        "range_min": 4,
+        "range_max": 7
+      },
+      "trunk_block": {
+        "name": "5fs_br:petrified_log"
+      }
+    },
+    "base_block": [
+      "minecraft:dirt",
+      "minecraft:coarse_dirt"
+    ],
+    "may_grow_on": [
+      "minecraft:dirt",
+      "minecraft:stone",
+      "minecraft:grass_block",
+      "minecraft:podzol",
+      "minecraft:dirt_with_roots",
+      "minecraft:moss_block",
+      "minecraft:coarse_dirt",
+      "5fs_br:glintrock",
+      "5fs_br:white_glintrock",
+      "5fs_br:gray_glintrock",
+      "5fs_br:black_glintrock"
+    ],
+    "may_replace": [
+      "minecraft:air",
+      "minecraft:oak_leaves",
+      "minecraft:spruce_leaves",
+      "minecraft:birch_leaves",
+      "minecraft:jungle_leaves",
+      "minecraft:acacia_leaves",
+      "minecraft:dark_oak_leaves"
+    ],
+    "may_grow_through": [
+      "minecraft:dirt",
+      "minecraft:grass_block",
+      "minecraft:coarse_dirt",
+      "5fs_br:glintrock",
+      "5fs_br:white_glintrock",
+      "5fs_br:gray_glintrock",
+      "5fs_br:black_glintrock"
+    ]
+  }
+}

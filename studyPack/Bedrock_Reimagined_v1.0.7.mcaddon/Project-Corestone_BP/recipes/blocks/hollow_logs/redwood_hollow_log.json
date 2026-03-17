@@ -1,0 +1,25 @@
+﻿{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "5fs_br:redwood_hollow_log"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "5fs_br:redwood_hollow_log"
+      }
+    ],
+    "result": {
+      "item": "5fs_br:redwood_planks",
+      "count": 2
+    },
+    "unlock": [
+      {
+        "item": "5fs_br:redwood_hollow_log"
+      }
+    ]
+  }
+}

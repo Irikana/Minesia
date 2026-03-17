@@ -1,0 +1,23 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:scatter_feature": {
+    "description": {
+      "identifier": "5fs_br:redwood/scatter_redwood_fern_feature"
+    },
+    "iterations": 10,
+    "x": {
+      "distribution": "triangle",
+      "extent": [ -8, 8 ]
+    },
+    "y": {
+      "distribution": "triangle",
+      "extent": [ -4, 4 ]
+    },
+    "z": {
+      "distribution": "triangle",
+      "extent": [ -8, 8 ]
+    },
+    "coordinate_eval_order": "xyz",
+    "places_feature": "5fs_br:redwood/redwood_fern_snap_to_surface"
+  }
+}

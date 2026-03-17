@@ -1,0 +1,468 @@
+{
+  "format_version": "1.21.120",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "5fs_br:pirate_captain",
+      "spawn_category": "monster",
+      "is_spawnable": true,
+      "is_summonable": true
+    },
+    "component_groups": {
+      "5fs_br:emerging": {
+        "minecraft:behavior.emerge": {
+          "duration": 1.99,
+          "on_done": {
+            "event": "5fs_br:emerged",
+            "target": "self"
+          }
+        },
+        "minecraft:movement": {
+          "value": 0
+        },
+        "minecraft:pushable": {
+          "is_pushable": false,
+          "is_pushable_by_piston": false
+        },
+        "minecraft:damage_sensor": {
+          "triggers": [
+            {
+              "cause": "all",
+              "deals_damage": "no"
+            }
+          ]
+        }
+      },
+      "5fs_br:emerged": {
+        "minecraft:movement": {
+          "value": 0.25
+        },
+        "minecraft:navigation.walk": {
+          "can_path_over_water": true,
+          "avoid_water": true
+        },
+        "minecraft:pushable": {
+          "is_pushable": true,
+          "is_pushable_by_piston": true
+        },
+        "minecraft:movement.basic": {},
+        "minecraft:jump.static": {},
+        "minecraft:nameable": {},
+        "minecraft:can_climb": {},
+        "minecraft:behavior.random_stroll": {
+          "priority": 8,
+          "speed_multiplier": 0.8
+        },
+        "minecraft:behavior.look_at_player": {
+          "priority": 9,
+          "look_distance": 8
+        },
+        "minecraft:behavior.random_look_around": {
+          "priority": 10
+        },
+        "minecraft:behavior.avoid_mob_type": {
+          "priority": 0,
+          "entity_types": {
+            "filters": {
+              "test": "is_family",
+              "subject": "other",
+              "value": "player"
+            },
+            "max_dist": 18,
+            "walk_speed_multiplier": 1.75,
+            "sprint_speed_multiplier": 1.75
+          }
+        },
+        "minecraft:behavior.timer_flag_1": {
+          "cooldown_range": [
+            4,
+            8
+          ],
+          "duration_range": 0.75,
+          "on_end": {
+            "event": "5fs_br:cast",
+            "target": "self",
+            "filters": {
+              "test": "has_target",
+              "value": true
+            }
+          }
+        },
+        "minecraft:damage_sensor": {
+          "triggers": [
+            {
+              "cause": "all",
+              "deals_damage": "yes"
+            }
+          ]
+        }
+      },
+      "5fs_br:ship_spawned": {
+        "minecraft:transformation": {
+          "delay": 0.5,
+          "into": "5fs_br:pirate_captain<5fs_br:ship_spawned>"
+        }
+      },
+      "5fs_br:ship": {
+        "minecraft:home": {
+          "restriction_type": "all_movement",
+          "restriction_radius": 64
+        },
+        "minecraft:behavior.go_home": {
+          "goal_radius": 0.5,
+          "interval": 500,
+          "priority": 1
+        }
+      },
+      "5fs_br:redwood_variant": {
+        "minecraft:scale": {
+          "value": 2
+        },
+        "minecraft:health": {
+          "value": 96,
+          "max": 96
+        },
+        "minecraft:movement": {
+          "value": 0.35
+        }
+      },
+      "5fs_br:cast_animation": {
+        "minecraft:timer": {
+          "time": 1.3333,
+          "looping": true,
+          "time_down_event": {
+            "event": "5fs_br:cast_animation_end",
+            "target": "self"
+          }
+        },
+        "minecraft:is_sheared": {},
+        "minecraft:movement.basic": {},
+        "minecraft:movement": {
+          "value": 0
+        }
+      },
+      "5fs_br:movement": {
+        "minecraft:movement.basic": {},
+        "minecraft:movement": {
+          "value": 0
+        }
+      },
+      "5fs_br:shrinkify": {
+        "minecraft:movement": {
+          "value": 0
+        },
+        "minecraft:health": {
+          "max": 75
+        },
+        "minecraft:scale": {
+          "value": 0.25
+        }
+      },
+      "5fs_br:gigantify": {
+        "minecraft:movement": {
+          "value": 0
+        },
+        "minecraft:health": {
+          "max": 300
+        },
+        "minecraft:scale": {
+          "value": 2
+        }
+      },
+      "5fs_br:normal_scale": {
+        "minecraft:movement": {
+          "value": 0
+        },
+        "minecraft:health": {
+          "max": 150
+        },
+        "minecraft:scale": {
+          "value": 1
+        }
+      },
+      "5fs_br:no_fall_damage_jelly": {
+        "minecraft:damage_sensor": {
+          "triggers": {
+            "cause": "fall",
+            "deals_damage": "no"
+          }
+        }
+      }
+    },
+    "components": {
+      "minecraft:experience_reward": {
+        "on_death": "query.last_hit_by_player ? 30 : 0"
+      },
+      "minecraft:type_family": {
+        "family": [
+          "mob",
+          "captain",
+          "pirate",
+          "monster",
+          "boss"
+        ]
+      },
+      "minecraft:loot": {
+        "table": "loot_tables/entities/pirates/pirate_captain.json"
+      },
+      "minecraft:physics": {},
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:follow_range": {
+        "value": 64
+      },
+      "minecraft:behavior.float": {
+        "priority": 1
+      },
+      "minecraft:collision_box": {
+        "width": 0.6,
+        "height": 1.9
+      },
+      "minecraft:health": {
+        "value": 150,
+        "max": 150
+      },
+      "minecraft:boss": {
+        "should_darken_sky": false,
+        "hud_range": 125,
+        "name": "entity.5fs_br:pirate_captain.name"
+      },
+      "minecraft:behavior.nearest_attackable_target": {
+        "priority": 2,
+        "must_see": true,
+        "reselect_targets": true,
+        "within_radius": 16,
+        "entity_types": {
+          "filters": {
+            "test": "is_family",
+            "subject": "other",
+            "value": "player"
+          },
+          "max_dist": 16
+        }
+      },
+      "minecraft:behavior.hurt_by_target": {
+        "priority": 1,
+        "entity_types": [
+          {
+            "filters": {
+              "test": "is_family",
+              "subject": "other",
+              "operator": "!=",
+              "value": "breeze"
+            }
+          }
+        ]
+      },
+      "minecraft:conditional_bandwidth_optimization": {}
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "trigger": "5fs_br:redwood_variant",
+        "add": {
+          "component_groups": [
+            "5fs_br:emerging"
+          ]
+        },
+        "queue_command": {
+          "command": [
+            "playsound mob.endermen.portal @a[r=16] ~ ~ ~ 1 1",
+            "particle 5fs_br:pirate_captain ~ ~ ~"
+          ]
+        }
+      },
+      "5fs_br:emerged": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:emerging"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:emerged"
+          ]
+        }
+      },
+      "5fs_br:redwood_variant": {
+        "filters": {
+          "test": "has_biome_tag",
+          "value": "redwood_forest"
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:redwood_variant"
+          ]
+        }
+      },
+      "5fs_br:sound": {
+        "queue_command": {
+          "command": [
+            "playsound prepare.summon @a[r=16] ~ ~ ~ 1 1"
+          ]
+        }
+      },
+      "5fs_br:cast": {
+        "sequence": [
+          {
+            "filters": {
+              "test": "target_distance",
+              "operator": "<=",
+              "value": 8
+            },
+            "add": {
+              "component_groups": [
+                "5fs_br:cast_animation"
+              ]
+            },
+            "queue_command": {
+              "command": [
+                "scriptevent 5fs_br:pirate_captain"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "target_distance",
+              "operator": ">",
+              "value": 8
+            },
+            "randomize": [
+              {
+                "add": {
+                  "component_groups": [
+                    "5fs_br:cast_animation"
+                  ]
+                },
+                "queue_command": {
+                  "command": [
+                    "scriptevent 5fs_br:pirate_captain"
+                  ]
+                },
+                "weight": 4
+              },
+              {
+                "add": {
+                  "component_groups": [
+                    "5fs_br:cast_animation"
+                  ]
+                },
+                "trigger": "5fs_br:effect_pirates",
+                "weight": 6
+              }
+            ]
+          }
+        ]
+      },
+      "5fs_br:cast_animation_end": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:cast_animation"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:movement"
+          ]
+        }
+      },
+      "5fs_br:effect_pirates": {
+        "randomize": [
+          {
+            "queue_command": {
+              "command": [
+                "effect @e[family=pirate,r=16] strength 10 2 false"
+              ]
+            },
+            "weight": 1
+          },
+          {
+            "queue_command": {
+              "command": [
+                "effect @e[family=pirate,r=16] speed 15 1 false"
+              ]
+            },
+            "weight": 1
+          },
+          {
+            "queue_command": {
+              "command": [
+                "effect @e[family=pirate,r=16] resistance 15 2 false"
+              ]
+            },
+            "weight": 1
+          },
+          {
+            "queue_command": {
+              "command": [
+                "effect @e[family=pirate,r=16] regeneration 20 1 false"
+              ]
+            },
+            "weight": 1
+          }
+        ]
+      },
+      "5fs_br:ship_spawned": {
+        "set_home_position": {},
+        "add": {
+          "component_groups": [
+            "5fs_br:ship"
+          ]
+        }
+      },
+      "5fs_br:normal_scale": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:shrinkify",
+            "5fs_br:gigantify"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:normal_scale"
+          ]
+        }
+      },
+      "5fs_br:gigantify": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:shrinkify",
+            "5fs_br:normal_scale"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:gigantify"
+          ]
+        }
+      },
+      "5fs_br:shrinkify": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:gigantify",
+            "5fs_br:normal_scale"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:shrinkify"
+          ]
+        }
+      },
+      "5fs_br:no_fall_damage_jelly": {
+        "add": {
+          "component_groups": [
+            "5fs_br:no_fall_damage_jelly"
+          ]
+        }
+      },
+      "5fs_br:fall_damage_jelly": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:no_fall_damage_jelly"
+          ]
+        }
+      }
+    }
+  }
+}

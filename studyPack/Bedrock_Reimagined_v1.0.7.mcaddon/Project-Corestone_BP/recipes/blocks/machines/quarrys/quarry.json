@@ -1,0 +1,47 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "5fs_br:quarry"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"#": {
+				"item": "5fs_br:steel_block"
+			},
+			"P": {
+				"item": "5fs_br:steel_pickaxe"
+			},
+			"C": {
+				"item": "5fs_br:electrical_circuit_board"
+			},
+			"Q": {
+				"item": "5fs_br:steel_counter"
+			}
+		},
+		"pattern": [
+			"###",
+			"CCQ",
+			"#P#"
+		],
+		"result": {
+			"item": "5fs_br:quarry"
+		},
+		"unlock": [
+			{
+				"item": "5fs_br:steel_block"
+			},
+			{
+				"item": "5fs_br:steel_pickaxe"
+			},
+			{
+				"item": "5fs_br:electrical_circuit_board"
+			},
+			{
+				"item": "5fs_br:steel_counter"
+			}
+		]
+	}
+}

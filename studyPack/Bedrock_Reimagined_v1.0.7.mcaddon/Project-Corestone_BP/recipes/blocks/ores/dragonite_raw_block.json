@@ -1,0 +1,29 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "5fs_br:dragonite_raw_block"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"#": {
+				"item": "5fs_br:raw_dragonite"
+			}
+		},
+		"pattern": [
+			"###",
+			"###",
+			"###"
+		],
+		"result": {
+			"item": "5fs_br:raw_dragonite_block"
+		},
+		"unlock": [
+			{
+				"item": "5fs_br:raw_dragonite"
+			}
+		]
+	}
+}

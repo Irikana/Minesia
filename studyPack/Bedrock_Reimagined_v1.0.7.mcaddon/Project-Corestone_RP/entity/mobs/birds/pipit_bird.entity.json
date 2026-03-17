@@ -1,0 +1,40 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "5fs_br:pipit_bird",
+            "materials": {
+                "default": "parrot"
+            },
+            "textures": {
+                "default": "textures/entity/mobs/birds/pipit_bird"
+            },
+            "geometry": {
+                "default": "geometry.pipit_bird"
+            },
+            "scripts": {
+                "animate": [
+                    "root_controller"
+                ]
+            },
+            "animations": {
+                "look_at_target": "animation.common.look_at_target",
+                "idle": "animation.pipit_bird.idle",
+                "walk": "animation.pipit_bird.walk",
+                "fly": "animation.pipit_bird.fly",
+                "chirp": "animation.pipit_bird.chirp",
+                "chirp_transitioner": "animation.pipit_bird.chirp_transitioner",
+                "death": "animation.pipit_bird.death",
+                "general_controller": "controller.animation.bird.general",
+                "chirp_controller": "controller.animation.bird.chirp",
+                "root_controller": "controller.animation.bird.root"
+            },
+            "render_controllers": [
+                "controller.render.default"
+            ],
+            "spawn_egg": {
+                "texture": "5fs_br:pipit_bird_spawn_egg"
+            }
+        }
+    }
+}

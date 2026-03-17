@@ -1,0 +1,35 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "5fs_br:small_sandstone_statue"
+		},
+		"tags": [
+			"crafting_table_statues"
+		],
+		"key": {
+			"S": {
+				"item": "minecraft:sandstone"
+			},
+            "G": {
+				"item": "minecraft:armor_stand"
+			}
+		},
+		"pattern": [
+			"SSS",
+			"SGS",
+			"SSS"
+		],
+		"result": {
+			"item": "5fs_br:small_sandstone_statue"
+		},
+		"unlock": [
+			{
+				"item": "minecraft:sandstone"
+			},
+			{
+				"item": "minecraft:armor_stand"
+			}
+		]
+	}
+}

@@ -1,0 +1,29 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.5fs_br.tile_entity.north": {
+      "loop": true,
+      "bones": {
+        "bone": { "rotation": [0, 0, 0] }
+      }
+    },
+    "animation.5fs_br.tile_entity.south": {
+      "loop": true,
+      "bones": {
+        "bone": { "rotation": [0, 180, 0] }
+      }
+    },
+    "animation.5fs_br.tile_entity.west": {
+      "loop": true,
+      "bones": {
+        "bone": { "rotation": [0, -90, 0] }
+      }
+    },
+    "animation.5fs_br.tile_entity.east": {
+      "loop": true,
+      "bones": {
+        "bone": { "rotation": [0, 90, 0] }
+      }
+    }
+  }
+}

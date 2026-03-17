@@ -1,0 +1,13 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "5fs_br:palm_boat"
+                }
+            ]
+        }
+    ]
+}

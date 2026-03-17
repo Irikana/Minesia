@@ -1,0 +1,35 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "5fs_br:skeleton_spider",
+      "materials": {
+        "default": "spider",
+        "invisible": "spider_invisible"
+      },
+      "textures": {
+        "default": "textures/entity/mobs/skeleton_spider"
+      },
+      "geometry": {
+        "default": "geometry.skeleton_spider"
+      },
+      "animations": {
+        "death": "animation.skeleton_spider.death",
+        "idle": "animation.skeleton_spider.idle",
+        "attack": "animation.skeleton_spider.attack",
+        "walking": "animation.skeleton_spider.walking"
+      },
+      "animation_controllers": [
+        {
+          "idle": "controller.animation.skeleton_spider"
+        }
+      ],
+      "render_controllers": [
+        "controller.render.spider"
+      ],
+      "spawn_egg": {
+        "texture": "5fs_br:skeleton_spider"
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.meteorite_axe.3pp": {
+			"loop": true,
+			"bones": {
+				"bone": {
+					"rotation": [93.60512, 0.40459, -2.1978],
+					"position": [0, 15, -3]
+				}
+			}
+		},
+		"animation.meteorite_axe.1fp": {
+			"loop": true,
+			"bones": {
+				"bone": {
+					"rotation": [77.78051, 57.0065, -63.36902],
+					"position": [3, 9, 5]
+				}
+			}
+		}
+	}
+}

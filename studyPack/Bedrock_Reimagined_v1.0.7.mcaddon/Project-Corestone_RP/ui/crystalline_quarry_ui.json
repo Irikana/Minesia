@@ -1,0 +1,570 @@
+{
+  "namespace": "chest",
+  "quarry_panel_top_half": {
+    "type": "panel",
+    "controls": [
+      {
+        "quarry_1_label@chest.quarry_1_label": {}
+      },
+      {
+        "side_slot_1@chest.side_slot_1": {}
+      },
+      {
+        "side_slot_2@chest.side_slot_2": {}
+      },
+      {
+        "quarry_top_grid@chest.quarry_top_grid": {}
+      }
+    ]
+  },
+  "side_slot_1": {
+    "type": "stack_panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "orientation": "horizontal",
+    "collection_name": "container_items",
+    "offset": [
+      27,
+      4
+    ],
+    "size": [
+      18,
+      18
+    ],
+    "controls": [
+      {
+        "slot@chest.quarrry_item_slot_invisibility": {
+          "collection_index": 0
+        }
+      }
+    ]
+  },
+  "side_slot_2": {
+    "type": "stack_panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "orientation": "horizontal",
+    "collection_name": "container_items",
+    "offset": [
+      27,
+      37
+    ],
+    "size": [
+      18,
+      18
+    ],
+    "controls": [
+      {
+        "slot@chest.quarrry_item_slot_invisibility": {
+          "collection_index": 1
+        }
+      }
+    ]
+  },
+  "quarry_1_label": {
+    "type": "label",
+    "offset": [
+      35,
+      -35
+    ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "text": "$container_title",
+    "size": [
+      "90%",
+      "default"
+    ],
+    "color": "$title_text_color",
+    "layer": 2
+  },
+  "chest_grid_item@common.container_item": {
+    "$item_collection_name": "container_items"
+  },
+  "quarrry_item_slot_invisibility@chest.chest_grid_item": {
+    "$item_collection_name": "container_items",
+    "$background_images": "common.cell_image_panel",
+    "$cell_image_size": [
+      0,
+      0
+    ]
+  },
+  "invisible_image": {
+    "type": "image",
+    "texture": "textures/gui/invisible",
+    "layer": 1
+  },
+  "quarry_top_grid": {
+    "type": "panel",
+    "offset": [
+      0.75,
+      0.75
+    ],
+    "controls": [
+      {
+        "fila_1": {
+          "type": "stack_panel",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "orientation": "horizontal",
+          "collection_name": "container_items",
+          "offset": [
+            61,
+            -19
+          ],
+          "size": [
+            90,
+            90
+          ],
+          "controls": [
+            {
+              "slot_1@chest.quarrry_item_slot_invisibility": {
+                "collection_index": 2,
+                "offset": [
+                  0,
+                  2
+                ]
+              }
+            },
+            {
+              "slot_2@chest.quarrry_item_slot_invisibility": {
+                "collection_index": 3,
+                "offset": [
+                  18,
+                  2
+                ]
+              }
+            },
+            {
+              "slot_3@chest.quarrry_item_slot_invisibility": {
+                "collection_index": 4,
+                "offset": [
+                  36,
+                  2
+                ]
+              }
+            },
+            {
+              "slot_4@chest.quarrry_item_slot_invisibility": {
+                "collection_index": 5,
+                "offset": [
+                  54,
+                  2
+                ]
+              }
+            },
+            {
+              "slot_5@chest.quarrry_item_slot_invisibility": {
+                "collection_index": 6,
+                "offset": [
+                  72,
+                  2
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "fila_2": {
+          "type": "stack_panel",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "orientation": "horizontal",
+          "collection_name": "container_items",
+          "offset": [
+            61,
+            -1
+          ],
+          "size": [
+            90,
+            90
+          ],
+          "controls": [
+            {
+              "slot_1@chest.quarrry_item_slot_invisibility": {
+                "collection_index": 7,
+                "offset": [
+                  0,
+                  -18
+                ]
+              }
+            },
+            {
+              "slot_2@chest.quarrry_item_slot_invisibility": {
+                "collection_index": 8,
+                "offset": [
+                  18,
+                  -18
+                ]
+              }
+            },
+            {
+              "slot_3@chest.quarrry_item_slot_invisibility": {
+                "collection_index": 9,
+                "offset": [
+                  36,
+                  -18
+                ]
+              }
+            },
+            {
+              "slot_4@chest.quarrry_item_slot_invisibility": {
+                "collection_index": 10,
+                "offset": [
+                  54,
+                  -18
+                ]
+              }
+            },
+            {
+              "slot_5@chest.quarrry_item_slot_invisibility": {
+                "collection_index": 11,
+                "offset": [
+                  72,
+                  -18
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "fila_3": {
+          "type": "stack_panel",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "orientation": "horizontal",
+          "collection_name": "container_items",
+          "offset": [
+            61,
+            17
+          ],
+          "size": [
+            90,
+            90
+          ],
+          "controls": [
+            {
+              "slot_11@chest.quarrry_item_slot_invisibility": {
+                "collection_index": 12,
+                "offset": [
+                  0,
+                  -36
+                ]
+              }
+            },
+            {
+              "slot_12@chest.quarrry_item_slot_invisibility": {
+                "collection_index": 13,
+                "offset": [
+                  18,
+                  -36
+                ]
+              }
+            },
+            {
+              "slot_13@chest.quarrry_item_slot_invisibility": {
+                "collection_index": 14,
+                "offset": [
+                  36,
+                  -36
+                ]
+              }
+            },
+            {
+              "slot_14@chest.quarrry_item_slot_invisibility": {
+                "collection_index": 15,
+                "offset": [
+                  54,
+                  -36
+                ]
+              }
+            },
+            {
+              "slot_15@chest.quarrry_item_slot_invisibility": {
+                "collection_index": 16,
+                "offset": [
+                  72,
+                  -36
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "fila_4": {
+          "type": "stack_panel",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "orientation": "horizontal",
+          "collection_name": "container_items",
+          "offset": [
+            61,
+            35
+          ],
+          "size": [
+            90,
+            90
+          ],
+          "controls": [
+            {
+              "slot_16@chest.quarrry_item_slot_invisibility": {
+                "collection_index": 17,
+                "offset": [
+                  0,
+                  -54
+                ]
+              }
+            },
+            {
+              "slot_17@chest.quarrry_item_slot_invisibility": {
+                "collection_index": 18,
+                "offset": [
+                  18,
+                  -54
+                ]
+              }
+            },
+            {
+              "slot_18@chest.quarrry_item_slot_invisibility": {
+                "collection_index": 19,
+                "offset": [
+                  36,
+                  -54
+                ]
+              }
+            },
+            {
+              "slot_19@chest.quarrry_item_slot_invisibility": {
+                "collection_index": 20,
+                "offset": [
+                  54,
+                  -54
+                ]
+              }
+            },
+            {
+              "slot_20@chest.quarrry_item_slot_invisibility": {
+                "collection_index": 21,
+                "offset": [
+                  72,
+                  -54
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "fila_5": {
+          "type": "stack_panel",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "orientation": "horizontal",
+          "collection_name": "container_items",
+          "offset": [
+            61,
+            53
+          ],
+          "size": [
+            90,
+            90
+          ],
+          "controls": [
+            {
+              "slot_21@chest.quarrry_item_slot_invisibility": {
+                "collection_index": 22,
+                "offset": [
+                  0,
+                  -72
+                ]
+              }
+            },
+            {
+              "slot_22@chest.quarrry_item_slot_invisibility": {
+                "collection_index": 23,
+                "offset": [
+                  18,
+                  -72
+                ]
+              }
+            },
+            {
+              "slot_23@chest.quarrry_item_slot_invisibility": {
+                "collection_index": 24,
+                "offset": [
+                  36,
+                  -72
+                ]
+              }
+            },
+            {
+              "slot_24@chest.quarrry_item_slot_invisibility": {
+                "collection_index": 25,
+                "offset": [
+                  54,
+                  -72
+                ]
+              }
+            },
+            {
+              "slot_25@chest.quarrry_item_slot_invisibility": {
+                "collection_index": 26,
+                "offset": [
+                  72,
+                  -72
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "quarry_custom_panel": {
+    "type": "panel",
+    "size": [
+      225,
+      420
+    ],
+    "$background_image_control_name": "bg",
+    "$background_images": "furnace.empty",
+    "$size": [
+      225,
+      420
+    ],
+    "$offset": [
+      "5%",
+      "10%"
+    ],
+    "$title_text_color": [
+      1,
+      1,
+      1
+    ],
+    "controls": [
+      {
+        "container_gamepad_helpers@common.container_gamepad_helpers": {}
+      },
+      {
+        "flying_item_renderer@common.flying_item_renderer": {
+          "layer": 14
+        }
+      },
+      {
+        "selected_item_details_factory@common.selected_item_details_factory": {}
+      },
+      {
+        "item_lock_notification_factory@common.item_lock_notification_factory": {}
+      },
+      {
+        "root_panel@common.root_panel": {
+          "layer": 1,
+          "controls": [
+            // {
+            //   "common_panel@common.common_panel": {}
+            // },
+            {
+              // "common_panel@common.common_panel": {
+              //   "$show_close_button": false
+              // }
+              "image_background": {
+                "type": "image",
+                "size": "$size",
+                "offset": "$offset",
+                "texture": "$chest_image"
+              }
+            },
+            {
+              "chest_panel": {
+                "type": "panel",
+                "layer": 5,
+                "controls": [
+                  {
+                    "quarry_panel_top_half@chest.quarry_panel_top_half": {}
+                  },
+                  {
+                    "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {}
+                  },
+                  {
+                    "hotbar_grid@common.hotbar_grid_template": {}
+                  },
+                  {
+                    "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {}
+                  }
+                ]
+              }
+            },
+            {
+              "inventory_selected_icon_button@common.inventory_selected_icon_button": {}
+            },
+            {
+              "gamepad_cursor@common.gamepad_cursor_button": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "content_root_crystalline_quarry": {
+    "type": "panel",
+    "$background_image_control_name": "bg",
+    "$background_images": "furnace.empty",
+    "$custom_background_texture": "textures/gui/crystalline_quarry",
+    "$inventory_label": "container.diamond_quarry.inventory",
+
+    "$chest_image": "textures/gui/inventory/quarrys/crystalline_quarry",
+    
+    "$type_label": "ui.diamond_quarry",
+    "controls": [
+      {
+        "quarry_custom_panel@chest.quarry_custom_panel": {}
+      },
+      {
+        "background_panel": {
+          "type": "panel",
+          "size": [
+            214,
+            300
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            33,
+            11
+          ],
+          "layer": 2,
+          "controls": [
+            // {
+            //   "background_custom": {
+            //     "type": "image",
+            //     "texture": "textures/gui/inventory/quarrys/crystalline_quarry",
+            //     "size": [
+            //       256.8,
+            //       268.2
+            //     ],
+            //     "anchor_from": "center",
+            //     "anchor_to": "center",
+            //     "offset": [
+            //       8,
+            //       -11
+            //     ],
+            //     "layer": 3
+            //   }
+            // },
+            {
+              "close@common.close_button": {
+                "layer": 4,
+                "offset": [
+                  -58,
+                  11
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

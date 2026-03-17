@@ -1,0 +1,30 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "5fs_br:rope"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:string"
+			}
+		},
+		"pattern": [
+			" # ",
+			" # ",
+			" # "
+		],
+		"result": {
+			"item": "5fs_br:rope",
+            "count": 8
+		},
+		"unlock": [
+			{
+				"item": "minecraft:string"
+			}
+		]
+	}
+}

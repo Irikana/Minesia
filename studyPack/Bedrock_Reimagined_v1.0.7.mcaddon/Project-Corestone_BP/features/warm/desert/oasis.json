@@ -1,0 +1,19 @@
+{
+    "format_version": "1.21.60",
+    "minecraft:structure_template_feature": {
+      "description": {
+        "identifier": "5fs_br:warm/desert/oasis"
+      },
+      "structure_name": "5fs_br:oasis",
+      "adjustment_radius": 0,
+      "facing_direction": "north",
+      "constraints": {
+        "unburied": {},
+        "block_intersection": {
+          "block_allowlist": [
+            "minecraft:sand"
+          ]
+        }
+      }
+    }
+}

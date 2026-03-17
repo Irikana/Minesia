@@ -1,0 +1,310 @@
+{
+    "format_version": "1.26.0",
+	"minecraft:block": {
+        "description": {
+            "identifier": "5fs_br:ash",
+            "menu_category": {
+               "category": "Construction"
+             },
+            "states": {
+                "5fs_br:layer_level": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7
+                ]
+            }
+        },
+        "permutations": [
+            {
+                "condition": "query.block_state('5fs_br:layer_level') == 0",
+                "components": {
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            -8
+                        ],
+                        "size": [
+                            16,
+                            2,
+                            16
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:layer_level') == 1",
+                "components": {
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            -8
+                        ],
+                        "size": [
+                            16,
+                            4,
+                            16
+                        ]
+                    },
+                    "minecraft:collision_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            -8
+                        ],
+                        "size": [
+                            16,
+                            2,
+                            16
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:layer_level') == 2",
+                "components": {
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            -8
+                        ],
+                        "size": [
+                            16,
+                            6,
+                            16
+                        ]
+                    },
+                    "minecraft:collision_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            -8
+                        ],
+                        "size": [
+                            16,
+                            4,
+                            16
+                        ]
+                    },
+                    "minecraft:loot": "loot_tables/blocks/ash/ash_0.json",
+                    "tag:5fs_br:ash_layer_1": {}
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:layer_level') == 3",
+                "components": {
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            -8
+                        ],
+                        "size": [
+                            16,
+                            8,
+                            16
+                        ]
+                    },
+                    "minecraft:collision_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            -8
+                        ],
+                        "size": [
+                            16,
+                            6,
+                            16
+                        ]
+                    },
+                    "minecraft:loot": "loot_tables/blocks/ash/ash_0.json",
+                    "tag:5fs_br:ash_layer_1": {}
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:layer_level') == 4",
+                "components": {
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            -8
+                        ],
+                        "size": [
+                            16,
+                            10,
+                            16
+                        ]
+                    },
+                    "minecraft:collision_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            -8
+                        ],
+                        "size": [
+                            16,
+                            8,
+                            16
+                        ]
+                    },
+                    "minecraft:loot": "loot_tables/blocks/ash/ash_1.json",
+                    "tag:5fs_br:ash_layer_2": {}
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:layer_level') == 5",
+                "components": {
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            -8
+                        ],
+                        "size": [
+                            16,
+                            12,
+                            16
+                        ]
+                    },
+                    "minecraft:collision_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            -8
+                        ],
+                        "size": [
+                            16,
+                            10,
+                            16
+                        ]
+                    },
+                    "minecraft:loot": "loot_tables/blocks/ash/ash_1.json",
+                    "tag:5fs_br:ash_layer_2": {}
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:layer_level') == 6",
+                "components": {
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            -8
+                        ],
+                        "size": [
+                            16,
+                            14,
+                            16
+                        ]
+                    },
+                    "minecraft:collision_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            -8
+                        ],
+                        "size": [
+                            16,
+                            12,
+                            16
+                        ]
+                    },
+                    "minecraft:loot": "loot_tables/blocks/ash/ash_2.json",
+                    "tag:5fs_br:ash_layer_3": {}
+                }
+            },
+            {
+                "condition": "query.block_state('5fs_br:layer_level') == 7",
+                "components": {
+                    "minecraft:collision_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            -8
+                        ],
+                        "size": [
+                            16,
+                            14,
+                            16
+                        ]
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            -8
+                        ],
+                        "size": [
+                            16,
+                            16,
+                            16
+                        ]
+                    },
+                    "minecraft:loot": "loot_tables/blocks/ash/ash_2.json",
+                    "tag:5fs_br:ash_layer_3": {}
+                }
+            }
+        ],
+        "components": {
+            "minecraft:geometry": {
+                "identifier": "geometry.ash",
+                "bone_visibility": {
+                    "layer_one": "query.block_state('5fs_br:layer_level') >= 0",
+                    "layer_two": "query.block_state('5fs_br:layer_level') >= 1",
+                    "layer_three": "query.block_state('5fs_br:layer_level') >= 2",
+                    "layer_four": "query.block_state('5fs_br:layer_level') >= 3",
+                    "layer_five": "query.block_state('5fs_br:layer_level') >= 4",
+                    "layer_six": "query.block_state('5fs_br:layer_level') >= 5",
+                    "layer_seven": "query.block_state('5fs_br:layer_level') >= 6",
+                    "layer_eight": "query.block_state('5fs_br:layer_level') == 7"
+                }
+            },
+            "minecraft:collision_box": {
+                "origin": [
+                    -8,
+                    0,
+                    -8
+                ],
+                "size": [
+                    16,
+                    0,
+                    16
+                ]
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0.1
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 0.1
+            },
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "ash"
+                }
+            },
+            "minecraft:liquid_detection": {
+                "detection_rules": [
+                    {
+                        "on_liquid_touches": "popped"
+                    }
+                ]
+            },
+            "minecraft:movable": {
+              "movement_type": "popped"
+            },
+            "minecraft:map_color": "#939393",
+			"minecraft:precipitation_interactions": {
+				"precipitation_behavior": "none"
+			},
+            "5fs_br:ash": {}
+        }
+    }
+}

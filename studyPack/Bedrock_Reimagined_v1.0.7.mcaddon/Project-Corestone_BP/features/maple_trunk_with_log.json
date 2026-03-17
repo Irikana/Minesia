@@ -1,0 +1,13 @@
+{
+    "format_version": "1.21.60",
+    "minecraft:aggregate_feature": {
+        "description": {
+            "identifier": "5fs_br:maple_trunk_with_log"
+        },
+        "features": [
+            "5fs_br:maple_trunk/maple_trunk",
+            "5fs_br:maple_trunk/weighted_maple_log"
+        ],
+        "early_out": "first_failure"
+    }
+}

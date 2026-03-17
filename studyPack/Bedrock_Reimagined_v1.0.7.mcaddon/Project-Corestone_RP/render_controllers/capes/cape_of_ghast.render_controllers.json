@@ -1,0 +1,34 @@
+{
+  "format_version": "1.20.0",
+  "render_controllers": {
+    "controller.render.cape_of_ghast": {
+      "geometry": "geometry.default",
+      "arrays": {
+        "textures": {
+          "array.textures": [
+            "Texture.ghast0",
+            "Texture.ghast1",
+            "Texture.ghast2",
+            "Texture.ghast3",
+            "Texture.ghast4",
+            "Texture.ghast5",
+            "Texture.ghast6",
+            "Texture.ghast7",
+            "Texture.ghast8",
+            "Texture.ghast9",
+            "Texture.ghast10"
+          ]
+        }
+      },
+      "materials": [
+        {
+          "*": "variable.is_enchanted?material.enchanted:material.default"
+        }
+      ],
+      "textures": [
+        "temp.life_time=query.life_time*8;return array.textures[temp.life_time];",
+        "texture.enchanted"
+      ]
+    }
+  }
+}

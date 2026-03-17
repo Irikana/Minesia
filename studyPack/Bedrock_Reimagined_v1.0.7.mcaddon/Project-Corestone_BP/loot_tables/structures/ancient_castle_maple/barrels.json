@@ -1,0 +1,219 @@
+{
+  "pools": [
+    {
+      "rolls": { "min": 3, "max": 6 },
+      "entries": [
+        { "type": "item", "name": "minecraft:stone_bricks", "weight": 5, "functions": [ { "function": "set_count", "count": { "min": 4, "max": 12 } } ] },
+        { "type": "item", "name": "minecraft:mossy_stone_bricks", "weight": 4, "functions": [ { "function": "set_count", "count": { "min": 3, "max": 9 } } ] },
+        { "type": "item", "name": "minecraft:cracked_stone_bricks", "weight": 4, "functions": [ { "function": "set_count", "count": { "min": 3, "max": 9 } } ] },
+        { "type": "item", "name": "minecraft:cobblestone", "weight": 5, "functions": [ { "function": "set_count", "count": { "min": 4, "max": 12 } } ] },
+        { "type": "item", "name": "minecraft:iron_bars", "weight": 3, "functions": [ { "function": "set_count", "count": { "min": 3, "max": 7 } } ] }
+      ]
+    },
+    {
+      "rolls": { "min": 2, "max": 4 },
+      "entries": [
+        { "type": "item", "name": "minecraft:coal", "weight": 4, "functions": [ { "function": "set_count", "count": { "min": 3, "max": 8 } } ] },
+        { "type": "item", "name": "minecraft:torch", "weight": 4, "functions": [ { "function": "set_count", "count": { "min": 4, "max": 10 } } ] },
+        { "type": "item", "name": "minecraft:iron_ingot", "weight": 3, "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ] },
+        { "type": "item", "name": "minecraft:gold_ingot", "weight": 2, "functions": [ { "function": "set_count", "count": { "min": 1, "max": 3 } } ] },
+        { "type": "item", "name": "minecraft:emerald", "weight": 1, "functions": [ { "function": "set_count", "count": { "min": 1, "max": 2 } } ] }
+      ]
+    },
+    {
+      "rolls": { "min": 1, "max": 2 },
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:stone_sword",
+          "weight": 4,
+          "functions": [
+            { "function": "set_damage", "damage": { "min": 0.20, "max": 0.75 } }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:copper_sword",
+          "weight": 3,
+          "functions": [
+            { "function": "set_damage", "damage": { "min": 0.15, "max": 0.70 } },
+            { "function": "enchant_with_levels", "levels": { "min": 5, "max": 15 }, "treasure": false }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:iron_sword",
+          "weight": 2,
+          "functions": [
+            { "function": "set_damage", "damage": { "min": 0.10, "max": 0.70 } },
+            { "function": "enchant_with_levels", "levels": { "min": 5, "max": 15 }, "treasure": false }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": { "min": 0, "max": 2 },
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:chainmail_helmet",
+          "weight": 2,
+          "functions": [
+            { "function": "set_damage", "damage": { "min": 0.10, "max": 0.60 } }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:chainmail_boots",
+          "weight": 2,
+          "functions": [
+            { "function": "set_damage", "damage": { "min": 0.10, "max": 0.60 } }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:copper_helmet",
+          "weight": 2,
+          "functions": [
+            { "function": "set_damage", "damage": { "min": 0.10, "max": 0.60 } },
+            { "function": "enchant_with_levels", "levels": { "min": 5, "max": 12 }, "treasure": false }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:copper_chestplate",
+          "weight": 1,
+          "functions": [
+            { "function": "set_damage", "damage": { "min": 0.10, "max": 0.60 } },
+            { "function": "enchant_with_levels", "levels": { "min": 5, "max": 12 }, "treasure": false }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:copper_leggings",
+          "weight": 1,
+          "functions": [
+            { "function": "set_damage", "damage": { "min": 0.10, "max": 0.60 } },
+            { "function": "enchant_with_levels", "levels": { "min": 5, "max": 12 }, "treasure": false }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:iron_helmet",
+          "weight": 2,
+          "functions": [
+            { "function": "set_damage", "damage": { "min": 0.10, "max": 0.60 } },
+            { "function": "enchant_with_levels", "levels": { "min": 6, "max": 15 }, "treasure": false }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:iron_chestplate",
+          "weight": 1,
+          "functions": [
+            { "function": "set_damage", "damage": { "min": 0.10, "max": 0.60 } },
+            { "function": "enchant_with_levels", "levels": { "min": 6, "max": 15 }, "treasure": false }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "empty", "weight": 85 },
+        { "type": "item", "name": "5fs_br:ring_band", "weight": 3 },
+        { "type": "item", "name": "5fs_br:jeweling_station", "weight": 3 },
+        { "type": "item", "name": "5fs_br:rune_table", "weight": 2 },
+        { "type": "item", "name": "5fs_br:steel_ingot", "weight": 4, "functions": [ { "function": "set_count", "count": { "min": 1, "max": 2 } } ] },
+        { "type": "item", "name": "5fs_br:common_bag_upgrade", "weight": 2 },
+        { "type": "item", "name": "5fs_br:arcane_rift", "weight": 1 }
+      ]
+    },
+    {
+      "rolls": { "min": 0, "max": 1 },
+      "entries": [
+        { "type": "item", "name": "5fs_br:white_checkered_tiles", "weight": 1, "functions": [ { "function": "set_count", "count": { "min": 8, "max": 24 } } ] },
+        { "type": "item", "name": "5fs_br:orange_checkered_tiles", "weight": 1, "functions": [ { "function": "set_count", "count": { "min": 8, "max": 24 } } ] },
+        { "type": "item", "name": "5fs_br:magenta_checkered_tiles", "weight": 1, "functions": [ { "function": "set_count", "count": { "min": 8, "max": 24 } } ] },
+        { "type": "item", "name": "5fs_br:light_blue_checkered_tiles", "weight": 1, "functions": [ { "function": "set_count", "count": { "min": 8, "max": 24 } } ] },
+        { "type": "item", "name": "5fs_br:yellow_checkered_tiles", "weight": 1, "functions": [ { "function": "set_count", "count": { "min": 8, "max": 24 } } ] },
+        { "type": "item", "name": "5fs_br:lime_checkered_tiles", "weight": 1, "functions": [ { "function": "set_count", "count": { "min": 8, "max": 24 } } ] },
+        { "type": "item", "name": "5fs_br:pink_checkered_tiles", "weight": 1, "functions": [ { "function": "set_count", "count": { "min": 8, "max": 24 } } ] },
+        { "type": "item", "name": "5fs_br:gray_checkered_tiles", "weight": 1, "functions": [ { "function": "set_count", "count": { "min": 8, "max": 24 } } ] },
+        { "type": "item", "name": "5fs_br:light_gray_checkered_tiles", "weight": 1, "functions": [ { "function": "set_count", "count": { "min": 8, "max": 24 } } ] },
+        { "type": "item", "name": "5fs_br:cyan_checkered_tiles", "weight": 1, "functions": [ { "function": "set_count", "count": { "min": 8, "max": 24 } } ] },
+        { "type": "item", "name": "5fs_br:purple_checkered_tiles", "weight": 1, "functions": [ { "function": "set_count", "count": { "min": 8, "max": 24 } } ] },
+        { "type": "item", "name": "5fs_br:blue_checkered_tiles", "weight": 1, "functions": [ { "function": "set_count", "count": { "min": 8, "max": 24 } } ] },
+        { "type": "item", "name": "5fs_br:brown_checkered_tiles", "weight": 1, "functions": [ { "function": "set_count", "count": { "min": 8, "max": 24 } } ] },
+        { "type": "item", "name": "5fs_br:green_checkered_tiles", "weight": 1, "functions": [ { "function": "set_count", "count": { "min": 8, "max": 24 } } ] },
+        { "type": "item", "name": "5fs_br:red_checkered_tiles", "weight": 1, "functions": [ { "function": "set_count", "count": { "min": 8, "max": 24 } } ] },
+        { "type": "item", "name": "5fs_br:black_checkered_tiles", "weight": 1, "functions": [ { "function": "set_count", "count": { "min": 8, "max": 24 } } ] }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "empty", "weight": 85 },
+        { "type": "item", "name": "5fs_br:big_stone_statue", "weight": 5 },
+        { "type": "item", "name": "5fs_br:small_stone_statue", "weight": 10 }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "empty", "weight": 80 },
+        { "type": "item", "name": "5fs_br:mossy_cobblestone_decorated_pot", "weight": 5 },
+        { "type": "item", "name": "5fs_br:mossy_stone_brick_decorated_pot", "weight": 5 },
+        { "type": "item", "name": "5fs_br:mossy_cobblestone_trap_decorated_pot", "weight": 5 },
+        { "type": "item", "name": "5fs_br:mossy_stone_brick_trap_decorated_pot", "weight": 5 }
+      ]
+    },
+    {
+      "rolls": 1,
+      "conditions": [ { "condition": "random_chance", "chance": 0.01 } ],
+      "entries": [
+        { "type": "item", "name": "5fs_br:charm_of_skeleton", "weight": 1 },
+        { "type": "item", "name": "5fs_br:charm_of_witch", "weight": 1 },
+        { "type": "item", "name": "5fs_br:charm_of_zombie", "weight": 1 },
+        { "type": "item", "name": "5fs_br:charm_of_spider", "weight": 1 }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "empty", "weight": 50 },
+        { "type": "item", "name": "5fs_br:golden_wand", "weight": 10, "functions": [ { "function": "set_damage", "damage": { "min": 0.20, "max": 0.70 } } ] },
+        { "type": "item", "name": "5fs_br:diamond_wand", "weight": 4, "functions": [ { "function": "set_damage", "damage": { "min": 0.10, "max": 0.40 } } ] },
+        { "type": "item", "name": "5fs_br:torch_wand", "weight": 1, "functions": [ { "function": "set_damage", "damage": { "min": 0.20, "max": 0.70 } } ] },
+        { "type": "item", "name": "5fs_br:enchanted_scroll", "weight": 11 }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "empty", "weight": 70 },
+        { "type": "item", "name": "5fs_br:rune_of_blades", "weight": 2 },
+        { "type": "item", "name": "5fs_br:rune_of_beasts", "weight": 2 },
+        { "type": "item", "name": "5fs_br:rune_of_decay", "weight": 3 },
+        { "type": "item", "name": "5fs_br:rune_of_earth", "weight": 2 },
+        { "type": "item", "name": "5fs_br:rune_of_eternity", "weight": 3 },
+        { "type": "item", "name": "5fs_br:rune_of_flame", "weight": 2 },
+        { "type": "item", "name": "5fs_br:rune_of_frost", "weight": 2 },
+        { "type": "item", "name": "5fs_br:rune_of_growth", "weight": 3 },
+        { "type": "item", "name": "5fs_br:rune_of_knowledge", "weight": 3 },
+        { "type": "item", "name": "5fs_br:rune_of_light", "weight": 2 },
+        { "type": "item", "name": "5fs_br:rune_of_shadows", "weight": 3 },
+        { "type": "item", "name": "5fs_br:rune_of_shields", "weight": 2 },
+        { "type": "item", "name": "5fs_br:rune_of_storms", "weight": 2 }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "item", "name": "5fs_br:sky_star_fragment", "weight": 4 },
+        { "type": "item", "name": "5fs_br:mana_bottle", "weight": 6, "functions": [ { "function": "set_count", "count": { "min": 1, "max": 3 } } ] },
+        { "type": "empty", "weight": 90 }
+      ]
+    }
+  ]
+}

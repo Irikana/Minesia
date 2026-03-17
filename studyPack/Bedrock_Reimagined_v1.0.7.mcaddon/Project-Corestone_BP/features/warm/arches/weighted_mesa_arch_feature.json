@@ -1,0 +1,58 @@
+{
+    "format_version": "1.21.60",
+    "minecraft:weighted_random_feature": {
+        "description": {
+            "identifier": "5fs_br:warm/arches/weighted_mesa_arch_feature"
+        },
+        "features": [
+            [
+                "5fs_br:warm/arches/scatter_mesa_arch_0_north",
+                1
+            ],
+            [
+                "5fs_br:warm/arches/scatter_mesa_arch_0_south",
+                1
+            ],
+            [
+                "5fs_br:warm/arches/scatter_mesa_arch_0_west",
+                1
+            ],
+            [
+                "5fs_br:warm/arches/scatter_mesa_arch_0_east",
+                1
+            ],
+            [
+                "5fs_br:warm/arches/scatter_mesa_arch_1_north",
+                1
+            ],
+            [
+                "5fs_br:warm/arches/scatter_mesa_arch_1_south",
+                1
+            ],
+            [
+                "5fs_br:warm/arches/scatter_mesa_arch_1_west",
+                1
+            ],
+            [
+                "5fs_br:warm/arches/scatter_mesa_arch_1_east",
+                1
+            ],
+            [
+                "5fs_br:warm/arches/scatter_mesa_arch_2_north",
+                1
+            ],
+            [
+                "5fs_br:warm/arches/scatter_mesa_arch_2_south",
+                1
+            ],
+            [
+                "5fs_br:warm/arches/scatter_mesa_arch_2_west",
+                1
+            ],
+            [
+                "5fs_br:warm/arches/scatter_mesa_arch_2_east",
+                1
+            ]
+        ]
+    }
+}

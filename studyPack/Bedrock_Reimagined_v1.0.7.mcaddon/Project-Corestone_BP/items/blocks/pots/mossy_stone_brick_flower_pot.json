@@ -1,0 +1,21 @@
+{
+    "format_version": "1.26.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "5fs_br:mossy_stone_brick_flower_pot",
+            "menu_category": {
+               "category": "items"
+            }
+        },
+        "components": {
+            "minecraft:icon": "mossy_stone_brick_flower_pot",
+            "minecraft:block_placer": {
+                "block": "5fs_br:mossy_stone_brick_flower_pot",
+                "replace_block_item": true
+            },
+            "minecraft:display_name": {
+                "value": "tile.5fs_br:mossy_stone_brick_flower_pot.name"
+            }
+        }
+    }
+}

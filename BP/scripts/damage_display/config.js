@@ -19,13 +19,17 @@ export const DISPLAY_TEXTS = {
         damage: "伤害",
         baseDamage: "基础",
         randomDamage: "随机",
-        totalDamage: "总计"
+        totalDamage: "总计",
+        critical: "暴击!",
+        combo: "连击"
     },
     en_US: {
         damage: "Damage",
         baseDamage: "Base",
         randomDamage: "Random",
-        totalDamage: "Total"
+        totalDamage: "Total",
+        critical: "Critical!",
+        combo: "Combo"
     }
 };
 

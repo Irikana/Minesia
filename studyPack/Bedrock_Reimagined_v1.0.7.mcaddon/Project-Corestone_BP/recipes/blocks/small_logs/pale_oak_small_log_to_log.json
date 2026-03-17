@@ -1,0 +1,30 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "5fs_br:pale_oak_small_log_to_log"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "   ",
+      " PP",
+      " PP"
+    ],
+    "key": {
+      "P": {
+        "item": "5fs_br:small_pale_oak_log"
+      }
+    },
+    "result": {
+      "item": "minecraft:pale_oak_log",
+      "count": 3
+    },
+    "unlock": [
+      {
+        "item": "minecraft:pale_oak_log"
+      }
+    ]
+  }
+}

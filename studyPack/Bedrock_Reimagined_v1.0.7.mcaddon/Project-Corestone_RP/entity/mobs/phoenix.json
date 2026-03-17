@@ -1,0 +1,64 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "5fs_br:phoenix",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/mobs/phoenix"
+            },
+            "geometry": {
+                "default": "geometry.phoenix"
+            },
+            "animations": {
+                "look_at_target": "animation.common.look_at_target",
+                "idle": "animation.phoenix.idle",
+                "flying": "animation.phoenix.flying",
+                "death_ground": "animation.phoenix.death_ground",
+                "death_flying": "animation.phoenix.death_flying",
+                "planning": "animation.phoenix.planning",
+                "walking": "animation.phoenix.walking",
+                "rotation": "animation.phoenix.rotation",
+                "perching": "animation.phoenix.perching",
+                "ranged_attack": "animation.phoenix.ranged_attack",
+                "swoop_attack": "animation.phoenix.swoop_attack",
+                "particles": "animation.phoenix.particles",
+                "root": "controller.animation.phoenix.root",
+                "general_controller": "controller.animation.phoenix.general",
+                "rotation_controller": "controller.animation.phoenix.rotation",
+                "swoop_attack_controller": "controller.animation.phoenix.swoop_attack",
+                "ranged_attack_controller": "controller.animation.phoenix.ranged_attack",
+                "look_at_target_controller": "controller.animation.phoenix.look_at_target"
+            },
+            "scripts": {
+                "pre_animation": [
+                    "v.flying_type = q.property('5fs_br:flying_type');"
+                ],
+                "animate": [
+                    "root"
+                ]
+            },
+            "enable_attachables": true,
+            "render_controllers": [
+                "controller.render.default"
+            ],
+            "particle_effects": {
+                "phoenix": "5fs_br:phoenix"
+            },
+            "sound_effects": {
+                "idle": "mob.phoenix.idle",
+                "flying": "mob.phoenix.flying",
+                "planning": "mob.phoenix.planning",
+                "perching": "mob.phoenix.perching",
+                "shoot_start": "mob.phoenix.shoot_start",
+                "shoot_end": "mob.phoenix.shoot_end",
+                "swoop_attack": "mob.phoenix.swoop_attack"
+            },
+            "spawn_egg": {
+                "texture": "5fs_br:phoenix_spawn_egg"
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.cobalt_shovel.1fp": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": [66.81815, 55.14089, -69.00399],
+					"position": [4, 15, 5]
+				}
+			}
+		},
+		"animation.cobalt_shovel.3pp": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": [92.5, 0, 0],
+					"position": [0, 16, -1]
+				}
+			}
+		}
+	}
+}

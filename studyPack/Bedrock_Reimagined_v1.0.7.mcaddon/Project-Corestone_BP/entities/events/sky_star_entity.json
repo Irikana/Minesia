@@ -1,0 +1,78 @@
+{
+  "format_version": "1.21.80",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "5fs_br:sky_star_entity",
+      "is_spawnable": false,
+      "is_summonable": true
+    },
+    "component_groups": {
+      "5fs_br:despawn": {
+        "minecraft:instant_despawn": {}
+      },
+      "size_large": {
+        "minecraft:scale": { "value": 5.0 }
+      }
+    },
+    "components": {
+      "minecraft:physics": { "has_gravity": true, "has_collision": true },
+      "minecraft:interact": {
+        "interactions": [
+          {
+            "on_interact": { "event": "5fs_br:despawn" },
+            "add_items": { "table": "loot_tables/entities/sky_star_entity.json" },
+            "swing": true,
+            "hurt_item": 1,
+            "interact_text": "action.interact.capture_star",
+            "play_sounds": "pop"
+          }
+        ]
+      },
+      "minecraft:type_family": {
+                "family": [
+					"nolife"
+                ]
+            },
+      "minecraft:collision_box": { "height": 0.55, "width": 0.55 },
+      "minecraft:timer": {
+        "time": 2,
+        "looping": false,
+        "time_down_event": { "event": "5fs_br:stars_particle", "target": "self" }
+      },
+      "minecraft:cannot_be_attacked": {},
+      "minecraft:vibration_damper": {},
+      "minecraft:damage_sensor": {
+        "triggers": [{ "cause": "all", "deals_damage": "no" }]
+      },
+      "minecraft:conditional_bandwidth_optimization": {},
+      "minecraft:environment_sensor": {
+        "triggers": [
+          {
+            "filters": { "test": "is_daytime", "value": true },
+            "event": "5fs_br:despawn"
+          }
+        ]
+      }
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "sequence": [
+          {
+            "filters": { "test": "is_daytime", "value": true },
+            "add": { "component_groups": ["5fs_br:despawn"] }
+          },
+          {
+            "filters": { "test": "is_daytime", "value": false },
+            "add": { "component_groups": ["size_large"] }
+          }
+        ]
+      },
+      "5fs_br:stars_particle": {
+        "queue_command": { "command": ["particle 5fs_br:stars ~ ~ ~"] }
+      },
+      "5fs_br:despawn": {
+        "add": { "component_groups": ["5fs_br:despawn"] }
+      }
+    }
+  }
+}

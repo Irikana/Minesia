@@ -3,6 +3,8 @@ import { STAMINA_CONFIG, getStaminaTexts } from "./config.js";
 import { ActionBarManager, DISPLAY_PRIORITIES } from "../action_bar/index.js";
 import { getWeaponStaminaCost, isStaminaWeapon } from "./weaponStaminaConfig.js";
 import { debug } from "../debug/debugManager.js";
+import { MinesiaLevelSystem } from "../minesia_level/level_system.js";
+import { MinesiaLevelEventSystem } from "../minesia_level/minesiaLevelEvent.js";
 
 const playerStaminaData = new Map();
 const playerDisplayState = new Map();
@@ -557,6 +559,16 @@ function handlePlayerSpawn(event) {
         }
     } else {
         StaminaSystem.fullRestore(player);
+    }
+
+    const totalExp = MinesiaLevelSystem.getTotalExperience(player);
+    if (totalExp !== null) {
+        const currentLevel = MinesiaLevelSystem.calculateLevel(totalExp);
+        const staminaBonus = MinesiaLevelEventSystem.calculateLevelStaminaBonus(currentLevel);
+        if (staminaBonus > 0) {
+            data.maxStaminaBonus = staminaBonus;
+            debug.logWithTag("Stamina", `${player.name} 恢复等级体力加成: +${staminaBonus}`);
+        }
     }
 
     if (!initialSpawn) {

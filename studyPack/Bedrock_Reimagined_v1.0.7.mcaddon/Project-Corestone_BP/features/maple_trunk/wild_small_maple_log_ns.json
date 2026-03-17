@@ -1,0 +1,76 @@
+{
+    "format_version": "1.21.40",
+    "minecraft:single_block_feature": {
+        "description": {
+            "identifier": "5fs_br:maple_trunk/wild_small_maple_log_ns"
+        },
+        "places_block": [
+            {
+                "block": {
+                    "name": "5fs_br:wild_small_maple_log",
+                    "states": {
+                        "5fs_br:state": 1
+                    }
+                },
+                "weight": 1
+            },
+            {
+                "block": {
+                    "name": "5fs_br:wild_small_maple_log",
+                    "states": {
+                        "5fs_br:state": 2
+                    }
+                },
+                "weight": 1
+            },
+            {
+                "block": {
+                    "name": "5fs_br:wild_small_maple_log",
+                    "states": {
+                        "5fs_br:state": 3
+                    }
+                },
+                "weight": 1
+            },
+            {
+                "block": {
+                    "name": "5fs_br:wild_small_maple_log",
+                    "states": {
+                        "5fs_br:state": 4
+                    }
+                },
+                "weight": 1
+            },
+            {
+                "block": {
+                    "name": "5fs_br:wild_small_maple_log",
+                    "states": {
+                        "5fs_br:state": 5
+                    }
+                },
+                "weight": 1
+            },
+            {
+                "block": {
+                    "name": "5fs_br:wild_small_maple_log",
+                    "states": {
+                        "5fs_br:state": 6
+                    }
+                },
+                "weight": 1
+            }
+        ],
+        "enforce_survivability_rules": false,
+        "enforce_placement_rules": false,
+        "may_replace": [
+            "minecraft:air",
+            "minecraft:wildflowers"
+        ],
+        "may_attach_to": {
+		         "bottom": [
+		             "5fs_br:autumn_grass",
+		             "minecraft:dirt"
+		        ]
+	      }
+    }
+}

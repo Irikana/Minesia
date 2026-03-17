@@ -1,0 +1,209 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.squirrel.root": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "animations": [
+                        "general_controller", "climb_controller", "look_at_target_controller"
+                    ],
+                    "transitions": [
+                        {
+                            "death": "!q.is_alive"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "death": {
+                    "animations": [
+                        "death"
+                    ]
+                }
+            }
+        },
+        "controller.animation.squirrel.general": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "animations": [
+                        "idle_0"
+                    ],
+                    "transitions": [
+                        {
+                            "idle_0": "q.any_animation_finished"
+                        },
+                        {
+                            "walk": "q.modified_move_speed > 0.05"
+                        },
+                        {
+                            "swimming": "q.is_in_water"
+                        },
+                        {
+                            "eating": "q.is_eating"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "idle_0": {
+                    "on_entry": [
+                        "v.random_idle = math.random_integer(0,7);"
+                    ],
+                    "animations": [
+                        {
+                            "idle_0": "v.random_idle < 6"
+                        },
+                        {
+                            "idle_1": "v.random_idle == 6"
+                        },
+                        {
+                            "idle_2": "v.random_idle == 7"
+                        }
+                    ],
+                    "transitions": [
+                        {
+                            "idle_1": "q.any_animation_finished"
+                        },
+                        {
+                            "walk": "q.modified_move_speed > 0.05"
+                        },
+                        {
+                            "swimming": "q.is_in_water"
+                        },
+                        {
+                            "eating": "q.is_eating"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "idle_1": {
+                    "on_entry": [
+                        "v.random_idle = math.random_integer(0,7);"
+                    ],
+                    "animations": [
+                        {
+                            "idle_0": "v.random_idle < 6"
+                        },
+                        {
+                            "idle_1": "v.random_idle == 6"
+                        },
+                        {
+                            "idle_2": "v.random_idle == 7"
+                        }
+                    ],
+                    "transitions": [
+                        {
+                            "idle_0": "q.any_animation_finished"
+                        },
+                        {
+                            "walk": "q.modified_move_speed > 0.05"
+                        },
+                        {
+                            "swimming": "q.is_in_water"
+                        },
+                        {
+                            "eating": "q.is_eating"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "walk": {
+                    "animations": [
+                        "walk"
+                    ],
+                    "transitions": [
+                        {
+                            "idle_0": "q.modified_move_speed <= 0.05"
+                        },
+                        {
+                            "swimming": "q.is_in_water"
+                        },
+                        {
+                            "eating": "q.is_eating"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "swimming": {
+                    "animations": [
+                        "swimming"
+                    ],
+                    "transitions": [
+                        {
+                            "idle_0": "!q.is_in_water"
+                        },
+                        {
+                            "walk": "!q.is_in_water && q.modified_move_speed > 0.05"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "eating": {
+                    "animations": [
+                        "eating"
+                    ],
+                    "transitions": [
+                        {
+                            "idle_0": "!q.is_eating"
+                        },
+                        {
+                            "walk": "!q.is_eating && q.modified_move_speed > 0.05"
+                        },
+                        {
+                            "swimming": "!q.is_eating && q.is_in_water"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                }
+            }
+        },
+        "controller.animation.squirrel.look_at_target": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "look_at_target": "!q.is_wall_climbing && !q.is_eating"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "look_at_target": {
+                    "animations": [
+                        "look_at_target"
+                    ],
+                    "transitions": [
+                        {
+                            "look_at_target": "q.is_wall_climbing || q.is_eating"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                }
+            }
+        },
+        "controller.animation.squirrel.climb": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "climb": "q.is_wall_climbing"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                },
+                "climb": {
+                    "animations": [
+                        "climb"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!q.is_wall_climbing"
+                        }
+                    ],
+                    "blend_transition": 0.2
+                }
+            }
+        }
+    }
+}

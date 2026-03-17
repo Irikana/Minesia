@@ -1,0 +1,38 @@
+{
+    "format_version": "1.26.0",
+	"minecraft:block": {
+        "description": {
+            "identifier": "5fs_br:mob_placer",
+            "menu_category": {
+                "category": "none",
+                "is_hidden_in_commands": false
+            },
+            "states": {
+                "5fs_br:mob": [
+                    "none",
+                    "beaver"
+                ]
+            }
+        },
+        "components": {
+            "minecraft:geometry": "minecraft:geometry.full_block",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "empty_texture",
+                    "render_method": "alpha_test"
+                }
+            },
+            "minecraft:tick": {
+                "looping": true,
+                "interval_range": [
+                    5,
+                    5
+                ]
+            },
+            "minecraft:connection_rule": {
+                "accepts_connections_from": "none"
+            },
+            "5fs_br:mob_spawner": {}
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "format_version": "1.21.60",
+    "minecraft:snap_to_surface_feature": {
+        "description": {
+            "identifier": "5fs_br:overworld/rose_bush_snap_to_surface_feature"
+        },
+        "feature_to_snap": "5fs_br:overworld/rose_bush_feature",
+        "vertical_search_range": 256,
+        "surface": "floor",
+        "allow_air_placement": true,
+        "allowed_surface_blocks": [
+            "minecraft:grass_block"
+        ]
+    }
+}

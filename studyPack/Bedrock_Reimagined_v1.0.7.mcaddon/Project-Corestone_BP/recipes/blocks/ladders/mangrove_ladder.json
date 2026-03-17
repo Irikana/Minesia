@@ -1,0 +1,31 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "5fs_br:mangrove_ladder"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "# #",
+      "###",
+      "# #"
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:mangrove_planks"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:mangrove_planks",
+        "data": 0
+      }
+    ],
+    "result": {
+      "item": "5fs_br:mangrove_ladder",
+      "count": 6
+    }
+  }
+}

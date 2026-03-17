@@ -1,0 +1,207 @@
+{
+  "tiers": [
+    {
+      "trades": [
+        {
+          "wants": [
+            {
+              "item": "minecraft:paper",
+              "quantity": {
+                "min": 24,
+                "max": 36
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trades": [
+        {
+          "wants": [
+            {
+              "item": "minecraft:compass",
+              "quantity": 1
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 12
+            },
+            {
+              "item": "minecraft:compass",
+              "quantity": 1
+            }
+          ],
+          "gives": [
+            {
+              "item": "5fs_br:crystal_compass",
+              "quantity": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trades": [
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": {
+                "min": 7,
+                "max": 11
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:emptyMap",
+              "quantity": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trades": [
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": {
+                "min": 12,
+                "max": 20
+              }
+            },
+            {
+              "item": "minecraft:compass",
+              "quantity": 1
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:map",
+              "functions": [
+                {
+                  "function": "exploration_map",
+                  "destination": "monument"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": {
+                "min": 16,
+                "max": 28
+              }
+            },
+            {
+              "item": "minecraft:compass",
+              "quantity": 1
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:map",
+              "functions": [
+                {
+                  "function": "exploration_map",
+                  "destination": "mansion"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trades": [
+        {
+          "wants": [
+            {
+              "item": "5fs_br:obsidian_glass_pane",
+              "quantity": 8
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trades": [
+        {
+          "wants": [
+            {
+              "item": "minecraft:emerald",
+              "quantity": 12
+            }
+          ],
+          "gives": [
+            {
+              "choice": [
+                { "item": "5fs_br:amethyst_banner" },
+                { "item": "5fs_br:barrel_banner" },
+                { "item": "5fs_br:bear_banner" },
+                { "item": "5fs_br:bee_banner" },
+                { "item": "5fs_br:cactus_banner" },
+                { "item": "5fs_br:cherry_banner" },
+                { "item": "5fs_br:coral_cove_banner" },
+                { "item": "5fs_br:cow_banner" },
+                { "item": "5fs_br:enchanting_table_banner" },
+                { "item": "5fs_br:enderman_banner" },
+                { "item": "5fs_br:fox_banner" },
+                { "item": "5fs_br:frozen_banner" },
+                { "item": "5fs_br:furnace_banner" },
+                { "item": "5fs_br:glimmerite_banner" },
+                { "item": "5fs_br:glowstone_banner" },
+                { "item": "5fs_br:honeycomb_banner" },
+                { "item": "5fs_br:ice_spikes_banner" },
+                { "item": "5fs_br:lumberjack_banner" },
+                { "item": "5fs_br:night_sky_banner" },
+                { "item": "5fs_br:ores_banner" },
+                { "item": "5fs_br:pig_banner" },
+                { "item": "5fs_br:potion_banner" },
+                { "item": "5fs_br:prismarine_banner" },
+                { "item": "5fs_br:pumpkin_banner" },
+                { "item": "5fs_br:purple_magic_banner" },
+                { "item": "5fs_br:redstone_banner" },
+                { "item": "5fs_br:shulker_banner" },
+                { "item": "5fs_br:snowy_banner" },
+                { "item": "5fs_br:turtle_banner" },
+                { "item": "5fs_br:warden_banner" },
+                { "item": "5fs_br:witch_banner" },
+                { "item": "5fs_br:wither_banner" },
+                { "item": "5fs_br:yellow_magic_banner" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

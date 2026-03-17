@@ -1,0 +1,57 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "5fs_br:ombari",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/mobs/ombari"
+            },
+            "geometry": {
+                "default": "geometry.ombari"
+            },
+            "animations": {
+                "look_at_target": "animation.common.look_at_target",
+                "idle": "animation.ombari.idle",
+                "walk": "animation.ombari.walk",
+                "attack": "animation.ombari.attack",
+                "slam": "animation.ombari.slam",
+                "swim": "animation.ombari.swim",
+                "roar": "animation.ombari.roar",
+                "death": "animation.ombari.death",
+                "death_rotation": "animation.ombari.death_rotation",
+                "emerging": "animation.ombari.emerging",
+                "root_controller": "controller.animation.ombari.root",
+                "general_controller": "controller.animation.ombari.general",
+                "attack_controller": "controller.animation.ombari.attack"
+            },
+            "scripts": {
+                "animate": [
+                    {
+                        "emerging": "q.is_emerging"
+                    },
+                    {
+                        "root_controller": "!q.is_emerging"
+                    }
+                ]
+            },
+            "sound_effects": {
+                "idle": "mob.ombari.idle",
+                "death": "mob.ombari.death",
+                "punch": "mob.ombari.punch",
+                "slam": "mob.ombari.slam",
+                "roar": "mob.ombari.roar",
+                "leap": "mob.ombari.leap",
+				"emerging": "mob.ombari.emerging"
+            },
+            "render_controllers": [
+                "controller.render.boss"
+            ],
+            "spawn_egg": {
+                "texture": "5fs_br:giant_jungle_boss"
+            }
+        }
+    }
+}

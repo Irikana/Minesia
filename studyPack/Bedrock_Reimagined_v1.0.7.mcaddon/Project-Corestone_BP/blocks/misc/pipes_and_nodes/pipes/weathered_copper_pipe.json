@@ -1,0 +1,225 @@
+{
+    "format_version": "1.26.0",
+	"minecraft:block": {
+        "description": {
+            "identifier": "5fs_br:weathered_copper_pipe",
+            "menu_category": {
+                "category": "Items"
+            },
+            "states": {
+                "5fs_br:connect0": [
+                    true,
+                    false
+                ],
+                "5fs_br:connect1": [
+                    true,
+                    false
+                ]
+            },
+            "traits": {
+                "minecraft:placement_position": {
+                    "enabled_states": [
+                        "minecraft:block_face"
+                    ]
+                }
+            }
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('5fs_br:connect0') == true",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            0,
+                            0
+                        ]
+                    },
+                    "tag:5fs_br:pipe_connect0": {}
+                }
+            },
+            {
+                "condition": "q.block_state('5fs_br:connect1') == true",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            0,
+                            0
+                        ]
+                    },
+                    "tag:5fs_br:pipe_connect1": {}
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:block_face') == 'north'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            0,
+                            0
+                        ]
+                    },
+                    "tag:5fs_br:pipe_north": {}
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:block_face') == 'south'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            0,
+                            0
+                        ]
+                    },
+                    "tag:5fs_br:pipe_north": {}
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:block_face') == 'west'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            90,
+                            0
+                        ]
+                    },
+                    "tag:5fs_br:pipe_west": {}
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:block_face') == 'east'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            90,
+                            0
+                        ]
+                    },
+                    "tag:5fs_br:pipe_west": {}
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:block_face') == 'up'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            90,
+                            180,
+                            0
+                        ]
+                    },
+                    "tag:5fs_br:pipe_up": {}
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:block_face') == 'down'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            90,
+                            180,
+                            0
+                        ]
+                    },
+                    "tag:5fs_br:pipe_up": {}
+                }
+            }
+        ],
+        "components": {
+            "minecraft:geometry": {
+                "identifier": "geometry.pipe",
+                "bone_visibility": {
+                    "connect0": "query.block_state('5fs_br:connect0')",
+                    "connect1": "query.block_state('5fs_br:connect1')"
+                }
+            },
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "weathered_copper_pipe"
+                }
+            },
+            "minecraft:collision_box": {
+                "origin": [
+                    -2,
+                    6,
+                    -8
+                ],
+                "size": [
+                    4,
+                    4,
+                    16
+                ]
+            },
+            "minecraft:selection_box": {
+                "origin": [
+                    -2,
+                    6,
+                    -8
+                ],
+                "size": [
+                    4,
+                    4,
+                    16
+                ]
+            },
+            "minecraft:movable": {
+                "movement_type": "immovable"
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 10,
+                "item_specific_speeds": [
+                    {
+                        "item": {
+                            "tags": "query.all_tags('minecraft:is_pickaxe') && !query.all_tags('minecraft:wooden_tier')"
+                        },
+                        "destroy_speed": 3
+                    }
+                ]
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 6
+            },
+            "minecraft:light_dampening": 0,
+            "minecraft:liquid_detection": {
+                "detection_rules": [
+                    {
+                        "can_contain_liquid": true,
+                        "liquid_type": "water",
+                        "on_liquid_touches": "no_reaction"
+                    }
+                ]
+            },
+			"minecraft:precipitation_interactions": {
+				"precipitation_behavior": "obstruct_rain"
+			},
+            "5fs_br:copper_oxidization": {
+                "oxidize_into": "5fs_br:oxidized_copper_pipe"
+            },
+            "5fs_br:copper_interaction": {
+                "wax_into": "5fs_br:waxed_weathered_copper_pipe",
+                "axe_interaction": {
+                    "scrap_into": "5fs_br:exposed_copper_pipe",
+                    "scrap_sound": "scrape",
+                    "scrap_particle": "5fs_br:oxidization_off"
+                }
+            },
+            "minecraft:connection_rule": {
+                "accepts_connections_from": "none"
+            },
+            "5fs_br:pipe": {},
+            "tag:minecraft:is_pickaxe_item_destructible": {},
+			"minecraft:tick": {
+				"interval_range": [
+					1,
+					1
+				],
+				"looping": false
+			}
+        }
+    }
+}

@@ -1,0 +1,56 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:item": {
+    "description": {
+      "identifier": "5fs_br:wooden_wand",
+      "menu_category": {
+        "category": "equipment"
+      }
+    },
+    "components": {
+      "minecraft:icon": "5fs_br:wooden_wand",
+      "minecraft:durability": {
+        "damage_chance": {
+          "min": 100,
+          "max": 100
+        },
+        "max_durability": 45
+      },
+      "minecraft:use_modifiers": {
+        "movement_modifier": 0.5,
+        "use_duration": 200
+      },
+      "minecraft:damage": 1,
+      "minecraft:max_stack_size": 1,
+      "minecraft:hand_equipped": true,
+      "minecraft:repairable": {
+        "repair_items": [
+          {
+            "items": [
+              "minecraft:oak_log",
+              "minecraft:spruce_log",
+              "minecraft:birch_log",
+              "minecraft:jungle_log",
+              "minecraft:acacia_log",
+              "minecraft:dark_oak_log",
+              "minecraft:cherry_log",
+              "minecraft:mangrove_log",
+              "minecraft:crimson_stem",
+              "minecraft:warped_stem",
+              "5fs_br:maple_log",
+              "5fs_br:palm_log",
+              "5fs_br:redwood_log"
+            ],
+            "repair_amount": "math.floor(q.max_durability * 0.40)"
+          },
+          {
+            "items": [
+              "5fs_br:wooden_wand"
+            ],
+            "repair_amount": "c.other->q.remaining_durability + (0.12 * c.other->q.max_durability)"
+          }
+        ]
+      }
+    }
+  }
+}

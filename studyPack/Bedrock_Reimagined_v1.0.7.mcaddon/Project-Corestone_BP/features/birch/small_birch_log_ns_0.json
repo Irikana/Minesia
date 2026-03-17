@@ -1,0 +1,21 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:structure_template_feature": {
+        "description": {
+            "identifier": "5fs_br:birch/small_birch_log_ns_0"
+        },
+        "structure_name": "trees:smallBirchFallenTree",
+        "adjustment_radius": 16,
+        "facing_direction": "north",
+        "constraints": {
+            "grounded": {},
+            "block_intersection": {
+                "block_allowlist": [
+                    "minecraft:air",
+                    "minecraft:short_grass",
+                    "minecraft:wildflowers"
+                ]
+            }
+        }
+    }
+}

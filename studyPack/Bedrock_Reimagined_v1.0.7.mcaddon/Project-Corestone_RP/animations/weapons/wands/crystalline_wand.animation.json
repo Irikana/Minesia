@@ -1,0 +1,23 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.crystalline_wand.1fp": {
+			"loop": true,
+			"bones": {
+				"wand": {
+					"rotation": [54.02155, 61.77771, -106.98564],
+					"position": [0, 32, 3]
+				}
+			}
+		},
+		"animation.crystalline_wand.3pp": {
+			"loop": true,
+			"bones": {
+				"wand": {
+					"rotation": [87.5, 0, 0],
+					"position": [0, 23, 3]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,23 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.cobalt_hoe.1fp": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": [77.34256, 58.53607, -58.5012],
+					"position": [0, 9, 7]
+				}
+			}
+		},
+		"animation.cobalt_hoe.3pp": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": [90, 0, 0],
+					"position": [0, 16, -1]
+				}
+			}
+		}
+	}
+}

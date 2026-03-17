@@ -1,0 +1,49 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "5fs_br:goblin",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/mobs/goblin/goblin"
+            },
+            "geometry": {
+                "default": "geometry.goblin"
+            },
+            "animations": {
+                "look_at_target": "animation.common.look_at_target",
+                "baby_transform": "animation.goblin.baby_transform",
+                "idle_0": "animation.goblin.idle_0",
+                "idle_1": "animation.goblin.idle_1",
+                "walk": "animation.goblin.walk",
+                "attack": "animation.goblin.attack",
+                "death": "animation.goblin.death",
+                "general_controller": "controller.animation.goblin.general",
+                "attack_controller": "controller.animation.goblin.attack",
+                "root_controller": "controller.animation.goblin.root"
+            },
+            "scripts": {
+                "animate": [
+                    "root_controller",
+                    {
+                        "baby_transform": "q.is_baby"
+                    }
+                ]
+            },
+            "sound_effects": {
+                "idle": "mob.goblin.idle",
+                "pick_nose": "mob.goblin.pick_nose",
+                "attack": "mob.goblin.attack",
+                "death": "mob.goblin.death"
+            },
+            "render_controllers": [
+                "controller.render.default"
+            ],
+            "spawn_egg": {
+                "texture": "5fs_br:goblin_spawn_egg"
+            }
+        }
+    }
+}

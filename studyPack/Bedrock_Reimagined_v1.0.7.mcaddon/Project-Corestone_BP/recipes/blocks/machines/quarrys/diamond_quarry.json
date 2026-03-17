@@ -1,0 +1,53 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "5fs_br:diamond_quarry"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"#": {
+				"item": "5fs_br:steel_block"
+			},
+			"P": {
+				"item": "minecraft:diamond_pickaxe"
+			},
+			"C": {
+				"item": "5fs_br:electrical_circuit_board"
+			},
+			"Q": {
+				"item": "5fs_br:quarry"
+			},
+			"B": {
+				"item": "minecraft:diamond_block"
+			}
+		},
+		"pattern": [
+			"###",
+			"CCQ",
+			"BPB"
+		],
+		"result": {
+			"item": "5fs_br:quarry_diamond"
+		},
+		"unlock": [
+			{
+				"item": "5fs_br:steel_block"
+			},
+			{
+				"item": "minecraft:diamond_pickaxe"
+			},
+			{
+				"item": "5fs_br:electrical_circuit_board"
+			},
+			{
+				"item": "5fs_br:quarry"
+			},
+			{
+				"item": "minecraft:diamond_block"
+			}
+		]
+	}
+}

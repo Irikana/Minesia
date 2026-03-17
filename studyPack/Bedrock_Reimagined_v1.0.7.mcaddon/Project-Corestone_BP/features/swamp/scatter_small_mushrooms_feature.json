@@ -1,0 +1,32 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:scatter_feature": {
+    "description": {
+      "identifier": "5fs_br:swamp/scatter_small_mushrooms_feature"
+    },
+    "coordinate_eval_order": "xzy",
+    "iterations": "math.random(22,36)",
+    "places_feature": "5fs_br:swamp/small_mushrooms_feature",
+    "x": {
+      "distribution": "gaussian",
+      "extent": [
+        -5,
+        5
+      ]
+    },
+    "z": {
+      "distribution": "gaussian",
+      "extent": [
+        -5,
+        5
+      ]
+    },
+    "y": {
+      "distribution": "gaussian",
+      "extent": [
+        -1,
+        1
+      ]
+    }
+  }
+}

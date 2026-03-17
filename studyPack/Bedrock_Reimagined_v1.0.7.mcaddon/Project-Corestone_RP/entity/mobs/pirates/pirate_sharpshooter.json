@@ -1,0 +1,46 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "5fs_br:pirate_sharpshooter",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/mobs/pirates/pirate_sharpshooter"
+            },
+            "geometry": {
+                "default": "geometry.pirate_sharpshooter"
+            },
+            "animations": {
+                "look_at_target": "animation.common.look_at_target",
+                "idle": "animation.pirate_sharpshooter.idle",
+                "target": "animation.pirate_sharpshooter.target",
+                "walk_legs": "animation.pirate_sharpshooter.walk_legs",
+                "walk": "animation.pirate_sharpshooter.walk",
+                "charge": "animation.pirate_sharpshooter.charge",
+                "shoot": "animation.pirate_sharpshooter.shoot",
+                "death": "animation.pirate_sharpshooter.death",
+                "general_controller": "controller.animation.pirate_sharpshooter.general",
+                "root_controller": "controller.animation.pirate_sharpshooter.root"
+            },
+            "scripts": {
+                "animate": [
+                    "root_controller"
+                ]
+            },
+            "render_controllers": [
+                "controller.render.default"
+            ],
+            "sound_effects": {
+                "idle": "mob.pirate.sharpshooter.idle",
+                "charge": "mob.pirate.sharpshooter.charge",
+                "shoot": "mob.pirate.sharpshooter.shoot"
+            },
+            "enable_attachables": true,
+            "spawn_egg": {
+                "texture": "5fs_br:pirate_sharpshooter"
+            }
+        }
+    }
+}

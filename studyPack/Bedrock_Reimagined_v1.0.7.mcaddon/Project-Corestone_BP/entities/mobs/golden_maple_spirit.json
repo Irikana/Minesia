@@ -1,0 +1,244 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "5fs_br:golden_maple_spirit",
+      "is_spawnable": true,
+      "is_summonable": true
+    },
+    "components": {
+      "minecraft:health": {
+        "value": 6,
+        "max": 6
+      },
+      "minecraft:is_hidden_when_invisible": {},
+      "minecraft:type_family": {
+        "family": [
+          "mob",
+          "golden_maple_spirit",
+          "passive"
+        ]
+      },
+      "minecraft:breathable": {
+        "total_supply": 15,
+        "suffocate_time": 0
+      },
+      "minecraft:nameable": {},
+      "minecraft:experience_reward": {
+        "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
+      },
+      "minecraft:loot": {
+        "table": "loot_tables/entities/golden_maple_spirit.json"
+      },
+      "minecraft:hurt_on_condition": {
+        "damage_conditions": [
+          {
+            "filters": {
+              "test": "in_lava",
+              "subject": "self",
+              "operator": "==",
+              "value": true
+            },
+            "cause": "lava",
+            "damage_per_tick": 4
+          }
+        ]
+      },
+      "minecraft:collision_box": {
+        "width": 0.5,
+        "height": 1.05
+      },
+      "minecraft:movement": {
+        "value": 0.25
+      },
+      "minecraft:navigation.walk": {
+        "can_jump": true,
+        "can_pass_doors": true,
+        "avoid_water": true,
+        "avoid_damage_blocks": true,
+        "can_path_over_water": false
+      },
+      "minecraft:jump.dynamic": {},
+      "minecraft:can_climb": {},
+      "minecraft:balloonable": {
+        "mass": 0.4
+      },
+      "minecraft:despawn": {
+        "despawn_from_distance": {}
+      },
+      "minecraft:behavior.float": {
+        "priority": 0
+      },
+      "minecraft:behavior.panic": {
+        "priority": 1,
+        "speed_multiplier": 1
+      },
+      "minecraft:behavior.avoid_block": {
+        "priority": 1,
+        "tick_interval": 5,
+        "search_range": 8,
+        "search_height": 4,
+        "walk_speed_modifier": 1,
+        "sprint_speed_modifier": 1.2,
+        "target_selection_method": "nearest",
+        "target_blocks": [
+          "minecraft:fire"
+        ]
+      },
+      "minecraft:movement.basic": {},
+      "minecraft:behavior.avoid_mob_type": {
+        "priority": 5,
+        "max_dist": 16,
+        "max_flee": 20,
+        "entity_types": [
+          {
+            "filters": {
+              "test": "is_family",
+              "operator": "!=",
+              "subject": "other",
+              "value": "maple_spirit"
+            },
+            "max_dist": 16,
+            "sprint_speed_multiplier": 1.5
+          }
+        ]
+      },
+      "minecraft:behavior.random_stroll": {
+        "priority": 6,
+        "speed_multiplier": 0.6,
+        "xz_dist": 12,
+        "y_dist": 5
+      },
+      "minecraft:behavior.look_at_player": {
+        "priority": 8
+      },
+      "minecraft:physics": {},
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:conditional_bandwidth_optimization": {},
+      "minecraft:timer": {
+        "looping": false,
+        "time": 15,
+        "time_down_event": {
+          "event": "5fs_br:despawn"
+        }
+      }
+    },
+    "component_groups": {
+      "5fs_br:despawn_group": {
+        "minecraft:instant_despawn": {}
+      },
+      "5fs_br:shrinkify": {
+        "minecraft:movement": {
+          "value": 0.5
+        },
+        "minecraft:health": {
+          "max": 3
+        },
+        "minecraft:scale": {
+          "value": 0.25
+        }
+      },
+      "5fs_br:gigantify": {
+        "minecraft:movement": {
+          "value": 0.2
+        },
+        "minecraft:health": {
+          "max": 12
+        },
+        "minecraft:scale": {
+          "value": 2
+        }
+      },
+      "5fs_br:normal_scale": {
+        "minecraft:movement": {
+          "value": 0.25
+        },
+        "minecraft:health": {
+          "max": 6
+        },
+        "minecraft:scale": {
+          "value": 1
+        }
+      },
+      "5fs_br:no_fall_damage_jelly": {
+        "minecraft:damage_sensor": {
+          "triggers": {
+            "cause": "fall",
+            "deals_damage": false
+          }
+        }
+      }
+    },
+    "events": {
+      "5fs_br:despawn": {
+        "queue_command": {
+          "command": [
+            "particle 5fs_br:golden_maple_spirit_leaves ~ ~ ~",
+            "playsound block.leaf_litter.break @a[r=16] ~ ~ ~ 1 1"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:despawn_group"
+          ]
+        }
+      },
+      "5fs_br:normal_scale": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:shrinkify",
+            "5fs_br:gigantify"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:normal_scale"
+          ]
+        }
+      },
+      "5fs_br:gigantify": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:shrinkify",
+            "5fs_br:normal_scale"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:gigantify"
+          ]
+        }
+      },
+      "5fs_br:shrinkify": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:gigantify",
+            "5fs_br:normal_scale"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "5fs_br:shrinkify"
+          ]
+        }
+      },
+      "5fs_br:no_fall_damage_jelly": {
+        "add": {
+          "component_groups": [
+            "5fs_br:no_fall_damage_jelly"
+          ]
+        }
+      },
+      "5fs_br:fall_damage_jelly": {
+        "remove": {
+          "component_groups": [
+            "5fs_br:no_fall_damage_jelly"
+          ]
+        }
+      }
+    }
+  }
+}

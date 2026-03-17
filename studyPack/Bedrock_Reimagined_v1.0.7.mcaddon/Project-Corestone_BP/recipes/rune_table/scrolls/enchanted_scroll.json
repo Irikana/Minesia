@@ -1,0 +1,33 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "5fs_br:enchanted_scroll"
+		},
+		"tags": [
+			"runetable"
+		],
+		"key": {
+            "F": {
+				"item": "5fs_br:compact_lapis"
+			},
+			"B": {
+				"item": "minecraft:enchanted_book"
+			},
+			"U": {
+				"item": "minecraft:paper"
+			}
+		},
+		"pattern": [
+			" U ",
+			"FBF",
+			" U "
+		],
+		"result": {
+			"item": "5fs_br:enchanted_scroll"
+		},
+		"unlock": {
+			"context": "AlwaysUnlocked"
+		}
+	}
+}

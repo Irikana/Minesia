@@ -1,0 +1,15 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:snap_to_surface_feature": {
+    "description": {
+      "identifier": "5fs_br:warm/pointed_red_sandstone/pointed_sandstone_snap_to_floor_feature"
+    },
+    "feature_to_snap": "5fs_br:warm/pointed_red_sandstone/weighted_pointed_sandstone_floor",
+    "vertical_search_range": 12,
+    "surface": "floor",
+    "allow_air_placement": true,
+    "allowed_surface_blocks": [
+      "5fs_br:pointed_red_sandstone_block"
+    ]
+  }
+}

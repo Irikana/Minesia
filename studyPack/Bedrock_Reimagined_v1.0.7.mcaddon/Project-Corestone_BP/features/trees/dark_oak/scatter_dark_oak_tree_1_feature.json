@@ -1,0 +1,15 @@
+{
+    "format_version": "1.21.80",
+    "minecraft:scatter_feature": {
+        "description": {
+            "identifier": "5fs_br:trees/dark_oak/scatter_dark_oak_tree_1_feature"
+        },
+        "places_feature": "5fs_br:trees/dark_oak/dark_oak_tree_1_feature",
+        "distribution": {
+            "iterations": 1,
+            "x": -10,
+            "y": 0,
+            "z": -9
+        }
+    }
+}

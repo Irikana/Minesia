@@ -1,0 +1,33 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "5fs_br:mythic_scroll"
+		},
+		"tags": [
+			"runetable"
+		],
+		"key": {
+			"U": {
+				"item": "minecraft:paper"
+			},
+			"M": {
+				"item": "5fs_br:compact_dragonite_ingot"
+			},
+			"F": {
+				"item": "5fs_br:cobalt_ingot"
+			}
+		},
+		"pattern": [
+			" U ",
+			"FMF",
+			" U "
+		],
+		"result": {
+			"item": "5fs_br:mythic_scroll"
+		},
+		"unlock": {
+			"context": "AlwaysUnlocked"
+		}
+	}
+}

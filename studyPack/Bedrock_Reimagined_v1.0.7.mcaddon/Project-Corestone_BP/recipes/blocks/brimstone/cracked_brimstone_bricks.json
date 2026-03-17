@@ -1,0 +1,18 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "5fs_br:cracked_brimstone_bricks"
+    },
+    "unlock": [
+      {
+        "item": "5fs_br:brimstone"
+      }
+    ],
+    "tags": [
+      "furnace"
+    ],
+    "input": "5fs_br:brimstone_bricks",
+    "output": "5fs_br:cracked_brimstone_bricks"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "5fs_br:adelie_penguin",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/mobs/penguins/adelie_penguin"
+      },
+      "geometry": {
+        "default": "geometry.adelie_penguin"
+      },
+      "animations": {
+        "idle": "animation.adelie_penguin.idle",
+        "walking": "animation.adelie_penguin.walking",
+        "swimming": "animation.adelie_penguin.swimming",
+        "slide": "animation.adelie_penguin.slide",
+        "fall": "animation.adelie_penguin.fall",
+        "dance": "animation.adelie_penguin.dance",
+        "death": "animation.adelie_penguin.death"
+      },
+      "animation_controllers": [
+        { "move": "controller.animation.adelie_penguin" }
+      ],
+      "enable_attachables": true,
+      "render_controllers": [
+        "controller.render.default"
+      ],
+      "sound_effects": {
+        "idle": "mob.penguin.idle",
+        "swimming": "mob.penguin.swim",
+        "slide": "mob.penguin.slide",
+        "fall": "mob.penguin.fall",
+        "dance": "mob.penguin.dance"
+      },
+      "spawn_egg": {
+        "texture": "5fs_br:adelie_penguin"
+      }
+    }
+  }
+}

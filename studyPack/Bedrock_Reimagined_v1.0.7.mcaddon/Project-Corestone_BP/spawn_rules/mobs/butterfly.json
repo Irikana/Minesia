@@ -1,0 +1,37 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:spawn_rules": {
+    "description": {
+      "identifier": "5fs_br:butterfly",
+      "population_control": "animal"
+    },
+    "conditions": [
+      {
+        "minecraft:spawns_on_surface": {},
+        "minecraft:spawns_on_block_filter": ["minecraft:grass_block", "5fs_br:autumn_grass"],
+        "minecraft:brightness_filter": {
+          "min": 7,
+          "max": 15,
+          "adjust_for_weather": false
+        },
+        "minecraft:weight": { "default": 20 },
+        "minecraft:herd": { "min_size": 4, "max_size": 8 },
+        "minecraft:biome_filter": {
+          "any_of": [
+            { "test": "has_biome_tag", "operator": "==", "value": "plains" },
+            { "test": "has_biome_tag", "operator": "==", "value": "taiga" },
+            { "test": "has_biome_tag", "operator": "==", "value": "savanna" },
+            { "test": "has_biome_tag", "operator": "==", "value": "forest" },
+            { "test": "has_biome_tag", "operator": "==", "value": "birch" },
+            { "test": "has_biome_tag", "operator": "==", "value": "roofed_forest" },
+            { "test": "has_biome_tag", "operator": "==", "value": "flower_forest" },
+            { "test": "has_biome_tag", "operator": "==", "value": "meadow" },
+            { "test": "has_biome_tag", "operator": "==", "value": "maple_forest" },
+            { "test": "has_biome_tag", "operator": "==", "value": "sunflower_plains" },
+            { "test": "has_biome_tag", "operator": "==", "value": "redwood_forest" }
+          ]
+        }
+      }
+    ]
+  }
+}

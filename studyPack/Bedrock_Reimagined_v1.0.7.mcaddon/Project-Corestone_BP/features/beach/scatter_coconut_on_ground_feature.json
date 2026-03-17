@@ -1,0 +1,22 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:scatter_feature": {
+    "description": {
+      "identifier": "5fs_br:beach/scatter_coconut_on_ground_feature"
+    },
+    "iterations": 2,
+    "x": {
+      "distribution": "gaussian",
+      "extent": [ -4, 4 ]
+    },
+    "y": {
+      "distribution": "gaussian",
+      "extent": [ -4, 4 ]
+    },
+    "z": {
+      "distribution": "gaussian",
+      "extent": [ -4, 4 ]
+    },
+    "places_feature": "5fs_br:beach/coconut_on_ground_feature"
+  }
+}

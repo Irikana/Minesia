@@ -1,0 +1,205 @@
+{
+  "pools": [
+    {
+      "rolls": { "min": 0, "max": 1 },
+      "entries": [
+        { "type": "item", "name": "5fs_br:ring_band", "weight": 5 },
+        { "type": "item", "name": "5fs_br:jeweling_station", "weight": 5 },
+        { "type": "item", "name": "5fs_br:rune_table", "weight": 3 },
+        {
+          "type": "item",
+          "name": "5fs_br:steel_ingot",
+          "weight": 10,
+          "functions": [ { "function": "set_count", "count": { "min": 1, "max": 2 } } ]
+        },
+        { "type": "item", "name": "5fs_br:common_bag_upgrade", "weight": 2 },
+        { "type": "empty", "weight": 75 }
+      ]
+    },
+    {
+      "rolls": { "min": 3, "max": 6 },
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:clay_ball",
+          "weight": 6,
+          "functions": [ { "function": "set_count", "count": { "min": 4, "max": 12 } } ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:waterlily",
+          "weight": 3,
+          "functions": [ { "function": "set_count", "count": { "min": 1, "max": 3 } } ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:kelp",
+          "weight": 4,
+          "functions": [ { "function": "set_count", "count": { "min": 4, "max": 12 } } ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:seagrass",
+          "weight": 3,
+          "functions": [ { "function": "set_count", "count": { "min": 2, "max": 8 } } ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:cod",
+          "weight": 3,
+          "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:salmon",
+          "weight": 2,
+          "functions": [ { "function": "set_count", "count": { "min": 1, "max": 3 } } ]
+        }
+      ]
+    },
+    {
+      "rolls": { "min": 1, "max": 3 },
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:prismarine_shard",
+          "weight": 5,
+          "functions": [ { "function": "set_count", "count": { "min": 2, "max": 6 } } ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:prismarine_crystals",
+          "weight": 3,
+          "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:prismarine",
+          "weight": 2,
+          "functions": [ { "function": "set_count", "count": { "min": 1, "max": 3 } } ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:mossy_cobblestone",
+          "weight": 3,
+          "functions": [ { "function": "set_count", "count": { "min": 1, "max": 5 } } ]
+        },
+        { "type": "item", "name": "minecraft:water_bucket", "weight": 1 }
+      ]
+    },
+    {
+      "rolls": { "min": 0, "max": 1 },
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:fishing_rod",
+          "weight": 2,
+          "functions": [ { "function": "set_damage", "damage": { "min": 0.30, "max": 0.85 } } ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:shears",
+          "weight": 1,
+          "functions": [ { "function": "set_damage", "damage": { "min": 0.10, "max": 0.60 } } ]
+        }
+      ]
+    },
+    {
+      "rolls": { "min": 1, "max": 2 },
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:emerald",
+          "weight": 1,
+          "functions": [ { "function": "set_count", "count": { "min": 1, "max": 2 } } ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:iron_ingot",
+          "weight": 2,
+          "functions": [ { "function": "set_count", "count": { "min": 1, "max": 3 } } ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:coal",
+          "weight": 3,
+          "functions": [ { "function": "set_count", "count": { "min": 3, "max": 9 } } ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "empty", "weight": 125 },
+        { "type": "item", "name": "5fs_br:charm_of_axolotl", "weight": 1 },
+        { "type": "item", "name": "5fs_br:charm_of_blaze", "weight": 1 },
+        { "type": "item", "name": "5fs_br:charm_of_bogged", "weight": 1 },
+        { "type": "item", "name": "5fs_br:charm_of_chicken", "weight": 1 },
+        { "type": "item", "name": "5fs_br:charm_of_cow", "weight": 1 },
+        { "type": "item", "name": "5fs_br:charm_of_creeper", "weight": 1 },
+        { "type": "item", "name": "5fs_br:charm_of_enderman", "weight": 1 },
+        { "type": "item", "name": "5fs_br:charm_of_endermite", "weight": 1 },
+        { "type": "item", "name": "5fs_br:charm_of_ghast", "weight": 1 },
+        { "type": "item", "name": "5fs_br:charm_of_guardian", "weight": 1 },
+        { "type": "item", "name": "5fs_br:charm_of_hoglin", "weight": 1 },
+        { "type": "item", "name": "5fs_br:charm_of_husk", "weight": 1 },
+        { "type": "item", "name": "5fs_br:charm_of_pig", "weight": 1 },
+        { "type": "item", "name": "5fs_br:charm_of_piglin", "weight": 1 },
+        { "type": "item", "name": "5fs_br:charm_of_pillager", "weight": 1 },
+        { "type": "item", "name": "5fs_br:charm_of_sheep", "weight": 1 },
+        { "type": "item", "name": "5fs_br:charm_of_shulker", "weight": 1 },
+        { "type": "item", "name": "5fs_br:charm_of_silverfish", "weight": 1 },
+        { "type": "item", "name": "5fs_br:charm_of_skeleton", "weight": 1 },
+        { "type": "item", "name": "5fs_br:charm_of_wither_skeleton", "weight": 1 },
+        { "type": "item", "name": "5fs_br:charm_of_slime", "weight": 1 },
+        { "type": "item", "name": "5fs_br:charm_of_slime_magma", "weight": 1 },
+        { "type": "item", "name": "5fs_br:charm_of_spider", "weight": 1 },
+        { "type": "item", "name": "5fs_br:charm_of_stray", "weight": 1 },
+        { "type": "item", "name": "5fs_br:charm_of_witch", "weight": 1 },
+        { "type": "item", "name": "5fs_br:charm_of_wolf", "weight": 1 },
+        { "type": "item", "name": "5fs_br:charm_of_zombie", "weight": 1 }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "empty", "weight": 85 },
+        { "type": "item", "name": "5fs_br:mossy_cobblestone_flower_pot", "weight": 5 },
+        { "type": "item", "name": "5fs_br:mossy_stone_brick_flower_pot", "weight": 5 },
+        { "type": "item", "name": "5fs_br:sandstone_flower_pot", "weight": 5 }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "empty", "weight": 70 },
+        { "type": "item", "name": "5fs_br:stone_wand", "weight": 8, "functions": [ { "function": "set_damage", "damage": { "min": 0.20, "max": 0.70 } } ] },
+        { "type": "item", "name": "5fs_br:copper_wand", "weight": 5, "functions": [ { "function": "set_damage", "damage": { "min": 0.20, "max": 0.70 } } ] },
+        { "type": "item", "name": "5fs_br:iron_wand", "weight": 3, "functions": [ { "function": "set_damage", "damage": { "min": 0.20, "max": 0.70 } } ] },
+        { "type": "item", "name": "5fs_br:torch_wand", "weight": 1, "functions": [ { "function": "set_damage", "damage": { "min": 0.20, "max": 0.70 } } ] },
+        { "type": "item", "name": "5fs_br:basic_scroll", "weight": 5 },
+        { "type": "item", "name": "5fs_br:enchanted_scroll", "weight": 2 }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "empty", "weight": 94 },
+        { "type": "item", "name": "5fs_br:rune_of_blades", "weight": 1 },
+        { "type": "item", "name": "5fs_br:rune_of_beasts", "weight": 1 },
+        { "type": "item", "name": "5fs_br:rune_of_decay", "weight": 1 },
+        { "type": "item", "name": "5fs_br:rune_of_earth", "weight": 1 },
+        { "type": "item", "name": "5fs_br:rune_of_flame", "weight": 1 },
+        { "type": "item", "name": "5fs_br:rune_of_frost", "weight": 1 }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "item", "name": "5fs_br:sky_star_fragment", "weight": 4 },
+        { "type": "item", "name": "5fs_br:mana_bottle", "weight": 6, "functions": [ { "function": "set_count", "count": { "min": 1, "max": 3 } } ] },
+        { "type": "empty", "weight": 90 }
+      ]
+    }
+  ]
+}

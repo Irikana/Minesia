@@ -1,0 +1,17 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:ore_feature": {
+    "description": {
+      "identifier": "5fs_br:celestial_gardens/dragonite_ore_feature"
+    },
+    "count": 9,
+    "replace_rules": [
+      {
+        "places_block": "5fs_br:dragonite_ore",
+        "may_replace": [
+          "minecraft:end_stone"
+        ]
+      }
+    ]
+  }
+}

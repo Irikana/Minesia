@@ -14,10 +14,10 @@
 					"adjust_for_weather": true
 				},
 				"minecraft:weight": {
-					"default": 5
+					"default": 8
 				},
 				"minecraft:density_limit": {
-					"surface": 1
+					"surface": 2
 				},
 				"minecraft:biome_filter": {
 					"any_of": [
@@ -44,6 +44,18 @@
 						{
 							"test": "has_biome_tag",
 							"value": "snow"
+						},
+						{
+							"test": "has_biome_tag",
+							"value": "forest"
+						},
+						{
+							"test": "has_biome_tag",
+							"value": "jungle"
+						},
+						{
+							"test": "has_biome_tag",
+							"value": "swamp"
 						}
 					]
 				}

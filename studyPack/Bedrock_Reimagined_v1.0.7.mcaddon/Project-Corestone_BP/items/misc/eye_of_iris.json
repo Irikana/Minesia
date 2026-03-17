@@ -1,0 +1,14 @@
+{
+    "format_version": "1.26.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "5fs_br:eye_of_iris",
+            "menu_category": {
+                "category": "items"
+            }
+        },
+        "components": {
+            "minecraft:icon": "5fs_br:eye_of_iris"
+        }
+    }
+}

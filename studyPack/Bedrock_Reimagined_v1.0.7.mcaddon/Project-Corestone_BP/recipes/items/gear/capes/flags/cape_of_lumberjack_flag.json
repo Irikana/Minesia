@@ -1,0 +1,30 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "5fs_br:cape_of_lumberjack_flag"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "ZGZ"
+    ],
+    "key": {
+      "Z": {
+        "item": "5fs_br:shark_hide"
+      },
+      "G": {
+        "item": "5fs_br:lumberjack_flag"
+      }
+    },
+    "result": {
+      "item": "5fs_br:cape_of_lumberjack"
+    },
+    "unlock": [
+      {
+        "item": "5fs_br:lumberjack_flag"
+      }
+    ]
+  }
+}

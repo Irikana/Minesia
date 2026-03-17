@@ -1,0 +1,18 @@
+{
+    "format_version": "1.21.60",
+    "minecraft:weighted_random_feature": {
+        "description": {
+            "identifier": "5fs_br:maple_forest/weighted_tall_autumn_grass"
+        },
+        "features": [
+            [
+                "5fs_br:maple_forest/tall_autumn_grass",
+                1
+            ],
+            [
+                "5fs_br:maple_forest/leafy_tall_autumn_grass",
+                1
+            ]
+        ]
+    }
+}

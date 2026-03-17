@@ -1,0 +1,32 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "5fs_br:crystalline_bulb"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"#": {
+				"item": "5fs_br:raw_crystalline_shard"
+			},
+     "G": {
+				"item": "5fs_br:glimmerite_block"
+			}
+		},
+		"pattern": [
+			" # ",
+			"#G#",
+			" # "
+		],
+		"result": {
+			"item": "5fs_br:crystalline_bulb"
+		},
+		"unlock": [
+			{
+				"item": "5fs_br:glimmerite_block"
+			}
+		]
+	}
+}

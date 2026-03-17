@@ -1,0 +1,35 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "5fs_br:mossy_stone_brick_trap_decorated_pot"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:brick"
+			},
+            "G": {
+				"item": "minecraft:mossy_stone_bricks"
+			},
+            "T": {
+				"item": "minecraft:tnt"
+			}
+		},
+		"pattern": [
+			"G#G",
+			"#T#",
+			"G#G"
+		],
+		"result": {
+			"item": "5fs_br:mossy_stone_brick_trap_decorated_pot"
+		},
+		"unlock": [
+			{
+				"item": "minecraft:brick"
+			}
+		]
+	}
+}

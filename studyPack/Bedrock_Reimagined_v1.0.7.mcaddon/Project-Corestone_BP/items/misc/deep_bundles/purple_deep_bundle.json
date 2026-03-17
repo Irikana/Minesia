@@ -1,0 +1,27 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:item": {
+    "description": {
+      "identifier": "5fs_br:purple_deep_bundle",
+      "menu_category": {
+        "category": "equipment"
+      }
+    },
+    "components": {
+      "minecraft:icon": {
+        "textures": {
+          "default": "5fs_br:big_purple_bundle",
+          "bundle_open_back": "bundle_purple_open_back",
+          "bundle_open_front": "5fs_br:big_purple_bundle_open_front"
+        }
+      },
+      "minecraft:tags": {
+          "tags": [
+            "5fs_br:deep_bundle"
+        ]
+      },
+      "minecraft:max_stack_size": 1
+    }
+  }
+}
+

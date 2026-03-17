@@ -1,0 +1,29 @@
+{
+    "format_version": "1.26.0",
+    "minecraft:item": {
+        "description": {
+            "identifier": "5fs_br:dried_dead_kelp",
+            "menu_category": {
+                "category": "equipment"
+            }
+        },
+        "components": {
+            "minecraft:icon": "5fs_br:dried_dead_kelp",
+            "minecraft:food": {
+                "can_always_eat": true,
+                "nutrition": 1,
+                "saturation_modifier": 0.2
+            },
+            "minecraft:use_animation": {
+                "value": "eat"
+            },
+            "minecraft:use_modifiers": {
+                "movement_modifier": 0.35,
+                "use_duration": 1.6
+            },
+            "minecraft:compostable": {
+                "composting_chance": 30
+            }
+        }
+    }
+}

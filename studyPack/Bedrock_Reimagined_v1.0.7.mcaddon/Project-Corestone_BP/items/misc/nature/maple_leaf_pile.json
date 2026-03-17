@@ -1,0 +1,20 @@
+{
+	"format_version": "1.26.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "5fs_br:maple_leaf_pile",
+			"menu_category": {
+                "category": "nature"
+            }
+		},
+		"components": {
+			"minecraft:icon": "5fs_br:maple_leaf_pile",
+			"minecraft:entity_placer": {
+				"entity": "5fs_br:maple_leaf_pile"
+			},
+			"minecraft:fuel": {
+				"duration": 30
+			}
+		}
+ 	}
+}

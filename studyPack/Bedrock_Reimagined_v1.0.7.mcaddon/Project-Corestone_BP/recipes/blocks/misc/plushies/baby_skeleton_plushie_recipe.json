@@ -1,0 +1,33 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "5fs_br:baby_skeleton_plushie_recipe"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "WWW",
+      "WHW",
+      "WWW"
+    ],
+    "key": {
+      "W": {
+        "item": "minecraft:white_wool"
+      },
+      "H": {
+        "item": "minecraft:skeleton_skull"
+      }
+    },
+    "result": {
+      "item": "5fs_br:baby_skeleton_plushie",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:skeleton_skull"
+      }
+    ]
+  }
+}

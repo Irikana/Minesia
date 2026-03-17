@@ -1,0 +1,11 @@
+{
+    "format_version": "1.21.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "5fs_br:bottled_sand"
+        },
+        "components": {
+            "minecraft:icon": "5fs_br:bottled_sand"
+        }
+    }
+}

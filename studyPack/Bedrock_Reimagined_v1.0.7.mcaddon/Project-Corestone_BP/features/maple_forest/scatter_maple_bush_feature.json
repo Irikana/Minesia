@@ -1,0 +1,23 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:scatter_feature": {
+    "description": {
+      "identifier": "5fs_br:maple_forest/scatter_maple_bush_feature"
+    },
+    "iterations": 24,
+    "x": {
+      "distribution": "triangle",
+      "extent": [ -5, 5 ]
+    },
+    "y": {
+      "distribution": "triangle",
+      "extent": [ -3, 3 ]
+    },
+    "z": {
+      "distribution": "triangle",
+      "extent": [ -5, 5 ]
+    },
+    "coordinate_eval_order": "xyz",
+    "places_feature": "5fs_br:maple_forest/maple_bush"
+  }
+}

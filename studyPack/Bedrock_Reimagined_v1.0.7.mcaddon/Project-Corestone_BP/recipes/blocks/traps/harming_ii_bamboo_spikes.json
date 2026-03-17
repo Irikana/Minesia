@@ -1,0 +1,36 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "5fs_br:harming_ii_bamboo_spikes"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " P ",
+      "PFP",
+      "FBF"
+    ],
+    "key": {
+      "P": {
+        "item": "minecraft:arrow:23"
+      },   
+      "F": {
+        "item": "minecraft:bamboo"
+      },
+      "B": {
+        "item": "minecraft:bamboo_block"
+      }
+    },
+    "result": {
+      "item": "5fs_br:harming_ii_bamboo_spikes",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:bamboo"
+      }
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "5fs_br:black_bear",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/mobs/bears/black_bear"
+      },
+      "geometry": {
+        "default": "geometry.black_bear"
+      },
+      "animations": {
+        "idle": "animation.black_bear.idle",
+        "death": "animation.black_bear.death",
+        "swimming": "animation.black_bear.swimming",
+        "walk": "animation.black_bear.walking",
+        "stand_on_legs": "animation.black_bear.stand_on_legs",
+        "bite": "animation.black_bear.bite",
+        "attacking": "animation.black_bear.attacking",
+        "sleep": "animation.black_bear.sleep",
+        "roar": "animation.black_bear.roar",
+        "sit": "animation.black_bear.sit",
+        "eat": "animation.black_bear.eat"
+      },
+      "enable_attachables": true,
+      "animation_controllers": [
+        { "move": "controller.animation.bear" }
+      ],
+      "render_controllers": [ "controller.render.default" ],
+      "spawn_egg": {
+        "texture": "5fs_br:black_bear"
+      }
+    }
+  }
+}

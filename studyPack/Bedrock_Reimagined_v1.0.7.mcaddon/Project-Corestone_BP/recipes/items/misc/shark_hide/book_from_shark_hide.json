@@ -1,0 +1,24 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "5fs_br:book_from_shark_hide"
+    },
+    "tags": [ "crafting_table" ],
+    "ingredients": [
+      { "item": "minecraft:paper" },
+      { "item": "minecraft:paper" },
+      { "item": "minecraft:paper" },
+      { "item": "5fs_br:shark_hide" }
+    ],
+    "result": {
+      "item": "minecraft:book",
+      "count": 1
+    },
+    "unlock": [
+			{
+				"item": "minecraft:minecart"
+			}
+		]
+  }
+}
