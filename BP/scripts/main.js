@@ -6,13 +6,6 @@ import * as setEffectMain from "./set_effect/setEffectMain.js";
 import * as minesiaLevelMain from "./minesia_level/minesiaLevelMain.js";
 import { MinesiaLevelEventSystem } from "./minesia_level/minesiaLevelEvent.js";
 import { initializeRandomDamageSystem } from "./random_damage/randomDamageMain.js";
-import { initializeLoreHandler } from "./random_damage/loreHandler.js";
-import { registerRandomDamageLoreHandler } from "./random_damage/randomDamageLoreHandler.js";
-import { registerVanillaWeaponLoreHandler } from "./random_damage/vanillaWeaponLoreHandler.js";
-import { initializeLoreSystem } from "./lore_system/index.js";
-import { registerSetEffectLoreHandler } from "./lore_system/setEffectLoreHandler.js";
-import { registerCustomEventLoreHandler } from "./lore_system/customEventLoreHandler.js";
-import { registerExtraLoreHandler } from "./lore_system/extraLoreHandler.js";
 import { initializeDamageDisplaySystem } from "./damage_display/damageDisplayMain.js";
 import { initializeStaminaSystem, updateStaminaSystem } from "./stamina/staminaMain.js";
 import { processStaminaSetEffects } from "./stamina/staminaSetEffectAdapter.js";
@@ -121,27 +114,6 @@ system.runTimeout(() => {
 
         initializeWeaponEffects();
         debug.logWithTag("Minesia", "✓ 武器效果注册表就绪");
-
-        initializeLoreHandler();
-        debug.logWithTag("Minesia", "✓ 随机伤害Lore处理器就绪");
-
-        registerRandomDamageLoreHandler();
-        debug.logWithTag("Minesia", "✓ 随机伤害Lore处理器已注册");
-
-        registerVanillaWeaponLoreHandler();
-        debug.logWithTag("Minesia", "✓ 原版武器Lore处理器已注册");
-
-        registerSetEffectLoreHandler();
-        debug.logWithTag("Minesia", "✓ 套装效果Lore处理器已注册");
-
-        registerCustomEventLoreHandler();
-        debug.logWithTag("Minesia", "✓ 自定义事件Lore处理器已注册");
-
-        registerExtraLoreHandler();
-        debug.logWithTag("Minesia", "✓ 趣味性Lore处理器已注册");
-
-        initializeLoreSystem({ checkInterval: 100 });
-        debug.logWithTag("Minesia", "✓ 通用Lore系统就绪");
 
         initializeDamageDisplaySystem();
         debug.logWithTag("Minesia", "✓ 伤害显示系统就绪");
