@@ -14,3 +14,15 @@ export { applySelfishEffect, isSelfishItem, SELFISH_EFFECT } from "./selfishEffe
 export { isStatueTotemItem, hasStatueTotemEquipped, STATUE_TOTEM_EFFECT } from "./statueTotemEffect.js";
 export { applyBlackDaggerEffect, isBlackDaggerItem, BLACK_DAGGER_EFFECT } from "./blackDaggerEffect.js";
 export { applyWhiteGoldenSwordEffect, isWhiteGoldenSwordItem, WHITE_GOLDEN_SWORD_EFFECT } from "./whiteGoldenSwordEffect.js";
+export { 
+    registerWeaponEffect, 
+    unregisterWeaponEffect, 
+    getWeaponEffect, 
+    getEffectsByItemId, 
+    getEffectsByTag, 
+    getAllWeaponEffects, 
+    processWeaponAttack, 
+    hasWeaponEffect,
+    clearAllEffects 
+} from "./weaponEffectRegistry.js";
+export { initializeWeaponEffects } from "./weaponEffectConfig.js";

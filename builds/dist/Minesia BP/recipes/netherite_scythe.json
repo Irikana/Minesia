@@ -8,9 +8,9 @@
 			"crafting_table"
 		],
 		"pattern": [
-			" XX",
-			"XI ",
-			" I"
+			"XX ",
+			" IX",
+			"  I"
 		],
 		"key": {
 			"X": {

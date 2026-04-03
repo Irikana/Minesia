@@ -45,6 +45,10 @@ item.minesia:selfish=自私之剑~LINEBREAK~~LINEBREAK~§9+5~10 攻击伤害~LIN
 item.minesia:statue_totem=雕像图腾~LINEBREAK~~LINEBREAK~§9副手装备时:~LINEBREAK~§7增加25%最大生命值和80%体力值~LINEBREAK~§7每半秒恢复1点体力值~LINEBREAK~§7生命值低于4点时消耗物品获得增益~LINEBREAK~§e+25% 暴击率~LINEBREAK~§7看起来非常靠谱，似乎可以在战斗中庇护我。
 item.minesia:black_dagger=黑色匕首~LINEBREAK~~LINEBREAK~§9+2~7 攻击伤害~LINEBREAK~§c+2 体力消耗~LINEBREAK~§e+50% 暴击率~LINEBREAK~§7攻击时25%概率使目标凋谢2秒~LINEBREAK~§7这把匕首看起来很危险。
 item.minesia:white_golden_sword=白金剑~LINEBREAK~~LINEBREAK~§9+7~9 攻击伤害~LINEBREAK~§c+2 体力消耗~LINEBREAK~§7攻击时额外随机消耗0到2点耐久度~LINEBREAK~§7就是有点容易坏，不知道出自哪位高人之手。
+item.minesia:desert_pyramid_shard=沙漠神殿碎片~LINEBREAK~~LINEBREAK~§7来自沙漠神殿的神秘水晶。
+item.minesia:desert_snow=沙漠暴雪~LINEBREAK~~LINEBREAK~§9+4~7 攻击伤害~LINEBREAK~§c+2 体力消耗~LINEBREAK~§7攻击时50%概率使目标虚弱I持续3秒、减速III持续1秒~LINEBREAK~§7此剑乃铸造于沙漠中的暴雪。
+item.minesia:desert_pyramid_pearl=沙漠神殿珍珠~LINEBREAK~~LINEBREAK~§9副手装备时:~LINEBREAK~§7+100% 最大体力值~LINEBREAK~§7+50% 最大生命值~LINEBREAK~§7每秒恢复8点体力值~LINEBREAK~§7来自沙漠神殿，可给予人在无垠的沙漠中奔跑之能力。
+item.minesia:desert_pyramid_eye=沙漠神殿之眼~LINEBREAK~~LINEBREAK~§9副手装备时:~LINEBREAK~§7+50% 最大体力值~LINEBREAK~§7每秒恢复4点体力值~LINEBREAK~§e+30% 暴击率~LINEBREAK~§7来自沙漠神殿，可给予人在战斗中无需喘息之能力。
 
 minesia.item.flamie.lore=攻击时使目标着火5秒
 minesia.item.flamie.offhand.lore=副手装备：攻击使目标着火2秒
@@ -151,3 +155,19 @@ item.spawn_egg.entity.minesia_journey:victor.name=生成 装备商 维克多
 
 entity.minesia:ryaman.name=货币商 莱曼
 item.spawn_egg.entity.minesia:ryaman.name=生成 货币商 莱曼
+
+item.minesia:attribute_panel=属性面板~LINEBREAK~~LINEBREAK~§7使用以查看详细属性信息。
+
+minesia.attribute_panel.title=属性面板
+minesia.attribute_panel.combat=战斗属性
+minesia.attribute_panel.survival=生存属性
+minesia.attribute_panel.level=Minesia 等级
+minesia.attribute_panel.crit_rate=暴击率
+minesia.attribute_panel.crit_damage=暴击伤害
+minesia.attribute_panel.stamina=体力值
+minesia.attribute_panel.max_stamina=最大体力
+minesia.attribute_panel.health=生命值
+minesia.attribute_panel.max_health=最大生命
+minesia.attribute_panel.level_num=等级
+minesia.attribute_panel.total_exp=总经验
+minesia.attribute_panel.close=关闭

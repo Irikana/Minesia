@@ -6,6 +6,7 @@
 
 import { system } from "@minecraft/server";
 import { updateHealthBoost } from "./healthBoostManager.js";
+import { debug } from "../debug/debugManager.js";
 
 export const CONTROLLED_EFFECTS = [
   "strength",
@@ -56,7 +57,7 @@ export function clearStates(player) {
       playerAttributes.set(playerId, new Map());
     }
   } catch (error) {
-    console.error("清理状态时出错:", error);
+    debug.logError("Actions", `清理状态时出错: ${error}`);
   }
 }
 
@@ -85,7 +86,7 @@ export function applyActions(player, actions) {
           try {
             player.runCommand(action.command);
           } catch (cmdError) {
-            console.warn("执行命令失败:", action.command, cmdError);
+            debug.logWarning("Actions", `执行命令失败: ${action.command} ${cmdError}`);
           }
           break;
 
@@ -105,7 +106,7 @@ export function applyActions(player, actions) {
 
     updatePlayerAttributes(player, currentAttributes);
   } catch (error) {
-    console.error("应用动作时出错:", error);
+    debug.logError("Actions", `应用动作时出错: ${error}`);
   }
 }
 
@@ -126,7 +127,7 @@ function applyEffect(player, action, currentEffects) {
       currentEffects.set(effectKey, currentTime);
     }
   } catch (error) {
-    console.error("应用效果时出错:", error);
+    debug.logError("Actions", `应用效果时出错: ${error}`);
   }
 }
 
@@ -135,13 +136,13 @@ function applyState(player, action) {
     if (action.value) {
       if (!player.hasTag(action.key)) {
         player.addTag(action.key);
-        console.log(`[Actions] 添加标签: ${action.key} 给 ${player.name}`);
+        debug.logWithTag("Actions", `添加标签: ${action.key} 给 ${player.name}`);
       }
     } else {
       player.removeTag(action.key);
     }
   } catch (error) {
-    console.error("应用状态时出错:", error);
+    debug.logError("Actions", `应用状态时出错: ${error}`);
   }
 }
 
@@ -154,7 +155,7 @@ function applyAttribute(player, action, currentAttributes) {
     const currentValue = currentAttributes.get(attributeKey) || 0;
     currentAttributes.set(attributeKey, currentValue + value);
   } catch (error) {
-    console.error("应用属性时出错:", error);
+    debug.logError("Actions", `应用属性时出错: ${error}`);
   }
 }
 
@@ -167,7 +168,7 @@ function applyAttributePercent(player, action, currentAttributes) {
     const currentPercent = currentAttributes.get(attributeKey) || 0;
     currentAttributes.set(attributeKey, currentPercent + percent);
   } catch (error) {
-    console.error("应用属性百分比时出错:", error);
+    debug.logError("Actions", `应用属性百分比时出错: ${error}`);
   }
 }
 
@@ -179,7 +180,7 @@ function updatePlayerAttributes(player, currentAttributes) {
 
     updateHealthBoost(player, equipmentHealth, levelHealth, healthPercent);
   } catch (error) {
-    console.error("更新玩家属性时出错:", error);
+    debug.logError("Actions", `更新玩家属性时出错: ${error}`);
   }
 }
 

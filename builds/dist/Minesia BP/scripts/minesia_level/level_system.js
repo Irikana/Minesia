@@ -1,6 +1,7 @@
 // Minesia等级系统扩展功能
 import { world, system } from "@minecraft/server";
 import { ActionBarManager, DISPLAY_PRIORITIES } from "../action_bar/index.js";
+import { debug } from "../debug/debugManager.js";
 
 const LEVEL_DISPLAY_TEXTS = {
     zh_CN: {
@@ -81,7 +82,7 @@ export class MinesiaLevelSystem {
 
             return text;
         } catch (error) {
-            console.warn('[Minesia] 获取文本失败:', error?.message ?? error);
+            debug.logWarning("Minesia", `获取文本失败: ${error?.message ?? error}`);
             return key;
         }
     }

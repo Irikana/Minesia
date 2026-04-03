@@ -10,8 +10,8 @@
 		"description": "A mod meant to create a new world.",
 		"min_engine_version": [
 			1,
-			21,
-			130
+			26,
+			10
 		],
 		"uuid": "5ddb3965-4730-42d9-89ac-eb4062bb4f96",
 		"version": [

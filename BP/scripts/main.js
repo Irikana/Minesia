@@ -13,6 +13,8 @@ import { processItemEffects } from "./custom_events/index.js";
 import { initHealthBoostManager } from "./set_effect/healthBoostManager.js";
 import { initializeWeaponEffects } from "./custom_events/item_events/weaponEffectConfig.js";
 import { initializeCriticalHitSystem } from "./critical_hit/criticalHitMain.js";
+import { initializeDynamicLightSystem, updateDynamicLightSystem } from "./dynamic_light/index.js";
+import { initializeAttributePanelSystem } from "./attribute_panel/index.js";
 
 const LANGUAGE_OBJECTIVE = 'minesia_language';
 
@@ -130,6 +132,12 @@ system.runTimeout(() => {
         initializeCriticalHitSystem();
         debug.logWithTag("Minesia", "✓ 暴击系统就绪");
 
+        initializeDynamicLightSystem();
+        debug.logWithTag("Minesia", "✓ 动态光源系统就绪");
+
+        initializeAttributePanelSystem();
+        debug.logWithTag("Minesia", "✓ 属性面板系统就绪");
+
         systemReady = true;
         debug.logWithTag("Minesia", "🎉 核心系统初始化完成!");
 
@@ -154,6 +162,8 @@ system.runInterval(() => {
             processStaminaSetEffects(player);
             processItemEffects(player);
         }
+
+        updateDynamicLightSystem();
 
     } catch (error) {
         errorCount++;

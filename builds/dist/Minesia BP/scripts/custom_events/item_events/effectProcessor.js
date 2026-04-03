@@ -1,6 +1,7 @@
 import { system } from "@minecraft/server";
 import { ITEM_EFFECTS } from "./effectRegistry.js";
 import { StaminaSystem } from "../../stamina/staminaMain.js";
+import { debug } from "../../debug/debugManager.js";
 
 const playerActiveEffects = new Map();
 const playerLastTick = new Map();
@@ -21,10 +22,10 @@ export function processItemEffects(player) {
     for (const tag of currentEffects) {
         if (!previousEffects.has(tag)) {
             try {
-                console.log(`[ItemEffect] 激活效果: ${tag} for ${player.name}`);
+                debug.logWithTag("ItemEffect", `激活效果: ${tag} for ${player.name}`);
                 ITEM_EFFECTS[tag].onActivate?.(player, StaminaSystem);
             } catch (error) {
-                console.error(`[ItemEffect] 激活效果 ${tag} 失败:`, error?.message ?? error);
+                debug.logError("ItemEffect", `激活效果 ${tag} 失败: ${error?.message ?? error}`);
             }
         }
     }
@@ -41,7 +42,7 @@ export function processItemEffects(player) {
                 effect.onTick(player, StaminaSystem);
                 playerLastTick.set(key, currentTime);
             } catch (error) {
-                console.error(`[ItemEffect] 执行效果 ${tag} 失败:`, error?.message ?? error);
+                debug.logError("ItemEffect", `执行效果 ${tag} 失败: ${error?.message ?? error}`);
             }
         }
     }
@@ -49,10 +50,10 @@ export function processItemEffects(player) {
     for (const tag of previousEffects) {
         if (!currentEffects.has(tag)) {
             try {
-                console.log(`[ItemEffect] 停用效果: ${tag} for ${player.name}`);
+                debug.logWithTag("ItemEffect", `停用效果: ${tag} for ${player.name}`);
                 ITEM_EFFECTS[tag].onDeactivate?.(player, StaminaSystem);
             } catch (error) {
-                console.error(`[ItemEffect] 停用效果 ${tag} 失败:`, error?.message ?? error);
+                debug.logError("ItemEffect", `停用效果 ${tag} 失败: ${error?.message ?? error}`);
             }
         }
     }

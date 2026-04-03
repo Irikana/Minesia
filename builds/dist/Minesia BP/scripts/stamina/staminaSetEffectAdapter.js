@@ -6,6 +6,7 @@
 
 import { system } from "@minecraft/server";
 import { StaminaSystem } from "./staminaMain.js";
+import { debug } from "../debug/debugManager.js";
 
 const STAMINA_SET_EFFECTS = {
     "endurance_set": {
@@ -87,7 +88,7 @@ export function processStaminaSetEffects(player) {
             try {
                 STAMINA_SET_EFFECTS[tag].onEquip(player);
             } catch (error) {
-                console.error(`[StaminaSetEffect] 激活效果 ${tag} 失败:`, error?.message ?? error);
+                debug.logError("StaminaSetEffect", `激活效果 ${tag} 失败: ${error?.message ?? error}`);
             }
         }
     }
@@ -97,7 +98,7 @@ export function processStaminaSetEffects(player) {
             try {
                 STAMINA_SET_EFFECTS[tag].onUnequip(player);
             } catch (error) {
-                console.error(`[StaminaSetEffect] 移除效果 ${tag} 失败:`, error?.message ?? error);
+                debug.logError("StaminaSetEffect", `移除效果 ${tag} 失败: ${error?.message ?? error}`);
             }
         }
     }

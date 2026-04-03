@@ -204,6 +204,12 @@ export const RANDOM_DAMAGE_WEAPONS = [
         minDamage: 7,
         maxDamage: 9,
         enabled: true
+    },
+    {
+        id: "minesia:desert_snow",
+        minDamage: 4,
+        maxDamage: 7,
+        enabled: true
     }
 ];
 

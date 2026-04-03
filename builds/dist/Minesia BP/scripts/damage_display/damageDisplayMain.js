@@ -10,8 +10,10 @@ import { recentRandomDamage, isCurrentlyApplyingRandomDamage } from "../random_d
 import { ActionBarManager, DISPLAY_PRIORITIES } from "../action_bar/index.js";
 import { getAoeDamageRecord, isAoeEntity } from "../custom_events/item_events/aoeDamageRegistry.js";
 import { isLevelUpDisplayActive } from "../minesia_level/minesiaLevelEvent.js";
+import { debug } from "../debug/debugManager.js";
 
 const playerComboState = new Map();
+const playerAoeComboState = new Map();
 const playerDisplayState = new Map();
 const LANGUAGE_OBJECTIVE = "minesia_language";
 const DEFAULT_LOCALE = "zh_CN";
@@ -32,7 +34,7 @@ function getPlayerLocale(player) {
 
 export function initializeDamageDisplaySystem() {
     world.afterEvents.entityHurt.subscribe(handleEntityHurt);
-    console.log('[DamageDisplay] 系统初始化完成');
+    debug.logWithTag("DamageDisplay", "系统初始化完成");
 }
 
 function handleEntityHurt(event) {
@@ -74,21 +76,27 @@ function handleEntityHurt(event) {
 
         const randomDamageRecord = recentRandomDamage.get(attacker.id);
         let randomDamage = 0;
+        let criticalDamage = 0;
+        let isCritical = false;
 
-        if (randomDamageRecord) {
+        if (randomDamageRecord && 
+            randomDamageRecord.targetId === hurtEntity.id && 
+            randomDamageRecord.tick === system.currentTick) {
             randomDamage = randomDamageRecord.randomDamage;
+            criticalDamage = randomDamageRecord.criticalDamage || 0;
+            isCritical = randomDamageRecord.isCritical || false;
         }
 
-        const totalDamage = randomDamage > 0 ? randomDamage : damage;
+        const totalDamage = damage + randomDamage + criticalDamage;
 
-        showDamageDisplay(attacker, totalDamage, hurtEntity);
+        showDamageDisplay(attacker, totalDamage, hurtEntity, isCritical);
 
     } catch (error) {
-        console.error('[DamageDisplay] 处理伤害显示时出错:', error?.message ?? error);
+        debug.logError("DamageDisplay", `处理伤害显示时出错: ${error?.message ?? error}`);
     }
 }
 
-function showDamageDisplay(player, totalDamage, target) {
+function showDamageDisplay(player, totalDamage, target, isCritical = false) {
     const playerId = player.id;
     const targetId = target.id;
     const currentTick = system.currentTick;
@@ -129,12 +137,37 @@ function showDamageDisplay(player, totalDamage, target) {
     let aoeTargetCount = 0;
     let aoeSourceName = "";
     let aoeSourceNameEn = "";
+    let aoeHitCount = 1;
 
     if (aoeRecord) {
         aoeDamage = aoeRecord.totalDamage;
         aoeTargetCount = aoeRecord.targetCount;
         aoeSourceName = aoeRecord.sourceName;
         aoeSourceNameEn = aoeRecord.sourceNameEn;
+        
+        const existingAoeCombo = playerAoeComboState.get(playerId);
+        if (existingAoeCombo) {
+            const tickDiff = currentTick - existingAoeCombo.lastAttackTick;
+            if (tickDiff <= DAMAGE_DISPLAY_CONFIG.comboTimeWindow) {
+                existingAoeCombo.accumulatedDamage += aoeDamage;
+                existingAoeCombo.hitCount += 1;
+                existingAoeCombo.lastAttackTick = currentTick;
+                aoeHitCount = existingAoeCombo.hitCount;
+                aoeDamage = existingAoeCombo.accumulatedDamage;
+            } else {
+                existingAoeCombo.accumulatedDamage = aoeDamage;
+                existingAoeCombo.hitCount = 1;
+                existingAoeCombo.lastAttackTick = currentTick;
+            }
+        } else {
+            playerAoeComboState.set(playerId, {
+                accumulatedDamage: aoeDamage,
+                hitCount: 1,
+                lastAttackTick: currentTick
+            });
+        }
+        
+        accumulatedDamage += aoeDamage;
     }
 
     const displayText = buildDisplayText(
@@ -146,7 +179,9 @@ function showDamageDisplay(player, totalDamage, target) {
         aoeSourceName,
         aoeSourceNameEn,
         locale,
-        playerId
+        playerId,
+        isCritical,
+        aoeHitCount
     );
 
     playerDisplayState.set(playerId, {
@@ -162,7 +197,7 @@ function showDamageDisplay(player, totalDamage, target) {
     }, DAMAGE_DISPLAY_CONFIG.displayDuration);
 }
 
-function buildDisplayText(totalDamage, texts, hitCount = 1, aoeDamage = 0, aoeTargetCount = 0, aoeSourceName = "", aoeSourceNameEn = "", locale = "zh_CN", playerId = null) {
+function buildDisplayText(totalDamage, texts, hitCount = 1, aoeDamage = 0, aoeTargetCount = 0, aoeSourceName = "", aoeSourceNameEn = "", locale = "zh_CN", playerId = null, isCritical = false, aoeHitCount = 1) {
     let damageColor;
     if (totalDamage >= 50) {
         damageColor = "§c§l";
@@ -174,19 +209,29 @@ function buildDisplayText(totalDamage, texts, hitCount = 1, aoeDamage = 0, aoeTa
         damageColor = "§f";
     }
 
+    const criticalPrefix = isCritical ? `§6§l${texts.critical || "暴击!"}§r ` : "";
+
     let mainLine;
     if (hitCount > 1) {
-        const comboText = locale === "zh_CN" ? "连击" : "Combo";
-        mainLine = `§c${texts.damage}: ${damageColor}${totalDamage.toFixed(1)}§r §7(x${hitCount} ${comboText})`;
+        const comboText = texts.combo || "连击";
+        mainLine = `${criticalPrefix}§c${texts.damage}: ${damageColor}${totalDamage.toFixed(1)}§r §7(x${hitCount} ${comboText})`;
     } else {
-        mainLine = `§c${texts.damage}: ${damageColor}${totalDamage.toFixed(1)}`;
+        mainLine = `${criticalPrefix}§c${texts.damage}: ${damageColor}${totalDamage.toFixed(1)}`;
     }
 
     if (aoeDamage > 0 && aoeTargetCount > 0 && playerId) {
         const sourceName = locale === "zh_CN" ? aoeSourceName : aoeSourceNameEn;
-        const aoeText = locale === "zh_CN"
-            ? `§dAOE: §l${aoeDamage.toFixed(1)}§r §7(${aoeTargetCount}目标) §8- ${sourceName}`
-            : `§dAOE: §l${aoeDamage.toFixed(1)}§r §7(${aoeTargetCount} targets) §8- ${sourceName}`;
+        const comboText = texts.combo || "连击";
+        let aoeText;
+        if (aoeHitCount > 1) {
+            aoeText = locale === "zh_CN"
+                ? `§dAOE: §l${aoeDamage.toFixed(1)}§r §7(${aoeTargetCount}目标, x${aoeHitCount}${comboText}) §8- ${sourceName}`
+                : `§dAOE: §l${aoeDamage.toFixed(1)}§r §7(${aoeTargetCount} targets, x${aoeHitCount} ${comboText}) §8- ${sourceName}`;
+        } else {
+            aoeText = locale === "zh_CN"
+                ? `§dAOE: §l${aoeDamage.toFixed(1)}§r §7(${aoeTargetCount}目标) §8- ${sourceName}`
+                : `§dAOE: §l${aoeDamage.toFixed(1)}§r §7(${aoeTargetCount} targets) §8- ${sourceName}`;
+        }
         ActionBarManager.setLine(playerId, 'aoe', aoeText, DISPLAY_PRIORITIES.AOE);
         return mainLine;
     }
@@ -210,6 +255,14 @@ function clearDamageDisplay(playerId) {
         const elapsed = system.currentTick - comboState.lastAttackTick;
         if (elapsed > DAMAGE_DISPLAY_CONFIG.comboTimeWindow) {
             playerComboState.delete(playerId);
+        }
+    }
+
+    const aoeComboState = playerAoeComboState.get(playerId);
+    if (aoeComboState) {
+        const elapsed = system.currentTick - aoeComboState.lastAttackTick;
+        if (elapsed > DAMAGE_DISPLAY_CONFIG.comboTimeWindow) {
+            playerAoeComboState.delete(playerId);
         }
     }
 }
@@ -237,4 +290,5 @@ export function getDisplayState(playerId) {
 export function clearAllDisplays() {
     playerDisplayState.clear();
     playerComboState.clear();
+    playerAoeComboState.clear();
 }

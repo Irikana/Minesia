@@ -45,6 +45,10 @@ item.minesia:selfish=Selfish~LINEBREAK~~LINEBREAK~§9+5~10 Attack Damage~LINEBRE
 item.minesia:statue_totem=Statue Totem~LINEBREAK~~LINEBREAK~§9When equipped in offhand:~LINEBREAK~§7Increases max health by 25% and stamina by 80%~LINEBREAK~§7Recovers 1 stamina every half second~LINEBREAK~§7Consumes item when health below 4 to grant buffs~LINEBREAK~§e+25% Critical Rate~LINEBREAK~§7It looks reliable, seems like it can protect me in battle.
 item.minesia:black_dagger=Black Dagger~LINEBREAK~~LINEBREAK~§9+2~7 Attack Damage~LINEBREAK~§c+2 Stamina Cost~LINEBREAK~§e+50% Critical Rate~LINEBREAK~§725% chance to wither target for 2 seconds on attack~LINEBREAK~§7This dagger looks dangerous.
 item.minesia:white_golden_sword=White Golden Sword~LINEBREAK~~LINEBREAK~§9+7~9 Attack Damage~LINEBREAK~§c+2 Stamina Cost~LINEBREAK~§7Randomly consumes 0-2 durability on each attack~LINEBREAK~§7It's a bit fragile, wonder who made it.
+item.minesia:desert_pyramid_shard=Desert Pyramid Shard~LINEBREAK~~LINEBREAK~§7A mysterious crystal from the desert pyramid.
+item.minesia:desert_snow=Desert Snow~LINEBREAK~~LINEBREAK~§9+4~7 Attack Damage~LINEBREAK~§c+2 Stamina Cost~LINEBREAK~§750% chance to weaken target for 3 seconds and slow III for 1 second on attack~LINEBREAK~§7This sword was forged in the blizzard of the desert.
+item.minesia:desert_pyramid_pearl=Desert Pyramid Pearl~LINEBREAK~~LINEBREAK~§9When equipped in offhand:~LINEBREAK~§7+100% Max Stamina~LINEBREAK~§7+50% Max Health~LINEBREAK~§7Recovers 8 stamina per second~LINEBREAK~§7From the desert pyramid, grants the ability to run endlessly in the boundless desert.
+item.minesia:desert_pyramid_eye=Desert Pyramid Eye~LINEBREAK~~LINEBREAK~§9When equipped in offhand:~LINEBREAK~§7+50% Max Stamina~LINEBREAK~§7Recovers 4 stamina per second~LINEBREAK~§e+30% Critical Rate~LINEBREAK~§7From the desert pyramid, grants the ability to fight without rest.
 
 minesia.item.flamie.lore=Sets target on fire for 5 seconds on attack
 minesia.item.flamie.offhand.lore=Offhand: Sets target on fire for 2 seconds on attack
@@ -151,3 +155,19 @@ item.spawn_egg.entity.minesia_journey:victor.name=Spawn Victor the Equipment Mer
 
 entity.minesia:ryaman.name=Ryaman the Currency Trader
 item.spawn_egg.entity.minesia:ryaman.name=Spawn Ryaman
+
+item.minesia:attribute_panel=Attribute Panel~LINEBREAK~~LINEBREAK~§7Use to view detailed attribute information.
+
+minesia.attribute_panel.title=Attribute Panel
+minesia.attribute_panel.combat=Combat Attributes
+minesia.attribute_panel.survival=Survival Attributes
+minesia.attribute_panel.level=Minesia Level
+minesia.attribute_panel.crit_rate=Critical Rate
+minesia.attribute_panel.crit_damage=Critical Damage
+minesia.attribute_panel.stamina=Stamina
+minesia.attribute_panel.max_stamina=Max Stamina
+minesia.attribute_panel.health=Health
+minesia.attribute_panel.max_health=Max Health
+minesia.attribute_panel.level_num=Level
+minesia.attribute_panel.total_exp=Total Experience
+minesia.attribute_panel.close=Close

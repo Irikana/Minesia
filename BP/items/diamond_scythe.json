@@ -1,33 +1,37 @@
 {
-	"format_version": "1.20.80",
-	"minecraft:item": {
-		"description": {
-			"identifier": "minesia:diamond_scythe",
-			"menu_category": {
-				"category": "equipment",
-				"group": "itemGroup.name.hoe"
-			}
-		},
-		"components": {
-			"minecraft:icon": "minesia_diamond_scythe",
-			"minecraft:max_stack_size": 1,
-			"minecraft:hand_equipped": true,
-			"minecraft:durability": {
-				"max_durability": 2343
-			},
-			"minecraft:repairable": {
-				"repair_items": [
-					{
-						"items": [
-							"minecraft:diamond"
-						],
-						"repair_amount": 585
-					}
-				]
-			},
-			"minecraft:display_name": {
-				"value": "item.minesia:diamond_scythe"
-			}
-		}
-	}
+    "format_version":  "1.26.10",
+    "minecraft:item":  {
+                           "description":  {
+                                               "identifier":  "minesia:diamond_scythe",
+                                               "menu_category":  {
+                                                                     "category":  "equipment",
+                                                                     "group":  "minecraft:itemGroup.name.hoe"
+                                                                 }
+                                           },
+                           "components":  {
+                                              "minecraft:icon":  {
+                                                                     "textures":  {
+                                                                                      "default":  "minesia_diamond_scythe"
+                                                                                  }
+                                                                 },
+                                              "minecraft:max_stack_size":  1,
+                                              "minecraft:hand_equipped":  true,
+                                              "minecraft:durability":  {
+                                                                           "max_durability":  2343
+                                                                       },
+                                              "minecraft:repairable":  {
+                                                                           "repair_items":  [
+                                                                                                {
+                                                                                                    "items":  [
+                                                                                                                  "minecraft:diamond"
+                                                                                                              ],
+                                                                                                    "repair_amount":  585
+                                                                                                }
+                                                                                            ]
+                                                                       },
+                                              "minecraft:display_name":  {
+                                                                             "value":  "item.minesia:diamond_scythe"
+                                                                         }
+                                          }
+                       }
 }

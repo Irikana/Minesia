@@ -1,0 +1,65 @@
+{
+	"format_version": "1.8.0",
+	"minecraft:spawn_rules": {
+		"description": {
+			"identifier": "minesia:ryaman",
+			"population_control": "villager"
+		},
+		"conditions": [
+			{
+				"minecraft:spawns_on_surface": {},
+				"minecraft:brightness_filter": {
+					"min": 7,
+					"max": 15,
+					"adjust_for_weather": true
+				},
+				"minecraft:weight": {
+					"default": 8
+				},
+				"minecraft:density_limit": {
+					"surface": 2
+				},
+				"minecraft:biome_filter": {
+					"any_of": [
+						{
+							"test": "has_biome_tag",
+							"value": "village"
+						},
+						{
+							"test": "has_biome_tag",
+							"value": "plains"
+						},
+						{
+							"test": "has_biome_tag",
+							"value": "desert"
+						},
+						{
+							"test": "has_biome_tag",
+							"value": "savanna"
+						},
+						{
+							"test": "has_biome_tag",
+							"value": "taiga"
+						},
+						{
+							"test": "has_biome_tag",
+							"value": "snow"
+						},
+						{
+							"test": "has_biome_tag",
+							"value": "forest"
+						},
+						{
+							"test": "has_biome_tag",
+							"value": "jungle"
+						},
+						{
+							"test": "has_biome_tag",
+							"value": "swamp"
+						}
+					]
+				}
+			}
+		]
+	}
+}

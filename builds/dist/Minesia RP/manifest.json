@@ -1,9 +1,18 @@
 {
-	"format_version": 2,
+	"format_version": 3,
 	"metadata": {
 		"authors": [
 			"Hua1286"
-		]
+		],
+		"product_type": "addon",
+		"generated_with": {
+			"bridge": [
+				"2.7.54"
+			],
+			"dash": [
+				"0.11.7"
+			]
+		}
 	},
 	"header": {
 		"name": "Minesia",
@@ -14,31 +23,20 @@
 			130
 		],
 		"uuid": "5ddb3965-4730-42d9-89ac-eb4062bb4f96",
-		"version": [
-			0,
-			0,
-			11
-		]
+		"version": "0.0.14",
+		"pack_scope": "world"
 	},
 	"modules": [
 		{
 			"type": "resources",
 			"uuid": "ac37554a-8c5f-42dd-861f-2c74105114a4",
-			"version": [
-				1,
-				0,
-				0
-			]
+			"version": "1.0.0"
 		}
 	],
 	"dependencies": [
 		{
 			"uuid": "6bf122ec-5e19-4879-9bf7-3e76728579f8",
-			"version": [
-				0,
-				0,
-				11
-			]
+			"version": "0.0.14"
 		}
 	],
 	"subpacks": [
@@ -60,5 +58,8 @@
 			"memory_tier": 1,
 			"description": "The default subpack, which is recommended for all players."
 		}
+	],
+	"capabilities": [
+		"pbr"
 	]
 }

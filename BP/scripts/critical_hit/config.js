@@ -9,7 +9,8 @@ export const CRITICAL_CONFIG = {
         "minesia:black_dagger": 50,
     },
     equipmentCriticalBonuses: {
-        "minesia:statue_totem": 25
+        "minesia:statue_totem": 25,
+        "minesia:desert_pyramid_eye": 30
     }
 };
 

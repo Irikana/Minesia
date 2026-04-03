@@ -4,22 +4,24 @@
 // 各模块通过此注册中心注册自己的Lore处理器
 // ===============================
 
+import { debug } from "../debug/debugManager.js";
+
 const loreHandlers = new Map();
 
 export const LoreRegistry = {
     register(handlerId, handler) {
         if (!handlerId || typeof handlerId !== 'string') {
-            console.error('[LoreRegistry] 无效的处理器ID');
+            debug.logError("LoreRegistry", "无效的处理器ID");
             return false;
         }
 
         if (!handler || typeof handler.canHandle !== 'function' || typeof handler.generateLore !== 'function') {
-            console.error('[LoreRegistry] 处理器必须包含 canHandle 和 generateLore 方法');
+            debug.logError("LoreRegistry", "处理器必须包含 canHandle 和 generateLore 方法");
             return false;
         }
 
         if (loreHandlers.has(handlerId)) {
-            console.warn(`[LoreRegistry] 处理器 "${handlerId}" 已存在，将被覆盖`);
+            debug.logWarning("LoreRegistry", `处理器 "${handlerId}" 已存在，将被覆盖`);
         }
 
         loreHandlers.set(handlerId, {
@@ -54,7 +56,7 @@ export const LoreRegistry = {
                     handlers.push(handler);
                 }
             } catch (error) {
-                console.error(`[LoreRegistry] 处理器 ${handler.id} canHandle 出错:`, error?.message ?? error);
+                debug.logError("LoreRegistry", `处理器 ${handler.id} canHandle 出错: ${error?.message ?? error}`);
             }
         }
         return handlers;

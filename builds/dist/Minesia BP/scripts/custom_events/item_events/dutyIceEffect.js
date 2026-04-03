@@ -1,4 +1,5 @@
 import { EquipmentSlot, system } from "@minecraft/server";
+import { debug } from "../../debug/debugManager.js";
 
 export const DUTY_ICE_EFFECT = {
     name: "Duty Ice",
@@ -31,10 +32,10 @@ export function applyDutyIceEffect(target, attacker) {
                 });
             }
 
-            console.log(`[DutyIce] ${attacker.name} 使目标冰冻10秒`);
+            debug.logWithTag("DutyIce", `${attacker.name} 使目标冰冻10秒`);
         }
     } catch (error) {
-        console.error("[DutyIce] 应用效果时出错:", error?.message ?? error);
+        debug.logError("DutyIce", `应用效果时出错: ${error?.message ?? error}`);
     }
 }
 

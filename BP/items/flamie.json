@@ -1,24 +1,28 @@
 {
-	"format_version": "1.20.80",
-	"minecraft:item": {
-		"description": {
-			"identifier": "minesia:flamie",
-			"menu_category": {
-				"category": "equipment",
-				"group": "itemGroup.name.sword"
-			}
-		},
-		"components": {
-			"minecraft:icon": "minesia_flamie",
-			"minecraft:max_stack_size": 1,
-			"minecraft:hand_equipped": true,
-			"minecraft:allow_off_hand": true,
-			"minecraft:durability": {
-				"max_durability": 280
-			},
-			"minecraft:display_name": {
-				"value": "item.minesia:flamie"
-			}
-		}
-	}
+    "format_version":  "1.26.10",
+    "minecraft:item":  {
+                           "description":  {
+                                               "identifier":  "minesia:flamie",
+                                               "menu_category":  {
+                                                                     "category":  "equipment",
+                                                                     "group":  "minecraft:itemGroup.name.sword"
+                                                                 }
+                                           },
+                           "components":  {
+                                              "minecraft:icon":  {
+                                                                     "textures":  {
+                                                                                      "default":  "minesia_flamie"
+                                                                                  }
+                                                                 },
+                                              "minecraft:max_stack_size":  1,
+                                              "minecraft:hand_equipped":  true,
+                                              "minecraft:allow_off_hand":  true,
+                                              "minecraft:durability":  {
+                                                                           "max_durability":  280
+                                                                       },
+                                              "minecraft:display_name":  {
+                                                                             "value":  "item.minesia:flamie"
+                                                                         }
+                                          }
+                       }
 }

@@ -117,6 +117,98 @@ BP/scripts/critical_hit/
 
 ## 未来规划
 
+### 属性面板与 HUD 系统 (Attribute Panel & HUD System)
+
+**优先级**: 中\
+**预计版本**: v0.0.15+
+
+#### 功能描述
+
+利用废弃但保留的 Lore 系统实现属性面板功能，同时对 HUD 进行改造，实现更灵活的槽位管理。
+
+##### 属性面板设计
+
+- 创建一个名为"属性"的特殊物品
+- Lore 显示各种属性的数值、加成等信息
+- 锁定在热栏特定位置（从第 9 个槽位往前数）
+- 支持多种属性面板类型：数值、技能、职业、主线任务、支线任务等
+
+##### HUD 槽位规划
+
+| 槽位范围 | 用途 | 说明 |
+|---------|------|------|
+| 第 1-4 槽位 | 快捷栏 | 在 HUD 显示，可快速切换，用于放置武器、食物等常用物品 |
+| 第 5-9 槽位 | 特殊物品栏 | 不在 HUD 显示，从背包打开查看，用于放置属性、数值、技能、职业、任务等 |
+
+##### 核心特性
+
+1. **槽位锁定**：特殊物品（属性面板等）锁定在指定槽位，无法移动
+2. **HUD 精简**：只显示第 1-4 槽位，隐藏第 5-9 槽位
+3. **背包交互**：第 5-9 槽位需要打开背包才能查看和操作
+4. **Lore 动态更新**：属性面板的 Lore 根据玩家当前属性动态更新
+
+#### 可行性分析
+
+| 分析维度 | 评估结果 | 说明 |
+|---------|---------|------|
+| **技术可行性** | ⚠️ 中等 | 需要探索 HUD 隐藏/自定义的 API 支持程度 |
+| **API 支持** | ⚠️ 部分支持 | Script API v2.0.0 提供了热栏事件，但 HUD 自定义可能有限制 |
+| **系统集成** | ✅ 良好 | 可复用现有 Lore 系统框架 |
+| **性能影响** | ✅ 低风险 | 仅在属性变化时更新 Lore |
+
+#### 技术方案
+
+```
+BP/scripts/attribute_panel/
+├── config.js              # 属性面板配置
+├── attributePanelMain.js  # 核心逻辑，处理槽位锁定和面板管理
+├── attributeCalculator.js # 属性计算（整合现有系统）
+└── slotManager.js         # 槽位管理，处理 HUD 显示逻辑
+```
+
+**核心实现要点**：
+
+1. **热栏槽位监听**：使用 `PlayerHotbarSelectedSlotChangeAfterEvent` 监听槽位变化
+2. **物品锁定**：通过脚本阻止玩家移动特殊物品
+3. **Lore 动态更新**：利用 `PlayerInventoryItemChangeAfterEvent` 触发 Lore 更新
+4. **HUD 控制**：探索是否可以通过客户端资源包或 Molang 查询实现 HUD 隐藏
+
+#### 相关 API 支持（Script API v2.0.0+）
+
+| API | 版本 | 用途 |
+|-----|------|------|
+| `PlayerHotbarSelectedSlotChangeAfterEvent` | 1.21.100 | 监听热栏选中槽位变化 |
+| `PlayerInventoryItemChangeAfterEvent` | 1.21.100 | 监听物品栏物品变化 |
+| `Container.find` APIs | 1.21.100 | 搜索容器内容 |
+| `server-ui` improvements | 1.21.90 | 表单格式化（Section Headers, Labels, Tooltips） |
+| `Input APIs` | 1.21.60 | 检测玩家输入模式 |
+
+#### 技术限制说明
+
+> ⚠️ **注意**：当前 Script API 对 HUD 自定义的支持有限，可能需要：
+> - 通过资源包修改 HUD 材质/布局
+> - 使用 Molang 查询（如 `query.touch_only_affects_hotbar`）配合客户端资源
+> - 或采用替代方案（如通过 UI 表单展示属性面板）
+
+#### 依赖系统
+
+- Lore 系统 (`scripts/lore_system`)
+- Minesia 等级系统 (`scripts/minesia_level`)
+- 套装效果系统 (`scripts/set_effect`)
+- 暴击系统 (`scripts/critical_hit`)
+
+#### 开发任务
+
+- [ ] 调研 HUD 自定义的可行方案
+- [ ] 设计属性面板物品结构
+- [ ] 实现槽位锁定逻辑
+- [ ] 实现属性计算与整合
+- [ ] 实现 Lore 动态更新
+- [ ] 实现 HUD 精简显示（或替代方案）
+- [ ] 测试与调试
+
+***
+
 ### 待定功能
 
 - [ ] 更多武器类型支持

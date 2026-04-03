@@ -20,9 +20,24 @@ export class MinesiaLevelEventSystem {
         25: 4, 30: 4, 35: 4, 40: 4, 45: 4
     };
 
+    static LEVEL_STAMINA_REWARDS = {
+        5: 20, 10: 20, 15: 20, 20: 20,
+        25: 20, 30: 20, 35: 20, 40: 20, 45: 20, 50: 20
+    };
+
     static calculateLevelHealthBonus(level) {
         let totalBonus = 0;
         for (const [rewardLevel, bonus] of Object.entries(this.LEVEL_HEALTH_REWARDS)) {
+            if (level >= parseInt(rewardLevel)) {
+                totalBonus += bonus;
+            }
+        }
+        return totalBonus;
+    }
+
+    static calculateLevelStaminaBonus(level) {
+        let totalBonus = 0;
+        for (const [rewardLevel, bonus] of Object.entries(this.LEVEL_STAMINA_REWARDS)) {
             if (level >= parseInt(rewardLevel)) {
                 totalBonus += bonus;
             }
@@ -192,18 +207,28 @@ export class MinesiaLevelEventSystem {
         if (reward.emeraldCoin) { this.giveItem(player, "minesia:emerald_coin", reward.emeraldCoin); }
         if (reward.toySword) { this.giveItem(player, "minesia:toy_sword", reward.toySword); }
         const hasHealthReward = this.LEVEL_HEALTH_REWARDS[level];
-        if (hasHealthReward) {
-            this.showCombinedMessage(player, level, reward.message, hasHealthReward);
-            console.log(`[Minesia] 玩家 ${player.name} 达到 ${level} 级，获得 ${hasHealthReward} 点额外生命值`);
+        const hasStaminaReward = this.LEVEL_STAMINA_REWARDS[level];
+        if (hasHealthReward || hasStaminaReward) {
+            this.showCombinedMessage(player, level, reward.message, hasHealthReward || 0, hasStaminaReward || 0);
+            if (hasHealthReward) console.log(`[Minesia] 玩家 ${player.name} 达到 ${level} 级，获得 ${hasHealthReward} 点额外生命值`);
+            if (hasStaminaReward) console.log(`[Minesia] 玩家 ${player.name} 达到 ${level} 级，获得 ${hasStaminaReward} 点体力值上限`);
         } else if (reward.message) { this.showLocalizedMessage(player, reward.message, 10000); }
         this.markRewardObtained(player, level);
     }
 
-    static showCombinedMessage(player, level, coinMessageKey, healthBonus) {
+    static showCombinedMessage(player, level, coinMessageKey, healthBonus, staminaBonus) {
         MinesiaLevelSystem.pauseLevelDisplay(player, 10000);
-        player.runCommand(`titleraw @s actionbar {"rawtext":[{"text":"§a[Minesia] "},{"translate":"${coinMessageKey}"},{"text":"\\n§a"},{"translate":"minesia.level.health_bonus"}]}`);
-        system.runTimeout(() => { player.runCommand(`titleraw @s actionbar {"rawtext":[{"text":"§a[Minesia] "},{"translate":"${coinMessageKey}"},{"text":"\\n§a"},{"translate":"minesia.level.health_bonus"}]}`); }, 20);
-        system.runTimeout(() => { player.runCommand(`titleraw @s actionbar {"rawtext":[{"text":"§a[Minesia] "},{"translate":"${coinMessageKey}"},{"text":"\\n§a"},{"translate":"minesia.level.health_bonus"}]}`); }, 40);
+        let message = `{"rawtext":[{"text":"§a[Minesia] "},{"translate":"${coinMessageKey}"}`;
+        if (healthBonus > 0) {
+            message += `,{"text":"\\n§a+${healthBonus} 生命值"}`;
+        }
+        if (staminaBonus > 0) {
+            message += `,{"text":"\\n§a+${staminaBonus} 体力值上限"}`;
+        }
+        message += `]}`;
+        player.runCommand(`titleraw @s actionbar ${message}`);
+        system.runTimeout(() => { player.runCommand(`titleraw @s actionbar ${message}`); }, 20);
+        system.runTimeout(() => { player.runCommand(`titleraw @s actionbar ${message}`); }, 40);
     }
 
     static giveItem(player, itemId, count) {

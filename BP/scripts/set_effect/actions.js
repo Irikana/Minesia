@@ -27,7 +27,9 @@ export const CONTROLLED_TAGS = [
   "spider_leg_active",
   "statue_totem_active",
   "flamie_offhand_active",
-  "ender_pearl_sword_offhand_active"
+  "ender_pearl_sword_offhand_active",
+  "desert_pyramid_pearl_active",
+  "desert_pyramid_eye_active"
 ];
 
 const playerEffects = new Map();

@@ -1,0 +1,22 @@
+{
+    "format_version": "1.26.10",
+    "minecraft:item": {
+        "description": {
+            "identifier": "minesia:desert_pyramid_eye",
+            "menu_category": {
+                "category": "equipment"
+            }
+        },
+        "components": {
+            "minecraft:icon": {
+                "textures": {
+                    "default": "minesia_desert_pyramid_eye"
+                }
+            },
+            "minecraft:max_stack_size": 50,
+            "minecraft:display_name": {
+                "value": "item.minesia:desert_pyramid_eye"
+            }
+        }
+    }
+}

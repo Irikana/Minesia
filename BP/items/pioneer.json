@@ -1,23 +1,27 @@
 {
-	"format_version": "1.20.80",
-	"minecraft:item": {
-		"description": {
-			"identifier": "minesia:pioneer",
-			"menu_category": {
-				"category": "equipment",
-				"group": "itemGroup.name.sword"
-			}
-		},
-		"components": {
-			"minecraft:icon": "minesia_pioneer",
-			"minecraft:max_stack_size": 1,
-			"minecraft:hand_equipped": true,
-			"minecraft:durability": {
-				"max_durability": 1700
-			},
-			"minecraft:display_name": {
-				"value": "item.minesia:pioneer"
-			}
-		}
-	}
+    "format_version":  "1.26.10",
+    "minecraft:item":  {
+                           "description":  {
+                                               "identifier":  "minesia:pioneer",
+                                               "menu_category":  {
+                                                                     "category":  "equipment",
+                                                                     "group":  "minecraft:itemGroup.name.sword"
+                                                                 }
+                                           },
+                           "components":  {
+                                              "minecraft:icon":  {
+                                                                     "textures":  {
+                                                                                      "default":  "minesia_pioneer"
+                                                                                  }
+                                                                 },
+                                              "minecraft:max_stack_size":  1,
+                                              "minecraft:hand_equipped":  true,
+                                              "minecraft:durability":  {
+                                                                           "max_durability":  1700
+                                                                       },
+                                              "minecraft:display_name":  {
+                                                                             "value":  "item.minesia:pioneer"
+                                                                         }
+                                          }
+                       }
 }

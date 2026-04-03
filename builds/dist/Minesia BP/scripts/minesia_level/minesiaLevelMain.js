@@ -3,6 +3,7 @@
 import { world, system } from "@minecraft/server";
 import { MinesiaLevelSystem } from "./level_system.js";
 import { MinesiaLevelEventSystem } from "./minesiaLevelEvent.js";
+import { debug } from "../debug/debugManager.js";
 
 // 性能优化：使用Map存储每个玩家的状态
 const playerStates = new Map();
@@ -34,31 +35,31 @@ export function initializeScoreboard() {
     try {
         const scoreboard = world.scoreboard;
         if (!scoreboard) {
-            console.warn('[Minesia] Scoreboard API不可用');
+            debug.logWarning("Minesia", "Scoreboard API不可用");
             return false;
         }
 
         let levelObjective = scoreboard.getObjective('minesia_level');
         if (!levelObjective) {
             levelObjective = scoreboard.addObjective('minesia_level', 'Minesia Level');
-            console.log('[Minesia] 计分板 minesia_level 初始化成功');
+            debug.logWithTag("Minesia", "计分板 minesia_level 初始化成功");
         }
 
         let expObjective = scoreboard.getObjective('minesia_exp');
         if (!expObjective) {
             expObjective = scoreboard.addObjective('minesia_exp', 'Minesia Exp');
-            console.log('[Minesia] 计分板 minesia_exp 初始化成功');
+            debug.logWithTag("Minesia", "计分板 minesia_exp 初始化成功");
         }
 
         let langObjective = scoreboard.getObjective('minesia_language');
         if (!langObjective) {
             langObjective = scoreboard.addObjective('minesia_language', 'Minesia Language');
-            console.log('[Minesia] 计分板 minesia_language 初始化成功');
+            debug.logWithTag("Minesia", "计分板 minesia_language 初始化成功");
         }
 
         return true;
     } catch (e) {
-        console.error('[Minesia] 初始化计分板失败:', e?.message ?? e);
+        debug.logError("Minesia", `初始化计分板失败: ${e?.message ?? e}`);
         return false;
     }
 }
@@ -113,7 +114,7 @@ function updatePlayerLevels(players) {
             }
 
         } catch (error) {
-            console.warn('[Minesia] 处理玩家经验时出错:', player.name, error.message);
+            debug.logWarning("Minesia", `处理玩家经验时出错: ${player.name} ${error.message}`);
         }
     }
 
@@ -139,19 +140,19 @@ function batchUpdateScoreboard(updates) {
                     expObj.setScore(update.player, Math.floor(update.totalExp));
                 }
             } catch (error) {
-                console.warn('[Minesia] 更新玩家计分板失败:', update.player.name, error?.message ?? error);
+                debug.logWarning("Minesia", `更新玩家计分板失败: ${update.player.name} ${error?.message ?? error}`);
             }
         }
 
         for (const update of updates) {
             if (update.level > update.oldLevel) {
-                console.log(`[Minesia] 玩家 ${update.player.name} 等级提升: ${update.oldLevel} -> ${update.level}`);
+                debug.logWithTag("Minesia", `玩家 ${update.player.name} 等级提升: ${update.oldLevel} -> ${update.level}`);
                 MinesiaLevelEventSystem.handleLevelUp(update.player, update.oldLevel, update.level);
             }
         }
 
     } catch (error) {
-        console.error('[Minesia] 批量更新计分板失败:', error?.message ?? error);
+        debug.logError("Minesia", `批量更新计分板失败: ${error?.message ?? error}`);
     }
 }
 
@@ -181,6 +182,6 @@ export function updateMinesiaSystem() {
         }
 
     } catch (error) {
-        console.error('[Minesia] 系统更新错误:', error);
+        debug.logError("Minesia", `系统更新错误: ${error}`);
     }
 }

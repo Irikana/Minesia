@@ -346,6 +346,54 @@
             {
               "wants": [
                 {
+                  "item": "minesia:wooden_coin",
+                  "quantity": 20
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minesia:stone_coin",
+                  "quantity": 1
+                }
+              ],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [
+                {
+                  "item": "minesia:stone_coin",
+                  "quantity": 15
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minesia:silver_coin",
+                  "quantity": 1
+                }
+              ],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [
+                {
+                  "item": "minesia:silver_coin",
+                  "quantity": 15
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minesia:gold_coin",
+                  "quantity": 1
+                }
+              ],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [
+                {
                   "item": "minesia:stone_coin",
                   "quantity": 4
                 }

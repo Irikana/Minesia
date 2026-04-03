@@ -1,4 +1,5 @@
 import { EquipmentSlot, system } from "@minecraft/server";
+import { debug } from "../../debug/debugManager.js";
 
 export const BLACK_DAGGER_EFFECT = {
     name: "Black Dagger",
@@ -13,10 +14,10 @@ export function applyBlackDaggerEffect(target, attacker) {
                 amplifier: 1,
                 showParticles: true
             });
-            console.log(`[BlackDagger] ${attacker.name} 使目标凋谢2秒`);
+            debug.logWithTag("BlackDagger", `${attacker.name} 使目标凋谢2秒`);
         }
     } catch (error) {
-        console.error("[BlackDagger] 应用效果时出错:", error?.message ?? error);
+        debug.logError("BlackDagger", `应用效果时出错: ${error?.message ?? error}`);
     }
 }
 

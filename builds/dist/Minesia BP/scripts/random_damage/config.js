@@ -104,49 +104,56 @@ export const RANDOM_DAMAGE_WEAPONS = [
     {
         id: "minesia:wooden_scythe",
         minDamage: 5,
-        maxDamage: 7,
+        maxDamage: 6,
+        isScythe: true,
+        enabled: true
+    },
+    {
+        id: "minesia:copper_scythe",
+        minDamage: 5.5,
+        maxDamage: 6.5,
         isScythe: true,
         enabled: true
     },
     {
         id: "minesia:stone_scythe",
         minDamage: 6,
-        maxDamage: 8.5,
+        maxDamage: 7.5,
         isScythe: true,
         enabled: true
     },
     {
         id: "minesia:iron_scythe",
         minDamage: 7,
-        maxDamage: 10,
+        maxDamage: 9,
         isScythe: true,
         enabled: true
     },
     {
         id: "minesia:golden_scythe",
         minDamage: 5,
-        maxDamage: 7,
+        maxDamage: 6,
         isScythe: true,
         enabled: true
     },
     {
         id: "minesia:diamond_scythe",
         minDamage: 8,
-        maxDamage: 11.5,
+        maxDamage: 10.5,
         isScythe: true,
         enabled: true
     },
     {
         id: "minesia:netherite_scythe",
-        minDamage: 8,
+        minDamage: 9,
         maxDamage: 12,
         isScythe: true,
         enabled: true
     },
     {
         id: "minesia:steel_scythe",
-        minDamage: 8,
-        maxDamage: 11.5,
+        minDamage: 9,
+        maxDamage: 12,
         isScythe: true,
         enabled: true
     },

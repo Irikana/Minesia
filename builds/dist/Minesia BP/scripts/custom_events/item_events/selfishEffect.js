@@ -1,4 +1,5 @@
 import { EquipmentSlot, system } from "@minecraft/server";
+import { debug } from "../../debug/debugManager.js";
 
 export const SELFISH_EFFECT = {
     name: "Selfish",
@@ -13,10 +14,10 @@ export function applySelfishEffect(target, attacker) {
                 amplifier: 0,
                 showParticles: true
             });
-            console.log(`[Selfish] ${attacker.name} 使目标虚弱5秒`);
+            debug.logWithTag("Selfish", `${attacker.name} 使目标虚弱5秒`);
         }
     } catch (error) {
-        console.error("[Selfish] 应用效果时出错:", error?.message ?? error);
+        debug.logError("Selfish", `应用效果时出错: ${error?.message ?? error}`);
     }
 }
 

@@ -1,4 +1,5 @@
 import { EquipmentSlot, system } from "@minecraft/server";
+import { debug } from "../../debug/debugManager.js";
 
 export const WHITE_GOLDEN_SWORD_EFFECT = {
     name: "White Golden Sword",
@@ -23,7 +24,7 @@ export function applyWhiteGoldenSwordEffect(player, mainhandItem) {
             }
         }
     } catch (error) {
-        console.error("[WhiteGoldenSword] 应用效果时出错:", error?.message ?? error);
+        debug.logError("WhiteGoldenSword", `应用效果时出错: ${error?.message ?? error}`);
     }
 }
 

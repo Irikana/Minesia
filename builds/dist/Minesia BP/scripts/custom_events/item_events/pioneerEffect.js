@@ -1,4 +1,5 @@
 import { EquipmentSlot, system } from "@minecraft/server";
+import { debug } from "../../debug/debugManager.js";
 
 export const PIONEER_EFFECT = {
     name: "Pioneer",
@@ -16,10 +17,10 @@ export function applyPioneerEffect(target, attacker, StaminaSystem) {
             if (StaminaSystem) {
                 StaminaSystem.consumeStamina(attacker, 5);
             }
-            console.log(`[Pioneer] ${attacker.name} 使目标缓慢并额外消耗5点体力`);
+            debug.logWithTag("Pioneer", `${attacker.name} 使目标缓慢并额外消耗5点体力`);
         }
     } catch (error) {
-        console.error("[Pioneer] 应用效果时出错:", error?.message ?? error);
+        debug.logError("Pioneer", `应用效果时出错: ${error?.message ?? error}`);
     }
 }
 

@@ -1,4 +1,5 @@
 import { EquipmentSlot } from "@minecraft/server";
+import { debug } from "../../debug/debugManager.js";
 
 export const ITEM_EFFECTS = {
     golden_phantom_membrane_active: {
@@ -37,7 +38,7 @@ export const ITEM_EFFECTS = {
                     player.playSound("random.break");
                 }
             } catch (error) {
-                console.error("[ItemEffect] 黄金幻翼膜耐久消耗失败:", error?.message ?? error);
+                debug.logError("ItemEffect", `黄金幻翼膜耐久消耗失败: ${error?.message ?? error}`);
             }
         },
         onDeactivate: (player, StaminaSystem) => {
