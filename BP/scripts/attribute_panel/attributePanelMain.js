@@ -78,6 +78,9 @@ export function showAttributePanel(player) {
     const texts = getPanelTexts(locale);
     const attributes = calculatePlayerAttributes(player);
     
+    const staminaBar = formatAttributeBar(attributes.stamina, attributes.maxStamina, 12);
+    const healthBar = formatAttributeBar(attributes.health, attributes.maxHealth, 12);
+    
     const form = new ActionFormData()
         .title(`§6§l${texts.title}`)
         .divider()
@@ -88,14 +91,14 @@ export function showAttributePanel(player) {
         .divider()
         
         .header(`§b${texts.stamina}`)
-        .label(`§c${texts.currentStamina}: §f${attributes.stamina}/${attributes.maxStamina} §7(${attributes.staminaPercentage}%%)`)
+        .label(`§c${texts.currentStamina}: ${staminaBar} §f${attributes.stamina}/${attributes.maxStamina}`)
         .label(`§c${texts.maxStaminaBonus}: §f${formatBonus(attributes.maxStaminaBonus, locale)}`)
         .label(`§c${texts.consumptionMult}: §f${formatMultiplier(attributes.consumptionMultiplier, locale)}`)
         .label(`§c${texts.recoveryMult}: §f${formatMultiplier(attributes.recoveryMultiplier, locale)}`)
         .divider()
         
         .header(`§a${texts.survival}`)
-        .label(`§a${texts.health}: §f${attributes.health}/${attributes.maxHealth} §7(${attributes.healthPercentage}%%)`)
+        .label(`§a${texts.health}: ${healthBar} §f${attributes.health}/${attributes.maxHealth}`)
         .divider()
         
         .header(`§6${texts.level}`)

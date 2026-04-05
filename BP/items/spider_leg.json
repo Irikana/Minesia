@@ -4,7 +4,8 @@
                            "description":  {
                                                "identifier":  "minesia:spider_leg",
                                                "menu_category":  {
-                                                                     "category":  "items"
+                                                                     "category":  "items",
+                                                                     "group":  "minesia:itemGroup.name.accessories"
                                                                  }
                                            },
                            "components":  {

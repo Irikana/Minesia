@@ -20,7 +20,15 @@ export const LIGHT_ITEM_CONFIG = {
     "minecraft:blaze_rod": 14,
     "minecraft:blaze_powder": 12,
     "minecraft:magma_cream": 8,
-    "minecraft:end_rod": 14
+    "minecraft:end_rod": 14,
+    "minecraft:waxed_copper_bulb": 15,
+    "minecraft:waxed_exposed_copper_bulb": 12,
+    "minecraft:waxed_weathered_copper_bulb": 8,
+    "minecraft:waxed_oxidized_copper_bulb": 4,
+    "minecraft:copper_bulb": 15,
+    "minecraft:exposed_copper_bulb": 12,
+    "minecraft:weathered_copper_bulb": 8,
+    "minecraft:oxidized_copper_bulb": 4
 };
 
 export const DYNAMIC_LIGHT_CONFIG = {

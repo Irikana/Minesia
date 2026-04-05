@@ -76,9 +76,9 @@ function updatePlayerLight(player) {
     const dimension = player.dimension;
     const currentLocation = player.location;
 
-    const floorLocation = {
+    const headLocation = {
         x: Math.floor(currentLocation.x),
-        y: Math.floor(currentLocation.y),
+        y: Math.floor(currentLocation.y + 2),
         z: Math.floor(currentLocation.z)
     };
 
@@ -93,7 +93,7 @@ function updatePlayerLight(player) {
         return;
     }
 
-    const newLocation = floorLocation;
+    const newLocation = headLocation;
 
     if (previousSource) {
         const prevLoc = previousSource.location;

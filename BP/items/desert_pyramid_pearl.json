@@ -4,7 +4,8 @@
         "description": {
             "identifier": "minesia:desert_pyramid_pearl",
             "menu_category": {
-                "category": "equipment"
+                "category": "items",
+                "group": "minesia:itemGroup.name.accessories"
             }
         },
         "components": {

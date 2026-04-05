@@ -8,8 +8,8 @@ import { world, system } from "@minecraft/server";
 import { debug } from "../debug/debugManager.js";
 
 const BASE_PLAYER_HEALTH = 10;
-const EFFECT_DURATION = 25;
-const REFRESH_INTERVAL = 20;
+const EFFECT_DURATION = 20;
+const REFRESH_INTERVAL = 10;
 
 const playerHealthBoostState = new Map();
 
@@ -44,9 +44,11 @@ export function updateHealthBoost(player, equipmentHealth, levelHealth, healthPe
     const newHealthPercent = healthPercent || 0;
 
     const baseHealth = BASE_PLAYER_HEALTH + newEquipmentHealth + newLevelHealth;
-    const percentBonus = Math.floor(baseHealth * (newHealthPercent / 100));
-    const totalHealthBonus = newEquipmentHealth + newLevelHealth + percentBonus;
-    const newLevel = Math.max(0, Math.floor(totalHealthBonus / 4));
+    const flooredBase = Math.floor(baseHealth / 2) * 2;
+    const percentBonus = Math.floor((flooredBase * newHealthPercent / 100) / 2) * 2;
+    const totalHealth = baseHealth + percentBonus;
+    const bonusHealth = totalHealth - BASE_PLAYER_HEALTH;
+    const newLevel = Math.max(0, Math.floor(bonusHealth / 4));
 
     if (newLevel === state.currentLevel) {
       state.equipmentHealth = newEquipmentHealth;
@@ -56,10 +58,12 @@ export function updateHealthBoost(player, equipmentHealth, levelHealth, healthPe
     }
 
     const oldLevel = state.currentLevel;
-    debug.logWithTag("HealthBoostManager", `${player.name}: 生命提升等级变化 ${oldLevel} -> ${newLevel}`);
+    debug.logWithTag("HealthBoostManager", `${player.name}: 生命提升等级变化 ${oldLevel} -> ${newLevel} (基础:${baseHealth}, 取整:${flooredBase}, 百分比加成:${percentBonus}, 总生命:${totalHealth})`);
 
-    const currentHealth = player.getComponent("minecraft:health");
-    const currentHealthValue = currentHealth ? currentHealth.currentValue : BASE_PLAYER_HEALTH;
+    const newMaxHealth = BASE_PLAYER_HEALTH + (newLevel * 4);
+
+    const healthComponent = player.getComponent("minecraft:health");
+    const currentHealthValue = healthComponent ? healthComponent.currentValue : BASE_PLAYER_HEALTH;
 
     if (oldLevel > 0) {
       try {
@@ -73,20 +77,9 @@ export function updateHealthBoost(player, equipmentHealth, levelHealth, healthPe
       refreshHealthBoostEffect(player, newLevel);
     }
 
-    const oldMaxHealth = BASE_PLAYER_HEALTH + (oldLevel * 4);
-    const newMaxHealth = BASE_PLAYER_HEALTH + (newLevel * 4);
-
-    let restoredHealth;
-    if (currentHealthValue >= newMaxHealth) {
-      restoredHealth = newMaxHealth;
-    } else {
-      restoredHealth = currentHealthValue;
-    }
-
-    const healthComponent = player.getComponent("minecraft:health");
     if (healthComponent) {
-      const finalHealth = Math.min(restoredHealth, newMaxHealth);
-      healthComponent.setCurrentValue(finalHealth);
+      const finalHealth = Math.min(currentHealthValue, newMaxHealth);
+      healthComponent.setCurrentValue(Math.max(1, finalHealth));
     }
 
     state.currentLevel = newLevel;
@@ -94,7 +87,7 @@ export function updateHealthBoost(player, equipmentHealth, levelHealth, healthPe
     state.levelHealth = newLevelHealth;
     state.healthPercent = newHealthPercent;
 
-    debug.logWithTag("HealthBoostManager", `${player.name}: 血量恢复 ${currentHealthValue} -> ${restoredHealth}, 新最大生命: ${newMaxHealth}`);
+    debug.logWithTag("HealthBoostManager", `${player.name}: 当前生命 ${currentHealthValue}, 新最大生命: ${newMaxHealth}`);
 
   } catch (error) {
     debug.logError("HealthBoostManager", `更新生命提升时出错: ${error}`);

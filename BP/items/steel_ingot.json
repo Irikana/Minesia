@@ -4,7 +4,8 @@
                            "description":  {
                                                "identifier":  "minesia:steel_ingot",
                                                "menu_category":  {
-                                                                     "category":  "items"
+                                                                     "category":  "items",
+                                                                     "group":  "minesia:itemGroup.name.materials"
                                                                  }
                                            },
                            "components":  {

@@ -4,7 +4,7 @@ export const CRITICAL_CONFIG = {
     maxCriticalRate: 100,
     criticalDamageMultiplier: 1.5,
     particleEffect: "minecraft:critical_hit_emitter",
-    soundEffect: "random.orb",
+    soundEffect: "random.crit",
     weaponCriticalBonuses: {
         "minesia:black_dagger": 50,
     },

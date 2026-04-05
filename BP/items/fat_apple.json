@@ -4,7 +4,7 @@
                            "description":  {
                                                "identifier":  "minesia:fat_apple",
                                                "menu_category":  {
-                                                                     "category":  "equipment",
+                                                                     "category":  "items",
                                                                      "group":  "minecraft:itemGroup.name.miscFood"
                                                                  }
                                            },

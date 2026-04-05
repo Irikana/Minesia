@@ -4,7 +4,8 @@
         "description": {
             "identifier": "minesia:desert_pyramid_shard",
             "menu_category": {
-                "category": "items"
+                "category": "items",
+                "group": "minesia:itemGroup.name.accessories"
             }
         },
         "components": {

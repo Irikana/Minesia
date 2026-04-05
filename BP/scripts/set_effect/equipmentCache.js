@@ -1,7 +1,8 @@
 import { system } from "@minecraft/server";
-import { EquipmentSlot } from "@minecraft/server";
+import { EquipmentSlot, EntityComponentTypes } from "@minecraft/server";
 import { SLOT_MAP } from "./equipment.js";
 import { debug } from "../debug/debugManager.js";
+import { ACCESSORY_CONFIG } from "../accessory/index.js";
 
 const playerEquipmentCache = new Map();
 const playerLastCheckTick = new Map();
@@ -32,6 +33,14 @@ export function getCachedEquipment(player, forceRefresh = false) {
         newEquipment[slotName] = item ? item.typeId : null;
     }
     
+    const inventory = player.getComponent(EntityComponentTypes.Inventory);
+    if (inventory?.container) {
+        for (const slotIndex of ACCESSORY_CONFIG.slotIndexes) {
+            const item = inventory.container.getItem(slotIndex);
+            newEquipment[`accessory_${slotIndex}`] = item ? item.typeId : null;
+        }
+    }
+    
     const previousEquipment = playerEquipmentCache.get(playerId);
     if (previousEquipment) {
         for (const slotName in newEquipment) {
@@ -52,6 +61,10 @@ export function getEquipmentStateHash(equipment) {
     for (const slotName of Object.keys(SLOT_MAP).sort()) {
         parts.push(`${slotName}:${equipment[slotName] || 'empty'}`);
     }
+    for (const slotIndex of ACCESSORY_CONFIG.slotIndexes) {
+        const key = `accessory_${slotIndex}`;
+        parts.push(`${key}:${equipment[key] || 'empty'}`);
+    }
     return parts.join('|');
 }
 
@@ -69,6 +82,18 @@ export function hasEquipmentChanged(player) {
         const currentId = item ? item.typeId : null;
         if (currentId !== cachedEquipment[slotName]) {
             return true;
+        }
+    }
+    
+    const inventory = player.getComponent(EntityComponentTypes.Inventory);
+    if (inventory?.container) {
+        for (const slotIndex of ACCESSORY_CONFIG.slotIndexes) {
+            const item = inventory.container.getItem(slotIndex);
+            const currentId = item ? item.typeId : null;
+            const key = `accessory_${slotIndex}`;
+            if (currentId !== cachedEquipment[key]) {
+                return true;
+            }
         }
     }
     

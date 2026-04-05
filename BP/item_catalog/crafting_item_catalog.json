@@ -1,0 +1,163 @@
+{
+    "format_version": "1.21.60",
+    "minecraft:crafting_items_catalog": {
+        "categories": [
+            {
+                "category_name": "equipment",
+                "groups": [
+                    {
+                        "group_identifier": {
+                            "icon": "minesia:diamond_dagger",
+                            "name": "minesia:itemGroup.name.daggers"
+                        },
+                        "items": [
+                            "minesia:wooden_dagger",
+                            "minesia:stone_dagger",
+                            "minesia:copper_dagger",
+                            "minesia:iron_dagger",
+                            "minesia:golden_dagger",
+                            "minesia:diamond_dagger",
+                            "minesia:netherite_dagger",
+                            "minesia:steel_dagger",
+                            "minesia:black_dagger"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "minesia:diamond_scythe",
+                            "name": "minesia:itemGroup.name.scythes"
+                        },
+                        "items": [
+                            "minesia:wooden_scythe",
+                            "minesia:stone_scythe",
+                            "minesia:copper_scythe",
+                            "minesia:iron_scythe",
+                            "minesia:golden_scythe",
+                            "minesia:diamond_scythe",
+                            "minesia:netherite_scythe",
+                            "minesia:steel_scythe",
+                            "minesia:desert_scythe"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "minesia:pioneer",
+                            "name": "minesia:itemGroup.name.specialWeapons"
+                        },
+                        "items": [
+                            "minesia:flamie",
+                            "minesia:the_forest",
+                            "minesia:ender_pearl_sword",
+                            "minesia:duty_ice",
+                            "minesia:pioneer",
+                            "minesia:selfish",
+                            "minesia:white_golden_sword",
+                            "minesia:desert_walker",
+                            "minesia:desert_snow",
+                            "minesia:tina",
+                            "minesia:toy_sword"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.helmet"
+                        },
+                        "items": [
+                            "minesia:steel_helmet"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.chestplate"
+                        },
+                        "items": [
+                            "minesia:steel_chestplate"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.leggings"
+                        },
+                        "items": [
+                            "minesia:steel_leggings"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.boots"
+                        },
+                        "items": [
+                            "minesia:steel_boots"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.sword"
+                        },
+                        "items": [
+                            "minesia:steel_sword"
+                        ]
+                    }
+                ]
+            },
+            {
+                "category_name": "items",
+                "groups": [
+                    {
+                        "group_identifier": {
+                            "icon": "minesia:gold_coin",
+                            "name": "minesia:itemGroup.name.currency"
+                        },
+                        "items": [
+                            "minesia:wooden_coin",
+                            "minesia:stone_coin",
+                            "minesia:silver_coin",
+                            "minesia:gold_coin",
+                            "minesia:diamond_coin",
+                            "minesia:emerald_coin",
+                            "minesia:ruby_coin"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "minesia:life_stone",
+                            "name": "minesia:itemGroup.name.accessories"
+                        },
+                        "items": [
+                            "minesia:life_stone",
+                            "minesia:spider_leg",
+                            "minesia:golden_phantom_membrane",
+                            "minesia:statue_totem",
+                            "minesia:desert_pyramid_pearl",
+                            "minesia:desert_pyramid_eye",
+                            "minesia:desert_pyramid_shard"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "icon": "minesia:steel_ingot",
+                            "name": "minesia:itemGroup.name.materials"
+                        },
+                        "items": [
+                            "minesia:steel_ingot"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.miscFood"
+                        },
+                        "items": [
+                            "minesia:fat_apple",
+                            "minesia:cooked_beef_super"
+                        ]
+                    },
+                    {
+                        "items": [
+                            "minesia:attribute_panel"
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

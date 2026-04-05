@@ -15,6 +15,7 @@ import { initializeWeaponEffects } from "./custom_events/item_events/weaponEffec
 import { initializeCriticalHitSystem } from "./critical_hit/criticalHitMain.js";
 import { initializeDynamicLightSystem, updateDynamicLightSystem } from "./dynamic_light/index.js";
 import { initializeAttributePanelSystem } from "./attribute_panel/index.js";
+import { initializeAccessorySystem } from "./accessory/index.js";
 
 const LANGUAGE_OBJECTIVE = 'minesia_language';
 
@@ -137,6 +138,9 @@ system.runTimeout(() => {
 
         initializeAttributePanelSystem();
         debug.logWithTag("Minesia", "✓ 属性面板系统就绪");
+
+        initializeAccessorySystem();
+        debug.logWithTag("Minesia", "✓ 饰品栏系统就绪");
 
         systemReady = true;
         debug.logWithTag("Minesia", "🎉 核心系统初始化完成!");

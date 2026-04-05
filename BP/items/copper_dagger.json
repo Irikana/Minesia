@@ -5,7 +5,7 @@
                                                "identifier":  "minesia:copper_dagger",
                                                "menu_category":  {
                                                                      "category":  "equipment",
-                                                                     "group":  "minecraft:itemGroup.name.sword"
+                                                                     "group":  "minesia:itemGroup.name.daggers"
                                                                  }
                                            },
                            "components":  {
