@@ -4,12 +4,16 @@
 		"description": {
 			"identifier": "minesia:fat_apple",
 			"menu_category": {
-				"category": "equipment",
-				"group": "itemGroup.name.miscFood"
+				"category": "items",
+				"group": "minecraft:itemGroup.name.miscFood"
 			}
 		},
 		"components": {
-			"minecraft:icon": "minesia_fat_apple",
+			"minecraft:icon": {
+				"textures": {
+					"default": "minesia_fat_apple"
+				}
+			},
 			"minecraft:use_modifiers": {
 				"use_duration": 1.6
 			},

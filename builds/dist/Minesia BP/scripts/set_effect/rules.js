@@ -69,6 +69,25 @@ export const ITEM_RULES = [
     actions: [
       { kind: "state", key: "ender_pearl_sword_offhand_active", value: true }
     ]
+  },
+
+  {
+    id: "minesia:desert_pyramid_pearl",
+    slots: ["offhand"],
+    actions: [
+      { kind: "state", key: "desert_pyramid_pearl_active", value: true },
+      { kind: "attribute_percent", type: "health", percent: 50 },
+      { kind: "attribute_percent", type: "stamina", percent: 100 }
+    ]
+  },
+
+  {
+    id: "minesia:desert_pyramid_eye",
+    slots: ["offhand"],
+    actions: [
+      { kind: "state", key: "desert_pyramid_eye_active", value: true },
+      { kind: "attribute_percent", type: "stamina", percent: 50 }
+    ]
   }
 ];
 

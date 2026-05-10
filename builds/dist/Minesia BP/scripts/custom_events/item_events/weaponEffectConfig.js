@@ -9,6 +9,7 @@ import { applyPioneerEffect } from "./pioneerEffect.js";
 import { applySelfishEffect } from "./selfishEffect.js";
 import { applyBlackDaggerEffect } from "./blackDaggerEffect.js";
 import { applyWhiteGoldenSwordEffect } from "./whiteGoldenSwordEffect.js";
+import { applyDesertSnowEffect } from "./desertSnowEffect.js";
 
 export function initializeWeaponEffects() {
     registerWeaponEffect({
@@ -167,6 +168,16 @@ export function initializeWeaponEffects() {
         priority: 15,
         onAttack: ({ attacker, mainhandItem }) => {
             applyWhiteGoldenSwordEffect(attacker, mainhandItem);
+        }
+    });
+
+    registerWeaponEffect({
+        id: "desert_snow",
+        name: "沙漠暴雪",
+        itemIds: ["minesia:desert_snow"],
+        priority: 15,
+        onAttack: ({ target, attacker }) => {
+            applyDesertSnowEffect(target, attacker);
         }
     });
 }

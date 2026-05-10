@@ -108,8 +108,6 @@ export function applyActions(player, actions) {
           break;
       }
     }
-
-    updatePlayerAttributes(player, currentAttributes);
   } catch (error) {
     debug.logError("Actions", `应用动作时出错: ${error}`);
   }

@@ -4,11 +4,16 @@
 		"description": {
 			"identifier": "minesia:golden_phantom_membrane",
 			"menu_category": {
-				"category": "items"
+				"category": "items",
+				"group": "minesia:itemGroup.name.accessories"
 			}
 		},
 		"components": {
-			"minecraft:icon": "minesia_golden_phantom_membrane",
+			"minecraft:icon": {
+				"textures": {
+					"default": "minesia_golden_phantom_membrane"
+				}
+			},
 			"minecraft:max_stack_size": 1,
 			"minecraft:allow_off_hand": true,
 			"minecraft:hand_equipped": false,

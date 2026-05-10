@@ -5,11 +5,15 @@
 			"identifier": "minesia:desert_walker",
 			"menu_category": {
 				"category": "equipment",
-				"group": "itemGroup.name.sword"
+				"group": "minesia:itemGroup.name.specialWeapons"
 			}
 		},
 		"components": {
-			"minecraft:icon": "minesia_desert_walker",
+			"minecraft:icon": {
+				"textures": {
+					"default": "minesia_desert_walker"
+				}
+			},
 			"minecraft:max_stack_size": 1,
 			"minecraft:hand_equipped": true,
 			"minecraft:durability": {

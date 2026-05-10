@@ -42,8 +42,8 @@ export const RANDOM_DAMAGE_WEAPONS = [
     },
     {
         id: "minesia:copper_dagger",
-        minDamage: 2,
-        maxDamage: 4,
+        minDamage: 3,
+        maxDamage: 5,
         enabled: true
     },
     {
@@ -110,8 +110,8 @@ export const RANDOM_DAMAGE_WEAPONS = [
     },
     {
         id: "minesia:copper_scythe",
-        minDamage: 5.5,
-        maxDamage: 6.5,
+        minDamage: 6,
+        maxDamage: 7.5,
         isScythe: true,
         enabled: true
     },

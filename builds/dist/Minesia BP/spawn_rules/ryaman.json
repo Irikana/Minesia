@@ -3,7 +3,7 @@
 	"minecraft:spawn_rules": {
 		"description": {
 			"identifier": "minesia:ryaman",
-			"population_control": "villager"
+			"population_control": "animal"
 		},
 		"conditions": [
 			{
@@ -14,10 +14,10 @@
 					"adjust_for_weather": true
 				},
 				"minecraft:weight": {
-					"default": 8
+					"default": 5
 				},
 				"minecraft:density_limit": {
-					"surface": 2
+					"surface": 1
 				},
 				"minecraft:biome_filter": {
 					"any_of": [
@@ -40,24 +40,12 @@
 						{
 							"test": "has_biome_tag",
 							"value": "taiga"
-						},
-						{
-							"test": "has_biome_tag",
-							"value": "snow"
-						},
-						{
-							"test": "has_biome_tag",
-							"value": "forest"
-						},
-						{
-							"test": "has_biome_tag",
-							"value": "jungle"
-						},
-						{
-							"test": "has_biome_tag",
-							"value": "swamp"
 						}
 					]
+				},
+				"minecraft:spawn_event": {
+					"event": "minecraft:entity_spawned",
+					"target": "self"
 				}
 			}
 		]

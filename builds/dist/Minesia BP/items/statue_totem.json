@@ -4,11 +4,16 @@
 		"description": {
 			"identifier": "minesia:statue_totem",
 			"menu_category": {
-				"category": "equipment"
+				"category": "items",
+				"group": "minesia:itemGroup.name.accessories"
 			}
 		},
 		"components": {
-			"minecraft:icon": "minesia_statue_totem",
+			"minecraft:icon": {
+				"textures": {
+					"default": "minesia_statue_totem"
+				}
+			},
 			"minecraft:max_stack_size": 1,
 			"minecraft:allow_off_hand": true,
 			"minecraft:display_name": {

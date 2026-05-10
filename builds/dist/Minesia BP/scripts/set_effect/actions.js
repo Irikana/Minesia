@@ -7,6 +7,7 @@
 import { system } from "@minecraft/server";
 import { updateHealthBoost } from "./healthBoostManager.js";
 import { debug } from "../debug/debugManager.js";
+import { StaminaSystem } from "../stamina/staminaMain.js";
 
 export const CONTROLLED_EFFECTS = [
   "strength",
@@ -27,7 +28,9 @@ export const CONTROLLED_TAGS = [
   "spider_leg_active",
   "statue_totem_active",
   "flamie_offhand_active",
-  "ender_pearl_sword_offhand_active"
+  "ender_pearl_sword_offhand_active",
+  "desert_pyramid_pearl_active",
+  "desert_pyramid_eye_active"
 ];
 
 const playerEffects = new Map();
@@ -56,6 +59,8 @@ export function clearStates(player) {
     if (playerAttributes.has(playerId)) {
       playerAttributes.set(playerId, new Map());
     }
+    
+    StaminaSystem.setMaxStaminaBonus(player, 0);
   } catch (error) {
     debug.logError("Actions", `清理状态时出错: ${error}`);
   }
@@ -103,8 +108,6 @@ export function applyActions(player, actions) {
           break;
       }
     }
-
-    updatePlayerAttributes(player, currentAttributes);
   } catch (error) {
     debug.logError("Actions", `应用动作时出错: ${error}`);
   }
@@ -179,6 +182,11 @@ function updatePlayerAttributes(player, currentAttributes) {
     const healthPercent = currentAttributes.get("health_percent") || 0;
 
     updateHealthBoost(player, equipmentHealth, levelHealth, healthPercent);
+    
+    const staminaPercent = currentAttributes.get("stamina_percent") || 0;
+    const baseMaxStamina = 100;
+    const staminaBonus = Math.floor(baseMaxStamina * staminaPercent / 100);
+    StaminaSystem.setMaxStaminaBonus(player, staminaBonus);
   } catch (error) {
     debug.logError("Actions", `更新玩家属性时出错: ${error}`);
   }

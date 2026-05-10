@@ -6,7 +6,7 @@
                     "wants": [
                         {
                             "item": "minesia:gold_coin",
-                            "quantity": 20
+                            "quantity": 8
                         }
                     ],
                     "gives": [
@@ -21,7 +21,7 @@
                     "wants": [
                         {
                             "item": "minesia:diamond_coin",
-                            "quantity": 5
+                            "quantity": 2
                         }
                     ],
                     "gives": [
@@ -36,7 +36,7 @@
                     "wants": [
                         {
                             "item": "minesia:gold_coin",
-                            "quantity": 25
+                            "quantity": 10
                         }
                     ],
                     "gives": [
@@ -51,7 +51,7 @@
                     "wants": [
                         {
                             "item": "minesia:gold_coin",
-                            "quantity": 20
+                            "quantity": 8
                         }
                     ],
                     "gives": [
@@ -66,7 +66,7 @@
                     "wants": [
                         {
                             "item": "minesia:gold_coin",
-                            "quantity": 10
+                            "quantity": 4
                         }
                     ],
                     "gives": [
@@ -81,7 +81,7 @@
                     "wants": [
                         {
                             "item": "minesia:gold_coin",
-                            "quantity": 10
+                            "quantity": 4
                         }
                     ],
                     "gives": [
@@ -96,7 +96,7 @@
                     "wants": [
                         {
                             "item": "minesia:gold_coin",
-                            "quantity": 10
+                            "quantity": 4
                         }
                     ],
                     "gives": [
@@ -111,7 +111,7 @@
                     "wants": [
                         {
                             "item": "minesia:gold_coin",
-                            "quantity": 15
+                            "quantity": 6
                         }
                     ],
                     "gives": [
@@ -126,7 +126,7 @@
                     "wants": [
                         {
                             "item": "minesia:stone_coin",
-                            "quantity": 15
+                            "quantity": 8
                         }
                     ],
                     "gives": [
@@ -141,7 +141,7 @@
                     "wants": [
                         {
                             "item": "minesia:stone_coin",
-                            "quantity": 25
+                            "quantity": 12
                         }
                     ],
                     "gives": [
@@ -156,7 +156,7 @@
                     "wants": [
                         {
                             "item": "minesia:gold_coin",
-                            "quantity": 10
+                            "quantity": 4
                         }
                     ],
                     "gives": [

@@ -1,7 +1,8 @@
-import { world, system } from "@minecraft/server";
+import { world, system, EntityComponentTypes } from "@minecraft/server";
 import { CRITICAL_CONFIG, getCriticalRateConfig, getEquipmentCriticalBonus } from "./config.js";
 import { EquipmentSlot } from "@minecraft/server";
 import { debug } from "../debug/debugManager.js";
+import { getPlayerAccessoryItems, ACCESSORY_CONFIG } from "../accessory/index.js";
 
 const CRITICAL_RATE_PROPERTY = "minesia:critical_rate";
 const playerCriticalBonuses = new Map();
@@ -44,6 +45,11 @@ export function getTotalCriticalRate(player) {
                 totalRate += getEquipmentCriticalBonus(item.typeId);
             }
         }
+    }
+    
+    const accessoryItems = getPlayerAccessoryItems(player);
+    for (const accessory of accessoryItems) {
+        totalRate += getEquipmentCriticalBonus(accessory.item.typeId);
     }
     
     return Math.min(totalRate, CRITICAL_CONFIG.maxCriticalRate);

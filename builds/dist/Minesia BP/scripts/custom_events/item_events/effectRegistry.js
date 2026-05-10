@@ -119,6 +119,48 @@ export const ITEM_EFFECTS = {
                 StaminaSystem.setMaxStaminaBonus(player, 0);
             }
         }
+    },
+    desert_pyramid_pearl_active: {
+        name: "沙漠神殿珍珠",
+        description: "副手装备时增加100%最大体力值、50%最大生命值，每秒恢复8点体力值",
+        itemId: "minesia:desert_pyramid_pearl",
+        interval: 20,
+        onActivate: (player, StaminaSystem) => {
+            if (StaminaSystem) {
+                StaminaSystem.setMaxStaminaBonus(player, 100);
+            }
+        },
+        onTick: (player, StaminaSystem) => {
+            if (StaminaSystem) {
+                StaminaSystem.recoverStamina(player, 8, true);
+            }
+        },
+        onDeactivate: (player, StaminaSystem) => {
+            if (StaminaSystem) {
+                StaminaSystem.setMaxStaminaBonus(player, 0);
+            }
+        }
+    },
+    desert_pyramid_eye_active: {
+        name: "沙漠神殿之眼",
+        description: "副手装备时增加30%暴击率、50%最大体力值，每秒恢复4点体力值",
+        itemId: "minesia:desert_pyramid_eye",
+        interval: 20,
+        onActivate: (player, StaminaSystem) => {
+            if (StaminaSystem) {
+                StaminaSystem.setMaxStaminaBonus(player, 50);
+            }
+        },
+        onTick: (player, StaminaSystem) => {
+            if (StaminaSystem) {
+                StaminaSystem.recoverStamina(player, 4, true);
+            }
+        },
+        onDeactivate: (player, StaminaSystem) => {
+            if (StaminaSystem) {
+                StaminaSystem.setMaxStaminaBonus(player, 0);
+            }
+        }
     }
 };
 

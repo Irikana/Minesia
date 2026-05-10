@@ -1,9 +1,3 @@
-// healthBoostManager.js
-// ===============================
-// 生命提升管理器
-// 解决装备切换时生命提升效果短暂消失的问题
-// ===============================
-
 import { world, system } from "@minecraft/server";
 import { debug } from "../debug/debugManager.js";
 

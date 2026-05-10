@@ -4,7 +4,8 @@
 		"description": {
 			"identifier": "minesia:silver_coin",
 			"menu_category": {
-				"category": "items"
+				"category": "items",
+				"group": "minesia:itemGroup.name.currency"
 			}
 		},
 		"components": {

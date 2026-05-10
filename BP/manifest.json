@@ -1,103 +1,73 @@
 {
-	"format_version": 2,
+	"format_version": 3,
 	"metadata": {
 		"authors": [
 			"Hua1286"
-		]
+		],
+		"generated_with": {
+			"bridge": [
+				"2.7.54"
+			],
+			"dash": [
+				"0.11.7"
+			]
+		}
 	},
 	"header": {
 		"name": "Minesia",
 		"description": "A mod meant to create a new world.",
-		"min_engine_version": [
-			1,
-			26,
-			10
-		],
+		"min_engine_version": "1.26.10",
 		"uuid": "6bf122ec-5e19-4879-9bf7-3e76728579f8",
-		"version": [
-			0,
-			0,
-			15
-		]
+		"version": "0.0.16"
 	},
 	"modules": [
 		{
 			"type": "data",
 			"uuid": "133ccf6d-621a-425a-a095-629822d609eb",
-			"version": [
-				1,
-				0,
-				0
-			]
+			"version": "1.0.0"
 		},
 		{
 			"type": "script",
 			"language": "javascript",
 			"uuid": "d41ecdc7-d43e-4e3b-97ac-3e9c3d8dd9d1",
-			"version": [
-				1,
-				0,
-				0
-			],
-			"entry": "scripts/main.js",
-			"properties": [
-				{
-					"type": "number",
-					"identifier": "minesia:stamina"
-				},
-				{
-					"type": "number",
-					"identifier": "minesia:critical_rate"
-				}
-			]
+			"version": "1.0.0",
+			"entry": "scripts/main.js"
 		}
 	],
 	"subpacks": [
 		{
 			"folder_name": "Minesia Journey",
 			"name": "Minesia Journey",
-			"memory_tier": 1
+			"memory_performance_tier": 1
 		},
 		{
 			"folder_name": "Very Easy",
 			"name": "Very Easy",
-			"memory_tier": 1
+			"memory_performance_tier": 1
 		},
 		{
 			"folder_name": "Easy",
 			"name": "Easy",
-			"memory_tier": 1
+			"memory_performance_tier": 1
 		},
 		{
 			"folder_name": "Default",
 			"name": "Default",
-			"memory_tier": 1
+			"memory_performance_tier": 1
 		}
 	],
 	"dependencies": [
 		{
 			"module_name": "@minecraft/server",
-			"version": [
-				2,
-				6,
-				0
-			]
+			"version": "2.6.0"
 		},
 		{
 			"module_name": "@minecraft/server-ui",
-			"version": [
-				2,
-				0,
-				0
-			]
+			"version": "2.0.0"
 		},
 		{
 			"uuid": "5ddb3965-4730-42d9-89ac-eb4062bb4f96",
-			"version": [
-				0,
-				0,
-				15
-			]
+			"version": "0.0.16"
 		}
 	]
 }

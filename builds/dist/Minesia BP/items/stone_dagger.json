@@ -5,11 +5,15 @@
 			"identifier": "minesia:stone_dagger",
 			"menu_category": {
 				"category": "equipment",
-				"group": "itemGroup.name.sword"
+				"group": "minesia:itemGroup.name.daggers"
 			}
 		},
 		"components": {
-			"minecraft:icon": "minesia_stone_dagger",
+			"minecraft:icon": {
+				"textures": {
+					"default": "minesia_stone_dagger"
+				}
+			},
 			"minecraft:max_stack_size": 1,
 			"minecraft:hand_equipped": true,
 			"minecraft:durability": {

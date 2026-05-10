@@ -1,7 +1,7 @@
 // setEffectMain.js - 套装效果主逻辑（稳定版)
 // 解决装备检测不稳定和状态同步问题
 
-import { world, system } from "@minecraft/server";
+import { world, system, EntityComponentTypes } from "@minecraft/server";
 import * as rulesModule from "./rules.js";
 import * as equipmentModule from "./equipment.js";
 import * as actionsModule from "./actions.js";
@@ -10,6 +10,7 @@ import { MinesiaLevelSystem } from "../minesia_level/level_system.js";
 import { MinesiaLevelEventSystem } from "../minesia_level/minesiaLevelEvent.js";
 import { debug } from "../debug/debugManager.js";
 import { getCachedEquipment, hasEquipmentChanged, getEquipmentStateHash, clearPlayerCache } from "./equipmentCache.js";
+import { getPlayerAccessoryItems, ACCESSORY_CONFIG } from "../accessory/index.js";
 
 import { processItemEffects } from "../custom_events/index.js";
 
@@ -90,6 +91,16 @@ function processItemRules(player, equippable) {
             if (item && item.typeId === rule.id) {
                 debug.logWithTag("SetEffectMain", `${player.name}: 检测到物品 ${rule.id} 在槽位 ${slotName}`);
                 actionsModule.applyActions(player, rule.actions);
+            }
+        }
+        
+        if (rule.slots.includes("offhand")) {
+            const accessoryItems = getPlayerAccessoryItems(player);
+            for (const accessory of accessoryItems) {
+                if (accessory.item.typeId === rule.id) {
+                    debug.logWithTag("SetEffectMain", `${player.name}: 检测到物品 ${rule.id} 在饰品槽位 ${accessory.slotIndex}`);
+                    actionsModule.applyActions(player, rule.actions);
+                }
             }
         }
     }

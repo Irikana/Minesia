@@ -5,11 +5,15 @@
 			"identifier": "minesia:steel_leggings",
 			"menu_category": {
 				"category": "equipment",
-				"group": "itemGroup.name.leggings"
+				"group": "minecraft:itemGroup.name.leggings"
 			}
 		},
 		"components": {
-			"minecraft:icon": "minesia_steel_leggings",
+			"minecraft:icon": {
+				"textures": {
+					"default": "minesia_steel_leggings"
+				}
+			},
 			"minecraft:max_stack_size": 1,
 			"minecraft:wearable": {
 				"slot": "slot.armor.legs",
