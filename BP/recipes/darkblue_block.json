@@ -1,0 +1,13 @@
+{
+    "format_version": "1.20.80",
+    "minecraft:recipe_shaped": {
+        "description": { "identifier": "minesia:darkblue_block" },
+        "tags": ["crafting_table"],
+        "pattern": ["AAA", "AAA", "AAA"],
+        "key": {
+            "A": { "item": "minesia:darkblue_ingot" }
+        },
+        "result": { "item": "minesia:darkblue_block" },
+        "unlock": [{ "item": "minesia:darkblue_ingot" }]
+    }
+}

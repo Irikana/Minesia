@@ -1,6 +1,7 @@
 // Minesia等级系统扩展功能
 import { world, system } from "@minecraft/server";
 import { ActionBarManager, DISPLAY_PRIORITIES } from "../action_bar/index.js";
+import { getPlayerLocale } from "../language.js";
 import { debug } from "../debug/debugManager.js";
 
 const LEVEL_DISPLAY_TEXTS = {
@@ -13,18 +14,6 @@ const LEVEL_DISPLAY_TEXTS = {
         max: "MAX"
     }
 };
-
-function getPlayerLocale(player) {
-    try {
-        const scoreboard = world.scoreboard;
-        const langObj = scoreboard?.getObjective("minesia_language");
-        if (langObj) {
-            const score = langObj.getScore(player);
-            if (score === 0) return "en_US";
-        }
-    } catch (_e) { }
-    return "zh_CN";
-}
 
 function getLevelDisplayTexts(locale = "zh_CN") {
     return LEVEL_DISPLAY_TEXTS[locale] || LEVEL_DISPLAY_TEXTS.zh_CN;
@@ -209,37 +198,8 @@ export class MinesiaLevelSystem {
     }
 
     static updateLevelDisplay(player) {
-        const playerId = player.id;
-
-        if (this.displayPaused.has(playerId)) {
-            return;
-        }
-
-        const progress = this.getLevelProgress(player);
-        if (!progress) {
-            ActionBarManager.removeLine(playerId, 'level');
-            return;
-        }
-
-        const locale = getPlayerLocale(player);
-        const texts = getLevelDisplayTexts(locale);
-        const maxLevel = this.LEVEL_EXP.length - 1;
-
-        let displayText;
-        if (progress.level >= maxLevel) {
-            displayText = `§b${texts.level} Lv.${progress.level} §6§l${texts.max}§r`;
-        } else {
-            const barLength = 12;
-            const filled = Math.max(0, Math.min(barLength, Math.floor(progress.progress * barLength)));
-            const empty = Math.max(0, barLength - filled);
-            const bar = "§a" + "■".repeat(filled) + "§8" + "■".repeat(empty);
-            const expText = `${progress.expInCurrentLevel}/${progress.expNeeded}`;
-            const percentText = Math.floor(progress.progress * 100).toString().padStart(3, " ");
-            displayText = `§b${texts.level} Lv.${progress.level} ${bar} §7${expText} §f${percentText}%`;
-        }
-
-        ActionBarManager.setLine(playerId, 'level', displayText, DISPLAY_PRIORITIES.LEVEL);
-        ActionBarManager.updateDisplay(player);
+        // 等级显示已迁移到 JSON UI 自定义 HUD(由 hudBridge 通过 title 通道驱动)
+        // 此方法保留为空,供现有调用链使用,避免破坏其他模块
     }
 
     static pauseLevelDisplay(player, duration) {

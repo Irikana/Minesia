@@ -1,5 +1,5 @@
 import { world, system, EntityComponentTypes } from "@minecraft/server";
-import { CRITICAL_CONFIG, getCriticalRateConfig, getEquipmentCriticalBonus } from "./config.js";
+import { CRITICAL_CONFIG, getCriticalRateConfig, getEquipmentCriticalBonus, getEquipmentCriticalDamageBonus } from "./config.js";
 import { EquipmentSlot } from "@minecraft/server";
 import { debug } from "../debug/debugManager.js";
 import { getPlayerAccessoryItems, ACCESSORY_CONFIG } from "../accessory/index.js";
@@ -55,9 +55,31 @@ export function getTotalCriticalRate(player) {
     return Math.min(totalRate, CRITICAL_CONFIG.maxCriticalRate);
 }
 
+export function getTotalCriticalDamageMultiplier(player) {
+    let multiplier = CRITICAL_CONFIG.criticalDamageMultiplier;
+
+    const equippable = player.getComponent('minecraft:equippable');
+    if (equippable) {
+        for (const slot of [EquipmentSlot.Head, EquipmentSlot.Chest, EquipmentSlot.Legs, EquipmentSlot.Feet, EquipmentSlot.Offhand]) {
+            const item = equippable.getEquipment(slot);
+            if (item) {
+                multiplier += getEquipmentCriticalDamageBonus(item.typeId) / 100;
+            }
+        }
+    }
+
+    const accessoryItems = getPlayerAccessoryItems(player);
+    for (const accessory of accessoryItems) {
+        multiplier += getEquipmentCriticalDamageBonus(accessory.item.typeId) / 100;
+    }
+
+    return multiplier;
+}
+
 export function applyCriticalHit(attacker, target, baseDamage) {
     try {
-        const criticalDamage = Math.round(baseDamage * (CRITICAL_CONFIG.criticalDamageMultiplier - 1) * 10) / 10;
+        const multiplier = getTotalCriticalDamageMultiplier(attacker);
+        const criticalDamage = Math.round(baseDamage * (multiplier - 1) * 10) / 10;
         
         if (criticalDamage > 0) {
             isApplyingCriticalDamage = true;

@@ -3,5 +3,9 @@
 	"padding": 8,
 	"resource_pack_name": "New Project",
 	"texture_name": "atlas.terrain",
-	"texture_data": {}
+	"texture_data": {
+		"darkblue_ore": { "textures": "textures/blocks/darkblue_ore" },
+		"deepslate_darkblue_ore": { "textures": "textures/blocks/deepslate_darkblue_ore" },
+		"darkblue_block": { "textures": "textures/blocks/darkblue_block" }
+	}
 }

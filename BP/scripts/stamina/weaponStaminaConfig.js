@@ -47,7 +47,11 @@ export const WEAPON_STAMINA_COST = {
     "minesia:selfish": 3,
     "minesia:black_dagger": 2,
     "minesia:white_golden_sword": 2,
-    "minesia:desert_snow": 2
+    "minesia:desert_snow": 2,
+    "minesia:frost_edge": 3,
+    "minesia:darkblue_sword": 2,
+    "minesia:darkblue_spear": 2,
+    "minesia:darkblue_axe": 3
 };
 
 export function getWeaponStaminaCost(itemId) {

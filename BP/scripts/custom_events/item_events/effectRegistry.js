@@ -1,10 +1,53 @@
-import { EquipmentSlot } from "@minecraft/server";
+import { EquipmentSlot, EntityComponentTypes } from "@minecraft/server";
 import { debug } from "../../debug/debugManager.js";
+import { getPlayerAccessoryItems } from "../../accessory/index.js";
+
+function findItemInOffhandOrAccessory(player, itemId) {
+    const equippable = player.getComponent("minecraft:equippable");
+    if (equippable) {
+        const offhandItem = equippable.getEquipment(EquipmentSlot.Offhand);
+        if (offhandItem && offhandItem.typeId === itemId) {
+            return { location: "offhand", item: offhandItem };
+        }
+    }
+
+    for (const accessory of getPlayerAccessoryItems(player)) {
+        if (accessory.item.typeId === itemId) {
+            return { location: "accessory", slotIndex: accessory.slotIndex, item: accessory.item };
+        }
+    }
+
+    return null;
+}
+
+function updateItemInSlot(player, found) {
+    if (found.location === "offhand") {
+        const equippable = player.getComponent("minecraft:equippable");
+        if (equippable) equippable.setEquipment(EquipmentSlot.Offhand, found.item);
+    } else if (found.location === "accessory") {
+        const inventory = player.getComponent(EntityComponentTypes.Inventory);
+        if (inventory?.container) {
+            inventory.container.setItem(found.slotIndex, found.item);
+        }
+    }
+}
+
+function removeItemInSlot(player, found) {
+    if (found.location === "offhand") {
+        const equippable = player.getComponent("minecraft:equippable");
+        if (equippable) equippable.setEquipment(EquipmentSlot.Offhand, undefined);
+    } else if (found.location === "accessory") {
+        const inventory = player.getComponent(EntityComponentTypes.Inventory);
+        if (inventory?.container) {
+            inventory.container.setItem(found.slotIndex, undefined);
+        }
+    }
+}
 
 export const ITEM_EFFECTS = {
     golden_phantom_membrane_active: {
         name: "黄金幻翼膜",
-        description: "缓降I，最大体力+20%，每秒消耗1点耐久",
+        description: "缓降I，最大体力+20，每秒消耗1点耐久",
         itemId: "minesia:golden_phantom_membrane",
         interval: 20,
         onActivate: (player, StaminaSystem) => {
@@ -12,7 +55,6 @@ export const ITEM_EFFECTS = {
                 amplifier: 0,
                 showParticles: false
             });
-            StaminaSystem.setMaxStaminaBonus(player, 20);
         },
         onTick: (player, StaminaSystem) => {
             player.addEffect("minecraft:slow_falling", 40, {
@@ -21,20 +63,17 @@ export const ITEM_EFFECTS = {
             });
 
             try {
-                const equippable = player.getComponent("minecraft:equippable");
-                if (!equippable) return;
+                const found = findItemInOffhandOrAccessory(player, "minesia:golden_phantom_membrane");
+                if (!found) return;
 
-                const offhandItem = equippable.getEquipment(EquipmentSlot.Offhand);
-                if (!offhandItem || offhandItem.typeId !== "minesia:golden_phantom_membrane") return;
-
-                const durability = offhandItem.getComponent("minecraft:durability");
+                const durability = found.item.getComponent("minecraft:durability");
                 if (!durability) return;
 
                 if (durability.damage < durability.maxDurability) {
                     durability.damage += 1;
-                    equippable.setEquipment(EquipmentSlot.Offhand, offhandItem);
+                    updateItemInSlot(player, found);
                 } else {
-                    equippable.setEquipment(EquipmentSlot.Offhand, undefined);
+                    removeItemInSlot(player, found);
                     player.playSound("random.break");
                 }
             } catch (error) {
@@ -43,7 +82,6 @@ export const ITEM_EFFECTS = {
         },
         onDeactivate: (player, StaminaSystem) => {
             player.removeEffect("minecraft:slow_falling");
-            StaminaSystem.setMaxStaminaBonus(player, 0);
         }
     },
     life_stone_active: {
@@ -79,9 +117,6 @@ export const ITEM_EFFECTS = {
         itemId: "minesia:statue_totem",
         interval: 10,
         onActivate: (player, StaminaSystem) => {
-            if (StaminaSystem) {
-                StaminaSystem.setMaxStaminaBonus(player, 80);
-            }
         },
         onTick: (player, StaminaSystem) => {
             if (StaminaSystem) {
@@ -90,13 +125,10 @@ export const ITEM_EFFECTS = {
 
             const health = player.getComponent("minecraft:health");
             if (health && health.currentValue <= 4) {
-                const equippable = player.getComponent("minecraft:equippable");
-                if (!equippable) return;
+                const found = findItemInOffhandOrAccessory(player, "minesia:statue_totem");
+                if (!found) return;
 
-                const offhandItem = equippable.getEquipment(EquipmentSlot.Offhand);
-                if (!offhandItem || offhandItem.typeId !== "minesia:statue_totem") return;
-
-                equippable.setEquipment(EquipmentSlot.Offhand, undefined);
+                removeItemInSlot(player, found);
 
                 player.addEffect("minecraft:resistance", 1200, { amplifier: 0, showParticles: true });
                 player.addEffect("minecraft:fire_resistance", 1200, { amplifier: 0, showParticles: true });
@@ -115,9 +147,6 @@ export const ITEM_EFFECTS = {
             }
         },
         onDeactivate: (player, StaminaSystem) => {
-            if (StaminaSystem) {
-                StaminaSystem.setMaxStaminaBonus(player, 0);
-            }
         }
     },
     desert_pyramid_pearl_active: {
@@ -126,9 +155,6 @@ export const ITEM_EFFECTS = {
         itemId: "minesia:desert_pyramid_pearl",
         interval: 20,
         onActivate: (player, StaminaSystem) => {
-            if (StaminaSystem) {
-                StaminaSystem.setMaxStaminaBonus(player, 100);
-            }
         },
         onTick: (player, StaminaSystem) => {
             if (StaminaSystem) {
@@ -136,9 +162,6 @@ export const ITEM_EFFECTS = {
             }
         },
         onDeactivate: (player, StaminaSystem) => {
-            if (StaminaSystem) {
-                StaminaSystem.setMaxStaminaBonus(player, 0);
-            }
         }
     },
     desert_pyramid_eye_active: {
@@ -147,9 +170,6 @@ export const ITEM_EFFECTS = {
         itemId: "minesia:desert_pyramid_eye",
         interval: 20,
         onActivate: (player, StaminaSystem) => {
-            if (StaminaSystem) {
-                StaminaSystem.setMaxStaminaBonus(player, 50);
-            }
         },
         onTick: (player, StaminaSystem) => {
             if (StaminaSystem) {
@@ -157,9 +177,6 @@ export const ITEM_EFFECTS = {
             }
         },
         onDeactivate: (player, StaminaSystem) => {
-            if (StaminaSystem) {
-                StaminaSystem.setMaxStaminaBonus(player, 0);
-            }
         }
     }
 };

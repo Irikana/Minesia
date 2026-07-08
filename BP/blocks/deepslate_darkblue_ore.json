@@ -1,0 +1,29 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:block": {
+        "description": {
+            "identifier": "minesia:deepslate_darkblue_ore",
+            "menu_category": {
+                "category": "nature"
+            }
+        },
+        "components": {
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "deepslate_darkblue_ore",
+                    "render_method": "opaque"
+                }
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 4.5
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 6
+            },
+            "minecraft:loot": "loot_tables/blocks/deepslate_darkblue_ore.json",
+            "minecraft:map_color": {
+                "color": "#1a2d4a"
+            }
+        }
+    }
+}

@@ -3,5 +3,17 @@
 		1,
 		1,
 		0
-	]
+	],
+	"minesia:darkblue_ore": {
+		"sound": "stone",
+		"textures": "darkblue_ore"
+	},
+	"minesia:deepslate_darkblue_ore": {
+		"sound": "deepslate",
+		"textures": "deepslate_darkblue_ore"
+	},
+	"minesia:darkblue_block": {
+		"sound": "metal",
+		"textures": "darkblue_block"
+	}
 }

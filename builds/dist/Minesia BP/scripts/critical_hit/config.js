@@ -7,6 +7,7 @@ export const CRITICAL_CONFIG = {
     soundEffect: "random.crit",
     weaponCriticalBonuses: {
         "minesia:black_dagger": 50,
+        "minesia:frost_edge": 10,
     },
     equipmentCriticalBonuses: {
         "minesia:statue_totem": 25,

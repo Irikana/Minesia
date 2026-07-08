@@ -197,6 +197,8 @@ class ActionBarManager {
 
         if (displayText) {
             player.onScreenDisplay.setActionBar(displayText);
+        } else {
+            player.onScreenDisplay.setActionBar("");
         }
     }
 

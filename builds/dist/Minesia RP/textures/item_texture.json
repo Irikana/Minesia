@@ -155,6 +155,9 @@
         },
         "minesia_attribute_panel": {
             "textures": "textures/items/attribute_panel"
+        },
+        "minesia_frost_edge": {
+            "textures": "textures/items/frost_edge"
         }
     },
     "resource_pack_name": "Minesia",

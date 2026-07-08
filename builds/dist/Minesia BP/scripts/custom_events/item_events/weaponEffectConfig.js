@@ -10,6 +10,7 @@ import { applySelfishEffect } from "./selfishEffect.js";
 import { applyBlackDaggerEffect } from "./blackDaggerEffect.js";
 import { applyWhiteGoldenSwordEffect } from "./whiteGoldenSwordEffect.js";
 import { applyDesertSnowEffect } from "./desertSnowEffect.js";
+import { applyFrostEdgeEffect } from "./frostEdgeEffect.js";
 
 export function initializeWeaponEffects() {
     registerWeaponEffect({
@@ -178,6 +179,16 @@ export function initializeWeaponEffects() {
         priority: 15,
         onAttack: ({ target, attacker }) => {
             applyDesertSnowEffect(target, attacker);
+        }
+    });
+
+    registerWeaponEffect({
+        id: "frost_edge",
+        name: "霜刃",
+        itemIds: ["minesia:frost_edge"],
+        priority: 15,
+        onAttack: ({ target, attacker }) => {
+            applyFrostEdgeEffect(target, attacker);
         }
     });
 }

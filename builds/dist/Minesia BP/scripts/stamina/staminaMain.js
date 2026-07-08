@@ -5,24 +5,10 @@ import { getWeaponStaminaCost, isStaminaWeapon } from "./weaponStaminaConfig.js"
 import { debug } from "../debug/debugManager.js";
 import { MinesiaLevelSystem } from "../minesia_level/level_system.js";
 import { MinesiaLevelEventSystem } from "../minesia_level/minesiaLevelEvent.js";
+import { getPlayerLocale } from "../language.js";
 
 const playerStaminaData = new Map();
 const playerDisplayState = new Map();
-const LANGUAGE_OBJECTIVE = "minesia_language";
-const DEFAULT_LOCALE = "zh_CN";
-
-function getPlayerLocale(player) {
-    try {
-        const scoreboard = world.scoreboard;
-        const langObj = scoreboard?.getObjective(LANGUAGE_OBJECTIVE);
-        if (langObj) {
-            const score = langObj.getScore(player);
-            if (score === 0) return "en_US";
-            return "zh_CN";
-        }
-    } catch (e) { }
-    return DEFAULT_LOCALE;
-}
 
 class StaminaSystem {
     static playerStates = new Map();
@@ -301,7 +287,7 @@ class StaminaSystem {
 function updatePlayerStamina(player) {
     if (!STAMINA_CONFIG.enabled) return;
 
-    if (player.getGameMode() === GameMode.Creative) return;
+    if (player.getGameMode() === GameMode.creative) return;
 
     const data = StaminaSystem.getPlayerData(player);
     const currentTick = system.currentTick;
@@ -502,7 +488,7 @@ export function initializeStaminaSystem() {
     StaminaSystem.initialize();
     world.afterEvents.entityHurt.subscribe(handlePlayerAttack);
     world.afterEvents.playerSpawn.subscribe(handlePlayerSpawn);
-    world.afterEvents.playerInventoryItemChange.subscribe(handleInventoryChange);
+    world.afterEvents.itemCompleteUse.subscribe(handleItemCompleteUse);
     world.beforeEvents.playerLeave.subscribe(handlePlayerLeave);
     system.runInterval(checkPlayerSleep, 20);
 
@@ -594,24 +580,19 @@ function handlePlayerLeave(event) {
     player.setDynamicProperty(STAMINA_PROPERTY_ID, data.stamina);
 }
 
-function handleInventoryChange(event) {
+function handleItemCompleteUse(event) {
     if (!STAMINA_CONFIG.enabled) return;
 
-    const { player, beforeItemStack, itemStack } = event;
-    if (!player) return;
+    const { source, itemStack } = event;
+    if (!source || source.typeId !== "minecraft:player") return;
+    if (!itemStack) return;
 
-    if (!beforeItemStack) return;
-
-    const beforeCount = beforeItemStack.amount;
-    const afterCount = itemStack?.amount ?? 0;
-
-    if (beforeCount <= afterCount) return;
-
-    const itemId = beforeItemStack.typeId;
+    const player = source;
+    const itemId = itemStack.typeId;
     let nutrition = STAMINA_CONFIG.vanillaFoodNutrition?.[itemId] ?? 0;
 
     if (nutrition === 0) {
-        const foodComponent = beforeItemStack.getComponent('minecraft:food');
+        const foodComponent = itemStack.getComponent('minecraft:food');
         if (foodComponent) {
             nutrition = foodComponent.nutrition;
         }

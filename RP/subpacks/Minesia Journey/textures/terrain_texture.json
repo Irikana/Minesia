@@ -4,6 +4,9 @@
     "resource_pack_name": "Minesia Journey",
     "texture_name": "atlas.terrain",
     "texture_data": {
+        "darkblue_ore": { "textures": "textures/blocks/darkblue_ore" },
+        "deepslate_darkblue_ore": { "textures": "textures/blocks/deepslate_darkblue_ore" },
+        "darkblue_block": { "textures": "textures/blocks/darkblue_block" },
         "minesia_journey_rotated_iron_door": {
             "textures": "textures/blocks/iron_door_bottom"
         }

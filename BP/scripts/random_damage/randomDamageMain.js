@@ -3,7 +3,10 @@ import { getWeaponConfig, calculateRandomDamage } from "./config.js";
 import { processWeaponAttack, hasWeaponEffect } from "../custom_events/item_events/weaponEffectRegistry.js";
 import { StaminaSystem } from "../stamina/staminaMain.js";
 import { debug } from "../debug/debugManager.js";
-import { getTotalCriticalRate } from "../critical_hit/criticalHitMain.js";
+import { getTotalCriticalRate, isCurrentlyApplyingCriticalDamage, getTotalCriticalDamageMultiplier } from "../critical_hit/criticalHitMain.js";
+import { isCurrentlyApplyingWhiteGoldenSwordDamage } from "../custom_events/item_events/whiteGoldenSwordEffect.js";
+import { isCurrentlyApplyingProofOfStrengthDamage } from "../custom_events/item_events/proofOfStrengthEffect.js";
+import { isCurrentlyApplyingGodOfLeavesDamage } from "../custom_events/item_events/godOfLeavesEffect.js";
 import { CRITICAL_CONFIG } from "../critical_hit/config.js";
 
 const recentAttacks = new Map();
@@ -24,6 +27,10 @@ export function initializeRandomDamageSystem() {
 function handleEntityHurt(event) {
     try {
         if (isApplyingRandomDamage) {
+            return;
+        }
+
+        if (isCurrentlyApplyingCriticalDamage() || isCurrentlyApplyingWhiteGoldenSwordDamage() || isCurrentlyApplyingProofOfStrengthDamage() || isCurrentlyApplyingGodOfLeavesDamage()) {
             return;
         }
 
@@ -73,7 +80,7 @@ function handleEntityHurt(event) {
 
         if (isCritical) {
             const baseDamageForCrit = damage + randomDamage;
-            criticalDamage = Math.round(baseDamageForCrit * (CRITICAL_CONFIG.criticalDamageMultiplier - 1) * 10) / 10;
+            criticalDamage = Math.round(baseDamageForCrit * (getTotalCriticalDamageMultiplier(attacker) - 1) * 10) / 10;
         }
 
         const totalExtraDamage = randomDamage + criticalDamage;
@@ -116,10 +123,22 @@ function applyRandomDamage(target, damage, attacker) {
     try {
         isApplyingRandomDamage = true;
 
-        target.applyDamage(damage, {
+        const actualDamage = target.applyDamage(damage, {
             cause: "entityAttack",
             damagingEntity: attacker
         });
+
+        // 如果伤害被无敌帧抵消(actualDamage < damage),用 setCurrentValue 补足差额
+        // 这样既尊重护甲减免,又避免无敌帧导致随机伤害完全无效
+        if (actualDamage < damage) {
+            const shortfall = damage - actualDamage;
+            const health = target.getComponent('minecraft:health');
+            if (health) {
+                const currentHealth = health.currentValue;
+                const newHealth = Math.max(0, currentHealth - shortfall);
+                health.setCurrentValue(newHealth);
+            }
+        }
 
     } catch (error) {
         debug.logError("RandomDamage", `应用随机伤害时出错: ${error?.message ?? error}`);

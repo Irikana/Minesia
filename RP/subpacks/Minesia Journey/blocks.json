@@ -4,6 +4,21 @@
         1,
         0
     ],
+    "minesia:darkblue_ore": {
+        "textures": "darkblue_ore",
+        "sound": "stone",
+        "brightness_gamma": 0.5
+    },
+    "minesia:deepslate_darkblue_ore": {
+        "textures": "deepslate_darkblue_ore",
+        "sound": "deepslate",
+        "brightness_gamma": 0.5
+    },
+    "minesia:darkblue_block": {
+        "textures": "darkblue_block",
+        "sound": "metal",
+        "brightness_gamma": 0.5
+    },
     "minesia_journey:rotated_iron_door": {
         "textures": "minesia_journey_rotated_iron_door",
         "sound": "metal",

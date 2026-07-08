@@ -1,0 +1,100 @@
+{
+    "format_version": "1.26.10",
+    "minecraft:item": {
+        "description": {
+            "identifier": "minesia:darkblue_spear",
+            "menu_category": {
+                "category": "equipment",
+                "group": "minecraft:itemGroup.name.spear"
+            }
+        },
+        "components": {
+            "minecraft:icon": {
+                "textures": {
+                    "default": "minesia_darkblue_spear"
+                }
+            },
+            "minecraft:max_stack_size": 1,
+            "minecraft:hand_equipped": true,
+            "minecraft:durability": {
+                "max_durability": 1800
+            },
+            "minecraft:repairable": {
+                "repair_items": [
+                    {
+                        "items": ["minesia:darkblue_ingot"],
+                        "repair_amount": 400
+                    }
+                ]
+            },
+            "minecraft:tags": {
+                "tags": [
+                    "minecraft:is_tool",
+                    "minecraft:is_weapon",
+                    "minecraft:is_spear"
+                ]
+            },
+            "minecraft:enchantable": {
+                "slot": "melee_spear",
+                "value": 15
+            },
+            "minecraft:use_modifiers": {
+                "use_duration": 72000,
+                "emit_vibrations": false,
+                "start_sound": "item.spear.use",
+                "movement_modifier": 1
+            },
+            "minecraft:cooldown": {
+                "category": "spear",
+                "duration": 1.05,
+                "type": "attack"
+            },
+            "minecraft:swing_duration": {
+                "value": 1.05
+            },
+            "minecraft:swing_sounds": {
+                "attack_miss": "item.spear.attack_miss",
+                "attack_hit": "item.spear.attack_hit"
+            },
+            "minecraft:piercing_weapon": {
+                "reach": {
+                    "min": 2,
+                    "max": 4.5
+                },
+                "creative_reach": {
+                    "min": 2,
+                    "max": 7.5
+                },
+                "hitbox_margin": 0.25
+            },
+            "minecraft:kinetic_weapon": {
+                "delay": 10,
+                "reach": {
+                    "min": 2,
+                    "max": 4.5
+                },
+                "creative_reach": {
+                    "min": 2,
+                    "max": 7.5
+                },
+                "hitbox_margin": 0.25,
+                "damage_multiplier": 1,
+                "damage_conditions": {
+                    "max_duration": 200,
+                    "min_relative_speed": 4.6
+                },
+                "knockback_conditions": {
+                    "max_duration": 125,
+                    "min_speed": 5.1
+                },
+                "dismount_conditions": {
+                    "max_duration": 50,
+                    "min_speed": 10
+                }
+            },
+            "minecraft:display_name": {
+                "value": "item.minesia:darkblue_spear"
+            }
+        }
+    }
+}

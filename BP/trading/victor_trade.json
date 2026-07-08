@@ -14,8 +14,7 @@
                             "item": "minesia:flamie",
                             "quantity": 1
                         }
-                    ],
-                    "max_uses": 4
+                    ]
                 },
                 {
                     "wants": [
@@ -29,8 +28,7 @@
                             "item": "minesia:life_stone",
                             "quantity": 1
                         }
-                    ],
-                    "max_uses": 4
+                    ]
                 },
                 {
                     "wants": [
@@ -44,8 +42,7 @@
                             "item": "minesia:ender_pearl_sword",
                             "quantity": 1
                         }
-                    ],
-                    "max_uses": 4
+                    ]
                 },
                 {
                     "wants": [
@@ -59,8 +56,7 @@
                             "item": "minesia:the_forest",
                             "quantity": 1
                         }
-                    ],
-                    "max_uses": 4
+                    ]
                 },
                 {
                     "wants": [
@@ -74,8 +70,7 @@
                             "item": "minesia:duty_ice",
                             "quantity": 1
                         }
-                    ],
-                    "max_uses": 4
+                    ]
                 },
                 {
                     "wants": [
@@ -89,8 +84,7 @@
                             "item": "minesia:pioneer",
                             "quantity": 1
                         }
-                    ],
-                    "max_uses": 4
+                    ]
                 },
                 {
                     "wants": [
@@ -104,8 +98,7 @@
                             "item": "minesia:selfish",
                             "quantity": 1
                         }
-                    ],
-                    "max_uses": 4
+                    ]
                 },
                 {
                     "wants": [
@@ -119,8 +112,7 @@
                             "item": "minesia:statue_totem",
                             "quantity": 1
                         }
-                    ],
-                    "max_uses": 4
+                    ]
                 },
                 {
                     "wants": [
@@ -134,8 +126,7 @@
                             "item": "minesia:black_dagger",
                             "quantity": 1
                         }
-                    ],
-                    "max_uses": 4
+                    ]
                 },
                 {
                     "wants": [
@@ -149,8 +140,7 @@
                             "item": "minesia:white_golden_sword",
                             "quantity": 1
                         }
-                    ],
-                    "max_uses": 4
+                    ]
                 },
                 {
                     "wants": [
@@ -164,8 +154,49 @@
                             "item": "minesia:desert_scythe",
                             "quantity": 1
                         }
+                    ]
+                },
+                {
+                    "wants": [
+                        {
+                            "item": "minesia:gold_coin",
+                            "quantity": 2
+                        }
                     ],
-                    "max_uses": 4
+                    "gives": [
+                        {
+                            "item": "minesia:frost_edge",
+                            "quantity": 1
+                        }
+                    ]
+                },
+                {
+                    "wants": [
+                        {
+                            "item": "minesia:gold_coin",
+                            "quantity": 3
+                        }
+                    ],
+                    "gives": [
+                        {
+                            "item": "minesia:proof_of_strength",
+                            "quantity": 1
+                        }
+                    ]
+                },
+                {
+                    "wants": [
+                        {
+                            "item": "minesia:silver_coin",
+                            "quantity": 40
+                        }
+                    ],
+                    "gives": [
+                        {
+                            "item": "minesia:shield_of_bange",
+                            "quantity": 1
+                        }
+                    ]
                 }
             ]
         }

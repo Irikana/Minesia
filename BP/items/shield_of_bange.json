@@ -1,0 +1,25 @@
+{
+    "format_version": "1.26.10",
+    "minecraft:item": {
+        "description": {
+            "identifier": "minesia:shield_of_bange",
+            "menu_category": {
+                "category": "items",
+                "group": "minesia:itemGroup.name.accessories"
+            }
+        },
+        "components": {
+            "minecraft:icon": {
+                "textures": {
+                    "default": "minesia_shield_of_bange"
+                }
+            },
+            "minecraft:max_stack_size": 1,
+            "minecraft:allow_off_hand": true,
+            "minecraft:hand_equipped": false,
+            "minecraft:display_name": {
+                "value": "item.minesia:shield_of_bange"
+            }
+        }
+    }
+}

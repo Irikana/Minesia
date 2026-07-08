@@ -1,0 +1,13 @@
+{
+    "format_version": "1.20.80",
+    "minecraft:recipe_shaped": {
+        "description": { "identifier": "minesia:darkblue_chestplate" },
+        "tags": ["crafting_table"],
+        "pattern": ["A A", "AAA", "AAA"],
+        "key": {
+            "A": { "item": "minesia:darkblue_ingot" }
+        },
+        "result": { "item": "minesia:darkblue_chestplate" },
+        "unlock": [{ "item": "minesia:darkblue_ingot" }]
+    }
+}

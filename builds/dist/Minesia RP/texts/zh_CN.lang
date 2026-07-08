@@ -47,6 +47,7 @@ item.minesia:black_dagger=黑色匕首~LINEBREAK~~LINEBREAK~§9+2~7 攻击伤害
 item.minesia:white_golden_sword=白金剑~LINEBREAK~~LINEBREAK~§9+7~9 攻击伤害~LINEBREAK~§c+2 体力消耗~LINEBREAK~§7攻击时额外随机消耗0到2点耐久度~LINEBREAK~§7就是有点容易坏，不知道出自哪位高人之手。
 item.minesia:desert_pyramid_shard=沙漠神殿碎片~LINEBREAK~~LINEBREAK~§7来自沙漠神殿的神秘水晶。
 item.minesia:desert_snow=沙漠暴雪~LINEBREAK~~LINEBREAK~§9+4~7 攻击伤害~LINEBREAK~§c+2 体力消耗~LINEBREAK~§7攻击时50%概率使目标虚弱I持续3秒、减速III持续1秒~LINEBREAK~§7此剑乃铸造于沙漠中的暴雪。
+item.minesia:frost_edge=霜刃~LINEBREAK~~LINEBREAK~§9+7~10 攻击伤害~LINEBREAK~§c+3 体力消耗~LINEBREAK~§e+10% 暴击率~LINEBREAK~§7攻击时35%概率使目标缓慢II持续4秒~LINEBREAK~§7永冻之地的寒冰锻造而成，寒气能冻结敌人的行动。
 item.minesia:desert_pyramid_pearl=沙漠神殿珍珠~LINEBREAK~~LINEBREAK~§9副手或背包第一行时:~LINEBREAK~§7+100% 最大体力值~LINEBREAK~§7+50% 最大生命值~LINEBREAK~§7每秒恢复8点体力值~LINEBREAK~§7来自沙漠神殿，可给予人在无垠的沙漠中奔跑之能力。
 item.minesia:desert_pyramid_eye=沙漠神殿之眼~LINEBREAK~~LINEBREAK~§9副手或背包第一行时:~LINEBREAK~§7+50% 最大体力值~LINEBREAK~§7每秒恢复4点体力值~LINEBREAK~§e+30% 暴击率~LINEBREAK~§7来自沙漠神殿，可给予人在战斗中无需喘息之能力。
 
@@ -73,6 +74,8 @@ minesia.item.black_dagger.lore=攻击时25%概率使目标凋谢2秒
 minesia.item.black_dagger.extra.lore=看起来很危险
 minesia.item.white_golden_sword.lore=攻击时额外随机消耗0到2点耐久度
 minesia.item.white_golden_sword.extra.lore=就是有点容易坏，不知道出自哪位高人之手
+minesia.item.frost_edge.lore=攻击时35%概率使目标缓慢II持续4秒
+minesia.item.frost_edge.extra.lore=永冻之地的寒冰锻造而成，寒气能冻结敌人的行动
 
 hudScreen.nextLevel=下一级
 hudScreen.inventory=背包

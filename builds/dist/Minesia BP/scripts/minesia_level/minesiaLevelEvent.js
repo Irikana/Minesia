@@ -10,9 +10,9 @@ import { ActionBarManager, DISPLAY_PRIORITIES } from "../action_bar/index.js";
 import { LoreManager } from "../lore_system/loreManager.js";
 import { StaminaSystem } from "../stamina/staminaMain.js";
 import { debug } from "../debug/debugManager.js";
+import { getPlayerLocale } from "../language.js";
 
 const levelUpDisplayActive = new Map();
-const LANGUAGE_OBJECTIVE = "minesia_language";
 const LEVEL_TEXTS = {
     zh_CN: {
         healthBonus: "生命值",
@@ -127,17 +127,6 @@ const LEVEL_TEXTS = {
         }
     }
 };
-function getPlayerLocale(player) {
-    try {
-        const scoreboard = world.scoreboard;
-        const langObj = scoreboard?.getObjective(LANGUAGE_OBJECTIVE);
-        if (langObj) {
-            const score = langObj.getScore(player);
-            if (score === 0) return "en_US";
-        }
-    } catch (e) { }
-    return "zh_CN";
-}
 function getLevelMessage(player, level) {
     const locale = getPlayerLocale(player);
     const texts = LEVEL_TEXTS[locale] || LEVEL_TEXTS.zh_CN;

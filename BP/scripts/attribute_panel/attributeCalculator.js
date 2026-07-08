@@ -1,5 +1,5 @@
 import { StaminaSystem } from "../stamina/staminaMain.js";
-import { getTotalCriticalRate } from "../critical_hit/criticalHitMain.js";
+import { getTotalCriticalRate, getTotalCriticalDamageMultiplier } from "../critical_hit/criticalHitMain.js";
 import { MinesiaLevelSystem } from "../minesia_level/level_system.js";
 import { CRITICAL_CONFIG } from "../critical_hit/config.js";
 import { STAMINA_CONFIG } from "../stamina/config.js";
@@ -28,6 +28,7 @@ export function calculatePlayerAttributes(player) {
 
     try {
         attributes.critRate = getTotalCriticalRate(player);
+        attributes.critDamageMultiplier = getTotalCriticalDamageMultiplier(player);
         attributes.critDamagePercent = Math.round((attributes.critDamageMultiplier - 1) * 100);
     } catch (e) { }
 
@@ -38,7 +39,7 @@ export function calculatePlayerAttributes(player) {
         
         const staminaData = StaminaSystem.getPlayerData(player);
         if (staminaData) {
-            attributes.maxStaminaBonus = staminaData.maxStaminaBonus || 0;
+            attributes.maxStaminaBonus = (staminaData.maxStaminaBonus || 0) + (staminaData.levelStaminaBonus || 0);
             attributes.consumptionMultiplier = staminaData.consumptionMultiplier || 1;
             attributes.recoveryMultiplier = staminaData.recoveryMultiplier || 1;
         }

@@ -51,12 +51,6 @@ export function initializeScoreboard() {
             debug.logWithTag("Minesia", "计分板 minesia_exp 初始化成功");
         }
 
-        let langObjective = scoreboard.getObjective('minesia_language');
-        if (!langObjective) {
-            langObjective = scoreboard.addObjective('minesia_language', 'Minesia Language');
-            debug.logWithTag("Minesia", "计分板 minesia_language 初始化成功");
-        }
-
         return true;
     } catch (e) {
         debug.logError("Minesia", `初始化计分板失败: ${e?.message ?? e}`);
@@ -75,43 +69,59 @@ function updatePlayerLevels(players) {
 
             let playerState = playerStates.get(player.id);
             if (!playerState) {
+                // 从计分板读取已保存的经验值，避免重登后等级重置
+                let savedExp = 0;
+                try {
+                    const scoreboard = world.scoreboard;
+                    const expObj = scoreboard?.getObjective('minesia_exp');
+                    if (expObj) {
+                        const score = expObj.getScore(player);
+                        if (typeof score === "number" && !Number.isNaN(score)) {
+                            savedExp = score;
+                        }
+                    }
+                } catch (_e) { }
+
                 playerState = {
                     lastExp: currentExp,
-                    minesiaTotalExp: currentExp,
-                    currentLevel: 0,
+                    minesiaTotalExp: savedExp,
+                    currentLevel: MinesiaLevelSystem.calculateLevel(savedExp),
                     lastUpdateTime: 0
                 };
                 playerStates.set(player.id, playerState);
+                // 首次初始化时不计算增量，避免将已有原版经验一次性计入
+                continue;
             }
 
-            const delta = currentExp - playerState.lastExp;
-            let expGained = 0;
+            const delta = Math.floor(currentExp) - Math.floor(playerState.lastExp);
 
             if (delta > 0) {
                 playerState.minesiaTotalExp += delta;
-                expGained = delta;
             }
+
+            // 始终更新 lastExp，防止重复计算
+            playerState.lastExp = currentExp;
 
             const oldLevel = playerState.currentLevel;
             const newLevel = MinesiaLevelSystem.calculateLevel(playerState.minesiaTotalExp);
 
-            if (expGained > 0 || newLevel !== oldLevel) {
+            if (delta > 0 || newLevel !== oldLevel) {
                 updates.push({
                     player: player,
                     level: newLevel,
                     oldLevel: oldLevel,
-                    expGained: expGained,
+                    expGained: Math.max(0, delta),
                     totalExp: playerState.minesiaTotalExp
                 });
-                MinesiaLevelSystem.updatePlayerStats(player, expGained, newLevel);
+                MinesiaLevelSystem.updatePlayerStats(player, Math.max(0, delta), newLevel);
             }
 
-            if (expGained > 0 || newLevel !== oldLevel || Date.now() - playerState.lastUpdateTime > 50) {
+            if (delta > 0 || newLevel !== oldLevel || Date.now() - playerState.lastUpdateTime > 5000) {
                 MinesiaLevelSystem.updateLevelDisplay(player);
-                playerState.currentLevel = newLevel;
-                playerState.lastExp = currentExp;
                 playerState.lastUpdateTime = Date.now();
             }
+
+            playerState.currentLevel = newLevel;
 
         } catch (error) {
             debug.logWarning("Minesia", `处理玩家经验时出错: ${player.name} ${error.message}`);

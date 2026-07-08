@@ -1,5 +1,3 @@
-import { world } from "@minecraft/server";
-
 const PANEL_TEXTS = {
     zh_CN: {
         title: "属性面板",
@@ -19,7 +17,8 @@ const PANEL_TEXTS = {
         totalExp: "总经验",
         progress: "进度",
         maxLevel: "已满级",
-        close: "关闭"
+        close: "关闭",
+        settings: "设置"
     },
     en_US: {
         title: "Attribute Panel",
@@ -39,24 +38,13 @@ const PANEL_TEXTS = {
         totalExp: "Total Experience",
         progress: "Progress",
         maxLevel: "MAX LEVEL",
-        close: "Close"
+        close: "Close",
+        settings: "Settings"
     }
 };
 
 export const ATTRIBUTE_PANEL_ITEM_ID = "minesia:attribute_panel";
 export const ATTRIBUTE_PANEL_SLOT = 8;
-
-export function getPlayerLocale(player) {
-    try {
-        const scoreboard = world.scoreboard;
-        const langObj = scoreboard?.getObjective("minesia_language");
-        if (langObj) {
-            const score = langObj.getScore(player);
-            if (score === 0) return "en_US";
-        }
-    } catch (_e) { }
-    return "zh_CN";
-}
 
 export function getPanelTexts(locale = "zh_CN") {
     return PANEL_TEXTS[locale] || PANEL_TEXTS.zh_CN;

@@ -1,0 +1,38 @@
+{
+    "format_version": "1.26.10",
+    "minecraft:item": {
+        "description": {
+            "identifier": "minesia:darkblue_helmet",
+            "menu_category": {
+                "category": "equipment",
+                "group": "minecraft:itemGroup.name.helmet"
+            }
+        },
+        "components": {
+            "minecraft:icon": {
+                "textures": {
+                    "default": "minesia_darkblue_helmet"
+                }
+            },
+            "minecraft:max_stack_size": 1,
+            "minecraft:wearable": {
+                "slot": "slot.armor.head",
+                "protection": 3
+            },
+            "minecraft:durability": {
+                "max_durability": 385
+            },
+            "minecraft:repairable": {
+                "repair_items": [
+                    {
+                        "items": ["minesia:darkblue_ingot"],
+                        "repair_amount": 100
+                    }
+                ]
+            },
+            "minecraft:display_name": {
+                "value": "item.minesia:darkblue_helmet"
+            }
+        }
+    }
+}

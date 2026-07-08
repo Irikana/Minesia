@@ -2536,12 +2536,13 @@
   "hud_title_text": {
     "type": "stack_panel",
     "orientation": "vertical",
+    "size": [0, 0],
     "offset": [
       0,
       -19
     ],
     "layer": 1,
-    "alpha": "@hud.anim_title_text_alpha_in",
+    "alpha": 0,
     "propagate_alpha": true,
     "controls": [
       {
@@ -2550,6 +2551,18 @@
           "size": [
             "100%",
             "100%cm"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_name_override": "#title_text",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(((#title_text - 'data') = #title_text) and (not (#title_text = '')))",
+              "target_property_name": "#visible"
+            }
           ],
           "controls": [
             {
@@ -3594,6 +3607,87 @@
   "wysiwyg_close_without_saving_modal_cancel@library_modal.modal_button": {
     "$button_mapping": "button.cancel_close_without_saving",
     "$button_text": "hudScreen.controlCustomization.closeWithoutSavingCancel"
+  },
+  "minesia_level_control": {
+    "type": "panel",
+    "size": [0, 0],
+    "$update_string": "dataL",
+    "property_bag": {
+      "#preserved_text": "",
+      "#value_text": ""
+    },
+    "bindings": [
+      { "binding_name": "#hud_title_text_string" },
+      {
+        "binding_name": "#hud_title_text_string",
+        "binding_name_override": "#preserved_text",
+        "binding_condition": "visibility_changed"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not (#hud_title_text_string = #preserved_text) and not ((#hud_title_text_string - $update_string) = #hud_title_text_string))",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#preserved_text - ($update_string + ':'))",
+        "target_property_name": "#value_text"
+      }
+    ]
+  },
+  "minesia_exp_control": {
+    "type": "panel",
+    "size": [0, 0],
+    "$update_string": "dataE",
+    "property_bag": {
+      "#preserved_text": "",
+      "#value_text": ""
+    },
+    "bindings": [
+      { "binding_name": "#hud_title_text_string" },
+      {
+        "binding_name": "#hud_title_text_string",
+        "binding_name_override": "#preserved_text",
+        "binding_condition": "visibility_changed"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not (#hud_title_text_string = #preserved_text) and not ((#hud_title_text_string - $update_string) = #hud_title_text_string))",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#preserved_text - ($update_string + ':'))",
+        "target_property_name": "#value_text"
+      }
+    ]
+  },
+  "minesia_stamina_control": {
+    "type": "panel",
+    "size": [0, 0],
+    "$update_string": "dataS",
+    "property_bag": {
+      "#preserved_text": "",
+      "#value_text": ""
+    },
+    "bindings": [
+      { "binding_name": "#hud_title_text_string" },
+      {
+        "binding_name": "#hud_title_text_string",
+        "binding_name_override": "#preserved_text",
+        "binding_condition": "visibility_changed"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not (#hud_title_text_string = #preserved_text) and not ((#hud_title_text_string - $update_string) = #hud_title_text_string))",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#preserved_text - ($update_string + ':'))",
+        "target_property_name": "#value_text"
+      }
+    ]
   },
   "root_panel": {
     "type": "panel",

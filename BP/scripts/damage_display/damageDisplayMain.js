@@ -10,27 +10,17 @@ import { recentRandomDamage, isCurrentlyApplyingRandomDamage } from "../random_d
 import { ActionBarManager, DISPLAY_PRIORITIES } from "../action_bar/index.js";
 import { getAoeDamageRecord, isAoeEntity } from "../custom_events/item_events/aoeDamageRegistry.js";
 import { isLevelUpDisplayActive } from "../minesia_level/minesiaLevelEvent.js";
+import { isCurrentlyApplyingCriticalDamage } from "../critical_hit/criticalHitMain.js";
+import { isCurrentlyApplyingProofOfStrengthDamage } from "../custom_events/item_events/proofOfStrengthEffect.js";
+import { isCurrentlyApplyingGodOfLeavesDamage } from "../custom_events/item_events/godOfLeavesEffect.js";
+import { isCurrentlyApplyingWhiteGoldenSwordDamage } from "../custom_events/item_events/whiteGoldenSwordEffect.js";
 import { debug } from "../debug/debugManager.js";
+import { getPlayerLocale } from "../language.js";
 
 const playerComboState = new Map();
 const playerAoeComboState = new Map();
 const playerDisplayState = new Map();
-const LANGUAGE_OBJECTIVE = "minesia_language";
-const DEFAULT_LOCALE = "zh_CN";
 const processedAttacks = new Map();
-
-function getPlayerLocale(player) {
-    try {
-        const scoreboard = world.scoreboard;
-        const langObj = scoreboard?.getObjective(LANGUAGE_OBJECTIVE);
-        if (langObj) {
-            const score = langObj.getScore(player);
-            if (score === 0) return "en_US";
-            return "zh_CN";
-        }
-    } catch (e) { }
-    return DEFAULT_LOCALE;
-}
 
 export function initializeDamageDisplaySystem() {
     world.afterEvents.entityHurt.subscribe(handleEntityHurt);
@@ -60,7 +50,33 @@ function handleEntityHurt(event) {
             return;
         }
 
-        if (isCurrentlyApplyingRandomDamage()) {
+        if (isCurrentlyApplyingRandomDamage() ||
+            isCurrentlyApplyingCriticalDamage() ||
+            isCurrentlyApplyingProofOfStrengthDamage() ||
+            isCurrentlyApplyingGodOfLeavesDamage() ||
+            isCurrentlyApplyingWhiteGoldenSwordDamage()) {
+            // 这些是额外伤害事件,将伤害值累加到当前连击
+            if (damage > 0) {
+                const existingCombo = playerComboState.get(attacker.id);
+                if (existingCombo && existingCombo.targetId === hurtEntity.id) {
+                    existingCombo.accumulatedDamage += damage;
+                    existingCombo.lastAttackTick = system.currentTick;
+                    const updatedText = buildDisplayText(
+                        existingCombo.accumulatedDamage,
+                        getDisplayTexts(getPlayerLocale(attacker)),
+                        existingCombo.hitCount
+                    );
+                    ActionBarManager.setLine(attacker.id, 'damage', updatedText, DISPLAY_PRIORITIES.DAMAGE);
+                    ActionBarManager.updateDisplay(attacker);
+                    playerDisplayState.set(attacker.id, {
+                        displayText: updatedText,
+                        displayTick: system.currentTick
+                    });
+                    system.runTimeout(() => {
+                        clearDamageDisplay(attacker.id);
+                    }, DAMAGE_DISPLAY_CONFIG.displayDuration);
+                }
+            }
             return;
         }
 
@@ -74,22 +90,22 @@ function handleEntityHurt(event) {
             processedAttacks.delete(attackId);
         }, 5);
 
-        const randomDamageRecord = recentRandomDamage.get(attacker.id);
-        let randomDamage = 0;
-        let criticalDamage = 0;
-        let isCritical = false;
+        // 延迟 1 tick 读取 randomDamage record,确保 randomDamage 系统已记录
+        // (两个系统都订阅 entityHurt,顺序不保证,需延迟读取)
+        system.runTimeout(() => {
+            const randomDamageRecord = recentRandomDamage.get(attacker.id);
+            let isCritical = false;
+            let totalDamage = damage;  // 默认用原版实际伤害
 
-        if (randomDamageRecord && 
-            randomDamageRecord.targetId === hurtEntity.id && 
-            randomDamageRecord.tick === system.currentTick) {
-            randomDamage = randomDamageRecord.randomDamage;
-            criticalDamage = randomDamageRecord.criticalDamage || 0;
-            isCritical = randomDamageRecord.isCritical || false;
-        }
+            if (randomDamageRecord &&
+                randomDamageRecord.targetId === hurtEntity.id &&
+                Math.abs(randomDamageRecord.tick - system.currentTick) <= 1) {
+                isCritical = randomDamageRecord.isCritical || false;
+                totalDamage = randomDamageRecord.totalDamage;
+            }
 
-        const totalDamage = damage + randomDamage + criticalDamage;
-
-        showDamageDisplay(attacker, totalDamage, hurtEntity, isCritical);
+            showDamageDisplay(attacker, totalDamage, hurtEntity, isCritical);
+        }, 1);
 
     } catch (error) {
         debug.logError("DamageDisplay", `处理伤害显示时出错: ${error?.message ?? error}`);

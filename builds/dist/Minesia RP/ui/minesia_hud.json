@@ -1,0 +1,181 @@
+{
+  "namespace": "minesia_hud",
+
+  "minesia_hud_root": {
+    "type": "panel",
+    "size": ["100%", "100%"],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "layer": 50,
+    "controls": [
+      { "minesia_exp_bar_panel@minesia_hud.exp_bar_panel": {} },
+      { "minesia_stamina_bar_panel@minesia_hud.stamina_bar_panel": {} }
+    ],
+    "bindings": [
+      {
+        "binding_type": "scoreboard",
+        "scoreboard_objective": "minesia_hud_visible",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "exp_bar_panel": {
+    "type": "panel",
+    "size": [200, 14],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "offset": [0, -52],
+    "controls": [
+      { "exp_label@minesia_hud.exp_level_label": {} },
+      { "exp_level_num@minesia_hud.exp_level_number": {} },
+      { "exp_bar_bg@minesia_hud.exp_bar_background": {} },
+      { "exp_bar_fill@minesia_hud.exp_bar_fill_image": {} },
+      { "exp_pct_label@minesia_hud.exp_percent_label": {} }
+    ]
+  },
+
+  "exp_level_label": {
+    "type": "label",
+    "text": "Lv.",
+    "color": [0.7, 1.0, 1.0],
+    "shadow": true,
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "offset": [0, 0],
+    "layer": 3
+  },
+
+  "exp_level_number": {
+    "type": "label",
+    "text": "#level_num",
+    "color": [0.7, 1.0, 1.0],
+    "shadow": true,
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "offset": [22, 0],
+    "layer": 3,
+    "bindings": [
+      {
+        "binding_type": "scoreboard",
+        "scoreboard_objective": "minesia_hud_lvl",
+        "binding_name_override": "#level_num"
+      }
+    ]
+  },
+
+  "exp_bar_background": {
+    "type": "image",
+    "texture": "textures/ui/minesia/bar_background",
+    "size": [180, 8],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "offset": [10, 0],
+    "layer": 1
+  },
+
+  "exp_bar_fill_image": {
+    "type": "image",
+    "texture": "textures/ui/minesia/exp_bar_fill",
+    "size": ["#fill_width", 8],
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "offset": [10, 0],
+    "layer": 2,
+    "bindings": [
+      {
+        "binding_type": "scoreboard",
+        "scoreboard_objective": "minesia_hud_exp_w",
+        "binding_name_override": "#fill_width"
+      }
+    ]
+  },
+
+  "exp_percent_label": {
+    "type": "label",
+    "text": "#exp_pct",
+    "color": [1.0, 1.0, 1.0],
+    "shadow": true,
+    "anchor_from": "right_middle",
+    "anchor_to": "right_middle",
+    "offset": [-2, 0],
+    "layer": 3,
+    "bindings": [
+      {
+        "binding_type": "scoreboard",
+        "scoreboard_objective": "minesia_hud_exp_pct",
+        "binding_name_override": "#exp_pct"
+      }
+    ]
+  },
+
+  "stamina_bar_panel": {
+    "type": "panel",
+    "size": [200, 14],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "offset": [0, -65],
+    "controls": [
+      { "sta_label@minesia_hud.stamina_label": {} },
+      { "sta_bar_bg@minesia_hud.stamina_bar_background": {} },
+      { "sta_bar_fill@minesia_hud.stamina_bar_fill_image": {} },
+      { "sta_pct_label@minesia_hud.stamina_percent_label": {} }
+    ]
+  },
+
+  "stamina_label": {
+    "type": "label",
+    "text": "STA",
+    "color": [1.0, 0.85, 0.4],
+    "shadow": true,
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "offset": [0, 0],
+    "layer": 3
+  },
+
+  "stamina_bar_background": {
+    "type": "image",
+    "texture": "textures/ui/minesia/bar_background",
+    "size": [180, 6],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "offset": [10, 0],
+    "layer": 1
+  },
+
+  "stamina_bar_fill_image": {
+    "type": "image",
+    "texture": "textures/ui/minesia/stamina_bar_fill",
+    "size": ["#fill_width", 6],
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "offset": [10, 0],
+    "layer": 2,
+    "bindings": [
+      {
+        "binding_type": "scoreboard",
+        "scoreboard_objective": "minesia_hud_sta_w",
+        "binding_name_override": "#fill_width"
+      }
+    ]
+  },
+
+  "stamina_percent_label": {
+    "type": "label",
+    "text": "#sta_pct",
+    "color": [1.0, 1.0, 1.0],
+    "shadow": true,
+    "anchor_from": "right_middle",
+    "anchor_to": "right_middle",
+    "offset": [-2, 0],
+    "layer": 3,
+    "bindings": [
+      {
+        "binding_type": "scoreboard",
+        "scoreboard_objective": "minesia_hud_sta_pct",
+        "binding_name_override": "#sta_pct"
+      }
+    ]
+  }
+}

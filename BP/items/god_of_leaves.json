@@ -1,0 +1,27 @@
+{
+    "format_version": "1.26.10",
+    "minecraft:item": {
+        "description": {
+            "identifier": "minesia:god_of_leaves",
+            "menu_category": {
+                "category": "equipment",
+                "group": "minesia:itemGroup.name.specialWeapons"
+            }
+        },
+        "components": {
+            "minecraft:icon": {
+                "textures": {
+                    "default": "minesia_god_of_leaves"
+                }
+            },
+            "minecraft:max_stack_size": 1,
+            "minecraft:hand_equipped": true,
+            "minecraft:durability": {
+                "max_durability": 459
+            },
+            "minecraft:display_name": {
+                "value": "item.minesia:god_of_leaves"
+            }
+        }
+    }
+}

@@ -9,7 +9,8 @@ export const ITEM_RULES = [
     id: "minesia:golden_phantom_membrane",
     slots: ["offhand"],
     actions: [
-      { kind: "state", key: "golden_phantom_membrane_active", value: true }
+      { kind: "state", key: "golden_phantom_membrane_active", value: true },
+      { kind: "attribute_percent", type: "stamina", percent: 20 }
     ]
   },
 
@@ -51,13 +52,15 @@ export const ITEM_RULES = [
     slots: ["offhand"],
     actions: [
       { kind: "state", key: "statue_totem_active", value: true },
-      { kind: "attribute_percent", type: "health", percent: 25 }
+      { kind: "attribute_percent", type: "health", percent: 25 },
+      { kind: "attribute_percent", type: "stamina", percent: 80 }
     ]
   },
 
   {
     id: "minesia:flamie",
     slots: ["offhand"],
+    offhandOnly: true,
     actions: [
       { kind: "state", key: "flamie_offhand_active", value: true }
     ]
@@ -66,6 +69,7 @@ export const ITEM_RULES = [
   {
     id: "minesia:ender_pearl_sword",
     slots: ["offhand"],
+    offhandOnly: true,
     actions: [
       { kind: "state", key: "ender_pearl_sword_offhand_active", value: true }
     ]
@@ -88,6 +92,15 @@ export const ITEM_RULES = [
       { kind: "state", key: "desert_pyramid_eye_active", value: true },
       { kind: "attribute_percent", type: "stamina", percent: 50 }
     ]
+  },
+
+  {
+    id: "minesia:shield_of_bange",
+    slots: ["offhand"],
+    actions: [
+      { kind: "state", key: "shield_of_bange_active", value: true },
+      { kind: "attribute_percent", type: "stamina", percent: 20 }
+    ]
   }
 ];
 
@@ -105,6 +118,23 @@ export const SET_RULES = [
     actions: [
       { kind: "attribute", type: "health", value: 4 },
       { kind: "state", key: "steel_set", value: true }
+    ]
+  },
+
+  {
+    name: "darkblue_full_set",
+
+    required: {
+      head: "minesia:darkblue_helmet",
+      chest: "minesia:darkblue_chestplate",
+      legs: "minesia:darkblue_leggings",
+      feet: "minesia:darkblue_boots"
+    },
+
+    actions: [
+      { kind: "attribute", type: "health", value: 4 },
+      { kind: "attribute_percent", type: "stamina", percent: 50 },
+      { kind: "state", key: "darkblue_set", value: true }
     ]
   },
 ];

@@ -5,23 +5,29 @@ import { getWeaponStaminaCost, isStaminaWeapon } from "./weaponStaminaConfig.js"
 import { debug } from "../debug/debugManager.js";
 import { MinesiaLevelSystem } from "../minesia_level/level_system.js";
 import { MinesiaLevelEventSystem } from "../minesia_level/minesiaLevelEvent.js";
+import { getPlayerLocale } from "../language.js";
+
+// DynamicProperty 标识符(必须放在使用前)
+const STAMINA_PROPERTY_ID = "minesia:stamina";
+const STAMINA_BONUS_PROPERTY_ID = "minesia:stamina_bonus";
 
 const playerStaminaData = new Map();
 const playerDisplayState = new Map();
-const LANGUAGE_OBJECTIVE = "minesia_language";
-const DEFAULT_LOCALE = "zh_CN";
+const playerGameModeMap = new Map();
 
-function getPlayerLocale(player) {
+function getPlayerGameMode(player) {
     try {
-        const scoreboard = world.scoreboard;
-        const langObj = scoreboard?.getObjective(LANGUAGE_OBJECTIVE);
-        if (langObj) {
-            const score = langObj.getScore(player);
-            if (score === 0) return "en_US";
-            return "zh_CN";
-        }
-    } catch (e) { }
-    return DEFAULT_LOCALE;
+        return player.getGameMode?.() ?? null;
+    } catch (e) {
+        const storedMode = playerGameModeMap.get(player.id);
+        return storedMode ?? null;
+    }
+}
+
+function isCreativeOrSpectator(player) {
+    const gameMode = getPlayerGameMode(player);
+    return gameMode === GameMode.creative || gameMode === GameMode.spectator ||
+           gameMode === "creative" || gameMode === "spectator";
 }
 
 class StaminaSystem {
@@ -54,6 +60,8 @@ class StaminaSystem {
     static getPlayerData(player) {
         let data = playerStaminaData.get(player.id);
         if (!data) {
+            // 创建默认数据(不读 DynamicProperty,由 handlePlayerSpawn 显式赋值)
+            // 参考 0.0.16 工作版本
             data = {
                 stamina: STAMINA_CONFIG.maxStamina,
                 lastPosition: { x: player.location.x, y: player.location.y, z: player.location.z },
@@ -70,6 +78,8 @@ class StaminaSystem {
                 consumptionMultiplier: 1,
                 recoveryMultiplier: 1,
                 maxStaminaBonus: 0,
+                levelStaminaBonus: 0,
+                spawnGraceTicks: 0,
                 lastStamina: STAMINA_CONFIG.maxStamina
             };
             playerStaminaData.set(player.id, data);
@@ -84,7 +94,7 @@ class StaminaSystem {
 
     static getMaxStamina(player) {
         const data = this.getPlayerData(player);
-        return STAMINA_CONFIG.maxStamina + data.maxStaminaBonus;
+        return STAMINA_CONFIG.maxStamina + data.levelStaminaBonus + data.maxStaminaBonus;
     }
 
     static getStaminaPercentage(player) {
@@ -124,6 +134,8 @@ class StaminaSystem {
     }
 
     static consumeStamina(player, amount, ignoreMultiplier = false) {
+        if (isCreativeOrSpectator(player)) return 0;
+
         const data = this.getPlayerData(player);
         const multiplier = ignoreMultiplier ? 1 : data.consumptionMultiplier;
         const finalAmount = amount * multiplier;
@@ -135,6 +147,8 @@ class StaminaSystem {
     }
 
     static recoverStamina(player, amount, ignoreMultiplier = false) {
+        if (isCreativeOrSpectator(player)) return 0;
+
         const data = this.getPlayerData(player);
         const multiplier = ignoreMultiplier ? 1 : data.recoveryMultiplier;
         const finalAmount = amount * multiplier;
@@ -156,6 +170,19 @@ class StaminaSystem {
     static setMaxStaminaBonus(player, bonus) {
         const data = this.getPlayerData(player);
         data.maxStaminaBonus = Math.max(0, bonus);
+    }
+
+    /**
+     * 设置等级体力加成(独立于装备/套装加成,不会被 clearStates 覆盖)
+     */
+    static setLevelStaminaBonus(player, bonus) {
+        const data = this.getPlayerData(player);
+        const oldMaxStamina = STAMINA_CONFIG.maxStamina + data.levelStaminaBonus + data.maxStaminaBonus;
+        const newMaxStamina = STAMINA_CONFIG.maxStamina + Math.max(0, bonus) + data.maxStaminaBonus;
+        if (data.stamina >= oldMaxStamina) {
+            data.stamina = newMaxStamina;
+        }
+        data.levelStaminaBonus = Math.max(0, bonus);
     }
 
     static addConsumptionModifier(player, modifierId, multiplier) {
@@ -301,7 +328,7 @@ class StaminaSystem {
 function updatePlayerStamina(player) {
     if (!STAMINA_CONFIG.enabled) return;
 
-    if (player.getGameMode() === GameMode.Creative) return;
+    if (isCreativeOrSpectator(player)) return;
 
     const data = StaminaSystem.getPlayerData(player);
     const currentTick = system.currentTick;
@@ -347,6 +374,22 @@ function updatePlayerStamina(player) {
 
     if (staminaConsumed > 0) {
         StaminaSystem.consumeStamina(player, staminaConsumed);
+    }
+
+    // spawn grace 期间跳过恢复(防止世界加载期间体力自动恢复)
+    // 玩家实际移动后(表示世界已加载,玩家可操作)立即清除 grace 并重置恢复计时器
+    if (data.spawnGraceTicks > 0) {
+        if (horizontalSpeed > 0.1) {
+            data.spawnGraceTicks = 0;
+            data.lastConsumptionTick = currentTick;
+        } else {
+            data.spawnGraceTicks--;
+            data.lastPosition = { x: currentPos.x, y: currentPos.y, z: currentPos.z };
+            data.lastTick = currentTick;
+            data.wasSprinting = isSprinting;
+            data.lastY = currentPos.y;
+            return;
+        }
     }
 
     const ticksSinceLastConsumption = currentTick - data.lastConsumptionTick;
@@ -404,7 +447,7 @@ function handlePlayerAttack(event) {
     const attacker = damageSource.damagingEntity;
     if (!attacker || attacker.typeId !== "minecraft:player") return;
 
-    if (attacker.getGameMode() === GameMode.Creative) return;
+    if (isCreativeOrSpectator(attacker)) return;
 
     const equippable = attacker.getComponent('minecraft:equippable');
     if (!equippable) return;
@@ -421,7 +464,16 @@ function handlePlayerAttack(event) {
 export function displayStaminaBar(player) {
     if (!STAMINA_CONFIG.enabled) return;
 
-    if (player.getGameMode() === GameMode.creative) return;
+    // 直接使用 player.getGameMode() 检查,不依赖缓存
+    const gameMode = player.getGameMode?.();
+    if (gameMode === GameMode.creative || gameMode === GameMode.spectator ||
+        gameMode === "creative" || gameMode === "spectator") {
+        ActionBarManager.removeLine(player.id, 'stamina');
+        ActionBarManager.updateDisplay(player);
+        const data = StaminaSystem.getPlayerData(player);
+        data.wasDisplaying = false;
+        return;
+    }
 
     const playerId = player.id;
 
@@ -502,9 +554,43 @@ export function initializeStaminaSystem() {
     StaminaSystem.initialize();
     world.afterEvents.entityHurt.subscribe(handlePlayerAttack);
     world.afterEvents.playerSpawn.subscribe(handlePlayerSpawn);
-    world.afterEvents.playerInventoryItemChange.subscribe(handleInventoryChange);
+    world.afterEvents.itemCompleteUse.subscribe(handleItemCompleteUse);
     world.beforeEvents.playerLeave.subscribe(handlePlayerLeave);
     system.runInterval(checkPlayerSleep, 20);
+
+    try {
+        world.afterEvents.playerGameModeChange.subscribe((event) => {
+            try {
+                const { player, newGameMode } = event;
+                playerGameModeMap.set(player.id, newGameMode);
+                if (newGameMode === GameMode.creative || newGameMode === GameMode.spectator ||
+                    newGameMode === "creative" || newGameMode === "spectator") {
+                    ActionBarManager.removeLine(player.id, 'stamina');
+                    ActionBarManager.updateDisplay(player);
+                    const data = StaminaSystem.getPlayerData(player);
+                    if (data) data.wasDisplaying = false;
+                }
+            } catch (e) { }
+        });
+    } catch (e) {
+        debug.logError("Stamina", `playerGameModeChange 事件订阅失败: ${e?.message ?? e}`);
+    }
+
+    // 定期保存所有玩家的体力值和加成到 DynamicProperty(每5秒,防止 beforeEvents 保存失败)
+    system.runInterval(() => {
+        try {
+            const players = world.getPlayers();
+            for (const player of players) {
+                try {
+                    const data = playerStaminaData.get(player.id);
+                    if (data) {
+                        player.setDynamicProperty(STAMINA_PROPERTY_ID, data.stamina);
+                        player.setDynamicProperty(STAMINA_BONUS_PROPERTY_ID, data.maxStaminaBonus);
+                    }
+                } catch (_e) { }
+            }
+        } catch (_e) { }
+    }, 100);
 
     if (world.afterEvents.scriptEventReceive) {
         world.afterEvents.scriptEventReceive.subscribe(handleScriptEvent);
@@ -543,16 +629,41 @@ function checkPlayerSleep() {
     }
 }
 
-const STAMINA_PROPERTY_ID = "minesia:stamina";
+function applyLevelStaminaBonus(player) {
+    if (isCreativeOrSpectator(player)) return true;
+    
+    const totalExp = MinesiaLevelSystem.getTotalExperience(player);
+    if (totalExp === null) return false;
+    const currentLevel = MinesiaLevelSystem.calculateLevel(totalExp);
+    const staminaBonus = MinesiaLevelEventSystem.calculateLevelStaminaBonus(currentLevel);
+    StaminaSystem.setLevelStaminaBonus(player, staminaBonus);
+    return true;
+}
 
 function handlePlayerSpawn(event) {
     const { player, initialSpawn } = event;
     if (!player) return;
 
+    // 创造/旁观模式直接跳过所有体力逻辑
+    if (isCreativeOrSpectator(player)) {
+        ActionBarManager.removeLine(player.id, 'stamina');
+        ActionBarManager.updateDisplay(player);
+        return;
+    }
+
+    try {
+        const gm = player.getGameMode?.();
+        if (gm) playerGameModeMap.set(player.id, gm);
+    } catch (e) { }
+
+    // 0.0.16 工作方式:先创建默认数据,再显式读取 DynamicProperty 赋值
     const savedStamina = player.getDynamicProperty(STAMINA_PROPERTY_ID);
     const data = StaminaSystem.getPlayerData(player);
 
-    if (savedStamina !== undefined && savedStamina !== null) {
+    if (!initialSpawn) {
+        // 死亡重生:体力值恢复满
+        StaminaSystem.fullRestore(player);
+    } else if (savedStamina !== undefined && savedStamina !== null) {
         data.stamina = savedStamina;
         if (data.stamina <= 0) {
             data.isExhausted = true;
@@ -561,15 +672,13 @@ function handlePlayerSpawn(event) {
         StaminaSystem.fullRestore(player);
     }
 
-    const totalExp = MinesiaLevelSystem.getTotalExperience(player);
-    if (totalExp !== null) {
-        const currentLevel = MinesiaLevelSystem.calculateLevel(totalExp);
-        const staminaBonus = MinesiaLevelEventSystem.calculateLevelStaminaBonus(currentLevel);
-        if (staminaBonus > 0) {
-            data.maxStaminaBonus = staminaBonus;
-            debug.logWithTag("Stamina", `${player.name} 恢复等级体力加成: +${staminaBonus}`);
-        }
-    }
+    // 阻止进服瞬间开始恢复(否则 savedStamina 会在世界加载期间恢复到满)
+    // spawnGraceTicks 提供最长 20 秒恢复冷却期,玩家实际移动后立即清除
+    data.lastConsumptionTick = system.currentTick;
+    data.spawnGraceTicks = 400;
+
+    // 读取计分板计算等级体力加成(每次 playerSpawn 重新计算,无需持久化 bonus)
+    applyLevelStaminaBonus(player);
 
     if (!initialSpawn) {
         system.runTimeout(() => {
@@ -590,28 +699,26 @@ function handlePlayerLeave(event) {
     const { player } = event;
     if (!player) return;
 
-    const data = StaminaSystem.getPlayerData(player);
-    player.setDynamicProperty(STAMINA_PROPERTY_ID, data.stamina);
+    // 清理内存数据
+    playerStaminaData.delete(player.id);
+    playerGameModeMap.delete(player.id);
 }
 
-function handleInventoryChange(event) {
+function handleItemCompleteUse(event) {
     if (!STAMINA_CONFIG.enabled) return;
 
-    const { player, beforeItemStack, itemStack } = event;
-    if (!player) return;
+    const { source, itemStack } = event;
+    if (!source || source.typeId !== "minecraft:player") return;
+    if (!itemStack) return;
 
-    if (!beforeItemStack) return;
+    const player = source;
+    if (isCreativeOrSpectator(player)) return;
 
-    const beforeCount = beforeItemStack.amount;
-    const afterCount = itemStack?.amount ?? 0;
-
-    if (beforeCount <= afterCount) return;
-
-    const itemId = beforeItemStack.typeId;
+    const itemId = itemStack.typeId;
     let nutrition = STAMINA_CONFIG.vanillaFoodNutrition?.[itemId] ?? 0;
 
     if (nutrition === 0) {
-        const foodComponent = beforeItemStack.getComponent('minecraft:food');
+        const foodComponent = itemStack.getComponent('minecraft:food');
         if (foodComponent) {
             nutrition = foodComponent.nutrition;
         }

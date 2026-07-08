@@ -47,6 +47,7 @@ item.minesia:black_dagger=Black Dagger~LINEBREAK~~LINEBREAK~§9+2~7 Attack Damag
 item.minesia:white_golden_sword=White Golden Sword~LINEBREAK~~LINEBREAK~§9+7~9 Attack Damage~LINEBREAK~§c+2 Stamina Cost~LINEBREAK~§7Randomly consumes 0-2 durability on each attack~LINEBREAK~§7It's a bit fragile, wonder who made it.
 item.minesia:desert_pyramid_shard=Desert Pyramid Shard~LINEBREAK~~LINEBREAK~§7A mysterious crystal from the desert pyramid.
 item.minesia:desert_snow=Desert Snow~LINEBREAK~~LINEBREAK~§9+4~7 Attack Damage~LINEBREAK~§c+2 Stamina Cost~LINEBREAK~§750% chance to weaken target for 3 seconds and slow III for 1 second on attack~LINEBREAK~§7This sword was forged in the blizzard of the desert.
+item.minesia:frost_edge=Frost Edge~LINEBREAK~~LINEBREAK~§9+7~10 Attack Damage~LINEBREAK~§c+3 Stamina Cost~LINEBREAK~§e+10% Critical Rate~LINEBREAK~§735% chance to slow target II for 4 seconds on attack~LINEBREAK~§7Forged from eternal ice of the frozen depths, its chill can freeze enemies in their tracks.
 item.minesia:desert_pyramid_pearl=Desert Pyramid Pearl~LINEBREAK~~LINEBREAK~§9When in offhand or inventory row 1:~LINEBREAK~§7+100% Max Stamina~LINEBREAK~§7+50% Max Health~LINEBREAK~§7Recovers 8 stamina per second~LINEBREAK~§7From the desert pyramid, grants the ability to run endlessly in the boundless desert.
 item.minesia:desert_pyramid_eye=Desert Pyramid Eye~LINEBREAK~~LINEBREAK~§9When in offhand or inventory row 1:~LINEBREAK~§7+50% Max Stamina~LINEBREAK~§7Recovers 4 stamina per second~LINEBREAK~§e+30% Critical Rate~LINEBREAK~§7From the desert pyramid, grants the ability to fight without rest.
 
@@ -73,6 +74,8 @@ minesia.item.black_dagger.lore=25% chance to wither target for 2 seconds on atta
 minesia.item.black_dagger.extra.lore=Looks dangerous
 minesia.item.white_golden_sword.lore=Randomly consumes 0-2 durability on each attack
 minesia.item.white_golden_sword.extra.lore=A bit fragile, wonder who made it
+minesia.item.frost_edge.lore=35% chance to slow target II for 4 seconds on attack
+minesia.item.frost_edge.extra.lore=Forged from eternal ice of the frozen depths, its chill can freeze enemies in their tracks
 
 hudScreen.nextLevel=Next Level
 hudScreen.inventory=Inventory

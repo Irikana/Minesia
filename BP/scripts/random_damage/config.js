@@ -84,8 +84,8 @@ export const RANDOM_DAMAGE_WEAPONS = [
     },
     {
         id: "minesia:desert_walker",
-        minDamage: 4,
-        maxDamage: 7,
+        minDamage: 5,
+        maxDamage: 8,
         enabled: true
     },
     {
@@ -97,8 +97,8 @@ export const RANDOM_DAMAGE_WEAPONS = [
     },
     {
         id: "minesia:tina",
-        minDamage: 8,
-        maxDamage: 13,
+        minDamage: 10,
+        maxDamage: 15,
         enabled: true
     },
     {
@@ -111,14 +111,14 @@ export const RANDOM_DAMAGE_WEAPONS = [
     {
         id: "minesia:copper_scythe",
         minDamage: 6,
-        maxDamage: 7.5,
+        maxDamage: 8,
         isScythe: true,
         enabled: true
     },
     {
         id: "minesia:stone_scythe",
         minDamage: 6,
-        maxDamage: 7.5,
+        maxDamage: 8,
         isScythe: true,
         enabled: true
     },
@@ -139,7 +139,7 @@ export const RANDOM_DAMAGE_WEAPONS = [
     {
         id: "minesia:diamond_scythe",
         minDamage: 8,
-        maxDamage: 10.5,
+        maxDamage: 11,
         isScythe: true,
         enabled: true
     },
@@ -159,8 +159,8 @@ export const RANDOM_DAMAGE_WEAPONS = [
     },
     {
         id: "minesia:flamie",
-        minDamage: 4,
-        maxDamage: 7,
+        minDamage: 5,
+        maxDamage: 8,
         enabled: true
     },
     {
@@ -172,13 +172,13 @@ export const RANDOM_DAMAGE_WEAPONS = [
     {
         id: "minesia:ender_pearl_sword",
         minDamage: 5,
-        maxDamage: 7,
+        maxDamage: 8,
         enabled: true
     },
     {
         id: "minesia:duty_ice",
-        minDamage: 5,
-        maxDamage: 8,
+        minDamage: 6,
+        maxDamage: 9,
         enabled: true
     },
     {
@@ -201,14 +201,50 @@ export const RANDOM_DAMAGE_WEAPONS = [
     },
     {
         id: "minesia:white_golden_sword",
+        minDamage: 4,
+        maxDamage: 7,
+        enabled: true
+    },
+    {
+        id: "minesia:desert_snow",
+        minDamage: 5,
+        maxDamage: 9,
+        enabled: true
+    },
+    {
+        id: "minesia:frost_edge",
+        minDamage: 7,
+        maxDamage: 10,
+        enabled: true
+    },
+    {
+        id: "minesia:proof_of_strength",
+        minDamage: 5,
+        maxDamage: 5,
+        enabled: true
+    },
+    {
+        id: "minesia:god_of_leaves",
+        minDamage: 2,
+        maxDamage: 5,
+        enabled: true
+    },
+    {
+        id: "minesia:darkblue_sword",
         minDamage: 7,
         maxDamage: 9,
         enabled: true
     },
     {
-        id: "minesia:desert_snow",
+        id: "minesia:darkblue_spear",
         minDamage: 4,
-        maxDamage: 7,
+        maxDamage: 6,
+        enabled: true
+    },
+    {
+        id: "minesia:darkblue_axe",
+        minDamage: 6,
+        maxDamage: 9,
         enabled: true
     }
 ];
@@ -218,18 +254,14 @@ export function getWeaponConfig(itemId) {
 }
 
 export function calculateRandomDamage(minDamage, maxDamage) {
-    const min = Math.min(minDamage, maxDamage);
-    const max = Math.max(minDamage, maxDamage);
+    const min = Math.floor(Math.min(minDamage, maxDamage));
+    const max = Math.floor(Math.max(minDamage, maxDamage));
 
     if (min === max) {
         return min;
     }
 
-    const steps = Math.round((max - min) * 10);
-    const randomStep = Math.floor(Math.random() * (steps + 1));
-    const damage = min + randomStep / 10;
-
-    return Math.round(damage * 10) / 10;
+    return Math.floor(min + Math.random() * (max - min + 1));
 }
 
 export function formatDamageRange(minDamage, maxDamage) {

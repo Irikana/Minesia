@@ -2,6 +2,7 @@
 import { world, system } from "@minecraft/server";
 import { ActionFormData } from "@minecraft/server-ui";
 import { initializeDebugSystem, debug } from "./debug/debugManager.js";
+import { getPlayerLocale, setPlayerLocale, hasPlayerSelectedLanguage } from "./language.js";
 import * as setEffectMain from "./set_effect/setEffectMain.js";
 import * as minesiaLevelMain from "./minesia_level/minesiaLevelMain.js";
 import { MinesiaLevelEventSystem } from "./minesia_level/minesiaLevelEvent.js";
@@ -13,63 +14,41 @@ import { processItemEffects } from "./custom_events/index.js";
 import { initHealthBoostManager } from "./set_effect/healthBoostManager.js";
 import { initializeWeaponEffects } from "./custom_events/item_events/weaponEffectConfig.js";
 import { initializeCriticalHitSystem } from "./critical_hit/criticalHitMain.js";
+import { initializeShieldOfBangeSystem } from "./shield_of_bange/shieldOfBangeMain.js";
 import { initializeDynamicLightSystem, updateDynamicLightSystem } from "./dynamic_light/index.js";
 import { initializeAttributePanelSystem } from "./attribute_panel/index.js";
 import { initializeAccessorySystem } from "./accessory/index.js";
-
-const LANGUAGE_OBJECTIVE = 'minesia_language';
-
-function hasPlayerSelectedLanguage(player) {
-    try {
-        const scoreboard = world.scoreboard;
-        const langObj = scoreboard.getObjective(LANGUAGE_OBJECTIVE);
-        if (!langObj) return false;
-        const score = langObj.getScore(player);
-        return score === 0 || score === 1;
-    } catch (_e) {
-        return false;
-    }
-}
-
-function setPlayerLanguage(player, language) {
-    try {
-        const scoreboard = world.scoreboard;
-        let langObj = scoreboard.getObjective(LANGUAGE_OBJECTIVE);
-        if (!langObj) {
-            langObj = scoreboard.addObjective(LANGUAGE_OBJECTIVE, 'Minesia Language');
-        }
-        const score = language === 'en_US' ? 0 : 1;
-        langObj.setScore(player, score);
-    } catch (_e) { }
-}
+import { initializeHudBridge, updateHudBridge, onPlayerSpawn as onHudPlayerSpawn } from "./hud_bridge/index.js";
 
 function showLanguageSelectionForm(player) {
     const form = new ActionFormData();
-    form.title('§eMinesia §r- Language / 语言');
+    form.title('Minesia - Language / 语言');
     form.body('Please select your language / 请选择您的语言:');
     form.button('English');
     form.button('中文');
     form.show(player).then((response) => {
         if (response.canceled) {
-            system.runTimeout(() => showLanguageSelectionForm(player), 60);
+            // 用户关闭弹窗时默认中文，不再无限弹出
+            setPlayerLocale(player, 'zh_CN');
+            player.sendMessage('§a语言已设置为中文。');
             return;
         }
         const selectedLang = response.selection === 0 ? 'en_US' : 'zh_CN';
-        setPlayerLanguage(player, selectedLang);
+        setPlayerLocale(player, selectedLang);
         if (selectedLang === 'en_US') {
             player.sendMessage('§aLanguage set to English.');
         } else {
             player.sendMessage('§a语言已设置为中文。');
         }
     }).catch(() => {
-        system.runTimeout(() => showLanguageSelectionForm(player), 60);
+        // 弹窗出错时默认中文，不再无限重试
+        setPlayerLocale(player, 'zh_CN');
     });
 }
 
 function sendWelcomeMessage(player) {
     player.sendMessage('§c本模组正在前期开发中 / This mod is in early development');
-    player.sendMessage('§a请使用命令 /scoreboard players set @s minesia_language 0 切换英文，1 切换中文');
-    player.sendMessage('§aUse command /scoreboard players set @s minesia_language 0 for English, 1 for Chinese');
+    player.sendMessage('§a使用物品栏中的属性面板可切换语言 / Use the Attribute Panel in inventory to switch language');
 }
 
 function initializeWelcomeSystem() {
@@ -81,6 +60,7 @@ function initializeWelcomeSystem() {
             if (!hasPlayerSelectedLanguage(player)) {
                 showLanguageSelectionForm(player);
             }
+            onHudPlayerSpawn(player);
         }, 40);
     });
 
@@ -105,6 +85,10 @@ system.runTimeout(() => {
         debug.logWithTag("Minesia", "系统启动中...");
         debug.logWithTag("Minesia", "初始化核心系统...");
         debug.logWithTag("Minesia", "✓ 调试系统就绪");
+
+        // 计分板必须先初始化,playerSpawn 事件需要读取 minesia_exp
+        minesiaLevelMain.initializeScoreboard();
+        debug.logWithTag("Minesia", "✓ 计分板系统就绪");
 
         initializeWelcomeSystem();
         debug.logWithTag("Minesia", "✓ 欢迎消息系统就绪");
@@ -133,6 +117,9 @@ system.runTimeout(() => {
         initializeCriticalHitSystem();
         debug.logWithTag("Minesia", "✓ 暴击系统就绪");
 
+        initializeShieldOfBangeSystem();
+        debug.logWithTag("Minesia", "✓ 班戈之盾系统就绪");
+
         initializeDynamicLightSystem();
         debug.logWithTag("Minesia", "✓ 动态光源系统就绪");
 
@@ -141,6 +128,22 @@ system.runTimeout(() => {
 
         initializeAccessorySystem();
         debug.logWithTag("Minesia", "✓ 饰品栏系统就绪");
+
+        initializeHudBridge();
+        debug.logWithTag("Minesia", "✓ HUD桥接系统就绪");
+
+        // 深蓝矿石挖掘经验掉落
+        world.afterEvents.playerBreakBlock.subscribe((event) => {
+            try {
+                const { player, block, brokenBlockPermutation } = event;
+                const typeId = brokenBlockPermutation?.type?.id;
+                if (typeId === "minesia:darkblue_ore" || typeId === "minesia:deepslate_darkblue_ore") {
+                    const xp = 2 + Math.floor(Math.random() * 4);
+                    player.addExperience(xp);
+                }
+            } catch (e) { }
+        });
+        debug.logWithTag("Minesia", "✓ 矿石经验掉落就绪");
 
         systemReady = true;
         debug.logWithTag("Minesia", "🎉 核心系统初始化完成!");
@@ -169,17 +172,10 @@ system.runInterval(() => {
 
         updateDynamicLightSystem();
 
+        updateHudBridge();
+
     } catch (error) {
         errorCount++;
         debug.logError("Minesia", `运行时错误: ${error.message}`);
     }
 }, 1);
-
-system.runTimeout(() => {
-    try {
-        minesiaLevelMain.initializeScoreboard();
-        debug.logWithTag("Minesia", "✓ 计分板系统就绪");
-    } catch (error) {
-        debug.logError("Minesia", `计分板初始化失败: ${error.message}`);
-    }
-}, 30);

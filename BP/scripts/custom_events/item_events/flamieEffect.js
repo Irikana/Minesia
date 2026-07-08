@@ -3,13 +3,13 @@ import { debug } from "../../debug/debugManager.js";
 
 export const FLAMIE_EFFECT = {
     name: "Flamie",
-    description: "攻击时使目标着火5秒，副手装备时攻击使目标着火2秒",
+    description: "攻击时使目标着火5秒，副手装备时攻击使目标着火5秒",
     itemId: "minesia:flamie"
 };
 
 export function applyFlamieEffect(target, attacker, isOffhandEquipped) {
     try {
-        const fireDuration = isOffhandEquipped ? 2 : 5;
+        const fireDuration = 5;
         target.setOnFire(fireDuration, true);
         debug.logWithTag("Flamie", `${attacker.name} 使目标着火 ${fireDuration} 秒`);
     } catch (error) {

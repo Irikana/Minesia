@@ -10,9 +10,9 @@ import { ActionBarManager, DISPLAY_PRIORITIES } from "../action_bar/index.js";
 import { LoreManager } from "../lore_system/loreManager.js";
 import { StaminaSystem } from "../stamina/staminaMain.js";
 import { debug } from "../debug/debugManager.js";
+import { getPlayerLocale } from "../language.js";
 
 const levelUpDisplayActive = new Map();
-const LANGUAGE_OBJECTIVE = "minesia_language";
 const LEVEL_TEXTS = {
     zh_CN: {
         healthBonus: "生命值",
@@ -127,17 +127,6 @@ const LEVEL_TEXTS = {
         }
     }
 };
-function getPlayerLocale(player) {
-    try {
-        const scoreboard = world.scoreboard;
-        const langObj = scoreboard?.getObjective(LANGUAGE_OBJECTIVE);
-        if (langObj) {
-            const score = langObj.getScore(player);
-            if (score === 0) return "en_US";
-        }
-    } catch (e) { }
-    return "zh_CN";
-}
 function getLevelMessage(player, level) {
     const locale = getPlayerLocale(player);
     const texts = LEVEL_TEXTS[locale] || LEVEL_TEXTS.zh_CN;
@@ -265,12 +254,10 @@ export class MinesiaLevelEventSystem {
         const playerId = player.id;
         const message = getLevelMessage(player, level);
         levelUpDisplayActive.set(playerId, true);
-        MinesiaLevelSystem.pauseLevelDisplay(player, duration);
-        ActionBarManager.setLine(playerId, 'levelup', `§a${message}`, DISPLAY_PRIORITIES.LEVEL);
-        ActionBarManager.updateDisplay(player);
+        // 升级提示改用 sendMessage,避免占用 actionbar(JSON UI HUD 通道)
+        player.sendMessage(`§a${message}`);
         system.runTimeout(() => {
             levelUpDisplayActive.delete(playerId);
-            ActionBarManager.removeLine(playerId, 'levelup');
         }, Math.floor(duration / 50));
     }
     static playLevelUpSound(player) {
@@ -301,6 +288,7 @@ export class MinesiaLevelEventSystem {
         if (reward.tina) this.giveItem(player, "minesia:tina", reward.tina);
         const hasHealthReward = this.LEVEL_HEALTH_REWARDS[level];
         const hasStaminaReward = this.LEVEL_STAMINA_REWARDS[level];
+        console.warn(`[LevelEvent] ${player.name} 处理等级奖励 Lv${level}: health=${hasHealthReward || 0}, stamina=${hasStaminaReward || 0}`);
         if (hasHealthReward || hasStaminaReward) {
             this.showCombinedMessage(player, level, hasHealthReward || 0, hasStaminaReward || 0);
         } else {
@@ -314,20 +302,22 @@ export class MinesiaLevelEventSystem {
         const locale = getPlayerLocale(player);
         const texts = LEVEL_TEXTS[locale] || LEVEL_TEXTS.zh_CN;
         levelUpDisplayActive.set(playerId, true);
-        MinesiaLevelSystem.pauseLevelDisplay(player, 10000);
+
         let displayText = `§a${message}`;
         if (healthBonus > 0) {
             displayText += `\n§a+${healthBonus} ${texts.healthBonus}`;
         }
         if (staminaBonus > 0) {
             displayText += `\n§a+${staminaBonus} ${texts.staminaBonus}`;
-            StaminaSystem.setMaxStaminaBonus(player, this.calculateLevelStaminaBonus(level));
+            // 等级体力加成独立存储,不会被套装系统的 clearStates 覆盖
+            const totalBonus = this.calculateLevelStaminaBonus(level);
+            console.warn(`[LevelEvent] ${player.name} 升级体力加成: Lv${level} 单次+${staminaBonus} 累计=${totalBonus}`);
+            StaminaSystem.setLevelStaminaBonus(player, totalBonus);
         }
-        ActionBarManager.setLine(playerId, 'levelup', displayText, DISPLAY_PRIORITIES.LEVEL);
-        ActionBarManager.updateDisplay(player);
+        // 升级提示改用 sendMessage,避免占用 actionbar(JSON UI HUD 通道)
+        player.sendMessage(displayText);
         system.runTimeout(() => {
             levelUpDisplayActive.delete(playerId);
-            ActionBarManager.removeLine(playerId, 'levelup');
         }, 200);
     }
     static giveItem(player, itemId, count) {

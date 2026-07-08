@@ -14,6 +14,7 @@ export { applySelfishEffect, isSelfishItem, SELFISH_EFFECT } from "./selfishEffe
 export { isStatueTotemItem, hasStatueTotemEquipped, STATUE_TOTEM_EFFECT } from "./statueTotemEffect.js";
 export { applyBlackDaggerEffect, isBlackDaggerItem, BLACK_DAGGER_EFFECT } from "./blackDaggerEffect.js";
 export { applyWhiteGoldenSwordEffect, isWhiteGoldenSwordItem, WHITE_GOLDEN_SWORD_EFFECT } from "./whiteGoldenSwordEffect.js";
+export { applyFrostEdgeEffect, isFrostEdgeItem, FROST_EDGE_EFFECT } from "./frostEdgeEffect.js";
 export { 
     registerWeaponEffect, 
     unregisterWeaponEffect, 

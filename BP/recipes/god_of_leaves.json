@@ -1,0 +1,32 @@
+{
+    "format_version": "1.20.80",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "minesia:god_of_leaves"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            " L ",
+            "LLL",
+            " I "
+        ],
+        "key": {
+            "L": {
+                "item": "minecraft:oak_leaves"
+            },
+            "I": {
+                "item": "minecraft:stick"
+            }
+        },
+        "result": {
+            "item": "minesia:god_of_leaves"
+        },
+        "unlock": [
+            {
+                "item": "minecraft:oak_leaves"
+            }
+        ]
+    }
+}

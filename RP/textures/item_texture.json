@@ -155,6 +155,51 @@
         },
         "minesia_attribute_panel": {
             "textures": "textures/items/attribute_panel"
+        },
+        "minesia_frost_edge": {
+            "textures": "textures/items/frost_edge"
+        },
+        "minesia_proof_of_strength": {
+            "textures": "textures/items/proof_of_strength"
+        },
+        "minesia_god_of_leaves": {
+            "textures": "textures/items/god_of_leaves"
+        },
+        "minesia_darkblue_ingot": {
+            "textures": "textures/items/darkblue_ingot"
+        },
+        "minesia_darkblue_sword": {
+            "textures": "textures/items/darkblue_sword"
+        },
+        "minesia_darkblue_spear": {
+            "textures": "textures/items/darkblue_spear"
+        },
+        "minesia_darkblue_pickaxe": {
+            "textures": "textures/items/darkblue_pickaxe"
+        },
+        "minesia_darkblue_axe": {
+            "textures": "textures/items/darkblue_axe"
+        },
+        "minesia_darkblue_shovel": {
+            "textures": "textures/items/darkblue_shovel"
+        },
+        "minesia_darkblue_hoe": {
+            "textures": "textures/items/darkblue_hoe"
+        },
+        "minesia_darkblue_helmet": {
+            "textures": "textures/items/darkblue_helmet"
+        },
+        "minesia_darkblue_chestplate": {
+            "textures": "textures/items/darkblue_chestplate"
+        },
+        "minesia_darkblue_leggings": {
+            "textures": "textures/items/darkblue_leggings"
+        },
+        "minesia_darkblue_boots": {
+            "textures": "textures/items/darkblue_boots"
+        },
+        "minesia_shield_of_bange": {
+            "textures": "textures/items/shield_of_bange"
         }
     },
     "resource_pack_name": "Minesia",

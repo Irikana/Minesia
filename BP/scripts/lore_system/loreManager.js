@@ -7,9 +7,7 @@
 import { world, system } from "@minecraft/server";
 import { LoreRegistry } from "./loreRegistry.js";
 import { debug } from "../debug/debugManager.js";
-
-const LANGUAGE_OBJECTIVE = "minesia_language";
-const DEFAULT_LOCALE = "zh_CN";
+import { getPlayerLocale } from "../language.js";
 
 const MINESIA_LORE_MARKERS = [
     "攻击伤害", "Attack Damage",
@@ -61,19 +59,6 @@ const MINESIA_LORE_MARKERS = [
     "就是有点容易坏，不知道出自哪位高人之手", "It's a bit fragile, wonder who made it"
 ];
 
-function getPlayerLocale(player) {
-    try {
-        const scoreboard = world.scoreboard;
-        const langObj = scoreboard?.getObjective(LANGUAGE_OBJECTIVE);
-        if (langObj) {
-            const score = langObj.getScore(player);
-            if (score === 0) return "en_US";
-            return "zh_CN";
-        }
-    } catch (e) { }
-    return DEFAULT_LOCALE;
-}
-
 function isMinesiaLore(line) {
     if (line === "" || line === "§r" || line === "§r§9" || line === "§r§7") {
         return true;
@@ -120,7 +105,7 @@ export const LoreManager = {
         if (handlers.length === 0) return itemStack;
 
         let currentLore = itemStack.getLore() || [];
-        const locale = context.locale ?? DEFAULT_LOCALE;
+        const locale = context.locale ?? "zh_CN";
 
         const hasMinesiaLoreInItem = currentLore.some(line => isMinesiaLore(line));
 
@@ -154,7 +139,7 @@ export const LoreManager = {
     processContainer(container, context = {}) {
         if (!container) return;
 
-        const locale = context.locale ?? DEFAULT_LOCALE;
+        const locale = context.locale ?? "zh_CN";
 
         for (let i = 0; i < container.size; i++) {
             const item = container.getItem(i);

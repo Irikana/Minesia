@@ -11,26 +11,12 @@ import { ActionBarManager, DISPLAY_PRIORITIES } from "../action_bar/index.js";
 import { getAoeDamageRecord, isAoeEntity } from "../custom_events/item_events/aoeDamageRegistry.js";
 import { isLevelUpDisplayActive } from "../minesia_level/minesiaLevelEvent.js";
 import { debug } from "../debug/debugManager.js";
+import { getPlayerLocale } from "../language.js";
 
 const playerComboState = new Map();
 const playerAoeComboState = new Map();
 const playerDisplayState = new Map();
-const LANGUAGE_OBJECTIVE = "minesia_language";
-const DEFAULT_LOCALE = "zh_CN";
 const processedAttacks = new Map();
-
-function getPlayerLocale(player) {
-    try {
-        const scoreboard = world.scoreboard;
-        const langObj = scoreboard?.getObjective(LANGUAGE_OBJECTIVE);
-        if (langObj) {
-            const score = langObj.getScore(player);
-            if (score === 0) return "en_US";
-            return "zh_CN";
-        }
-    } catch (e) { }
-    return DEFAULT_LOCALE;
-}
 
 export function initializeDamageDisplaySystem() {
     world.afterEvents.entityHurt.subscribe(handleEntityHurt);

@@ -210,6 +210,12 @@ export const RANDOM_DAMAGE_WEAPONS = [
         minDamage: 4,
         maxDamage: 7,
         enabled: true
+    },
+    {
+        id: "minesia:frost_edge",
+        minDamage: 7,
+        maxDamage: 10,
+        enabled: true
     }
 ];
 

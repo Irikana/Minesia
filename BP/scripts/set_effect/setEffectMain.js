@@ -94,7 +94,7 @@ function processItemRules(player, equippable) {
             }
         }
         
-        if (rule.slots.includes("offhand")) {
+        if (rule.slots.includes("offhand") && !rule.offhandOnly) {
             const accessoryItems = getPlayerAccessoryItems(player);
             for (const accessory of accessoryItems) {
                 if (accessory.item.typeId === rule.id) {

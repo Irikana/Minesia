@@ -10,6 +10,9 @@ import { applySelfishEffect } from "./selfishEffect.js";
 import { applyBlackDaggerEffect } from "./blackDaggerEffect.js";
 import { applyWhiteGoldenSwordEffect } from "./whiteGoldenSwordEffect.js";
 import { applyDesertSnowEffect } from "./desertSnowEffect.js";
+import { applyFrostEdgeEffect } from "./frostEdgeEffect.js";
+import { applyProofOfStrengthEffect } from "./proofOfStrengthEffect.js";
+import { applyGodOfLeavesEffect } from "./godOfLeavesEffect.js";
 
 export function initializeWeaponEffects() {
     registerWeaponEffect({
@@ -19,7 +22,7 @@ export function initializeWeaponEffects() {
         priority: 10,
         onAttack: ({ target }) => {
             if (Math.random() < 0.5) {
-                target.addEffect("minecraft:slowness", 20, {
+                target.addEffect("minecraft:slowness", 60, {
                     amplifier: 0,
                     showParticles: true
                 });
@@ -156,8 +159,8 @@ export function initializeWeaponEffects() {
         name: "黑匕首",
         itemIds: ["minesia:black_dagger"],
         priority: 15,
-        onAttack: ({ target, attacker }) => {
-            applyBlackDaggerEffect(target, attacker);
+        onAttack: ({ target, attacker, totalDamage }) => {
+            applyBlackDaggerEffect(target, attacker, totalDamage);
         }
     });
 
@@ -166,8 +169,8 @@ export function initializeWeaponEffects() {
         name: "白金剑",
         itemIds: ["minesia:white_golden_sword"],
         priority: 15,
-        onAttack: ({ attacker, mainhandItem }) => {
-            applyWhiteGoldenSwordEffect(attacker, mainhandItem);
+        onAttack: ({ attacker, target, mainhandItem }) => {
+            applyWhiteGoldenSwordEffect(attacker, target, mainhandItem);
         }
     });
 
@@ -178,6 +181,36 @@ export function initializeWeaponEffects() {
         priority: 15,
         onAttack: ({ target, attacker }) => {
             applyDesertSnowEffect(target, attacker);
+        }
+    });
+
+    registerWeaponEffect({
+        id: "frost_edge",
+        name: "霜刃",
+        itemIds: ["minesia:frost_edge"],
+        priority: 15,
+        onAttack: ({ target, attacker }) => {
+            applyFrostEdgeEffect(target, attacker);
+        }
+    });
+
+    registerWeaponEffect({
+        id: "proof_of_strength",
+        name: "力量的证明",
+        itemIds: ["minesia:proof_of_strength"],
+        priority: 15,
+        onAttack: ({ attacker, target, StaminaSystem }) => {
+            applyProofOfStrengthEffect(attacker, target, StaminaSystem);
+        }
+    });
+
+    registerWeaponEffect({
+        id: "god_of_leaves",
+        name: "树叶之神",
+        itemIds: ["minesia:god_of_leaves"],
+        priority: 15,
+        onAttack: ({ attacker, target }) => {
+            applyGodOfLeavesEffect(attacker, target);
         }
     });
 }

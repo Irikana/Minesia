@@ -1,0 +1,54 @@
+{
+    "format_version": "1.26.10",
+    "minecraft:item": {
+        "description": {
+            "identifier": "minesia:darkblue_shovel",
+            "menu_category": {
+                "category": "equipment",
+                "group": "minecraft:itemGroup.name.shovel"
+            }
+        },
+        "components": {
+            "minecraft:icon": {
+                "textures": {
+                    "default": "minesia_darkblue_shovel"
+                }
+            },
+            "minecraft:max_stack_size": 1,
+            "minecraft:hand_equipped": true,
+            "minecraft:durability": {
+                "max_durability": 1800
+            },
+            "minecraft:digger": {
+                "use_efficiency": true,
+                "destroy_speeds": [
+                    {
+                        "block": {"tags": "q.any_tag('minecraft:sand', 'minecraft:dirt')"},
+                        "speed": 8
+                    }
+                ]
+            },
+            "minecraft:repairable": {
+                "repair_items": [
+                    {
+                        "items": ["minesia:darkblue_ingot"],
+                        "repair_amount": 400
+                    }
+                ]
+            },
+            "minecraft:tags": {
+                "tags": [
+                    "minecraft:is_tool",
+                    "minecraft:is_shovel"
+                ]
+            },
+            "minecraft:enchantable": {
+                "slot": "shovel",
+                "value": 15
+            },
+            "minecraft:display_name": {
+                "value": "item.minesia:darkblue_shovel"
+            }
+        }
+    }
+}

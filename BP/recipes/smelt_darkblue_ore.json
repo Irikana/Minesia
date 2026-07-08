@@ -1,0 +1,11 @@
+{
+    "format_version": "1.20.80",
+    "minecraft:recipe_furnace": {
+        "description": {
+            "identifier": "minesia:smelt_darkblue_ore"
+        },
+        "tags": ["furnace", "blast_furnace"],
+        "input": "minesia:darkblue_ore",
+        "output": "minesia:darkblue_ingot"
+    }
+}

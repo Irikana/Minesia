@@ -1,0 +1,67 @@
+{
+    "format_version": "1.26.10",
+    "minecraft:item": {
+        "description": {
+            "identifier": "minesia:darkblue_pickaxe",
+            "menu_category": {
+                "category": "equipment",
+                "group": "minecraft:itemGroup.name.pickaxe"
+            }
+        },
+        "components": {
+            "minecraft:icon": {
+                "textures": {
+                    "default": "minesia_darkblue_pickaxe"
+                }
+            },
+            "minecraft:max_stack_size": 1,
+            "minecraft:hand_equipped": true,
+            "minecraft:durability": {
+                "max_durability": 1800
+            },
+            "minecraft:digger": {
+                "use_efficiency": true,
+                "destroy_speeds": [
+                    {
+                        "block": {
+                            "tags": "query.any_tag('minecraft:is_pickaxe_item_destructible')"
+                        },
+                        "speed": 8
+                    },
+                    {
+                        "block": "minesia:darkblue_ore",
+                        "speed": 8
+                    },
+                    {
+                        "block": "minesia:deepslate_darkblue_ore",
+                        "speed": 8
+                    }
+                ]
+            },
+            "minecraft:tags": {
+                "tags": [
+                    "minecraft:is_tool",
+                    "minecraft:is_pickaxe"
+                ]
+            },
+            "minecraft:enchantable": {
+                "slot": "pickaxe",
+                "value": 15
+            },
+            "minecraft:damage": {
+                "value": 5
+            },
+            "minecraft:repairable": {
+                "repair_items": [
+                    {
+                        "items": ["minesia:darkblue_ingot"],
+                        "repair_amount": 400
+                    }
+                ]
+            },
+            "minecraft:display_name": {
+                "value": "item.minesia:darkblue_pickaxe"
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:ore_feature": {
+        "description": {
+            "identifier": "minesia:deepslate_darkblue_ore_feature"
+        },
+        "count": 8,
+        "replace_rules": [
+            {
+                "places_block": "minesia:deepslate_darkblue_ore",
+                "may_replace": [
+                    "minecraft:deepslate"
+                ]
+            }
+        ]
+    }
+}

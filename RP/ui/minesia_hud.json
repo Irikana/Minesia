@@ -1,0 +1,391 @@
+{
+  "namespace": "minesia_hud",
+
+  "minesia_hud_root": {
+    "type": "panel",
+    "size": ["100%", "100%"],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "layer": 50,
+    "controls": [
+      { "minesia_exp_bar_panel@minesia_hud.exp_bar_panel": {} },
+      { "minesia_stamina_bar_panel@minesia_hud.stamina_bar_panel": {} }
+    ]
+  },
+
+  "minesia_level_control": {
+    "type": "panel",
+    "size": [0, 0],
+    "$update_string": "dataL",
+    "property_bag": {
+      "#preserved_text": "",
+      "#value_text": ""
+    },
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string",
+        "binding_type": "global"
+      },
+      {
+        "binding_name": "#hud_title_text_string",
+        "binding_type": "global",
+        "binding_name_override": "#preserved_text",
+        "binding_condition": "visibility_changed"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not (#hud_title_text_string = #preserved_text) and not ((#hud_title_text_string - $update_string) = #hud_title_text_string))",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#preserved_text - ($update_string + ':'))",
+        "target_property_name": "#value_text"
+      }
+    ]
+  },
+
+  "minesia_exp_control": {
+    "type": "panel",
+    "size": [0, 0],
+    "$update_string": "dataE",
+    "property_bag": {
+      "#preserved_text": "",
+      "#value_text": ""
+    },
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string",
+        "binding_type": "global"
+      },
+      {
+        "binding_name": "#hud_title_text_string",
+        "binding_type": "global",
+        "binding_name_override": "#preserved_text",
+        "binding_condition": "visibility_changed"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not (#hud_title_text_string = #preserved_text) and not ((#hud_title_text_string - $update_string) = #hud_title_text_string))",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#preserved_text - ($update_string + ':'))",
+        "target_property_name": "#value_text"
+      }
+    ]
+  },
+
+  "minesia_stamina_control": {
+    "type": "panel",
+    "size": [0, 0],
+    "$update_string": "dataS",
+    "property_bag": {
+      "#preserved_text": "",
+      "#value_text": ""
+    },
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string",
+        "binding_type": "global"
+      },
+      {
+        "binding_name": "#hud_title_text_string",
+        "binding_type": "global",
+        "binding_name_override": "#preserved_text",
+        "binding_condition": "visibility_changed"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not (#hud_title_text_string = #preserved_text) and not ((#hud_title_text_string - $update_string) = #hud_title_text_string))",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#preserved_text - ($update_string + ':'))",
+        "target_property_name": "#value_text"
+      }
+    ]
+  },
+
+  "exp_bar_panel": {
+    "type": "panel",
+    "size": [240, 16],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [0, 8],
+    "controls": [
+      { "minesia_level_control@minesia_hud.minesia_level_control": {} },
+      { "minesia_exp_control@minesia_hud.minesia_exp_control": {} },
+      { "exp_label@minesia_hud.exp_level_label": {} },
+      { "exp_level_num@minesia_hud.exp_level_number": {} },
+      { "exp_bar_bg@minesia_hud.exp_bar_background": {} },
+      { "exp_bar_fill@minesia_hud.exp_bar_fill_image": {} },
+      { "exp_pct_label@minesia_hud.exp_percent_label": {} },
+      { "exp_pct_sign@minesia_hud.exp_percent_sign": {} }
+    ]
+  },
+
+  "exp_level_label": {
+    "type": "label",
+    "text": "Lv.",
+    "color": [0.7, 1.0, 1.0],
+    "shadow": true,
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "offset": [0, 0],
+    "layer": 3
+  },
+
+  "exp_level_number": {
+    "type": "label",
+    "color": [0.7, 1.0, 1.0],
+    "shadow": true,
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "offset": [22, 0],
+    "layer": 3,
+    "property_bag": {
+      "#value_text": ""
+    },
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "minesia_level_control",
+        "source_property_name": "(#value_text)",
+        "target_property_name": "#value_text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#value_text)",
+        "target_property_name": "#text"
+      }
+    ]
+  },
+
+  "exp_bar_background": {
+    "type": "image",
+    "texture": "textures/ui/minesia/bar_background",
+    "size": [160, 8],
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "offset": [46, 0],
+    "layer": 1
+  },
+
+  "exp_bar_fill_image": {
+    "type": "panel",
+    "size": [160, 8],
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "offset": [46, 0],
+    "layer": 2,
+    "clips_children": true,
+    "use_anchored_offset": true,
+    "$min": 1.0,
+    "property_bag": {
+      "#size_binding_x": 160.0,
+      "#size_binding_y": 8.0,
+      "#anchored_offset_value_x": 46.0,
+      "#anchored_offset_value_y": 0.0,
+      "#value_text": "",
+      "#value_num": 0.0
+    },
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "minesia_exp_control",
+        "source_property_name": "(#value_text)",
+        "target_property_name": "#value_text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "($min * #value_text)",
+        "target_property_name": "#value_num"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#value_num * 1.6)",
+        "target_property_name": "#size_binding_x"
+      }
+    ],
+    "controls": [
+      {
+        "fill_texture": {
+          "type": "image",
+          "texture": "textures/ui/minesia/exp_bar_fill",
+          "size": [160, 8],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle"
+        }
+      }
+    ]
+  },
+
+  "exp_percent_label": {
+    "type": "label",
+    "color": [1.0, 1.0, 1.0],
+    "shadow": true,
+    "anchor_from": "right_middle",
+    "anchor_to": "right_middle",
+    "offset": [-12, 0],
+    "layer": 3,
+    "property_bag": {
+      "#value_text": ""
+    },
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "minesia_exp_control",
+        "source_property_name": "(#value_text)",
+        "target_property_name": "#value_text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#value_text)",
+        "target_property_name": "#text"
+      }
+    ]
+  },
+
+  "exp_percent_sign": {
+    "type": "label",
+    "text": "%",
+    "color": [1.0, 1.0, 1.0],
+    "shadow": true,
+    "anchor_from": "right_middle",
+    "anchor_to": "right_middle",
+    "offset": [-2, 0],
+    "layer": 3
+  },
+
+  "stamina_bar_panel": {
+    "type": "panel",
+    "size": [240, 14],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [0, 26],
+    "bindings": [
+      {
+        "binding_name": "#show_survival_ui",
+        "binding_name_override": "#visible"
+      }
+    ],
+    "controls": [
+      { "minesia_stamina_control@minesia_hud.minesia_stamina_control": {} },
+      { "sta_label@minesia_hud.stamina_label": {} },
+      { "sta_bar_bg@minesia_hud.stamina_bar_background": {} },
+      { "sta_bar_fill@minesia_hud.stamina_bar_fill_image": {} },
+      { "sta_pct_label@minesia_hud.stamina_percent_label": {} },
+      { "sta_pct_sign@minesia_hud.stamina_percent_sign": {} }
+    ]
+  },
+
+  "stamina_label": {
+    "type": "label",
+    "text": "STA",
+    "color": [1.0, 0.85, 0.4],
+    "shadow": true,
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "offset": [0, 0],
+    "layer": 3
+  },
+
+  "stamina_bar_background": {
+    "type": "image",
+    "texture": "textures/ui/minesia/bar_background",
+    "size": [160, 6],
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "offset": [46, 0],
+    "layer": 1
+  },
+
+  "stamina_bar_fill_image": {
+    "type": "panel",
+    "size": [160, 6],
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "offset": [46, 0],
+    "layer": 2,
+    "clips_children": true,
+    "use_anchored_offset": true,
+    "$min": 1.0,
+    "property_bag": {
+      "#size_binding_x": 160.0,
+      "#size_binding_y": 6.0,
+      "#anchored_offset_value_x": 46.0,
+      "#anchored_offset_value_y": 0.0,
+      "#value_text": "",
+      "#value_num": 0.0
+    },
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "minesia_stamina_control",
+        "source_property_name": "(#value_text)",
+        "target_property_name": "#value_text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "($min * #value_text)",
+        "target_property_name": "#value_num"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#value_num * 1.6)",
+        "target_property_name": "#size_binding_x"
+      }
+    ],
+    "controls": [
+      {
+        "fill_texture": {
+          "type": "image",
+          "texture": "textures/ui/minesia/stamina_bar_fill",
+          "size": [160, 6],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle"
+        }
+      }
+    ]
+  },
+
+  "stamina_percent_label": {
+    "type": "label",
+    "color": [1.0, 1.0, 1.0],
+    "shadow": true,
+    "anchor_from": "right_middle",
+    "anchor_to": "right_middle",
+    "offset": [-12, 0],
+    "layer": 3,
+    "property_bag": {
+      "#value_text": ""
+    },
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "minesia_stamina_control",
+        "source_property_name": "(#value_text)",
+        "target_property_name": "#value_text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#value_text)",
+        "target_property_name": "#text"
+      }
+    ]
+  },
+
+  "stamina_percent_sign": {
+    "type": "label",
+    "text": "%",
+    "color": [1.0, 1.0, 1.0],
+    "shadow": true,
+    "anchor_from": "right_middle",
+    "anchor_to": "right_middle",
+    "offset": [-2, 0],
+    "layer": 3
+  }
+}

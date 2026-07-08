@@ -2470,6 +2470,18 @@
             "100%",
             "100%cm"
           ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_name_override": "#title_text",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(((#title_text - 'data') = #title_text) and (not (#title_text = '')))",
+              "target_property_name": "#visible"
+            }
+          ],
           "controls": [
             {
               "title_background": {
@@ -2479,7 +2491,19 @@
                   "100%sm + 6px"
                 ],
                 "texture": "textures/ui/hud_tip_text_background",
-                "alpha": "@hud.anim_title_background_alpha_in"
+                "alpha": "@hud.anim_title_background_alpha_in",
+                "bindings": [
+                  {
+                    "binding_name": "#hud_title_text_string",
+                    "binding_name_override": "#title_text",
+                    "binding_type": "global"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(((#title_text - 'data') = #title_text) and (not (#title_text = '')))",
+                    "target_property_name": "#visible"
+                  }
+                ]
               }
             },
             {
@@ -2514,6 +2538,11 @@
                     "binding_name": "#hud_title_text_string",
                     "binding_name_override": "#text",
                     "binding_type": "global"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "((#text - 'data') = #text)",
+                    "target_property_name": "#visible"
                   }
                 ]
               }
@@ -2527,6 +2556,18 @@
           "size": [
             "100%",
             "100%cm"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_subtitle_text_string",
+              "binding_name_override": "#sub_text",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(((#sub_text - 'data') = #sub_text) and (not (#sub_text = '')))",
+              "target_property_name": "#visible"
+            }
           ],
           "controls": [
             {
@@ -2551,7 +2592,19 @@
                     "$subtitle_bg": "@hud.anim_subtitle_background_alpha_in"
                   }
                 ],
-                "alpha": "$subtitle_bg"
+                "alpha": "$subtitle_bg",
+                "bindings": [
+                  {
+                    "binding_name": "#hud_subtitle_text_string",
+                    "binding_name_override": "#sub_text",
+                    "binding_type": "global"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(((#sub_text - 'data') = #sub_text) and (not (#sub_text = '')))",
+                    "target_property_name": "#visible"
+                  }
+                ]
               }
             },
             {
@@ -3513,6 +3566,87 @@
   "wysiwyg_close_without_saving_modal_cancel@library_modal.modal_button": {
     "$button_mapping": "button.cancel_close_without_saving",
     "$button_text": "hudScreen.controlCustomization.closeWithoutSavingCancel"
+  },
+  "minesia_level_control": {
+    "type": "panel",
+    "size": [0, 0],
+    "$update_string": "dataL",
+    "property_bag": {
+      "#preserved_text": "",
+      "#value_text": ""
+    },
+    "bindings": [
+      { "binding_name": "#hud_title_text_string" },
+      {
+        "binding_name": "#hud_title_text_string",
+        "binding_name_override": "#preserved_text",
+        "binding_condition": "visibility_changed"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not (#hud_title_text_string = #preserved_text) and not ((#hud_title_text_string - $update_string) = #hud_title_text_string))",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#preserved_text - ($update_string + ':'))",
+        "target_property_name": "#value_text"
+      }
+    ]
+  },
+  "minesia_exp_control": {
+    "type": "panel",
+    "size": [0, 0],
+    "$update_string": "dataE",
+    "property_bag": {
+      "#preserved_text": "",
+      "#value_text": ""
+    },
+    "bindings": [
+      { "binding_name": "#hud_title_text_string" },
+      {
+        "binding_name": "#hud_title_text_string",
+        "binding_name_override": "#preserved_text",
+        "binding_condition": "visibility_changed"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not (#hud_title_text_string = #preserved_text) and not ((#hud_title_text_string - $update_string) = #hud_title_text_string))",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#preserved_text - ($update_string + ':'))",
+        "target_property_name": "#value_text"
+      }
+    ]
+  },
+  "minesia_stamina_control": {
+    "type": "panel",
+    "size": [0, 0],
+    "$update_string": "dataS",
+    "property_bag": {
+      "#preserved_text": "",
+      "#value_text": ""
+    },
+    "bindings": [
+      { "binding_name": "#hud_title_text_string" },
+      {
+        "binding_name": "#hud_title_text_string",
+        "binding_name_override": "#preserved_text",
+        "binding_condition": "visibility_changed"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not (#hud_title_text_string = #preserved_text) and not ((#hud_title_text_string - $update_string) = #hud_title_text_string))",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#preserved_text - ($update_string + ':'))",
+        "target_property_name": "#value_text"
+      }
+    ]
   },
   "root_panel": {
     "type": "panel",

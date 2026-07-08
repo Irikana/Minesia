@@ -1,6 +1,7 @@
 // Minesia等级系统扩展功能
 import { world, system } from "@minecraft/server";
 import { ActionBarManager, DISPLAY_PRIORITIES } from "../action_bar/index.js";
+import { getPlayerLocale } from "../language.js";
 import { debug } from "../debug/debugManager.js";
 
 const LEVEL_DISPLAY_TEXTS = {
@@ -13,18 +14,6 @@ const LEVEL_DISPLAY_TEXTS = {
         max: "MAX"
     }
 };
-
-function getPlayerLocale(player) {
-    try {
-        const scoreboard = world.scoreboard;
-        const langObj = scoreboard?.getObjective("minesia_language");
-        if (langObj) {
-            const score = langObj.getScore(player);
-            if (score === 0) return "en_US";
-        }
-    } catch (_e) { }
-    return "zh_CN";
-}
 
 function getLevelDisplayTexts(locale = "zh_CN") {
     return LEVEL_DISPLAY_TEXTS[locale] || LEVEL_DISPLAY_TEXTS.zh_CN;
